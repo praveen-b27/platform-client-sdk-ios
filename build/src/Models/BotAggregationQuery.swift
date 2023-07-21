@@ -27,6 +27,7 @@ public class BotAggregationQuery: Codable {
         case botversion = "botVersion"
         case conversationid = "conversationId"
         case externalcontactid = "externalContactId"
+        case intermediateintentname = "intermediateIntentName"
         case knowledgebaseid = "knowledgeBaseId"
         case languagecode = "languageCode"
         case lastactionid = "lastActionId"

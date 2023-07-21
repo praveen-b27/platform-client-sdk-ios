@@ -15,10 +15,13 @@ public class SpeechTextAnalyticsSettingsResponse: Codable {
     public var defaultProgram: AddressableEntityRef?
     /** Setting to choose expected dialects */
     public var expectedDialects: [String]?
+    /** Setting to enable/disable text analytics */
+    public var textAnalyticsEnabled: Bool?
 
-    public init(defaultProgram: AddressableEntityRef?, expectedDialects: [String]?) {
+    public init(defaultProgram: AddressableEntityRef?, expectedDialects: [String]?, textAnalyticsEnabled: Bool?) {
         self.defaultProgram = defaultProgram
         self.expectedDialects = expectedDialects
+        self.textAnalyticsEnabled = textAnalyticsEnabled
     }
 
 

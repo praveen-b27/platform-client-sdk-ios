@@ -9,12 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**getLicenseDefinition**](LicenseAPI.html#getLicenseDefinition) | Get PureCloud license definition. |
 | [**getLicenseDefinitions**](LicenseAPI.html#getLicenseDefinitions) | Get all PureCloud license definitions available for the organization. |
-| [**getLicenseToggle**](LicenseAPI.html#getLicenseToggle) | Get PureCloud license feature toggle value. |
+| [**getLicenseToggle**](LicenseAPI.html#getLicenseToggle) | Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles |
 | [**getLicenseUser**](LicenseAPI.html#getLicenseUser) | Get licenses for specified user. |
 | [**getLicenseUsers**](LicenseAPI.html#getLicenseUsers) | Get a page of users and their licenses |
 | [**postLicenseInfer**](LicenseAPI.html#postLicenseInfer) | Get a list of licenses inferred based on a list of roleIds |
 | [**postLicenseOrganization**](LicenseAPI.html#postLicenseOrganization) | Update the organization&#39;s license assignments in a batch. |
-| [**postLicenseToggle**](LicenseAPI.html#postLicenseToggle) | Switch PureCloud license feature toggle value. |
+| [**postLicenseToggle**](LicenseAPI.html#postLicenseToggle) | Deprecated. No alternative required - this endpoint has no effect |
 | [**postLicenseUsers**](LicenseAPI.html#postLicenseUsers) | Fetch user licenses in a batch. |
 {: class="table-striped"}
 
@@ -128,15 +128,14 @@ This endpoint does not require any parameters.
 
 > [LicenseOrgToggle](LicenseOrgToggle.html) getLicenseToggle(featureName)
 
-Get PureCloud license feature toggle value.
+Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles
 
 
 
 Wraps GET /api/v2/license/toggles/{featureName}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* authorization:grant:add
 
 ### Example
 
@@ -391,15 +390,14 @@ LicenseAPI.postLicenseOrganization(body: body) { (response, error) in
 
 > [LicenseOrgToggle](LicenseOrgToggle.html) postLicenseToggle(featureName)
 
-Switch PureCloud license feature toggle value.
+Deprecated. No alternative required - this endpoint has no effect
 
 
 
 Wraps POST /api/v2/license/toggles/{featureName}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* authorization:grant:add
 
 ### Example
 

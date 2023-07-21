@@ -5623,6 +5623,7 @@ open class UsersAPI {
       }
     },
     "division" : "{}",
+    "suppressInQueueCallRecording" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
@@ -5764,6 +5765,7 @@ open class UsersAPI {
       }
     },
     "division" : "{}",
+    "suppressInQueueCallRecording" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
@@ -7736,9 +7738,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -7791,7 +7793,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -7910,9 +7912,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -7965,7 +7967,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -10958,6 +10960,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -11389,6 +11392,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -11835,6 +11839,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -12266,6 +12271,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -12725,6 +12731,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -13156,6 +13163,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -13602,6 +13610,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -14033,6 +14042,7 @@ open class UsersAPI {
               }
             },
             "division" : "{}",
+            "suppressInQueueCallRecording" : true,
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
@@ -16894,6 +16904,7 @@ open class UsersAPI {
     }
   },
   "division" : "{}",
+  "suppressInQueueCallRecording" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
@@ -17100,6 +17111,7 @@ open class UsersAPI {
       }
     },
     "division" : "{}",
+    "suppressInQueueCallRecording" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
@@ -17241,6 +17253,7 @@ open class UsersAPI {
       }
     },
     "division" : "{}",
+    "suppressInQueueCallRecording" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
@@ -18816,10 +18829,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18842,10 +18855,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18888,10 +18901,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18914,10 +18927,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18965,10 +18978,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18991,10 +19004,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -19037,10 +19050,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -19063,10 +19076,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

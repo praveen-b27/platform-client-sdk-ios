@@ -5123,7 +5123,7 @@ open class TelephonyProvidersEdgeAPI {
     /**
      Get the metrics for a list of edges.
      
-     - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
+     - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesMetrics(edgeIds: String, completion: @escaping ((_ data: [EdgeMetrics]?,_ error: Error?) -> Void)) {
@@ -5213,7 +5213,7 @@ open class TelephonyProvidersEdgeAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
+     - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed. 
 
      - returns: RequestBuilder<[EdgeMetrics]> 
      */

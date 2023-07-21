@@ -115,6 +115,7 @@ public class ReportingExportJobRequest: Codable {
         case workitemPerformanceSummaryView = "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
         case agentAssistPerformanceView = "AGENT_ASSIST_PERFORMANCE_VIEW"
         case contactCenterPerformanceView = "CONTACT_CENTER_PERFORMANCE_VIEW"
+        case queueRoutingPerformanceView = "QUEUE_ROUTING_PERFORMANCE_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"

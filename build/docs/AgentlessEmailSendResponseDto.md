@@ -11,7 +11,7 @@ title: AgentlessEmailSendResponseDto
 | **conversationId** | **String** | The identifier of the conversation. | |
 | **senderType** | **String** | The identifier of the external participant of the given conversation. | |
 | **fromAddress** | [**EmailAddress**](EmailAddress.html) | The sender of the message. | |
-| **toAddresses** | [**[EmailAddress]**](EmailAddress.html) | The recipient(s) of the message. | |
+| **toAddresses** | [**[EmailAddress]**](EmailAddress.html) | The recipient of the message. So far, only one recipient is allowed. This is a list, only for future usage. | |
 | **replyToAddress** | [**EmailAddress**](EmailAddress.html) | The address to use for reply. | [optional] |
 | **subject** | **String** | The subject of the message. | [optional] |
 | **dateCreated** | [**Date**](Date.html) | The message creation timestamp. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |

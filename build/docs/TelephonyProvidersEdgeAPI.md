@@ -2897,7 +2897,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let edgeIds: String = "" // Comma separated list of Edge Id's
+let edgeIds: String = "" // Comma separated list of Edge Id's. Maximum of 100 edge ids allowed.
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesMetrics(edgeIds: edgeIds) { (response, error) in
@@ -2915,7 +2915,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesMetrics(edgeIds: edgeIds) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **edgeIds** | **String**| Comma separated list of Edge Id's | |
+| **edgeIds** | **String**| Comma separated list of Edge Id's. Maximum of 100 edge ids allowed. | |
 {: class="table-striped"}
 
 

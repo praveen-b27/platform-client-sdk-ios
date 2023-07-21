@@ -139,7 +139,7 @@ open class LicenseAPI {
 
     
     /**
-     Get PureCloud license feature toggle value.
+     Deprecated - no alternative required. This operation will always return 'true' for requested toggles
      
      - parameter featureName: (path) featureName 
      - parameter completion: completion handler to receive the data and the error objects
@@ -163,7 +163,7 @@ open class LicenseAPI {
     }
 
     /**
-     Get PureCloud license feature toggle value.
+     Deprecated - no alternative required. This operation will always return 'true' for requested toggles
      - GET /api/v2/license/toggles/{featureName}
      - OAuth:
        - type: oauth2
@@ -453,7 +453,7 @@ open class LicenseAPI {
 
     
     /**
-     Switch PureCloud license feature toggle value.
+     Deprecated. No alternative required - this endpoint has no effect
      
      - parameter featureName: (path) featureName 
      - parameter completion: completion handler to receive the data and the error objects
@@ -477,7 +477,7 @@ open class LicenseAPI {
     }
 
     /**
-     Switch PureCloud license feature toggle value.
+     Deprecated. No alternative required - this endpoint has no effect
      - POST /api/v2/license/toggles/{featureName}
      - OAuth:
        - type: oauth2

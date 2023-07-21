@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsTopic) | Delete a Speech &amp; Text Analytics topic by id |
 | [**getSpeechandtextanalyticsConversation**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversation) | Get Speech and Text Analytics for a specific conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
+| [**getSpeechandtextanalyticsConversationCommunicationTranscripturls**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturls) | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
 | [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**getSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramTranscriptionengines) | Get transcription engine settings of a program |
@@ -353,6 +354,61 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscr
 ### Return type
 
 [**TranscriptUrl**](TranscriptUrl.html)
+
+<a name="getSpeechandtextanalyticsConversationCommunicationTranscripturls"></a>
+
+# **getSpeechandtextanalyticsConversationCommunicationTranscripturls**
+
+
+
+> [TranscriptUrls](TranscriptUrls.html) getSpeechandtextanalyticsConversationCommunicationTranscripturls(conversationId, communicationId)
+
+Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls  
+
+Requires ANY permissions: 
+
+* recording:recording:view
+* recording:recordingSegment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let communicationId: String = "" // Communication ID
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscripturls(conversationId: conversationId, communicationId: communicationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscripturls was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **communicationId** | **String**| Communication ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TranscriptUrls**](TranscriptUrls.html)
 
 <a name="getSpeechandtextanalyticsProgram"></a>
 

@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsOpenIntegrationId) | Delete an Open messaging integration |
 | [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
 | [**deleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsWhatsappIntegrationId) | Delete a WhatsApp messaging integration |
+| [**deleteConversationsMessagingSetting**](ConversationsAPI.html#deleteConversationsMessagingSetting) | Delete a messaging setting |
+| [**deleteConversationsMessagingSettingsDefault**](ConversationsAPI.html#deleteConversationsMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
 | [**deleteConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#deleteConversationsMessagingSupportedcontentSupportedContentId) | Delete a supported content profile |
 | [**getAnalyticsConversationDetails**](ConversationsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
 | [**getAnalyticsConversationsDetails**](ConversationsAPI.html#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
@@ -88,6 +90,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get a Twitter messaging integration |
 | [**getConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsapp) | Get a list of WhatsApp Integrations |
 | [**getConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsappIntegrationId) | Get a WhatsApp messaging integration |
+| [**getConversationsMessagingSetting**](ConversationsAPI.html#getConversationsMessagingSetting) | Get a messaging setting |
+| [**getConversationsMessagingSettings**](ConversationsAPI.html#getConversationsMessagingSettings) | Get a list of messaging settings |
+| [**getConversationsMessagingSettingsDefault**](ConversationsAPI.html#getConversationsMessagingSettingsDefault) | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
 | [**getConversationsMessagingSticker**](ConversationsAPI.html#getConversationsMessagingSticker) | Get a list of Messaging Stickers |
 | [**getConversationsMessagingSupportedcontent**](ConversationsAPI.html#getConversationsMessagingSupportedcontent) | Get a list of Supported Content profiles |
 | [**getConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#getConversationsMessagingSupportedcontentDefault) | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
@@ -133,6 +138,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
 | [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration |
+| [**patchConversationsMessagingSetting**](ConversationsAPI.html#patchConversationsMessagingSetting) | Update a messaging setting |
 | [**patchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#patchConversationsMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
 | [**patchConversationsSettings**](ConversationsAPI.html#patchConversationsSettings) | Update Settings |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
@@ -145,17 +151,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
 | [**postConversationParticipantDigits**](ConversationsAPI.html#postConversationParticipantDigits) | Sends DTMF to the participant |
 | [**postConversationParticipantReplace**](ConversationsAPI.html#postConversationParticipantReplace) | Replace this participant with the specified user and/or address |
-| [**postConversationParticipantReplaceAgent**](ConversationsAPI.html#postConversationParticipantReplaceAgent) | Replace this participant with the specified agent |
-| [**postConversationParticipantReplaceExternal**](ConversationsAPI.html#postConversationParticipantReplaceExternal) | Replace this participant with the an external contact |
-| [**postConversationParticipantReplaceQueue**](ConversationsAPI.html#postConversationParticipantReplaceQueue) | Replace this participant with the specified queue |
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI.html#postConversationsCallParticipantConsult) | Initiate and update consult transfer |
-| [**postConversationsCallParticipantConsultAgent**](ConversationsAPI.html#postConversationsCallParticipantConsultAgent) | Initiate a consult transfer to an agent |
-| [**postConversationsCallParticipantConsultExternal**](ConversationsAPI.html#postConversationsCallParticipantConsultExternal) | Initiate a consult transfer to an external contact |
-| [**postConversationsCallParticipantConsultQueue**](ConversationsAPI.html#postConversationsCallParticipantConsultQueue) | Initiate a consult transfer to a queue |
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI.html#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI.html#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallParticipants**](ConversationsAPI.html#postConversationsCallParticipants) | Add participants to a conversation |
@@ -197,6 +197,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
+| [**postConversationsMessagingSettings**](ConversationsAPI.html#postConversationsMessagingSettings) | Create a messaging setting |
 | [**postConversationsMessagingSupportedcontent**](ConversationsAPI.html#postConversationsMessagingSupportedcontent) | Create a Supported Content profile |
 | [**postConversationsParticipantsAttributesSearch**](ConversationsAPI.html#postConversationsParticipantsAttributesSearch) | Search conversations |
 | [**postConversationsScreenshareParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsScreenshareParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
@@ -215,6 +216,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsKeyconfiguration**](ConversationsAPI.html#putConversationsKeyconfiguration) | Update the encryption key configurations |
 | [**putConversationsMessageRecordingstate**](ConversationsAPI.html#putConversationsMessageRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
+| [**putConversationsMessagingSettingsDefault**](ConversationsAPI.html#putConversationsMessagingSettingsDefault) | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**putConversationsMessagingThreadingtimeline**](ConversationsAPI.html#putConversationsMessagingThreadingtimeline) | Update conversation threading window timeline for each messaging type |
 | [**putConversationsScreenshareRecordingstate**](ConversationsAPI.html#putConversationsScreenshareRecordingstate) | Update a conversation by setting its recording state |
@@ -792,6 +794,106 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsWhatsappIntegrationId(i
 ### Return type
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
+
+<a name="deleteConversationsMessagingSetting"></a>
+
+# **deleteConversationsMessagingSetting**
+
+
+
+> Void deleteConversationsMessagingSetting(messageSettingId)
+
+Delete a messaging setting
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/settings/{messageSettingId}  
+
+Requires ALL permissions: 
+
+* messaging:setting:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageSettingId: String = "" // Message Setting ID
+
+// Code example
+ConversationsAPI.deleteConversationsMessagingSetting(messageSettingId: messageSettingId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsMessagingSetting was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageSettingId** | **String**| Message Setting ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteConversationsMessagingSettingsDefault"></a>
+
+# **deleteConversationsMessagingSettingsDefault**
+
+
+
+> Void deleteConversationsMessagingSettingsDefault()
+
+Delete the organization&#39;s default setting, a global default will be applied to integrations without settings
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be assigned to it.
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/settings/default  
+
+Requires ALL permissions: 
+
+* messaging:setting:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.deleteConversationsMessagingSettingsDefault() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsMessagingSettingsDefault was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteConversationsMessagingSupportedcontentSupportedContentId"></a>
 
@@ -4550,6 +4652,162 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(inte
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="getConversationsMessagingSetting"></a>
+
+# **getConversationsMessagingSetting**
+
+
+
+> [MessagingSetting](MessagingSetting.html) getConversationsMessagingSetting(messageSettingId)
+
+Get a messaging setting
+
+
+
+Wraps GET /api/v2/conversations/messaging/settings/{messageSettingId}  
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageSettingId: String = "" // Message Setting ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingSetting(messageSettingId: messageSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageSettingId** | **String**| Message Setting ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
+<a name="getConversationsMessagingSettings"></a>
+
+# **getConversationsMessagingSettings**
+
+
+
+> [MessagingConfigListing](MessagingConfigListing.html) getConversationsMessagingSettings(pageSize, pageNumber)
+
+Get a list of messaging settings
+
+
+
+Wraps GET /api/v2/conversations/messaging/settings  
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+ConversationsAPI.getConversationsMessagingSettings(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingConfigListing**](MessagingConfigListing.html)
+
+<a name="getConversationsMessagingSettingsDefault"></a>
+
+# **getConversationsMessagingSettingsDefault**
+
+
+
+> [MessagingSetting](MessagingSetting.html) getConversationsMessagingSettingsDefault()
+
+Get the organization&#39;s default settings that will be used as the default when creating an integration.
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be assigned to it.
+
+
+
+Wraps GET /api/v2/conversations/messaging/settings/default  
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsMessagingSettingsDefault() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingSettingsDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="getConversationsMessagingSticker"></a>
 
 # **getConversationsMessagingSticker**
@@ -7012,6 +7270,60 @@ ConversationsAPI.patchConversationsMessagingIntegrationsWhatsappIntegrationId(in
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="patchConversationsMessagingSetting"></a>
+
+# **patchConversationsMessagingSetting**
+
+
+
+> [MessagingSetting](MessagingSetting.html) patchConversationsMessagingSetting(messageSettingId, body)
+
+Update a messaging setting
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/settings/{messageSettingId}  
+
+Requires ALL permissions: 
+
+* messaging:setting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageSettingId: String = "" // Message Setting ID
+let body: MessagingSettingPatchRequest = new MessagingSettingPatchRequest(...) // MessagingSetting
+
+// Code example
+ConversationsAPI.patchConversationsMessagingSetting(messageSettingId: messageSettingId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageSettingId** | **String**| Message Setting ID | |
+| **body** | [**MessagingSettingPatchRequest**](MessagingSettingPatchRequest.html)| MessagingSetting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="patchConversationsMessagingSupportedcontentSupportedContentId"></a>
 
 # **patchConversationsMessagingSupportedcontentSupportedContentId**
@@ -7661,174 +7973,6 @@ ConversationsAPI.postConversationParticipantReplace(conversationId: conversation
 
 `nil` (empty response body)
 
-<a name="postConversationParticipantReplaceAgent"></a>
-
-# **postConversationParticipantReplaceAgent**
-
-
-
-> Void postConversationParticipantReplaceAgent(conversationId, participantId, body)
-
-Replace this participant with the specified agent
-
-
-
-Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent  
-
-Requires ANY permissions: 
-
-* conversation:communication:blindTransfer
-* conversation:communication:blindTransferAgent
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // conversation ID
-let participantId: String = "" // participant ID
-let body: TransferToAgentRequest = new TransferToAgentRequest(...) // Transfer request
-
-// Code example
-ConversationsAPI.postConversationParticipantReplaceAgent(conversationId: conversationId, participantId: participantId, body: body) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ConversationsAPI.postConversationParticipantReplaceAgent was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversation ID | |
-| **participantId** | **String**| participant ID | |
-| **body** | [**TransferToAgentRequest**](TransferToAgentRequest.html)| Transfer request | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="postConversationParticipantReplaceExternal"></a>
-
-# **postConversationParticipantReplaceExternal**
-
-
-
-> Void postConversationParticipantReplaceExternal(conversationId, participantId, body)
-
-Replace this participant with the an external contact
-
-
-
-Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external  
-
-Requires ANY permissions: 
-
-* conversation:communication:blindTransfer
-* conversation:communication:blindTransferExternal
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // conversation ID
-let participantId: String = "" // participant ID
-let body: TransferToExternalRequest = new TransferToExternalRequest(...) // Transfer request
-
-// Code example
-ConversationsAPI.postConversationParticipantReplaceExternal(conversationId: conversationId, participantId: participantId, body: body) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ConversationsAPI.postConversationParticipantReplaceExternal was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversation ID | |
-| **participantId** | **String**| participant ID | |
-| **body** | [**TransferToExternalRequest**](TransferToExternalRequest.html)| Transfer request | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="postConversationParticipantReplaceQueue"></a>
-
-# **postConversationParticipantReplaceQueue**
-
-
-
-> Void postConversationParticipantReplaceQueue(conversationId, participantId, body)
-
-Replace this participant with the specified queue
-
-
-
-Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue  
-
-Requires ANY permissions: 
-
-* conversation:communication:blindTransfer
-* conversation:communication:blindTransferQueue
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // conversation ID
-let participantId: String = "" // participant ID
-let body: TransferToQueueRequest = new TransferToQueueRequest(...) // Transfer request
-
-// Code example
-ConversationsAPI.postConversationParticipantReplaceQueue(conversationId: conversationId, participantId: participantId, body: body) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ConversationsAPI.postConversationParticipantReplaceQueue was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversation ID | |
-| **participantId** | **String**| participant ID | |
-| **body** | [**TransferToQueueRequest**](TransferToQueueRequest.html)| Transfer request | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
 <a name="postConversationParticipantSecureivrsessions"></a>
 
 # **postConversationParticipantSecureivrsessions**
@@ -8096,177 +8240,6 @@ ConversationsAPI.postConversationsCallParticipantConsult(conversationId: convers
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address & initial speak to | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
-
-<a name="postConversationsCallParticipantConsultAgent"></a>
-
-# **postConversationsCallParticipantConsultAgent**
-
-
-
-> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultAgent(conversationId, participantId, body)
-
-Initiate a consult transfer to an agent
-
-
-
-Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent  
-
-Requires ANY permissions: 
-
-* conversation:communication:consultTransfer
-* conversation:communication:consultTransferAgent
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // conversationId
-let participantId: String = "" // participantId
-let body: ConsultTransferToAgent = new ConsultTransferToAgent(...) // Destination agent & initial speak to
-
-// Code example
-ConversationsAPI.postConversationsCallParticipantConsultAgent(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.postConversationsCallParticipantConsultAgent was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversationId | |
-| **participantId** | **String**| participantId | |
-| **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent.html)| Destination agent & initial speak to | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
-
-<a name="postConversationsCallParticipantConsultExternal"></a>
-
-# **postConversationsCallParticipantConsultExternal**
-
-
-
-> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultExternal(conversationId, participantId, body)
-
-Initiate a consult transfer to an external contact
-
-
-
-Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external  
-
-Requires ANY permissions: 
-
-* conversation:communication:consultTransfer
-* conversation:communication:consultTransferExternal
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // conversationId
-let participantId: String = "" // participantId
-let body: ConsultTransferToExternal = new ConsultTransferToExternal(...) // Destination address & initial speak to
-
-// Code example
-ConversationsAPI.postConversationsCallParticipantConsultExternal(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.postConversationsCallParticipantConsultExternal was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversationId | |
-| **participantId** | **String**| participantId | |
-| **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal.html)| Destination address & initial speak to | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
-
-<a name="postConversationsCallParticipantConsultQueue"></a>
-
-# **postConversationsCallParticipantConsultQueue**
-
-
-
-> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultQueue(conversationId, participantId, body)
-
-Initiate a consult transfer to a queue
-
-
-
-Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue  
-
-Requires ANY permissions: 
-
-* conversation:communication:consultTransfer
-* conversation:communication:consultTransferQueue
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // conversationId
-let participantId: String = "" // participantId
-let body: ConsultTransferToQueue = new ConsultTransferToQueue(...) // Destination queue & initial speak to
-
-// Code example
-ConversationsAPI.postConversationsCallParticipantConsultQueue(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.postConversationsCallParticipantConsultQueue was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversationId | |
-| **participantId** | **String**| participantId | |
-| **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue.html)| Destination queue & initial speak to | |
 {: class="table-striped"}
 
 
@@ -10496,6 +10469,58 @@ ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp(body: body) { (r
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="postConversationsMessagingSettings"></a>
+
+# **postConversationsMessagingSettings**
+
+
+
+> [MessagingSetting](MessagingSetting.html) postConversationsMessagingSettings(body)
+
+Create a messaging setting
+
+
+
+Wraps POST /api/v2/conversations/messaging/settings  
+
+Requires ALL permissions: 
+
+* messaging:setting:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MessagingSettingRequest = new MessagingSettingRequest(...) // MessagingSetting
+
+// Code example
+ConversationsAPI.postConversationsMessagingSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="postConversationsMessagingSupportedcontent"></a>
 
 # **postConversationsMessagingSupportedcontent**
@@ -11472,6 +11497,60 @@ ConversationsAPI.putConversationsMessagingIntegrationsLineIntegrationId(integrat
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="putConversationsMessagingSettingsDefault"></a>
+
+# **putConversationsMessagingSettingsDefault**
+
+
+
+> [MessagingSetting](MessagingSetting.html) putConversationsMessagingSettingsDefault(body)
+
+Set the organization&#39;s default setting that may be applied to to integrations without settings
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be assigned to it.
+
+
+
+Wraps PUT /api/v2/conversations/messaging/settings/default  
+
+Requires ALL permissions: 
+
+* messaging:setting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MessagingSettingDefaultRequest = new MessagingSettingDefaultRequest(...) // MessagingSetting
+
+// Code example
+ConversationsAPI.putConversationsMessagingSettingsDefault(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessagingSettingsDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest.html)| MessagingSetting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
 
 <a name="putConversationsMessagingSupportedcontentDefault"></a>
 

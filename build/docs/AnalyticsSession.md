@@ -66,6 +66,8 @@ title: AnalyticsSession
 | **requestedRoutings** | **[String]** | Routing type(s) for requested/attempted routing methods. | [optional] |
 | **roomId** | **String** | Unique identifier for the room | [optional] |
 | **routingRing** | **Int** | Routing ring for bullseye or preferred agent routing | [optional] |
+| **routingRule** | **String** | Routing rule for preferred, conditional and predictive routing type | [optional] |
+| **routingRuleType** | **String** | Routing rule type | [optional] |
 | **screenShareAddressSelf** | **String** | Direct ScreenShare address | [optional] |
 | **screenShareRoomId** | **String** | A unique identifier for a PureCloud ScreenShare room | [optional] |
 | **scriptId** | **String** | A unique identifier for a script | [optional] |
@@ -80,8 +82,8 @@ title: AnalyticsSession
 | **videoAddressSelf** | **String** | Direct Video address | [optional] |
 | **videoRoomId** | **String** | A unique identifier for a PureCloud video room | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
-| **proposedAgents** | [**[AnalyticsProposedAgent]**](AnalyticsProposedAgent.html) | Proposed agents | [optional] |
 | **agentGroups** | [**[AnalyticsAgentGroup]**](AnalyticsAgentGroup.html) | Conditional group routing agent groups | [optional] |
+| **proposedAgents** | [**[AnalyticsProposedAgent]**](AnalyticsProposedAgent.html) | Proposed agents | [optional] |
 | **mediaEndpointStats** | [**[AnalyticsMediaEndpointStat]**](AnalyticsMediaEndpointStat.html) | MediaEndpointStats associated with this session | [optional] |
 | **flow** | [**AnalyticsFlow**](AnalyticsFlow.html) | IVR flow execution associated with this session | [optional] |
 | **metrics** | [**[AnalyticsSessionMetric]**](AnalyticsSessionMetric.html) | List of metrics for this session | [optional] |

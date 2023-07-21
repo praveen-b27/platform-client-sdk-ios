@@ -84,6 +84,8 @@ public class ConversationAggregateQueryPredicate: Codable {
         case roomid = "roomId"
         case routingpriority = "routingPriority"
         case routingring = "routingRing"
+        case routingrule = "routingRule"
+        case routingruletype = "routingRuleType"
         case scoredagentid = "scoredAgentId"
         case selectedagentid = "selectedAgentId"
         case selectedagentrank = "selectedAgentRank"

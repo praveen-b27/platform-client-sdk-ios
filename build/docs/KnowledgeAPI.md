@@ -2122,7 +2122,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 
 
 
-> [UnansweredGroup](UnansweredGroup.html) getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId, groupId, app)
+> [UnansweredGroup](UnansweredGroup.html) getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId, groupId, app, dateStart, dateEnd)
 
 Get knowledge base unanswered group for a particular groupId
 
@@ -2145,9 +2145,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let knowledgeBaseId: String = "" // Knowledge base ID
 let groupId: String = "" // The ID of the group to be retrieved.
 let app: KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroup = KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroup.enummember // The app value to be used for filtering phrases.
+let dateStart: Date = new Date(...) // The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let dateEnd: Date = new Date(...) // The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: knowledgeBaseId, groupId: groupId, app: app) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: knowledgeBaseId, groupId: groupId, app: app, dateStart: dateStart, dateEnd: dateEnd) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2165,6 +2167,8 @@ KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: knowledge
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **groupId** | **String**| The ID of the group to be retrieved. | |
 | **app** | **String**| The app value to be used for filtering phrases. | [optional]<br />**Values**: supportCenter ("SupportCenter"), messengerKnowledgeApp ("MessengerKnowledgeApp"), botFlow ("BotFlow"), assistant ("Assistant"), smartAdvisor ("SmartAdvisor") |
+| **dateStart** | **Date**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateEnd** | **Date**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 {: class="table-striped"}
 
 
@@ -2178,7 +2182,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: knowledge
 
 
 
-> [UnansweredPhraseGroup](UnansweredPhraseGroup.html) getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId, groupId, phraseGroupId, app)
+> [UnansweredPhraseGroup](UnansweredPhraseGroup.html) getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId, groupId, phraseGroupId, app, dateStart, dateEnd)
 
 Get knowledge base unanswered phrase group for a particular phraseGroupId
 
@@ -2202,9 +2206,11 @@ let knowledgeBaseId: String = "" // Knowledge base ID
 let groupId: String = "" // The ID of the group to be retrieved.
 let phraseGroupId: String = "" // The ID of the phraseGroup to be retrieved.
 let app: KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup = KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup.enummember // The app value to be used for filtering phrases.
+let dateStart: Date = new Date(...) // The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let dateEnd: Date = new Date(...) // The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, app: app) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, app: app, dateStart: dateStart, dateEnd: dateEnd) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2223,6 +2229,8 @@ KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId
 | **groupId** | **String**| The ID of the group to be retrieved. | |
 | **phraseGroupId** | **String**| The ID of the phraseGroup to be retrieved. | |
 | **app** | **String**| The app value to be used for filtering phrases. | [optional]<br />**Values**: supportCenter ("SupportCenter"), messengerKnowledgeApp ("MessengerKnowledgeApp"), botFlow ("BotFlow"), assistant ("Assistant"), smartAdvisor ("SmartAdvisor") |
+| **dateStart** | **Date**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateEnd** | **Date**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 {: class="table-striped"}
 
 
@@ -2236,7 +2244,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId
 
 
 
-> [UnansweredGroups](UnansweredGroups.html) getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId, app)
+> [UnansweredGroups](UnansweredGroups.html) getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId, app, dateStart, dateEnd)
 
 Get knowledge base unanswered groups
 
@@ -2258,9 +2266,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let app: KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroups = KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroups.enummember // The app value to be used for filtering phrases.
+let dateStart: Date = new Date(...) // The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let dateEnd: Date = new Date(...) // The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: knowledgeBaseId, app: app) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: knowledgeBaseId, app: app, dateStart: dateStart, dateEnd: dateEnd) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2277,6 +2287,8 @@ KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: knowledg
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **app** | **String**| The app value to be used for filtering phrases. | [optional]<br />**Values**: supportCenter ("SupportCenter"), messengerKnowledgeApp ("MessengerKnowledgeApp"), botFlow ("BotFlow"), assistant ("Assistant"), smartAdvisor ("SmartAdvisor") |
+| **dateStart** | **Date**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateEnd** | **Date**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 {: class="table-striped"}
 
 

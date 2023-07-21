@@ -19,7 +19,7 @@ public class WfmHistoricalAdherenceBulkItem: Codable {
     public var endDate: Date?
     /** The IDs of the users to query. If not included, will query every user in the management unit */
     public var userIds: [String]?
-    /** Whether user exceptions should be returned as part of the results. If not included, will default to false */
+    /** Whether user exceptions should be returned as part of the results. Defaults to false if not specified. */
     public var includeExceptions: Bool?
 
     public init(managementUnitId: String?, startDate: Date?, endDate: Date?, userIds: [String]?, includeExceptions: Bool?) {

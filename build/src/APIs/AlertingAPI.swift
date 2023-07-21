@@ -12,6 +12,50 @@ import Foundation
 open class AlertingAPI {
     
     /**
+     Delete an alert
+     
+     - parameter alertId: (path) Alert ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAlertingAlert(alertId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAlertingAlertWithRequestBuilder(alertId: alertId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an alert
+     - DELETE /api/v2/alerting/alerts/{alertId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter alertId: (path) Alert ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAlertingAlertWithRequestBuilder(alertId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/alerting/alerts/{alertId}"
+        let alertIdPreEscape = "\(alertId)"
+        let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete an interaction stats alert
      
      - parameter alertId: (path) Alert ID 
@@ -96,6 +140,129 @@ open class AlertingAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
+     Delete a rule.
+     
+     - parameter ruleId: (path) Rule Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAlertingRule(ruleId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAlertingRuleWithRequestBuilder(ruleId: ruleId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a rule.
+     - DELETE /api/v2/alerting/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter ruleId: (path) Rule Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAlertingRuleWithRequestBuilder(ruleId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/alerting/rules/{ruleId}"
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
+     Get an alert
+     
+     - parameter alertId: (path) Alert ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAlertingAlert(alertId: String, completion: @escaping ((_ data: CommonAlert?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAlertingAlertWithRequestBuilder(alertId: alertId)
+        requestBuilder.execute { (response: Response<CommonAlert>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an alert
+     - GET /api/v2/alerting/alerts/{alertId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "waitBetweenNotificationMs" : 0,
+  "dateMutedUntil" : "2000-01-23T04:56:07.000+00:00",
+  "unread" : true,
+  "conversationId" : "conversationId",
+  "selfUri" : "https://openapi-generator.tech",
+  "rule" : "{}",
+  "active" : true,
+  "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+  "snoozed" : true,
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "dateSnoozedUntil" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "conditions" : "{}",
+  "user" : "{}",
+  "muted" : true,
+  "notifications" : [ {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  }, {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  } ],
+  "ruleUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter alertId: (path) Alert ID 
+
+     - returns: RequestBuilder<CommonAlert> 
+     */
+    open class func getAlertingAlertWithRequestBuilder(alertId: String) -> RequestBuilder<CommonAlert> {        
+        var path = "/api/v2/alerting/alerts/{alertId}"
+        let alertIdPreEscape = "\(alertId)"
+        let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     /**
@@ -3954,6 +4121,397 @@ open class AlertingAPI {
     }
 
     
+    /**
+     Get a rule.
+     
+     - parameter ruleId: (path) Rule Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAlertingRule(ruleId: String, completion: @escaping ((_ data: CommonRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAlertingRuleWithRequestBuilder(ruleId: ruleId)
+        requestBuilder.execute { (response: Response<CommonRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a rule.
+     - GET /api/v2/alerting/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "waitBetweenNotificationMs" : 0,
+  "inAlarm" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "type" : "ConversationMetrics",
+  "version" : 6,
+  "enabled" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "conditions" : "{}",
+  "user" : "{}",
+  "notifications" : [ {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  }, {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  } ],
+  "sendExitingAlarmNotifications" : true
+}, statusCode=200}]
+     
+     - parameter ruleId: (path) Rule Id 
+
+     - returns: RequestBuilder<CommonRule> 
+     */
+    open class func getAlertingRuleWithRequestBuilder(ruleId: String) -> RequestBuilder<CommonRule> {        
+        var path = "/api/v2/alerting/rules/{ruleId}"
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Allows an entity to mute/snooze an alert or update the unread status of the alert.
+     
+     - parameter alertId: (path) Alert ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAlertingAlert(alertId: String, body: AlertRequest? = nil, completion: @escaping ((_ data: CommonAlert?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAlertingAlertWithRequestBuilder(alertId: alertId, body: body)
+        requestBuilder.execute { (response: Response<CommonAlert>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Allows an entity to mute/snooze an alert or update the unread status of the alert.
+     - PATCH /api/v2/alerting/alerts/{alertId}
+     - Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "waitBetweenNotificationMs" : 0,
+  "dateMutedUntil" : "2000-01-23T04:56:07.000+00:00",
+  "unread" : true,
+  "conversationId" : "conversationId",
+  "selfUri" : "https://openapi-generator.tech",
+  "rule" : "{}",
+  "active" : true,
+  "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+  "snoozed" : true,
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "dateSnoozedUntil" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "conditions" : "{}",
+  "user" : "{}",
+  "muted" : true,
+  "notifications" : [ {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  }, {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  } ],
+  "ruleUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter alertId: (path) Alert ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<CommonAlert> 
+     */
+    open class func patchAlertingAlertWithRequestBuilder(alertId: String, body: AlertRequest? = nil) -> RequestBuilder<CommonAlert> {        
+        var path = "/api/v2/alerting/alerts/{alertId}"
+        let alertIdPreEscape = "\(alertId)"
+        let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Bulk alert updates
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAlertingAlertsBulk(body: CommonAlertBulkUpdateRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAlertingAlertsBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk alert updates
+     - PATCH /api/v2/alerting/alerts/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func patchAlertingAlertsBulkWithRequestBuilder(body: CommonAlertBulkUpdateRequest) -> RequestBuilder<BulkResponse> {        
+        let path = "/api/v2/alerting/alerts/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Bulk update of notification lists
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAlertingRulesBulk(body: CommonRuleBulkUpdateNotificationsRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAlertingRulesBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update of notification lists
+     - PATCH /api/v2/alerting/rules/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func patchAlertingRulesBulkWithRequestBuilder(body: CommonRuleBulkUpdateNotificationsRequest) -> RequestBuilder<BulkResponse> {        
+        let path = "/api/v2/alerting/rules/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Gets a paged list of alerts. The max page size is 50
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAlertingAlertsQuery(body: GetAlertQuery? = nil, completion: @escaping ((_ data: AlertListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAlertingAlertsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AlertListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a paged list of alerts. The max page size is 50
+     - POST /api/v2/alerting/alerts/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "waitBetweenNotificationMs" : 0,
+    "dateMutedUntil" : "2000-01-23T04:56:07.000+00:00",
+    "unread" : true,
+    "conversationId" : "conversationId",
+    "selfUri" : "https://openapi-generator.tech",
+    "rule" : "{}",
+    "active" : true,
+    "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+    "snoozed" : true,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "dateSnoozedUntil" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "conditions" : "{}",
+    "user" : "{}",
+    "muted" : true,
+    "notifications" : [ {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    }, {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    } ],
+    "ruleUri" : "https://openapi-generator.tech"
+  }, {
+    "waitBetweenNotificationMs" : 0,
+    "dateMutedUntil" : "2000-01-23T04:56:07.000+00:00",
+    "unread" : true,
+    "conversationId" : "conversationId",
+    "selfUri" : "https://openapi-generator.tech",
+    "rule" : "{}",
+    "active" : true,
+    "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+    "snoozed" : true,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "dateSnoozedUntil" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "conditions" : "{}",
+    "user" : "{}",
+    "muted" : true,
+    "notifications" : [ {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    }, {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    } ],
+    "ruleUri" : "https://openapi-generator.tech"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<AlertListing> 
+     */
+    open class func postAlertingAlertsQueryWithRequestBuilder(body: GetAlertQuery? = nil) -> RequestBuilder<AlertListing> {        
+        let path = "/api/v2/alerting/alerts/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlertListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
     
     /**
      Create an interaction stats rule.
@@ -4591,6 +5149,303 @@ open class AlertingAPI {
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create a Rule.
+     
+     - parameter body: (body) rule to be created 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAlertingRules(body: CommonRule, completion: @escaping ((_ data: CommonRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAlertingRulesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CommonRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a Rule.
+     - POST /api/v2/alerting/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "waitBetweenNotificationMs" : 0,
+  "inAlarm" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "type" : "ConversationMetrics",
+  "version" : 6,
+  "enabled" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "conditions" : "{}",
+  "user" : "{}",
+  "notifications" : [ {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  }, {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  } ],
+  "sendExitingAlarmNotifications" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) rule to be created 
+
+     - returns: RequestBuilder<CommonRule> 
+     */
+    open class func postAlertingRulesWithRequestBuilder(body: CommonRule) -> RequestBuilder<CommonRule> {        
+        let path = "/api/v2/alerting/rules"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Bulk remove rules
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAlertingRulesBulkRemove(body: CommonRuleBulkDeleteRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAlertingRulesBulkRemoveWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk remove rules
+     - POST /api/v2/alerting/rules/bulk/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func postAlertingRulesBulkRemoveWithRequestBuilder(body: CommonRuleBulkDeleteRequest) -> RequestBuilder<BulkResponse> {        
+        let path = "/api/v2/alerting/rules/bulk/remove"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a paged list of rules.  The max size of the page is 50 items.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAlertingRulesQuery(body: GetRulesQuery? = nil, completion: @escaping ((_ data: CommonRuleContainer?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAlertingRulesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CommonRuleContainer>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a paged list of rules.  The max size of the page is 50 items.
+     - POST /api/v2/alerting/rules/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "waitBetweenNotificationMs" : 0,
+    "inAlarm" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "type" : "ConversationMetrics",
+    "version" : 6,
+    "enabled" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "conditions" : "{}",
+    "user" : "{}",
+    "notifications" : [ {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    }, {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    } ],
+    "sendExitingAlarmNotifications" : true
+  }, {
+    "waitBetweenNotificationMs" : 0,
+    "inAlarm" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "type" : "ConversationMetrics",
+    "version" : 6,
+    "enabled" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "conditions" : "{}",
+    "user" : "{}",
+    "notifications" : [ {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    }, {
+      "recipient" : "recipient",
+      "notificationTypes" : [ "Sms", "Sms" ],
+      "locale" : "locale"
+    } ],
+    "sendExitingAlarmNotifications" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<CommonRuleContainer> 
+     */
+    open class func postAlertingRulesQueryWithRequestBuilder(body: GetRulesQuery? = nil) -> RequestBuilder<CommonRuleContainer> {        
+        let path = "/api/v2/alerting/rules/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonRuleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update an alert read status
+     
+     - parameter alertId: (path) Alert ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAlertingAlert(alertId: String, body: AlertingUnreadStatus? = nil, completion: @escaping ((_ data: UnreadStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAlertingAlertWithRequestBuilder(alertId: alertId, body: body)
+        requestBuilder.execute { (response: Response<UnreadStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an alert read status
+     - PUT /api/v2/alerting/alerts/{alertId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unread" : true
+}, statusCode=200}]
+     
+     - parameter alertId: (path) Alert ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<UnreadStatus> 
+     */
+    open class func putAlertingAlertWithRequestBuilder(alertId: String, body: AlertingUnreadStatus? = nil) -> RequestBuilder<UnreadStatus> {        
+        var path = "/api/v2/alerting/alerts/{alertId}"
+        let alertIdPreEscape = "\(alertId)"
+        let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UnreadStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     
@@ -5298,6 +6153,85 @@ open class AlertingAPI {
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update a rule
+     
+     - parameter ruleId: (path) Rule Id 
+     - parameter body: (body) rule to be updated 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAlertingRule(ruleId: String, body: ModifiableRuleProperties, completion: @escaping ((_ data: CommonRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAlertingRuleWithRequestBuilder(ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<CommonRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a rule
+     - PUT /api/v2/alerting/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "waitBetweenNotificationMs" : 0,
+  "inAlarm" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "type" : "ConversationMetrics",
+  "version" : 6,
+  "enabled" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "conditions" : "{}",
+  "user" : "{}",
+  "notifications" : [ {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  }, {
+    "recipient" : "recipient",
+    "notificationTypes" : [ "Sms", "Sms" ],
+    "locale" : "locale"
+  } ],
+  "sendExitingAlarmNotifications" : true
+}, statusCode=200}]
+     
+     - parameter ruleId: (path) Rule Id 
+     - parameter body: (body) rule to be updated 
+
+     - returns: RequestBuilder<CommonRule> 
+     */
+    open class func putAlertingRuleWithRequestBuilder(ruleId: String, body: ModifiableRuleProperties) -> RequestBuilder<CommonRule> {        
+        var path = "/api/v2/alerting/rules/{ruleId}"
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CommonRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

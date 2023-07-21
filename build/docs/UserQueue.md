@@ -40,6 +40,7 @@ title: UserQueue
 | **outboundMessagingAddresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses.html) | The messaging addresses for the queue. | [optional] |
 | **outboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) |  | [optional] |
 | **peerId** | **String** | The ID of an associated external queue. | [optional] |
+| **suppressInQueueCallRecording** | **Bool** | Indicates whether recording in-queue calls is suppressed for this queue. | [optional] |
 | **joined** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

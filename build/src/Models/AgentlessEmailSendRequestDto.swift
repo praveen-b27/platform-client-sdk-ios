@@ -22,7 +22,7 @@ public class AgentlessEmailSendRequestDto: Codable {
     public var conversationId: String?
     /** The sender of the message. */
     public var fromAddress: EmailAddress?
-    /** The recipient(s) of the message. */
+    /** The recipient of the message. So far, only one recipient is allowed. This is a list, only for future usage. */
     public var toAddresses: [EmailAddress]?
     /** The address to use for reply. */
     public var replyToAddress: EmailAddress?

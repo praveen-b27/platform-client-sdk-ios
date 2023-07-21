@@ -47,10 +47,12 @@ public class KnowledgeImportJobResponse: Codable {
     public var dateCreated: Date?
     /** Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
+    /** If enabled pre-validation step will be skipped. */
+    public var skipConfirmationStep: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, uploadKey: String?, fileType: FileType?, settings: KnowledgeImportJobSettings?, status: Status?, report: KnowledgeImportJobReport?, knowledgeBase: KnowledgeBase?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, uploadKey: String?, fileType: FileType?, settings: KnowledgeImportJobSettings?, status: Status?, report: KnowledgeImportJobReport?, knowledgeBase: KnowledgeBase?, dateCreated: Date?, dateModified: Date?, skipConfirmationStep: Bool?, selfUri: String?) {
         self._id = _id
         self.uploadKey = uploadKey
         self.fileType = fileType
@@ -60,6 +62,7 @@ public class KnowledgeImportJobResponse: Codable {
         self.knowledgeBase = knowledgeBase
         self.dateCreated = dateCreated
         self.dateModified = dateModified
+        self.skipConfirmationStep = skipConfirmationStep
         self.selfUri = selfUri
     }
 
@@ -73,6 +76,7 @@ public class KnowledgeImportJobResponse: Codable {
         case knowledgeBase
         case dateCreated
         case dateModified
+        case skipConfirmationStep
         case selfUri
     }
 

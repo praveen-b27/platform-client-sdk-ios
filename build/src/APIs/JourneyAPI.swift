@@ -272,7 +272,7 @@ open class JourneyAPI {
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
-  "weight" : 2,
+  "weight" : 9,
   "triggerWithOutcomePercentileConditions" : [ {
     "fallbackPercentile" : 5.637377,
     "maximumPercentile" : 5.962134,
@@ -285,6 +285,15 @@ open class JourneyAPI {
   "isActive" : true,
   "version" : 0,
   "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
+  "triggerWithOutcomeQuantileConditions" : [ {
+    "fallbackQuantileThreshold" : 7.0614014,
+    "outcomeId" : "outcomeId",
+    "maxQuantileThreshold" : 2.302136
+  }, {
+    "fallbackQuantileThreshold" : 7.0614014,
+    "outcomeId" : "outcomeId",
+    "maxQuantileThreshold" : 2.302136
+  } ],
   "triggerWithOutcomeProbabilityConditions" : [ {
     "probability" : 1.4658129,
     "outcomeId" : "outcomeId",
@@ -398,7 +407,7 @@ open class JourneyAPI {
     "endDate" : "2000-01-23T04:56:07.000+00:00",
     "displayName" : "displayName",
     "selfUri" : "https://openapi-generator.tech",
-    "weight" : 2,
+    "weight" : 9,
     "triggerWithOutcomePercentileConditions" : [ {
       "fallbackPercentile" : 5.637377,
       "maximumPercentile" : 5.962134,
@@ -411,6 +420,15 @@ open class JourneyAPI {
     "isActive" : true,
     "version" : 0,
     "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
+    "triggerWithOutcomeQuantileConditions" : [ {
+      "fallbackQuantileThreshold" : 7.0614014,
+      "outcomeId" : "outcomeId",
+      "maxQuantileThreshold" : 2.302136
+    }, {
+      "fallbackQuantileThreshold" : 7.0614014,
+      "outcomeId" : "outcomeId",
+      "maxQuantileThreshold" : 2.302136
+    } ],
     "triggerWithOutcomeProbabilityConditions" : [ {
       "probability" : 1.4658129,
       "outcomeId" : "outcomeId",
@@ -454,7 +472,7 @@ open class JourneyAPI {
     "endDate" : "2000-01-23T04:56:07.000+00:00",
     "displayName" : "displayName",
     "selfUri" : "https://openapi-generator.tech",
-    "weight" : 2,
+    "weight" : 9,
     "triggerWithOutcomePercentileConditions" : [ {
       "fallbackPercentile" : 5.637377,
       "maximumPercentile" : 5.962134,
@@ -467,6 +485,15 @@ open class JourneyAPI {
     "isActive" : true,
     "version" : 0,
     "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
+    "triggerWithOutcomeQuantileConditions" : [ {
+      "fallbackQuantileThreshold" : 7.0614014,
+      "outcomeId" : "outcomeId",
+      "maxQuantileThreshold" : 2.302136
+    }, {
+      "fallbackQuantileThreshold" : 7.0614014,
+      "outcomeId" : "outcomeId",
+      "maxQuantileThreshold" : 2.302136
+    } ],
     "triggerWithOutcomeProbabilityConditions" : [ {
       "probability" : 1.4658129,
       "outcomeId" : "outcomeId",
@@ -1656,13 +1683,17 @@ open class JourneyAPI {
     "percentile" : 1,
     "sessionMaxProbability" : 0.8008282,
     "probability" : 6.0274563,
+    "quantile" : 5.637377,
     "sessionMaxPercentile" : 5,
+    "sessionMaxQuantile" : 2.302136,
     "outcome" : "{}"
   }, {
     "percentile" : 1,
     "sessionMaxProbability" : 0.8008282,
     "probability" : 6.0274563,
+    "quantile" : 5.637377,
     "sessionMaxPercentile" : 5,
+    "sessionMaxQuantile" : 2.302136,
     "outcome" : "{}"
   } ],
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00"
@@ -1725,7 +1756,7 @@ open class JourneyAPI {
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
-  "weight" : 2,
+  "weight" : 9,
   "triggerWithOutcomePercentileConditions" : [ {
     "fallbackPercentile" : 5.637377,
     "maximumPercentile" : 5.962134,
@@ -1738,6 +1769,15 @@ open class JourneyAPI {
   "isActive" : true,
   "version" : 0,
   "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
+  "triggerWithOutcomeQuantileConditions" : [ {
+    "fallbackQuantileThreshold" : 7.0614014,
+    "outcomeId" : "outcomeId",
+    "maxQuantileThreshold" : 2.302136
+  }, {
+    "fallbackQuantileThreshold" : 7.0614014,
+    "outcomeId" : "outcomeId",
+    "maxQuantileThreshold" : 2.302136
+  } ],
   "triggerWithOutcomeProbabilityConditions" : [ {
     "probability" : 1.4658129,
     "outcomeId" : "outcomeId",
@@ -2469,7 +2509,7 @@ open class JourneyAPI {
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
-  "weight" : 2,
+  "weight" : 9,
   "triggerWithOutcomePercentileConditions" : [ {
     "fallbackPercentile" : 5.637377,
     "maximumPercentile" : 5.962134,
@@ -2482,6 +2522,15 @@ open class JourneyAPI {
   "isActive" : true,
   "version" : 0,
   "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
+  "triggerWithOutcomeQuantileConditions" : [ {
+    "fallbackQuantileThreshold" : 7.0614014,
+    "outcomeId" : "outcomeId",
+    "maxQuantileThreshold" : 2.302136
+  }, {
+    "fallbackQuantileThreshold" : 7.0614014,
+    "outcomeId" : "outcomeId",
+    "maxQuantileThreshold" : 2.302136
+  } ],
   "triggerWithOutcomeProbabilityConditions" : [ {
     "probability" : 1.4658129,
     "outcomeId" : "outcomeId",

@@ -22,11 +22,14 @@ public class KnowledgeImportJobRequest: Codable {
     public var fileType: FileType?
     /** Additional optional settings */
     public var settings: KnowledgeImportJobSettings?
+    /** If enabled pre-validation step will be skipped. */
+    public var skipConfirmationStep: Bool?
 
-    public init(uploadKey: String?, fileType: FileType?, settings: KnowledgeImportJobSettings?) {
+    public init(uploadKey: String?, fileType: FileType?, settings: KnowledgeImportJobSettings?, skipConfirmationStep: Bool?) {
         self.uploadKey = uploadKey
         self.fileType = fileType
         self.settings = settings
+        self.skipConfirmationStep = skipConfirmationStep
     }
 
 

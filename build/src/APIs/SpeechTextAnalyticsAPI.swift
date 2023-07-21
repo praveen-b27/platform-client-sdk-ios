@@ -304,6 +304,74 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
+    
+    /**
+     Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation
+     
+     - parameter conversationId: (path) Conversation ID 
+     - parameter communicationId: (path) Communication ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsConversationCommunicationTranscripturls(conversationId: String, communicationId: String, completion: @escaping ((_ data: TranscriptUrls?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsConversationCommunicationTranscripturlsWithRequestBuilder(conversationId: conversationId, communicationId: communicationId)
+        requestBuilder.execute { (response: Response<TranscriptUrls>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation
+     - GET /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "urls" : [ {
+    "recording" : "{}",
+    "url" : "url"
+  }, {
+    "recording" : "{}",
+    "url" : "url"
+  } ],
+  "communicationId" : "communicationId",
+  "conversation" : "{}"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) Conversation ID 
+     - parameter communicationId: (path) Communication ID 
+
+     - returns: RequestBuilder<TranscriptUrls> 
+     */
+    open class func getSpeechandtextanalyticsConversationCommunicationTranscripturlsWithRequestBuilder(conversationId: String, communicationId: String) -> RequestBuilder<TranscriptUrls> {        
+        var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let communicationIdPreEscape = "\(communicationId)"
+        let communicationIdPostEscape = communicationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{communicationId}", with: communicationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranscriptUrls>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      Get a Speech & Text Analytics program by id
      
@@ -1177,7 +1245,8 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "defaultProgram" : "{}",
-  "expectedDialects" : [ "expectedDialects", "expectedDialects" ]
+  "expectedDialects" : [ "expectedDialects", "expectedDialects" ],
+  "textAnalyticsEnabled" : true
 }, statusCode=200}]
 
      - returns: RequestBuilder<SpeechTextAnalyticsSettingsResponse> 
@@ -1743,7 +1812,8 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "defaultProgram" : "{}",
-  "expectedDialects" : [ "expectedDialects", "expectedDialects" ]
+  "expectedDialects" : [ "expectedDialects", "expectedDialects" ],
+  "textAnalyticsEnabled" : true
 }, statusCode=200}]
      
      - parameter body: (body) Speech And Text Analytics Settings 
@@ -2492,7 +2562,8 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "defaultProgram" : "{}",
-  "expectedDialects" : [ "expectedDialects", "expectedDialects" ]
+  "expectedDialects" : [ "expectedDialects", "expectedDialects" ],
+  "textAnalyticsEnabled" : true
 }, statusCode=200}]
      
      - parameter body: (body) Speech And Text Analytics Settings 

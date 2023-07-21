@@ -12,6 +12,88 @@ import Foundation
 open class MessagingAPI {
     
     /**
+     Delete a messaging setting
+     
+     - parameter messageSettingId: (path) Message Settings ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteMessagingSetting(messageSettingId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteMessagingSettingWithRequestBuilder(messageSettingId: messageSettingId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a messaging setting
+     - DELETE /api/v2/messaging/settings/{messageSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter messageSettingId: (path) Message Settings ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteMessagingSettingWithRequestBuilder(messageSettingId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/messaging/settings/{messageSettingId}"
+        let messageSettingIdPreEscape = "\(messageSettingId)"
+        let messageSettingIdPostEscape = messageSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messageSettingId}", with: messageSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    /**
+     Delete the organization's default setting, a global default will be applied to integrations without settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteMessagingSettingsDefault(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteMessagingSettingsDefaultWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete the organization's default setting, a global default will be applied to integrations without settings
+     - DELETE /api/v2/messaging/settings/default
+     - When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteMessagingSettingsDefaultWithRequestBuilder() -> RequestBuilder<Void> {        
+        let path = "/api/v2/messaging/settings/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete a supported content profile
      
      - parameter supportedContentId: (path) Supported Content ID 
@@ -53,6 +135,215 @@ open class MessagingAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a messaging setting
+     
+     - parameter messageSettingId: (path) Message Settings ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getMessagingSetting(messageSettingId: String, completion: @escaping ((_ data: MessagingSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = getMessagingSettingWithRequestBuilder(messageSettingId: messageSettingId)
+        requestBuilder.execute { (response: Response<MessagingSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a messaging setting
+     - GET /api/v2/messaging/settings/{messageSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "updatedBy" : "{}",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "event" : "{}",
+  "version" : "version",
+  "content" : "{}"
+}, statusCode=200}]
+     
+     - parameter messageSettingId: (path) Message Settings ID 
+
+     - returns: RequestBuilder<MessagingSetting> 
+     */
+    open class func getMessagingSettingWithRequestBuilder(messageSettingId: String) -> RequestBuilder<MessagingSetting> {        
+        var path = "/api/v2/messaging/settings/{messageSettingId}"
+        let messageSettingIdPreEscape = "\(messageSettingId)"
+        let messageSettingIdPostEscape = messageSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messageSettingId}", with: messageSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get a list of messaging settings
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getMessagingSettings(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: MessagingConfigListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getMessagingSettingsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<MessagingConfigListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of messaging settings
+     - GET /api/v2/messaging/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "updatedBy" : "{}",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "event" : "{}",
+    "version" : "version",
+    "content" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "updatedBy" : "{}",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "event" : "{}",
+    "version" : "version",
+    "content" : "{}"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<MessagingConfigListing> 
+     */
+    open class func getMessagingSettingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<MessagingConfigListing> {        
+        let path = "/api/v2/messaging/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<MessagingConfigListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
+     Get the organization's default settings that will be used as the default when creating an integration.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getMessagingSettingsDefault(completion: @escaping ((_ data: MessagingSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = getMessagingSettingsDefaultWithRequestBuilder()
+        requestBuilder.execute { (response: Response<MessagingSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the organization's default settings that will be used as the default when creating an integration.
+     - GET /api/v2/messaging/settings/default
+     - When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "updatedBy" : "{}",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "event" : "{}",
+  "version" : "version",
+  "content" : "{}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<MessagingSetting> 
+     */
+    open class func getMessagingSettingsDefaultWithRequestBuilder() -> RequestBuilder<MessagingSetting> {        
+        let path = "/api/v2/messaging/settings/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     
@@ -209,6 +500,72 @@ open class MessagingAPI {
     
     
     /**
+     Update a messaging setting
+     
+     - parameter messageSettingId: (path) Message Settings ID 
+     - parameter body: (body) MessagingSetting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchMessagingSetting(messageSettingId: String, body: MessagingSettingRequest, completion: @escaping ((_ data: MessagingSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchMessagingSettingWithRequestBuilder(messageSettingId: messageSettingId, body: body)
+        requestBuilder.execute { (response: Response<MessagingSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a messaging setting
+     - PATCH /api/v2/messaging/settings/{messageSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "updatedBy" : "{}",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "event" : "{}",
+  "version" : "version",
+  "content" : "{}"
+}, statusCode=200}]
+     
+     - parameter messageSettingId: (path) Message Settings ID 
+     - parameter body: (body) MessagingSetting 
+
+     - returns: RequestBuilder<MessagingSetting> 
+     */
+    open class func patchMessagingSettingWithRequestBuilder(messageSettingId: String, body: MessagingSettingRequest) -> RequestBuilder<MessagingSetting> {        
+        var path = "/api/v2/messaging/settings/{messageSettingId}"
+        let messageSettingIdPreEscape = "\(messageSettingId)"
+        let messageSettingIdPostEscape = messageSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messageSettingId}", with: messageSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    /**
      Update a supported content profile
      
      - parameter supportedContentId: (path) Supported Content ID 
@@ -274,6 +631,66 @@ open class MessagingAPI {
 
     
     /**
+     Create a messaging setting
+     
+     - parameter body: (body) MessagingSetting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postMessagingSettings(body: MessagingSettingRequest, completion: @escaping ((_ data: MessagingSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = postMessagingSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<MessagingSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a messaging setting
+     - POST /api/v2/messaging/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "updatedBy" : "{}",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "event" : "{}",
+  "version" : "version",
+  "content" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) MessagingSetting 
+
+     - returns: RequestBuilder<MessagingSetting> 
+     */
+    open class func postMessagingSettingsWithRequestBuilder(body: MessagingSettingRequest) -> RequestBuilder<MessagingSetting> {        
+        let path = "/api/v2/messaging/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Create a Supported Content profile
      
      - parameter body: (body) SupportedContent 
@@ -330,6 +747,67 @@ open class MessagingAPI {
         let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Set the organization's default settings that may be applied to an integration when it is created.
+     
+     - parameter body: (body) Messaging Setting ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putMessagingSettingsDefault(body: MessagingSettingDefaultRequest, completion: @escaping ((_ data: MessagingSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = putMessagingSettingsDefaultWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<MessagingSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set the organization's default settings that may be applied to an integration when it is created.
+     - PUT /api/v2/messaging/settings/default
+     - When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "updatedBy" : "{}",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "event" : "{}",
+  "version" : "version",
+  "content" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) Messaging Setting ID 
+
+     - returns: RequestBuilder<MessagingSetting> 
+     */
+    open class func putMessagingSettingsDefaultWithRequestBuilder(body: MessagingSettingDefaultRequest) -> RequestBuilder<MessagingSetting> {        
+        let path = "/api/v2/messaging/settings/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
 }

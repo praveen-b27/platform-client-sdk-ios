@@ -7,12 +7,120 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteMessagingSetting**](MessagingAPI.html#deleteMessagingSetting) | Delete a messaging setting |
+| [**deleteMessagingSettingsDefault**](MessagingAPI.html#deleteMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
 | [**deleteMessagingSupportedcontentSupportedContentId**](MessagingAPI.html#deleteMessagingSupportedcontentSupportedContentId) | Delete a supported content profile |
+| [**getMessagingSetting**](MessagingAPI.html#getMessagingSetting) | Get a messaging setting |
+| [**getMessagingSettings**](MessagingAPI.html#getMessagingSettings) | Get a list of messaging settings |
+| [**getMessagingSettingsDefault**](MessagingAPI.html#getMessagingSettingsDefault) | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
 | [**getMessagingSupportedcontent**](MessagingAPI.html#getMessagingSupportedcontent) | Get a list of Supported Content profiles |
 | [**getMessagingSupportedcontentSupportedContentId**](MessagingAPI.html#getMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
+| [**patchMessagingSetting**](MessagingAPI.html#patchMessagingSetting) | Update a messaging setting |
 | [**patchMessagingSupportedcontentSupportedContentId**](MessagingAPI.html#patchMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
+| [**postMessagingSettings**](MessagingAPI.html#postMessagingSettings) | Create a messaging setting |
 | [**postMessagingSupportedcontent**](MessagingAPI.html#postMessagingSupportedcontent) | Create a Supported Content profile |
+| [**putMessagingSettingsDefault**](MessagingAPI.html#putMessagingSettingsDefault) | Set the organization&#39;s default settings that may be applied to an integration when it is created. |
 {: class="table-striped"}
+
+<a name="deleteMessagingSetting"></a>
+
+# **deleteMessagingSetting**
+
+
+
+> Void deleteMessagingSetting(messageSettingId)
+
+Delete a messaging setting
+
+
+
+Wraps DELETE /api/v2/messaging/settings/{messageSettingId}  
+
+Requires ALL permissions: 
+
+* messaging:setting:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageSettingId: String = "" // Message Settings ID
+
+// Code example
+MessagingAPI.deleteMessagingSetting(messageSettingId: messageSettingId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("MessagingAPI.deleteMessagingSetting was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageSettingId** | **String**| Message Settings ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteMessagingSettingsDefault"></a>
+
+# **deleteMessagingSettingsDefault**
+
+
+
+> Void deleteMessagingSettingsDefault()
+
+Delete the organization&#39;s default setting, a global default will be applied to integrations without settings
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
+
+
+
+Wraps DELETE /api/v2/messaging/settings/default  
+
+Requires ALL permissions: 
+
+* messaging:setting:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+MessagingAPI.deleteMessagingSettingsDefault() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("MessagingAPI.deleteMessagingSettingsDefault was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteMessagingSupportedcontentSupportedContentId"></a>
 
@@ -66,6 +174,162 @@ MessagingAPI.deleteMessagingSupportedcontentSupportedContentId(supportedContentI
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getMessagingSetting"></a>
+
+# **getMessagingSetting**
+
+
+
+> [MessagingSetting](MessagingSetting.html) getMessagingSetting(messageSettingId)
+
+Get a messaging setting
+
+
+
+Wraps GET /api/v2/messaging/settings/{messageSettingId}  
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageSettingId: String = "" // Message Settings ID
+
+// Code example
+MessagingAPI.getMessagingSetting(messageSettingId: messageSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("MessagingAPI.getMessagingSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageSettingId** | **String**| Message Settings ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
+<a name="getMessagingSettings"></a>
+
+# **getMessagingSettings**
+
+
+
+> [MessagingConfigListing](MessagingConfigListing.html) getMessagingSettings(pageSize, pageNumber)
+
+Get a list of messaging settings
+
+
+
+Wraps GET /api/v2/messaging/settings  
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+MessagingAPI.getMessagingSettings(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("MessagingAPI.getMessagingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingConfigListing**](MessagingConfigListing.html)
+
+<a name="getMessagingSettingsDefault"></a>
+
+# **getMessagingSettingsDefault**
+
+
+
+> [MessagingSetting](MessagingSetting.html) getMessagingSettingsDefault()
+
+Get the organization&#39;s default settings that will be used as the default when creating an integration.
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
+
+
+
+Wraps GET /api/v2/messaging/settings/default  
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+MessagingAPI.getMessagingSettingsDefault() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("MessagingAPI.getMessagingSettingsDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
 
 <a name="getMessagingSupportedcontent"></a>
 
@@ -177,6 +441,60 @@ MessagingAPI.getMessagingSupportedcontentSupportedContentId(supportedContentId: 
 
 [**SupportedContent**](SupportedContent.html)
 
+<a name="patchMessagingSetting"></a>
+
+# **patchMessagingSetting**
+
+
+
+> [MessagingSetting](MessagingSetting.html) patchMessagingSetting(messageSettingId, body)
+
+Update a messaging setting
+
+
+
+Wraps PATCH /api/v2/messaging/settings/{messageSettingId}  
+
+Requires ALL permissions: 
+
+* messaging:setting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageSettingId: String = "" // Message Settings ID
+let body: MessagingSettingRequest = new MessagingSettingRequest(...) // MessagingSetting
+
+// Code example
+MessagingAPI.patchMessagingSetting(messageSettingId: messageSettingId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("MessagingAPI.patchMessagingSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageSettingId** | **String**| Message Settings ID | |
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="patchMessagingSupportedcontentSupportedContentId"></a>
 
 # **patchMessagingSupportedcontentSupportedContentId**
@@ -233,6 +551,58 @@ MessagingAPI.patchMessagingSupportedcontentSupportedContentId(supportedContentId
 
 [**SupportedContent**](SupportedContent.html)
 
+<a name="postMessagingSettings"></a>
+
+# **postMessagingSettings**
+
+
+
+> [MessagingSetting](MessagingSetting.html) postMessagingSettings(body)
+
+Create a messaging setting
+
+
+
+Wraps POST /api/v2/messaging/settings  
+
+Requires ANY permissions: 
+
+* messaging:setting:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MessagingSettingRequest = new MessagingSettingRequest(...) // MessagingSetting
+
+// Code example
+MessagingAPI.postMessagingSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("MessagingAPI.postMessagingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="postMessagingSupportedcontent"></a>
 
 # **postMessagingSupportedcontent**
@@ -286,4 +656,58 @@ MessagingAPI.postMessagingSupportedcontent(body: body) { (response, error) in
 ### Return type
 
 [**SupportedContent**](SupportedContent.html)
+
+<a name="putMessagingSettingsDefault"></a>
+
+# **putMessagingSettingsDefault**
+
+
+
+> [MessagingSetting](MessagingSetting.html) putMessagingSettingsDefault(body)
+
+Set the organization&#39;s default settings that may be applied to an integration when it is created.
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be applied to it.
+
+
+
+Wraps PUT /api/v2/messaging/settings/default  
+
+Requires ALL permissions: 
+
+* messaging:setting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MessagingSettingDefaultRequest = new MessagingSettingDefaultRequest(...) // Messaging Setting ID
+
+// Code example
+MessagingAPI.putMessagingSettingsDefault(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("MessagingAPI.putMessagingSettingsDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest.html)| Messaging Setting ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
 

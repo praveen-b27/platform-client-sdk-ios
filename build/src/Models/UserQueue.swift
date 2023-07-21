@@ -80,11 +80,13 @@ public class UserQueue: Codable {
     public var outboundEmailAddress: QueueEmailAddress?
     /** The ID of an associated external queue. */
     public var peerId: String?
+    /** Indicates whether recording in-queue calls is suppressed for this queue. */
+    public var suppressInQueueCallRecording: Bool?
     public var joined: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, joined: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, joined: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -118,6 +120,7 @@ public class UserQueue: Codable {
         self.outboundMessagingAddresses = outboundMessagingAddresses
         self.outboundEmailAddress = outboundEmailAddress
         self.peerId = peerId
+        self.suppressInQueueCallRecording = suppressInQueueCallRecording
         self.joined = joined
         self.selfUri = selfUri
     }
@@ -156,6 +159,7 @@ public class UserQueue: Codable {
         case outboundMessagingAddresses
         case outboundEmailAddress
         case peerId
+        case suppressInQueueCallRecording
         case joined
         case selfUri
     }

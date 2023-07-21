@@ -25,8 +25,10 @@ public class ActionMap: Codable {
     public var triggerWithEventConditions: [EventCondition]?
     /** Probability conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?
-    /** Percentile conditions for outcomes that must be satisfied to trigger the action map. */
+    /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomePercentileConditions: [OutcomePercentileCondition]?
+    /** Quantile conditions for outcomes that must be satisfied to trigger the action map. */
+    public var triggerWithOutcomeQuantileConditions: [OutcomeQuantileCondition]?
     /** URL conditions that a page must match for web actions to be displayable. */
     public var pageUrlConditions: [UrlCondition]?
     /** Type of activation. */
@@ -50,7 +52,7 @@ public class ActionMap: Codable {
     /** Timestamp at which the action map is scheduled to stop firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endDate: Date?
 
-    public init(_id: String?, version: Int?, isActive: Bool?, displayName: String?, triggerWithSegments: [String]?, triggerWithEventConditions: [EventCondition]?, triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?, triggerWithOutcomePercentileConditions: [OutcomePercentileCondition]?, pageUrlConditions: [UrlCondition]?, activation: Activation?, weight: Int?, action: ActionMapAction?, actionMapScheduleGroups: ActionMapScheduleGroups?, ignoreFrequencyCap: Bool?, selfUri: String?, createdDate: Date?, modifiedDate: Date?, startDate: Date?, endDate: Date?) {
+    public init(_id: String?, version: Int?, isActive: Bool?, displayName: String?, triggerWithSegments: [String]?, triggerWithEventConditions: [EventCondition]?, triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?, triggerWithOutcomePercentileConditions: [OutcomePercentileCondition]?, triggerWithOutcomeQuantileConditions: [OutcomeQuantileCondition]?, pageUrlConditions: [UrlCondition]?, activation: Activation?, weight: Int?, action: ActionMapAction?, actionMapScheduleGroups: ActionMapScheduleGroups?, ignoreFrequencyCap: Bool?, selfUri: String?, createdDate: Date?, modifiedDate: Date?, startDate: Date?, endDate: Date?) {
         self._id = _id
         self.version = version
         self.isActive = isActive
@@ -59,6 +61,7 @@ public class ActionMap: Codable {
         self.triggerWithEventConditions = triggerWithEventConditions
         self.triggerWithOutcomeProbabilityConditions = triggerWithOutcomeProbabilityConditions
         self.triggerWithOutcomePercentileConditions = triggerWithOutcomePercentileConditions
+        self.triggerWithOutcomeQuantileConditions = triggerWithOutcomeQuantileConditions
         self.pageUrlConditions = pageUrlConditions
         self.activation = activation
         self.weight = weight
@@ -81,6 +84,7 @@ public class ActionMap: Codable {
         case triggerWithEventConditions
         case triggerWithOutcomeProbabilityConditions
         case triggerWithOutcomePercentileConditions
+        case triggerWithOutcomeQuantileConditions
         case pageUrlConditions
         case activation
         case weight

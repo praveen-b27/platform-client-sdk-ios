@@ -2687,6 +2687,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "skipConfirmationStep" : true,
   "settings" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -3857,16 +3858,20 @@ open class KnowledgeAPI {
     }
 
     
+    
+    
     /**
      Get knowledge base unanswered group for a particular groupId
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter groupId: (path) The ID of the group to be retrieved. 
      - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter dateStart: (query) The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: String, groupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroup? = nil, completion: @escaping ((_ data: UnansweredGroup?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, app: app)
+    open class func getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: String, groupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroup? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, completion: @escaping ((_ data: UnansweredGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, app: app, dateStart: dateStart, dateEnd: dateEnd)
         requestBuilder.execute { (response: Response<UnansweredGroup>?, error) -> Void in
             do {
                 if let e = error {
@@ -3937,10 +3942,12 @@ open class KnowledgeAPI {
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter groupId: (path) The ID of the group to be retrieved. 
      - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter dateStart: (query) The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<UnansweredGroup> 
      */
-    open class func getKnowledgeKnowledgebaseUnansweredGroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroup? = nil) -> RequestBuilder<UnansweredGroup> {        
+    open class func getKnowledgeKnowledgebaseUnansweredGroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroup? = nil, dateStart: Date? = nil, dateEnd: Date? = nil) -> RequestBuilder<UnansweredGroup> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3953,7 +3960,9 @@ open class KnowledgeAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "app": app?.rawValue
+            "app": app?.rawValue, 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<UnansweredGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3974,6 +3983,8 @@ open class KnowledgeAPI {
     }
 
     
+    
+    
     /**
      Get knowledge base unanswered phrase group for a particular phraseGroupId
      
@@ -3981,10 +3992,12 @@ open class KnowledgeAPI {
      - parameter groupId: (path) The ID of the group to be retrieved. 
      - parameter phraseGroupId: (path) The ID of the phraseGroup to be retrieved. 
      - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter dateStart: (query) The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: String, groupId: String, phraseGroupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup? = nil, completion: @escaping ((_ data: UnansweredPhraseGroup?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, app: app)
+    open class func getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: String, groupId: String, phraseGroupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, completion: @escaping ((_ data: UnansweredPhraseGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, app: app, dateStart: dateStart, dateEnd: dateEnd)
         requestBuilder.execute { (response: Response<UnansweredPhraseGroup>?, error) -> Void in
             do {
                 if let e = error {
@@ -4028,10 +4041,12 @@ open class KnowledgeAPI {
      - parameter groupId: (path) The ID of the group to be retrieved. 
      - parameter phraseGroupId: (path) The ID of the phraseGroup to be retrieved. 
      - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter dateStart: (query) The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<UnansweredPhraseGroup> 
      */
-    open class func getKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, phraseGroupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup? = nil) -> RequestBuilder<UnansweredPhraseGroup> {        
+    open class func getKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, phraseGroupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup? = nil, dateStart: Date? = nil, dateEnd: Date? = nil) -> RequestBuilder<UnansweredPhraseGroup> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4047,7 +4062,9 @@ open class KnowledgeAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "app": app?.rawValue
+            "app": app?.rawValue, 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<UnansweredPhraseGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4066,15 +4083,19 @@ open class KnowledgeAPI {
     }
 
     
+    
+    
     /**
      Get knowledge base unanswered groups
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter dateStart: (query) The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroups? = nil, completion: @escaping ((_ data: UnansweredGroups?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, app: app)
+    open class func getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroups? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, completion: @escaping ((_ data: UnansweredGroups?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, app: app, dateStart: dateStart, dateEnd: dateEnd)
         requestBuilder.execute { (response: Response<UnansweredGroups>?, error) -> Void in
             do {
                 if let e = error {
@@ -4189,10 +4210,12 @@ open class KnowledgeAPI {
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter dateStart: (query) The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<UnansweredGroups> 
      */
-    open class func getKnowledgeKnowledgebaseUnansweredGroupsWithRequestBuilder(knowledgeBaseId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroups? = nil) -> RequestBuilder<UnansweredGroups> {        
+    open class func getKnowledgeKnowledgebaseUnansweredGroupsWithRequestBuilder(knowledgeBaseId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroups? = nil, dateStart: Date? = nil, dateEnd: Date? = nil) -> RequestBuilder<UnansweredGroups> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4202,7 +4225,9 @@ open class KnowledgeAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "app": app?.rawValue
+            "app": app?.rawValue, 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<UnansweredGroups>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4900,6 +4925,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "skipConfirmationStep" : true,
   "settings" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -6498,6 +6524,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "skipConfirmationStep" : true,
   "settings" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",

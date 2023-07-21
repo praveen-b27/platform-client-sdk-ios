@@ -13,6 +13,7 @@ public class ConditionalGroupRoutingRule: Codable {
 
     public enum Metric: String, Codable { 
         case estimatedWaitTime = "EstimatedWaitTime"
+        case serviceLevel = "ServiceLevel"
     }
     public enum Operator: String, Codable { 
         case greaterThan = "GreaterThan"

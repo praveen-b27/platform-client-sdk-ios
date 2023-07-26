@@ -2393,8 +2393,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -5158,8 +5158,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -8875,8 +8875,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -11640,8 +11640,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -15594,8 +15594,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -18359,8 +18359,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -22076,8 +22076,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -24841,8 +24841,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -28644,8 +28644,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -31409,8 +31409,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -35126,8 +35126,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -37891,8 +37891,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -39390,8 +39390,8 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -41810,8 +41810,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -44575,8 +44575,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -48292,8 +48292,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -51057,8 +51057,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 6,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"

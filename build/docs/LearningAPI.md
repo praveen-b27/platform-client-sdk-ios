@@ -189,7 +189,7 @@ LearningAPI.getLearningAssignment(assignmentId: assignmentId, expand: expand) { 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assignmentId** | **String**| The ID of Learning Assignment | |
-| **expand** | [**[String]**](String.html)| Fields to expand in response | [optional]<br />**Values**: module ("module"), assessment ("assessment"), assessmentform ("assessmentForm"), moduleCoverart ("module.coverArt") |
+| **expand** | [**[String]**](String.html)| Fields to expand in response | [optional]<br />**Values**: module ("module"), assessment ("assessment"), assessmentform ("assessmentForm"), moduleCoverart ("module.coverArt"), step ("step"), stepModulestep ("step.moduleStep") |
 {: class="table-striped"}
 
 

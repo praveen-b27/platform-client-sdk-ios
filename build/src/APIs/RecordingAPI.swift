@@ -209,6 +209,43 @@ open class RecordingAPI {
         "text" : "text",
         "url" : "url"
       } ],
+      "cards" : [ {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      }, {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      } ],
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
       "buttonResponse" : "{}",
@@ -228,6 +265,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "contentType" : "QuickReply",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -252,6 +290,43 @@ open class RecordingAPI {
         "text" : "text",
         "url" : "url"
       } ],
+      "cards" : [ {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      }, {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      } ],
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
       "buttonResponse" : "{}",
@@ -271,6 +346,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "contentType" : "QuickReply",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -1407,6 +1483,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -1426,6 +1539,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -1450,6 +1564,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -1469,6 +1620,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -2706,6 +2858,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -2725,6 +2914,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -2749,6 +2939,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -2768,6 +2995,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -3610,6 +3838,43 @@ open class RecordingAPI {
         "text" : "text",
         "url" : "url"
       } ],
+      "cards" : [ {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      }, {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      } ],
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
       "buttonResponse" : "{}",
@@ -3629,6 +3894,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "contentType" : "QuickReply",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -3653,6 +3919,43 @@ open class RecordingAPI {
         "text" : "text",
         "url" : "url"
       } ],
+      "cards" : [ {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      }, {
+        "defaultAction" : "{}",
+        "description" : "description",
+        "title" : "title",
+        "actions" : [ {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        }, {
+          "payload" : "payload",
+          "isSelected" : true,
+          "text" : "text",
+          "type" : "Link",
+          "url" : "url"
+        } ],
+        "url" : "url"
+      } ],
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
       "buttonResponse" : "{}",
@@ -3672,6 +3975,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "contentType" : "QuickReply",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -4585,6 +4889,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -4604,6 +4945,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -4628,6 +4970,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -4647,6 +5026,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -5523,6 +5903,43 @@ open class RecordingAPI {
           "text" : "text",
           "url" : "url"
         } ],
+        "cards" : [ {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        }, {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        } ],
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
         "buttonResponse" : "{}",
@@ -5542,6 +5959,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "contentType" : "QuickReply",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -5566,6 +5984,43 @@ open class RecordingAPI {
           "text" : "text",
           "url" : "url"
         } ],
+        "cards" : [ {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        }, {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        } ],
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
         "buttonResponse" : "{}",
@@ -5585,6 +6040,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "contentType" : "QuickReply",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -6404,6 +6860,43 @@ open class RecordingAPI {
           "text" : "text",
           "url" : "url"
         } ],
+        "cards" : [ {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        }, {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        } ],
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
         "buttonResponse" : "{}",
@@ -6423,6 +6916,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "contentType" : "QuickReply",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -6447,6 +6941,43 @@ open class RecordingAPI {
           "text" : "text",
           "url" : "url"
         } ],
+        "cards" : [ {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        }, {
+          "defaultAction" : "{}",
+          "description" : "description",
+          "title" : "title",
+          "actions" : [ {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          }, {
+            "payload" : "payload",
+            "isSelected" : true,
+            "text" : "text",
+            "type" : "Link",
+            "url" : "url"
+          } ],
+          "url" : "url"
+        } ],
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
         "buttonResponse" : "{}",
@@ -6466,6 +6997,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "contentType" : "QuickReply",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -7175,8 +7707,8 @@ open class RecordingAPI {
     "region" : "af-south-1"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7437,8 +7969,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7696,8 +8228,8 @@ open class RecordingAPI {
     "conversation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7835,8 +8367,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 5
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8144,8 +8676,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8344,8 +8876,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11223,8 +11755,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -13988,8 +14520,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -17705,8 +18237,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -20470,8 +21002,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -24534,8 +25066,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -27299,8 +27831,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -31016,8 +31548,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -33781,8 +34313,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -35280,8 +35812,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -36494,6 +37026,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -36513,6 +37082,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -36537,6 +37107,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -36556,6 +37163,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -37481,6 +38089,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -37500,6 +38145,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -37524,6 +38170,43 @@ open class RecordingAPI {
       "text" : "text",
       "url" : "url"
     } ],
+    "cards" : [ {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    }, {
+      "defaultAction" : "{}",
+      "description" : "description",
+      "title" : "title",
+      "actions" : [ {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      }, {
+        "payload" : "payload",
+        "isSelected" : true,
+        "text" : "text",
+        "type" : "Link",
+        "url" : "url"
+      } ],
+      "url" : "url"
+    } ],
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
     "buttonResponse" : "{}",
@@ -37543,6 +38226,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "contentType" : "QuickReply",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"

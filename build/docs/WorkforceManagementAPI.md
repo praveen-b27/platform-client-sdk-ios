@@ -1751,8 +1751,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunitManagementunits = WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunitManagementunits.enummember // 
-let divisionId: String = "" // 
+let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunitManagementunits = WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunitManagementunits.enummember // If specified, the list of management units for which the user is authorized to use the requested feature will be returned
+let divisionId: String = "" // If specified, the list of management units belonging to the specified division will be returned
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(businessUnitId: businessUnitId, feature: feature, divisionId: divisionId) { (response, error) in
@@ -1771,8 +1771,8 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
-| **divisionId** | **String**|  | [optional] |
+| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
+| **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
 {: class="table-striped"}
 
 
@@ -2837,8 +2837,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunits = WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunits.enummember // 
-let divisionId: String = "" // 
+let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunits = WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunits.enummember // If specified, the list of business units for which the user is authorized to use the requested feature will be returned
+let divisionId: String = "" // If specified, the list of business units belonging to the specified division will be returned
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, divisionId: divisionId) { (response, error) in
@@ -2856,8 +2856,8 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, div
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
-| **divisionId** | **String**|  | [optional] |
+| **feature** | **String**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
+| **divisionId** | **String**| If specified, the list of business units belonging to the specified division will be returned | [optional] |
 {: class="table-striped"}
 
 
@@ -4469,8 +4469,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 0 // Deprecated, paging is not supported
 let pageNumber: Int = 0 // Deprecated, paging is not supported
 let expand: WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunits = WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunits.enummember // Deprecated, expand settings on the single MU route
-let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementManagementunits = WorkforceManagementAPI.Feature_getWorkforcemanagementManagementunits.enummember // 
-let divisionId: String = "" // 
+let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementManagementunits = WorkforceManagementAPI.Feature_getWorkforcemanagementManagementunits.enummember // If specified, the list of management units for which the user is authorized to use the requested feature will be returned
+let divisionId: String = "" // If specified, the list of management units belonging to the specified division will be returned
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize, pageNumber: pageNumber, expand: expand, feature: feature, divisionId: divisionId) { (response, error) in
@@ -4491,8 +4491,8 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize,
 | **pageSize** | **Int**| Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int**| Deprecated, paging is not supported | [optional] |
 | **expand** | **String**| Deprecated, expand settings on the single MU route | [optional]<br />**Values**: details ("details") |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
-| **divisionId** | **String**|  | [optional] |
+| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
+| **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
 {: class="table-striped"}
 
 

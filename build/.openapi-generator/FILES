@@ -1907,6 +1907,9 @@ docs/LearningAssignmentReschedule.md
 docs/LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification.md
 docs/LearningAssignmentRuleRunTopicLearningAssignmentsCreated.md
 docs/LearningAssignmentRuleRunTopicLearningModuleReference.md
+docs/LearningAssignmentStep.md
+docs/LearningAssignmentStepScoStructure.md
+docs/LearningAssignmentStepSignedCookie.md
 docs/LearningAssignmentTopicLearningAssignmentNotification.md
 docs/LearningAssignmentTopicLearningModuleReference.md
 docs/LearningAssignmentTopicUserReference.md
@@ -1933,6 +1936,7 @@ docs/LearningModuleSummary.md
 docs/LearningModulesDomainEntityListing.md
 docs/LearningScheduleSlotsQueryRequest.md
 docs/LearningScheduleSlotsQueryResponse.md
+docs/LearningShareableContentObject.md
 docs/LearningSlot.md
 docs/LearningSlotFullDayTimeOffMarker.md
 docs/LearningSlotScheduleActivity.md
@@ -3036,7 +3040,6 @@ docs/SupportCenterSettings.md
 docs/SupportCenterStyleSetting.md
 docs/SupportedContent.md
 docs/SupportedContentListing.md
-docs/SupportedContentProfile.md
 docs/SupportedContentReference.md
 docs/SupportedDialectsEntityListing.md
 docs/SupportedLanguage.md
@@ -7802,6 +7805,9 @@ src/Models/LearningAssignmentReschedule.swift
 src/Models/LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification.swift
 src/Models/LearningAssignmentRuleRunTopicLearningAssignmentsCreated.swift
 src/Models/LearningAssignmentRuleRunTopicLearningModuleReference.swift
+src/Models/LearningAssignmentStep.swift
+src/Models/LearningAssignmentStepScoStructure.swift
+src/Models/LearningAssignmentStepSignedCookie.swift
 src/Models/LearningAssignmentTopicLearningAssignmentNotification.swift
 src/Models/LearningAssignmentTopicLearningModuleReference.swift
 src/Models/LearningAssignmentTopicUserReference.swift
@@ -7828,6 +7834,7 @@ src/Models/LearningModuleSummary.swift
 src/Models/LearningModulesDomainEntityListing.swift
 src/Models/LearningScheduleSlotsQueryRequest.swift
 src/Models/LearningScheduleSlotsQueryResponse.swift
+src/Models/LearningShareableContentObject.swift
 src/Models/LearningSlot.swift
 src/Models/LearningSlotFullDayTimeOffMarker.swift
 src/Models/LearningSlotScheduleActivity.swift
@@ -8886,7 +8893,6 @@ src/Models/SupportCenterSettings.swift
 src/Models/SupportCenterStyleSetting.swift
 src/Models/SupportedContent.swift
 src/Models/SupportedContentListing.swift
-src/Models/SupportedContentProfile.swift
 src/Models/SupportedContentReference.swift
 src/Models/SupportedDialectsEntityListing.swift
 src/Models/SupportedLanguage.swift

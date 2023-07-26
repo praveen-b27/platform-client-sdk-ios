@@ -11,6 +11,21 @@ import Foundation
 
 public class RecordingMessagingMessage: Codable {
 
+    public enum ContentType: String, Codable { 
+        case quickReply = "QuickReply"
+        case story = "Story"
+        case card = "Card"
+        case carousel = "Carousel"
+        case attachment = "Attachment"
+        case location = "Location"
+        case notification = "Notification"
+        case genericTemplate = "GenericTemplate"
+        case listTemplate = "ListTemplate"
+        case postback = "Postback"
+        case reactions = "Reactions"
+        case mention = "Mention"
+        case buttonResponse = "ButtonResponse"
+    }
     /** The message sender session id. */
     public var from: String?
     /** The user who sent this message. */
@@ -35,8 +50,12 @@ public class RecordingMessagingMessage: Codable {
     public var buttonResponse: ButtonResponse?
     /** Ephemeral story content. */
     public var story: RecordingContentStory?
+    /** List of cards offered for this message */
+    public var cards: [Card]?
+    /** Indicates the content type for this message */
+    public var contentType: ContentType?
 
-    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, story: RecordingContentStory?) {
+    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, story: RecordingContentStory?, cards: [Card]?, contentType: ContentType?) {
         self.from = from
         self.fromUser = fromUser
         self.fromExternalContact = fromExternalContact
@@ -49,6 +68,8 @@ public class RecordingMessagingMessage: Codable {
         self.quickReplies = quickReplies
         self.buttonResponse = buttonResponse
         self.story = story
+        self.cards = cards
+        self.contentType = contentType
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -64,6 +85,8 @@ public class RecordingMessagingMessage: Codable {
         case quickReplies
         case buttonResponse
         case story
+        case cards
+        case contentType
     }
 
 

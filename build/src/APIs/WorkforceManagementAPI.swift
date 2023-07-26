@@ -1621,8 +1621,8 @@ open class WorkforceManagementAPI {
      Get all authorized management units in the business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter feature: (query)  (optional)
-     - parameter divisionId: (query)  (optional)
+     - parameter feature: (query) If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)
+     - parameter divisionId: (query) If specified, the list of management units belonging to the specified division will be returned (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementBusinessunitManagementunits(businessUnitId: String, feature: Feature_getWorkforcemanagementBusinessunitManagementunits? = nil, divisionId: String? = nil, completion: @escaping ((_ data: ManagementUnitListing?,_ error: Error?) -> Void)) {
@@ -1689,8 +1689,8 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter feature: (query)  (optional)
-     - parameter divisionId: (query)  (optional)
+     - parameter feature: (query) If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)
+     - parameter divisionId: (query) If specified, the list of management units belonging to the specified division will be returned (optional)
 
      - returns: RequestBuilder<ManagementUnitListing> 
      */
@@ -3533,8 +3533,8 @@ open class WorkforceManagementAPI {
     /**
      Get business units
      
-     - parameter feature: (query)  (optional)
-     - parameter divisionId: (query)  (optional)
+     - parameter feature: (query) If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)
+     - parameter divisionId: (query) If specified, the list of business units belonging to the specified division will be returned (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementBusinessunits(feature: Feature_getWorkforcemanagementBusinessunits? = nil, divisionId: String? = nil, completion: @escaping ((_ data: BusinessUnitListing?,_ error: Error?) -> Void)) {
@@ -3577,8 +3577,8 @@ open class WorkforceManagementAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter feature: (query)  (optional)
-     - parameter divisionId: (query)  (optional)
+     - parameter feature: (query) If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)
+     - parameter divisionId: (query) If specified, the list of business units belonging to the specified division will be returned (optional)
 
      - returns: RequestBuilder<BusinessUnitListing> 
      */
@@ -7286,8 +7286,8 @@ open class WorkforceManagementAPI {
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
      - parameter pageNumber: (query) Deprecated, paging is not supported (optional)
      - parameter expand: (query) Deprecated, expand settings on the single MU route (optional)
-     - parameter feature: (query)  (optional)
-     - parameter divisionId: (query)  (optional)
+     - parameter feature: (query) If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)
+     - parameter divisionId: (query) If specified, the list of management units belonging to the specified division will be returned (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunits(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getWorkforcemanagementManagementunits? = nil, feature: Feature_getWorkforcemanagementManagementunits? = nil, divisionId: String? = nil, completion: @escaping ((_ data: ManagementUnitListing?,_ error: Error?) -> Void)) {
@@ -7356,8 +7356,8 @@ open class WorkforceManagementAPI {
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
      - parameter pageNumber: (query) Deprecated, paging is not supported (optional)
      - parameter expand: (query) Deprecated, expand settings on the single MU route (optional)
-     - parameter feature: (query)  (optional)
-     - parameter divisionId: (query)  (optional)
+     - parameter feature: (query) If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)
+     - parameter divisionId: (query) If specified, the list of management units belonging to the specified division will be returned (optional)
 
      - returns: RequestBuilder<ManagementUnitListing> 
      */

@@ -168,8 +168,10 @@ title: ViewFilter
 | **workitemIds** | **[String]** | The list of Workitem IDs | [optional] |
 | **workitemAssigneeIds** | **[String]** | The list of Workitem Assignee IDs | [optional] |
 | **workitemStatuses** | **[String]** | The list of Workitem Statuses IDs | [optional] |
-| **isAnalyzedForSensitiveData** | **Bool** | Filter to indicate the transcript has been analyzed for sensitive data. | [optional] |
-| **hasSensitiveData** | **Bool** | Filter to indicate the transcript contains sensitive data. | [optional] |
+| **isAnalyzedForSensitiveData** | **Bool** | Deprecated - Use hasPciData or hasPiiData instead. | [optional] |
+| **hasSensitiveData** | **Bool** | Deprecated. Use hasPciData or hasPiiData instead. | [optional] |
+| **hasPciData** | **Bool** | Filter to indicate the transcript contains Pci data. | [optional] |
+| **hasPiiData** | **Bool** | Filter to indicate the transcript contains Pii data. | [optional] |
 | **subPath** | **String** | Filter for Sub Path | [optional] |
 | **userState** | **String** | The user supplied state value in the view | [optional] |
 | **isClearedByCustomer** | **Bool** | Filter to indicate if the customer cleared the conversation. | [optional] |

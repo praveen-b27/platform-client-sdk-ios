@@ -20,6 +20,8 @@ public class AnalyticsEvaluation: Codable {
     }
     /** UserId of the assignee */
     public var assigneeId: String?
+    /** Indicates whether an assignee is applicable for the evaluation. Set to false when assignee is not applicable */
+    public var assigneeApplicable: Bool?
     /** The calibration ID used for the purpose of training evaluators */
     public var calibrationId: String?
     /** A unique identifier for an evaluation form, regardless of version */
@@ -49,8 +51,9 @@ public class AnalyticsEvaluation: Codable {
     public var oTotalCriticalScore: Int64?
     public var oTotalScore: Int64?
 
-    public init(assigneeId: String?, calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluationStatus: EvaluationStatus?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, released: Bool?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
+    public init(assigneeId: String?, assigneeApplicable: Bool?, calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluationStatus: EvaluationStatus?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, released: Bool?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
         self.assigneeId = assigneeId
+        self.assigneeApplicable = assigneeApplicable
         self.calibrationId = calibrationId
         self.contextId = contextId
         self.deleted = deleted

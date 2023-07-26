@@ -24,7 +24,7 @@ public class AgentlessEmailSendResponseDto: Codable {
     public var senderType: SenderType?
     /** The sender of the message. */
     public var fromAddress: EmailAddress?
-    /** The recipient of the message. So far, only one recipient is allowed. This is a list, only for future usage. */
+    /** The recipient of the message. We currently support one recipient only. */
     public var toAddresses: [EmailAddress]?
     /** The address to use for reply. */
     public var replyToAddress: EmailAddress?

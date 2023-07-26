@@ -19,6 +19,8 @@ title: RecordingMessagingMessage
 | **quickReplies** | [**[QuickReply]**](QuickReply.html) | List of quick reply options offered with this message. | [optional] |
 | **buttonResponse** | [**ButtonResponse**](ButtonResponse.html) | Button Response selected by user for this message. | [optional] |
 | **story** | [**RecordingContentStory**](RecordingContentStory.html) | Ephemeral story content. | [optional] |
+| **cards** | [**[Card]**](Card.html) | List of cards offered for this message | [optional] |
+| **contentType** | **String** | Indicates the content type for this message | [optional] |
 {: class="table table-striped"}
 
 

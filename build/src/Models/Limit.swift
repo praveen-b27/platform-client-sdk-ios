@@ -47,6 +47,7 @@ public class Limit: Codable {
         case languageUnderstanding = "language.understanding"
         case limitRegistry = "limit.registry"
         case marketplace = "marketplace"
+        case mediaCommunications = "media.communications"
         case messaging = "messaging"
         case notifications = "notifications"
         case onboarding = "onboarding"

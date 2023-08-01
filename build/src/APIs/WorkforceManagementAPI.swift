@@ -3951,7 +3951,7 @@ open class WorkforceManagementAPI {
 
     
     /**
-     Get activity codes
+     Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -3975,7 +3975,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Get activity codes
+     Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes
      - OAuth:
        - type: oauth2

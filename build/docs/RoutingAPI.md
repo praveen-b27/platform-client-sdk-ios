@@ -2700,10 +2700,10 @@ let pageNumber: Int = 0 //
 let pageSize: Int = 0 // Max value is 100
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueueMembers = RoutingAPI.SortOrder_getRoutingQueueMembers.enummember // Note: results are sorted by name.
 let expand: [String] = [""] // Which fields, if any, to expand.
-let name: String = "" // Filter by queue member name
-let profileSkills: [String] = [""] // Filter by profile skill
-let skills: [String] = [""] // Filter by skill
-let languages: [String] = [""] // Filter by language
+let name: String = "" // Filter by queue member name (contains-style search)
+let profileSkills: [String] = [""] // Filter by profile skill (contains-style search)
+let skills: [String] = [""] // Filter by skill (contains-style search)
+let languages: [String] = [""] // Filter by language (contains-style search)
 let routingStatus: [String] = [""] // Filter by routing status
 let presence: [String] = [""] // Filter by presence
 let memberBy: RoutingAPI.MemberBy_getRoutingQueueMembers = RoutingAPI.MemberBy_getRoutingQueueMembers.enummember // Filter by member type
@@ -2730,10 +2730,10 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
-| **name** | **String**| Filter by queue member name | [optional] |
-| **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
-| **skills** | [**[String]**](String.html)| Filter by skill | [optional] |
-| **languages** | [**[String]**](String.html)| Filter by language | [optional] |
+| **name** | **String**| Filter by queue member name (contains-style search) | [optional] |
+| **profileSkills** | [**[String]**](String.html)| Filter by profile skill (contains-style search) | [optional] |
+| **skills** | [**[String]**](String.html)| Filter by skill (contains-style search) | [optional] |
+| **languages** | [**[String]**](String.html)| Filter by language (contains-style search) | [optional] |
 | **routingStatus** | [**[String]**](String.html)| Filter by routing status | [optional] |
 | **presence** | [**[String]**](String.html)| Filter by presence | [optional] |
 | **memberBy** | **String**| Filter by member type | [optional]<br />**Values**: user ("user"), group ("group") |

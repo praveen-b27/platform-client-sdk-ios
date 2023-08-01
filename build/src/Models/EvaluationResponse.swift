@@ -45,6 +45,8 @@ public class EvaluationResponse: Codable {
     public var answers: EvaluationScoringSet?
     public var agentHasRead: Bool?
     public var assignee: User?
+    /** Indicates whether an assignee is applicable for the evaluation. Set to false when assignee is not applicable. */
+    public var assigneeApplicable: Bool?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var releaseDate: Date?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -82,7 +84,7 @@ public class EvaluationResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -94,6 +96,7 @@ public class EvaluationResponse: Codable {
         self.answers = answers
         self.agentHasRead = agentHasRead
         self.assignee = assignee
+        self.assigneeApplicable = assigneeApplicable
         self.releaseDate = releaseDate
         self.assignedDate = assignedDate
         self.changedDate = changedDate
@@ -127,6 +130,7 @@ public class EvaluationResponse: Codable {
         case answers
         case agentHasRead
         case assignee
+        case assigneeApplicable
         case releaseDate
         case assignedDate
         case changedDate

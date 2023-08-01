@@ -1581,8 +1581,8 @@ open class RoutingAPI {
     "spamFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1674,8 +1674,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1941,8 +1941,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2138,8 +2138,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2306,8 +2306,8 @@ open class RoutingAPI {
     "flow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3428,10 +3428,10 @@ open class RoutingAPI {
      - parameter pageSize: (query) Max value is 100 (optional)
      - parameter sortOrder: (query) Note: results are sorted by name. (optional)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
-     - parameter name: (query) Filter by queue member name (optional)
-     - parameter profileSkills: (query) Filter by profile skill (optional)
-     - parameter skills: (query) Filter by skill (optional)
-     - parameter languages: (query) Filter by language (optional)
+     - parameter name: (query) Filter by queue member name (contains-style search) (optional)
+     - parameter profileSkills: (query) Filter by profile skill (contains-style search) (optional)
+     - parameter skills: (query) Filter by skill (contains-style search) (optional)
+     - parameter languages: (query) Filter by language (contains-style search) (optional)
      - parameter routingStatus: (query) Filter by routing status (optional)
      - parameter presence: (query) Filter by presence (optional)
      - parameter memberBy: (query) Filter by member type (optional)
@@ -4073,10 +4073,10 @@ open class RoutingAPI {
      - parameter pageSize: (query) Max value is 100 (optional)
      - parameter sortOrder: (query) Note: results are sorted by name. (optional)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
-     - parameter name: (query) Filter by queue member name (optional)
-     - parameter profileSkills: (query) Filter by profile skill (optional)
-     - parameter skills: (query) Filter by skill (optional)
-     - parameter languages: (query) Filter by language (optional)
+     - parameter name: (query) Filter by queue member name (contains-style search) (optional)
+     - parameter profileSkills: (query) Filter by profile skill (contains-style search) (optional)
+     - parameter skills: (query) Filter by skill (contains-style search) (optional)
+     - parameter languages: (query) Filter by language (contains-style search) (optional)
      - parameter routingStatus: (query) Filter by routing status (optional)
      - parameter presence: (query) Filter by presence (optional)
      - parameter memberBy: (query) Filter by member type (optional)
@@ -4774,8 +4774,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4883,8 +4883,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5256,8 +5256,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5642,8 +5642,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6011,8 +6011,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6374,8 +6374,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7024,8 +7024,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7177,8 +7177,8 @@ open class RoutingAPI {
     "region" : "region"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7544,8 +7544,8 @@ open class RoutingAPI {
     "integration" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7842,8 +7842,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8209,8 +8209,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8308,8 +8308,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8405,8 +8405,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10333,8 +10333,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11042,8 +11042,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11194,8 +11194,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11274,8 +11274,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11371,10 +11371,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11397,10 +11397,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11443,10 +11443,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11469,10 +11469,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11520,10 +11520,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11546,10 +11546,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11592,10 +11592,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11618,10 +11618,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14085,8 +14085,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

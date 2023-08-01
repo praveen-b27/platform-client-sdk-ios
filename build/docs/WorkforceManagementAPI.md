@@ -59,7 +59,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
 | [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
 | [**getWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunit) | Get management unit |
-| [**getWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitActivitycodes) | Get activity codes |
+| [**getWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitActivitycodes) | Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes |
 | [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
 | [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
 | [**getWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgentShifttrades) | Gets all the shift trades for a given agent |
@@ -3236,7 +3236,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: ma
 
 > [ActivityCodeContainer](ActivityCodeContainer.html) getWorkforcemanagementManagementunitActivitycodes(managementUnitId)
 
-Get activity codes
+Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
 
 
 

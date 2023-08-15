@@ -221,7 +221,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 Get Reporting Turns.
 
-Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
 
 
 
@@ -243,7 +243,7 @@ let botFlowId: String = "" // ID of the bot flow.
 let after: String = "" // The cursor that points to the ID of the last item in the list of entities that has been returned.
 let pageSize: String = "" // Max number of entities to return. Maximum of 250
 let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
-let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session
+let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed.
 let language: String = en-us // Optional language code to get the reporting turns for a particular language
 let askActionResults: AnalyticsAPI.AskActionResults_getAnalyticsBotflowReportingturns = AnalyticsAPI.AskActionResults_getAnalyticsBotflowReportingturns.enummember // Optional case-insensitive comma separated list of ask action results to filter the reporting turns.
 
@@ -267,7 +267,7 @@ AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: afte
 | **after** | **String**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] |
 | **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
-| **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session | [optional] |
+| **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional] |
 | **language** | **String**| Optional language code to get the reporting turns for a particular language | [optional] |
 | **askActionResults** | **String**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional]<br />**Values**: agentRequestedByUser ("AgentRequestedByUser"), confirmationRequired ("ConfirmationRequired"), disambiguationRequired ("DisambiguationRequired"), error ("Error"), expressionError ("ExpressionError"), noInputCollection ("NoInputCollection"), noInputConfirmation ("NoInputConfirmation"), noInputDisambiguation ("NoInputDisambiguation"), noMatchCollection ("NoMatchCollection"), noMatchConfirmation ("NoMatchConfirmation"), noMatchDisambiguation ("NoMatchDisambiguation"), successCollection ("SuccessCollection"), successConfirmationNo ("SuccessConfirmationNo"), successConfirmationYes ("SuccessConfirmationYes"), successDisambiguation ("SuccessDisambiguation"), successDisambiguationNone ("SuccessDisambiguationNone") |
 {: class="table-striped"}

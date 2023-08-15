@@ -17,17 +17,21 @@ public class V2MobiusRulesTopicEntityProperties: Codable {
         case queue = "Queue"
         case group = "Group"
         case edge = "Edge"
+        case team = "Team"
+        case teamMembers = "TeamMembers"
     }
     public var entityType: EntityType?
     public var userDisplayName: String?
     public var groupDisplayName: String?
     public var queueDisplayName: String?
+    public var teamDisplayName: String?
 
-    public init(entityType: EntityType?, userDisplayName: String?, groupDisplayName: String?, queueDisplayName: String?) {
+    public init(entityType: EntityType?, userDisplayName: String?, groupDisplayName: String?, queueDisplayName: String?, teamDisplayName: String?) {
         self.entityType = entityType
         self.userDisplayName = userDisplayName
         self.groupDisplayName = groupDisplayName
         self.queueDisplayName = queueDisplayName
+        self.teamDisplayName = teamDisplayName
     }
 
 

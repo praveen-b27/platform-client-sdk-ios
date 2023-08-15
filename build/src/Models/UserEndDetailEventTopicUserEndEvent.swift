@@ -29,6 +29,8 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
         case noAnswerTransfer = "NO_ANSWER_TRANSFER"
         case notAvailableTransfer = "NOT_AVAILABLE_TRANSFER"
         case uncallable = "UNCALLABLE"
+        case dndEndpoint = "DND_ENDPOINT"
+        case dndTransfer = "DND_TRANSFER"
     }
     public enum MediaType: String, Codable { 
         case unknown = "UNKNOWN"

@@ -15935,9 +15935,9 @@ open class QualityAPI {
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
-     - parameter sortBy: (query) variable name requested to sort by (optional)
+     - parameter sortBy: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
-     - parameter nextPage: (query) next page token (optional)
+     - parameter nextPage: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversationId specified (optional)
      - parameter agentUserId: (query) user id of the agent (optional)
@@ -15950,8 +15950,8 @@ open class QualityAPI {
      - parameter isReleased: (query) the evaluation has been released (optional)
      - parameter agentHasRead: (query) agent has the evaluation (optional)
      - parameter expandAnswerTotalScores: (query) get the total scores for evaluations (optional)
-     - parameter maximum: (query) maximum (optional)
-     - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)
+     - parameter maximum: (query) the maximum number of results to return (optional)
+     - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
@@ -21526,9 +21526,9 @@ open class QualityAPI {
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
-     - parameter sortBy: (query) variable name requested to sort by (optional)
+     - parameter sortBy: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
-     - parameter nextPage: (query) next page token (optional)
+     - parameter nextPage: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversationId specified (optional)
      - parameter agentUserId: (query) user id of the agent (optional)
@@ -21541,8 +21541,8 @@ open class QualityAPI {
      - parameter isReleased: (query) the evaluation has been released (optional)
      - parameter agentHasRead: (query) agent has the evaluation (optional)
      - parameter expandAnswerTotalScores: (query) get the total scores for evaluations (optional)
-     - parameter maximum: (query) maximum (optional)
-     - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)
+     - parameter maximum: (query) the maximum number of results to return (optional)
+     - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */
@@ -38138,7 +38138,7 @@ open class QualityAPI {
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
      - parameter body: (body) evaluation 
-     - parameter expand: (query) evaluatorId, evaluationForm, assignee (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm, assignee, evaluator (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putQualityConversationEvaluation(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil, completion: @escaping ((_ data: EvaluationResponse?,_ error: Error?) -> Void)) {
@@ -40937,7 +40937,7 @@ open class QualityAPI {
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
      - parameter body: (body) evaluation 
-     - parameter expand: (query) evaluatorId, evaluationForm, assignee (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm, assignee, evaluator (optional)
 
      - returns: RequestBuilder<EvaluationResponse> 
      */

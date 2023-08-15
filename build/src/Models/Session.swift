@@ -79,6 +79,12 @@ public class Session: Codable {
     public var mktCampaign: JourneyCampaign?
     /** Identifies the page URL that originally generated the request for the current page being viewed. */
     public var referrer: Referrer?
+    /** Application that the customer is interacting with (for app sessions). */
+    public var app: JourneyApp?
+    /** SDK library used to generate the events for the session (for app and web sessions). */
+    public var sdkLibrary: SdkLibrary?
+    /** Information relating to the device's network connectivity (for app sessions). */
+    public var networkConnectivity: NetworkConnectivity?
     /** Search terms associated with the session. */
     public var searchTerms: [String]?
     /** String identifying the user agent. */
@@ -126,7 +132,7 @@ public class Session: Codable {
     /** The conversation for this session. */
     public var conversation: AddressableEntityRef?
 
-    public init(_id: String?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: AddressableEntityRef?, awayDate: Date?, idleDate: Date?, conversation: AddressableEntityRef?) {
+    public init(_id: String?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, app: JourneyApp?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: AddressableEntityRef?, awayDate: Date?, idleDate: Date?, conversation: AddressableEntityRef?) {
         self._id = _id
         self.customerId = customerId
         self.customerIdType = customerIdType
@@ -146,6 +152,9 @@ public class Session: Codable {
         self.lastPage = lastPage
         self.mktCampaign = mktCampaign
         self.referrer = referrer
+        self.app = app
+        self.sdkLibrary = sdkLibrary
+        self.networkConnectivity = networkConnectivity
         self.searchTerms = searchTerms
         self.userAgentString = userAgentString
         self.durationInSeconds = durationInSeconds
@@ -191,6 +200,9 @@ public class Session: Codable {
         case lastPage
         case mktCampaign
         case referrer
+        case app
+        case sdkLibrary
+        case networkConnectivity
         case searchTerms
         case userAgentString
         case durationInSeconds

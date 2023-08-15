@@ -32,6 +32,7 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **evaluationSource** | [**EvaluationQualityV2TopicEvaluationSource**](EvaluationQualityV2TopicEvaluationSource.html) |  | [optional] |
 | **assigneeUserId** | **String** |  | [optional] |
 | **previousAssigneeUserId** | **String** |  | [optional] |
+| **assigneeApplicable** | **Bool** |  | [optional] |
 | **evaluationContextId** | **String** |  | [optional] |
 | **disputeCount** | **Int** |  | [optional] |
 | **version** | **Int** |  | [optional] |
@@ -42,6 +43,7 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **evaluatorCommentHasUpdated** | **Bool** |  | [optional] |
 | **agentCommentHasUpdated** | **Bool** |  | [optional] |
 | **previousRescoreCount** | **Int** |  | [optional] |
+| **previousEvaluatorUserId** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

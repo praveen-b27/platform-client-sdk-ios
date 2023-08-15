@@ -34,8 +34,9 @@ public class V2MobiusAlertsTopicAlert: Codable {
     public var dateMutedUntil: Date?
     public var dateSnoozedUntil: Date?
     public var action: Action?
+    public var alertSummary: V2MobiusAlertsTopicAlertSummary?
 
-    public init(rule: V2MobiusAlertsTopicAlertRuleProperties?, _id: UUID?, userId: UUID?, notifications: [V2MobiusAlertsTopicAlertNotification]?, dateStart: Date?, dateEnd: Date?, conditions: V2MobiusAlertsTopicCondition?, additionalProperties: [String:String]?, active: Bool?, unread: Bool?, muted: Bool?, snoozed: Bool?, dateMutedUntil: Date?, dateSnoozedUntil: Date?, action: Action?) {
+    public init(rule: V2MobiusAlertsTopicAlertRuleProperties?, _id: UUID?, userId: UUID?, notifications: [V2MobiusAlertsTopicAlertNotification]?, dateStart: Date?, dateEnd: Date?, conditions: V2MobiusAlertsTopicCondition?, additionalProperties: [String:String]?, active: Bool?, unread: Bool?, muted: Bool?, snoozed: Bool?, dateMutedUntil: Date?, dateSnoozedUntil: Date?, action: Action?, alertSummary: V2MobiusAlertsTopicAlertSummary?) {
         self.rule = rule
         self._id = _id
         self.userId = userId
@@ -51,6 +52,7 @@ public class V2MobiusAlertsTopicAlert: Codable {
         self.dateMutedUntil = dateMutedUntil
         self.dateSnoozedUntil = dateSnoozedUntil
         self.action = action
+        self.alertSummary = alertSummary
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -69,6 +71,7 @@ public class V2MobiusAlertsTopicAlert: Codable {
         case dateMutedUntil
         case dateSnoozedUntil
         case action
+        case alertSummary
     }
 
 

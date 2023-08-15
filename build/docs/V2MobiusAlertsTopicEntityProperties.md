@@ -11,6 +11,7 @@ title: V2MobiusAlertsTopicEntityProperties
 | **userDisplayName** | **String** |  | [optional] |
 | **groupDisplayName** | **String** |  | [optional] |
 | **queueDisplayName** | **String** |  | [optional] |
+| **teamDisplayName** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

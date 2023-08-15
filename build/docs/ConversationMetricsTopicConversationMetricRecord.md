@@ -74,6 +74,8 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **roomId** | **String** | Unique identifier for the room | [optional] |
 | **routingPriority** | **Int** | Routing priority for the current interaction | [optional] |
 | **routingRing** | **Int** | Routing ring for bullseye or preferred agent routing | [optional] |
+| **routingRule** | **String** | Routing rule for preferred, conditional and predictive routing type | [optional] |
+| **routingRuleType** | **String** | Routing rule type | [optional] |
 | **selectedAgentId** | **String** | Selected agent ID | [optional] |
 | **selectedAgentRank** | **Int** | Selected agent GPR rank | [optional] |
 | **selfServed** | **Bool** | Indicates whether all flow sessions were self serviced | [optional] |

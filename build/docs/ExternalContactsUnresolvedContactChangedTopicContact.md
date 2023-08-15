@@ -32,6 +32,8 @@ title: ExternalContactsUnresolvedContactChangedTopicContact
 | **instagramId** | [**ExternalContactsUnresolvedContactChangedTopicInstagramId**](ExternalContactsUnresolvedContactChangedTopicInstagramId.html) |  | [optional] |
 | **schema** | [**ExternalContactsUnresolvedContactChangedTopicDataSchema**](ExternalContactsUnresolvedContactChangedTopicDataSchema.html) |  | [optional] |
 | **customFields** | [**[String:JSON]**](JSON.html) |  | [optional] |
+| **createDate** | [**Date**](Date.html) |  | [optional] |
+| **modifyDate** | [**Date**](Date.html) |  | [optional] |
 {: class="table table-striped"}
 
 

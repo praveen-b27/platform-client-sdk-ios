@@ -16,6 +16,7 @@ title: V2MobiusRulesTopicRule
 | **enabled** | **Bool** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
 | **action** | **String** |  | [optional] |
+| **dateCreated** | [**Date**](Date.html) |  | [optional] |
 {: class="table table-striped"}
 
 

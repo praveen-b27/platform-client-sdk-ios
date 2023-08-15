@@ -28,11 +28,18 @@ public class TranscriptAggregationQuery: Codable {
         case teamid = "teamId"
         case topicid = "topicId"
         case userid = "userId"
+        case wrapupcode = "wrapUpCode"
     }
     public enum Metrics: String, Codable { 
         case ntopiccommunications = "nTopicCommunications"
         case ocustomersentiment = "oCustomerSentiment"
+        case oovertalkspeechinstances = "oOverTalkSpeechInstances"
         case osentimentscore = "oSentimentScore"
+        case tagentspeech = "tAgentSpeech"
+        case tcustomerspeech = "tCustomerSpeech"
+        case tovertalkspeech = "tOverTalkSpeech"
+        case tsilence = "tSilence"
+        case ttotalspeechandsilence = "tTotalSpeechAndSilence"
     }
     public enum AlternateTimeDimension: String, Codable { 
         case eventtime = "eventTime"

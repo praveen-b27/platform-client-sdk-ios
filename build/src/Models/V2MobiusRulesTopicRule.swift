@@ -14,6 +14,7 @@ public class V2MobiusRulesTopicRule: Codable {
     public enum ModelType: String, Codable { 
         case conversationMetrics = "ConversationMetrics"
         case userPresence = "UserPresence"
+        case workforceManagement = "WorkforceManagement"
         case unknown = "Unknown"
     }
     public enum Action: String, Codable { 
@@ -31,8 +32,9 @@ public class V2MobiusRulesTopicRule: Codable {
     public var enabled: Bool?
     public var inAlarm: Bool?
     public var action: Action?
+    public var dateCreated: Date?
 
-    public init(_id: UUID?, userId: UUID?, name: String?, type: ModelType?, notifications: [V2MobiusRulesTopicAlertNotification]?, conditions: V2MobiusRulesTopicCondition?, enabled: Bool?, inAlarm: Bool?, action: Action?) {
+    public init(_id: UUID?, userId: UUID?, name: String?, type: ModelType?, notifications: [V2MobiusRulesTopicAlertNotification]?, conditions: V2MobiusRulesTopicCondition?, enabled: Bool?, inAlarm: Bool?, action: Action?, dateCreated: Date?) {
         self._id = _id
         self.userId = userId
         self.name = name
@@ -42,6 +44,7 @@ public class V2MobiusRulesTopicRule: Codable {
         self.enabled = enabled
         self.inAlarm = inAlarm
         self.action = action
+        self.dateCreated = dateCreated
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -54,6 +57,7 @@ public class V2MobiusRulesTopicRule: Codable {
         case enabled
         case inAlarm
         case action
+        case dateCreated
     }
 
 

@@ -34,10 +34,12 @@ public class DialerContact: Codable {
     public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
     /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
     public var configurationOverrides: ConfigurationOverrides?
+    /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.contactListId = contactListId
@@ -50,6 +52,7 @@ public class DialerContact: Codable {
         self.contactableStatus = contactableStatus
         self.contactColumnTimeZones = contactColumnTimeZones
         self.configurationOverrides = configurationOverrides
+        self.dateCreated = dateCreated
         self.selfUri = selfUri
     }
 
@@ -66,6 +69,7 @@ public class DialerContact: Codable {
         case contactableStatus
         case contactColumnTimeZones
         case configurationOverrides
+        case dateCreated
         case selfUri
     }
 

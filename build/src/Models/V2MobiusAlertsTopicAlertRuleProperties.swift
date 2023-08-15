@@ -14,6 +14,7 @@ public class V2MobiusAlertsTopicAlertRuleProperties: Codable {
     public enum ModelType: String, Codable { 
         case conversationMetrics = "ConversationMetrics"
         case userPresence = "UserPresence"
+        case workforceManagement = "WorkforceManagement"
         case unknown = "Unknown"
     }
     public var _id: UUID?

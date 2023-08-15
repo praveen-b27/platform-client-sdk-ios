@@ -75,6 +75,7 @@ public class StatusChange: Codable {
         case journey = "journey"
         case knowledge = "knowledge"
         case languageUnderstanding = "language.understanding"
+        case learning = "learning"
         case limitRegistry = "limit.registry"
         case marketplace = "marketplace"
         case mediaCommunications = "media.communications"

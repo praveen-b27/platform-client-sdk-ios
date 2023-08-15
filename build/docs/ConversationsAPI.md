@@ -3781,7 +3781,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let conversationId: String = "" //  conversationId
+let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 
 // Code example
@@ -3800,7 +3800,7 @@ ConversationsAPI.getConversationsMessageParticipantWrapupcodes(conversationId: c
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**|  conversationId | |
+| **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 {: class="table-striped"}
 
@@ -5627,7 +5627,7 @@ ConversationsAPI.patchConversationsCallParticipant(conversationId: conversationI
 
 
 
-> Void patchConversationsCallParticipantAttributes(conversationId, participantId, body)
+> [ParticipantAttributes](ParticipantAttributes.html) patchConversationsCallParticipantAttributes(conversationId, participantId, body)
 
 Update the attributes on a conversation participant.
 
@@ -5651,11 +5651,12 @@ let participantId: String = "" // participantId
 let body: ParticipantAttributes = new ParticipantAttributes(...) // Participant attributes
 
 // Code example
-ConversationsAPI.patchConversationsCallParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+ConversationsAPI.patchConversationsCallParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ConversationsAPI.patchConversationsCallParticipantAttributes was successful")
+        dump(response)
     }
 }
 ```
@@ -5673,7 +5674,7 @@ ConversationsAPI.patchConversationsCallParticipantAttributes(conversationId: con
 
 ### Return type
 
-`nil` (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchConversationsCallParticipantCommunication"></a>
 
@@ -5902,7 +5903,7 @@ ConversationsAPI.patchConversationsCallbackParticipant(conversationId: conversat
 
 
 
-> Void patchConversationsCallbackParticipantAttributes(conversationId, participantId, body)
+> [ParticipantAttributes](ParticipantAttributes.html) patchConversationsCallbackParticipantAttributes(conversationId, participantId, body)
 
 Update the attributes on a conversation participant.
 
@@ -5926,11 +5927,12 @@ let participantId: String = "" // participantId
 let body: ParticipantAttributes = new ParticipantAttributes(...) // Attributes
 
 // Code example
-ConversationsAPI.patchConversationsCallbackParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+ConversationsAPI.patchConversationsCallbackParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ConversationsAPI.patchConversationsCallbackParticipantAttributes was successful")
+        dump(response)
     }
 }
 ```
@@ -5948,7 +5950,7 @@ ConversationsAPI.patchConversationsCallbackParticipantAttributes(conversationId:
 
 ### Return type
 
-`nil` (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchConversationsCallbackParticipantCommunication"></a>
 
@@ -6174,7 +6176,7 @@ ConversationsAPI.patchConversationsChatParticipant(conversationId: conversationI
 
 
 
-> Void patchConversationsChatParticipantAttributes(conversationId, participantId, body)
+> [ParticipantAttributes](ParticipantAttributes.html) patchConversationsChatParticipantAttributes(conversationId, participantId, body)
 
 Update the attributes on a conversation participant.
 
@@ -6198,11 +6200,12 @@ let participantId: String = "" // participantId
 let body: ParticipantAttributes = new ParticipantAttributes(...) // Participant attributes
 
 // Code example
-ConversationsAPI.patchConversationsChatParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+ConversationsAPI.patchConversationsChatParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ConversationsAPI.patchConversationsChatParticipantAttributes was successful")
+        dump(response)
     }
 }
 ```
@@ -6220,7 +6223,7 @@ ConversationsAPI.patchConversationsChatParticipantAttributes(conversationId: con
 
 ### Return type
 
-`nil` (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchConversationsChatParticipantCommunication"></a>
 
@@ -6394,7 +6397,7 @@ ConversationsAPI.patchConversationsCobrowsesessionParticipant(conversationId: co
 
 
 
-> Void patchConversationsCobrowsesessionParticipantAttributes(conversationId, participantId, body)
+> [ParticipantAttributes](ParticipantAttributes.html) patchConversationsCobrowsesessionParticipantAttributes(conversationId, participantId, body)
 
 Update the attributes on a conversation participant.
 
@@ -6418,11 +6421,12 @@ let participantId: String = "" // participantId
 let body: ParticipantAttributes = new ParticipantAttributes(...) // 
 
 // Code example
-ConversationsAPI.patchConversationsCobrowsesessionParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+ConversationsAPI.patchConversationsCobrowsesessionParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ConversationsAPI.patchConversationsCobrowsesessionParticipantAttributes was successful")
+        dump(response)
     }
 }
 ```
@@ -6440,7 +6444,7 @@ ConversationsAPI.patchConversationsCobrowsesessionParticipantAttributes(conversa
 
 ### Return type
 
-`nil` (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchConversationsCobrowsesessionParticipantCommunication"></a>
 
@@ -6671,7 +6675,7 @@ ConversationsAPI.patchConversationsEmailParticipant(conversationId: conversation
 
 
 
-> Void patchConversationsEmailParticipantAttributes(conversationId, participantId, body)
+> [ParticipantAttributes](ParticipantAttributes.html) patchConversationsEmailParticipantAttributes(conversationId, participantId, body)
 
 Update the attributes on a conversation participant.
 
@@ -6695,11 +6699,12 @@ let participantId: String = "" // participantId
 let body: ParticipantAttributes = new ParticipantAttributes(...) // Participant attributes
 
 // Code example
-ConversationsAPI.patchConversationsEmailParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+ConversationsAPI.patchConversationsEmailParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ConversationsAPI.patchConversationsEmailParticipantAttributes was successful")
+        dump(response)
     }
 }
 ```
@@ -6717,7 +6722,7 @@ ConversationsAPI.patchConversationsEmailParticipantAttributes(conversationId: co
 
 ### Return type
 
-`nil` (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchConversationsEmailParticipantCommunication"></a>
 
@@ -6856,7 +6861,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let conversationId: String = "" //  conversationId
+let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let body: MediaParticipantRequest = new MediaParticipantRequest(...) // 
 
@@ -6875,7 +6880,7 @@ ConversationsAPI.patchConversationsMessageParticipant(conversationId: conversati
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**|  conversationId | |
+| **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional] |
 {: class="table-striped"}
@@ -6891,7 +6896,7 @@ ConversationsAPI.patchConversationsMessageParticipant(conversationId: conversati
 
 
 
-> Void patchConversationsMessageParticipantAttributes(conversationId, participantId, body)
+> [ParticipantAttributes](ParticipantAttributes.html) patchConversationsMessageParticipantAttributes(conversationId, participantId, body)
 
 Update the attributes on a conversation participant.
 
@@ -6910,16 +6915,17 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let conversationId: String = "" //  conversationId
+let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let body: ParticipantAttributes = new ParticipantAttributes(...) // 
 
 // Code example
-ConversationsAPI.patchConversationsMessageParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+ConversationsAPI.patchConversationsMessageParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ConversationsAPI.patchConversationsMessageParticipantAttributes was successful")
+        dump(response)
     }
 }
 ```
@@ -6929,7 +6935,7 @@ ConversationsAPI.patchConversationsMessageParticipantAttributes(conversationId: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**|  conversationId | |
+| **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional] |
 {: class="table-striped"}
@@ -6937,7 +6943,7 @@ ConversationsAPI.patchConversationsMessageParticipantAttributes(conversationId: 
 
 ### Return type
 
-`nil` (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchConversationsMessageParticipantCommunication"></a>
 
@@ -6964,7 +6970,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let conversationId: String = "" //  conversationId
+let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
 let body: MediaParticipantRequest = new MediaParticipantRequest(...) // Participant
@@ -6985,7 +6991,7 @@ ConversationsAPI.patchConversationsMessageParticipantCommunication(conversationI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**|  conversationId | |
+| **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | |

@@ -6516,7 +6516,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     /**
-     Get a list of Phone Instances
+     Get a list of Phone Instances. A maximum of 10,000 results is returned when filtering the results or sorting by a field other than the ID. Sorting by only the ID has no result limit. Each filter supports a wildcard, *, as a value to search for partial values.
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
@@ -6556,7 +6556,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     Get a list of Phone Instances
+     Get a list of Phone Instances. A maximum of 10,000 results is returned when filtering the results or sorting by a field other than the ID. Sorting by only the ID has no result limit. Each filter supports a wildcard, *, as a value to search for partial values.
      - GET /api/v2/telephony/providers/edges/phones
      - OAuth:
        - type: oauth2

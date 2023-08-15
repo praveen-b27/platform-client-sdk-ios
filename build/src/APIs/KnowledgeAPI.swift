@@ -1638,6 +1638,254 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
+    
+    public enum AppType_getKnowledgeKnowledgebaseDocumentFeedback: String { 
+        case assistant = "Assistant"
+        case botFlow = "BotFlow"
+        case messengerKnowledgeApp = "MessengerKnowledgeApp"
+        case smartAdvisor = "SmartAdvisor"
+        case supportCenter = "SupportCenter"
+    }
+
+    
+    
+    public enum QueryType_getKnowledgeKnowledgebaseDocumentFeedback: String { 
+        case unknown = "Unknown"
+        case article = "Article"
+        case autoSearch = "AutoSearch"
+        case category = "Category"
+        case manualSearch = "ManualSearch"
+        case recommendation = "Recommendation"
+        case suggestion = "Suggestion"
+    }
+
+    
+    
+    
+    
+    public enum State_getKnowledgeKnowledgebaseDocumentFeedback: String { 
+        case all = "All"
+        case draft = "Draft"
+        case _final = "Final"
+    }
+
+    
+    /**
+     Get a list of feedback records given on a document
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter onlyCommented: (query) If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)
+     - parameter documentVersionId: (query) Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter documentVariationId: (query) Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter appType: (query) Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queryType: (query) Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter userId: (query) The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queueId: (query) Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter state: (query) State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, onlyCommented: Bool? = nil, documentVersionId: String? = nil, documentVariationId: String? = nil, appType: AppType_getKnowledgeKnowledgebaseDocumentFeedback? = nil, queryType: QueryType_getKnowledgeKnowledgebaseDocumentFeedback? = nil, userId: String? = nil, queueId: String? = nil, state: State_getKnowledgeKnowledgebaseDocumentFeedback? = nil, completion: @escaping ((_ data: KnowledgeDocumentFeedbackResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentFeedbackWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, onlyCommented: onlyCommented, documentVersionId: documentVersionId, documentVariationId: documentVariationId, appType: appType, queryType: queryType, userId: userId, queueId: queueId, state: state)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentFeedbackResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of feedback records given on a document
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "reason" : "DocumentContent",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "rating" : "Negative",
+    "sessionId" : "sessionId",
+    "queryType" : "Unknown",
+    "conversationContext" : "{}",
+    "search" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "documentVariation" : "{}",
+    "application" : "{}",
+    "comment" : "comment",
+    "id" : "id",
+    "state" : "Draft",
+    "user" : "{}"
+  }, {
+    "reason" : "DocumentContent",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "rating" : "Negative",
+    "sessionId" : "sessionId",
+    "queryType" : "Unknown",
+    "conversationContext" : "{}",
+    "search" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "documentVariation" : "{}",
+    "application" : "{}",
+    "comment" : "comment",
+    "id" : "id",
+    "state" : "Draft",
+    "user" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter onlyCommented: (query) If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)
+     - parameter documentVersionId: (query) Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter documentVariationId: (query) Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter appType: (query) Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queryType: (query) Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter userId: (query) The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queueId: (query) Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter state: (query) State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentFeedbackResponseListing> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentFeedbackWithRequestBuilder(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, onlyCommented: Bool? = nil, documentVersionId: String? = nil, documentVariationId: String? = nil, appType: AppType_getKnowledgeKnowledgebaseDocumentFeedback? = nil, queryType: QueryType_getKnowledgeKnowledgebaseDocumentFeedback? = nil, userId: String? = nil, queueId: String? = nil, state: State_getKnowledgeKnowledgebaseDocumentFeedback? = nil) -> RequestBuilder<KnowledgeDocumentFeedbackResponseListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "onlyCommented": onlyCommented, 
+            "documentVersionId": documentVersionId, 
+            "documentVariationId": documentVariationId, 
+            "appType": appType?.rawValue, 
+            "queryType": queryType?.rawValue, 
+            "userId": userId, 
+            "queueId": queueId, 
+            "state": state?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Get a single feedback record given on a document
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter feedbackId: (path) Feedback ID. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId: String, documentId: String, feedbackId: String, completion: @escaping ((_ data: KnowledgeDocumentFeedbackResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, feedbackId: feedbackId)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentFeedbackResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a single feedback record given on a document
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "reason" : "DocumentContent",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "rating" : "Negative",
+  "sessionId" : "sessionId",
+  "queryType" : "Unknown",
+  "conversationContext" : "{}",
+  "search" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "documentVariation" : "{}",
+  "application" : "{}",
+  "comment" : "comment",
+  "id" : "id",
+  "state" : "Draft",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter feedbackId: (path) Feedback ID. 
+
+     - returns: RequestBuilder<KnowledgeDocumentFeedbackResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdWithRequestBuilder(knowledgeBaseId: String, documentId: String, feedbackId: String) -> RequestBuilder<KnowledgeDocumentFeedbackResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let feedbackIdPreEscape = "\(feedbackId)"
+        let feedbackIdPostEscape = feedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{feedbackId}", with: feedbackIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
     public enum DocumentState_getKnowledgeKnowledgebaseDocumentVariation: String { 
         case draft = "Draft"
         case published = "Published"
@@ -5697,6 +5945,77 @@ open class KnowledgeAPI {
     
     
     /**
+     Give feedback on a document
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessionDocumentFeedback(sessionId: String, documentId: String, body: KnowledgeGuestDocumentFeedback? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentFeedback?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionDocumentFeedbackWithRequestBuilder(sessionId: sessionId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeGuestDocumentFeedback>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Give feedback on a document
+     - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback
+     - examples: [{contentType=application/json, example={
+  "reason" : "DocumentContent",
+  "search" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "documentVariation" : "{}",
+  "application" : "{}",
+  "document" : "{}",
+  "rating" : "Negative",
+  "comment" : "comment",
+  "id" : "id",
+  "sessionId" : "sessionId",
+  "state" : "Draft",
+  "queryType" : "Unknown"
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeGuestDocumentFeedback> 
+     */
+    open class func postKnowledgeGuestSessionDocumentFeedbackWithRequestBuilder(sessionId: String, documentId: String, body: KnowledgeGuestDocumentFeedback? = nil) -> RequestBuilder<KnowledgeGuestDocumentFeedback> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeGuestDocumentFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
      Search the documents in a guest session.
      
      - parameter sessionId: (path) Knowledge guest session ID. 
@@ -5964,6 +6283,83 @@ open class KnowledgeAPI {
     
     
     /**
+     Give feedback on a document
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentFeedback? = nil, completion: @escaping ((_ data: KnowledgeDocumentFeedbackResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentFeedbackWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentFeedbackResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Give feedback on a document
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "reason" : "DocumentContent",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "rating" : "Negative",
+  "sessionId" : "sessionId",
+  "queryType" : "Unknown",
+  "conversationContext" : "{}",
+  "search" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "documentVariation" : "{}",
+  "application" : "{}",
+  "comment" : "comment",
+  "id" : "id",
+  "state" : "Draft",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentFeedbackResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentFeedbackWithRequestBuilder(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentFeedback? = nil) -> RequestBuilder<KnowledgeDocumentFeedbackResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
      Create a variation for a document.
      
      - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
@@ -6113,6 +6509,59 @@ open class KnowledgeAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Create view for a document.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentViews(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentView? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentViewsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create view for a document.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentViewsWithRequestBuilder(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentView? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

@@ -24,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseCategories**](KnowledgeAPI.html#getKnowledgeKnowledgebaseCategories) | Get categories |
 | [**getKnowledgeKnowledgebaseCategory**](KnowledgeAPI.html#getKnowledgeKnowledgebaseCategory) | Get category |
 | [**getKnowledgeKnowledgebaseDocument**](KnowledgeAPI.html#getKnowledgeKnowledgebaseDocument) | Get document. |
+| [**getKnowledgeKnowledgebaseDocumentFeedback**](KnowledgeAPI.html#getKnowledgeKnowledgebaseDocumentFeedback) | Get a list of feedback records given on a document |
+| [**getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**](KnowledgeAPI.html#getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId) | Get a single feedback record given on a document |
 | [**getKnowledgeKnowledgebaseDocumentVariation**](KnowledgeAPI.html#getKnowledgeKnowledgebaseDocumentVariation) | Get a variation for a document. |
 | [**getKnowledgeKnowledgebaseDocumentVariations**](KnowledgeAPI.html#getKnowledgeKnowledgebaseDocumentVariations) | Get variations for a document. |
 | [**getKnowledgeKnowledgebaseDocumentVersion**](KnowledgeAPI.html#getKnowledgeKnowledgebaseDocumentVersion) | Get document version. |
@@ -60,12 +62,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageDocumentsImport) | Start import operation |
 | [**patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Update a Knowledge base unanswered phrase group |
 | [**postKnowledgeDocumentuploads**](KnowledgeAPI.html#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**postKnowledgeGuestSessionDocumentFeedback**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentFeedback) | Give feedback on a document |
 | [**postKnowledgeGuestSessionDocumentsSearch**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentsSearch) | Search the documents in a guest session. |
 | [**postKnowledgeGuestSessionDocumentsSearchSuggestions**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentsSearchSuggestions) | Query the knowledge documents to provide suggestions for auto completion. |
 | [**postKnowledgeGuestSessions**](KnowledgeAPI.html#postKnowledgeGuestSessions) | Create guest session |
 | [**postKnowledgeKnowledgebaseCategories**](KnowledgeAPI.html#postKnowledgeKnowledgebaseCategories) | Create new category |
+| [**postKnowledgeKnowledgebaseDocumentFeedback**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentFeedback) | Give feedback on a document |
 | [**postKnowledgeKnowledgebaseDocumentVariations**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentVariations) | Create a variation for a document. |
 | [**postKnowledgeKnowledgebaseDocumentVersions**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentVersions) | Creates or restores a document version. |
+| [**postKnowledgeKnowledgebaseDocumentViews**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentViews) | Create view for a document. |
 | [**postKnowledgeKnowledgebaseDocuments**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocuments) | Create document. |
 | [**postKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsSearch) | Search the documents in a knowledge base. |
 | [**postKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsSearchSuggestions) | Query the knowledge documents to provide suggestions for auto completion. |
@@ -1033,6 +1038,138 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocument(knowledgeBaseId: knowledgeBaseId,
 ### Return type
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
+
+<a name="getKnowledgeKnowledgebaseDocumentFeedback"></a>
+
+# **getKnowledgeKnowledgebaseDocumentFeedback**
+
+
+
+> [KnowledgeDocumentFeedbackResponseListing](KnowledgeDocumentFeedbackResponseListing.html) getKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId, documentId, before, after, pageSize, onlyCommented, documentVersionId, documentVariationId, appType, queryType, userId, queueId, state)
+
+Get a list of feedback records given on a document
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback  
+
+Requires ANY permissions: 
+
+* knowledge:feedback:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let onlyCommented: Bool = true // If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false.
+let documentVersionId: String = "" // Document version ID to filter by. Supported only if onlyCommented=true is set.
+let documentVariationId: String = "" // Document variation ID to filter by. Supported only if onlyCommented=true is set.
+let appType: KnowledgeAPI.AppType_getKnowledgeKnowledgebaseDocumentFeedback = KnowledgeAPI.AppType_getKnowledgeKnowledgebaseDocumentFeedback.enummember // Application type to filter by. Supported only if onlyCommented=true is set.
+let queryType: KnowledgeAPI.QueryType_getKnowledgeKnowledgebaseDocumentFeedback = KnowledgeAPI.QueryType_getKnowledgeKnowledgebaseDocumentFeedback.enummember // Query type to filter by. Supported only if onlyCommented=true is set.
+let userId: String = "" // The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented=true is set.
+let queueId: String = "" // Queue ID to filter by. Supported only if onlyCommented=true is set.
+let state: KnowledgeAPI.State_getKnowledgeKnowledgebaseDocumentFeedback = KnowledgeAPI.State_getKnowledgeKnowledgebaseDocumentFeedback.enummember // State to filter by. Supported only if onlyCommented=true is set. Default: Final
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, onlyCommented: onlyCommented, documentVersionId: documentVersionId, documentVariationId: documentVariationId, appType: appType, queryType: queryType, userId: userId, queueId: queueId, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseDocumentFeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **documentId** | **String**| Document ID. | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **onlyCommented** | **Bool**| If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. | [optional] |
+| **documentVersionId** | **String**| Document version ID to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **documentVariationId** | **String**| Document variation ID to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **appType** | **String**| Application type to filter by. Supported only if onlyCommented=true is set. | [optional]<br />**Values**: assistant ("Assistant"), botFlow ("BotFlow"), messengerKnowledgeApp ("MessengerKnowledgeApp"), smartAdvisor ("SmartAdvisor"), supportCenter ("SupportCenter") |
+| **queryType** | **String**| Query type to filter by. Supported only if onlyCommented=true is set. | [optional]<br />**Values**: unknown ("Unknown"), article ("Article"), autoSearch ("AutoSearch"), category ("Category"), manualSearch ("ManualSearch"), recommendation ("Recommendation"), suggestion ("Suggestion") |
+| **userId** | **String**| The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **queueId** | **String**| Queue ID to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **state** | **String**| State to filter by. Supported only if onlyCommented=true is set. Default: Final | [optional]<br />**Values**: all ("All"), draft ("Draft"), _final ("Final") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing.html)
+
+<a name="getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId"></a>
+
+# **getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**
+
+
+
+> [KnowledgeDocumentFeedbackResponse](KnowledgeDocumentFeedbackResponse.html) getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId, documentId, feedbackId)
+
+Get a single feedback record given on a document
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}  
+
+Requires ANY permissions: 
+
+* knowledge:feedback:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let feedbackId: String = "" // Feedback ID.
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId: knowledgeBaseId, documentId: documentId, feedbackId: feedbackId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **documentId** | **String**| Document ID. | |
+| **feedbackId** | **String**| Feedback ID. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html)
 
 <a name="getKnowledgeKnowledgebaseDocumentVariation"></a>
 
@@ -3151,6 +3288,61 @@ KnowledgeAPI.postKnowledgeDocumentuploads(body: body) { (response, error) in
 
 [**UploadUrlResponse**](UploadUrlResponse.html)
 
+<a name="postKnowledgeGuestSessionDocumentFeedback"></a>
+
+# **postKnowledgeGuestSessionDocumentFeedback**
+
+
+
+> [KnowledgeGuestDocumentFeedback](KnowledgeGuestDocumentFeedback.html) postKnowledgeGuestSessionDocumentFeedback(sessionId, documentId, body)
+
+Give feedback on a document
+
+
+
+Wraps POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sessionId: String = "" // Knowledge guest session ID.
+let documentId: String = "" // Document ID.
+let body: KnowledgeGuestDocumentFeedback = new KnowledgeGuestDocumentFeedback(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeGuestSessionDocumentFeedback(sessionId: sessionId, documentId: documentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeGuestSessionDocumentFeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionId** | **String**| Knowledge guest session ID. | |
+| **documentId** | **String**| Document ID. | |
+| **body** | [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html)
+
 <a name="postKnowledgeGuestSessionDocumentsSearch"></a>
 
 # **postKnowledgeGuestSessionDocumentsSearch**
@@ -3364,6 +3556,62 @@ KnowledgeAPI.postKnowledgeKnowledgebaseCategories(knowledgeBaseId: knowledgeBase
 
 [**CategoryResponse**](CategoryResponse.html)
 
+<a name="postKnowledgeKnowledgebaseDocumentFeedback"></a>
+
+# **postKnowledgeKnowledgebaseDocumentFeedback**
+
+
+
+> [KnowledgeDocumentFeedbackResponse](KnowledgeDocumentFeedbackResponse.html) postKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId, documentId, body)
+
+Give feedback on a document
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback  
+
+Requires ANY permissions: 
+
+* knowledge:feedback:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let body: KnowledgeDocumentFeedback = new KnowledgeDocumentFeedback(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentFeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **documentId** | **String**| Document ID. | |
+| **body** | [**KnowledgeDocumentFeedback**](KnowledgeDocumentFeedback.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html)
+
 <a name="postKnowledgeKnowledgebaseDocumentVariations"></a>
 
 # **postKnowledgeKnowledgebaseDocumentVariations**
@@ -3476,6 +3724,61 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId: knowled
 ### Return type
 
 [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html)
+
+<a name="postKnowledgeKnowledgebaseDocumentViews"></a>
+
+# **postKnowledgeKnowledgebaseDocumentViews**
+
+
+
+> Void postKnowledgeKnowledgebaseDocumentViews(knowledgeBaseId, documentId, body)
+
+Create view for a document.
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views  
+
+Requires ALL permissions: 
+
+* knowledge:documentView:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let body: KnowledgeDocumentView = new KnowledgeDocumentView(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentViews(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentViews was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **documentId** | **String**| Document ID. | |
+| **body** | [**KnowledgeDocumentView**](KnowledgeDocumentView.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postKnowledgeKnowledgebaseDocuments"></a>
 

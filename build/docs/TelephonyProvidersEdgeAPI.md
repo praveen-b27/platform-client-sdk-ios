@@ -66,7 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhonebasesettings) | Get a list of Phone Base Settings objects |
 | [**getTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases) | Get a list of available makes and models to create a new Phone Base Settings |
 | [**getTelephonyProvidersEdgesPhonebasesettingsTemplate**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhonebasesettingsTemplate) | Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance |
-| [**getTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhones) | Get a list of Phone Instances |
+| [**getTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhones) | Get a list of Phone Instances. A maximum of 10,000 results is returned when filtering the results or sorting by a field other than the ID. Sorting by only the ID has no result limit. Each filter supports a wildcard, *, as a value to search for partial values. |
 | [**getTelephonyProvidersEdgesPhonesTemplate**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhonesTemplate) | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance |
 | [**getTelephonyProvidersEdgesPhysicalinterfaces**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhysicalinterfaces) | Get physical interfaces for edges. |
 | [**getTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSite) | Get a Site by ID. |
@@ -3319,7 +3319,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhonebasesettingsTemplate(ph
 
 > [PhoneEntityListing](PhoneEntityListing.html) getTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, statusOperationalStatus, secondaryStatusOperationalStatus, expand, fields)
 
-Get a list of Phone Instances
+Get a list of Phone Instances. A maximum of 10,000 results is returned when filtering the results or sorting by a field other than the ID. Sorting by only the ID has no result limit. Each filter supports a wildcard, *, as a value to search for partial values.
 
 
 

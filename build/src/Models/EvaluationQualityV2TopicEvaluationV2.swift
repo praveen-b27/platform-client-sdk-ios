@@ -50,6 +50,7 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
     public var evaluationSource: EvaluationQualityV2TopicEvaluationSource?
     public var assigneeUserId: String?
     public var previousAssigneeUserId: String?
+    public var assigneeApplicable: Bool?
     public var evaluationContextId: String?
     public var disputeCount: Int?
     public var version: Int?
@@ -60,8 +61,9 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
     public var evaluatorCommentHasUpdated: Bool?
     public var agentCommentHasUpdated: Bool?
     public var previousRescoreCount: Int?
+    public var previousEvaluatorUserId: String?
 
-    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?, evaluationSource: EvaluationQualityV2TopicEvaluationSource?, assigneeUserId: String?, previousAssigneeUserId: String?, evaluationContextId: String?, disputeCount: Int?, version: Int?, previousStatus: PreviousStatus?, declinedReview: Bool?, retractedEvaluation: EvaluationQualityV2TopicEvaluationReference?, rescoreCount: Int?, evaluatorCommentHasUpdated: Bool?, agentCommentHasUpdated: Bool?, previousRescoreCount: Int?) {
+    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?, evaluationSource: EvaluationQualityV2TopicEvaluationSource?, assigneeUserId: String?, previousAssigneeUserId: String?, assigneeApplicable: Bool?, evaluationContextId: String?, disputeCount: Int?, version: Int?, previousStatus: PreviousStatus?, declinedReview: Bool?, retractedEvaluation: EvaluationQualityV2TopicEvaluationReference?, rescoreCount: Int?, evaluatorCommentHasUpdated: Bool?, agentCommentHasUpdated: Bool?, previousRescoreCount: Int?, previousEvaluatorUserId: String?) {
         self._id = _id
         self.conversationId = conversationId
         self.agent = agent
@@ -87,6 +89,7 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         self.evaluationSource = evaluationSource
         self.assigneeUserId = assigneeUserId
         self.previousAssigneeUserId = previousAssigneeUserId
+        self.assigneeApplicable = assigneeApplicable
         self.evaluationContextId = evaluationContextId
         self.disputeCount = disputeCount
         self.version = version
@@ -97,6 +100,7 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         self.evaluatorCommentHasUpdated = evaluatorCommentHasUpdated
         self.agentCommentHasUpdated = agentCommentHasUpdated
         self.previousRescoreCount = previousRescoreCount
+        self.previousEvaluatorUserId = previousEvaluatorUserId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -125,6 +129,7 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         case evaluationSource
         case assigneeUserId
         case previousAssigneeUserId
+        case assigneeApplicable
         case evaluationContextId
         case disputeCount
         case version
@@ -135,6 +140,7 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         case evaluatorCommentHasUpdated
         case agentCommentHasUpdated
         case previousRescoreCount
+        case previousEvaluatorUserId
     }
 
 

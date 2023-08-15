@@ -34,6 +34,8 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
         case noAnswerTransfer = "NoAnswerTransfer"
         case notAvailableTransfer = "NotAvailableTransfer"
         case uncallable = "Uncallable"
+        case didNotDeliverEndpoint = "DidNotDeliverEndpoint"
+        case didNotDeliverTransfer = "DidNotDeliverTransfer"
     }
     public enum LastAcdOutcome: String, Codable { 
         case unknown = "Unknown"
@@ -78,8 +80,11 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
     public var lastUserDisconnectType: LastUserDisconnectType?
     public var lastAcdOutcome: LastAcdOutcome?
     public var authenticated: Bool?
+    public var app: JourneySessionEventsNotificationApp?
+    public var sdkLibrary: JourneySessionEventsNotificationSdkLibrary?
+    public var networkConnectivity: JourneySessionEventsNotificationNetworkConnectivity?
 
-    public init(_id: String?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: JourneySessionEventsNotificationExternalContact?, customerId: String?, customerIdType: String?, type: String?, outcomeAchievements: [JourneySessionEventsNotificationOutcomeAchievement]?, segmentAssignments: [JourneySessionEventsNotificationSegmentAssignment]?, awayDate: Date?, browser: JourneySessionEventsNotificationBrowser?, device: JourneySessionEventsNotificationDevice?, geolocation: JourneySessionEventsNotificationGeoLocation?, idleDate: Date?, ipAddress: String?, ipOrganization: String?, lastPage: JourneySessionEventsNotificationPage?, mktCampaign: JourneySessionEventsNotificationMktCampaign?, referrer: JourneySessionEventsNotificationReferrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: JourneySessionEventsNotificationSessionLastEvent?, conversation: JourneySessionEventsNotificationConversation?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisposition: JourneySessionEventsNotificationConversationUserDisposition?, lastConnectedUser: JourneySessionEventsNotificationUser?, lastConnectedQueue: JourneySessionEventsNotificationConnectedQueue?, conversationChannels: [JourneySessionEventsNotificationConversationChannel]?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?) {
+    public init(_id: String?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: JourneySessionEventsNotificationExternalContact?, customerId: String?, customerIdType: String?, type: String?, outcomeAchievements: [JourneySessionEventsNotificationOutcomeAchievement]?, segmentAssignments: [JourneySessionEventsNotificationSegmentAssignment]?, awayDate: Date?, browser: JourneySessionEventsNotificationBrowser?, device: JourneySessionEventsNotificationDevice?, geolocation: JourneySessionEventsNotificationGeoLocation?, idleDate: Date?, ipAddress: String?, ipOrganization: String?, lastPage: JourneySessionEventsNotificationPage?, mktCampaign: JourneySessionEventsNotificationMktCampaign?, referrer: JourneySessionEventsNotificationReferrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: JourneySessionEventsNotificationSessionLastEvent?, conversation: JourneySessionEventsNotificationConversation?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisposition: JourneySessionEventsNotificationConversationUserDisposition?, lastConnectedUser: JourneySessionEventsNotificationUser?, lastConnectedQueue: JourneySessionEventsNotificationConnectedQueue?, conversationChannels: [JourneySessionEventsNotificationConversationChannel]?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, app: JourneySessionEventsNotificationApp?, sdkLibrary: JourneySessionEventsNotificationSdkLibrary?, networkConnectivity: JourneySessionEventsNotificationNetworkConnectivity?) {
         self._id = _id
         self.selfUri = selfUri
         self.createdDate = createdDate
@@ -117,6 +122,9 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
         self.lastUserDisconnectType = lastUserDisconnectType
         self.lastAcdOutcome = lastAcdOutcome
         self.authenticated = authenticated
+        self.app = app
+        self.sdkLibrary = sdkLibrary
+        self.networkConnectivity = networkConnectivity
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -157,6 +165,9 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
         case lastUserDisconnectType
         case lastAcdOutcome
         case authenticated
+        case app
+        case sdkLibrary
+        case networkConnectivity
     }
 
 

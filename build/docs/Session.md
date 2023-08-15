@@ -26,6 +26,9 @@ title: Session
 | **lastPage** | [**JourneyPage**](JourneyPage.html) | The webpage where the customer&#39;s last web interaction occurred. | [optional] |
 | **mktCampaign** | [**JourneyCampaign**](JourneyCampaign.html) | Marketing / traffic source information. | [optional] |
 | **referrer** | [**Referrer**](Referrer.html) | Identifies the page URL that originally generated the request for the current page being viewed. | [optional] |
+| **app** | [**JourneyApp**](JourneyApp.html) | Application that the customer is interacting with (for app sessions). | [optional] |
+| **sdkLibrary** | [**SdkLibrary**](SdkLibrary.html) | SDK library used to generate the events for the session (for app and web sessions). | [optional] |
+| **networkConnectivity** | [**NetworkConnectivity**](NetworkConnectivity.html) | Information relating to the device&#39;s network connectivity (for app sessions). | [optional] |
 | **searchTerms** | **[String]** | Search terms associated with the session. | [optional] |
 | **userAgentString** | **String** | String identifying the user agent. | [optional] |
 | **durationInSeconds** | **Int** | Indicates how long the session has been active (valid for an individual device). | [optional] |

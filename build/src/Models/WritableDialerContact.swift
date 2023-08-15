@@ -27,8 +27,10 @@ public class WritableDialerContact: Codable {
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
     /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
     public var contactableStatus: [String:ContactableStatus]?
+    /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
 
-    public init(_id: String?, contactListId: String?, data: [String:String]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?) {
+    public init(_id: String?, contactListId: String?, data: [String:String]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, dateCreated: Date?) {
         self._id = _id
         self.contactListId = contactListId
         self.data = data
@@ -37,6 +39,7 @@ public class WritableDialerContact: Codable {
         self.callable = callable
         self.phoneNumberStatus = phoneNumberStatus
         self.contactableStatus = contactableStatus
+        self.dateCreated = dateCreated
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -48,6 +51,7 @@ public class WritableDialerContact: Codable {
         case callable
         case phoneNumberStatus
         case contactableStatus
+        case dateCreated
     }
 
 

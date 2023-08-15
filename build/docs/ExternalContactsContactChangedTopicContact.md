@@ -32,6 +32,8 @@ title: ExternalContactsContactChangedTopicContact
 | **instagramId** | [**ExternalContactsContactChangedTopicInstagramId**](ExternalContactsContactChangedTopicInstagramId.html) |  | [optional] |
 | **schema** | [**ExternalContactsContactChangedTopicDataSchema**](ExternalContactsContactChangedTopicDataSchema.html) |  | [optional] |
 | **customFields** | [**[String:JSON]**](JSON.html) |  | [optional] |
+| **createDate** | [**Date**](Date.html) |  | [optional] |
+| **modifyDate** | [**Date**](Date.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -41,8 +41,10 @@ public class ExternalContactsUnresolvedContactChangedTopicContact: Codable {
     public var instagramId: ExternalContactsUnresolvedContactChangedTopicInstagramId?
     public var schema: ExternalContactsUnresolvedContactChangedTopicDataSchema?
     public var customFields: [String:JSON]?
+    public var createDate: Date?
+    public var modifyDate: Date?
 
-    public init(_id: String?, externalOrganization: ExternalContactsUnresolvedContactChangedTopicExternalOrganization?, type: ModelType?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, cellPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, homePhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, otherPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ExternalContactsUnresolvedContactChangedTopicContactAddress?, surveyOptOut: Bool?, externalSystemUrl: String?, twitterId: ExternalContactsUnresolvedContactChangedTopicTwitterId?, lineId: ExternalContactsUnresolvedContactChangedTopicLineId?, whatsAppId: ExternalContactsUnresolvedContactChangedTopicWhatsAppId?, facebookId: ExternalContactsUnresolvedContactChangedTopicFacebookId?, instagramId: ExternalContactsUnresolvedContactChangedTopicInstagramId?, schema: ExternalContactsUnresolvedContactChangedTopicDataSchema?, customFields: [String:JSON]?) {
+    public init(_id: String?, externalOrganization: ExternalContactsUnresolvedContactChangedTopicExternalOrganization?, type: ModelType?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, cellPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, homePhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, otherPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ExternalContactsUnresolvedContactChangedTopicContactAddress?, surveyOptOut: Bool?, externalSystemUrl: String?, twitterId: ExternalContactsUnresolvedContactChangedTopicTwitterId?, lineId: ExternalContactsUnresolvedContactChangedTopicLineId?, whatsAppId: ExternalContactsUnresolvedContactChangedTopicWhatsAppId?, facebookId: ExternalContactsUnresolvedContactChangedTopicFacebookId?, instagramId: ExternalContactsUnresolvedContactChangedTopicInstagramId?, schema: ExternalContactsUnresolvedContactChangedTopicDataSchema?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
         self._id = _id
         self.externalOrganization = externalOrganization
         self.type = type
@@ -68,6 +70,8 @@ public class ExternalContactsUnresolvedContactChangedTopicContact: Codable {
         self.instagramId = instagramId
         self.schema = schema
         self.customFields = customFields
+        self.createDate = createDate
+        self.modifyDate = modifyDate
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -96,6 +100,8 @@ public class ExternalContactsUnresolvedContactChangedTopicContact: Codable {
         case instagramId
         case schema
         case customFields
+        case createDate
+        case modifyDate
     }
 
 

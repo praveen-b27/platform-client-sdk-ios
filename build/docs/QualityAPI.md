@@ -779,9 +779,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 0 // The total page size requested
 let pageNumber: Int = 0 // The page number requested
-let sortBy: String = "" // variable name requested to sort by
+let sortBy: String = "" // NOTE: Does not work when querying evaluations
 let expand: [String] = [""] // variable name requested by expand list
-let nextPage: String = "" // next page token
+let nextPage: String = "" // NOTE: Does not work when querying evaluations
 let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversationId specified
 let agentUserId: String = "" // user id of the agent
@@ -794,8 +794,8 @@ let evaluationState: [String] = [""] //
 let isReleased: Bool = true // the evaluation has been released
 let agentHasRead: Bool = true // agent has the evaluation
 let expandAnswerTotalScores: Bool = true // get the total scores for evaluations
-let maximum: Int = 0 // maximum
-let sortOrder: String = "" // sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId
+let maximum: Int = 0 // the maximum number of results to return
+let sortOrder: String = "" // NOTE: Does not work when conversationId is supplied.
 
 // Code example
 QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
@@ -815,9 +815,9 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
-| **sortBy** | **String**| variable name requested to sort by | [optional] |
+| **sortBy** | **String**| NOTE: Does not work when querying evaluations | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
-| **nextPage** | **String**| next page token | [optional] |
+| **nextPage** | **String**| NOTE: Does not work when querying evaluations | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversationId specified | [optional] |
 | **agentUserId** | **String**| user id of the agent | [optional] |
@@ -830,8 +830,8 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **isReleased** | **Bool**| the evaluation has been released | [optional] |
 | **agentHasRead** | **Bool**| agent has the evaluation | [optional] |
 | **expandAnswerTotalScores** | **Bool**| get the total scores for evaluations | [optional] |
-| **maximum** | **Int**| maximum | [optional] |
-| **sortOrder** | **String**| sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId | [optional] |
+| **maximum** | **Int**| the maximum number of results to return | [optional] |
+| **sortOrder** | **String**| NOTE: Does not work when conversationId is supplied. | [optional] |
 {: class="table-striped"}
 
 
@@ -2898,7 +2898,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let evaluationId: String = "" // evaluationId
 let body: Evaluation = new Evaluation(...) // evaluation
-let expand: String = "" // evaluatorId, evaluationForm, assignee
+let expand: String = "" // evaluatorId, evaluationForm, assignee, evaluator
 
 // Code example
 QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, evaluationId: evaluationId, body: body, expand: expand) { (response, error) in
@@ -2919,7 +2919,7 @@ QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, eval
 | **conversationId** | **String**| conversationId | |
 | **evaluationId** | **String**| evaluationId | |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation | |
-| **expand** | **String**| evaluatorId, evaluationForm, assignee | [optional] |
+| **expand** | **String**| evaluatorId, evaluationForm, assignee, evaluator | [optional] |
 {: class="table-striped"}
 
 

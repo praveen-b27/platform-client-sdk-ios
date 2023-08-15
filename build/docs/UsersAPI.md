@@ -2538,6 +2538,7 @@ Wraps PATCH /api/v2/users/{userId}
 Requires ANY permissions: 
 
 * directory:user:edit
+* directory:organization:admin
 
 ### Example
 

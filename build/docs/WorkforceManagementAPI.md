@@ -1446,6 +1446,10 @@ Requires ANY permissions:
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
 * wfm:shortTermForecast:view
+* wfm:staffingGroup:add
+* wfm:staffingGroup:delete
+* wfm:staffingGroup:edit
+* wfm:staffingGroup:view
 * wfm:timeOffRequest:add
 * wfm:timeOffRequest:edit
 * wfm:timeOffRequest:view
@@ -3172,6 +3176,10 @@ Requires ANY permissions:
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
 * wfm:shortTermForecast:view
+* wfm:staffingGroup:add
+* wfm:staffingGroup:delete
+* wfm:staffingGroup:edit
+* wfm:staffingGroup:view
 * wfm:timeOffLimit:add
 * wfm:timeOffLimit:delete
 * wfm:timeOffLimit:edit
@@ -3997,6 +4005,7 @@ Requires ANY permissions:
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
 * wfm:schedule:view
+* wfm:staffingGroup:view
 * wfm:timeOffRequest:view
 * wfm:workPlanRotation:view
 * wfm:workPlan:view

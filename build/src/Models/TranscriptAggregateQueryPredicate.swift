@@ -34,6 +34,7 @@ public class TranscriptAggregateQueryPredicate: Codable {
         case teamid = "teamId"
         case topicid = "topicId"
         case userid = "userId"
+        case wrapupcode = "wrapUpCode"
     }
     public enum Operator: String, Codable { 
         case matches = "matches"

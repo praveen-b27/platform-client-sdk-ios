@@ -12,6 +12,7 @@ import Foundation
 public class EvaluationAggregationQuery: Codable {
 
     public enum GroupBy: String, Codable { 
+        case assigneeapplicable = "assigneeApplicable"
         case assigneeid = "assigneeId"
         case calibrationid = "calibrationId"
         case contextid = "contextId"

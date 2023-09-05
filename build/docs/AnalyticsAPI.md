@@ -217,7 +217,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 
 
-> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults)
+> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults)
 
 Get Reporting Turns.
 
@@ -242,13 +242,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let botFlowId: String = "" // ID of the bot flow.
 let after: String = "" // The cursor that points to the ID of the last item in the list of entities that has been returned.
 let pageSize: String = "" // Max number of entities to return. Maximum of 250
+let interval: String = 2023-07-17T08:15:44.586Z/2023-07-26T09:22:33.111Z // Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
 let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed.
 let language: String = en-us // Optional language code to get the reporting turns for a particular language
 let askActionResults: AnalyticsAPI.AskActionResults_getAnalyticsBotflowReportingturns = AnalyticsAPI.AskActionResults_getAnalyticsBotflowReportingturns.enummember // Optional case-insensitive comma separated list of ask action results to filter the reporting turns.
 
 // Code example
-AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language, askActionResults: askActionResults) { (response, error) in
+AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, interval: interval, actionId: actionId, sessionId: sessionId, language: language, askActionResults: askActionResults) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -266,6 +267,7 @@ AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: afte
 | **botFlowId** | **String**| ID of the bot flow. | |
 | **after** | **String**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] |
+| **interval** | **String**| Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
 | **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional] |
 | **language** | **String**| Optional language code to get the reporting turns for a particular language | [optional] |

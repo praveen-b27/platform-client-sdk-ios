@@ -30,11 +30,13 @@ public class MessageMediaParticipant: Codable {
     }
     public enum DisconnectType: String, Codable { 
         case endpoint = "endpoint"
+        case endpointDonotdisturb = "endpoint.donotdisturb"
         case client = "client"
         case system = "system"
         case transfer = "transfer"
         case transferConference = "transfer.conference"
         case transferConsult = "transfer.consult"
+        case transferDonotdisturb = "transfer.donotdisturb"
         case transferForward = "transfer.forward"
         case transferNoanswer = "transfer.noanswer"
         case transferNotavailable = "transfer.notavailable"

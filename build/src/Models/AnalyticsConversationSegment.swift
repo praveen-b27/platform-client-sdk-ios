@@ -16,6 +16,7 @@ public class AnalyticsConversationSegment: Codable {
         case conferencetransfer = "conferenceTransfer"
         case consulttransfer = "consultTransfer"
         case endpoint = "endpoint"
+        case endpointdnd = "endpointDnd"
         case error = "error"
         case forwardtransfer = "forwardTransfer"
         case noanswertransfer = "noAnswerTransfer"
@@ -26,6 +27,7 @@ public class AnalyticsConversationSegment: Codable {
         case system = "system"
         case timeout = "timeout"
         case transfer = "transfer"
+        case transferdnd = "transferDnd"
         case transportfailure = "transportFailure"
         case uncallable = "uncallable"
     }

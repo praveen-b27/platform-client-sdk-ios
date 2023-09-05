@@ -91,13 +91,15 @@ open class TokensAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
+    
     /**
      Fetch information about the current token
      
+     - parameter preserveIdleTTL: (query) preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTokensMe(completion: @escaping ((_ data: TokenInfo?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTokensMeWithRequestBuilder()
+    open class func getTokensMe(preserveIdleTTL: Bool? = nil, completion: @escaping ((_ data: TokenInfo?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTokensMeWithRequestBuilder(preserveIdleTTL: preserveIdleTTL)
         requestBuilder.execute { (response: Response<TokenInfo>?, error) -> Void in
             do {
                 if let e = error {
@@ -146,15 +148,20 @@ open class TokensAPI {
   "authorizedScope" : [ "authorizedScope", "authorizedScope" ],
   "clonedUser" : "{}"
 }, statusCode=200}]
+     
+     - parameter preserveIdleTTL: (query) preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)
 
      - returns: RequestBuilder<TokenInfo> 
      */
-    open class func getTokensMeWithRequestBuilder() -> RequestBuilder<TokenInfo> {        
+    open class func getTokensMeWithRequestBuilder(preserveIdleTTL: Bool? = nil) -> RequestBuilder<TokenInfo> {        
         let path = "/api/v2/tokens/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "preserveIdleTTL": preserveIdleTTL
+        ])
 
         let requestBuilder: RequestBuilder<TokenInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

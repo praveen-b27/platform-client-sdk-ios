@@ -116,7 +116,7 @@ This endpoint does not require any parameters.
 
 
 
-> [TokenInfo](TokenInfo.html) getTokensMe()
+> [TokenInfo](TokenInfo.html) getTokensMe(preserveIdleTTL)
 
 Fetch information about the current token
 
@@ -135,9 +135,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let preserveIdleTTL: Bool = true // preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset.
 
 // Code example
-TokensAPI.getTokensMe() { (response, error) in
+TokensAPI.getTokensMe(preserveIdleTTL: preserveIdleTTL) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -149,8 +150,11 @@ TokensAPI.getTokensMe() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **preserveIdleTTL** | **Bool**| preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. | [optional] |
+{: class="table-striped"}
 
 
 ### Return type

@@ -1737,7 +1737,7 @@ open class CoachingAPI {
     } ],
     "activities" : [ {
       "activityCodeId" : "activityCodeId",
-      "externalActivityType" : "Coaching",
+      "externalActivityType" : "ActivityPlan",
       "timeOffRequestId" : "timeOffRequestId",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
@@ -1746,7 +1746,7 @@ open class CoachingAPI {
       "description" : "description"
     }, {
       "activityCodeId" : "activityCodeId",
-      "externalActivityType" : "Coaching",
+      "externalActivityType" : "ActivityPlan",
       "timeOffRequestId" : "timeOffRequestId",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
@@ -1773,7 +1773,7 @@ open class CoachingAPI {
     } ],
     "activities" : [ {
       "activityCodeId" : "activityCodeId",
-      "externalActivityType" : "Coaching",
+      "externalActivityType" : "ActivityPlan",
       "timeOffRequestId" : "timeOffRequestId",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
@@ -1782,7 +1782,7 @@ open class CoachingAPI {
       "description" : "description"
     }, {
       "activityCodeId" : "activityCodeId",
-      "externalActivityType" : "Coaching",
+      "externalActivityType" : "ActivityPlan",
       "timeOffRequestId" : "timeOffRequestId",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,

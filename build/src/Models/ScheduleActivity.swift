@@ -12,6 +12,7 @@ import Foundation
 public class ScheduleActivity: Codable {
 
     public enum ExternalActivityType: String, Codable { 
+        case activityPlan = "ActivityPlan"
         case coaching = "Coaching"
         case learning = "Learning"
     }

@@ -237,6 +237,229 @@ open class JourneyAPI {
     }
 
     
+    
+    
+    
+    /**
+     Retrieve all sessions for a given external contact.
+     
+     - parameter contactId: (path) ExternalContact ID 
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter includeMerged: (query) Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactJourneySessions(contactId: String, pageSize: String? = nil, after: String? = nil, includeMerged: Bool? = nil, completion: @escaping ((_ data: SessionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactJourneySessionsWithRequestBuilder(contactId: contactId, pageSize: pageSize, after: after, includeMerged: includeMerged)
+        requestBuilder.execute { (response: Response<SessionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve all sessions for a given external contact.
+     - GET /api/v2/externalcontacts/contacts/{contactId}/journey/sessions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "screenviewCount" : 5,
+    "shortId" : "shortId",
+    "authenticated" : true,
+    "lastPage" : "{}",
+    "durationInSeconds" : 0,
+    "searchTerms" : [ "searchTerms", "searchTerms" ],
+    "conversationSubject" : "conversationSubject",
+    "userAgentString" : "userAgentString",
+    "eventCount" : 6,
+    "type" : "type",
+    "lastConnectedQueue" : "{}",
+    "sdkLibrary" : "{}",
+    "browser" : "{}",
+    "customerId" : "customerId",
+    "id" : "id",
+    "customerIdType" : "customerIdType",
+    "awayDate" : "2000-01-23T04:56:07.000+00:00",
+    "lastAcdOutcome" : "Unknown",
+    "attributeLists" : {
+      "key" : {
+        "dataType" : "dataType",
+        "values" : [ "values", "values" ]
+      }
+    },
+    "mktCampaign" : "{}",
+    "conversation" : "{}",
+    "ipOrganization" : "ipOrganization",
+    "app" : "{}",
+    "externalUrl" : "externalUrl",
+    "networkConnectivity" : "{}",
+    "endedDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "idleDate" : "2000-01-23T04:56:07.000+00:00",
+    "ipAddress" : "ipAddress",
+    "externalId" : "externalId",
+    "lastUserDisconnectType" : "Unknown",
+    "pageviewCount" : 1,
+    "externalContact" : "{}",
+    "originatingDirection" : "Unknown",
+    "referrer" : "{}",
+    "lastUserDisposition" : "{}",
+    "outcomeAchievements" : [ {
+      "achievedDate" : "2000-01-23T04:56:07.000+00:00",
+      "outcome" : "{}"
+    }, {
+      "achievedDate" : "2000-01-23T04:56:07.000+00:00",
+      "outcome" : "{}"
+    } ],
+    "lastConnectedUser" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "conversationChannels" : [ {
+      "messageType" : "Unknown",
+      "type" : "Unknown",
+      "platform" : "platform"
+    }, {
+      "messageType" : "Unknown",
+      "type" : "Unknown",
+      "platform" : "platform"
+    } ],
+    "segmentAssignments" : [ {
+      "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+      "segment" : "{}"
+    }, {
+      "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+      "segment" : "{}"
+    } ],
+    "lastEvent" : "{}",
+    "attributes" : {
+      "key" : {
+        "dataType" : "dataType",
+        "value" : "value"
+      }
+    },
+    "device" : "{}",
+    "geolocation" : "{}"
+  }, {
+    "screenviewCount" : 5,
+    "shortId" : "shortId",
+    "authenticated" : true,
+    "lastPage" : "{}",
+    "durationInSeconds" : 0,
+    "searchTerms" : [ "searchTerms", "searchTerms" ],
+    "conversationSubject" : "conversationSubject",
+    "userAgentString" : "userAgentString",
+    "eventCount" : 6,
+    "type" : "type",
+    "lastConnectedQueue" : "{}",
+    "sdkLibrary" : "{}",
+    "browser" : "{}",
+    "customerId" : "customerId",
+    "id" : "id",
+    "customerIdType" : "customerIdType",
+    "awayDate" : "2000-01-23T04:56:07.000+00:00",
+    "lastAcdOutcome" : "Unknown",
+    "attributeLists" : {
+      "key" : {
+        "dataType" : "dataType",
+        "values" : [ "values", "values" ]
+      }
+    },
+    "mktCampaign" : "{}",
+    "conversation" : "{}",
+    "ipOrganization" : "ipOrganization",
+    "app" : "{}",
+    "externalUrl" : "externalUrl",
+    "networkConnectivity" : "{}",
+    "endedDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "idleDate" : "2000-01-23T04:56:07.000+00:00",
+    "ipAddress" : "ipAddress",
+    "externalId" : "externalId",
+    "lastUserDisconnectType" : "Unknown",
+    "pageviewCount" : 1,
+    "externalContact" : "{}",
+    "originatingDirection" : "Unknown",
+    "referrer" : "{}",
+    "lastUserDisposition" : "{}",
+    "outcomeAchievements" : [ {
+      "achievedDate" : "2000-01-23T04:56:07.000+00:00",
+      "outcome" : "{}"
+    }, {
+      "achievedDate" : "2000-01-23T04:56:07.000+00:00",
+      "outcome" : "{}"
+    } ],
+    "lastConnectedUser" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "conversationChannels" : [ {
+      "messageType" : "Unknown",
+      "type" : "Unknown",
+      "platform" : "platform"
+    }, {
+      "messageType" : "Unknown",
+      "type" : "Unknown",
+      "platform" : "platform"
+    } ],
+    "segmentAssignments" : [ {
+      "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+      "segment" : "{}"
+    }, {
+      "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+      "segment" : "{}"
+    } ],
+    "lastEvent" : "{}",
+    "attributes" : {
+      "key" : {
+        "dataType" : "dataType",
+        "value" : "value"
+      }
+    },
+    "device" : "{}",
+    "geolocation" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter contactId: (path) ExternalContact ID 
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter includeMerged: (query) Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)
+
+     - returns: RequestBuilder<SessionListing> 
+     */
+    open class func getExternalcontactsContactJourneySessionsWithRequestBuilder(contactId: String, pageSize: String? = nil, after: String? = nil, includeMerged: Bool? = nil) -> RequestBuilder<SessionListing> {        
+        var path = "/api/v2/externalcontacts/contacts/{contactId}/journey/sessions"
+        let contactIdPreEscape = "\(contactId)"
+        let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contactId}", with: contactIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize, 
+            "after": after, 
+            "includeMerged": includeMerged
+        ])
+
+        let requestBuilder: RequestBuilder<SessionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      Retrieve a single action map.
      

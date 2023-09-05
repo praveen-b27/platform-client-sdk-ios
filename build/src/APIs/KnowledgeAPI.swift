@@ -2868,6 +2868,7 @@ open class KnowledgeAPI {
   "exportFilter" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
   "errorInformation" : "{}",
   "countDocumentProcessed" : 0,
   "selfUri" : "https://openapi-generator.tech",
@@ -2903,15 +2904,17 @@ open class KnowledgeAPI {
 
     
     
+    
     /**
      Get import job report
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter importJobId: (path) Import job ID 
+     - parameter expand: (query) If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseImportJob(knowledgeBaseId: String, importJobId: String, completion: @escaping ((_ data: KnowledgeImportJobResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId)
+    open class func getKnowledgeKnowledgebaseImportJob(knowledgeBaseId: String, importJobId: String, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId, expand: expand)
         requestBuilder.execute { (response: Response<KnowledgeImportJobResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -2937,23 +2940,27 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "skipConfirmationStep" : true,
   "settings" : "{}",
-  "knowledgeBase" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "uploadKey" : "uploadKey",
   "selfUri" : "https://openapi-generator.tech",
-  "report" : "{}",
+  "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "report" : "{}",
   "id" : "id",
   "fileType" : "Json",
+  "failedEntitiesURL" : "failedEntitiesURL",
   "status" : "Created"
 }, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter importJobId: (path) Import job ID 
+     - parameter expand: (query) If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)
 
      - returns: RequestBuilder<KnowledgeImportJobResponse> 
      */
-    open class func getKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: String, importJobId: String) -> RequestBuilder<KnowledgeImportJobResponse> {        
+    open class func getKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: String, importJobId: String, expand: [String]? = nil) -> RequestBuilder<KnowledgeImportJobResponse> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2964,7 +2971,10 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -4701,7 +4711,7 @@ open class KnowledgeAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchKnowledgeKnowledgebase(knowledgeBaseId: String, body: KnowledgeBase, completion: @escaping ((_ data: KnowledgeBase?,_ error: Error?) -> Void)) {
+    open class func patchKnowledgeKnowledgebase(knowledgeBaseId: String, body: KnowledgeBaseUpdateRequest, completion: @escaping ((_ data: KnowledgeBase?,_ error: Error?) -> Void)) {
         let requestBuilder = patchKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
         requestBuilder.execute { (response: Response<KnowledgeBase>?, error) -> Void in
             do {
@@ -4744,7 +4754,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeBase> 
      */
-    open class func patchKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeBase) -> RequestBuilder<KnowledgeBase> {        
+    open class func patchKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeBaseUpdateRequest) -> RequestBuilder<KnowledgeBase> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5175,14 +5185,17 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "skipConfirmationStep" : true,
   "settings" : "{}",
-  "knowledgeBase" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "uploadKey" : "uploadKey",
   "selfUri" : "https://openapi-generator.tech",
-  "report" : "{}",
+  "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "report" : "{}",
   "id" : "id",
   "fileType" : "Json",
+  "failedEntitiesURL" : "failedEntitiesURL",
   "status" : "Created"
 }, statusCode=200}]
      
@@ -6909,6 +6922,7 @@ open class KnowledgeAPI {
   "exportFilter" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
   "errorInformation" : "{}",
   "countDocumentProcessed" : 0,
   "selfUri" : "https://openapi-generator.tech",
@@ -6975,14 +6989,17 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "skipConfirmationStep" : true,
   "settings" : "{}",
-  "knowledgeBase" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "uploadKey" : "uploadKey",
   "selfUri" : "https://openapi-generator.tech",
-  "report" : "{}",
+  "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "report" : "{}",
   "id" : "id",
   "fileType" : "Json",
+  "failedEntitiesURL" : "failedEntitiesURL",
   "status" : "Created"
 }, statusCode=200}]
      
@@ -7763,7 +7780,7 @@ open class KnowledgeAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postKnowledgeKnowledgebases(body: KnowledgeBase, completion: @escaping ((_ data: KnowledgeBase?,_ error: Error?) -> Void)) {
+    open class func postKnowledgeKnowledgebases(body: KnowledgeBaseCreateRequest, completion: @escaping ((_ data: KnowledgeBase?,_ error: Error?) -> Void)) {
         let requestBuilder = postKnowledgeKnowledgebasesWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<KnowledgeBase>?, error) -> Void in
             do {
@@ -7805,7 +7822,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeBase> 
      */
-    open class func postKnowledgeKnowledgebasesWithRequestBuilder(body: KnowledgeBase) -> RequestBuilder<KnowledgeBase> {        
+    open class func postKnowledgeKnowledgebasesWithRequestBuilder(body: KnowledgeBaseCreateRequest) -> RequestBuilder<KnowledgeBase> {        
         let path = "/api/v2/knowledge/knowledgebases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

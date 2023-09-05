@@ -333,7 +333,7 @@ QualityAPI.deleteQualityFormsSurvey(formId: formId) { (error) in
 
 
 
-> [AgentActivityEntityListing](AgentActivityEntityListing.html) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group)
+> [AgentActivityEntityListing](AgentActivityEntityListing.html) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, formContextId)
 
 Gets a list of Agent Activities
 
@@ -367,9 +367,10 @@ let agentUserId: [String] = [""] // user id of agent requested
 let evaluatorUserId: String = "" // user id of the evaluator
 let name: String = "" // name
 let group: String = "" // group id
+let formContextId: String = "" // shared id between form versions
 
 // Code example
-QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group) { (response, error) in
+QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, formContextId: formContextId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -396,6 +397,7 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 | **evaluatorUserId** | **String**| user id of the evaluator | [optional] |
 | **name** | **String**| name | [optional] |
 | **group** | **String**| group id | [optional] |
+| **formContextId** | **String**| shared id between form versions | [optional] |
 {: class="table-striped"}
 
 
@@ -755,7 +757,7 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 
 
 
-> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
+> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
 
 Queries Evaluations and returns a paged list
 
@@ -790,6 +792,7 @@ let assigneeUserId: String = "" // assignee user id
 let queueId: String = "" // queue id
 let startTime: String = "" // start time of the evaluation query
 let endTime: String = "" // end time of the evaluation query
+let formContextId: String = "" // shared id between form versions
 let evaluationState: [String] = [""] // 
 let isReleased: Bool = true // the evaluation has been released
 let agentHasRead: Bool = true // agent has the evaluation
@@ -798,7 +801,7 @@ let maximum: Int = 0 // the maximum number of results to return
 let sortOrder: String = "" // NOTE: Does not work when conversationId is supplied.
 
 // Code example
-QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
+QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -826,6 +829,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **queueId** | **String**| queue id | [optional] |
 | **startTime** | **String**| start time of the evaluation query | [optional] |
 | **endTime** | **String**| end time of the evaluation query | [optional] |
+| **formContextId** | **String**| shared id between form versions | [optional] |
 | **evaluationState** | [**[String]**](String.html)|  | [optional] |
 | **isReleased** | **Bool**| the evaluation has been released | [optional] |
 | **agentHasRead** | **Bool**| agent has the evaluation | [optional] |

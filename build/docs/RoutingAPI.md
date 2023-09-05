@@ -2075,7 +2075,7 @@ RoutingAPI.getRoutingMessageRecipient(recipientId: recipientId) { (response, err
 
 
 
-> [RecipientListing](RecipientListing.html) getRoutingMessageRecipients(messengerType, pageSize, pageNumber)
+> [RecipientListing](RecipientListing.html) getRoutingMessageRecipients(messengerType, name, pageSize, pageNumber)
 
 Get recipients
 
@@ -2096,11 +2096,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let messengerType: RoutingAPI.MessengerType_getRoutingMessageRecipients = RoutingAPI.MessengerType_getRoutingMessageRecipients.enummember // Messenger Type
+let name: String = "" // Recipient Name
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 
 // Code example
-RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, name: name, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2116,6 +2117,7 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram") |
+| **name** | **String**| Recipient Name | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
@@ -5972,7 +5974,7 @@ RoutingAPI.postRoutingSkillgroupMembersDivisions(skillGroupId: skillGroupId, bod
 
 
 
-> [SkillGroup](SkillGroup.html) postRoutingSkillgroups(body)
+> [SkillGroupWithMemberDivisions](SkillGroupWithMemberDivisions.html) postRoutingSkillgroups(body)
 
 Create a skill group
 
@@ -5980,7 +5982,7 @@ Create a skill group
 
 Wraps POST /api/v2/routing/skillgroups  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skillGroup:add
 
@@ -5992,7 +5994,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: SkillGroup = new SkillGroup(...) // Create skill group
+let body: SkillGroupWithMemberDivisions = new SkillGroupWithMemberDivisions(...) // Create skill group
 
 // Code example
 RoutingAPI.postRoutingSkillgroups(body: body) { (response, error) in
@@ -6010,13 +6012,13 @@ RoutingAPI.postRoutingSkillgroups(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SkillGroup**](SkillGroup.html)| Create skill group | |
+| **body** | [**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions.html)| Create skill group | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**SkillGroup**](SkillGroup.html)
+[**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions.html)
 
 <a name="postRoutingSkills"></a>
 
@@ -6470,7 +6472,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let recipientId: String = "" // Recipient ID
-let body: Recipient = new Recipient(...) // Recipient
+let body: RecipientRequest = new RecipientRequest(...) // Recipient
 
 // Code example
 RoutingAPI.putRoutingMessageRecipient(recipientId: recipientId, body: body) { (response, error) in
@@ -6489,7 +6491,7 @@ RoutingAPI.putRoutingMessageRecipient(recipientId: recipientId, body: body) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **recipientId** | **String**| Recipient ID | |
-| **body** | [**Recipient**](Recipient.html)| Recipient | |
+| **body** | [**RecipientRequest**](RecipientRequest.html)| Recipient | |
 {: class="table-striped"}
 
 

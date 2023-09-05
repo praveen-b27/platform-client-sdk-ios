@@ -122,6 +122,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case staticLinkExportFailed = "STATIC_LINK_EXPORT_FAILED"
         case tooManySearchCriteria = "TOO_MANY_SEARCH_CRITERIA"
         case searchCriteriaValuesExceedLimit = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
+        case exportEmailFileSizeExceededLimit = "EXPORT_EMAIL_FILE_SIZE_EXCEEDED_LIMIT"
     }
     public var _id: String?
     public var runId: String?

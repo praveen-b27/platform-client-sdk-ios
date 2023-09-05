@@ -43,6 +43,8 @@ public class KnowledgeExportJobResponse: Codable {
     public var status: Status?
     /** Knowledge base which document export belongs to. */
     public var knowledgeBase: KnowledgeBase?
+    /** The user who created the operation */
+    public var createdBy: UserReference?
     /** The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The timestamp of when the export stopped. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -52,7 +54,7 @@ public class KnowledgeExportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, downloadURL: String?, fileType: FileType?, countDocumentProcessed: Int?, exportFilter: KnowledgeExportJobFilter?, status: Status?, knowledgeBase: KnowledgeBase?, dateCreated: Date?, dateModified: Date?, errorInformation: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, downloadURL: String?, fileType: FileType?, countDocumentProcessed: Int?, exportFilter: KnowledgeExportJobFilter?, status: Status?, knowledgeBase: KnowledgeBase?, createdBy: UserReference?, dateCreated: Date?, dateModified: Date?, errorInformation: ErrorBody?, selfUri: String?) {
         self._id = _id
         self.downloadURL = downloadURL
         self.fileType = fileType
@@ -60,6 +62,7 @@ public class KnowledgeExportJobResponse: Codable {
         self.exportFilter = exportFilter
         self.status = status
         self.knowledgeBase = knowledgeBase
+        self.createdBy = createdBy
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.errorInformation = errorInformation
@@ -74,6 +77,7 @@ public class KnowledgeExportJobResponse: Codable {
         case exportFilter
         case status
         case knowledgeBase
+        case createdBy
         case dateCreated
         case dateModified
         case errorInformation

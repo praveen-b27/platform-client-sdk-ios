@@ -5645,6 +5645,7 @@ open class UsersAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5787,6 +5788,7 @@ open class UsersAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -10982,6 +10984,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -11414,6 +11417,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -11861,6 +11865,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -12293,6 +12298,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -12753,6 +12759,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -13185,6 +13192,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -13632,6 +13640,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -14064,6 +14073,7 @@ open class UsersAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -16926,6 +16936,7 @@ open class UsersAPI {
     "id" : "id",
     "type" : "TEAM"
   } ],
+  "scoringMethod" : "TimestampAndPriority",
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -17133,6 +17144,7 @@ open class UsersAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -17275,6 +17287,7 @@ open class UsersAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -18829,10 +18842,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18855,10 +18868,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18901,10 +18914,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18927,10 +18940,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18978,10 +18991,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -19004,10 +19017,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -19050,10 +19063,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -19076,10 +19089,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

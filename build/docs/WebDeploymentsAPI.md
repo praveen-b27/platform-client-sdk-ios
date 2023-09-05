@@ -453,7 +453,7 @@ WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPub
 
 
 
-> [WebDeployment](WebDeployment.html) getWebdeploymentsDeployment(deploymentId)
+> [WebDeployment](WebDeployment.html) getWebdeploymentsDeployment(deploymentId, expand)
 
 Get a deployment
 
@@ -474,9 +474,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let deploymentId: String = "" // The deployment ID
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected. 
 
 // Code example
-WebDeploymentsAPI.getWebdeploymentsDeployment(deploymentId: deploymentId) { (response, error) in
+WebDeploymentsAPI.getWebdeploymentsDeployment(deploymentId: deploymentId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -492,6 +493,7 @@ WebDeploymentsAPI.getWebdeploymentsDeployment(deploymentId: deploymentId) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The deployment ID | |
+| **expand** | [**[String]**](String.html)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 
@@ -558,7 +560,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentCobrowseSessionId(deploymentId: dep
 
 
 
-> [WebDeploymentActiveConfigurationOnDeployment](WebDeploymentActiveConfigurationOnDeployment.html) getWebdeploymentsDeploymentConfigurations(deploymentId, type)
+> [WebDeploymentActiveConfigurationOnDeployment](WebDeploymentActiveConfigurationOnDeployment.html) getWebdeploymentsDeploymentConfigurations(deploymentId, type, expand)
 
 Get active configuration for a given deployment
 
@@ -579,9 +581,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let deploymentId: String = "" // The deployment ID
 let type: String = "" // Get active configuration on a deployment
+let expand: [String] = [""] // Expand instructions for the return value
 
 // Code example
-WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploymentId, type: type) { (response, error) in
+WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploymentId, type: type, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -598,6 +601,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploy
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The deployment ID | |
 | **type** | **String**| Get active configuration on a deployment | [optional] |
+| **expand** | [**[String]**](String.html)| Expand instructions for the return value | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 

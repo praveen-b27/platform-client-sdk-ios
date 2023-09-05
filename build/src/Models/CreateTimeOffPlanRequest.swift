@@ -26,15 +26,18 @@ public class CreateTimeOffPlanRequest: Codable {
     public var autoApprovalRule: AutoApprovalRule?
     /** The number of days before the time off request start date for when the request will be expired from the waitlist. */
     public var daysBeforeStartToExpireFromWaitlist: Int?
+    /** Time off type, if this time off plan is associated with the integration. */
+    public var hrisTimeOffType: HrisTimeOffType?
     /** Whether this time off plan should be used by agents. */
     public var active: Bool?
 
-    public init(name: String?, activityCodeIds: [String]?, timeOffLimitIds: [String]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, active: Bool?) {
+    public init(name: String?, activityCodeIds: [String]?, timeOffLimitIds: [String]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, hrisTimeOffType: HrisTimeOffType?, active: Bool?) {
         self.name = name
         self.activityCodeIds = activityCodeIds
         self.timeOffLimitIds = timeOffLimitIds
         self.autoApprovalRule = autoApprovalRule
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
+        self.hrisTimeOffType = hrisTimeOffType
         self.active = active
     }
 

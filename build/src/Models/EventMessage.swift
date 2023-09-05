@@ -24,6 +24,7 @@ public class EventMessage: Codable {
         case campaignEmailBodyCharacterLimitExceeded = "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED"
         case campaignEmailSubjectCharacterLimitExceeded = "CAMPAIGN_EMAIL_SUBJECT_CHARACTER_LIMIT_EXCEEDED"
         case campaignInvalidated = "CAMPAIGN_INVALIDATED"
+        case campaignForceStopped = "CAMPAIGN_FORCE_STOPPED"
         case campaignMessageCharacterLimitExceeded = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
         case campaignStartError = "CAMPAIGN_START_ERROR"
         case campaignRuleStartError = "CAMPAIGN_RULE_START_ERROR"

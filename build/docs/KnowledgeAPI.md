@@ -1665,7 +1665,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseExportJob(knowledgeBaseId: knowledgeBaseId
 
 
 
-> [KnowledgeImportJobResponse](KnowledgeImportJobResponse.html) getKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId)
+> [KnowledgeImportJobResponse](KnowledgeImportJobResponse.html) getKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId, expand)
 
 Get import job report
 
@@ -1687,9 +1687,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let importJobId: String = "" // Import job ID
+let expand: [String] = [""] // If expand contains 'urls' downloadURL and failedEntitiesURL will be filled.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseImportJob(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseImportJob(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1706,6 +1707,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseImportJob(knowledgeBaseId: knowledgeBaseId
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **importJobId** | **String**| Import job ID | |
+| **expand** | [**[String]**](String.html)| If expand contains 'urls' downloadURL and failedEntitiesURL will be filled. | [optional]<br />**Values**: urls ("urls") |
 {: class="table-striped"}
 
 
@@ -2582,7 +2584,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
-let body: KnowledgeBase = new KnowledgeBase(...) // 
+let body: KnowledgeBaseUpdateRequest = new KnowledgeBaseUpdateRequest(...) // 
 
 // Code example
 KnowledgeAPI.patchKnowledgeKnowledgebase(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
@@ -2601,7 +2603,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebase(knowledgeBaseId: knowledgeBaseId, body:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **body** | [**KnowledgeBase**](KnowledgeBase.html)|  | |
+| **body** | [**KnowledgeBaseUpdateRequest**](KnowledgeBaseUpdateRequest.html)|  | |
 {: class="table-striped"}
 
 
@@ -4464,7 +4466,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: KnowledgeBase = new KnowledgeBase(...) // 
+let body: KnowledgeBaseCreateRequest = new KnowledgeBaseCreateRequest(...) // 
 
 // Code example
 KnowledgeAPI.postKnowledgeKnowledgebases(body: body) { (response, error) in
@@ -4482,7 +4484,7 @@ KnowledgeAPI.postKnowledgeKnowledgebases(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**KnowledgeBase**](KnowledgeBase.html)|  | |
+| **body** | [**KnowledgeBaseCreateRequest**](KnowledgeBaseCreateRequest.html)|  | |
 {: class="table-striped"}
 
 

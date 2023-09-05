@@ -11,6 +11,10 @@ import Foundation
 
 public class CreateQueueRequest: Codable {
 
+    public enum ScoringMethod: String, Codable { 
+        case timestampAndPriority = "TimestampAndPriority"
+        case priorityOnly = "PriorityOnly"
+    }
     public enum SkillEvaluationMethod: String, Codable { 
         case _none = "NONE"
         case best = "BEST"
@@ -46,6 +50,8 @@ public class CreateQueueRequest: Codable {
     public var conditionalGroupRouting: ConditionalGroupRouting?
     /** The bullseye settings for the queue. */
     public var bullseye: Bullseye?
+    /** The Scoring Method for the queue */
+    public var scoringMethod: ScoringMethod?
     /** The ACW settings for the queue. */
     public var acwSettings: AcwSettings?
     /** The skill evaluation method to use when routing conversations. */
@@ -90,7 +96,7 @@ public class CreateQueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, sourceQueueId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -106,6 +112,7 @@ public class CreateQueueRequest: Codable {
         self.routingRules = routingRules
         self.conditionalGroupRouting = conditionalGroupRouting
         self.bullseye = bullseye
+        self.scoringMethod = scoringMethod
         self.acwSettings = acwSettings
         self.skillEvaluationMethod = skillEvaluationMethod
         self.memberGroups = memberGroups
@@ -146,6 +153,7 @@ public class CreateQueueRequest: Codable {
         case routingRules
         case conditionalGroupRouting
         case bullseye
+        case scoringMethod
         case acwSettings
         case skillEvaluationMethod
         case memberGroups

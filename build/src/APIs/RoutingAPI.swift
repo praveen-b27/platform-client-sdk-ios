@@ -2248,16 +2248,18 @@ open class RoutingAPI {
     
     
     
+    
     /**
      Get recipients
      
      - parameter messengerType: (query) Messenger Type (optional)
+     - parameter name: (query) Recipient Name (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingMessageRecipients(messengerType: MessengerType_getRoutingMessageRecipients? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: RecipientListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingMessageRecipientsWithRequestBuilder(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber)
+    open class func getRoutingMessageRecipients(messengerType: MessengerType_getRoutingMessageRecipients? = nil, name: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: RecipientListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingMessageRecipientsWithRequestBuilder(messengerType: messengerType, name: name, pageSize: pageSize, pageNumber: pageNumber)
         requestBuilder.execute { (response: Response<RecipientListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2314,12 +2316,13 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter messengerType: (query) Messenger Type (optional)
+     - parameter name: (query) Recipient Name (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<RecipientListing> 
      */
-    open class func getRoutingMessageRecipientsWithRequestBuilder(messengerType: MessengerType_getRoutingMessageRecipients? = nil, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<RecipientListing> {        
+    open class func getRoutingMessageRecipientsWithRequestBuilder(messengerType: MessengerType_getRoutingMessageRecipients? = nil, name: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<RecipientListing> {        
         let path = "/api/v2/routing/message/recipients"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2327,6 +2330,7 @@ open class RoutingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "messengerType": messengerType?.rawValue, 
+            "name": name, 
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
@@ -3003,6 +3007,7 @@ open class RoutingAPI {
     "id" : "id",
     "type" : "TEAM"
   } ],
+  "scoringMethod" : "TimestampAndPriority",
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -5057,6 +5062,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5199,6 +5205,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5443,6 +5450,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5585,6 +5593,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5812,6 +5821,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5954,6 +5964,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -6174,6 +6185,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -6316,6 +6328,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -8009,6 +8022,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -8151,6 +8165,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -10635,6 +10650,7 @@ open class RoutingAPI {
     "id" : "id",
     "type" : "TEAM"
   } ],
+  "scoringMethod" : "TimestampAndPriority",
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -10842,6 +10858,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -10984,6 +11001,7 @@ open class RoutingAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -11371,10 +11389,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11397,10 +11415,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11443,10 +11461,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11469,10 +11487,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11520,10 +11538,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11546,10 +11564,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11592,10 +11610,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11618,10 +11636,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12569,6 +12587,7 @@ open class RoutingAPI {
     "id" : "id",
     "type" : "TEAM"
   } ],
+  "scoringMethod" : "TimestampAndPriority",
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -12696,9 +12715,9 @@ open class RoutingAPI {
      - parameter body: (body) Create skill group 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingSkillgroups(body: SkillGroup, completion: @escaping ((_ data: SkillGroup?,_ error: Error?) -> Void)) {
+    open class func postRoutingSkillgroups(body: SkillGroupWithMemberDivisions, completion: @escaping ((_ data: SkillGroupWithMemberDivisions?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingSkillgroupsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<SkillGroup>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SkillGroupWithMemberDivisions>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -12777,21 +12796,22 @@ open class RoutingAPI {
       "proficiency" : 5
     } ],
     "operation" : "And"
-  } ]
+  } ],
+  "memberDivisions" : [ "memberDivisions", "memberDivisions" ]
 }, statusCode=200}]
      
      - parameter body: (body) Create skill group 
 
-     - returns: RequestBuilder<SkillGroup> 
+     - returns: RequestBuilder<SkillGroupWithMemberDivisions> 
      */
-    open class func postRoutingSkillgroupsWithRequestBuilder(body: SkillGroup) -> RequestBuilder<SkillGroup> {        
+    open class func postRoutingSkillgroupsWithRequestBuilder(body: SkillGroupWithMemberDivisions) -> RequestBuilder<SkillGroupWithMemberDivisions> {        
         let path = "/api/v2/routing/skillgroups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<SkillGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SkillGroupWithMemberDivisions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -13338,7 +13358,7 @@ open class RoutingAPI {
      - parameter body: (body) Recipient 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingMessageRecipient(recipientId: String, body: Recipient, completion: @escaping ((_ data: Recipient?,_ error: Error?) -> Void)) {
+    open class func putRoutingMessageRecipient(recipientId: String, body: RecipientRequest, completion: @escaping ((_ data: Recipient?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingMessageRecipientWithRequestBuilder(recipientId: recipientId, body: body)
         requestBuilder.execute { (response: Response<Recipient>?, error) -> Void in
             do {
@@ -13379,7 +13399,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<Recipient> 
      */
-    open class func putRoutingMessageRecipientWithRequestBuilder(recipientId: String, body: Recipient) -> RequestBuilder<Recipient> {        
+    open class func putRoutingMessageRecipientWithRequestBuilder(recipientId: String, body: RecipientRequest) -> RequestBuilder<Recipient> {        
         var path = "/api/v2/routing/message/recipients/{recipientId}"
         let recipientIdPreEscape = "\(recipientId)"
         let recipientIdPostEscape = recipientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13514,6 +13534,7 @@ open class RoutingAPI {
     "id" : "id",
     "type" : "TEAM"
   } ],
+  "scoringMethod" : "TimestampAndPriority",
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",

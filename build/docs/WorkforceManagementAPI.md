@@ -58,6 +58,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#getWorkforcemanagementCalendarUrlIcs) | Get existing calendar link for the current user |
 | [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
 | [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
+| [**getWorkforcemanagementIntegrationsHris**](WorkforceManagementAPI.html#getWorkforcemanagementIntegrationsHris) | Get integrations |
+| [**getWorkforcemanagementIntegrationsHrisTimeofftypesJob**](WorkforceManagementAPI.html#getWorkforcemanagementIntegrationsHrisTimeofftypesJob) | Query the results of time off types job |
 | [**getWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunit) | Get management unit |
 | [**getWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitActivitycodes) | Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes |
 | [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
@@ -86,6 +88,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI.html#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
 | [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
 | [**getWorkforcemanagementShrinkageJob**](WorkforceManagementAPI.html#getWorkforcemanagementShrinkageJob) | Request to fetch the status of the historical shrinkage query |
+| [**getWorkforcemanagementTimeoffbalanceJob**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffbalanceJob) | Query the results of time off types job |
 | [**getWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequest) | Get a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequestWaitlistpositions) | Get the daily waitlist positions of a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequests) | Get a list of time off requests for the current user |
@@ -98,6 +101,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunit) | Update the requested management unit |
 | [**patchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeofflimit) | Updates a time off limit object. |
 | [**patchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeoffplan) | Updates a time off plan |
+| [**patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | Set integration status for a time off request. |
 | [**patchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitUserTimeoffrequest) | Update a time off request |
 | [**patchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWeekShifttrade) | Updates a shift trade. This route can only be called by the initiating agent |
 | [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
@@ -109,6 +113,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
 | [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
 | [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
+| [**postWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsIntegrationsHrisQuery) | Query integrations for agents |
 | [**postWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsMePossibleworkshifts) | Get agent possible work shifts for requested time frame |
 | [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI.html#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
 | [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
@@ -134,6 +139,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#postWorkforcemanagementCalendarUrlIcs) | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
 | [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
+| [**postWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementAPI.html#postWorkforcemanagementIntegrationsHriTimeofftypesJobs) | Get list of time off types configured in integration |
 | [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
 | [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
@@ -143,10 +149,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunitTimeofflimitsValuesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeofflimitsValuesQuery) | Retrieves time off limit related values based on a given set of filters. |
 | [**postWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffplans) | Creates a new time off plan |
 | [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of time off requests |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Fetches time off requests matching the conditions specified in the request body |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery) | Retrieves daily waitlist position for a list of time off requests |
 | [**postWorkforcemanagementManagementunitUserTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffbalanceJobs) | Query time off balances for a given user for specified activity code and dates |
 | [**postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs) | Query time off balances for dates spanned by a given time off request |
+| [**postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate) | Estimates available time off for an agent |
 | [**postWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradeMatch) | Matches a shift trade. This route can only be called by the receiving agent |
 | [**postWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttrades) | Adds a shift trade |
 | [**postWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesSearch) | Searches for potential shift trade matches for the current agent |
@@ -161,8 +169,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementSchedules) | Get published schedule for the current user |
 | [**postWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementTeamAdherenceHistorical) | Request a teams historical adherence report |
 | [**postWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementAPI.html#postWorkforcemanagementTeamShrinkageJobs) | Request a historical shrinkage report |
+| [**postWorkforcemanagementTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffbalanceJobs) | Query time off balances for the current user for specified activity code and dates |
 | [**postWorkforcemanagementTimeofflimitsAvailableQuery**](WorkforceManagementAPI.html#postWorkforcemanagementTimeofflimitsAvailableQuery) | Queries available time off for the current user |
 | [**postWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequests) | Create a time off request for the current user |
+| [**postWorkforcemanagementTimeoffrequestsEstimate**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequestsEstimate) | Estimates available time off for current user |
+| [**postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of current user time off requests |
+| [**putWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementAPI.html#putWorkforcemanagementAgentIntegrationsHris) | Update integrations for agent |
 | [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI.html#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
 {: class="table-striped"}
 
@@ -2068,7 +2080,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulingRuns(business
 
 
 
-> [ServiceGoalTemplate](ServiceGoalTemplate.html) getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId)
+> [ServiceGoalTemplate](ServiceGoalTemplate.html) getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId, expand)
 
 Get a service goal template
 
@@ -2090,9 +2102,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit.
 let serviceGoalTemplateId: String = "" // The ID of a service goal template to fetch
+let expand: [String] = [""] // Include to access additional data on the service goal template
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2109,6 +2122,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplate(bus
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **serviceGoalTemplateId** | **String**| The ID of a service goal template to fetch | |
+| **expand** | [**[String]**](String.html)| Include to access additional data on the service goal template | [optional]<br />**Values**: impactoverride ("impactOverride") |
 {: class="table-striped"}
 
 
@@ -2122,7 +2136,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplate(bus
 
 
 
-> [ServiceGoalTemplateList](ServiceGoalTemplateList.html) getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId)
+> [ServiceGoalTemplateList](ServiceGoalTemplateList.html) getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId, expand)
 
 Gets list of service goal templates
 
@@ -2145,9 +2159,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit.
+let expand: [String] = [""] // Include to access additional data on the service goal template
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: businessUnitId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: businessUnitId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2163,6 +2178,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(bu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
+| **expand** | [**[String]**](String.html)| Include to access additional data on the service goal template | [optional]<br />**Values**: impactoverride ("impactOverride") |
 {: class="table-striped"}
 
 
@@ -3116,6 +3132,105 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**HistoricalImportStatusListing**](HistoricalImportStatusListing.html)
+
+<a name="getWorkforcemanagementIntegrationsHris"></a>
+
+# **getWorkforcemanagementIntegrationsHris**
+
+
+
+> [WfmIntegrationListing](WfmIntegrationListing.html) getWorkforcemanagementIntegrationsHris()
+
+Get integrations
+
+
+
+Wraps GET /api/v2/workforcemanagement/integrations/hris  
+
+Requires ANY permissions: 
+
+* wfm:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementIntegrationsHris() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementIntegrationsHris was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**WfmIntegrationListing**](WfmIntegrationListing.html)
+
+<a name="getWorkforcemanagementIntegrationsHrisTimeofftypesJob"></a>
+
+# **getWorkforcemanagementIntegrationsHrisTimeofftypesJob**
+
+
+
+> [HrisTimeOffTypesJobResponse](HrisTimeOffTypesJobResponse.html) getWorkforcemanagementIntegrationsHrisTimeofftypesJob(jobId)
+
+Query the results of time off types job
+
+
+
+Wraps GET /api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of the job.
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementIntegrationsHrisTimeofftypesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementIntegrationsHrisTimeofftypesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**HrisTimeOffTypesJobResponse**](HrisTimeOffTypesJobResponse.html)
 
 <a name="getWorkforcemanagementManagementunit"></a>
 
@@ -4763,6 +4878,57 @@ WorkforceManagementAPI.getWorkforcemanagementShrinkageJob(jobId: jobId) { (respo
 
 [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
+<a name="getWorkforcemanagementTimeoffbalanceJob"></a>
+
+# **getWorkforcemanagementTimeoffbalanceJob**
+
+
+
+> [TimeOffBalanceJobResponse](TimeOffBalanceJobResponse.html) getWorkforcemanagementTimeoffbalanceJob(jobId)
+
+Query the results of time off types job
+
+
+
+Wraps GET /api/v2/workforcemanagement/timeoffbalance/jobs/{jobId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of the job.
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementTimeoffbalanceJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementTimeoffbalanceJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TimeOffBalanceJobResponse**](TimeOffBalanceJobResponse.html)
+
 <a name="getWorkforcemanagementTimeoffrequest"></a>
 
 # **getWorkforcemanagementTimeoffrequest**
@@ -5422,6 +5588,64 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffplan(managem
 
 [**TimeOffPlan**](TimeOffPlan.html)
 
+<a name="patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus"></a>
+
+# **patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**
+
+
+
+> [UserTimeOffIntegrationStatusResponse](UserTimeOffIntegrationStatusResponse.html) patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId, timeOffRequestId, userId, body)
+
+Set integration status for a time off request.
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus  
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit.
+let timeOffRequestId: String = "" // The ID of the time off request.
+let userId: String = "" // The ID of user to whom the time off request belongs.
+let body: SetTimeOffIntegrationStatusRequest = new SetTimeOffIntegrationStatusRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId: managementUnitId, timeOffRequestId: timeOffRequestId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit. | |
+| **timeOffRequestId** | **String**| The ID of the time off request. | |
+| **userId** | **String**| The ID of user to whom the time off request belongs. | |
+| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse.html)
+
 <a name="patchWorkforcemanagementManagementunitUserTimeoffrequest"></a>
 
 # **patchWorkforcemanagementManagementunitUserTimeoffrequest**
@@ -6029,6 +6253,58 @@ WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanationsQuery(ag
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
+
+<a name="postWorkforcemanagementAgentsIntegrationsHrisQuery"></a>
+
+# **postWorkforcemanagementAgentsIntegrationsHrisQuery**
+
+
+
+> [AgentsIntegrationsListing](AgentsIntegrationsListing.html) postWorkforcemanagementAgentsIntegrationsHrisQuery(body)
+
+Query integrations for agents
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents/integrations/hris/query  
+
+Requires ANY permissions: 
+
+* wfm:agent:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: QueryAgentsIntegrationsRequest = new QueryAgentsIntegrationsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgentsIntegrationsHrisQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgentsIntegrationsHrisQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentsIntegrationsListing**](AgentsIntegrationsListing.html)
 
 <a name="postWorkforcemanagementAgentsMePossibleworkshifts"></a>
 
@@ -7436,6 +7712,58 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body)
 
 `nil` (empty response body)
 
+<a name="postWorkforcemanagementIntegrationsHriTimeofftypesJobs"></a>
+
+# **postWorkforcemanagementIntegrationsHriTimeofftypesJobs**
+
+
+
+> [HrisTimeOffTypesResponse](HrisTimeOffTypesResponse.html) postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId)
+
+Get list of time off types configured in integration
+
+
+
+Wraps POST /api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs  
+
+Requires ANY permissions: 
+
+* wfm:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let hrisIntegrationId: String = "" // The ID of the HRIS integration for which time off types are queried.
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId: hrisIntegrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementIntegrationsHriTimeofftypesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **hrisIntegrationId** | **String**| The ID of the HRIS integration for which time off types are queried. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse.html)
+
 <a name="postWorkforcemanagementManagementunitAgentschedulesSearch"></a>
 
 # **postWorkforcemanagementManagementunitAgentschedulesSearch**
@@ -7936,6 +8264,60 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 
 [**TimeOffRequestList**](TimeOffRequestList.html)
 
+<a name="postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery"></a>
+
+# **postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**
+
+
+
+> [UserTimeOffIntegrationStatusResponseListing](UserTimeOffIntegrationStatusResponseListing.html) postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId, body)
+
+Retrieves integration statuses for a list of time off requests
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query  
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit.
+let body: QueryTimeOffIntegrationStatusRequest = new QueryTimeOffIntegrationStatusRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit. | |
+| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing.html)
+
 <a name="postWorkforcemanagementManagementunitTimeoffrequestsQuery"></a>
 
 # **postWorkforcemanagementManagementunitTimeoffrequestsQuery**
@@ -8157,6 +8539,62 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestTi
 ### Return type
 
 [**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
+
+<a name="postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate"></a>
+
+# **postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate**
+
+
+
+> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse.html) postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId, userId, body)
+
+Estimates available time off for an agent
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate  
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit
+let userId: String = "" // The id of the user for whom the time off request estimate is requested
+let body: EstimateAvailableTimeOffRequest = new EstimateAvailableTimeOffRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: managementUnitId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit | |
+| **userId** | **String**| The id of the user for whom the time off request estimate is requested | |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html)
 
 <a name="postWorkforcemanagementManagementunitWeekShifttradeMatch"></a>
 
@@ -8939,6 +9377,58 @@ WorkforceManagementAPI.postWorkforcemanagementTeamShrinkageJobs(teamId: teamId, 
 
 [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
+<a name="postWorkforcemanagementTimeoffbalanceJobs"></a>
+
+# **postWorkforcemanagementTimeoffbalanceJobs**
+
+
+
+> [TimeOffBalancesResponse](TimeOffBalancesResponse.html) postWorkforcemanagementTimeoffbalanceJobs(body)
+
+Query time off balances for the current user for specified activity code and dates
+
+
+
+Wraps POST /api/v2/workforcemanagement/timeoffbalance/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentTimeOffRequest:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TimeOffBalanceRequest = new TimeOffBalanceRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementTimeoffbalanceJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementTimeoffbalanceJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest.html)| The request body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
+
 <a name="postWorkforcemanagementTimeofflimitsAvailableQuery"></a>
 
 # **postWorkforcemanagementTimeofflimitsAvailableQuery**
@@ -9042,6 +9532,164 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequests(body: body) { (res
 ### Return type
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse.html)
+
+<a name="postWorkforcemanagementTimeoffrequestsEstimate"></a>
+
+# **postWorkforcemanagementTimeoffrequestsEstimate**
+
+
+
+> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse.html) postWorkforcemanagementTimeoffrequestsEstimate(body)
+
+Estimates available time off for current user
+
+
+
+Wraps POST /api/v2/workforcemanagement/timeoffrequests/estimate  
+
+Requires ANY permissions: 
+
+* wfm:agentTimeOffRequest:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: EstimateAvailableTimeOffRequest = new EstimateAvailableTimeOffRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html)
+
+<a name="postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery"></a>
+
+# **postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**
+
+
+
+> [TimeOffIntegrationStatusResponseListing](TimeOffIntegrationStatusResponseListing.html) postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body)
+
+Retrieves integration statuses for a list of current user time off requests
+
+
+
+Wraps POST /api/v2/workforcemanagement/timeoffrequests/integrationstatus/query  
+
+Requires ANY permissions: 
+
+* wfm:agentTimeOffRequest:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CurrentUserTimeOffIntegrationStatusRequest = new CurrentUserTimeOffIntegrationStatusRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing.html)
+
+<a name="putWorkforcemanagementAgentIntegrationsHris"></a>
+
+# **putWorkforcemanagementAgentIntegrationsHris**
+
+
+
+> [AgentIntegrationsResponse](AgentIntegrationsResponse.html) putWorkforcemanagementAgentIntegrationsHris(agentId, body)
+
+Update integrations for agent
+
+
+
+Wraps PUT /api/v2/workforcemanagement/agents/{agentId}/integrations/hris  
+
+Requires ANY permissions: 
+
+* wfm:agent:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent
+let body: AgentIntegrationsRequest = new AgentIntegrationsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.putWorkforcemanagementAgentIntegrationsHris(agentId: agentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.putWorkforcemanagementAgentIntegrationsHris was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent | |
+| **body** | [**AgentIntegrationsRequest**](AgentIntegrationsRequest.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentIntegrationsResponse**](AgentIntegrationsResponse.html)
 
 <a name="putWorkforcemanagementManagementunitTimeofflimitValues"></a>
 

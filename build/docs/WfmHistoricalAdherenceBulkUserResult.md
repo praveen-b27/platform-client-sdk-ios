@@ -12,6 +12,7 @@ title: WfmHistoricalAdherenceBulkUserResult
 | **conformancePercentage** | **Double** | Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period. | [optional] |
 | **impact** | **String** | The impact of the current adherence state for this user | [optional] |
 | **exceptionInfo** | [**[HistoricalAdherenceExceptionInfo]**](HistoricalAdherenceExceptionInfo.html) | List of adherence exceptions for this user | [optional] |
+| **actuals** | [**[HistoricalAdherenceActuals]**](HistoricalAdherenceActuals.html) | List of adherence actuals for this user | [optional] |
 | **dayMetrics** | [**[WfmHistoricalAdherenceBulkUserDayMetrics]**](WfmHistoricalAdherenceBulkUserDayMetrics.html) | Adherence and conformance metrics for days in query range | [optional] |
 {: class="table table-striped"}
 

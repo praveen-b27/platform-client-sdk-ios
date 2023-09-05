@@ -27,15 +27,18 @@ public class WfmHistoricalAdherenceBulkUserResult: Codable {
     public var impact: Impact?
     /** List of adherence exceptions for this user */
     public var exceptionInfo: [HistoricalAdherenceExceptionInfo]?
+    /** List of adherence actuals for this user */
+    public var actuals: [HistoricalAdherenceActuals]?
     /** Adherence and conformance metrics for days in query range */
     public var dayMetrics: [WfmHistoricalAdherenceBulkUserDayMetrics]?
 
-    public init(userId: String?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, dayMetrics: [WfmHistoricalAdherenceBulkUserDayMetrics]?) {
+    public init(userId: String?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, actuals: [HistoricalAdherenceActuals]?, dayMetrics: [WfmHistoricalAdherenceBulkUserDayMetrics]?) {
         self.userId = userId
         self.adherencePercentage = adherencePercentage
         self.conformancePercentage = conformancePercentage
         self.impact = impact
         self.exceptionInfo = exceptionInfo
+        self.actuals = actuals
         self.dayMetrics = dayMetrics
     }
 

@@ -32,8 +32,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectAPI.html#getArchitectDependencytrackingUpdatedresourceconsumers) | Get Dependency Tracking objects that depend on updated resources |
 | [**getArchitectEmergencygroup**](ArchitectAPI.html#getArchitectEmergencygroup) | Gets a emergency group by ID |
 | [**getArchitectEmergencygroups**](ArchitectAPI.html#getArchitectEmergencygroups) | Get a list of emergency groups. |
+| [**getArchitectEmergencygroupsDivisionviews**](ArchitectAPI.html#getArchitectEmergencygroupsDivisionviews) | Get a pageable list of basic emergency group objects filterable by query parameters. |
 | [**getArchitectIvr**](ArchitectAPI.html#getArchitectIvr) | Get an IVR config. |
 | [**getArchitectIvrs**](ArchitectAPI.html#getArchitectIvrs) | Get IVR configs. |
+| [**getArchitectIvrsDivisionviews**](ArchitectAPI.html#getArchitectIvrsDivisionviews) | Get a pageable list of basic ivr configuration information objects filterable by query parameters. |
 | [**getArchitectPrompt**](ArchitectAPI.html#getArchitectPrompt) | Get specified user prompt |
 | [**getArchitectPromptHistoryHistoryId**](ArchitectAPI.html#getArchitectPromptHistoryHistoryId) | Get generated prompt history |
 | [**getArchitectPromptResource**](ArchitectAPI.html#getArchitectPromptResource) | Get specified user prompt resource |
@@ -42,7 +44,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getArchitectSchedule**](ArchitectAPI.html#getArchitectSchedule) | Get a schedule by ID |
 | [**getArchitectSchedulegroup**](ArchitectAPI.html#getArchitectSchedulegroup) | Gets a schedule group by ID |
 | [**getArchitectSchedulegroups**](ArchitectAPI.html#getArchitectSchedulegroups) | Get a list of schedule groups. |
+| [**getArchitectSchedulegroupsDivisionviews**](ArchitectAPI.html#getArchitectSchedulegroupsDivisionviews) | Get a pageable list of basic schedule group configuration information objects filterable by query parameters. |
 | [**getArchitectSchedules**](ArchitectAPI.html#getArchitectSchedules) | Get a list of schedules. |
+| [**getArchitectSchedulesDivisionviews**](ArchitectAPI.html#getArchitectSchedulesDivisionviews) | Get a pageable list of basic schedule configuration information objects filterable by query parameters. |
 | [**getArchitectSystemprompt**](ArchitectAPI.html#getArchitectSystemprompt) | Get a system prompt |
 | [**getArchitectSystempromptHistoryHistoryId**](ArchitectAPI.html#getArchitectSystempromptHistoryHistoryId) | Get generated prompt history |
 | [**getArchitectSystempromptResource**](ArchitectAPI.html#getArchitectSystempromptResource) | Get a system prompt resource. |
@@ -1502,6 +1506,72 @@ ArchitectAPI.getArchitectEmergencygroups(pageNumber: pageNumber, pageSize: pageS
 
 [**EmergencyGroupListing**](EmergencyGroupListing.html)
 
+<a name="getArchitectEmergencygroupsDivisionviews"></a>
+
+# **getArchitectEmergencygroupsDivisionviews**
+
+
+
+> [EmergencyGroupDivisionViewEntityListing](EmergencyGroupDivisionViewEntityListing.html) getArchitectEmergencygroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic emergency group objects filterable by query parameters.
+
+This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+
+
+Wraps GET /api/v2/architect/emergencygroups/divisionviews  
+
+Requires ALL permissions: 
+
+* routing:emergencyGroup:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID of the Emergency Groups to filter by.
+let name: String = "" // Name of the Emergency Group to filter by.
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
+
+// Code example
+ArchitectAPI.getArchitectEmergencygroupsDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectEmergencygroupsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **_id** | [**[String]**](String.html)| ID of the Emergency Groups to filter by. | [optional] |
+| **name** | **String**| Name of the Emergency Group to filter by. | [optional] |
+| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing.html)
+
 <a name="getArchitectIvr"></a>
 
 # **getArchitectIvr**
@@ -1617,6 +1687,70 @@ ArchitectAPI.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy
 ### Return type
 
 [**IVREntityListing**](IVREntityListing.html)
+
+<a name="getArchitectIvrsDivisionviews"></a>
+
+# **getArchitectIvrsDivisionviews**
+
+
+
+> [IVRDivisionViewEntityListing](IVRDivisionViewEntityListing.html) getArchitectIvrsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+
+
+
+Wraps GET /api/v2/architect/ivrs/divisionviews  
+
+Requires ALL permissions: 
+
+* routing:callRoute:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID of the IVR to filter by.
+let name: String = "" // Name of the IVR to filter by.
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
+
+// Code example
+ArchitectAPI.getArchitectIvrsDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectIvrsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **_id** | [**[String]**](String.html)| ID of the IVR to filter by. | [optional] |
+| **name** | **String**| Name of the IVR to filter by. | [optional] |
+| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**IVRDivisionViewEntityListing**](IVRDivisionViewEntityListing.html)
 
 <a name="getArchitectPrompt"></a>
 
@@ -2080,6 +2214,70 @@ ArchitectAPI.getArchitectSchedulegroups(pageNumber: pageNumber, pageSize: pageSi
 
 [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html)
 
+<a name="getArchitectSchedulegroupsDivisionviews"></a>
+
+# **getArchitectSchedulegroupsDivisionviews**
+
+
+
+> [ScheduleGroupDivisionViewEntityListing](ScheduleGroupDivisionViewEntityListing.html) getArchitectSchedulegroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+
+
+
+Wraps GET /api/v2/architect/schedulegroups/divisionviews  
+
+Requires ALL permissions: 
+
+* routing:scheduleGroup:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID of the schedule group to filter by.
+let name: String = "" // Name of the schedule group to filter by.
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
+
+// Code example
+ArchitectAPI.getArchitectSchedulegroupsDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectSchedulegroupsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **_id** | [**[String]**](String.html)| ID of the schedule group to filter by. | [optional] |
+| **name** | **String**| Name of the schedule group to filter by. | [optional] |
+| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScheduleGroupDivisionViewEntityListing**](ScheduleGroupDivisionViewEntityListing.html)
+
 <a name="getArchitectSchedules"></a>
 
 # **getArchitectSchedules**
@@ -2141,6 +2339,70 @@ ArchitectAPI.getArchitectSchedules(pageNumber: pageNumber, pageSize: pageSize, s
 ### Return type
 
 [**ScheduleEntityListing**](ScheduleEntityListing.html)
+
+<a name="getArchitectSchedulesDivisionviews"></a>
+
+# **getArchitectSchedulesDivisionviews**
+
+
+
+> [ScheduleDivisionViewEntityListing](ScheduleDivisionViewEntityListing.html) getArchitectSchedulesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+
+
+
+Wraps GET /api/v2/architect/schedules/divisionviews  
+
+Requires ALL permissions: 
+
+* routing:schedule:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID of the schedule group to filter by.
+let name: String = "" // Name of the schedule group to filter by.
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
+
+// Code example
+ArchitectAPI.getArchitectSchedulesDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectSchedulesDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **_id** | [**[String]**](String.html)| ID of the schedule group to filter by. | [optional] |
+| **name** | **String**| Name of the schedule group to filter by. | [optional] |
+| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScheduleDivisionViewEntityListing**](ScheduleDivisionViewEntityListing.html)
 
 <a name="getArchitectSystemprompt"></a>
 

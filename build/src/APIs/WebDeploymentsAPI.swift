@@ -668,14 +668,16 @@ open class WebDeploymentsAPI {
     }
 
     
+    
     /**
      Get a deployment
      
      - parameter deploymentId: (path) The deployment ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected.  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsDeployment(deploymentId: String, completion: @escaping ((_ data: WebDeployment?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWebdeploymentsDeploymentWithRequestBuilder(deploymentId: deploymentId)
+    open class func getWebdeploymentsDeployment(deploymentId: String, expand: [String]? = nil, completion: @escaping ((_ data: WebDeployment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentWithRequestBuilder(deploymentId: deploymentId, expand: expand)
         requestBuilder.execute { (response: Response<WebDeployment>?, error) -> Void in
             do {
                 if let e = error {
@@ -708,6 +710,7 @@ open class WebDeploymentsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
+  "supportedContent" : "{}",
   "lastModifiedUser" : "{}",
   "id" : "id",
   "flow" : "{}",
@@ -715,10 +718,11 @@ open class WebDeploymentsAPI {
 }, statusCode=200}]
      
      - parameter deploymentId: (path) The deployment ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected.  (optional)
 
      - returns: RequestBuilder<WebDeployment> 
      */
-    open class func getWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WebDeployment> {        
+    open class func getWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String, expand: [String]? = nil) -> RequestBuilder<WebDeployment> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -726,7 +730,10 @@ open class WebDeploymentsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<WebDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -798,15 +805,17 @@ open class WebDeploymentsAPI {
 
     
     
+    
     /**
      Get active configuration for a given deployment
      
      - parameter deploymentId: (path) The deployment ID 
      - parameter type: (query) Get active configuration on a deployment (optional)
+     - parameter expand: (query) Expand instructions for the return value (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsDeploymentConfigurations(deploymentId: String, type: String? = nil, completion: @escaping ((_ data: WebDeploymentActiveConfigurationOnDeployment?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWebdeploymentsDeploymentConfigurationsWithRequestBuilder(deploymentId: deploymentId, type: type)
+    open class func getWebdeploymentsDeploymentConfigurations(deploymentId: String, type: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: WebDeploymentActiveConfigurationOnDeployment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentConfigurationsWithRequestBuilder(deploymentId: deploymentId, type: type, expand: expand)
         requestBuilder.execute { (response: Response<WebDeploymentActiveConfigurationOnDeployment>?, error) -> Void in
             do {
                 if let e = error {
@@ -836,10 +845,11 @@ open class WebDeploymentsAPI {
      
      - parameter deploymentId: (path) The deployment ID 
      - parameter type: (query) Get active configuration on a deployment (optional)
+     - parameter expand: (query) Expand instructions for the return value (optional)
 
      - returns: RequestBuilder<WebDeploymentActiveConfigurationOnDeployment> 
      */
-    open class func getWebdeploymentsDeploymentConfigurationsWithRequestBuilder(deploymentId: String, type: String? = nil) -> RequestBuilder<WebDeploymentActiveConfigurationOnDeployment> {        
+    open class func getWebdeploymentsDeploymentConfigurationsWithRequestBuilder(deploymentId: String, type: String? = nil, expand: [String]? = nil) -> RequestBuilder<WebDeploymentActiveConfigurationOnDeployment> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}/configurations"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -849,7 +859,8 @@ open class WebDeploymentsAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "type": type
+            "type": type, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<WebDeploymentActiveConfigurationOnDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -900,6 +911,7 @@ open class WebDeploymentsAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
+    "supportedContent" : "{}",
     "lastModifiedUser" : "{}",
     "id" : "id",
     "flow" : "{}",
@@ -914,6 +926,7 @@ open class WebDeploymentsAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
+    "supportedContent" : "{}",
     "lastModifiedUser" : "{}",
     "id" : "id",
     "flow" : "{}",
@@ -1165,6 +1178,7 @@ open class WebDeploymentsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
+  "supportedContent" : "{}",
   "lastModifiedUser" : "{}",
   "id" : "id",
   "flow" : "{}",
@@ -1423,6 +1437,7 @@ open class WebDeploymentsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
+  "supportedContent" : "{}",
   "lastModifiedUser" : "{}",
   "id" : "id",
   "flow" : "{}",

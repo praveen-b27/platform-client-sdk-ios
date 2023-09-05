@@ -48,6 +48,10 @@ public class TimeOffRequest: Codable {
     public var fullDayManagementUnitDates: [String]?
     /** The daily duration of this time off request in minutes */
     public var dailyDurationMinutes: Int?
+    /** Daily durations for each day of this time off request in minutes */
+    public var durationMinutes: [Int]?
+    /** Payable minutes for each day of this time off request */
+    public var payableMinutes: [Int]?
     /** Notes about the time off request */
     public var notes: String?
     /** The user who submitted this time off request */
@@ -58,12 +62,14 @@ public class TimeOffRequest: Codable {
     public var reviewedBy: UserReference?
     /** The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var reviewedDate: Date?
+    /** The sync version of this time off request for which the scheduled activity is associated */
+    public var syncVersion: Int?
     /** The version metadata of the time off request */
     public var metadata: WfmVersionedEntityMetadata?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, syncVersion: Int?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         self._id = _id
         self.user = user
         self.isFullDayRequest = isFullDayRequest
@@ -75,11 +81,14 @@ public class TimeOffRequest: Codable {
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
         self.dailyDurationMinutes = dailyDurationMinutes
+        self.durationMinutes = durationMinutes
+        self.payableMinutes = payableMinutes
         self.notes = notes
         self.submittedBy = submittedBy
         self.submittedDate = submittedDate
         self.reviewedBy = reviewedBy
         self.reviewedDate = reviewedDate
+        self.syncVersion = syncVersion
         self.metadata = metadata
         self.selfUri = selfUri
     }
@@ -96,11 +105,14 @@ public class TimeOffRequest: Codable {
         case partialDayStartDateTimes
         case fullDayManagementUnitDates
         case dailyDurationMinutes
+        case durationMinutes
+        case payableMinutes
         case notes
         case submittedBy
         case submittedDate
         case reviewedBy
         case reviewedDate
+        case syncVersion
         case metadata
         case selfUri
     }

@@ -21,13 +21,16 @@ public class WfmHistoricalAdherenceBulkItem: Codable {
     public var userIds: [String]?
     /** Whether user exceptions should be returned as part of the results. Defaults to false if not specified. */
     public var includeExceptions: Bool?
+    /** Whether user actual activities should be returned as part of the results. Defaults to false if not specified. */
+    public var includeActuals: Bool?
 
-    public init(managementUnitId: String?, startDate: Date?, endDate: Date?, userIds: [String]?, includeExceptions: Bool?) {
+    public init(managementUnitId: String?, startDate: Date?, endDate: Date?, userIds: [String]?, includeExceptions: Bool?, includeActuals: Bool?) {
         self.managementUnitId = managementUnitId
         self.startDate = startDate
         self.endDate = endDate
         self.userIds = userIds
         self.includeExceptions = includeExceptions
+        self.includeActuals = includeActuals
     }
 
 

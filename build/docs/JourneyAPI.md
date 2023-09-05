@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneyOutcome**](JourneyAPI.html#deleteJourneyOutcome) | Delete an outcome. |
 | [**deleteJourneyOutcomesPredictor**](JourneyAPI.html#deleteJourneyOutcomesPredictor) | Delete an outcome predictor. |
 | [**deleteJourneySegment**](JourneyAPI.html#deleteJourneySegment) | Delete a segment. |
+| [**getExternalcontactsContactJourneySessions**](JourneyAPI.html#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getJourneyActionmap**](JourneyAPI.html#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI.html#getJourneyActionmaps) | Retrieve all action maps. |
 | [**getJourneyActionmapsEstimatesJob**](JourneyAPI.html#getJourneyActionmapsEstimatesJob) | Get status of job. |
@@ -298,6 +299,64 @@ JourneyAPI.deleteJourneySegment(segmentId: segmentId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getExternalcontactsContactJourneySessions"></a>
+
+# **getExternalcontactsContactJourneySessions**
+
+
+
+> [SessionListing](SessionListing.html) getExternalcontactsContactJourneySessions(contactId, pageSize, after, includeMerged)
+
+Retrieve all sessions for a given external contact.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/{contactId}/journey/sessions  
+
+Requires ANY permissions: 
+
+* externalContacts:session:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let includeMerged: Bool = true // Indicates whether to return sessions from all external contacts in the merge-set of the given one.
+
+// Code example
+JourneyAPI.getExternalcontactsContactJourneySessions(contactId: contactId, pageSize: pageSize, after: after, includeMerged: includeMerged) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getExternalcontactsContactJourneySessions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **includeMerged** | **Bool**| Indicates whether to return sessions from all external contacts in the merge-set of the given one. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SessionListing**](SessionListing.html)
 
 <a name="getJourneyActionmap"></a>
 

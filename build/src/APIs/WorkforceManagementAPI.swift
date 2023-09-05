@@ -2183,15 +2183,17 @@ open class WorkforceManagementAPI {
 
     
     
+    
     /**
      Get a service goal template
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter serviceGoalTemplateId: (path) The ID of a service goal template to fetch 
+     - parameter expand: (query) Include to access additional data on the service goal template (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId)
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, expand: [String]? = nil, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId, expand: expand)
         requestBuilder.execute { (response: Response<ServiceGoalTemplate>?, error) -> Void in
             do {
                 if let e = error {
@@ -2221,15 +2223,17 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "averageSpeedOfAnswer" : "{}",
   "id" : "id",
-  "serviceLevel" : "{}"
+  "serviceLevel" : "{}",
+  "impactOverride" : "{}"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter serviceGoalTemplateId: (path) The ID of a service goal template to fetch 
+     - parameter expand: (query) Include to access additional data on the service goal template (optional)
 
      - returns: RequestBuilder<ServiceGoalTemplate> 
      */
-    open class func getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<ServiceGoalTemplate> {        
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String, expand: [String]? = nil) -> RequestBuilder<ServiceGoalTemplate> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2240,7 +2244,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -2248,14 +2255,16 @@ open class WorkforceManagementAPI {
     }
 
     
+    
     /**
      Gets list of service goal templates
      
      - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter expand: (query) Include to access additional data on the service goal template (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: String, completion: @escaping ((_ data: ServiceGoalTemplateList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: businessUnitId)
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: ServiceGoalTemplateList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: businessUnitId, expand: expand)
         requestBuilder.execute { (response: Response<ServiceGoalTemplateList>?, error) -> Void in
             do {
                 if let e = error {
@@ -2286,7 +2295,8 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "averageSpeedOfAnswer" : "{}",
     "id" : "id",
-    "serviceLevel" : "{}"
+    "serviceLevel" : "{}",
+    "impactOverride" : "{}"
   }, {
     "metadata" : "{}",
     "abandonRate" : "{}",
@@ -2294,15 +2304,17 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "averageSpeedOfAnswer" : "{}",
     "id" : "id",
-    "serviceLevel" : "{}"
+    "serviceLevel" : "{}",
+    "impactOverride" : "{}"
   } ]
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter expand: (query) Include to access additional data on the service goal template (optional)
 
      - returns: RequestBuilder<ServiceGoalTemplateList> 
      */
-    open class func getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<ServiceGoalTemplateList> {        
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<ServiceGoalTemplateList> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2310,7 +2322,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<ServiceGoalTemplateList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -2657,17 +2672,21 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     } ],
     "metadata" : "{}",
     "deletes" : "{}",
@@ -2676,21 +2695,25 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -2701,21 +2724,25 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -2726,17 +2753,21 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     } ],
     "metadata" : "{}",
     "deletes" : "{}",
@@ -2745,21 +2776,25 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -2770,21 +2805,25 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -3386,7 +3425,8 @@ open class WorkforceManagementAPI {
       "language" : "{}",
       "queue" : "{}"
     } ]
-  } ]
+  } ],
+  "businessUnitServiceGoalImpact" : "{}"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3873,6 +3913,126 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<HistoricalImportStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
+     Get integrations
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementIntegrationsHris(completion: @escaping ((_ data: WfmIntegrationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementIntegrationsHrisWithRequestBuilder()
+        requestBuilder.execute { (response: Response<WfmIntegrationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get integrations
+     - GET /api/v2/workforcemanagement/integrations/hris
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "active" : true,
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "active" : true,
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<WfmIntegrationListing> 
+     */
+    open class func getWorkforcemanagementIntegrationsHrisWithRequestBuilder() -> RequestBuilder<WfmIntegrationListing> {        
+        let path = "/api/v2/workforcemanagement/integrations/hris"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmIntegrationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Query the results of time off types job
+     
+     - parameter jobId: (path) The ID of the job. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementIntegrationsHrisTimeofftypesJob(jobId: String, completion: @escaping ((_ data: HrisTimeOffTypesJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementIntegrationsHrisTimeofftypesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<HrisTimeOffTypesJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the results of time off types job
+     - GET /api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "secondaryId" : "secondaryId",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "secondaryId" : "secondaryId",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job. 
+
+     - returns: RequestBuilder<HrisTimeOffTypesJobResponse> 
+     */
+    open class func getWorkforcemanagementIntegrationsHrisTimeofftypesJobWithRequestBuilder(jobId: String) -> RequestBuilder<HrisTimeOffTypesJobResponse> {        
+        var path = "/api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HrisTimeOffTypesJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -5342,15 +5502,18 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "submittedBy" : "{}",
+  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "payableMinutes" : [ 1, 1 ],
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
+  "durationMinutes" : [ 6, 6 ],
   "isFullDayRequest" : true,
   "markedAsRead" : true,
   "dailyDurationMinutes" : 0,
@@ -5515,15 +5678,18 @@ open class WorkforceManagementAPI {
   "id" : "id",
   "timeOffRequests" : [ {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -5536,15 +5702,18 @@ open class WorkforceManagementAPI {
     "status" : "PENDING"
   }, {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -7747,6 +7916,73 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Query the results of time off types job
+     
+     - parameter jobId: (path) The ID of the job. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementTimeoffbalanceJob(jobId: String, completion: @escaping ((_ data: TimeOffBalanceJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementTimeoffbalanceJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<TimeOffBalanceJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the results of time off types job
+     - GET /api/v2/workforcemanagement/timeoffbalance/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  }, {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job. 
+
+     - returns: RequestBuilder<TimeOffBalanceJobResponse> 
+     */
+    open class func getWorkforcemanagementTimeoffbalanceJobWithRequestBuilder(jobId: String) -> RequestBuilder<TimeOffBalanceJobResponse> {        
+        var path = "/api/v2/workforcemanagement/timeoffbalance/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TimeOffBalanceJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
      Get a time off request for the current user
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
@@ -7778,15 +8014,18 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "submittedBy" : "{}",
+  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "payableMinutes" : [ 1, 1 ],
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
+  "durationMinutes" : [ 6, 6 ],
   "isFullDayRequest" : true,
   "markedAsRead" : true,
   "dailyDurationMinutes" : 0,
@@ -7919,15 +8158,18 @@ open class WorkforceManagementAPI {
   "id" : "id",
   "timeOffRequests" : [ {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -7940,15 +8182,18 @@ open class WorkforceManagementAPI {
     "status" : "PENDING"
   }, {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -8373,7 +8618,8 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "averageSpeedOfAnswer" : "{}",
   "id" : "id",
-  "serviceLevel" : "{}"
+  "serviceLevel" : "{}",
+  "impactOverride" : "{}"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -8618,6 +8864,77 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Set integration status for a time off request.
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter timeOffRequestId: (path) The ID of the time off request. 
+     - parameter userId: (path) The ID of user to whom the time off request belongs. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId: String, timeOffRequestId: String, userId: String, body: SetTimeOffIntegrationStatusRequest? = nil, completion: @escaping ((_ data: UserTimeOffIntegrationStatusResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatusWithRequestBuilder(managementUnitId: managementUnitId, timeOffRequestId: timeOffRequestId, userId: userId, body: body)
+        requestBuilder.execute { (response: Response<UserTimeOffIntegrationStatusResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set integration status for a time off request.
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "timeOffRequest" : "{}",
+  "integrationStatus" : "Processing",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter timeOffRequestId: (path) The ID of the time off request. 
+     - parameter userId: (path) The ID of user to whom the time off request belongs. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<UserTimeOffIntegrationStatusResponse> 
+     */
+    open class func patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatusWithRequestBuilder(managementUnitId: String, timeOffRequestId: String, userId: String, body: SetTimeOffIntegrationStatusRequest? = nil) -> RequestBuilder<UserTimeOffIntegrationStatusResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffRequestIdPreEscape = "\(timeOffRequestId)"
+        let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserTimeOffIntegrationStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Update a time off request
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -8652,15 +8969,18 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "submittedBy" : "{}",
+  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "payableMinutes" : [ 1, 1 ],
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
+  "durationMinutes" : [ 6, 6 ],
   "isFullDayRequest" : true,
   "markedAsRead" : true,
   "dailyDurationMinutes" : 0,
@@ -9135,15 +9455,18 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "submittedBy" : "{}",
+  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "payableMinutes" : [ 1, 1 ],
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
+  "durationMinutes" : [ 6, 6 ],
   "isFullDayRequest" : true,
   "markedAsRead" : true,
   "dailyDurationMinutes" : 0,
@@ -9526,6 +9849,83 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Query integrations for agents
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentsIntegrationsHrisQuery(body: QueryAgentsIntegrationsRequest? = nil, completion: @escaping ((_ data: AgentsIntegrationsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentsIntegrationsHrisQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AgentsIntegrationsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query integrations for agents
+     - POST /api/v2/workforcemanagement/agents/integrations/hris/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agent" : "{}",
+    "userSelected" : true,
+    "selectedIntegration" : "{}",
+    "associatedIntegrations" : [ {
+      "agentExternalId" : "agentExternalId",
+      "integration" : "{}",
+      "locked" : true
+    }, {
+      "agentExternalId" : "agentExternalId",
+      "integration" : "{}",
+      "locked" : true
+    } ]
+  }, {
+    "agent" : "{}",
+    "userSelected" : true,
+    "selectedIntegration" : "{}",
+    "associatedIntegrations" : [ {
+      "agentExternalId" : "agentExternalId",
+      "integration" : "{}",
+      "locked" : true
+    }, {
+      "agentExternalId" : "agentExternalId",
+      "integration" : "{}",
+      "locked" : true
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AgentsIntegrationsListing> 
+     */
+    open class func postWorkforcemanagementAgentsIntegrationsHrisQueryWithRequestBuilder(body: QueryAgentsIntegrationsRequest? = nil) -> RequestBuilder<AgentsIntegrationsListing> {        
+        let path = "/api/v2/workforcemanagement/agents/integrations/hris/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentsIntegrationsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Get agent possible work shifts for requested time frame
      
      - parameter body: (body) body 
@@ -9650,38 +10050,46 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     } ],
     "shifts" : [ {
       "schedule" : "{}",
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -9692,21 +10100,25 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -9718,38 +10130,46 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "lengthMinutes" : 1,
+      "timeOffRequestSyncVersion" : 7,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "description"
+      "description" : "description",
+      "payableMinutes" : 2
     } ],
     "shifts" : [ {
       "schedule" : "{}",
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -9760,21 +10180,25 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 0,
       "activities" : [ {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
-        "externalActivityType" : "Coaching",
+        "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
+        "timeOffRequestSyncVersion" : 5,
         "lengthMinutes" : 6,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
+        "payableMinutes" : 1,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -9787,12 +10211,12 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "weekDate" : "2000-01-23",
-    "weekCount" : 5
+    "weekCount" : 9
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "weekDate" : "2000-01-23",
-    "weekCount" : 5
+    "weekCount" : 9
   } ],
   "updates" : [ {
     "type" : "Added",
@@ -10227,7 +10651,8 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "averageSpeedOfAnswer" : "{}",
   "id" : "id",
-  "serviceLevel" : "{}"
+  "serviceLevel" : "{}",
+  "impactOverride" : "{}"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -11406,6 +11831,69 @@ open class WorkforceManagementAPI {
     }
 
     
+    /**
+     Get list of time off types configured in integration
+     
+     - parameter hrisIntegrationId: (path) The ID of the HRIS integration for which time off types are queried. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId: String, completion: @escaping ((_ data: HrisTimeOffTypesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementIntegrationsHriTimeofftypesJobsWithRequestBuilder(hrisIntegrationId: hrisIntegrationId)
+        requestBuilder.execute { (response: Response<HrisTimeOffTypesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of time off types configured in integration
+     - POST /api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "secondaryId" : "secondaryId",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "secondaryId" : "secondaryId",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter hrisIntegrationId: (path) The ID of the HRIS integration for which time off types are queried. 
+
+     - returns: RequestBuilder<HrisTimeOffTypesResponse> 
+     */
+    open class func postWorkforcemanagementIntegrationsHriTimeofftypesJobsWithRequestBuilder(hrisIntegrationId: String) -> RequestBuilder<HrisTimeOffTypesResponse> {        
+        var path = "/api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs"
+        let hrisIntegrationIdPreEscape = "\(hrisIntegrationId)"
+        let hrisIntegrationIdPostEscape = hrisIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{hrisIntegrationId}", with: hrisIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HrisTimeOffTypesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -12042,15 +12530,18 @@ open class WorkforceManagementAPI {
   "id" : "id",
   "timeOffRequests" : [ {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -12063,15 +12554,18 @@ open class WorkforceManagementAPI {
     "status" : "PENDING"
   }, {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -12101,6 +12595,71 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Retrieves integration statuses for a list of time off requests
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId: String, body: QueryTimeOffIntegrationStatusRequest? = nil, completion: @escaping ((_ data: UserTimeOffIntegrationStatusResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<UserTimeOffIntegrationStatusResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves integration statuses for a list of time off requests
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "timeOffRequest" : "{}",
+    "integrationStatus" : "Processing",
+    "user" : "{}"
+  }, {
+    "timeOffRequest" : "{}",
+    "integrationStatus" : "Processing",
+    "user" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<UserTimeOffIntegrationStatusResponseListing> 
+     */
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffIntegrationStatusRequest? = nil) -> RequestBuilder<UserTimeOffIntegrationStatusResponseListing> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserTimeOffIntegrationStatusResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -12142,15 +12701,18 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -12161,15 +12723,18 @@ open class WorkforceManagementAPI {
     "status" : "PENDING"
   }, {
     "submittedBy" : "{}",
+    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "payableMinutes" : [ 1, 1 ],
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
+    "durationMinutes" : [ 6, 6 ],
     "isFullDayRequest" : true,
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
@@ -12419,6 +12984,93 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffBalancesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Estimates available time off for an agent
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter userId: (path) The id of the user for whom the time off request estimate is requested 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest? = nil, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, body: body)
+        requestBuilder.execute { (response: Response<EstimateAvailableTimeOffResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Estimates available time off for an agent
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityCodeId" : "activityCodeId",
+  "fullDayDates" : [ {
+    "date" : "2000-01-23",
+    "durationMinutes" : 0,
+    "flexible" : true,
+    "payableMinutes" : 6
+  }, {
+    "date" : "2000-01-23",
+    "durationMinutes" : 0,
+    "flexible" : true,
+    "payableMinutes" : 6
+  } ],
+  "partialDayDates" : [ {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "durationMinutes" : 1,
+    "flexible" : true,
+    "payableMinutes" : 5
+  }, {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "durationMinutes" : 1,
+    "flexible" : true,
+    "payableMinutes" : 5
+  } ],
+  "paid" : true,
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter userId: (path) The id of the user for whom the time off request estimate is requested 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<EstimateAvailableTimeOffResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest? = nil) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EstimateAvailableTimeOffResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -13787,6 +14439,70 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Query time off balances for the current user for specified activity code and dates
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementTimeoffbalanceJobs(body: TimeOffBalanceRequest, completion: @escaping ((_ data: TimeOffBalancesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementTimeoffbalanceJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TimeOffBalancesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query time off balances for the current user for specified activity code and dates
+     - POST /api/v2/workforcemanagement/timeoffbalance/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  }, {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  } ],
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<TimeOffBalancesResponse> 
+     */
+    open class func postWorkforcemanagementTimeoffbalanceJobsWithRequestBuilder(body: TimeOffBalanceRequest) -> RequestBuilder<TimeOffBalancesResponse> {        
+        let path = "/api/v2/workforcemanagement/timeoffbalance/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TimeOffBalancesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Queries available time off for the current user
      
      - parameter body: (body) body (optional)
@@ -13883,15 +14599,18 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "submittedBy" : "{}",
+  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "payableMinutes" : [ 1, 1 ],
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
+  "durationMinutes" : [ 6, 6 ],
   "isFullDayRequest" : true,
   "markedAsRead" : true,
   "dailyDurationMinutes" : 0,
@@ -13918,6 +14637,206 @@ open class WorkforceManagementAPI {
         let requestBuilder: RequestBuilder<TimeOffRequestResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Estimates available time off for current user
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementTimeoffrequestsEstimate(body: EstimateAvailableTimeOffRequest? = nil, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EstimateAvailableTimeOffResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Estimates available time off for current user
+     - POST /api/v2/workforcemanagement/timeoffrequests/estimate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityCodeId" : "activityCodeId",
+  "fullDayDates" : [ {
+    "date" : "2000-01-23",
+    "durationMinutes" : 0,
+    "flexible" : true,
+    "payableMinutes" : 6
+  }, {
+    "date" : "2000-01-23",
+    "durationMinutes" : 0,
+    "flexible" : true,
+    "payableMinutes" : 6
+  } ],
+  "partialDayDates" : [ {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "durationMinutes" : 1,
+    "flexible" : true,
+    "payableMinutes" : 5
+  }, {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "durationMinutes" : 1,
+    "flexible" : true,
+    "payableMinutes" : 5
+  } ],
+  "paid" : true,
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<EstimateAvailableTimeOffResponse> 
+     */
+    open class func postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: EstimateAvailableTimeOffRequest? = nil) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
+        let path = "/api/v2/workforcemanagement/timeoffrequests/estimate"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EstimateAvailableTimeOffResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Retrieves integration statuses for a list of current user time off requests
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body: CurrentUserTimeOffIntegrationStatusRequest? = nil, completion: @escaping ((_ data: TimeOffIntegrationStatusResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TimeOffIntegrationStatusResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves integration statuses for a list of current user time off requests
+     - POST /api/v2/workforcemanagement/timeoffrequests/integrationstatus/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "timeOffRequest" : "{}",
+    "integrationStatus" : "Processing"
+  }, {
+    "timeOffRequest" : "{}",
+    "integrationStatus" : "Processing"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<TimeOffIntegrationStatusResponseListing> 
+     */
+    open class func postWorkforcemanagementTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(body: CurrentUserTimeOffIntegrationStatusRequest? = nil) -> RequestBuilder<TimeOffIntegrationStatusResponseListing> {        
+        let path = "/api/v2/workforcemanagement/timeoffrequests/integrationstatus/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TimeOffIntegrationStatusResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update integrations for agent
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putWorkforcemanagementAgentIntegrationsHris(agentId: String, body: AgentIntegrationsRequest, completion: @escaping ((_ data: AgentIntegrationsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putWorkforcemanagementAgentIntegrationsHrisWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<AgentIntegrationsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update integrations for agent
+     - PUT /api/v2/workforcemanagement/agents/{agentId}/integrations/hris
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "userSelected" : true,
+  "selectedIntegration" : "{}",
+  "associatedIntegrations" : [ {
+    "agentExternalId" : "agentExternalId",
+    "integration" : "{}",
+    "locked" : true
+  }, {
+    "agentExternalId" : "agentExternalId",
+    "integration" : "{}",
+    "locked" : true
+  } ]
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AgentIntegrationsResponse> 
+     */
+    open class func putWorkforcemanagementAgentIntegrationsHrisWithRequestBuilder(agentId: String, body: AgentIntegrationsRequest) -> RequestBuilder<AgentIntegrationsResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/integrations/hris"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentIntegrationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     

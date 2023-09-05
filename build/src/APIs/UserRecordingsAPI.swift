@@ -3253,6 +3253,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -6019,6 +6020,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -9737,6 +9739,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -12503,6 +12506,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -16458,6 +16462,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -19224,6 +19229,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -22942,6 +22948,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -25708,6 +25715,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -29512,6 +29520,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -32278,6 +32287,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -35996,6 +36006,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -38762,6 +38773,7 @@ open class UserRecordingsAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -42682,6 +42694,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -45448,6 +45461,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -49166,6 +49180,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -51932,6 +51947,7 @@ open class UserRecordingsAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",

@@ -19,12 +19,15 @@ public class ShiftTradeActivityPreviewResponse: Codable {
     public var activityCodeId: String?
     /** Whether this activity counts as paid time */
     public var countsAsPaidTime: Bool?
+    /** Payable minutes for this activity */
+    public var payableMinutes: Int?
 
-    public init(startDate: Date?, lengthMinutes: Int?, activityCodeId: String?, countsAsPaidTime: Bool?) {
+    public init(startDate: Date?, lengthMinutes: Int?, activityCodeId: String?, countsAsPaidTime: Bool?, payableMinutes: Int?) {
         self.startDate = startDate
         self.lengthMinutes = lengthMinutes
         self.activityCodeId = activityCodeId
         self.countsAsPaidTime = countsAsPaidTime
+        self.payableMinutes = payableMinutes
     }
 
 

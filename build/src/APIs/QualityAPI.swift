@@ -4446,6 +4446,7 @@ open class QualityAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -4678,6 +4679,7 @@ open class QualityAPI {
     
     
     
+    
     /**
      Gets a list of Agent Activities
      
@@ -4693,10 +4695,11 @@ open class QualityAPI {
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
      - parameter group: (query) group id (optional)
+     - parameter formContextId: (query) shared id between form versions (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group)
+    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, formContextId: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, formContextId: formContextId)
         requestBuilder.execute { (response: Response<AgentActivityEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7661,10 +7664,11 @@ open class QualityAPI {
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
      - parameter group: (query) group id (optional)
+     - parameter formContextId: (query) shared id between form versions (optional)
 
      - returns: RequestBuilder<AgentActivityEntityListing> 
      */
-    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {        
+    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, formContextId: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {        
         let path = "/api/v2/quality/agents/activity"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7682,7 +7686,8 @@ open class QualityAPI {
             "agentUserId": agentUserId, 
             "evaluatorUserId": evaluatorUserId, 
             "name": name, 
-            "group": group
+            "group": group, 
+            "formContextId": formContextId
         ])
 
         let requestBuilder: RequestBuilder<AgentActivityEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15501,6 +15506,7 @@ open class QualityAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -15930,6 +15936,7 @@ open class QualityAPI {
     
     
     
+    
     /**
      Queries Evaluations and returns a paged list
      
@@ -15946,6 +15953,7 @@ open class QualityAPI {
      - parameter queueId: (query) queue id (optional)
      - parameter startTime: (query) start time of the evaluation query (optional)
      - parameter endTime: (query) end time of the evaluation query (optional)
+     - parameter formContextId: (query) shared id between form versions (optional)
      - parameter evaluationState: (query)  (optional)
      - parameter isReleased: (query) the evaluation has been released (optional)
      - parameter agentHasRead: (query) agent has the evaluation (optional)
@@ -15954,8 +15962,8 @@ open class QualityAPI {
      - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
+    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<EvaluationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -18690,6 +18698,7 @@ open class QualityAPI {
         "id" : "id",
         "type" : "TEAM"
       } ],
+      "scoringMethod" : "TimestampAndPriority",
       "joinedMemberCount" : 1,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
@@ -21456,6 +21465,7 @@ open class QualityAPI {
         "id" : "id",
         "type" : "TEAM"
       } ],
+      "scoringMethod" : "TimestampAndPriority",
       "joinedMemberCount" : 1,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
@@ -21537,6 +21547,7 @@ open class QualityAPI {
      - parameter queueId: (query) queue id (optional)
      - parameter startTime: (query) start time of the evaluation query (optional)
      - parameter endTime: (query) end time of the evaluation query (optional)
+     - parameter formContextId: (query) shared id between form versions (optional)
      - parameter evaluationState: (query)  (optional)
      - parameter isReleased: (query) the evaluation has been released (optional)
      - parameter agentHasRead: (query) agent has the evaluation (optional)
@@ -21546,7 +21557,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */
-    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
+    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
         let path = "/api/v2/quality/evaluations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -21566,6 +21577,7 @@ open class QualityAPI {
             "queueId": queueId, 
             "startTime": startTime, 
             "endTime": endTime, 
+            "formContextId": formContextId, 
             "evaluationState": evaluationState, 
             "isReleased": isReleased, 
             "agentHasRead": agentHasRead, 
@@ -34271,6 +34283,7 @@ open class QualityAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -40873,6 +40886,7 @@ open class QualityAPI {
       "id" : "id",
       "type" : "TEAM"
     } ],
+    "scoringMethod" : "TimestampAndPriority",
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",

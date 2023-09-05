@@ -28,16 +28,22 @@ public class AdminTimeOffRequestPatch: Codable {
     public var partialDayStartDateTimes: [Date]?
     /** The daily duration of this time off request in minutes */
     public var dailyDurationMinutes: Int?
+    /** Daily durations for each day of this time off request in minutes */
+    public var durationMinutes: [Int]?
+    /** Payable minutes for each day of this time off request */
+    public var payableMinutes: [Int]?
     /** Version metadata for the time off request */
     public var metadata: WfmVersionedEntityMetadata?
 
-    public init(status: Status?, activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, metadata: WfmVersionedEntityMetadata?) {
+    public init(status: Status?, activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, metadata: WfmVersionedEntityMetadata?) {
         self.status = status
         self.activityCodeId = activityCodeId
         self.notes = notes
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.dailyDurationMinutes = dailyDurationMinutes
+        self.durationMinutes = durationMinutes
+        self.payableMinutes = payableMinutes
         self.metadata = metadata
     }
 

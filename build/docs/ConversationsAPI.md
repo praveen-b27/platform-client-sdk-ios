@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationParticipantFlaggedreason**](ConversationsAPI.html#deleteConversationParticipantFlaggedreason) | Remove flagged reason from conversation participant. |
 | [**deleteConversationsCallParticipantConsult**](ConversationsAPI.html#deleteConversationsCallParticipantConsult) | Cancel the transfer |
 | [**deleteConversationsEmailMessagesDraftAttachment**](ConversationsAPI.html#deleteConversationsEmailMessagesDraftAttachment) | Delete attachment from draft |
+| [**deleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI.html#deleteConversationsMessagesCachedmediaCachedMediaItemId) | Remove a cached media item asychronously |
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
 | [**deleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsInstagramIntegrationId) | Delete Instagram messaging integration |
 | [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration |
@@ -76,6 +77,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessageParticipantWrapup**](ConversationsAPI.html#getConversationsMessageParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsMessageParticipantWrapupcodes**](ConversationsAPI.html#getConversationsMessageParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsMessages**](ConversationsAPI.html#getConversationsMessages) | Get active message conversations for the logged in user |
+| [**getConversationsMessagesCachedmedia**](ConversationsAPI.html#getConversationsMessagesCachedmedia) | Get a list of cached media items |
+| [**getConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI.html#getConversationsMessagesCachedmediaCachedMediaItemId) | Get a cached media item |
 | [**getConversationsMessagingFacebookApp**](ConversationsAPI.html#getConversationsMessagingFacebookApp) | Get Genesys Facebook App Id |
 | [**getConversationsMessagingIntegrations**](ConversationsAPI.html#getConversationsMessagingIntegrations) | Get a list of Integrations |
 | [**getConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebook) | Get a list of Facebook Integrations |
@@ -185,6 +188,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageCommunicationMessages**](ConversationsAPI.html#postConversationsMessageCommunicationMessages) | Send message |
 | [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI.html#postConversationsMessageCommunicationMessagesMedia) | Create media |
 | [**postConversationsMessageCommunicationTyping**](ConversationsAPI.html#postConversationsMessageCommunicationTyping) | Send message typing event |
+| [**postConversationsMessageInboundOpenEvent**](ConversationsAPI.html#postConversationsMessageInboundOpenEvent) | Send an inbound Open Event Message |
+| [**postConversationsMessageInboundOpenMessage**](ConversationsAPI.html#postConversationsMessageInboundOpenMessage) | Send inbound Open Message |
+| [**postConversationsMessageInboundOpenReceipt**](ConversationsAPI.html#postConversationsMessageInboundOpenReceipt) | Send an inbound Open Receipt Message |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI.html#postConversationsMessageMessagesBulk) | Get messages in batch |
 | [**postConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsMessageParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI.html#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
@@ -479,6 +485,57 @@ ConversationsAPI.deleteConversationsEmailMessagesDraftAttachment(conversationId:
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **attachmentId** | **String**| attachmentId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteConversationsMessagesCachedmediaCachedMediaItemId"></a>
+
+# **deleteConversationsMessagesCachedmediaCachedMediaItemId**
+
+
+
+> Void deleteConversationsMessagesCachedmediaCachedMediaItemId(cachedMediaItemId)
+
+Remove a cached media item asychronously
+
+
+
+Wraps DELETE /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId}  
+
+Requires ANY permissions: 
+
+* conversation:cachedMedia:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let cachedMediaItemId: String = "" // cachedMediaItemId
+
+// Code example
+ConversationsAPI.deleteConversationsMessagesCachedmediaCachedMediaItemId(cachedMediaItemId: cachedMediaItemId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsMessagesCachedmediaCachedMediaItemId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **cachedMediaItemId** | **String**| cachedMediaItemId | |
 {: class="table-striped"}
 
 
@@ -3855,6 +3912,114 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**MessageConversationEntityListing**](MessageConversationEntityListing.html)
+
+<a name="getConversationsMessagesCachedmedia"></a>
+
+# **getConversationsMessagesCachedmedia**
+
+
+
+> [CachedMediaItemEntityListing](CachedMediaItemEntityListing.html) getConversationsMessagesCachedmedia(pageSize, pageNumber, url)
+
+Get a list of cached media items
+
+
+
+Wraps GET /api/v2/conversations/messages/cachedmedia  
+
+Requires ANY permissions: 
+
+* conversation:cachedMedia:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let url: String = "" // URL to search for
+
+// Code example
+ConversationsAPI.getConversationsMessagesCachedmedia(pageSize: pageSize, pageNumber: pageNumber, url: url) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagesCachedmedia was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **url** | **String**| URL to search for | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CachedMediaItemEntityListing**](CachedMediaItemEntityListing.html)
+
+<a name="getConversationsMessagesCachedmediaCachedMediaItemId"></a>
+
+# **getConversationsMessagesCachedmediaCachedMediaItemId**
+
+
+
+> [CachedMediaItem](CachedMediaItem.html) getConversationsMessagesCachedmediaCachedMediaItemId(cachedMediaItemId)
+
+Get a cached media item
+
+
+
+Wraps GET /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId}  
+
+Requires ANY permissions: 
+
+* conversation:cachedMedia:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let cachedMediaItemId: String = "" // cachedMediaItemId
+
+// Code example
+ConversationsAPI.getConversationsMessagesCachedmediaCachedMediaItemId(cachedMediaItemId: cachedMediaItemId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagesCachedmediaCachedMediaItemId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **cachedMediaItemId** | **String**| cachedMediaItemId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CachedMediaItem**](CachedMediaItem.html)
 
 <a name="getConversationsMessagingFacebookApp"></a>
 
@@ -9825,6 +9990,174 @@ ConversationsAPI.postConversationsMessageCommunicationTyping(conversationId: con
 ### Return type
 
 `nil` (empty response body)
+
+<a name="postConversationsMessageInboundOpenEvent"></a>
+
+# **postConversationsMessageInboundOpenEvent**
+
+
+
+> [OpenEventNormalizedMessage](OpenEventNormalizedMessage.html) postConversationsMessageInboundOpenEvent(integrationId, body)
+
+Send an inbound Open Event Message
+
+Send an inbound event message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+
+
+Wraps POST /api/v2/conversations/messages/{integrationId}/inbound/open/event  
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // integrationId
+let body: OpenInboundNormalizedEvent = new OpenInboundNormalizedEvent(...) // NormalizedMessage
+
+// Code example
+ConversationsAPI.postConversationsMessageInboundOpenEvent(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageInboundOpenEvent was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| integrationId | |
+| **body** | [**OpenInboundNormalizedEvent**](OpenInboundNormalizedEvent.html)| NormalizedMessage | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenEventNormalizedMessage**](OpenEventNormalizedMessage.html)
+
+<a name="postConversationsMessageInboundOpenMessage"></a>
+
+# **postConversationsMessageInboundOpenMessage**
+
+
+
+> [OpenMessageNormalizedMessage](OpenMessageNormalizedMessage.html) postConversationsMessageInboundOpenMessage(integrationId, body)
+
+Send inbound Open Message
+
+Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+
+
+Wraps POST /api/v2/conversations/messages/{integrationId}/inbound/open/message  
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // integrationId
+let body: OpenInboundNormalizedMessage = new OpenInboundNormalizedMessage(...) // NormalizedMessage
+
+// Code example
+ConversationsAPI.postConversationsMessageInboundOpenMessage(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageInboundOpenMessage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| integrationId | |
+| **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage.html)| NormalizedMessage | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage.html)
+
+<a name="postConversationsMessageInboundOpenReceipt"></a>
+
+# **postConversationsMessageInboundOpenReceipt**
+
+
+
+> [OpenReceiptNormalizedMessage](OpenReceiptNormalizedMessage.html) postConversationsMessageInboundOpenReceipt(integrationId, body)
+
+Send an inbound Open Receipt Message
+
+Send an inbound open Receipt to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+
+
+Wraps POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt  
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // integrationId
+let body: OpenInboundNormalizedReceipt = new OpenInboundNormalizedReceipt(...) // NormalizedMessage
+
+// Code example
+ConversationsAPI.postConversationsMessageInboundOpenReceipt(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageInboundOpenReceipt was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| integrationId | |
+| **body** | [**OpenInboundNormalizedReceipt**](OpenInboundNormalizedReceipt.html)| NormalizedMessage | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage.html)
 
 <a name="postConversationsMessageMessagesBulk"></a>
 

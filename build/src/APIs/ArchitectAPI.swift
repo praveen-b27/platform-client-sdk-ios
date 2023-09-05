@@ -2854,6 +2854,104 @@ open class ArchitectAPI {
     }
 
     
+    
+    
+    
+    
+    
+    
+    /**
+     Get a pageable list of basic emergency group objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the Emergency Groups to filter by. (optional)
+     - parameter name: (query) Name of the Emergency Group to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectEmergencygroupsDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: EmergencyGroupDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectEmergencygroupsDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<EmergencyGroupDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a pageable list of basic emergency group objects filterable by query parameters.
+     - GET /api/v2/architect/emergencygroups/divisionviews
+     - This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the Emergency Groups to filter by. (optional)
+     - parameter name: (query) Name of the Emergency Group to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+
+     - returns: RequestBuilder<EmergencyGroupDivisionViewEntityListing> 
+     */
+    open class func getArchitectEmergencygroupsDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<EmergencyGroupDivisionViewEntityListing> {        
+        let path = "/api/v2/architect/emergencygroups/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "sortOrder": sortOrder, 
+            "id": _id, 
+            "name": name, 
+            "divisionId": divisionId
+        ])
+
+        let requestBuilder: RequestBuilder<EmergencyGroupDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      Get an IVR config.
      
@@ -3045,6 +3143,103 @@ open class ArchitectAPI {
         ])
 
         let requestBuilder: RequestBuilder<IVREntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the IVR to filter by. (optional)
+     - parameter name: (query) Name of the IVR to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectIvrsDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: IVRDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectIvrsDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<IVRDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+     - GET /api/v2/architect/ivrs/divisionviews
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the IVR to filter by. (optional)
+     - parameter name: (query) Name of the IVR to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+
+     - returns: RequestBuilder<IVRDivisionViewEntityListing> 
+     */
+    open class func getArchitectIvrsDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<IVRDivisionViewEntityListing> {        
+        let path = "/api/v2/architect/ivrs/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "sortOrder": sortOrder, 
+            "id": _id, 
+            "name": name, 
+            "divisionId": divisionId
+        ])
+
+        let requestBuilder: RequestBuilder<IVRDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -4251,6 +4446,103 @@ open class ArchitectAPI {
     
     
     
+    
+    /**
+     Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the schedule group to filter by. (optional)
+     - parameter name: (query) Name of the schedule group to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectSchedulegroupsDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: ScheduleGroupDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSchedulegroupsDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<ScheduleGroupDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+     - GET /api/v2/architect/schedulegroups/divisionviews
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the schedule group to filter by. (optional)
+     - parameter name: (query) Name of the schedule group to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+
+     - returns: RequestBuilder<ScheduleGroupDivisionViewEntityListing> 
+     */
+    open class func getArchitectSchedulegroupsDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<ScheduleGroupDivisionViewEntityListing> {        
+        let path = "/api/v2/architect/schedulegroups/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "sortOrder": sortOrder, 
+            "id": _id, 
+            "name": name, 
+            "divisionId": divisionId
+        ])
+
+        let requestBuilder: RequestBuilder<ScheduleGroupDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     /**
      Get a list of schedules.
      
@@ -4358,6 +4650,103 @@ open class ArchitectAPI {
         ])
 
         let requestBuilder: RequestBuilder<ScheduleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the schedule group to filter by. (optional)
+     - parameter name: (query) Name of the schedule group to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectSchedulesDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: ScheduleDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSchedulesDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<ScheduleDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+     - GET /api/v2/architect/schedules/divisionviews
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the schedule group to filter by. (optional)
+     - parameter name: (query) Name of the schedule group to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+
+     - returns: RequestBuilder<ScheduleDivisionViewEntityListing> 
+     */
+    open class func getArchitectSchedulesDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<ScheduleDivisionViewEntityListing> {        
+        let path = "/api/v2/architect/schedules/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "sortOrder": sortOrder, 
+            "id": _id, 
+            "name": name, 
+            "divisionId": divisionId
+        ])
+
+        let requestBuilder: RequestBuilder<ScheduleDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

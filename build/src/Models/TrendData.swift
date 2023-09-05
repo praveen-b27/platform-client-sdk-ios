@@ -17,11 +17,14 @@ public class TrendData: Codable {
     public var dateEndWorkday: Date?
     /** Percent of goal */
     public var percentOfGoal: Double?
+    /** Average metric value */
+    public var averageValue: Double?
 
-    public init(dateStartWorkday: Date?, dateEndWorkday: Date?, percentOfGoal: Double?) {
+    public init(dateStartWorkday: Date?, dateEndWorkday: Date?, percentOfGoal: Double?, averageValue: Double?) {
         self.dateStartWorkday = dateStartWorkday
         self.dateEndWorkday = dateEndWorkday
         self.percentOfGoal = percentOfGoal
+        self.averageValue = averageValue
     }
 
 

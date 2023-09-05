@@ -31,6 +31,10 @@ public class KnowledgeImportJobResponse: Codable {
     }
     /** Id of the import job */
     public var _id: String?
+    /** The URL of the location at which the caller can download the imported file. */
+    public var downloadURL: String?
+    /** The URL of the location at which the caller can download the entities in json format that failed during the import. */
+    public var failedEntitiesURL: String?
     /** Upload key */
     public var uploadKey: String?
     /** File type of the document */
@@ -43,6 +47,8 @@ public class KnowledgeImportJobResponse: Codable {
     public var report: KnowledgeImportJobReport?
     /** Knowledge base which document import does belong to */
     public var knowledgeBase: KnowledgeBase?
+    /** The user who created the operation */
+    public var createdBy: UserReference?
     /** Created date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -52,14 +58,17 @@ public class KnowledgeImportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, uploadKey: String?, fileType: FileType?, settings: KnowledgeImportJobSettings?, status: Status?, report: KnowledgeImportJobReport?, knowledgeBase: KnowledgeBase?, dateCreated: Date?, dateModified: Date?, skipConfirmationStep: Bool?, selfUri: String?) {
+    public init(_id: String?, downloadURL: String?, failedEntitiesURL: String?, uploadKey: String?, fileType: FileType?, settings: KnowledgeImportJobSettings?, status: Status?, report: KnowledgeImportJobReport?, knowledgeBase: KnowledgeBase?, createdBy: UserReference?, dateCreated: Date?, dateModified: Date?, skipConfirmationStep: Bool?, selfUri: String?) {
         self._id = _id
+        self.downloadURL = downloadURL
+        self.failedEntitiesURL = failedEntitiesURL
         self.uploadKey = uploadKey
         self.fileType = fileType
         self.settings = settings
         self.status = status
         self.report = report
         self.knowledgeBase = knowledgeBase
+        self.createdBy = createdBy
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.skipConfirmationStep = skipConfirmationStep
@@ -68,12 +77,15 @@ public class KnowledgeImportJobResponse: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case downloadURL
+        case failedEntitiesURL
         case uploadKey
         case fileType
         case settings
         case status
         case report
         case knowledgeBase
+        case createdBy
         case dateCreated
         case dateModified
         case skipConfirmationStep

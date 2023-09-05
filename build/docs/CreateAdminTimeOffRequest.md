@@ -14,6 +14,8 @@ title: CreateAdminTimeOffRequest
 | **fullDayManagementUnitDates** | **[String]** | A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone. | [optional] |
 | **partialDayStartDateTimes** | [**[Date]**](Date.html) | A set of start date-times in ISO-8601 format for partial day requests. | [optional] |
 | **dailyDurationMinutes** | **Int** | The daily duration of this time off request in minutes | |
+| **durationMinutes** | **[Int]** | Daily durations for each day of this time off request in minutes | [optional] |
+| **payableMinutes** | **[Int]** | Payable minutes for each day of this time off request | [optional] |
 | **paid** | **Bool** | Whether this is a paid time off request | [optional] |
 {: class="table table-striped"}
 

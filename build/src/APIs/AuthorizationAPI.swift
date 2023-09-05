@@ -1426,6 +1426,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -1858,6 +1859,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -2305,6 +2307,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -2737,6 +2740,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -3254,6 +3258,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -3686,6 +3691,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -4133,6 +4139,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -4565,6 +4572,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -5013,6 +5021,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -5445,6 +5454,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -5892,6 +5902,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -6324,6 +6335,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -6777,6 +6789,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -7209,6 +7222,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -7656,6 +7670,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -8088,6 +8103,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -8544,6 +8560,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -8976,6 +8993,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -9423,6 +9441,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -9855,6 +9874,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -10308,6 +10328,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -10740,6 +10761,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -11187,6 +11209,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -11619,6 +11642,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -12922,6 +12946,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -13354,6 +13379,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -13801,6 +13827,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -14233,6 +14260,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -14693,6 +14721,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -15125,6 +15154,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -15572,6 +15602,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -16004,6 +16035,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -16999,6 +17031,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -17431,6 +17464,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -17878,6 +17912,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -18310,6 +18345,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -19137,6 +19173,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -19569,6 +19606,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -20016,6 +20054,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -20448,6 +20487,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -20896,6 +20936,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -21328,6 +21369,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -21775,6 +21817,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -22207,6 +22250,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -22660,6 +22704,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -23092,6 +23137,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -23539,6 +23585,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -23971,6 +24018,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -24427,6 +24475,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -24859,6 +24908,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -25306,6 +25356,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -25738,6 +25789,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -26191,6 +26243,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -26623,6 +26676,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -27070,6 +27124,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -27502,6 +27557,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -28020,6 +28076,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -28452,6 +28509,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -28899,6 +28957,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -29331,6 +29390,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -29845,6 +29905,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -30277,6 +30338,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -30724,6 +30786,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -31156,6 +31219,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -31616,6 +31680,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -32048,6 +32113,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -32495,6 +32561,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -32927,6 +32994,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -33729,6 +33797,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -34161,6 +34230,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -34608,6 +34678,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -35040,6 +35111,7 @@ open class AuthorizationAPI {
             "id" : "id",
             "type" : "TEAM"
           } ],
+          "scoringMethod" : "TimestampAndPriority",
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -35667,6 +35739,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -36099,6 +36172,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -36546,6 +36620,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -36978,6 +37053,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -37438,6 +37514,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -37870,6 +37947,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -38317,6 +38395,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -38749,6 +38828,7 @@ open class AuthorizationAPI {
               "id" : "id",
               "type" : "TEAM"
             } ],
+            "scoringMethod" : "TimestampAndPriority",
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",

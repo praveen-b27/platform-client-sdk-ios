@@ -29,6 +29,8 @@ public class ExpandableWebDeployment: Codable {
     public var allowAllDomains: Bool?
     /** The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use. */
     public var allowedDomains: [String]?
+    /** The supported content profile for a deployment */
+    public var supportedContent: SupportedContentReference?
     /** Javascript snippet used to load the config */
     public var snippet: String?
     /** The date the deployment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -46,12 +48,13 @@ public class ExpandableWebDeployment: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, allowAllDomains: Bool?, allowedDomains: [String]?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, configuration: WebDeploymentConfigurationVersionResponse?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, allowAllDomains: Bool?, allowedDomains: [String]?, supportedContent: SupportedContentReference?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, configuration: WebDeploymentConfigurationVersionResponse?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
         self.allowAllDomains = allowAllDomains
         self.allowedDomains = allowedDomains
+        self.supportedContent = supportedContent
         self.snippet = snippet
         self.dateCreated = dateCreated
         self.dateModified = dateModified
@@ -68,6 +71,7 @@ public class ExpandableWebDeployment: Codable {
         case _description = "description"
         case allowAllDomains
         case allowedDomains
+        case supportedContent
         case snippet
         case dateCreated
         case dateModified

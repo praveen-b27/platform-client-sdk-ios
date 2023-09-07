@@ -2165,6 +2165,9 @@ docs/MobileDevicesAPI.md
 docs/ModelingProcessingError.md
 docs/ModelingStatusResponse.md
 docs/ModifiableRuleProperties.md
+docs/MoveAgentResponse.md
+docs/MoveAgentsRequest.md
+docs/MoveAgentsResponse.md
 docs/MoveManagementUnitRequest.md
 docs/MoveManagementUnitResponse.md
 docs/MuRescheduleResultWrapper.md
@@ -5743,6 +5746,7 @@ docs/postWorkforcemanagementAdherenceHistorical-example.txt
 docs/postWorkforcemanagementAdherenceHistoricalBulk-example.txt
 docs/postWorkforcemanagementAgentAdherenceExplanations-example.txt
 docs/postWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
+docs/postWorkforcemanagementAgents-example.txt
 docs/postWorkforcemanagementAgentsIntegrationsHrisQuery-example.txt
 docs/postWorkforcemanagementAgentsMePossibleworkshifts-example.txt
 docs/postWorkforcemanagementAgentschedulesMine-example.txt
@@ -8175,6 +8179,9 @@ src/Models/ModelVoid.swift
 src/Models/ModelingProcessingError.swift
 src/Models/ModelingStatusResponse.swift
 src/Models/ModifiableRuleProperties.swift
+src/Models/MoveAgentResponse.swift
+src/Models/MoveAgentsRequest.swift
+src/Models/MoveAgentsResponse.swift
 src/Models/MoveManagementUnitRequest.swift
 src/Models/MoveManagementUnitResponse.swift
 src/Models/MuRescheduleResultWrapper.swift

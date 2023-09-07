@@ -27,7 +27,7 @@ public class WfmAgent: Codable {
     public var languages: [LanguageReference]?
     /** The list of skills this agent is capable of handling */
     public var skills: [RoutingSkillReference]?
-    /** Whether the agent has the permission to be included in schedule generation */
+    /** Whether the agent can be included in schedule generation */
     public var schedulable: Bool?
     /** Metadata for this agent */
     public var metadata: WfmVersionedEntityMetadata?

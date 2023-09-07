@@ -23,14 +23,17 @@ public class WorkdayMetric: Codable {
     public var value: Double?
     /** List of schedule activity events for punctuality metrics */
     public var punctualityEvents: [PunctualityEvent]?
+    /** List of evaluations for quality evaluation score metrics */
+    public var evaluationDetails: [QualityEvaluationScoreItem]?
 
-    public init(metric: Metric?, objective: Objective?, points: Int?, maxPoints: Int?, value: Double?, punctualityEvents: [PunctualityEvent]?) {
+    public init(metric: Metric?, objective: Objective?, points: Int?, maxPoints: Int?, value: Double?, punctualityEvents: [PunctualityEvent]?, evaluationDetails: [QualityEvaluationScoreItem]?) {
         self.metric = metric
         self.objective = objective
         self.points = points
         self.maxPoints = maxPoints
         self.value = value
         self.punctualityEvents = punctualityEvents
+        self.evaluationDetails = evaluationDetails
     }
 
 

@@ -2234,6 +2234,27 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "evaluationDetails" : [ {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    }, {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    } ],
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
@@ -2265,6 +2286,27 @@ open class GamificationAPI {
     "objective" : "{}",
     "points" : 0
   }, {
+    "evaluationDetails" : [ {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    }, {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    } ],
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
@@ -2354,9 +2396,11 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "hasEvaluation" : "HasQualityEvaluation",
     "attendanceStatusType" : "HasData",
     "dateWorkday" : "2000-01-23"
   }, {
+    "hasEvaluation" : "HasQualityEvaluation",
     "attendanceStatusType" : "HasData",
     "dateWorkday" : "2000-01-23"
   } ]
@@ -2965,6 +3009,27 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "evaluationDetails" : [ {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    }, {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    } ],
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
@@ -2996,6 +3061,27 @@ open class GamificationAPI {
     "objective" : "{}",
     "points" : 0
   }, {
+    "evaluationDetails" : [ {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    }, {
+      "evaluationId" : "evaluationId",
+      "mediaTypes" : [ "callback", "callback" ],
+      "evaluationScore" : 9.301444243932576,
+      "maxPoints" : 3,
+      "conversationId" : "conversationId",
+      "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+      "formName" : "formName",
+      "points" : 7
+    } ],
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
@@ -3091,9 +3177,11 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "hasEvaluation" : "HasQualityEvaluation",
     "attendanceStatusType" : "HasData",
     "dateWorkday" : "2000-01-23"
   }, {
+    "hasEvaluation" : "HasQualityEvaluation",
     "attendanceStatusType" : "HasData",
     "dateWorkday" : "2000-01-23"
   } ]

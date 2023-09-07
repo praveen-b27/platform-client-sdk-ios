@@ -36986,7 +36986,7 @@
       }
     ],
     "return": "ExpandableWebDeploymentEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected. Valid values:\n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected.\n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
   },
   "postwebdeploymentsconfigurationversionsdraftpublish": {
     "operationId": "postwebdeploymentsconfigurationversionsdraftpublish",
@@ -39221,6 +39221,20 @@
     ],
     "return": "AgentQueryAdherenceExplanationsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet agentId: String = \"\" // The ID of the agent to query\nlet body: AgentQueryAdherenceExplanationsRequest = new AgentQueryAdherenceExplanationsRequest(...) // The request body\nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\n\n// Query adherence explanations for the given agent across a specified range\nPostWorkforcemanagementAgentAdherenceExplanationsQueryRequest.postWorkforcemanagementAgentAdherenceExplanationsQuery(agentId: agentId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAgentAdherenceExplanationsQueryRequest.postWorkforcemanagementAgentAdherenceExplanationsQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementagents": {
+    "operationId": "postworkforcemanagementagents",
+    "functionName": "postWorkforcemanagementAgents",
+    "signature": "postWorkforcemanagementAgents(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "MoveAgentsRequest",
+        "required": "false"
+      }
+    ],
+    "return": "MoveAgentsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: MoveAgentsRequest = new MoveAgentsRequest(...) // body\n\n// Move agents in and out of management unit\nPostWorkforcemanagementAgentsRequest.postWorkforcemanagementAgents(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAgentsRequest.postWorkforcemanagementAgents was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementagentsintegrationshrisquery": {
     "operationId": "postworkforcemanagementagentsintegrationshrisquery",

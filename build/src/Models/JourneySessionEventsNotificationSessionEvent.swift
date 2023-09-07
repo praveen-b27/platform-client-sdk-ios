@@ -34,8 +34,8 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
         case noAnswerTransfer = "NoAnswerTransfer"
         case notAvailableTransfer = "NotAvailableTransfer"
         case uncallable = "Uncallable"
-        case didNotDeliverEndpoint = "DidNotDeliverEndpoint"
-        case didNotDeliverTransfer = "DidNotDeliverTransfer"
+        case doNotDisturbEndpoint = "DoNotDisturbEndpoint"
+        case doNotDisturbTransfer = "DoNotDisturbTransfer"
     }
     public enum LastAcdOutcome: String, Codable { 
         case unknown = "Unknown"

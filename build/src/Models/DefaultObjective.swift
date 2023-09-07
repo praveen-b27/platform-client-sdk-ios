@@ -42,8 +42,10 @@ public class DefaultObjective: Codable {
     public var topics: [AddressableEntityRef]?
     /** A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\". */
     public var topicIdsFilterType: TopicIdsFilterType?
+    /** The ids of associated evaluation form context, for Quality Evaluation Score metrics */
+    public var evaluationFormContextIds: [String]?
 
-    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, mediaTypes: [MediaTypes]?, queues: [AddressableEntityRef]?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?) {
+    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, mediaTypes: [MediaTypes]?, queues: [AddressableEntityRef]?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?, evaluationFormContextIds: [String]?) {
         self._id = _id
         self.templateId = templateId
         self.zones = zones
@@ -52,6 +54,7 @@ public class DefaultObjective: Codable {
         self.queues = queues
         self.topics = topics
         self.topicIdsFilterType = topicIdsFilterType
+        self.evaluationFormContextIds = evaluationFormContextIds
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -63,6 +66,7 @@ public class DefaultObjective: Codable {
         case queues
         case topics
         case topicIdsFilterType
+        case evaluationFormContextIds
     }
 
 

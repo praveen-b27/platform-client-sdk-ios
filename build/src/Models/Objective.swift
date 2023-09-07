@@ -42,10 +42,12 @@ public class Objective: Codable {
     public var topics: [AddressableEntityRef]?
     /** A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\". */
     public var topicIdsFilterType: TopicIdsFilterType?
+    /** The ids of associated evaluation form context, for Quality Evaluation Score metrics */
+    public var evaluationFormContextIds: [String]?
     /** start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStart: Date?
 
-    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, mediaTypes: [MediaTypes]?, queues: [AddressableEntityRef]?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?, dateStart: Date?) {
+    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, mediaTypes: [MediaTypes]?, queues: [AddressableEntityRef]?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?, evaluationFormContextIds: [String]?, dateStart: Date?) {
         self._id = _id
         self.templateId = templateId
         self.zones = zones
@@ -54,6 +56,7 @@ public class Objective: Codable {
         self.queues = queues
         self.topics = topics
         self.topicIdsFilterType = topicIdsFilterType
+        self.evaluationFormContextIds = evaluationFormContextIds
         self.dateStart = dateStart
     }
 
@@ -66,6 +69,7 @@ public class Objective: Codable {
         case queues
         case topics
         case topicIdsFilterType
+        case evaluationFormContextIds
         case dateStart
     }
 

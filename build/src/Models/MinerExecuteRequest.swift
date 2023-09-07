@@ -15,6 +15,7 @@ public class MinerExecuteRequest: Codable {
         case chat = "Chat"
         case call = "Call"
         case message = "Message"
+        case email = "Email"
     }
     public enum ParticipantType: String, Codable { 
         case customer = "Customer"

@@ -18,6 +18,8 @@ public class V2MobiusAlertsTopicAlert: Codable {
         case delete = "DELETE"
         case close = "CLOSE"
         case renotify = "RENOTIFY"
+        case bulkDelete = "BULK_DELETE"
+        case bulkUpdate = "BULK_UPDATE"
     }
     public var rule: V2MobiusAlertsTopicAlertRuleProperties?
     public var _id: UUID?

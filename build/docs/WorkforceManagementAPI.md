@@ -113,6 +113,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
 | [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
 | [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
+| [**postWorkforcemanagementAgents**](WorkforceManagementAPI.html#postWorkforcemanagementAgents) | Move agents in and out of management unit |
 | [**postWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsIntegrationsHrisQuery) | Query integrations for agents |
 | [**postWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsMePossibleworkshifts) | Get agent possible work shifts for requested time frame |
 | [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI.html#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
@@ -6253,6 +6254,58 @@ WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanationsQuery(ag
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
+
+<a name="postWorkforcemanagementAgents"></a>
+
+# **postWorkforcemanagementAgents**
+
+
+
+> [MoveAgentsResponse](MoveAgentsResponse.html) postWorkforcemanagementAgents(body)
+
+Move agents in and out of management unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents  
+
+Requires ANY permissions: 
+
+* wfm:agent:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MoveAgentsRequest = new MoveAgentsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgents(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MoveAgentsRequest**](MoveAgentsRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MoveAgentsResponse**](MoveAgentsResponse.html)
 
 <a name="postWorkforcemanagementAgentsIntegrationsHrisQuery"></a>
 

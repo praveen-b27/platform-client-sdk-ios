@@ -872,7 +872,7 @@ open class WebDeploymentsAPI {
     /**
      Get deployments
      
-     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWebdeploymentsDeployments(expand: [String]? = nil, completion: @escaping ((_ data: ExpandableWebDeploymentEntityListing?,_ error: Error?) -> Void)) {
@@ -935,7 +935,7 @@ open class WebDeploymentsAPI {
   "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
-     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
 
      - returns: RequestBuilder<ExpandableWebDeploymentEntityListing> 
      */

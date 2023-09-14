@@ -146,8 +146,10 @@ public class MessageMediaParticipant: Codable {
     public var authenticated: Bool?
     /** The ID of the participant being monitored when performing a message monitor. */
     public var monitoredParticipantId: String?
+    /** The participant being monitored when performing a message monitor. */
+    public var monitoredParticipant: AddressableEntityRef?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, authenticated: Bool?, monitoredParticipantId: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, authenticated: Bool?, monitoredParticipantId: String?, monitoredParticipant: AddressableEntityRef?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -190,6 +192,7 @@ public class MessageMediaParticipant: Codable {
         self.recipientType = recipientType
         self.authenticated = authenticated
         self.monitoredParticipantId = monitoredParticipantId
+        self.monitoredParticipant = monitoredParticipant
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -235,6 +238,7 @@ public class MessageMediaParticipant: Codable {
         case recipientType
         case authenticated
         case monitoredParticipantId
+        case monitoredParticipant
     }
 
 

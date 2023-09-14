@@ -20,7 +20,7 @@ public class AcwSettings: Codable {
     }
     /** This field controls how the UI prompts the agent for a wrapup. */
     public var wrapupPrompt: WrapupPrompt?
-    /** The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT. */
+    /** The amount of time the agent can stay in ACW (Min: 1 sec, Max: 15 min).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT. */
     public var timeoutMs: Int?
 
     public init(wrapupPrompt: WrapupPrompt?, timeoutMs: Int?) {

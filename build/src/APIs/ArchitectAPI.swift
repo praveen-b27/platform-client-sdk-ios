@@ -8626,6 +8626,325 @@ open class ArchitectAPI {
     
     
     
+    public enum Language_getFlowVersionHealth: String { 
+        case enUs = "en-us"
+        case enGb = "en-gb"
+        case enAu = "en-au"
+        case enZa = "en-za"
+        case enNz = "en-nz"
+        case enIe = "en-ie"
+        case frCa = "fr-ca"
+        case frFr = "fr-fr"
+        case esUs = "es-us"
+        case esEs = "es-es"
+        case esMx = "es-mx"
+        case deDe = "de-de"
+        case itIt = "it-it"
+        case ptBr = "pt-br"
+        case ptPt = "pt-pt"
+        case nlNl = "nl-nl"
+    }
+
+    
+    /**
+     Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+     
+     - parameter flowId: (path) Flow ID. 
+     - parameter versionId: (path) Version ID. 
+     - parameter language: (query) Language to filter for (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowVersionHealth(flowId: String, versionId: String, language: Language_getFlowVersionHealth? = nil, completion: @escaping ((_ data: FlowHealth?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowVersionHealthWithRequestBuilder(flowId: flowId, versionId: versionId, language: language)
+        requestBuilder.execute { (response: Response<FlowHealth>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+     - GET /api/v2/flows/{flowId}/versions/{versionId}/health
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "flowVersionInfo" : "{}",
+  "intents" : [ {
+    "languageHealth" : {
+      "key" : {
+        "overallScore" : 0.8008282,
+        "staticValidationResults" : [ "TooFewUtterances", "TooFewUtterances" ],
+        "issueCount" : 6
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "languageHealth" : {
+      "key" : {
+        "overallScore" : 0.8008282,
+        "staticValidationResults" : [ "TooFewUtterances", "TooFewUtterances" ],
+        "issueCount" : 6
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "languageInfo" : {
+    "key" : {
+      "flowVersionInfo" : "{}",
+      "errorInfo" : "{}",
+      "status" : "InProgress"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter flowId: (path) Flow ID. 
+     - parameter versionId: (path) Version ID. 
+     - parameter language: (query) Language to filter for (optional)
+
+     - returns: RequestBuilder<FlowHealth> 
+     */
+    open class func getFlowVersionHealthWithRequestBuilder(flowId: String, versionId: String, language: Language_getFlowVersionHealth? = nil) -> RequestBuilder<FlowHealth> {        
+        var path = "/api/v2/flows/{flowId}/versions/{versionId}/health"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "language": language?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<FlowHealth>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Language_getFlowVersionIntentHealth: String { 
+        case enUs = "en-us"
+        case enGb = "en-gb"
+        case enAu = "en-au"
+        case enZa = "en-za"
+        case enNz = "en-nz"
+        case enIe = "en-ie"
+        case frCa = "fr-ca"
+        case frFr = "fr-fr"
+        case esUs = "es-us"
+        case esEs = "es-es"
+        case esMx = "es-mx"
+        case deDe = "de-de"
+        case itIt = "it-it"
+        case ptBr = "pt-br"
+        case ptPt = "pt-pt"
+        case nlNl = "nl-nl"
+    }
+
+    
+    /**
+     Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+     
+     - parameter flowId: (path) Flow ID. 
+     - parameter versionId: (path) Version ID. 
+     - parameter intentId: (path) Intent ID. 
+     - parameter language: (query) Language to filter for 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowVersionIntentHealth(flowId: String, versionId: String, intentId: String, language: Language_getFlowVersionIntentHealth, completion: @escaping ((_ data: FlowHealthIntent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowVersionIntentHealthWithRequestBuilder(flowId: flowId, versionId: versionId, intentId: intentId, language: language)
+        requestBuilder.execute { (response: Response<FlowHealthIntent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+     - GET /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "flowVersionInfo" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "health" : "{}",
+  "language" : "en-us",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter flowId: (path) Flow ID. 
+     - parameter versionId: (path) Version ID. 
+     - parameter intentId: (path) Intent ID. 
+     - parameter language: (query) Language to filter for 
+
+     - returns: RequestBuilder<FlowHealthIntent> 
+     */
+    open class func getFlowVersionIntentHealthWithRequestBuilder(flowId: String, versionId: String, intentId: String, language: Language_getFlowVersionIntentHealth) -> RequestBuilder<FlowHealthIntent> {        
+        var path = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let intentIdPreEscape = "\(intentId)"
+        let intentIdPostEscape = intentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{intentId}", with: intentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "language": language.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<FlowHealthIntent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Language_getFlowVersionIntentUtteranceHealth: String { 
+        case enUs = "en-us"
+        case enGb = "en-gb"
+        case enAu = "en-au"
+        case enZa = "en-za"
+        case enNz = "en-nz"
+        case enIe = "en-ie"
+        case frCa = "fr-ca"
+        case frFr = "fr-fr"
+        case esUs = "es-us"
+        case esEs = "es-es"
+        case esMx = "es-mx"
+        case deDe = "de-de"
+        case itIt = "it-it"
+        case ptBr = "pt-br"
+        case ptPt = "pt-pt"
+        case nlNl = "nl-nl"
+    }
+
+    
+    /**
+     Get health metrics associated with a specific utterance of an intent.
+     
+     - parameter flowId: (path) Flow ID. 
+     - parameter versionId: (path) Version ID. 
+     - parameter intentId: (path) Intent ID. 
+     - parameter utteranceId: (path) Utterance ID. 
+     - parameter language: (query) Language to filter for 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowVersionIntentUtteranceHealth(flowId: String, versionId: String, intentId: String, utteranceId: String, language: Language_getFlowVersionIntentUtteranceHealth, completion: @escaping ((_ data: FlowHealthUtterance?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowVersionIntentUtteranceHealthWithRequestBuilder(flowId: flowId, versionId: versionId, intentId: intentId, utteranceId: utteranceId, language: language)
+        requestBuilder.execute { (response: Response<FlowHealthUtterance>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get health metrics associated with a specific utterance of an intent.
+     - GET /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "confusionInfo" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "language" : "en-us",
+  "staticValidationResults" : [ "TooFewUtterances", "TooFewUtterances" ],
+  "outlierInfo" : "{}",
+  "id" : "id",
+  "text" : "text",
+  "issueCount" : 0
+}, statusCode=200}]
+     
+     - parameter flowId: (path) Flow ID. 
+     - parameter versionId: (path) Version ID. 
+     - parameter intentId: (path) Intent ID. 
+     - parameter utteranceId: (path) Utterance ID. 
+     - parameter language: (query) Language to filter for 
+
+     - returns: RequestBuilder<FlowHealthUtterance> 
+     */
+    open class func getFlowVersionIntentUtteranceHealthWithRequestBuilder(flowId: String, versionId: String, intentId: String, utteranceId: String, language: Language_getFlowVersionIntentUtteranceHealth) -> RequestBuilder<FlowHealthUtterance> {        
+        var path = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let intentIdPreEscape = "\(intentId)"
+        let intentIdPostEscape = intentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{intentId}", with: intentIdPostEscape, options: .literal, range: nil)
+        let utteranceIdPreEscape = "\(utteranceId)"
+        let utteranceIdPostEscape = utteranceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{utteranceId}", with: utteranceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "language": language.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<FlowHealthUtterance>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     /**
      Get flow version list

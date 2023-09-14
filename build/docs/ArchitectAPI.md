@@ -57,6 +57,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowLatestconfiguration**](ArchitectAPI.html#getFlowLatestconfiguration) | Get the latest configuration for flow |
 | [**getFlowVersion**](ArchitectAPI.html#getFlowVersion) | Get flow version |
 | [**getFlowVersionConfiguration**](ArchitectAPI.html#getFlowVersionConfiguration) | Create flow version configuration |
+| [**getFlowVersionHealth**](ArchitectAPI.html#getFlowVersionHealth) | Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. |
+| [**getFlowVersionIntentHealth**](ArchitectAPI.html#getFlowVersionIntentHealth) | Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. |
+| [**getFlowVersionIntentUtteranceHealth**](ArchitectAPI.html#getFlowVersionIntentUtteranceHealth) | Get health metrics associated with a specific utterance of an intent. |
 | [**getFlowVersions**](ArchitectAPI.html#getFlowVersions) | Get flow version list |
 | [**getFlows**](ArchitectAPI.html#getFlows) | Get a pageable list of flows, filtered by query parameters |
 | [**getFlowsDatatable**](ArchitectAPI.html#getFlowsDatatable) | Returns a specific datatable by id |
@@ -2981,6 +2984,180 @@ ArchitectAPI.getFlowVersionConfiguration(flowId: flowId, versionId: versionId, d
 ### Return type
 
 [**JSON**](JSON.html)
+
+<a name="getFlowVersionHealth"></a>
+
+# **getFlowVersionHealth**
+
+
+
+> [FlowHealth](FlowHealth.html) getFlowVersionHealth(flowId, versionId, language)
+
+Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+
+
+
+Wraps GET /api/v2/flows/{flowId}/versions/{versionId}/health  
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // Flow ID.
+let versionId: String = "" // Version ID.
+let language: ArchitectAPI.Language_getFlowVersionHealth = ArchitectAPI.Language_getFlowVersionHealth.enummember // Language to filter for
+
+// Code example
+ArchitectAPI.getFlowVersionHealth(flowId: flowId, versionId: versionId, language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowVersionHealth was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| Flow ID. | |
+| **versionId** | **String**| Version ID. | |
+| **language** | **String**| Language to filter for | [optional]<br />**Values**: enUs ("en-us"), enGb ("en-gb"), enAu ("en-au"), enZa ("en-za"), enNz ("en-nz"), enIe ("en-ie"), frCa ("fr-ca"), frFr ("fr-fr"), esUs ("es-us"), esEs ("es-es"), esMx ("es-mx"), deDe ("de-de"), itIt ("it-it"), ptBr ("pt-br"), ptPt ("pt-pt"), nlNl ("nl-nl") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowHealth**](FlowHealth.html)
+
+<a name="getFlowVersionIntentHealth"></a>
+
+# **getFlowVersionIntentHealth**
+
+
+
+> [FlowHealthIntent](FlowHealthIntent.html) getFlowVersionIntentHealth(flowId, versionId, intentId, language)
+
+Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+
+
+
+Wraps GET /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health  
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // Flow ID.
+let versionId: String = "" // Version ID.
+let intentId: String = "" // Intent ID.
+let language: ArchitectAPI.Language_getFlowVersionIntentHealth = ArchitectAPI.Language_getFlowVersionIntentHealth.enummember // Language to filter for
+
+// Code example
+ArchitectAPI.getFlowVersionIntentHealth(flowId: flowId, versionId: versionId, intentId: intentId, language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowVersionIntentHealth was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| Flow ID. | |
+| **versionId** | **String**| Version ID. | |
+| **intentId** | **String**| Intent ID. | |
+| **language** | **String**| Language to filter for |<br />**Values**: enUs ("en-us"), enGb ("en-gb"), enAu ("en-au"), enZa ("en-za"), enNz ("en-nz"), enIe ("en-ie"), frCa ("fr-ca"), frFr ("fr-fr"), esUs ("es-us"), esEs ("es-es"), esMx ("es-mx"), deDe ("de-de"), itIt ("it-it"), ptBr ("pt-br"), ptPt ("pt-pt"), nlNl ("nl-nl") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowHealthIntent**](FlowHealthIntent.html)
+
+<a name="getFlowVersionIntentUtteranceHealth"></a>
+
+# **getFlowVersionIntentUtteranceHealth**
+
+
+
+> [FlowHealthUtterance](FlowHealthUtterance.html) getFlowVersionIntentUtteranceHealth(flowId, versionId, intentId, utteranceId, language)
+
+Get health metrics associated with a specific utterance of an intent.
+
+
+
+Wraps GET /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health  
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // Flow ID.
+let versionId: String = "" // Version ID.
+let intentId: String = "" // Intent ID.
+let utteranceId: String = "" // Utterance ID.
+let language: ArchitectAPI.Language_getFlowVersionIntentUtteranceHealth = ArchitectAPI.Language_getFlowVersionIntentUtteranceHealth.enummember // Language to filter for
+
+// Code example
+ArchitectAPI.getFlowVersionIntentUtteranceHealth(flowId: flowId, versionId: versionId, intentId: intentId, utteranceId: utteranceId, language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowVersionIntentUtteranceHealth was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| Flow ID. | |
+| **versionId** | **String**| Version ID. | |
+| **intentId** | **String**| Intent ID. | |
+| **utteranceId** | **String**| Utterance ID. | |
+| **language** | **String**| Language to filter for |<br />**Values**: enUs ("en-us"), enGb ("en-gb"), enAu ("en-au"), enZa ("en-za"), enNz ("en-nz"), enIe ("en-ie"), frCa ("fr-ca"), frFr ("fr-fr"), esUs ("es-us"), esEs ("es-es"), esMx ("es-mx"), deDe ("de-de"), itIt ("it-it"), ptBr ("pt-br"), ptPt ("pt-pt"), nlNl ("nl-nl") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowHealthUtterance**](FlowHealthUtterance.html)
 
 <a name="getFlowVersions"></a>
 

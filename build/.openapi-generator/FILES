@@ -389,6 +389,7 @@ docs/BuShortTermForecastListItem.md
 docs/BuShortTermForecastListing.md
 docs/BuShortTermForecastReference.md
 docs/BuShortTermForecastingSettings.md
+docs/BuUpdateAgentScheduleShift.md
 docs/BuUpdateAgentScheduleUploadSchema.md
 docs/BulkCallbackDisconnectRequest.md
 docs/BulkCallbackPatchRequest.md
@@ -594,6 +595,11 @@ docs/Condition.md
 docs/ConditionalGroupRouting.md
 docs/ConditionalGroupRoutingRule.md
 docs/ConfigurationOverrides.md
+docs/ConfusionDetails.md
+docs/ConfusionInfo.md
+docs/ConfusionIntentDetails.md
+docs/ConfusionIntentInfo.md
+docs/ConfusionUtterance.md
 docs/ConnectRate.md
 docs/ConnectedEdge.md
 docs/ConnectedQueue.md
@@ -1498,6 +1504,14 @@ docs/FlowEndDetailEventTopicFlowEndEvent.md
 docs/FlowEntityListing.md
 docs/FlowExecutionLaunchRequest.md
 docs/FlowExecutionLaunchResponse.md
+docs/FlowHealth.md
+docs/FlowHealthErrorInfo.md
+docs/FlowHealthIntent.md
+docs/FlowHealthIntentInfo.md
+docs/FlowHealthIntentUtterance.md
+docs/FlowHealthIntentVersionInfo.md
+docs/FlowHealthUtterance.md
+docs/FlowHealthVersionInfo.md
 docs/FlowMetricsTopicFlowMetricRecord.md
 docs/FlowMetricsTopicFlowOutcome.md
 docs/FlowMetricsTopicFlowProposedAgent.md
@@ -1606,6 +1620,7 @@ docs/GuestMemberInfo.md
 docs/GuestResponseCategory.md
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
+docs/HealthInfo.md
 docs/HelpLink.md
 docs/HelpSettings.md
 docs/HistoricalAdherenceActuals.md
@@ -1983,6 +1998,7 @@ docs/LearningModuleInformStep.md
 docs/LearningModuleInformStepRequest.md
 docs/LearningModuleJobRequest.md
 docs/LearningModuleJobResponse.md
+docs/LearningModulePublishRequest.md
 docs/LearningModulePublishResponse.md
 docs/LearningModuleReassignSummary.md
 docs/LearningModuleRequest.md
@@ -2037,6 +2053,9 @@ docs/ListedTopic.md
 docs/LocalDateRange.md
 docs/LocalEncryptionConfiguration.md
 docs/LocalEncryptionKeyRequest.md
+docs/LocaleFlowVersionInfo.md
+docs/LocaleHealth.md
+docs/LocaleInfo.md
 docs/LocalizedLabels.md
 docs/Location.md
 docs/LocationAddress.md
@@ -2324,6 +2343,7 @@ docs/OutcomeQuantileCondition.md
 docs/OutcomeRef.md
 docs/OutcomeRefRequest.md
 docs/OutcomeScoresResult.md
+docs/OutlierInfo.md
 docs/OverallBestPoints.md
 docs/OverallBestPointsItem.md
 docs/PINConfiguration.md
@@ -4389,6 +4409,9 @@ docs/getFlowHistoryHistoryId-example.txt
 docs/getFlowLatestconfiguration-example.txt
 docs/getFlowVersion-example.txt
 docs/getFlowVersionConfiguration-example.txt
+docs/getFlowVersionHealth-example.txt
+docs/getFlowVersionIntentHealth-example.txt
+docs/getFlowVersionIntentUtteranceHealth-example.txt
 docs/getFlowVersions-example.txt
 docs/getFlows-example.txt
 docs/getFlowsDatatable-example.txt
@@ -6459,6 +6482,7 @@ src/Models/BuShortTermForecastListItem.swift
 src/Models/BuShortTermForecastListing.swift
 src/Models/BuShortTermForecastReference.swift
 src/Models/BuShortTermForecastingSettings.swift
+src/Models/BuUpdateAgentScheduleShift.swift
 src/Models/BuUpdateAgentScheduleUploadSchema.swift
 src/Models/BulkCallbackDisconnectRequest.swift
 src/Models/BulkCallbackPatchRequest.swift
@@ -6658,6 +6682,11 @@ src/Models/Condition.swift
 src/Models/ConditionalGroupRouting.swift
 src/Models/ConditionalGroupRoutingRule.swift
 src/Models/ConfigurationOverrides.swift
+src/Models/ConfusionDetails.swift
+src/Models/ConfusionInfo.swift
+src/Models/ConfusionIntentDetails.swift
+src/Models/ConfusionIntentInfo.swift
+src/Models/ConfusionUtterance.swift
 src/Models/ConnectRate.swift
 src/Models/ConnectedEdge.swift
 src/Models/ConnectedQueue.swift
@@ -7546,6 +7575,14 @@ src/Models/FlowEndDetailEventTopicFlowEndEvent.swift
 src/Models/FlowEntityListing.swift
 src/Models/FlowExecutionLaunchRequest.swift
 src/Models/FlowExecutionLaunchResponse.swift
+src/Models/FlowHealth.swift
+src/Models/FlowHealthErrorInfo.swift
+src/Models/FlowHealthIntent.swift
+src/Models/FlowHealthIntentInfo.swift
+src/Models/FlowHealthIntentUtterance.swift
+src/Models/FlowHealthIntentVersionInfo.swift
+src/Models/FlowHealthUtterance.swift
+src/Models/FlowHealthVersionInfo.swift
 src/Models/FlowMetricsTopicFlowMetricRecord.swift
 src/Models/FlowMetricsTopicFlowOutcome.swift
 src/Models/FlowMetricsTopicFlowProposedAgent.swift
@@ -7642,6 +7679,7 @@ src/Models/GuestMemberInfo.swift
 src/Models/GuestResponseCategory.swift
 src/Models/HeadcountForecast.swift
 src/Models/HeadcountInterval.swift
+src/Models/HealthInfo.swift
 src/Models/HelpLink.swift
 src/Models/HelpSettings.swift
 src/Models/HistoricalAdherenceActuals.swift
@@ -8003,6 +8041,7 @@ src/Models/LearningModuleInformStep.swift
 src/Models/LearningModuleInformStepRequest.swift
 src/Models/LearningModuleJobRequest.swift
 src/Models/LearningModuleJobResponse.swift
+src/Models/LearningModulePublishRequest.swift
 src/Models/LearningModulePublishResponse.swift
 src/Models/LearningModuleReassignSummary.swift
 src/Models/LearningModuleRequest.swift
@@ -8055,6 +8094,9 @@ src/Models/ListedTopic.swift
 src/Models/LocalDateRange.swift
 src/Models/LocalEncryptionConfiguration.swift
 src/Models/LocalEncryptionKeyRequest.swift
+src/Models/LocaleFlowVersionInfo.swift
+src/Models/LocaleHealth.swift
+src/Models/LocaleInfo.swift
 src/Models/LocalizedLabels.swift
 src/Models/Location.swift
 src/Models/LocationAddress.swift
@@ -8326,6 +8368,7 @@ src/Models/OutcomeQuantileCondition.swift
 src/Models/OutcomeRef.swift
 src/Models/OutcomeRefRequest.swift
 src/Models/OutcomeScoresResult.swift
+src/Models/OutlierInfo.swift
 src/Models/OverallBestPoints.swift
 src/Models/OverallBestPointsItem.swift
 src/Models/PINConfiguration.swift

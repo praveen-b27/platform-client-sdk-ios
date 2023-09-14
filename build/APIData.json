@@ -2448,6 +2448,93 @@
     "return": "JSON",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowId: String = \"\" // Flow ID\nlet versionId: String = \"\" // Version ID\nlet deleted: String = \"\" // Deleted flows\n\n// Create flow version configuration\nGetFlowVersionConfigurationRequest.getFlowVersionConfiguration(flowId: flowId, versionId: versionId, deleted: deleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowVersionConfigurationRequest.getFlowVersionConfiguration was successful\")\n        dump(response)\n    }\n}"
   },
+  "getflowversionhealth": {
+    "operationId": "getflowversionhealth",
+    "functionName": "getFlowVersionHealth",
+    "signature": "getFlowVersionHealth(flowId, versionId, language)",
+    "parameters": [
+      {
+        "name": "flowId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "language",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "FlowHealth",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowId: String = \"\" // Flow ID.\nlet versionId: String = \"\" // Version ID.\nlet language: GetFlowVersionHealthRequest.Language_getFlowVersionHealth = GetFlowVersionHealthRequest.Language_getFlowVersionHealth.enummember // Language to filter for\n\n// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.\nGetFlowVersionHealthRequest.getFlowVersionHealth(flowId: flowId, versionId: versionId, language: language) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowVersionHealthRequest.getFlowVersionHealth was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getflowversionintenthealth": {
+    "operationId": "getflowversionintenthealth",
+    "functionName": "getFlowVersionIntentHealth",
+    "signature": "getFlowVersionIntentHealth(flowId, versionId, intentId, language)",
+    "parameters": [
+      {
+        "name": "flowId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "intentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "language",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "FlowHealthIntent",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowId: String = \"\" // Flow ID.\nlet versionId: String = \"\" // Version ID.\nlet intentId: String = \"\" // Intent ID.\nlet language: GetFlowVersionIntentHealthRequest.Language_getFlowVersionIntentHealth = GetFlowVersionIntentHealthRequest.Language_getFlowVersionIntentHealth.enummember // Language to filter for\n\n// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.\nGetFlowVersionIntentHealthRequest.getFlowVersionIntentHealth(flowId: flowId, versionId: versionId, intentId: intentId, language: language) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowVersionIntentHealthRequest.getFlowVersionIntentHealth was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getflowversionintentutterancehealth": {
+    "operationId": "getflowversionintentutterancehealth",
+    "functionName": "getFlowVersionIntentUtteranceHealth",
+    "signature": "getFlowVersionIntentUtteranceHealth(flowId, versionId, intentId, utteranceId, language)",
+    "parameters": [
+      {
+        "name": "flowId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "intentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "utteranceId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "language",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "FlowHealthUtterance",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowId: String = \"\" // Flow ID.\nlet versionId: String = \"\" // Version ID.\nlet intentId: String = \"\" // Intent ID.\nlet utteranceId: String = \"\" // Utterance ID.\nlet language: GetFlowVersionIntentUtteranceHealthRequest.Language_getFlowVersionIntentUtteranceHealth = GetFlowVersionIntentUtteranceHealthRequest.Language_getFlowVersionIntentUtteranceHealth.enummember // Language to filter for\n\n// Get health metrics associated with a specific utterance of an intent.\nGetFlowVersionIntentUtteranceHealthRequest.getFlowVersionIntentUtteranceHealth(flowId: flowId, versionId: versionId, intentId: intentId, utteranceId: utteranceId, language: language) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowVersionIntentUtteranceHealthRequest.getFlowVersionIntentUtteranceHealth was successful\")\n        dump(response)\n    }\n}"
+  },
   "getflowversions": {
     "operationId": "getflowversions",
     "functionName": "getFlowVersions",
@@ -19826,16 +19913,21 @@
   "postlearningmodulepublish": {
     "operationId": "postlearningmodulepublish",
     "functionName": "postLearningModulePublish",
-    "signature": "postLearningModulePublish(moduleId)",
+    "signature": "postLearningModulePublish(moduleId, body)",
     "parameters": [
       {
         "name": "moduleId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "LearningModulePublishRequest",
+        "required": "false"
       }
     ],
     "return": "LearningModulePublishResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // The ID of the learning module\n\n// Publish a Learning module\nPostLearningModulePublishRequest.postLearningModulePublish(moduleId: moduleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningModulePublishRequest.postLearningModulePublish was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // The ID of the learning module\nlet body: LearningModulePublishRequest = new LearningModulePublishRequest(...) // The request body\n\n// Publish a Learning module\nPostLearningModulePublishRequest.postLearningModulePublish(moduleId: moduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningModulePublishRequest.postLearningModulePublish was successful\")\n        dump(response)\n    }\n}"
   },
   "postlearningmodules": {
     "operationId": "postlearningmodules",

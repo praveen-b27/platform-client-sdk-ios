@@ -44,10 +44,12 @@ public class ContactList: Codable {
     public var zipCodeColumnName: String?
     /** The settings of the columns selected for dynamic queueing */
     public var columnDataTypeSpecifications: [ColumnDataTypeSpecification]?
+    /** Whether to trim white space when importing a contactlist csv file, default value = true */
+    public var trimWhitespace: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, columnDataTypeSpecifications: [ColumnDataTypeSpecification]?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, columnDataTypeSpecifications: [ColumnDataTypeSpecification]?, trimWhitespace: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -65,6 +67,7 @@ public class ContactList: Codable {
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
         self.zipCodeColumnName = zipCodeColumnName
         self.columnDataTypeSpecifications = columnDataTypeSpecifications
+        self.trimWhitespace = trimWhitespace
         self.selfUri = selfUri
     }
 
@@ -86,6 +89,7 @@ public class ContactList: Codable {
         case automaticTimeZoneMapping
         case zipCodeColumnName
         case columnDataTypeSpecifications
+        case trimWhitespace
         case selfUri
     }
 

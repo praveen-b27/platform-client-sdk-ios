@@ -2206,14 +2206,16 @@ open class LearningAPI {
     }
 
     
+    
     /**
      Publish a Learning module
      
      - parameter moduleId: (path) The ID of the learning module 
+     - parameter body: (body) The request body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLearningModulePublish(moduleId: String, completion: @escaping ((_ data: LearningModulePublishResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postLearningModulePublishWithRequestBuilder(moduleId: moduleId)
+    open class func postLearningModulePublish(moduleId: String, body: LearningModulePublishRequest? = nil, completion: @escaping ((_ data: LearningModulePublishResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningModulePublishWithRequestBuilder(moduleId: moduleId, body: body)
         requestBuilder.execute { (response: Response<LearningModulePublishResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -2243,17 +2245,18 @@ open class LearningAPI {
 }, statusCode=200}]
      
      - parameter moduleId: (path) The ID of the learning module 
+     - parameter body: (body) The request body (optional)
 
      - returns: RequestBuilder<LearningModulePublishResponse> 
      */
-    open class func postLearningModulePublishWithRequestBuilder(moduleId: String) -> RequestBuilder<LearningModulePublishResponse> {        
+    open class func postLearningModulePublishWithRequestBuilder(moduleId: String, body: LearningModulePublishRequest? = nil) -> RequestBuilder<LearningModulePublishResponse> {        
         var path = "/api/v2/learning/modules/{moduleId}/publish"
         let moduleIdPreEscape = "\(moduleId)"
         let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{moduleId}", with: moduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModulePublishResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

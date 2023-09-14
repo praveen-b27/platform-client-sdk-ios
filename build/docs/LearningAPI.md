@@ -1298,7 +1298,7 @@ LearningAPI.postLearningModuleJobs(moduleId: moduleId, body: body) { (response, 
 
 
 
-> [LearningModulePublishResponse](LearningModulePublishResponse.html) postLearningModulePublish(moduleId)
+> [LearningModulePublishResponse](LearningModulePublishResponse.html) postLearningModulePublish(moduleId, body)
 
 Publish a Learning module
 
@@ -1319,9 +1319,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let moduleId: String = "" // The ID of the learning module
+let body: LearningModulePublishRequest = new LearningModulePublishRequest(...) // The request body
 
 // Code example
-LearningAPI.postLearningModulePublish(moduleId: moduleId) { (response, error) in
+LearningAPI.postLearningModulePublish(moduleId: moduleId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1337,6 +1338,7 @@ LearningAPI.postLearningModulePublish(moduleId: moduleId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **moduleId** | **String**| The ID of the learning module | |
+| **body** | [**LearningModulePublishRequest**](LearningModulePublishRequest.html)| The request body | [optional] |
 {: class="table-striped"}
 
 

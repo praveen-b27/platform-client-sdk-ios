@@ -23,14 +23,17 @@ public class CampaignDiagnostics: Codable {
     public var scheduledInteractionsCount: Int?
     /** Current number of time zone rescheduled calls on the campaign */
     public var timeZoneRescheduledCallsCount: Int?
+    /** Information regarding the campaign's skills */
+    public var campaignSkillStatistics: CampaignSkillStatistics?
 
-    public init(callableContacts: CallableContactsDiagnostic?, queueUtilizationDiagnostic: QueueUtilizationDiagnostic?, ruleSetDiagnostics: [RuleSetDiagnostic]?, outstandingInteractionsCount: Int?, scheduledInteractionsCount: Int?, timeZoneRescheduledCallsCount: Int?) {
+    public init(callableContacts: CallableContactsDiagnostic?, queueUtilizationDiagnostic: QueueUtilizationDiagnostic?, ruleSetDiagnostics: [RuleSetDiagnostic]?, outstandingInteractionsCount: Int?, scheduledInteractionsCount: Int?, timeZoneRescheduledCallsCount: Int?, campaignSkillStatistics: CampaignSkillStatistics?) {
         self.callableContacts = callableContacts
         self.queueUtilizationDiagnostic = queueUtilizationDiagnostic
         self.ruleSetDiagnostics = ruleSetDiagnostics
         self.outstandingInteractionsCount = outstandingInteractionsCount
         self.scheduledInteractionsCount = scheduledInteractionsCount
         self.timeZoneRescheduledCallsCount = timeZoneRescheduledCallsCount
+        self.campaignSkillStatistics = campaignSkillStatistics
     }
 
 

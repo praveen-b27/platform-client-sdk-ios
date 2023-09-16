@@ -8287,6 +8287,7 @@ open class RecordingAPI {
     
     
     public enum JobType_getRecordingJobs: String { 
+        case archive = "ARCHIVE"
         case delete = "DELETE"
         case export = "EXPORT"
     }

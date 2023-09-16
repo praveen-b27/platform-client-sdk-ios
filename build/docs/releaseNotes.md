@@ -1,125 +1,56 @@
-Platform API version: 7336
+Platform API version: 7347
 
 
-# Major Changes (2 changes)
+# Major Changes (1 change)
 
-**POST /api/v2/learning/modules/{moduleId}/publish** (1 change)
+**MessagingCampaign** (1 change)
 
-* Parameter body was added
-
-**BuUpdateAgentScheduleUploadSchema** (1 change)
-
-* Property shifts was changed from BuAgentScheduleShift[] to BuUpdateAgentScheduleShift[]
+* Enum value forced_stopping was removed from property campaignStatus
 
 
-# Minor Changes (29 changes)
+# Minor Changes (12 changes)
 
-**/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health** (2 changes)
+**CallbackMediaSettings** (2 changes)
 
-* Path was added
-* Operation GET was added
+* Optional property autoAnswerAlertToneSeconds was added
+* Optional property manualAnswerAlertToneSeconds was added
 
-**/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health** (2 changes)
+**MediaSettings** (2 changes)
 
-* Path was added
-* Operation GET was added
+* Optional property autoAnswerAlertToneSeconds was added
+* Optional property manualAnswerAlertToneSeconds was added
 
-**/api/v2/flows/{flowId}/versions/{versionId}/health** (2 changes)
+**CampaignDiagnostics** (1 change)
 
-* Path was added
-* Operation GET was added
+* Optional property campaignSkillStatistics was added
 
-**AnalyticsReportingSettings** (1 change)
-
-* Optional property myInteractionsPiiMaskingEnabled was added
-
-**MessageMediaParticipant** (1 change)
-
-* Optional property monitoredParticipant was added
-
-**ContactList** (1 change)
-
-* Optional property trimWhitespace was added
-
-**ConfusionInfo** (1 change)
+**CampaignSkillStatistics** (1 change)
 
 * Model was added
 
-**ConfusionIntentInfo** (1 change)
+**InsightsSummaryUserItem** (1 change)
+
+* Optional property ranking was added
+
+**DetectedNamedEntityValue** (1 change)
+
+* Optional property unit was added
+
+**RecordingJobsQuery** (1 change)
+
+* Enum value ARCHIVE was added to property action
+
+**AlertSummary** (1 change)
 
 * Model was added
 
-**FlowHealthErrorInfo** (1 change)
+**AlertSummaryEntity** (1 change)
 
 * Model was added
 
-**FlowHealthIntent** (1 change)
+**CommonAlert** (1 change)
 
-* Model was added
-
-**FlowHealthIntentUtterance** (1 change)
-
-* Model was added
-
-**FlowHealthIntentVersionInfo** (1 change)
-
-* Model was added
-
-**HealthInfo** (1 change)
-
-* Model was added
-
-**OutlierInfo** (1 change)
-
-* Model was added
-
-**ConfusionDetails** (1 change)
-
-* Model was added
-
-**ConfusionIntentDetails** (1 change)
-
-* Model was added
-
-**ConfusionUtterance** (1 change)
-
-* Model was added
-
-**FlowHealthUtterance** (1 change)
-
-* Model was added
-
-**FlowHealth** (1 change)
-
-* Model was added
-
-**FlowHealthIntentInfo** (1 change)
-
-* Model was added
-
-**FlowHealthVersionInfo** (1 change)
-
-* Model was added
-
-**LocaleFlowVersionInfo** (1 change)
-
-* Model was added
-
-**LocaleHealth** (1 change)
-
-* Model was added
-
-**LocaleInfo** (1 change)
-
-* Model was added
-
-**LearningModulePublishRequest** (1 change)
-
-* Model was added
-
-**BuUpdateAgentScheduleShift** (1 change)
-
-* Model was added
+* Optional property alertSummary was added
 
 
 # Point Changes (0 changes)

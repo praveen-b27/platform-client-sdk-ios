@@ -290,12 +290,13 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "division" : "{}",
-  "total" : 5,
-  "pageCount" : 2,
+  "total" : 2,
+  "pageCount" : 7,
   "pageNumber" : 5,
   "performanceProfile" : "{}",
   "entities" : [ {
     "overallData" : "{}",
+    "ranking" : 1,
     "user" : "{}",
     "metricData" : [ {
       "percentOfGoalChange" : 0.8008281904610115,
@@ -312,6 +313,7 @@ open class GamificationAPI {
     } ]
   }, {
     "overallData" : "{}",
+    "ranking" : 1,
     "user" : "{}",
     "metricData" : [ {
       "percentOfGoalChange" : 0.8008281904610115,
@@ -329,7 +331,7 @@ open class GamificationAPI {
   } ],
   "granularity" : "Daily",
   "comparativePeriod" : "{}",
-  "pageSize" : 1,
+  "pageSize" : 5,
   "primaryPeriod" : "{}"
 }, statusCode=200}]
      

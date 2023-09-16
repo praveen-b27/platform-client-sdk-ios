@@ -15,13 +15,17 @@ public class MediaSettings: Codable {
     public var enableAutoAnswer: Bool?
     public var alertingTimeoutSeconds: Int?
     public var serviceLevel: ServiceLevel?
+    public var autoAnswerAlertToneSeconds: Double?
+    public var manualAnswerAlertToneSeconds: Double?
     /** Map of media subtype to media subtype specific settings. */
     public var subTypeSettings: [String:BaseMediaSettings]?
 
-    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, subTypeSettings: [String:BaseMediaSettings]?) {
+    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, subTypeSettings: [String:BaseMediaSettings]?) {
         self.enableAutoAnswer = enableAutoAnswer
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.serviceLevel = serviceLevel
+        self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
+        self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
         self.subTypeSettings = subTypeSettings
     }
 

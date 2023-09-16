@@ -25,7 +25,7 @@ public class ContactListFilter: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
-    /** The contact list the filter is based on. */
+    /** The contact list the filter is based on. Required if sourceType is ContactList */
     public var contactList: DomainEntityRef?
     /** Groups of conditions to filter the contacts by. */
     public var clauses: [ContactListFilterClause]?

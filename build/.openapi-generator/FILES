@@ -118,6 +118,8 @@ docs/AlertListing.md
 docs/AlertNotification.md
 docs/AlertRequest.md
 docs/AlertRuleProperties.md
+docs/AlertSummary.md
+docs/AlertSummaryEntity.md
 docs/AlertingAPI.json
 docs/AlertingAPI.md
 docs/AlertingUnreadStatus.md
@@ -499,6 +501,7 @@ docs/CampaignRuleParameters.md
 docs/CampaignSchedule.md
 docs/CampaignSequence.md
 docs/CampaignSequenceEntityListing.md
+docs/CampaignSkillStatistics.md
 docs/CampaignStats.md
 docs/CampaignTimeSlot.md
 docs/Card.md
@@ -6223,6 +6226,8 @@ src/Models/AlertListing.swift
 src/Models/AlertNotification.swift
 src/Models/AlertRequest.swift
 src/Models/AlertRuleProperties.swift
+src/Models/AlertSummary.swift
+src/Models/AlertSummaryEntity.swift
 src/Models/AlertingUnreadStatus.swift
 src/Models/AllTimePoints.swift
 src/Models/AmazonLexRequest.swift
@@ -6592,6 +6597,7 @@ src/Models/CampaignRuleParameters.swift
 src/Models/CampaignSchedule.swift
 src/Models/CampaignSequence.swift
 src/Models/CampaignSequenceEntityListing.swift
+src/Models/CampaignSkillStatistics.swift
 src/Models/CampaignStats.swift
 src/Models/CampaignTimeSlot.swift
 src/Models/Card.swift

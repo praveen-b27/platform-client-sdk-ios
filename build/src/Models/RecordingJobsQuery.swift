@@ -12,10 +12,11 @@ import Foundation
 public class RecordingJobsQuery: Codable {
 
     public enum Action: String, Codable { 
+        case archive = "ARCHIVE"
         case delete = "DELETE"
         case export = "EXPORT"
     }
-    /** Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. */
+    /** Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported */
     public var action: Action?
     /** The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var actionDate: Date?
@@ -31,7 +32,7 @@ public class RecordingJobsQuery: Codable {
     public var includeRecordingsWithSensitiveData: Bool?
     /** Whether to include Screen recordings for the action, default value = true  */
     public var includeScreenRecordings: Bool?
-    /** For DELETE action, setting this to true will clear any pending exports for recordings. This field is not used for EXPORT action. Default value = false */
+    /** For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false */
     public var clearExport: Bool?
     /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability */
     public var conversationQuery: AsyncConversationQuery?

@@ -42,11 +42,13 @@ public class CommonAlert: Codable {
     public var conditions: CommonRuleConditions?
     /** The id of the conversation instance that caused the alert to trigger. */
     public var conversationId: String?
+    /** Summary of the alert status of the entities defined in the conditions.  Is set when rule has instance-based or team member based rule predicates */
+    public var alertSummary: AlertSummary?
     public var ruleUri: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: UserReference?, rule: AlertRuleProperties?, notifications: [AlertNotification]?, dateStart: Date?, dateEnd: Date?, active: Bool?, unread: Bool?, waitBetweenNotificationMs: Int64?, muted: Bool?, snoozed: Bool?, dateMutedUntil: Date?, dateSnoozedUntil: Date?, conditions: CommonRuleConditions?, conversationId: String?, ruleUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: UserReference?, rule: AlertRuleProperties?, notifications: [AlertNotification]?, dateStart: Date?, dateEnd: Date?, active: Bool?, unread: Bool?, waitBetweenNotificationMs: Int64?, muted: Bool?, snoozed: Bool?, dateMutedUntil: Date?, dateSnoozedUntil: Date?, conditions: CommonRuleConditions?, conversationId: String?, alertSummary: AlertSummary?, ruleUri: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.user = user
@@ -63,6 +65,7 @@ public class CommonAlert: Codable {
         self.dateSnoozedUntil = dateSnoozedUntil
         self.conditions = conditions
         self.conversationId = conversationId
+        self.alertSummary = alertSummary
         self.ruleUri = ruleUri
         self.selfUri = selfUri
     }
@@ -84,6 +87,7 @@ public class CommonAlert: Codable {
         case dateSnoozedUntil
         case conditions
         case conversationId
+        case alertSummary
         case ruleUri
         case selfUri
     }

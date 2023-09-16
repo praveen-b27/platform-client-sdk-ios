@@ -4051,7 +4051,7 @@ RoutingAPI.getRoutingWrapupcode(codeId: codeId) { (response, error) in
 
 
 
-> [WrapupCodeEntityListing](WrapupCodeEntityListing.html) getRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, _id, name, divisionId)
+> [WrapupCodeEntityListing](WrapupCodeEntityListing.html) getRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, name, _id, divisionId)
 
 Get list of wrapup codes.
 
@@ -4075,12 +4075,12 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let sortBy: RoutingAPI.SortBy_getRoutingWrapupcodes = RoutingAPI.SortBy_getRoutingWrapupcodes.enummember // Sort by
 let sortOrder: RoutingAPI.SortOrder_getRoutingWrapupcodes = RoutingAPI.SortOrder_getRoutingWrapupcodes.enummember // Sort order
-let _id: [String] = [""] // Filter by wrapup code ID(s)
 let name: String = "" // Wrapup code's name ('Sort by' param is ignored unless this field is provided)
+let _id: [String] = [""] // Filter by wrapup code ID(s)
 let divisionId: [String] = [""] // Filter by division ID(s)
 
 // Code example
-RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4099,8 +4099,8 @@ RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sor
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name"), _id ("id") |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **_id** | [**[String]**](String.html)| Filter by wrapup code ID(s) | [optional] |
 | **name** | **String**| Wrapup code's name ('Sort by' param is ignored unless this field is provided) | [optional] |
+| **_id** | [**[String]**](String.html)| Filter by wrapup code ID(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Filter by division ID(s) | [optional] |
 {: class="table-striped"}
 

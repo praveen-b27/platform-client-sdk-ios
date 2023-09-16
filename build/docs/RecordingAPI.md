@@ -1314,7 +1314,7 @@ RecordingAPI.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: userid ("userId"), datecreated ("dateCreated") |
 | **state** | **String**| Filter by state | [optional]<br />**Values**: fulfilled ("FULFILLED"), pending ("PENDING"), ready ("READY"), processing ("PROCESSING"), cancelled ("CANCELLED"), failed ("FAILED") |
 | **showOnlyMyJobs** | **Bool**| Show only my jobs | [optional] |
-| **jobType** | **String**| Job Type (Can be left empty for both) | [optional]<br />**Values**: delete ("DELETE"), export ("EXPORT") |
+| **jobType** | **String**| Job Type (Can be left empty for both) | [optional]<br />**Values**: archive ("ARCHIVE"), delete ("DELETE"), export ("EXPORT") |
 | **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 {: class="table-striped"}

@@ -7,8 +7,8 @@ title: AnalyticsConversationQueryResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **aggregations** | [**[AggregationResult]**](AggregationResult.html) |  | [optional] |
 | **conversations** | [**[AnalyticsConversationWithoutAttributes]**](AnalyticsConversationWithoutAttributes.html) |  | [optional] |
+| **aggregations** | [**[AggregationResult]**](AggregationResult.html) |  | [optional] |
 | **totalHits** | **Int** |  | [optional] |
 {: class="table table-striped"}
 

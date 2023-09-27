@@ -40,12 +40,18 @@ public class KnowledgeBaseCreateRequest: Codable {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
     /** Knowledge base name */
     public var name: String?
     /** Knowledge base description */
     public var _description: String?
-    /** Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes */
+    /** Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy. */
     public var coreLanguage: CoreLanguage?
 
     public init(name: String?, _description: String?, coreLanguage: CoreLanguage?) {

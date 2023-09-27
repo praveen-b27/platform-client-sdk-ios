@@ -1238,7 +1238,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), frCa ("fr-CA"), frFr ("fr-FR"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), daDk ("da-DK"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), fiFi ("fi-FI"), frCa ("fr-CA"), frFr ("fr-FR"), heIl ("he-IL"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nbNo ("nb-NO"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT"), svSe ("sv-SE") |
 {: class="table-striped"}
 
 
@@ -1290,7 +1290,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneralStatus(dialect: dia
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), frCa ("fr-CA"), frFr ("fr-FR"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), daDk ("da-DK"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), fiFi ("fi-FI"), frCa ("fr-CA"), frFr ("fr-FR"), heIl ("he-IL"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nbNo ("nb-NO"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT"), svSe ("sv-SE") |
 {: class="table-striped"}
 
 

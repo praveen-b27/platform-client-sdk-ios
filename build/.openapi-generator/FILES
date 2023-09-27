@@ -3524,6 +3524,7 @@ docs/UsersSearchResponse.md
 docs/UtilitiesAPI.json
 docs/UtilitiesAPI.md
 docs/Utilization.md
+docs/UtilizationLabel.md
 docs/Utterance.md
 docs/V2ConversationMessageTypingEventForUserTopicConversationButtonComponent.md
 docs/V2ConversationMessageTypingEventForUserTopicConversationContentActions.md
@@ -9505,6 +9506,7 @@ src/Models/UserTokensTopicUriReference.swift
 src/Models/UserTransferEvent.swift
 src/Models/UsersSearchResponse.swift
 src/Models/Utilization.swift
+src/Models/UtilizationLabel.swift
 src/Models/Utterance.swift
 src/Models/V2ConversationMessageTypingEventForUserTopicConversationButtonComponent.swift
 src/Models/V2ConversationMessageTypingEventForUserTopicConversationContentActions.swift

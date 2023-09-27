@@ -448,6 +448,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -553,6 +559,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -679,6 +691,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3176,6 +3194,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3312,6 +3336,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3437,6 +3467,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3563,6 +3599,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3772,6 +3814,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3881,6 +3929,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -3988,6 +4042,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -4528,6 +4588,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -5325,6 +5391,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -5453,6 +5525,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -5582,6 +5660,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -5742,6 +5826,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -7118,6 +7208,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -7240,6 +7336,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -7364,6 +7466,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -7470,6 +7578,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     
@@ -7577,6 +7691,12 @@ open class KnowledgeAPI {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
 
     

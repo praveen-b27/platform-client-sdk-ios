@@ -9,6 +9,7 @@ title: InsightsAgentItem
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
+| **manager** | [**DomainEntityRef**](DomainEntityRef.html) | This user&#39;s manager. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

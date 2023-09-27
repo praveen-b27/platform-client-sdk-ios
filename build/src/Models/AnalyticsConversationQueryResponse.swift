@@ -11,13 +11,13 @@ import Foundation
 
 public class AnalyticsConversationQueryResponse: Codable {
 
-    public var aggregations: [AggregationResult]?
     public var conversations: [AnalyticsConversationWithoutAttributes]?
+    public var aggregations: [AggregationResult]?
     public var totalHits: Int?
 
-    public init(aggregations: [AggregationResult]?, conversations: [AnalyticsConversationWithoutAttributes]?, totalHits: Int?) {
-        self.aggregations = aggregations
+    public init(conversations: [AnalyticsConversationWithoutAttributes]?, aggregations: [AggregationResult]?, totalHits: Int?) {
         self.conversations = conversations
+        self.aggregations = aggregations
         self.totalHits = totalHits
     }
 

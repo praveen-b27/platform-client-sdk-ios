@@ -40,6 +40,12 @@ public class KnowledgeSearchDocument: Codable {
         case nlNl = "nl-NL"
         case nlBe = "nl-BE"
         case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
     }
     public enum ModelType: String, Codable { 
         case faq = "Faq"

@@ -1,56 +1,89 @@
-Platform API version: 7347
+Platform API version: 7364
 
 
-# Major Changes (1 change)
-
-**MessagingCampaign** (1 change)
-
-* Enum value forced_stopping was removed from property campaignStatus
+# Major Changes (0 changes)
 
 
-# Minor Changes (12 changes)
+# Minor Changes (49 changes)
 
-**CallbackMediaSettings** (2 changes)
+**InsightsAgentItem** (1 change)
 
-* Optional property autoAnswerAlertToneSeconds was added
-* Optional property manualAnswerAlertToneSeconds was added
+* Optional property manager was added
 
-**MediaSettings** (2 changes)
+**KnowledgeBase** (6 changes)
 
-* Optional property autoAnswerAlertToneSeconds was added
-* Optional property manualAnswerAlertToneSeconds was added
+* Enum value ca-ES was added to property coreLanguage
+* Enum value tr-TR was added to property coreLanguage
+* Enum value sv-SE was added to property coreLanguage
+* Enum value fi-FI was added to property coreLanguage
+* Enum value nb-NO was added to property coreLanguage
+* Enum value da-DK was added to property coreLanguage
 
-**CampaignDiagnostics** (1 change)
+**KnowledgeCategory** (6 changes)
 
-* Optional property campaignSkillStatistics was added
+* Enum value ca-ES was added to property languageCode
+* Enum value tr-TR was added to property languageCode
+* Enum value sv-SE was added to property languageCode
+* Enum value fi-FI was added to property languageCode
+* Enum value nb-NO was added to property languageCode
+* Enum value da-DK was added to property languageCode
 
-**CampaignSkillStatistics** (1 change)
+**KnowledgeSearchDocument** (6 changes)
+
+* Enum value ca-ES was added to property languageCode
+* Enum value tr-TR was added to property languageCode
+* Enum value sv-SE was added to property languageCode
+* Enum value fi-FI was added to property languageCode
+* Enum value nb-NO was added to property languageCode
+* Enum value da-DK was added to property languageCode
+
+**KnowledgeExtendedCategory** (6 changes)
+
+* Enum value ca-ES was added to property languageCode
+* Enum value tr-TR was added to property languageCode
+* Enum value sv-SE was added to property languageCode
+* Enum value fi-FI was added to property languageCode
+* Enum value nb-NO was added to property languageCode
+* Enum value da-DK was added to property languageCode
+
+**KnowledgeImport** (6 changes)
+
+* Enum value ca-ES was added to property languageCode
+* Enum value tr-TR was added to property languageCode
+* Enum value sv-SE was added to property languageCode
+* Enum value fi-FI was added to property languageCode
+* Enum value nb-NO was added to property languageCode
+* Enum value da-DK was added to property languageCode
+
+**KnowledgeDocument** (6 changes)
+
+* Enum value ca-ES was added to property languageCode
+* Enum value tr-TR was added to property languageCode
+* Enum value sv-SE was added to property languageCode
+* Enum value fi-FI was added to property languageCode
+* Enum value nb-NO was added to property languageCode
+* Enum value da-DK was added to property languageCode
+
+**KnowledgeBaseCreateRequest** (6 changes)
+
+* Enum value ca-ES was added to property coreLanguage
+* Enum value tr-TR was added to property coreLanguage
+* Enum value sv-SE was added to property coreLanguage
+* Enum value fi-FI was added to property coreLanguage
+* Enum value nb-NO was added to property coreLanguage
+* Enum value da-DK was added to property coreLanguage
+
+**UtilizationLabel** (1 change)
 
 * Model was added
 
-**InsightsSummaryUserItem** (1 change)
+**GeneralProgramJobRequest** (5 changes)
 
-* Optional property ranking was added
-
-**DetectedNamedEntityValue** (1 change)
-
-* Optional property unit was added
-
-**RecordingJobsQuery** (1 change)
-
-* Enum value ARCHIVE was added to property action
-
-**AlertSummary** (1 change)
-
-* Model was added
-
-**AlertSummaryEntity** (1 change)
-
-* Model was added
-
-**CommonAlert** (1 change)
-
-* Optional property alertSummary was added
+* Enum value da-DK was added to property dialect
+* Enum value fi-FI was added to property dialect
+* Enum value he-IL was added to property dialect
+* Enum value nb-NO was added to property dialect
+* Enum value sv-SE was added to property dialect
 
 
 # Point Changes (0 changes)

@@ -181,8 +181,8 @@ open class GamificationAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -735,10 +735,12 @@ open class GamificationAPI {
   "performanceProfile" : "{}",
   "dateEndWorkday" : "2000-01-23",
   "entities" : [ {
+    "manager" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   }, {
+    "manager" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"

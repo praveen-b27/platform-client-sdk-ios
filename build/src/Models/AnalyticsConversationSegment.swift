@@ -15,6 +15,8 @@ public class AnalyticsConversationSegment: Codable {
         case client = "client"
         case conferencetransfer = "conferenceTransfer"
         case consulttransfer = "consultTransfer"
+        case dndendpoint = "dndEndpoint"
+        case dndtransfer = "dndTransfer"
         case endpoint = "endpoint"
         case endpointdnd = "endpointDnd"
         case error = "error"

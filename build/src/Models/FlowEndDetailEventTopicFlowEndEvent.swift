@@ -79,6 +79,32 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         case voicemail = "VOICEMAIL"
         case workitem = "WORKITEM"
     }
+    public enum ExitReason: String, Codable { 
+        case unknown = "UNKNOWN"
+        case disconnect = "DISCONNECT"
+        case flowDisconnect = "FLOW_DISCONNECT"
+        case flowErrorDisconnect = "FLOW_ERROR_DISCONNECT"
+        case transfer = "TRANSFER"
+        case sessionExpireDisconnect = "SESSION_EXPIRE_DISCONNECT"
+        case recognitionFailureDisconnect = "RECOGNITION_FAILURE_DISCONNECT"
+        case recognitionFailureExit = "RECOGNITION_FAILURE_EXIT"
+        case userExit = "USER_EXIT"
+        case flowExit = "FLOW_EXIT"
+        case flowErrorExit = "FLOW_ERROR_EXIT"
+    }
+    public enum TransferType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case acd = "ACD"
+        case user = "USER"
+        case number = "NUMBER"
+        case acdVoicemail = "ACD_VOICEMAIL"
+        case userVoicemail = "USER_VOICEMAIL"
+        case groupVoicemail = "GROUP_VOICEMAIL"
+        case group = "GROUP"
+        case flow = "FLOW"
+        case secureFlow = "SECURE_FLOW"
+        case returnToAgent = "RETURN_TO_AGENT"
+    }
     public var eventTime: Int?
     public var conversationId: String?
     public var participantId: String?
@@ -100,8 +126,10 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
     public var connectedDurationMs: Int?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
+    public var exitReason: ExitReason?
+    public var transferType: TransferType?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, connectedDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, connectedDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, exitReason: ExitReason?, transferType: TransferType?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -123,6 +151,8 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         self.connectedDurationMs = connectedDurationMs
         self.conversationExternalContactIds = conversationExternalContactIds
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
+        self.exitReason = exitReason
+        self.transferType = transferType
     }
 
 

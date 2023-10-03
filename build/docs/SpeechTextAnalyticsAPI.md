@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Delete a Speech &amp; Text Analytics DictionaryFeedback by Id |
 | [**deleteSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsProgram) | Delete a Speech &amp; Text Analytics program by id |
 | [**deleteSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsSentimentfeedback) | Delete All Speech &amp; Text Analytics SentimentFeedback |
 | [**deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId) | Delete a Speech &amp; Text Analytics SentimentFeedback by Id |
@@ -14,6 +15,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsConversation**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversation) | Get Speech and Text Analytics for a specific conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturls**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturls) | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
+| [**getSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsDictionaryfeedback) | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
+| [**getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Get a Speech &amp; Text Analytics dictionary feedback by id |
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
 | [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**getSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramTranscriptionengines) | Get transcription engine settings of a program |
@@ -33,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsGeneralStatus) | Get the list of general topics from the org and the system with their current status |
 | [**getSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsPublishjob) | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
+| [**postSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsDictionaryfeedback) | Create a Speech &amp; Text Analytics DictionaryFeedback |
 | [**postSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsPrograms) | Create new Speech &amp; Text Analytics program |
 | [**postSpeechandtextanalyticsProgramsGeneralJobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsProgramsGeneralJobs) | Create new Speech &amp; Text Analytics general program job |
 | [**postSpeechandtextanalyticsProgramsPublishjobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsProgramsPublishjobs) | Create new Speech &amp; Text Analytics publish programs job |
@@ -40,12 +44,64 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopics) | Create new Speech &amp; Text Analytics topic |
 | [**postSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopicsPublishjobs) | Create new Speech &amp; Text Analytics publish topics job |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
+| [**putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Update existing Speech &amp; Text Analytics dictionary feedback by id |
 | [**putSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgram) | Update existing Speech &amp; Text Analytics program |
 | [**putSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgramMappings) | Set Speech &amp; Text Analytics program mappings to queues and flows |
 | [**putSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgramTranscriptionengines) | Update transcription engine settings of a program |
 | [**putSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsSettings) | Update Speech And Text Analytics Settings |
 | [**putSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsTopic) | Update existing Speech &amp; Text Analytics topic |
 {: class="table-striped"}
+
+<a name="deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId"></a>
+
+# **deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**
+
+
+
+> Void deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId)
+
+Delete a Speech &amp; Text Analytics DictionaryFeedback by Id
+
+
+
+Wraps DELETE /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:dictionaryterm:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dictionaryFeedbackId: String = "" // The Id of the Dictionary Feedback
+
+// Code example
+SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionaryFeedbackId** | **String**| The Id of the Dictionary Feedback | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteSpeechandtextanalyticsProgram"></a>
 
@@ -409,6 +465,114 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscr
 ### Return type
 
 [**TranscriptUrls**](TranscriptUrls.html)
+
+<a name="getSpeechandtextanalyticsDictionaryfeedback"></a>
+
+# **getSpeechandtextanalyticsDictionaryfeedback**
+
+
+
+> [DictionaryFeedbackEntityListing](DictionaryFeedbackEntityListing.html) getSpeechandtextanalyticsDictionaryfeedback(dialect, nextPage, pageSize)
+
+Get the list of Speech &amp; Text Analytics dictionary feedbacks
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/dictionaryfeedback  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:dictionaryterm:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+let nextPage: String = "" // The key for listing the next page
+let pageSize: Int = 0 // The page size for the listing
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, nextPage: nextPage, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dialect** | **String**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] |
+| **nextPage** | **String**| The key for listing the next page | [optional] |
+| **pageSize** | **Int**| The page size for the listing | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DictionaryFeedbackEntityListing**](DictionaryFeedbackEntityListing.html)
+
+<a name="getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId"></a>
+
+# **getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**
+
+
+
+> [DictionaryFeedback](DictionaryFeedback.html) getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId)
+
+Get a Speech &amp; Text Analytics dictionary feedback by id
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:dictionaryterm:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dictionaryFeedbackId: String = "" // The Id of the Dictionary Feedback
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionaryFeedbackId** | **String**| The Id of the Dictionary Feedback | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DictionaryFeedback**](DictionaryFeedback.html)
 
 <a name="getSpeechandtextanalyticsProgram"></a>
 
@@ -1402,6 +1566,58 @@ SpeechTextAnalyticsAPI.patchSpeechandtextanalyticsSettings(body: body) { (respon
 
 [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse.html)
 
+<a name="postSpeechandtextanalyticsDictionaryfeedback"></a>
+
+# **postSpeechandtextanalyticsDictionaryfeedback**
+
+
+
+> [DictionaryFeedback](DictionaryFeedback.html) postSpeechandtextanalyticsDictionaryfeedback(body)
+
+Create a Speech &amp; Text Analytics DictionaryFeedback
+
+
+
+Wraps POST /api/v2/speechandtextanalytics/dictionaryfeedback  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:dictionaryterm:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DictionaryFeedback = new DictionaryFeedback(...) // The DictionaryFeedback to create
+
+// Code example
+SpeechTextAnalyticsAPI.postSpeechandtextanalyticsDictionaryfeedback(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.postSpeechandtextanalyticsDictionaryfeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DictionaryFeedback**](DictionaryFeedback.html)| The DictionaryFeedback to create | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DictionaryFeedback**](DictionaryFeedback.html)
+
 <a name="postSpeechandtextanalyticsPrograms"></a>
 
 # **postSpeechandtextanalyticsPrograms**
@@ -1769,6 +1985,60 @@ SpeechTextAnalyticsAPI.postSpeechandtextanalyticsTranscriptsSearch(body: body) {
 ### Return type
 
 [**JsonSearchResponse**](JsonSearchResponse.html)
+
+<a name="putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId"></a>
+
+# **putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**
+
+
+
+> [DictionaryFeedback](DictionaryFeedback.html) putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId, body)
+
+Update existing Speech &amp; Text Analytics dictionary feedback by id
+
+
+
+Wraps PUT /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:dictionaryterm:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dictionaryFeedbackId: String = "" // The Id of the Dictionary Feedback
+let body: DictionaryFeedback = new DictionaryFeedback(...) // 
+
+// Code example
+SpeechTextAnalyticsAPI.putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionaryFeedbackId** | **String**| The Id of the Dictionary Feedback | |
+| **body** | [**DictionaryFeedback**](DictionaryFeedback.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DictionaryFeedback**](DictionaryFeedback.html)
 
 <a name="putSpeechandtextanalyticsProgram"></a>
 

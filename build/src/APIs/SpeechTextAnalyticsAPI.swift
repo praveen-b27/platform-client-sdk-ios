@@ -11,6 +11,50 @@ import Foundation
 
 open class SpeechTextAnalyticsAPI {
     
+    /**
+     Delete a Speech & Text Analytics DictionaryFeedback by Id
+     
+     - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithRequestBuilder(dictionaryFeedbackId: dictionaryFeedbackId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Speech & Text Analytics DictionaryFeedback by Id
+     - DELETE /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithRequestBuilder(dictionaryFeedbackId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}"
+        let dictionaryFeedbackIdPreEscape = "\(dictionaryFeedbackId)"
+        let dictionaryFeedbackIdPostEscape = dictionaryFeedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{dictionaryFeedbackId}", with: dictionaryFeedbackIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
     
     /**
      Delete a Speech & Text Analytics program by id
@@ -367,6 +411,166 @@ open class SpeechTextAnalyticsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TranscriptUrls>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Get the list of Speech & Text Analytics dictionary feedbacks
+     
+     - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+     - parameter nextPage: (query) The key for listing the next page (optional)
+     - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsDictionaryfeedback(dialect: String? = nil, nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DictionaryFeedbackEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(dialect: dialect, nextPage: nextPage, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<DictionaryFeedbackEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of Speech & Text Analytics dictionary feedbacks
+     - GET /api/v2/speechandtextanalytics/dictionaryfeedback
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "pageCount" : 1,
+  "total" : 5,
+  "entities" : [ {
+    "dialect" : "en-US",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "term" : "term",
+    "boostValue" : 0.8008282,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "source" : "Manual"
+  }, {
+    "dialect" : "en-US",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "term" : "term",
+    "boostValue" : 0.8008282,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "source" : "Manual"
+  } ],
+  "selfUri" : "selfUri",
+  "pageSize" : 6,
+  "nextUri" : "nextUri"
+}, statusCode=200}]
+     
+     - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+     - parameter nextPage: (query) The key for listing the next page (optional)
+     - parameter pageSize: (query) The page size for the listing (optional)
+
+     - returns: RequestBuilder<DictionaryFeedbackEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(dialect: String? = nil, nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<DictionaryFeedbackEntityListing> {        
+        let path = "/api/v2/speechandtextanalytics/dictionaryfeedback"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "dialect": dialect, 
+            "nextPage": nextPage, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<DictionaryFeedbackEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a Speech & Text Analytics dictionary feedback by id
+     
+     - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: String, completion: @escaping ((_ data: DictionaryFeedback?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithRequestBuilder(dictionaryFeedbackId: dictionaryFeedbackId)
+        requestBuilder.execute { (response: Response<DictionaryFeedback>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Speech & Text Analytics dictionary feedback by id
+     - GET /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "examplePhrases" : [ {
+    "phrase" : "phrase",
+    "source" : "Manual"
+  }, {
+    "phrase" : "phrase",
+    "source" : "Manual"
+  } ],
+  "dialect" : "en-US",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "soundsLike" : [ "soundsLike", "soundsLike" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "term" : "term",
+  "boostValue" : 0.8008282,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "source" : "Manual"
+}, statusCode=200}]
+     
+     - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
+
+     - returns: RequestBuilder<DictionaryFeedback> 
+     */
+    open class func getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithRequestBuilder(dictionaryFeedbackId: String) -> RequestBuilder<DictionaryFeedback> {        
+        var path = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}"
+        let dictionaryFeedbackIdPreEscape = "\(dictionaryFeedbackId)"
+        let dictionaryFeedbackIdPostEscape = dictionaryFeedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{dictionaryFeedbackId}", with: dictionaryFeedbackIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DictionaryFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1854,6 +2058,74 @@ open class SpeechTextAnalyticsAPI {
 
     
     /**
+     Create a Speech & Text Analytics DictionaryFeedback
+     
+     - parameter body: (body) The DictionaryFeedback to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSpeechandtextanalyticsDictionaryfeedback(body: DictionaryFeedback, completion: @escaping ((_ data: DictionaryFeedback?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DictionaryFeedback>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a Speech & Text Analytics DictionaryFeedback
+     - POST /api/v2/speechandtextanalytics/dictionaryfeedback
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "examplePhrases" : [ {
+    "phrase" : "phrase",
+    "source" : "Manual"
+  }, {
+    "phrase" : "phrase",
+    "source" : "Manual"
+  } ],
+  "dialect" : "en-US",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "soundsLike" : [ "soundsLike", "soundsLike" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "term" : "term",
+  "boostValue" : 0.8008282,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "source" : "Manual"
+}, statusCode=201}]
+     
+     - parameter body: (body) The DictionaryFeedback to create 
+
+     - returns: RequestBuilder<DictionaryFeedback> 
+     */
+    open class func postSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(body: DictionaryFeedback) -> RequestBuilder<DictionaryFeedback> {        
+        let path = "/api/v2/speechandtextanalytics/dictionaryfeedback"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DictionaryFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Create new Speech & Text Analytics program
      
      - parameter body: (body) The program to create 
@@ -2320,6 +2592,80 @@ open class SpeechTextAnalyticsAPI {
         let requestBuilder: RequestBuilder<JsonSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update existing Speech & Text Analytics dictionary feedback by id
+     
+     - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: String, body: DictionaryFeedback? = nil, completion: @escaping ((_ data: DictionaryFeedback?,_ error: Error?) -> Void)) {
+        let requestBuilder = putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithRequestBuilder(dictionaryFeedbackId: dictionaryFeedbackId, body: body)
+        requestBuilder.execute { (response: Response<DictionaryFeedback>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update existing Speech & Text Analytics dictionary feedback by id
+     - PUT /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "examplePhrases" : [ {
+    "phrase" : "phrase",
+    "source" : "Manual"
+  }, {
+    "phrase" : "phrase",
+    "source" : "Manual"
+  } ],
+  "dialect" : "en-US",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "soundsLike" : [ "soundsLike", "soundsLike" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "term" : "term",
+  "boostValue" : 0.8008282,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "source" : "Manual"
+}, statusCode=200}]
+     
+     - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<DictionaryFeedback> 
+     */
+    open class func putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdWithRequestBuilder(dictionaryFeedbackId: String, body: DictionaryFeedback? = nil) -> RequestBuilder<DictionaryFeedback> {        
+        var path = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}"
+        let dictionaryFeedbackIdPreEscape = "\(dictionaryFeedbackId)"
+        let dictionaryFeedbackIdPostEscape = dictionaryFeedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{dictionaryFeedbackId}", with: dictionaryFeedbackIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DictionaryFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     

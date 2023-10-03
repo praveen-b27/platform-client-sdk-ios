@@ -28,6 +28,8 @@ title: FlowEndDetailEventTopicFlowEndEvent
 | **connectedDurationMs** | **Int** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
+| **exitReason** | **String** |  | [optional] |
+| **transferType** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

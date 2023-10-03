@@ -12,6 +12,7 @@ import Foundation
 public class ConversationAggregationQuery: Codable {
 
     public enum GroupBy: String, Codable { 
+        case activerouting = "activeRouting"
         case activeskillid = "activeSkillId"
         case addressfrom = "addressFrom"
         case addressto = "addressTo"

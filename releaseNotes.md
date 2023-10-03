@@ -1,89 +1,93 @@
-Platform API version: 7364
+Platform API version: 7379
 
 
-# Major Changes (0 changes)
+# Major Changes (2 changes)
+
+**OutcomeEventScore** (1 change)
+
+* Model OutcomeEventScore was removed
+
+**OutcomeScoresResult** (1 change)
+
+* Property outcomeScores was changed from OutcomeEventScore[] to OutcomeScore[]
 
 
-# Minor Changes (49 changes)
+# Minor Changes (24 changes)
 
-**InsightsAgentItem** (1 change)
+**/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}** (4 changes)
 
-* Optional property manager was added
+* Path was added
+* Operation GET was added
+* Operation PUT was added
+* Operation DELETE was added
 
-**KnowledgeBase** (6 changes)
+**/api/v2/speechandtextanalytics/dictionaryfeedback** (3 changes)
 
-* Enum value ca-ES was added to property coreLanguage
-* Enum value tr-TR was added to property coreLanguage
-* Enum value sv-SE was added to property coreLanguage
-* Enum value fi-FI was added to property coreLanguage
-* Enum value nb-NO was added to property coreLanguage
-* Enum value da-DK was added to property coreLanguage
+* Path was added
+* Operation GET was added
+* Operation POST was added
 
-**KnowledgeCategory** (6 changes)
+**ConversationAggregateQueryPredicate** (1 change)
 
-* Enum value ca-ES was added to property languageCode
-* Enum value tr-TR was added to property languageCode
-* Enum value sv-SE was added to property languageCode
-* Enum value fi-FI was added to property languageCode
-* Enum value nb-NO was added to property languageCode
-* Enum value da-DK was added to property languageCode
+* Enum value activeRouting was added to property dimension
 
-**KnowledgeSearchDocument** (6 changes)
+**ConversationAggregationQuery** (1 change)
 
-* Enum value ca-ES was added to property languageCode
-* Enum value tr-TR was added to property languageCode
-* Enum value sv-SE was added to property languageCode
-* Enum value fi-FI was added to property languageCode
-* Enum value nb-NO was added to property languageCode
-* Enum value da-DK was added to property languageCode
+* Enum value activeRouting was added to property groupBy
 
-**KnowledgeExtendedCategory** (6 changes)
+**AnalyticsConversationSegment** (2 changes)
 
-* Enum value ca-ES was added to property languageCode
-* Enum value tr-TR was added to property languageCode
-* Enum value sv-SE was added to property languageCode
-* Enum value fi-FI was added to property languageCode
-* Enum value nb-NO was added to property languageCode
-* Enum value da-DK was added to property languageCode
+* Enum value dndEndpoint was added to property disconnectType
+* Enum value dndTransfer was added to property disconnectType
 
-**KnowledgeImport** (6 changes)
+**FlowAggregateQueryPredicate** (1 change)
 
-* Enum value ca-ES was added to property languageCode
-* Enum value tr-TR was added to property languageCode
-* Enum value sv-SE was added to property languageCode
-* Enum value fi-FI was added to property languageCode
-* Enum value nb-NO was added to property languageCode
-* Enum value da-DK was added to property languageCode
+* Enum value activeRouting was added to property dimension
 
-**KnowledgeDocument** (6 changes)
+**FlowAggregationQuery** (1 change)
 
-* Enum value ca-ES was added to property languageCode
-* Enum value tr-TR was added to property languageCode
-* Enum value sv-SE was added to property languageCode
-* Enum value fi-FI was added to property languageCode
-* Enum value nb-NO was added to property languageCode
-* Enum value da-DK was added to property languageCode
+* Enum value activeRouting was added to property groupBy
 
-**KnowledgeBaseCreateRequest** (6 changes)
+**TranscriptAggregateQueryPredicate** (2 changes)
 
-* Enum value ca-ES was added to property coreLanguage
-* Enum value tr-TR was added to property coreLanguage
-* Enum value sv-SE was added to property coreLanguage
-* Enum value fi-FI was added to property coreLanguage
-* Enum value nb-NO was added to property coreLanguage
-* Enum value da-DK was added to property coreLanguage
+* Enum value conversationDuration was added to property dimension
+* Enum value handleTime was added to property dimension
 
-**UtilizationLabel** (1 change)
+**TranscriptAggregationQuery** (1 change)
+
+* Enum value tOtherAudio was added to property metrics
+
+**TranscriptAggregationView** (1 change)
+
+* Enum value tOtherAudio was added to property target
+
+**EventLog** (1 change)
+
+* Enum value IMPORT_TEMPLATE was added to property category
+
+**OutcomeScore** (1 change)
 
 * Model was added
 
-**GeneralProgramJobRequest** (5 changes)
+**DictionaryFeedback** (1 change)
 
-* Enum value da-DK was added to property dialect
-* Enum value fi-FI was added to property dialect
-* Enum value he-IL was added to property dialect
-* Enum value nb-NO was added to property dialect
-* Enum value sv-SE was added to property dialect
+* Model was added
+
+**DictionaryFeedbackExamplePhrase** (1 change)
+
+* Model was added
+
+**DictionaryFeedbackEntityListing** (1 change)
+
+* Model was added
+
+**ListedDictionaryFeedback** (1 change)
+
+* Model was added
+
+**MetadataProperty** (1 change)
+
+* Optional property sensitive was added
 
 
 # Point Changes (0 changes)

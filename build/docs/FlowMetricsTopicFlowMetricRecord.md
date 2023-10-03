@@ -11,6 +11,7 @@ title: FlowMetricsTopicFlowMetricRecord
 | **metricDate** | [**Date**](Date.html) | The date and time of metric creation | [optional] |
 | **value** | **Int** | Metric value | [optional] |
 | **recordId** | **String** | Record identifier | [optional] |
+| **activeRouting** | **String** | Active routing method | [optional] |
 | **activeSkillIds** | **[String]** | ID(s) of Skill(s) that are active on the conversation | [optional] |
 | **addressFrom** | **String** | The address that initiated an action | [optional] |
 | **addressTo** | **String** | The address receiving an action | [optional] |

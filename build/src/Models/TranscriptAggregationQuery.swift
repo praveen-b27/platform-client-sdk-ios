@@ -37,6 +37,7 @@ public class TranscriptAggregationQuery: Codable {
         case osentimentscore = "oSentimentScore"
         case tagentspeech = "tAgentSpeech"
         case tcustomerspeech = "tCustomerSpeech"
+        case totheraudio = "tOtherAudio"
         case tovertalkspeech = "tOverTalkSpeech"
         case tsilence = "tSilence"
         case ttotalspeechandsilence = "tTotalSpeechAndSilence"

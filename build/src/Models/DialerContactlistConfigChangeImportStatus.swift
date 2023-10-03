@@ -25,14 +25,20 @@ public class DialerContactlistConfigChangeImportStatus: Codable {
     public var percentageComplete: Int?
     /** if the import has failed, the reason for the failure */
     public var failureReason: String?
+    /** The ids for target contact lists */
+    public var targetContactListIds: [String]?
+    /** The prefix used for target contact list names */
+    public var listNamePrefix: String?
     public var additionalProperties: [String:JSON]?
 
-    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?, additionalProperties: [String:JSON]?) {
+    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?, targetContactListIds: [String]?, listNamePrefix: String?, additionalProperties: [String:JSON]?) {
         self.importState = importState
         self.totalRecords = totalRecords
         self.completedRecords = completedRecords
         self.percentageComplete = percentageComplete
         self.failureReason = failureReason
+        self.targetContactListIds = targetContactListIds
+        self.listNamePrefix = listNamePrefix
         self.additionalProperties = additionalProperties
     }
 

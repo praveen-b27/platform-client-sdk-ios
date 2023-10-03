@@ -1138,6 +1138,9 @@ docs/DialogflowAgentSummaryEntityListing.md
 docs/DialogflowIntent.md
 docs/DialogflowParameter.md
 docs/DialogflowProject.md
+docs/DictionaryFeedback.md
+docs/DictionaryFeedbackEntityListing.md
+docs/DictionaryFeedbackExamplePhrase.md
 docs/DigitLength.md
 docs/DigitalAction.md
 docs/DigitalCondition.md
@@ -2051,6 +2054,7 @@ docs/ListWrapperInterval.md
 docs/ListWrapperSecondaryPresence.md
 docs/ListWrapperShiftStartVariance.md
 docs/ListWrapperString.md
+docs/ListedDictionaryFeedback.md
 docs/ListedProgram.md
 docs/ListedTopic.md
 docs/LocalDateRange.md
@@ -2335,7 +2339,6 @@ docs/OutboundSettings.md
 docs/Outcome.md
 docs/OutcomeAchievement.md
 docs/OutcomeConfig.md
-docs/OutcomeEventScore.md
 docs/OutcomeListing.md
 docs/OutcomePercentileCondition.md
 docs/OutcomePredictor.md
@@ -2345,6 +2348,7 @@ docs/OutcomeProbabilityCondition.md
 docs/OutcomeQuantileCondition.md
 docs/OutcomeRef.md
 docs/OutcomeRefRequest.md
+docs/OutcomeScore.md
 docs/OutcomeScoresResult.md
 docs/OutlierInfo.md
 docs/OverallBestPoints.md
@@ -4092,6 +4096,7 @@ docs/deleteRoutingUtilization-example.txt
 docs/deleteRoutingWrapupcode-example.txt
 docs/deleteScimUser-example.txt
 docs/deleteScimV2User-example.txt
+docs/deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/deleteSpeechandtextanalyticsProgram-example.txt
 docs/deleteSpeechandtextanalyticsSentimentfeedback-example.txt
 docs/deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId-example.txt
@@ -4905,6 +4910,8 @@ docs/getSearchSuggest-example.txt
 docs/getSpeechandtextanalyticsConversation-example.txt
 docs/getSpeechandtextanalyticsConversationCommunicationTranscripturl-example.txt
 docs/getSpeechandtextanalyticsConversationCommunicationTranscripturls-example.txt
+docs/getSpeechandtextanalyticsDictionaryfeedback-example.txt
+docs/getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/getSpeechandtextanalyticsProgram-example.txt
 docs/getSpeechandtextanalyticsProgramMappings-example.txt
 docs/getSpeechandtextanalyticsProgramTranscriptionengines-example.txt
@@ -5693,6 +5700,7 @@ docs/postSearch-example.txt
 docs/postSearch-example.txt
 docs/postSearchSuggest-example.txt
 docs/postSearchSuggest-example.txt
+docs/postSpeechandtextanalyticsDictionaryfeedback-example.txt
 docs/postSpeechandtextanalyticsPrograms-example.txt
 docs/postSpeechandtextanalyticsProgramsGeneralJobs-example.txt
 docs/postSpeechandtextanalyticsProgramsPublishjobs-example.txt
@@ -5993,6 +6001,7 @@ docs/putScimGroup-example.txt
 docs/putScimUser-example.txt
 docs/putScimV2Group-example.txt
 docs/putScimV2User-example.txt
+docs/putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/putSpeechandtextanalyticsProgram-example.txt
 docs/putSpeechandtextanalyticsProgramMappings-example.txt
 docs/putSpeechandtextanalyticsProgramTranscriptionengines-example.txt
@@ -7223,6 +7232,9 @@ src/Models/DialogflowAgentSummaryEntityListing.swift
 src/Models/DialogflowIntent.swift
 src/Models/DialogflowParameter.swift
 src/Models/DialogflowProject.swift
+src/Models/DictionaryFeedback.swift
+src/Models/DictionaryFeedbackEntityListing.swift
+src/Models/DictionaryFeedbackExamplePhrase.swift
 src/Models/DigitLength.swift
 src/Models/DigitalAction.swift
 src/Models/DigitalCondition.swift
@@ -8096,6 +8108,7 @@ src/Models/ListWrapperInterval.swift
 src/Models/ListWrapperSecondaryPresence.swift
 src/Models/ListWrapperShiftStartVariance.swift
 src/Models/ListWrapperString.swift
+src/Models/ListedDictionaryFeedback.swift
 src/Models/ListedProgram.swift
 src/Models/ListedTopic.swift
 src/Models/LocalDateRange.swift
@@ -8364,7 +8377,6 @@ src/Models/OutboundSettings.swift
 src/Models/Outcome.swift
 src/Models/OutcomeAchievement.swift
 src/Models/OutcomeConfig.swift
-src/Models/OutcomeEventScore.swift
 src/Models/OutcomeListing.swift
 src/Models/OutcomePercentileCondition.swift
 src/Models/OutcomePredictor.swift
@@ -8374,6 +8386,7 @@ src/Models/OutcomeProbabilityCondition.swift
 src/Models/OutcomeQuantileCondition.swift
 src/Models/OutcomeRef.swift
 src/Models/OutcomeRefRequest.swift
+src/Models/OutcomeScore.swift
 src/Models/OutcomeScoresResult.swift
 src/Models/OutlierInfo.swift
 src/Models/OverallBestPoints.swift

@@ -30,6 +30,7 @@ public class EventLog: Codable {
         case importError = "IMPORT_ERROR"
         case messageRestriction = "MESSAGE_RESTRICTION"
         case messagingCampaign = "MESSAGING_CAMPAIGN"
+        case importTemplate = "IMPORT_TEMPLATE"
         case organizationConfiguration = "ORGANIZATION_CONFIGURATION"
         case schedule = "SCHEDULE"
         case messagingCampaignSchedule = "MESSAGING_CAMPAIGN_SCHEDULE"

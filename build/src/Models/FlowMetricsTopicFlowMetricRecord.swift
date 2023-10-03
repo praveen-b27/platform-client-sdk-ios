@@ -22,6 +22,17 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
         case tflowexit = "tFlowExit"
         case tflowoutcome = "tFlowOutcome"
     }
+    public enum ActiveRouting: String, Codable { 
+        case bullseye = "Bullseye"
+        case conditional = "Conditional"
+        case direct = "Direct"
+        case last = "Last"
+        case manual = "Manual"
+        case predictive = "Predictive"
+        case preferred = "Preferred"
+        case standard = "Standard"
+        case vip = "Vip"
+    }
     public enum ConversationInitiator: String, Codable { 
         case acd = "acd"
         case agent = "agent"
@@ -176,6 +187,8 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
     public var value: Int?
     /** Record identifier */
     public var recordId: String?
+    /** Active routing method */
+    public var activeRouting: ActiveRouting?
     /** ID(s) of Skill(s) that are active on the conversation */
     public var activeSkillIds: [String]?
     /** The address that initiated an action */
@@ -363,11 +376,12 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
     /** Scored agents */
     public var scoredAgents: [FlowMetricsTopicFlowScoredAgent]?
 
-    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, endingLanguage: String?, entryReason: String?, entryType: EntryType?, errorCode: String?, exitReason: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowId: String?, flowInType: String?, flowMilestoneIds: [String]?, flowName: String?, flowOutType: String?, flowType: FlowType?, flowVersion: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, recognitionFailureReason: String?, remote: String?, removedSkillIds: [String]?, reoffered: Bool?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, startingLanguage: String?, stationId: String?, teamId: String?, transferTargetAddress: String?, transferTargetName: String?, transferType: String?, usedRouting: UsedRouting?, userId: String?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [FlowMetricsTopicFlowProposedAgent]?, outcomes: [FlowMetricsTopicFlowOutcome]?, scoredAgents: [FlowMetricsTopicFlowScoredAgent]?) {
+    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, endingLanguage: String?, entryReason: String?, entryType: EntryType?, errorCode: String?, exitReason: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowId: String?, flowInType: String?, flowMilestoneIds: [String]?, flowName: String?, flowOutType: String?, flowType: FlowType?, flowVersion: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, recognitionFailureReason: String?, remote: String?, removedSkillIds: [String]?, reoffered: Bool?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, startingLanguage: String?, stationId: String?, teamId: String?, transferTargetAddress: String?, transferTargetName: String?, transferType: String?, usedRouting: UsedRouting?, userId: String?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [FlowMetricsTopicFlowProposedAgent]?, outcomes: [FlowMetricsTopicFlowOutcome]?, scoredAgents: [FlowMetricsTopicFlowScoredAgent]?) {
         self.metric = metric
         self.metricDate = metricDate
         self.value = value
         self.recordId = recordId
+        self.activeRouting = activeRouting
         self.activeSkillIds = activeSkillIds
         self.addressFrom = addressFrom
         self.addressTo = addressTo

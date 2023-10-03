@@ -31779,6 +31779,19 @@
     "return": "VoicemailsSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: VoicemailSearchRequest = new VoicemailSearchRequest(...) // Search request options\n\n// Search voicemails\nPostVoicemailSearchRequest.postVoicemailSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostVoicemailSearchRequest.postVoicemailSearch was successful\")\n        dump(response)\n    }\n}"
   },
+  "deletespeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid": {
+    "operationId": "deletespeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid",
+    "functionName": "deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId",
+    "signature": "deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId)",
+    "parameters": [
+      {
+        "name": "dictionaryFeedbackId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dictionaryFeedbackId: String = \"\" // The Id of the Dictionary Feedback\n\n// Delete a Speech & Text Analytics DictionaryFeedback by Id\nDeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful\")\n    }\n}"
+  },
   "deletespeechandtextanalyticsprogram": {
     "operationId": "deletespeechandtextanalyticsprogram",
     "functionName": "deleteSpeechandtextanalyticsProgram",
@@ -31880,6 +31893,44 @@
     ],
     "return": "TranscriptUrls",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet communicationId: String = \"\" // Communication ID\n\n// Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation\nGetSpeechandtextanalyticsConversationCommunicationTranscripturlsRequest.getSpeechandtextanalyticsConversationCommunicationTranscripturls(conversationId: conversationId, communicationId: communicationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsConversationCommunicationTranscripturlsRequest.getSpeechandtextanalyticsConversationCommunicationTranscripturls was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getspeechandtextanalyticsdictionaryfeedback": {
+    "operationId": "getspeechandtextanalyticsdictionaryfeedback",
+    "functionName": "getSpeechandtextanalyticsDictionaryfeedback",
+    "signature": "getSpeechandtextanalyticsDictionaryfeedback(dialect, nextPage, pageSize)",
+    "parameters": [
+      {
+        "name": "dialect",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "nextPage",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "DictionaryFeedbackEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\n\n// Get the list of Speech & Text Analytics dictionary feedbacks\nGetSpeechandtextanalyticsDictionaryfeedbackRequest.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, nextPage: nextPage, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsDictionaryfeedbackRequest.getSpeechandtextanalyticsDictionaryfeedback was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid": {
+    "operationId": "getspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid",
+    "functionName": "getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId",
+    "signature": "getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId)",
+    "parameters": [
+      {
+        "name": "dictionaryFeedbackId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DictionaryFeedback",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dictionaryFeedbackId: String = \"\" // The Id of the Dictionary Feedback\n\n// Get a Speech & Text Analytics dictionary feedback by id\nGetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticsprogram": {
     "operationId": "getspeechandtextanalyticsprogram",
@@ -32169,6 +32220,20 @@
     "return": "SpeechTextAnalyticsSettingsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SpeechTextAnalyticsSettingsRequest = new SpeechTextAnalyticsSettingsRequest(...) // Speech And Text Analytics Settings\n\n// Patch Speech And Text Analytics Settings\nPatchSpeechandtextanalyticsSettingsRequest.patchSpeechandtextanalyticsSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSpeechandtextanalyticsSettingsRequest.patchSpeechandtextanalyticsSettings was successful\")\n        dump(response)\n    }\n}"
   },
+  "postspeechandtextanalyticsdictionaryfeedback": {
+    "operationId": "postspeechandtextanalyticsdictionaryfeedback",
+    "functionName": "postSpeechandtextanalyticsDictionaryfeedback",
+    "signature": "postSpeechandtextanalyticsDictionaryfeedback(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "DictionaryFeedback",
+        "required": "true"
+      }
+    ],
+    "return": "DictionaryFeedback",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DictionaryFeedback = new DictionaryFeedback(...) // The DictionaryFeedback to create\n\n// Create a Speech & Text Analytics DictionaryFeedback\nPostSpeechandtextanalyticsDictionaryfeedbackRequest.postSpeechandtextanalyticsDictionaryfeedback(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSpeechandtextanalyticsDictionaryfeedbackRequest.postSpeechandtextanalyticsDictionaryfeedback was successful\")\n        dump(response)\n    }\n}"
+  },
   "postspeechandtextanalyticsprograms": {
     "operationId": "postspeechandtextanalyticsprograms",
     "functionName": "postSpeechandtextanalyticsPrograms",
@@ -32252,6 +32317,25 @@
     ],
     "return": "TopicJob",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TopicJobRequest = new TopicJobRequest(...) // The publish topics job to create\n\n// Create new Speech & Text Analytics publish topics job\nPostSpeechandtextanalyticsTopicsPublishjobsRequest.postSpeechandtextanalyticsTopicsPublishjobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSpeechandtextanalyticsTopicsPublishjobsRequest.postSpeechandtextanalyticsTopicsPublishjobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid": {
+    "operationId": "putspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid",
+    "functionName": "putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId",
+    "signature": "putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId, body)",
+    "parameters": [
+      {
+        "name": "dictionaryFeedbackId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DictionaryFeedback",
+        "required": "false"
+      }
+    ],
+    "return": "DictionaryFeedback",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dictionaryFeedbackId: String = \"\" // The Id of the Dictionary Feedback\nlet body: DictionaryFeedback = new DictionaryFeedback(...) // \n\n// Update existing Speech & Text Analytics dictionary feedback by id\nPutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful\")\n        dump(response)\n    }\n}"
   },
   "putspeechandtextanalyticsprogram": {
     "operationId": "putspeechandtextanalyticsprogram",

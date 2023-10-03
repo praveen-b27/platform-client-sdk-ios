@@ -19,11 +19,11 @@ public class RelationshipListing: Codable {
     public var firstUri: String?
     public var nextUri: String?
     public var previousUri: String?
-    public var selfUri: String?
     public var lastUri: String?
+    public var selfUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Relationship]?, pageSize: Int?, pageNumber: Int?, total: Int64?, partialResults: Bool?, firstUri: String?, nextUri: String?, previousUri: String?, selfUri: String?, lastUri: String?, pageCount: Int?) {
+    public init(entities: [Relationship]?, pageSize: Int?, pageNumber: Int?, total: Int64?, partialResults: Bool?, firstUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -32,8 +32,8 @@ public class RelationshipListing: Codable {
         self.firstUri = firstUri
         self.nextUri = nextUri
         self.previousUri = previousUri
-        self.selfUri = selfUri
         self.lastUri = lastUri
+        self.selfUri = selfUri
         self.pageCount = pageCount
     }
 

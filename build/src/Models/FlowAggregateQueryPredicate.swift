@@ -17,6 +17,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case metric = "metric"
     }
     public enum Dimension: String, Codable { 
+        case activerouting = "activeRouting"
         case activeskillid = "activeSkillId"
         case addressfrom = "addressFrom"
         case addressto = "addressTo"

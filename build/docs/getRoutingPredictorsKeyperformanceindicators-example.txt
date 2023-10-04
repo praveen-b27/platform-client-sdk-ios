@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let kpiGroup: GetRoutingPredictorsKeyperformanceindicatorsRequest.KpiGroup_getRoutingPredictorsKeyperformanceindicators = GetRoutingPredictorsKeyperformanceindicatorsRequest.KpiGroup_getRoutingPredictorsKeyperformanceindicators.enummember // The Group of Key Performance Indicators to return
+let expand: [String] = [""] // Parameter to request additional data to return in KPI payload
+
+// Get a list of Key Performance Indicators
+GetRoutingPredictorsKeyperformanceindicatorsRequest.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingPredictorsKeyperformanceindicatorsRequest.getRoutingPredictorsKeyperformanceindicators was successful")
+        dump(response)
+    }
+}

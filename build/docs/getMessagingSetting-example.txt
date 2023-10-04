@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let messageSettingId: String = "" // Message Settings ID
+
+// Get a messaging setting
+GetMessagingSettingRequest.getMessagingSetting(messageSettingId: messageSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetMessagingSettingRequest.getMessagingSetting was successful")
+        dump(response)
+    }
+}

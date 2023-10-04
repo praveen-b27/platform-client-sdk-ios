@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let name: [String] = [""] // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+
+// Get a pageable list of user prompts
+GetArchitectPromptsRequest.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectPromptsRequest.getArchitectPrompts was successful")
+        dump(response)
+    }
+}

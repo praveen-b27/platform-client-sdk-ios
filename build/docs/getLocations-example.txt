@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let _id: [String] = [""] // id
+let sortOrder: GetLocationsRequest.SortOrder_getLocations = GetLocationsRequest.SortOrder_getLocations.enummember // Sort order
+
+// Get a list of all locations.
+GetLocationsRequest.getLocations(pageSize: pageSize, pageNumber: pageNumber, _id: _id, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLocationsRequest.getLocations was successful")
+        dump(response)
+    }
+}

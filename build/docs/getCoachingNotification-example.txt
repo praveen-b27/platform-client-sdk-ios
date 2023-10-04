@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let notificationId: String = "" // The ID of the notification.
+let expand: [String] = [""] // Indicates a field in the response which should be expanded.
+
+// Get an existing notification
+GetCoachingNotificationRequest.getCoachingNotification(notificationId: notificationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetCoachingNotificationRequest.getCoachingNotification was successful")
+        dump(response)
+    }
+}

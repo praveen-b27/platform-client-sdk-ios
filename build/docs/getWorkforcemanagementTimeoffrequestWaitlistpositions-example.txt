@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let timeOffRequestId: String = "" // The ID of the time off request
+
+// Get the daily waitlist positions of a time off request for the current user
+GetWorkforcemanagementTimeoffrequestWaitlistpositionsRequest.getWorkforcemanagementTimeoffrequestWaitlistpositions(timeOffRequestId: timeOffRequestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementTimeoffrequestWaitlistpositionsRequest.getWorkforcemanagementTimeoffrequestWaitlistpositions was successful")
+        dump(response)
+    }
+}

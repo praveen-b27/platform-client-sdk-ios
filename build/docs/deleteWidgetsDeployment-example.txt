@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let deploymentId: String = "" // Widget Config Id
+
+// Delete a Widget deployment
+DeleteWidgetsDeploymentRequest.deleteWidgetsDeployment(deploymentId: deploymentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWidgetsDeploymentRequest.deleteWidgetsDeployment was successful")
+    }
+}

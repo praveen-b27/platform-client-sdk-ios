@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let name: String = "" // Name
+let onlyLatestPerContext: Bool = true // onlyLatestPerContext
+
+// Get the published evaluation forms.
+GetQualityPublishedformsRequest.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityPublishedformsRequest.getQualityPublishedforms was successful")
+        dump(response)
+    }
+}

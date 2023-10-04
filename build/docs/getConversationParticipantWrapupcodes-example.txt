@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+
+// Get list of wrapup codes for this conversation participant
+GetConversationParticipantWrapupcodesRequest.getConversationParticipantWrapupcodes(conversationId: conversationId, participantId: participantId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationParticipantWrapupcodesRequest.getConversationParticipantWrapupcodes was successful")
+        dump(response)
+    }
+}

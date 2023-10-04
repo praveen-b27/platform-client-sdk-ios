@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let greetingId: String = "" // Greeting ID
+let body: Greeting = new Greeting(...) // The updated Greeting
+
+// Updates the Greeting with the given GreetingId
+PutGreetingRequest.putGreeting(greetingId: greetingId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutGreetingRequest.putGreeting was successful")
+        dump(response)
+    }
+}

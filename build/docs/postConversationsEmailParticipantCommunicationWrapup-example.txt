@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
+
+// Apply wrap-up for this conversation communication
+PostConversationsEmailParticipantCommunicationWrapupRequest.postConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostConversationsEmailParticipantCommunicationWrapupRequest.postConversationsEmailParticipantCommunicationWrapup was successful")
+    }
+}

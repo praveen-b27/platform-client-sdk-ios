@@ -1,0 +1,23 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let expand: GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations = GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions
+let name: String = "" // Name
+let sortOrder: String = "" // Order to sort results, either asc or desc
+
+// Get the list of evaluation forms
+GetQualityFormsEvaluationsRequest.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityFormsEvaluationsRequest.getQualityFormsEvaluations was successful")
+        dump(response)
+    }
+}

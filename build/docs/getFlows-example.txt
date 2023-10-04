@@ -1,0 +1,34 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let type: [String] = [""] // Type
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+let publishVersionId: String = "" // Publish version ID
+let editableBy: String = "" // Editable by
+let lockedBy: String = "" // Locked by
+let lockedByClientId: String = "" // Locked by client ID
+let secure: GetFlowsRequest.Secure_getFlows = GetFlowsRequest.Secure_getFlows.enummember // Secure
+let deleted: Bool = true // Include deleted
+let includeSchemas: Bool = true // Include variable schemas
+let publishedAfter: String = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01 // Published after
+let publishedBefore: String = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01 // Published before
+let divisionId: [String] = [""] // division ID(s)
+
+// Get a pageable list of flows, filtered by query parameters
+GetFlowsRequest.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, publishVersionId: publishVersionId, editableBy: editableBy, lockedBy: lockedBy, lockedByClientId: lockedByClientId, secure: secure, deleted: deleted, includeSchemas: includeSchemas, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsRequest.getFlows was successful")
+        dump(response)
+    }
+}

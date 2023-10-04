@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let flowLaunchRequest: FlowExecutionLaunchRequest = new FlowExecutionLaunchRequest(...) // 
+
+// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+PostFlowsExecutionsRequest.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostFlowsExecutionsRequest.postFlowsExecutions was successful")
+        dump(response)
+    }
+}

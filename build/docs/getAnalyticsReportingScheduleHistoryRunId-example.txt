@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let runId: String = "" // Run ID
+let scheduleId: String = "" // Schedule ID
+
+// A completed scheduled report job
+GetAnalyticsReportingScheduleHistoryRunIdRequest.getAnalyticsReportingScheduleHistoryRunId(runId: runId, scheduleId: scheduleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAnalyticsReportingScheduleHistoryRunIdRequest.getAnalyticsReportingScheduleHistoryRunId was successful")
+        dump(response)
+    }
+}

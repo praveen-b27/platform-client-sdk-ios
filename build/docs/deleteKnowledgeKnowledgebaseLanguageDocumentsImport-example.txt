@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport = DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE
+let importId: String = "" // Import ID
+
+// Delete import operation
+DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.deleteKnowledgeKnowledgebaseLanguageDocumentsImport was successful")
+    }
+}

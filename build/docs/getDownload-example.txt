@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let downloadId: String = "" // Download ID
+let contentDisposition: String = "" // 
+let issueRedirect: Bool = true // 
+let redirectToAuth: Bool = true // 
+
+// Issues a redirect to a signed secure download URL for specified download
+GetDownloadRequest.getDownload(downloadId: downloadId, contentDisposition: contentDisposition, issueRedirect: issueRedirect, redirectToAuth: redirectToAuth) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetDownloadRequest.getDownload was successful")
+        dump(response)
+    }
+}

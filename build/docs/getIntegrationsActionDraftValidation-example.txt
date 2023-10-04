@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let actionId: String = "" // actionId
+
+// Validate current Draft configuration.
+GetIntegrationsActionDraftValidationRequest.getIntegrationsActionDraftValidation(actionId: actionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsActionDraftValidationRequest.getIntegrationsActionDraftValidation was successful")
+        dump(response)
+    }
+}

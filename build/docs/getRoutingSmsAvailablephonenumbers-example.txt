@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let countryCode: String = "" // The ISO 3166-1 alpha-2 country code of the county for which available phone numbers should be returned
+let phoneNumberType: GetRoutingSmsAvailablephonenumbersRequest.PhoneNumberType_getRoutingSmsAvailablephonenumbers = GetRoutingSmsAvailablephonenumbersRequest.PhoneNumberType_getRoutingSmsAvailablephonenumbers.enummember // Type of available phone numbers searched
+let region: String = "" // Region/province/state that can be used to restrict the numbers returned
+let city: String = "" // City that can be used to restrict the numbers returned
+let areaCode: String = "" // Area code that can be used to restrict the numbers returned
+let pattern: String = "" // A pattern to match phone numbers. Valid characters are '*' and [0-9a-zA-Z]. The '*' character will match any single digit.
+let addressRequirement: GetRoutingSmsAvailablephonenumbersRequest.AddressRequirement_getRoutingSmsAvailablephonenumbers = GetRoutingSmsAvailablephonenumbersRequest.AddressRequirement_getRoutingSmsAvailablephonenumbers.enummember // This indicates whether the phone number requires to have an Address registered.
+
+// Get a list of available phone numbers for SMS provisioning.
+GetRoutingSmsAvailablephonenumbersRequest.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNumberType: phoneNumberType, region: region, city: city, areaCode: areaCode, pattern: pattern, addressRequirement: addressRequirement) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingSmsAvailablephonenumbersRequest.getRoutingSmsAvailablephonenumbers was successful")
+        dump(response)
+    }
+}

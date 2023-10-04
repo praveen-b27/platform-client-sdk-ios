@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let datatableId: String = "" // id of datatable
+let body: DataTableImportJob = new DataTableImportJob(...) // import job information
+
+// Begin an import process for importing rows into a datatable
+PostFlowsDatatableImportJobsRequest.postFlowsDatatableImportJobs(datatableId: datatableId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostFlowsDatatableImportJobsRequest.postFlowsDatatableImportJobs was successful")
+        dump(response)
+    }
+}

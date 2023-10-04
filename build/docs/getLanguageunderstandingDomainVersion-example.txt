@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let domainId: String = "" // ID of the NLU domain.
+let domainVersionId: String = "" // ID of the NLU domain version.
+let includeUtterances: Bool = true // Whether utterances for intent definition should be included when marshalling response.
+
+// Find an NLU Domain Version.
+GetLanguageunderstandingDomainVersionRequest.getLanguageunderstandingDomainVersion(domainId: domainId, domainVersionId: domainVersionId, includeUtterances: includeUtterances) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLanguageunderstandingDomainVersionRequest.getLanguageunderstandingDomainVersion was successful")
+        dump(response)
+    }
+}

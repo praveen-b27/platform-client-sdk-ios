@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let q64: String = "" // q64
+let expand: [String] = [""] // Provides more details about a specified resource
+
+// Search locations using the q64 value returned from a previous search
+GetLocationsSearchRequest.getLocationsSearch(q64: q64, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLocationsSearchRequest.getLocationsSearch was successful")
+        dump(response)
+    }
+}

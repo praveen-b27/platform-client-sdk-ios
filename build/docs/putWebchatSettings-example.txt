@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: WebChatSettings = new WebChatSettings(...) // webChatSettings
+
+// Update WebChat deployment settings
+PutWebchatSettingsRequest.putWebchatSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutWebchatSettingsRequest.putWebchatSettings was successful")
+        dump(response)
+    }
+}

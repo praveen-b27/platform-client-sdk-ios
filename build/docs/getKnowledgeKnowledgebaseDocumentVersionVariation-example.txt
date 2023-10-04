@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
+let documentId: String = "" // Globally unique identifier for the document.
+let versionId: String = "" // Globally unique identifier for the document version.
+let variationId: String = "" // Globally unique identifier for the document version variation.
+
+// Get variation for the given document version.
+GetKnowledgeKnowledgebaseDocumentVersionVariationRequest.getKnowledgeKnowledgebaseDocumentVersionVariation(knowledgeBaseId: knowledgeBaseId, documentId: documentId, versionId: versionId, variationId: variationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetKnowledgeKnowledgebaseDocumentVersionVariationRequest.getKnowledgeKnowledgebaseDocumentVersionVariation was successful")
+        dump(response)
+    }
+}

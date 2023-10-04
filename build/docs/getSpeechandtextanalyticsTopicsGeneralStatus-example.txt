@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dialect: GetSpeechandtextanalyticsTopicsGeneralStatusRequest.Dialect_getSpeechandtextanalyticsTopicsGeneralStatus = GetSpeechandtextanalyticsTopicsGeneralStatusRequest.Dialect_getSpeechandtextanalyticsTopicsGeneralStatus.enummember // The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+
+// Get the list of general topics from the org and the system with their current status
+GetSpeechandtextanalyticsTopicsGeneralStatusRequest.getSpeechandtextanalyticsTopicsGeneralStatus(dialect: dialect) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSpeechandtextanalyticsTopicsGeneralStatusRequest.getSpeechandtextanalyticsTopicsGeneralStatus was successful")
+        dump(response)
+    }
+}

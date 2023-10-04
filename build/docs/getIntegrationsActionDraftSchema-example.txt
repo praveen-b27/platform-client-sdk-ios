@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let actionId: String = "" // actionId
+let fileName: String = "" // Name of schema file to be retrieved for this draft.
+
+// Retrieve schema for a Draft based on filename.
+GetIntegrationsActionDraftSchemaRequest.getIntegrationsActionDraftSchema(actionId: actionId, fileName: fileName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsActionDraftSchemaRequest.getIntegrationsActionDraftSchema was successful")
+        dump(response)
+    }
+}

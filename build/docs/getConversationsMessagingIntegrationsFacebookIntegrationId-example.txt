@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let integrationId: String = "" // Integration ID
+let expand: GetConversationsMessagingIntegrationsFacebookIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsFacebookIntegrationId = GetConversationsMessagingIntegrationsFacebookIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsFacebookIntegrationId.enummember // Expand instructions for the return value.
+
+// Get a Facebook messaging integration
+GetConversationsMessagingIntegrationsFacebookIntegrationIdRequest.getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsMessagingIntegrationsFacebookIntegrationIdRequest.getConversationsMessagingIntegrationsFacebookIntegrationId was successful")
+        dump(response)
+    }
+}

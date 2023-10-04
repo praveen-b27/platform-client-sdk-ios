@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let phoneBaseId: String = "" // Phone base ID
+
+// Delete a Phone Base Settings by ID
+DeleteTelephonyProvidersEdgesPhonebasesettingRequest.deleteTelephonyProvidersEdgesPhonebasesetting(phoneBaseId: phoneBaseId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteTelephonyProvidersEdgesPhonebasesettingRequest.deleteTelephonyProvidersEdgesPhonebasesetting was successful")
+    }
+}

@@ -1,0 +1,28 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let queueId: String = "" // Queue ID
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // Max value is 100
+let sortOrder: GetRoutingQueueMembersRequest.SortOrder_getRoutingQueueMembers = GetRoutingQueueMembersRequest.SortOrder_getRoutingQueueMembers.enummember // Note: results are sorted by name.
+let expand: [String] = [""] // Which fields, if any, to expand.
+let name: String = "" // Filter by queue member name (contains-style search)
+let profileSkills: [String] = [""] // Filter by profile skill (contains-style search)
+let skills: [String] = [""] // Filter by skill (contains-style search)
+let languages: [String] = [""] // Filter by language (contains-style search)
+let routingStatus: [String] = [""] // Filter by routing status
+let presence: [String] = [""] // Filter by presence
+let memberBy: GetRoutingQueueMembersRequest.MemberBy_getRoutingQueueMembers = GetRoutingQueueMembersRequest.MemberBy_getRoutingQueueMembers.enummember // Filter by member type
+let joined: Bool = true // Filter by joined status
+
+// Get the members of this queue.
+GetRoutingQueueMembersRequest.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence, memberBy: memberBy, joined: joined) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingQueueMembersRequest.getRoutingQueueMembers was successful")
+        dump(response)
+    }
+}

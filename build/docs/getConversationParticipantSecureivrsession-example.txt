@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let secureSessionId: String = "" // secure IVR session ID
+
+// Fetch info on a secure session
+GetConversationParticipantSecureivrsessionRequest.getConversationParticipantSecureivrsession(conversationId: conversationId, participantId: participantId, secureSessionId: secureSessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationParticipantSecureivrsessionRequest.getConversationParticipantSecureivrsession was successful")
+        dump(response)
+    }
+}

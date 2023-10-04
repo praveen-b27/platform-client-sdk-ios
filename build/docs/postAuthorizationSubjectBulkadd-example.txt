@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
+let subjectType: String = "" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+
+// Bulk-grant roles and divisions to a subject.
+PostAuthorizationSubjectBulkaddRequest.postAuthorizationSubjectBulkadd(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostAuthorizationSubjectBulkaddRequest.postAuthorizationSubjectBulkadd was successful")
+    }
+}

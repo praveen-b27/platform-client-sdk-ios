@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let sortBy: String = "" // Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate).
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let isActive: Bool = true // Determines whether or not to show only active segments.
+let segmentIds: [String] = [""] // IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request.
+let queryFields: [String] = [""] // Segment field(s) to query on. Requires 'queryValue' to also be set.
+let queryValue: String = "" // Value to query on. Requires 'queryFields' to also be set.
+
+// Retrieve all segments.
+GetJourneySegmentsRequest.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetJourneySegmentsRequest.getJourneySegments was successful")
+        dump(response)
+    }
+}

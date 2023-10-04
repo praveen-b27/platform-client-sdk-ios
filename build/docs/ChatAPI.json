@@ -1,0 +1,69 @@
+{
+    "GET /api/v2/chat/settings": {
+        "operationId": "getchatsettings",
+        "functionName": "getChatSettings",
+        "signature": "getChatSettings()",
+        
+        "return": "ChatSettings"
+    },
+    "GET /api/v2/chats/settings": {
+        "operationId": "getchatssettings",
+        "functionName": "getChatsSettings",
+        "signature": "getChatsSettings()",
+        
+        "return": "ChatSettings"
+    },
+    "PATCH /api/v2/chat/settings": {
+        "operationId": "patchchatsettings",
+        "functionName": "patchChatSettings",
+        "signature": "patchChatSettings(body)",
+        "parameters": [
+            {
+                "name": "body",
+                "type": "ChatSettings",
+                "required": "true"
+            }
+        ],
+        "return": "ChatSettings"
+    },
+    "PATCH /api/v2/chats/settings": {
+        "operationId": "patchchatssettings",
+        "functionName": "patchChatsSettings",
+        "signature": "patchChatsSettings(body)",
+        "parameters": [
+            {
+                "name": "body",
+                "type": "ChatSettings",
+                "required": "true"
+            }
+        ],
+        "return": "ChatSettings"
+    },
+    "PUT /api/v2/chat/settings": {
+        "operationId": "putchatsettings",
+        "functionName": "putChatSettings",
+        "signature": "putChatSettings(body)",
+        "parameters": [
+            {
+                "name": "body",
+                "type": "ChatSettings",
+                "required": "true"
+            }
+        ],
+        "return": "ChatSettings"
+    },
+    "PUT /api/v2/chats/settings": {
+        "operationId": "putchatssettings",
+        "functionName": "putChatsSettings",
+        "signature": "putChatsSettings(body)",
+        "parameters": [
+            {
+                "name": "body",
+                "type": "ChatSettings",
+                "required": "true"
+            }
+        ],
+        "return": "ChatSettings"
+    }
+    
+}

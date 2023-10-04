@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let messageId: String = "" // messageId
+let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)
+
+// Get message
+GetConversationsMessageDetailsRequest.getConversationsMessageDetails(messageId: messageId, useNormalizedMessage: useNormalizedMessage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsMessageDetailsRequest.getConversationsMessageDetails was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let edgeGroupId: String = "" // Edge group ID
+let body: EdgeGroup = new EdgeGroup(...) // EdgeGroup
+
+// Update an edge group.
+PutTelephonyProvidersEdgesEdgegroupRequest.putTelephonyProvidersEdgesEdgegroup(edgeGroupId: edgeGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutTelephonyProvidersEdgesEdgegroupRequest.putTelephonyProvidersEdgesEdgegroup was successful")
+        dump(response)
+    }
+}

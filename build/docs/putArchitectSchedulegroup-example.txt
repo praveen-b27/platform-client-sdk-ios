@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let scheduleGroupId: String = "" // Schedule group ID
+let body: ScheduleGroup = new ScheduleGroup(...) // 
+
+// Updates a schedule group by ID
+PutArchitectSchedulegroupRequest.putArchitectSchedulegroup(scheduleGroupId: scheduleGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutArchitectSchedulegroupRequest.putArchitectSchedulegroup was successful")
+        dump(response)
+    }
+}

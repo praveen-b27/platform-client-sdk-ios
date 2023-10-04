@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let roleId: String = "" // Role ID
+let userCount: Bool = true // Fetch the count of users who have this role granted in at least one division
+let expand: [String] = [""] // Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
+
+// Get a single organization role.
+GetAuthorizationRoleRequest.getAuthorizationRole(roleId: roleId, userCount: userCount, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAuthorizationRoleRequest.getAuthorizationRole was successful")
+        dump(response)
+    }
+}

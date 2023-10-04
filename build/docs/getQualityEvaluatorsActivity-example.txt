@@ -1,0 +1,26 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let startTime: Date = new Date(...) // The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let endTime: Date = new Date(...) // The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let name: String = "" // Evaluator name
+let permission: [String] = [""] // permission strings
+let group: String = "" // group id
+
+// Get an evaluator activity
+GetQualityEvaluatorsActivityRequest.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, name: name, permission: permission, group: group) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityEvaluatorsActivityRequest.getQualityEvaluatorsActivity was successful")
+        dump(response)
+    }
+}

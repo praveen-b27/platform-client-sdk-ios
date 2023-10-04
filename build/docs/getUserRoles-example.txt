@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let subjectId: String = "" // User ID
+
+// Returns a listing of roles and permissions for a user.
+GetUserRolesRequest.getUserRoles(subjectId: subjectId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserRolesRequest.getUserRoles was successful")
+        dump(response)
+    }
+}

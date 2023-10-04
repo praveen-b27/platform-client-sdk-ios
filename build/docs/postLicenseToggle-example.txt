@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let featureName: String = "" // featureName
+
+// Deprecated. No alternative required - this endpoint has no effect
+PostLicenseToggleRequest.postLicenseToggle(featureName: featureName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLicenseToggleRequest.postLicenseToggle was successful")
+        dump(response)
+    }
+}

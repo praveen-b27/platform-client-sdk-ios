@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // User ID
+let body: VoicemailUserPolicy = new VoicemailUserPolicy(...) // The user's voicemail policy
+
+// Update a user's voicemail policy
+PutVoicemailUserpolicyRequest.putVoicemailUserpolicy(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutVoicemailUserpolicyRequest.putVoicemailUserpolicy was successful")
+        dump(response)
+    }
+}

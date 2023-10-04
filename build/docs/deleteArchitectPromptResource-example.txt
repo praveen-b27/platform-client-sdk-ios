@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let promptId: String = "" // Prompt ID
+let languageCode: String = "" // Language
+
+// Delete specified user prompt resource
+DeleteArchitectPromptResourceRequest.deleteArchitectPromptResource(promptId: promptId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteArchitectPromptResourceRequest.deleteArchitectPromptResource was successful")
+    }
+}

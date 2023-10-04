@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let featureName: PatchOrganizationsFeatureRequest.FeatureName_patchOrganizationsFeature = PatchOrganizationsFeatureRequest.FeatureName_patchOrganizationsFeature.enummember // Organization feature
+let enabled: FeatureState = new FeatureState(...) // New state of feature
+
+// Update organization
+PatchOrganizationsFeatureRequest.patchOrganizationsFeature(featureName: featureName, enabled: enabled) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchOrganizationsFeatureRequest.patchOrganizationsFeature was successful")
+        dump(response)
+    }
+}

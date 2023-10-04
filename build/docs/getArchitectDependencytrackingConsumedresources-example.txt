@@ -1,0 +1,21 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let _id: String = "" // Consuming object ID
+let version: String = "" // Consuming object version
+let objectType: GetArchitectDependencytrackingConsumedresourcesRequest.ObjectType_getArchitectDependencytrackingConsumedresources = GetArchitectDependencytrackingConsumedresourcesRequest.ObjectType_getArchitectDependencytrackingConsumedresources.enummember // Consuming object type.  Only versioned types are allowed here.
+let resourceType: [String] = [""] // Types of consumed resources to show
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+
+// Get resources that are consumed by a given Dependency Tracking object
+GetArchitectDependencytrackingConsumedresourcesRequest.getArchitectDependencytrackingConsumedresources(_id: _id, version: version, objectType: objectType, resourceType: resourceType, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectDependencytrackingConsumedresourcesRequest.getArchitectDependencytrackingConsumedresources was successful")
+        dump(response)
+    }
+}

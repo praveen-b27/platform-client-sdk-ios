@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let language: String = "" // The language of the translation to retrieve for the organization
+
+// Get effective translation for an organization by language
+GetLanguagesTranslationsOrganizationRequest.getLanguagesTranslationsOrganization(language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLanguagesTranslationsOrganizationRequest.getLanguagesTranslationsOrganization was successful")
+        dump(response)
+    }
+}

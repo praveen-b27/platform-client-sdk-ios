@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: PublishForm = new PublishForm(...) // Survey form
+
+// Publish a survey form.
+PostQualityPublishedformsSurveysRequest.postQualityPublishedformsSurveys(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostQualityPublishedformsSurveysRequest.postQualityPublishedformsSurveys was successful")
+        dump(response)
+    }
+}

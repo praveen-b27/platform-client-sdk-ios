@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let body: UpdateBusinessUnitRequest = new UpdateBusinessUnitRequest(...) // body
+
+// Update business unit
+PatchWorkforcemanagementBusinessunitRequest.patchWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchWorkforcemanagementBusinessunitRequest.patchWorkforcemanagementBusinessunit was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversation ID
+let body: ConversationUser = new ConversationUser(...) // Targeted user
+
+// Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.
+PostConversationAssignRequest.postConversationAssign(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationAssignRequest.postConversationAssign was successful")
+        dump(response)
+    }
+}

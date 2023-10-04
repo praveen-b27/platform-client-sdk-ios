@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let type: GetFieldconfigRequest.ModelType_getFieldconfig = GetFieldconfigRequest.ModelType_getFieldconfig.enummember // Field type
+
+// Fetch field config for an entity type
+GetFieldconfigRequest.getFieldconfig(type: type) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFieldconfigRequest.getFieldconfig was successful")
+        dump(response)
+    }
+}

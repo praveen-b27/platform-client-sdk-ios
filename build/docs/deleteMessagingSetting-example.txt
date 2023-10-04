@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let messageSettingId: String = "" // Message Settings ID
+
+// Delete a messaging setting
+DeleteMessagingSettingRequest.deleteMessagingSetting(messageSettingId: messageSettingId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteMessagingSettingRequest.deleteMessagingSetting was successful")
+    }
+}

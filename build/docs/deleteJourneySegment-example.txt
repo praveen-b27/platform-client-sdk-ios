@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let segmentId: String = "" // ID of the segment.
+
+// Delete a segment.
+DeleteJourneySegmentRequest.deleteJourneySegment(segmentId: segmentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteJourneySegmentRequest.deleteJourneySegment was successful")
+    }
+}

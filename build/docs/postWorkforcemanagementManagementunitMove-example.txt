@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: MoveManagementUnitRequest = new MoveManagementUnitRequest(...) // body
+
+// Move the requested management unit to a new business unit
+PostWorkforcemanagementManagementunitMoveRequest.postWorkforcemanagementManagementunitMove(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitMoveRequest.postWorkforcemanagementManagementunitMove was successful")
+        dump(response)
+    }
+}

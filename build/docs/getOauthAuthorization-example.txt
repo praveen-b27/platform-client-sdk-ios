@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let clientId: String = "" // The ID of client
+let acceptLanguage: String = "" // The language in which to display the client descriptions.
+
+// Get a client that is authorized by the resource owner
+GetOauthAuthorizationRequest.getOauthAuthorization(clientId: clientId, acceptLanguage: acceptLanguage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOauthAuthorizationRequest.getOauthAuthorization was successful")
+        dump(response)
+    }
+}

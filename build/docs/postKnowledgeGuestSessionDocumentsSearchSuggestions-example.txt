@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let sessionId: String = "" // Knowledge guest session ID.
+let body: KnowledgeGuestDocumentSuggestionRequest = new KnowledgeGuestDocumentSuggestionRequest(...) // 
+
+// Query the knowledge documents to provide suggestions for auto completion.
+PostKnowledgeGuestSessionDocumentsSearchSuggestionsRequest.postKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId: sessionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostKnowledgeGuestSessionDocumentsSearchSuggestionsRequest.postKnowledgeGuestSessionDocumentsSearchSuggestions was successful")
+        dump(response)
+    }
+}

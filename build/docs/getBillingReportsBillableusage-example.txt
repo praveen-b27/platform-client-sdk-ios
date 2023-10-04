@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let startDate: Date = new Date(...) // The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let endDate: Date = new Date(...) // The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+
+// Get a report of the billable license usages
+GetBillingReportsBillableusageRequest.getBillingReportsBillableusage(startDate: startDate, endDate: endDate) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetBillingReportsBillableusageRequest.getBillingReportsBillableusage was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let calendarId: String = "" // The id of the ics-formatted calendar
+
+// Get ics formatted calendar based on shareable link
+GetWorkforcemanagementCalendarDataIcsRequest.getWorkforcemanagementCalendarDataIcs(calendarId: calendarId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementCalendarDataIcsRequest.getWorkforcemanagementCalendarDataIcs was successful")
+        dump(response)
+    }
+}

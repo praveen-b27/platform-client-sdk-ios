@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let deactivated: String = "" // Deactivated query can be TRUE or FALSE
+
+// Get a list of Presence Sources
+GetPresenceSourcesRequest.getPresenceSources(deactivated: deactivated) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetPresenceSourcesRequest.getPresenceSources was successful")
+        dump(response)
+    }
+}

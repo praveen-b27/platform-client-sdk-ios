@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dncListId: String = "" // DncList ID
+let body: DncPatchEmailsRequest = new DncPatchEmailsRequest(...) // DNC Emails
+
+// Add emails to or Delete emails from a DNC list.
+PatchOutboundDnclistEmailaddressesRequest.patchOutboundDnclistEmailaddresses(dncListId: dncListId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchOutboundDnclistEmailaddressesRequest.patchOutboundDnclistEmailaddresses was successful")
+    }
+}

@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let maxResults: Int = 0 // Number of jobs to show
+let includeErrors: Bool = true // Include error messages
+let sortBy: GetInfrastructureascodeJobsRequest.SortBy_getInfrastructureascodeJobs = GetInfrastructureascodeJobsRequest.SortBy_getInfrastructureascodeJobs.enummember // Sort by
+let sortOrder: GetInfrastructureascodeJobsRequest.SortOrder_getInfrastructureascodeJobs = GetInfrastructureascodeJobsRequest.SortOrder_getInfrastructureascodeJobs.enummember // Sort order
+let acceleratorId: String = "" // Find only jobs associated with this accelerator
+let submittedBy: String = "" // Find only jobs submitted by this user
+let status: GetInfrastructureascodeJobsRequest.Status_getInfrastructureascodeJobs = GetInfrastructureascodeJobsRequest.Status_getInfrastructureascodeJobs.enummember // Find only jobs in this state
+
+// Get job history
+GetInfrastructureascodeJobsRequest.getInfrastructureascodeJobs(maxResults: maxResults, includeErrors: includeErrors, sortBy: sortBy, sortOrder: sortOrder, acceleratorId: acceleratorId, submittedBy: submittedBy, status: status) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetInfrastructureascodeJobsRequest.getInfrastructureascodeJobs was successful")
+        dump(response)
+    }
+}

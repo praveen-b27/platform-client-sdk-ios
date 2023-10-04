@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let keyconfigurationsId: String = "" // Key Configurations Id
+let body: ConversationEncryptionConfiguration = new ConversationEncryptionConfiguration(...) // Encryption key configuration metadata
+
+// Update the encryption key configurations
+PutConversationsKeyconfigurationRequest.putConversationsKeyconfiguration(keyconfigurationsId: keyconfigurationsId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutConversationsKeyconfigurationRequest.putConversationsKeyconfiguration was successful")
+        dump(response)
+    }
+}

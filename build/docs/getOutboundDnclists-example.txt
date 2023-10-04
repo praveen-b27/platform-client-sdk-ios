@@ -1,0 +1,26 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let includeImportStatus: Bool = true // Import status
+let includeSize: Bool = true // Include size
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
+let filterType: GetOutboundDnclistsRequest.FilterType_getOutboundDnclists = GetOutboundDnclistsRequest.FilterType_getOutboundDnclists.enummember // Filter type
+let name: String = "" // Name
+let dncSourceType: GetOutboundDnclistsRequest.DncSourceType_getOutboundDnclists = GetOutboundDnclistsRequest.DncSourceType_getOutboundDnclists.enummember // DncSourceType
+let divisionId: [String] = [""] // Division ID(s)
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundDnclistsRequest.SortOrder_getOutboundDnclists = GetOutboundDnclistsRequest.SortOrder_getOutboundDnclists.enummember // Sort order
+
+// Query dialer DNC lists
+GetOutboundDnclistsRequest.getOutboundDnclists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, dncSourceType: dncSourceType, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundDnclistsRequest.getOutboundDnclists was successful")
+        dump(response)
+    }
+}

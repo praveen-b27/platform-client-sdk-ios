@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let contactId: String = "" // ExternalContact ID
+let expand: [String] = [""] // which fields, if any, to expand (externalOrganization,externalDataSources)
+
+// Fetch an unresolved external contact
+GetExternalcontactsContactUnresolvedRequest.getExternalcontactsContactUnresolved(contactId: contactId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetExternalcontactsContactUnresolvedRequest.getExternalcontactsContactUnresolved was successful")
+        dump(response)
+    }
+}

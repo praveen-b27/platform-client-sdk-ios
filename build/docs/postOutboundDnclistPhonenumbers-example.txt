@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dncListId: String = "" // DncList ID
+let body: [String] = [""] // DNC Phone Numbers
+let expirationDateTime: String = "" // Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format
+
+// Add phone numbers to a DNC list.
+PostOutboundDnclistPhonenumbersRequest.postOutboundDnclistPhonenumbers(dncListId: dncListId, body: body, expirationDateTime: expirationDateTime) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostOutboundDnclistPhonenumbersRequest.postOutboundDnclistPhonenumbers was successful")
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let integrationId: String = "" // Integration ID
+let expand: GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId = GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId.enummember // Expand instructions for the return value.
+
+// Get a Twitter messaging integration
+GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.getConversationsMessagingIntegrationsTwitterIntegrationId was successful")
+        dump(response)
+    }
+}

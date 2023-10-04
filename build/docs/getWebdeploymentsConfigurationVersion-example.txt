@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let configurationId: String = "" // The configuration version ID
+let versionId: String = "" // The version of the configuration to get
+
+// Get a configuration version
+GetWebdeploymentsConfigurationVersionRequest.getWebdeploymentsConfigurationVersion(configurationId: configurationId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWebdeploymentsConfigurationVersionRequest.getWebdeploymentsConfigurationVersion was successful")
+        dump(response)
+    }
+}

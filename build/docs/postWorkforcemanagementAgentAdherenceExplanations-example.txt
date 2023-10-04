@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let agentId: String = "" // The ID of the agent to query
+let body: AddAdherenceExplanationAdminRequest = new AddAdherenceExplanationAdminRequest(...) // The request body
+
+// Add an adherence explanation for the requested user
+PostWorkforcemanagementAgentAdherenceExplanationsRequest.postWorkforcemanagementAgentAdherenceExplanations(agentId: agentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementAgentAdherenceExplanationsRequest.postWorkforcemanagementAgentAdherenceExplanations was successful")
+        dump(response)
+    }
+}

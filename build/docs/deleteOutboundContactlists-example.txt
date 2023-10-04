@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let _id: [String] = [""] // contact list id(s) to delete
+
+// Delete multiple contact lists.
+DeleteOutboundContactlistsRequest.deleteOutboundContactlists(_id: _id) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundContactlistsRequest.deleteOutboundContactlists was successful")
+    }
+}

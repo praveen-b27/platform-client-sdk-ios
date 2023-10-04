@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let jobId: String = "" // Job ID
+let expand: [String] = [""] // Which fields, if any, to expand.
+
+// Fetch Architect Job Status
+GetFlowsJobRequest.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsJobRequest.getFlowsJob was successful")
+        dump(response)
+    }
+}

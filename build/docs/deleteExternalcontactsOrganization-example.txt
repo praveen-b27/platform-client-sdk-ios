@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let externalOrganizationId: String = "" // External Organization ID
+
+// Delete an external organization
+DeleteExternalcontactsOrganizationRequest.deleteExternalcontactsOrganization(externalOrganizationId: externalOrganizationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("DeleteExternalcontactsOrganizationRequest.deleteExternalcontactsOrganization was successful")
+        dump(response)
+    }
+}

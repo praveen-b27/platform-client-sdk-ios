@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let addressId: String = "" // Address ID
+let body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber
+
+// Update a phone number provisioned for SMS.
+PutRoutingSmsPhonenumberRequest.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutRoutingSmsPhonenumberRequest.putRoutingSmsPhonenumber was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,23 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let name: String = "" // Name
+let userSelectable: String = "" // True for stations that the user can select otherwise false
+let webRtcUserId: String = "" // Filter for the webRtc station of the webRtcUserId
+let _id: String = "" // Comma separated list of stationIds
+let lineAppearanceId: String = "" // lineAppearanceId
+
+// Get the list of available stations.
+GetStationsRequest.getStations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, userSelectable: userSelectable, webRtcUserId: webRtcUserId, _id: _id, lineAppearanceId: lineAppearanceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetStationsRequest.getStations was successful")
+        dump(response)
+    }
+}

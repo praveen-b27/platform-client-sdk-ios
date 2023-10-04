@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let leftRoleId: String = "" // Left Role ID
+let rightRoleId: String = "" // Right Role id
+let body: DomainOrganizationRole = new DomainOrganizationRole(...) // Organization role
+
+// Get an unsaved org role to default role comparison
+PostAuthorizationRoleComparedefaultRightRoleIdRequest.postAuthorizationRoleComparedefaultRightRoleId(leftRoleId: leftRoleId, rightRoleId: rightRoleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAuthorizationRoleComparedefaultRightRoleIdRequest.postAuthorizationRoleComparedefaultRightRoleId was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let edgeGroupId: String = "" // Edge group ID
+
+// Delete an edge group.
+DeleteTelephonyProvidersEdgesEdgegroupRequest.deleteTelephonyProvidersEdgesEdgegroup(edgeGroupId: edgeGroupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteTelephonyProvidersEdgesEdgegroupRequest.deleteTelephonyProvidersEdgesEdgegroup was successful")
+    }
+}

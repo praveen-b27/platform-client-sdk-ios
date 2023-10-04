@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: LearningAssignmentAggregateParam = new LearningAssignmentAggregateParam(...) // Aggregate Request
+
+// Retrieve aggregated assignment data
+PostLearningAssignmentsAggregatesQueryRequest.postLearningAssignmentsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLearningAssignmentsAggregatesQueryRequest.postLearningAssignmentsAggregatesQuery was successful")
+        dump(response)
+    }
+}

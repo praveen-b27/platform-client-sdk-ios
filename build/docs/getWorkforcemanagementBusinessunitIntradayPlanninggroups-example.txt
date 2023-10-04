@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let businessUnitId: String = "" // The ID of the business unit
+let date: Date = new Date(...) // yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Get intraday planning groups for the given date
+GetWorkforcemanagementBusinessunitIntradayPlanninggroupsRequest.getWorkforcemanagementBusinessunitIntradayPlanninggroups(businessUnitId: businessUnitId, date: date) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitIntradayPlanninggroupsRequest.getWorkforcemanagementBusinessunitIntradayPlanninggroups was successful")
+        dump(response)
+    }
+}

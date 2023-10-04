@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let minerId: String = "" // Miner ID
+let body: MinerExecuteRequest = new MinerExecuteRequest(...) // 
+
+// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+PostLanguageunderstandingMinerExecuteRequest.postLanguageunderstandingMinerExecute(minerId: minerId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLanguageunderstandingMinerExecuteRequest.postLanguageunderstandingMinerExecute was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let clientId: String = "" // Client ID
+let days: String = "" // Previous number of days to query
+
+// Get a summary of OAuth client API usage
+GetOauthClientUsageSummaryRequest.getOauthClientUsageSummary(clientId: clientId, days: days) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOauthClientUsageSummaryRequest.getOauthClientUsageSummary was successful")
+        dump(response)
+    }
+}

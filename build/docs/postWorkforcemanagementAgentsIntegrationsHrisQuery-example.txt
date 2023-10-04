@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: QueryAgentsIntegrationsRequest = new QueryAgentsIntegrationsRequest(...) // body
+
+// Query integrations for agents
+PostWorkforcemanagementAgentsIntegrationsHrisQueryRequest.postWorkforcemanagementAgentsIntegrationsHrisQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementAgentsIntegrationsHrisQueryRequest.postWorkforcemanagementAgentsIntegrationsHrisQuery was successful")
+        dump(response)
+    }
+}

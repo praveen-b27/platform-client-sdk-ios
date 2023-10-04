@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // The ID of knowledge base containing the documents to query.
+let body: KnowledgeDocumentSuggestionRequest = new KnowledgeDocumentSuggestionRequest(...) // 
+
+// Query the knowledge documents to provide suggestions for auto completion.
+PostKnowledgeKnowledgebaseDocumentsSearchSuggestionsRequest.postKnowledgeKnowledgebaseDocumentsSearchSuggestions(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostKnowledgeKnowledgebaseDocumentsSearchSuggestionsRequest.postKnowledgeKnowledgebaseDocumentsSearchSuggestions was successful")
+        dump(response)
+    }
+}

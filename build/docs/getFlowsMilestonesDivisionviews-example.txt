@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let divisionId: [String] = [""] // division ID(s)
+
+// Get a pageable list of basic flow milestone information objects filterable by query parameters.
+GetFlowsMilestonesDivisionviewsRequest.getFlowsMilestonesDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsMilestonesDivisionviewsRequest.getFlowsMilestonesDivisionviews was successful")
+        dump(response)
+    }
+}

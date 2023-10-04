@@ -1,0 +1,24 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let objectCount: Bool = true // Include the count of objects contained in the division
+let _id: [String] = [""] // Optionally request specific divisions by their IDs
+let name: String = "" // Search term to filter by division name
+
+// Retrieve a list of all divisions defined for the organization
+GetAuthorizationDivisionsRequest.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, _id: _id, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAuthorizationDivisionsRequest.getAuthorizationDivisions was successful")
+        dump(response)
+    }
+}

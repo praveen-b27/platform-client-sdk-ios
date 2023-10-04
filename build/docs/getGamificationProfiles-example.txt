@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// All performance profiles
+GetGamificationProfilesRequest.getGamificationProfiles() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationProfilesRequest.getGamificationProfiles was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let calibrationId: String = "" // Calibration ID
+let body: Calibration = new Calibration(...) // Calibration
+
+// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
+PutQualityCalibrationRequest.putQualityCalibration(calibrationId: calibrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutQualityCalibrationRequest.putQualityCalibration was successful")
+        dump(response)
+    }
+}

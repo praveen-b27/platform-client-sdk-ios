@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/v2/users.
+let body: ScimV2User = new ScimV2User(...) // The information used to replace a user.
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
+
+// Replace a user
+PutScimV2UserRequest.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutScimV2UserRequest.putScimV2User was successful")
+        dump(response)
+    }
+}

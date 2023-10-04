@@ -1,0 +1,32 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: GetTelephonyProvidersEdgesPhonesRequest.SortBy_getTelephonyProvidersEdgesPhones = GetTelephonyProvidersEdgesPhonesRequest.SortBy_getTelephonyProvidersEdgesPhones.enummember // The field to sort by
+let sortOrder: String = "" // Sort order
+let siteId: String = "" // Filter by site.id
+let webRtcUserId: String = "" // Filter by webRtcUser.id
+let phoneBaseSettingsId: String = "" // Filter by phoneBaseSettings.id
+let linesLoggedInUserId: String = "" // Filter by lines.loggedInUser.id
+let linesDefaultForUserId: String = "" // Filter by lines.defaultForUser.id
+let phoneHardwareId: String = "" // Filter by phone_hardwareId
+let linesId: String = "" // Filter by lines.id
+let linesName: String = "" // Filter by lines.name
+let name: String = "" // Name of the Phone to filter by, comma-separated
+let statusOperationalStatus: String = "" // The primary status to filter by
+let secondaryStatusOperationalStatus: String = "" // The secondary status to filter by
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
+let fields: [String] = [""] // Fields and properties to get, comma-separated
+
+// Get a list of Phone Instances. A maximum of 10,000 results is returned when filtering the results or sorting by a field other than the ID. Sorting by only the ID has no result limit. Each filter supports a wildcard, *, as a value to search for partial values.
+GetTelephonyProvidersEdgesPhonesRequest.getTelephonyProvidersEdgesPhones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, statusOperationalStatus: statusOperationalStatus, secondaryStatusOperationalStatus: secondaryStatusOperationalStatus, expand: expand, fields: fields) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesPhonesRequest.getTelephonyProvidersEdgesPhones was successful")
+        dump(response)
+    }
+}

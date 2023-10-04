@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let groupId: String = "" // Group ID
+
+// Delete group
+DeleteGroupRequest.deleteGroup(groupId: groupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteGroupRequest.deleteGroup was successful")
+    }
+}

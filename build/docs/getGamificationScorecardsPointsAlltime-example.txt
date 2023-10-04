@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// All-time points of the requesting user
+GetGamificationScorecardsPointsAlltimeRequest.getGamificationScorecardsPointsAlltime(endWorkday: endWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationScorecardsPointsAlltimeRequest.getGamificationScorecardsPointsAlltime was successful")
+        dump(response)
+    }
+}

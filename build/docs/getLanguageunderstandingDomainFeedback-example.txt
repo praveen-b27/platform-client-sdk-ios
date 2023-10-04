@@ -1,0 +1,28 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let domainId: String = "" // ID of the NLU domain.
+let intentName: String = "" // The top intent name to retrieve feedback for.
+let assessment: GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback = GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback.enummember // The top assessment to retrieve feedback for.
+let dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.
+let dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.
+let includeDeleted: Bool = true // Whether to include soft-deleted items in the result.
+let language: String = "" // Whether to filter response based on the language, e.g. en-us, pt-br.
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let enableCursorPagination: Bool = true // Enable Cursor Pagination
+let includeTrainingUtterances: Bool = true // Include Training Utterances. By default they're included.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true
+let fields: [String] = [""] // Fields and properties to get, comma-separated
+
+// Get all feedback in the given NLU Domain Version.
+GetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, includeTrainingUtterances: includeTrainingUtterances, after: after, fields: fields) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback was successful")
+        dump(response)
+    }
+}

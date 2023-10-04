@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size [max value is 500]
+let pageNumber: Int = 0 // Page number
+let sortOrder: GetRoutingQueuesDivisionviewsAllRequest.SortOrder_getRoutingQueuesDivisionviewsAll = GetRoutingQueuesDivisionviewsAllRequest.SortOrder_getRoutingQueuesDivisionviewsAll.enummember // Sort order
+
+// Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
+GetRoutingQueuesDivisionviewsAllRequest.getRoutingQueuesDivisionviewsAll(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingQueuesDivisionviewsAllRequest.getRoutingQueuesDivisionviewsAll was successful")
+        dump(response)
+    }
+}

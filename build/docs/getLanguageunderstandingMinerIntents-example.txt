@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let minerId: String = "" // Miner ID
+let expand: GetLanguageunderstandingMinerIntentsRequest.Expand_getLanguageunderstandingMinerIntents = GetLanguageunderstandingMinerIntentsRequest.Expand_getLanguageunderstandingMinerIntents.enummember // Option to fetch utterances.
+
+// Retrieve a list of mined intents.
+GetLanguageunderstandingMinerIntentsRequest.getLanguageunderstandingMinerIntents(minerId: minerId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLanguageunderstandingMinerIntentsRequest.getLanguageunderstandingMinerIntents was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+
+// Get the surveys for a conversation
+GetQualityConversationSurveysRequest.getQualityConversationSurveys(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityConversationSurveysRequest.getQualityConversationSurveys was successful")
+        dump(response)
+    }
+}

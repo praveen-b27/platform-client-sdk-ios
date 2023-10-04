@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit.
+let body: QueryTimeOffIntegrationStatusRequest = new QueryTimeOffIntegrationStatusRequest(...) // body
+
+// Retrieves integration statuses for a list of time off requests
+PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery was successful")
+        dump(response)
+    }
+}

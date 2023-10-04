@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: CreateIntegrationRequest = new CreateIntegrationRequest(...) // Integration
+
+// Create an integration.
+PostIntegrationsRequest.postIntegrations(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostIntegrationsRequest.postIntegrations was successful")
+        dump(response)
+    }
+}

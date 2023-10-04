@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let businessUnitId: String = "" // The ID of the business unit
+let runId: String = "" // The ID of the schedule run
+let managementUnitIds: [String] = [""] // The IDs of the management units for which to fetch the reschedule results
+let expand: [String] = [""] // The fields to expand. Omitting will return an empty response
+
+// Get the result of a rescheduling operation
+GetWorkforcemanagementBusinessunitSchedulingRunResultRequest.getWorkforcemanagementBusinessunitSchedulingRunResult(businessUnitId: businessUnitId, runId: runId, managementUnitIds: managementUnitIds, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitSchedulingRunResultRequest.getWorkforcemanagementBusinessunitSchedulingRunResult was successful")
+        dump(response)
+    }
+}

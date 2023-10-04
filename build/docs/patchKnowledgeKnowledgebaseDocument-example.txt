@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // 
+
+// Update document.
+PatchKnowledgeKnowledgebaseDocumentRequest.patchKnowledgeKnowledgebaseDocument(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchKnowledgeKnowledgebaseDocumentRequest.patchKnowledgeKnowledgebaseDocument was successful")
+        dump(response)
+    }
+}

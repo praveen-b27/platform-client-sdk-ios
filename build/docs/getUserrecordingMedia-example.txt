@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let recordingId: String = "" // User Recording ID
+let formatId: GetUserrecordingMediaRequest.FormatId_getUserrecordingMedia = GetUserrecordingMediaRequest.FormatId_getUserrecordingMedia.enummember // The desired media format.
+let async: Bool = true // When set to true, api will return 202 response until the recording is ready for download
+
+// Download a user recording.
+GetUserrecordingMediaRequest.getUserrecordingMedia(recordingId: recordingId, formatId: formatId, async: async) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserrecordingMediaRequest.getUserrecordingMedia was successful")
+        dump(response)
+    }
+}

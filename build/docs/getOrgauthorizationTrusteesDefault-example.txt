@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Get organization authorization trust with Customer Care, if one exists.
+GetOrgauthorizationTrusteesDefaultRequest.getOrgauthorizationTrusteesDefault() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrgauthorizationTrusteesDefaultRequest.getOrgauthorizationTrusteesDefault was successful")
+        dump(response)
+    }
+}

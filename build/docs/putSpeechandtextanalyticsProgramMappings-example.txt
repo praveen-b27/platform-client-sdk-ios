@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let programId: String = "" // The id of the program
+let body: ProgramMappingsRequest = new ProgramMappingsRequest(...) // The program to set mappings for
+
+// Set Speech & Text Analytics program mappings to queues and flows
+PutSpeechandtextanalyticsProgramMappingsRequest.putSpeechandtextanalyticsProgramMappings(programId: programId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutSpeechandtextanalyticsProgramMappingsRequest.putSpeechandtextanalyticsProgramMappings was successful")
+        dump(response)
+    }
+}

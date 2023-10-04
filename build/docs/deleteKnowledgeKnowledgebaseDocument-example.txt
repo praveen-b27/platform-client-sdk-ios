@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+
+// Delete document.
+DeleteKnowledgeKnowledgebaseDocumentRequest.deleteKnowledgeKnowledgebaseDocument(knowledgeBaseId: knowledgeBaseId, documentId: documentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteKnowledgeKnowledgebaseDocumentRequest.deleteKnowledgeKnowledgebaseDocument was successful")
+    }
+}

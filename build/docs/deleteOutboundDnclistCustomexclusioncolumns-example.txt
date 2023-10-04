@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dncListId: String = "" // DncList ID
+let expiredOnly: Bool = true // Set to true to only remove DNC entries that are expired
+
+// Deletes all or expired custom exclusion column entries from a DNC list.
+DeleteOutboundDnclistCustomexclusioncolumnsRequest.deleteOutboundDnclistCustomexclusioncolumns(dncListId: dncListId, expiredOnly: expiredOnly) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundDnclistCustomexclusioncolumnsRequest.deleteOutboundDnclistCustomexclusioncolumns was successful")
+    }
+}

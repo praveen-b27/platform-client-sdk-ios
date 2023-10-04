@@ -1,0 +1,35 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
+let sortBy: String = "" // NOTE: Does not work when querying evaluations
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // NOTE: Does not work when querying evaluations
+let previousPage: String = "" // Previous page token
+let conversationId: String = "" // conversationId specified
+let agentUserId: String = "" // user id of the agent
+let evaluatorUserId: String = "" // evaluator user id
+let assigneeUserId: String = "" // assignee user id
+let queueId: String = "" // queue id
+let startTime: String = "" // start time of the evaluation query
+let endTime: String = "" // end time of the evaluation query
+let formContextId: String = "" // shared id between form versions
+let evaluationState: [String] = [""] // 
+let isReleased: Bool = true // the evaluation has been released
+let agentHasRead: Bool = true // agent has the evaluation
+let expandAnswerTotalScores: Bool = true // get the total scores for evaluations
+let maximum: Int = 0 // the maximum number of results to return
+let sortOrder: String = "" // NOTE: Does not work when conversationId is supplied.
+
+// Queries Evaluations and returns a paged list
+GetQualityEvaluationsQueryRequest.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityEvaluationsQueryRequest.getQualityEvaluationsQuery was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let licenseId: String = "" // ID
+
+// Get PureCloud license definition.
+GetLicenseDefinitionRequest.getLicenseDefinition(licenseId: licenseId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLicenseDefinitionRequest.getLicenseDefinition was successful")
+        dump(response)
+    }
+}

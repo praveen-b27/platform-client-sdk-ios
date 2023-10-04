@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let validationMode: PostWorkforcemanagementManagementunitWorkplansRequest.ValidationMode_postWorkforcemanagementManagementunitWorkplans = PostWorkforcemanagementManagementunitWorkplansRequest.ValidationMode_postWorkforcemanagementManagementunitWorkplans.enummember // Allows to create work plan even if the validation result is invalid
+let body: CreateWorkPlan = new CreateWorkPlan(...) // body
+
+// Create a new work plan
+PostWorkforcemanagementManagementunitWorkplansRequest.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, validationMode: validationMode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitWorkplansRequest.postWorkforcemanagementManagementunitWorkplans was successful")
+        dump(response)
+    }
+}

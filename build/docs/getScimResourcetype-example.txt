@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let resourceType: GetScimResourcetypeRequest.ResourceType_getScimResourcetype = GetScimResourcetypeRequest.ResourceType_getScimResourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/resourcetypes.
+
+// Get a resource type
+GetScimResourcetypeRequest.getScimResourcetype(resourceType: resourceType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetScimResourcetypeRequest.getScimResourcetype was successful")
+        dump(response)
+    }
+}

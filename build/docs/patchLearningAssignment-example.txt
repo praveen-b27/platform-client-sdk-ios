@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let assignmentId: String = "" // The ID of Learning Assignment
+let body: LearningAssignmentUpdate = new LearningAssignmentUpdate(...) // The Learning Assignment to be updated
+
+// Update Learning Assignment
+PatchLearningAssignmentRequest.patchLearningAssignment(assignmentId: assignmentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchLearningAssignmentRequest.patchLearningAssignment was successful")
+        dump(response)
+    }
+}

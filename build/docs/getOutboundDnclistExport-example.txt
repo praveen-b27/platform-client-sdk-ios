@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dncListId: String = "" // DncList ID
+let download: String = "" // Redirect to download uri
+
+// Get the URI of a DNC list export.
+GetOutboundDnclistExportRequest.getOutboundDnclistExport(dncListId: dncListId, download: download) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundDnclistExportRequest.getOutboundDnclistExport was successful")
+        dump(response)
+    }
+}

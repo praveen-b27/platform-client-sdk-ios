@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let force: Bool = true // Restore default roles
+
+// Restores all default roles
+PostAuthorizationRolesDefaultRequest.postAuthorizationRolesDefault(force: force) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAuthorizationRolesDefaultRequest.postAuthorizationRolesDefault was successful")
+        dump(response)
+    }
+}

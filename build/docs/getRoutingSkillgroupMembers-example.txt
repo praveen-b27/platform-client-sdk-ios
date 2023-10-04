@@ -1,0 +1,20 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let skillGroupId: String = "" // Skill Group ID
+let pageSize: Int = 0 // Page size
+let after: String = "" // The cursor that points to the next item
+let before: String = "" // The cursor that points to the previous item
+let expand: GetRoutingSkillgroupMembersRequest.Expand_getRoutingSkillgroupMembers = GetRoutingSkillgroupMembersRequest.Expand_getRoutingSkillgroupMembers.enummember // Expand the name on each user
+
+// Get skill group members
+GetRoutingSkillgroupMembersRequest.getRoutingSkillgroupMembers(skillGroupId: skillGroupId, pageSize: pageSize, after: after, before: before, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingSkillgroupMembersRequest.getRoutingSkillgroupMembers was successful")
+        dump(response)
+    }
+}

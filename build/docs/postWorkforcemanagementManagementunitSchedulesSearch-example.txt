@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: UserListScheduleRequestBody = new UserListScheduleRequestBody(...) // body
+
+// Query published schedules for given given time range for set of users
+PostWorkforcemanagementManagementunitSchedulesSearchRequest.postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitSchedulesSearchRequest.postWorkforcemanagementManagementunitSchedulesSearch was successful")
+        dump(response)
+    }
+}

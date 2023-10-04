@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let divisionId: String = "" // Division ID
+let body: AuthzDivision = new AuthzDivision(...) // Recreated division data
+
+// Recreate a previously deleted division.
+PostAuthorizationDivisionRestoreRequest.postAuthorizationDivisionRestore(divisionId: divisionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAuthorizationDivisionRestoreRequest.postAuthorizationDivisionRestore was successful")
+        dump(response)
+    }
+}

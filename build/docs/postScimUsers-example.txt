@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.
+
+// Create a user
+PostScimUsersRequest.postScimUsers(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostScimUsersRequest.postScimUsers was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let flowId: String = "" // Flow ID
+let historyId: String = "" // History request ID
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortOrder: String = "" // Sort order
+let sortBy: GetFlowHistoryHistoryIdRequest.SortBy_getFlowHistoryHistoryId = GetFlowHistoryHistoryIdRequest.SortBy_getFlowHistoryHistoryId.enummember // Sort by
+let action: [String] = [""] // Flow actions to include (omit to include all)
+
+// Get generated flow history
+GetFlowHistoryHistoryIdRequest.getFlowHistoryHistoryId(flowId: flowId, historyId: historyId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, sortBy: sortBy, action: action) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowHistoryHistoryIdRequest.getFlowHistoryHistoryId was successful")
+        dump(response)
+    }
+}

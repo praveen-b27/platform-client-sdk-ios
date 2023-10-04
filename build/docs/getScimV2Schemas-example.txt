@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let filter: String = displayName eq groupName // Filtered results are invalid and return 403 Unauthorized.
+
+// Get a list of SCIM schemas
+GetScimV2SchemasRequest.getScimV2Schemas(filter: filter) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetScimV2SchemasRequest.getScimV2Schemas was successful")
+        dump(response)
+    }
+}

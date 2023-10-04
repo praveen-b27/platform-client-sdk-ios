@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dictionaryFeedbackId: String = "" // The Id of the Dictionary Feedback
+
+// Get a Speech & Text Analytics dictionary feedback by id
+GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId(dictionaryFeedbackId: dictionaryFeedbackId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackIdRequest.getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId was successful")
+        dump(response)
+    }
+}

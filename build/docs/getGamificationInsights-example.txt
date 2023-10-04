@@ -1,0 +1,26 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let filterType: GetGamificationInsightsRequest.FilterType_getGamificationInsights = GetGamificationInsightsRequest.FilterType_getGamificationInsights.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GetGamificationInsightsRequest.Granularity_getGamificationInsights = GetGamificationInsightsRequest.Granularity_getGamificationInsights.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortKey: GetGamificationInsightsRequest.SortKey_getGamificationInsights = GetGamificationInsightsRequest.SortKey_getGamificationInsights.enummember // Sort key
+let sortMetricId: String = "" // Sort Metric Id
+let sortOrder: GetGamificationInsightsRequest.SortOrder_getGamificationInsights = GetGamificationInsightsRequest.SortOrder_getGamificationInsights.enummember // Sort order
+let userIds: String = "" // A list of up to 100 comma-separated user Ids
+
+// Get insights summary
+GetGamificationInsightsRequest.getGamificationInsights(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationInsightsRequest.getGamificationInsights was successful")
+        dump(response)
+    }
+}

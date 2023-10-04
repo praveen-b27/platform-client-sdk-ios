@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+let autoFill: Bool = true // autoFill
+let discard: Bool = true // discard
+let body: DraftManipulationRequest = new DraftManipulationRequest(...) // Draft Manipulation Request
+
+// Reset conversation draft to its initial state and/or auto-fill draft content
+PatchConversationsEmailMessagesDraftRequest.patchConversationsEmailMessagesDraft(conversationId: conversationId, autoFill: autoFill, discard: discard, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchConversationsEmailMessagesDraftRequest.patchConversationsEmailMessagesDraft was successful")
+        dump(response)
+    }
+}

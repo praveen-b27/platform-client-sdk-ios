@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// The list of OAuth clients
+GetOauthClientsRequest.getOauthClients() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOauthClientsRequest.getOauthClients was successful")
+        dump(response)
+    }
+}

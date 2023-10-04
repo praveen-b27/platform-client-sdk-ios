@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let messageId: String = "" // Message ID
+let body: VoicemailMessage = new VoicemailMessage(...) // VoicemailMessage
+
+// Update a voicemail message
+PatchVoicemailMessageRequest.patchVoicemailMessage(messageId: messageId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchVoicemailMessageRequest.patchVoicemailMessage was successful")
+        dump(response)
+    }
+}

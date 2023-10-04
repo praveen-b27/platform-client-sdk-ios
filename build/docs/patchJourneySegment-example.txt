@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let segmentId: String = "" // ID of the segment.
+let body: PatchSegment = new PatchSegment(...) // 
+
+// Update a segment.
+PatchJourneySegmentRequest.patchJourneySegment(segmentId: segmentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchJourneySegmentRequest.patchJourneySegment was successful")
+        dump(response)
+    }
+}

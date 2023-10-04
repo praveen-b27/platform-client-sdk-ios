@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let reportId: String = "" // reportId
+
+// Get the status of a recording upload status report
+GetRecordingUploadsReportRequest.getRecordingUploadsReport(reportId: reportId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRecordingUploadsReportRequest.getRecordingUploadsReport was successful")
+        dump(response)
+    }
+}

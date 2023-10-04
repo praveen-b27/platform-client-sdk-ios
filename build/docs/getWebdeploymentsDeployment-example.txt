@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let deploymentId: String = "" // The deployment ID
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected. 
+
+// Get a deployment
+GetWebdeploymentsDeploymentRequest.getWebdeploymentsDeployment(deploymentId: deploymentId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWebdeploymentsDeploymentRequest.getWebdeploymentsDeployment was successful")
+        dump(response)
+    }
+}

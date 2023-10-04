@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let ivrId: String = "" // IVR id
+
+// Delete an IVR Config.
+DeleteArchitectIvrRequest.deleteArchitectIvr(ivrId: ivrId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteArchitectIvrRequest.deleteArchitectIvr was successful")
+    }
+}

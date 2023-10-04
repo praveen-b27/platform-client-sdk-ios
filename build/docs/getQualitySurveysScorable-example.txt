@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let customerSurveyUrl: String = "" // customerSurveyUrl
+
+// Get a survey as an end-customer, for the purposes of scoring it.
+GetQualitySurveysScorableRequest.getQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualitySurveysScorableRequest.getQualitySurveysScorable was successful")
+        dump(response)
+    }
+}

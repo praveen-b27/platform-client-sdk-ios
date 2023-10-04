@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+
+// Send a typing-indicator on behalf of a communication in a chat conversation.
+PostConversationsChatCommunicationTypingRequest.postConversationsChatCommunicationTyping(conversationId: conversationId, communicationId: communicationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsChatCommunicationTypingRequest.postConversationsChatCommunicationTyping was successful")
+        dump(response)
+    }
+}

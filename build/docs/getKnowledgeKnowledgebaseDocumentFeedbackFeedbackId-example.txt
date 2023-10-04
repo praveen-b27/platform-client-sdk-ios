@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let feedbackId: String = "" // Feedback ID.
+
+// Get a single feedback record given on a document
+GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdRequest.getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId: knowledgeBaseId, documentId: documentId, feedbackId: feedbackId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdRequest.getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId was successful")
+        dump(response)
+    }
+}

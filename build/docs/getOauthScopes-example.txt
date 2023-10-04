@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let acceptLanguage: String = "" // The language with which to display the scope descriptions.
+
+// The list of OAuth scopes
+GetOauthScopesRequest.getOauthScopes(acceptLanguage: acceptLanguage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOauthScopesRequest.getOauthScopes was successful")
+        dump(response)
+    }
+}

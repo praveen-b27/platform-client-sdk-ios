@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let contactId: String = "" // ExternalContact ID
+let body: IdentifierClaimRequest = new IdentifierClaimRequest(...) // ClaimRequest
+
+// Claim or release identifiers for a contact
+PatchExternalcontactsContactIdentifiersRequest.patchExternalcontactsContactIdentifiers(contactId: contactId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchExternalcontactsContactIdentifiersRequest.patchExternalcontactsContactIdentifiers was successful")
+        dump(response)
+    }
+}

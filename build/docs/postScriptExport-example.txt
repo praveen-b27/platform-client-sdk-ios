@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let scriptId: String = "" // Script ID
+let body: ExportScriptRequest = new ExportScriptRequest(...) // 
+
+// Export a script via download service.
+PostScriptExportRequest.postScriptExport(scriptId: scriptId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostScriptExportRequest.postScriptExport was successful")
+        dump(response)
+    }
+}

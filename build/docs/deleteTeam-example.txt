@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let teamId: String = "" // Team ID
+
+// Delete team
+DeleteTeamRequest.deleteTeam(teamId: teamId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteTeamRequest.deleteTeam was successful")
+    }
+}

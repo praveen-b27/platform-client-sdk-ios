@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let predictorId: String = "" // ID of predictor
+
+// Retrieve a single outcome predictor.
+GetJourneyOutcomesPredictorRequest.getJourneyOutcomesPredictor(predictorId: predictorId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetJourneyOutcomesPredictorRequest.getJourneyOutcomesPredictor was successful")
+        dump(response)
+    }
+}

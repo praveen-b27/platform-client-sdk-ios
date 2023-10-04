@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit
+let userId: String = "" // The ID of the user
+let body: TimeOffBalanceRequest = new TimeOffBalanceRequest(...) // The request body
+
+// Query time off balances for a given user for specified activity code and dates
+PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsRequest.postWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId: managementUnitId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsRequest.postWorkforcemanagementManagementunitUserTimeoffbalanceJobs was successful")
+        dump(response)
+    }
+}

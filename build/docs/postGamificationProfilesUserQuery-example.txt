@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // The ID of a user.
+let body: UserProfilesInDateRangeRequest = new UserProfilesInDateRangeRequest(...) // The date range of work day.
+
+// Query performance profiles in date range for a user
+PostGamificationProfilesUserQueryRequest.postGamificationProfilesUserQuery(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostGamificationProfilesUserQueryRequest.postGamificationProfilesUserQuery was successful")
+        dump(response)
+    }
+}

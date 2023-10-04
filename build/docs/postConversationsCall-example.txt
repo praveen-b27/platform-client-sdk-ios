@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+let body: CallCommand = new CallCommand(...) // Conversation
+
+// Place a new call as part of a callback conversation.
+PostConversationsCallRequest.postConversationsCall(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsCallRequest.postConversationsCall was successful")
+        dump(response)
+    }
+}

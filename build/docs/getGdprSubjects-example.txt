@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let searchType: GetGdprSubjectsRequest.SearchType_getGdprSubjects = GetGdprSubjectsRequest.SearchType_getGdprSubjects.enummember // Search Type
+let searchValue: String = "" // Search Value
+
+// Get GDPR subjects
+GetGdprSubjectsRequest.getGdprSubjects(searchType: searchType, searchValue: searchValue) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGdprSubjectsRequest.getGdprSubjects was successful")
+        dump(response)
+    }
+}

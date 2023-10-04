@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // User ID
+let body: CallForwarding = new CallForwarding(...) // Call forwarding
+
+// Patch a user's CallForwarding
+PatchUserCallforwardingRequest.patchUserCallforwarding(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchUserCallforwardingRequest.patchUserCallforwarding was successful")
+        dump(response)
+    }
+}

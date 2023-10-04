@@ -1,0 +1,23 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let profileId: String = "" // performanceProfileId
+let metricId: String = "" // metricId
+let filterType: GetGamificationScorecardsProfileMetricUsersValuesTrendsRequest.FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends = GetGamificationScorecardsProfileMetricUsersValuesTrendsRequest.FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends.enummember // Filter type for the query request.
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let filterId: String = "" // ID for the filter type. Only required when filterType is Division.
+let referenceWorkday: Date = new Date(...) // Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let timeZone: String = "" // Timezone for the workday. Defaults to UTC
+
+// Average performance values trends by metric of a division or a performance profile
+GetGamificationScorecardsProfileMetricUsersValuesTrendsRequest.getGamificationScorecardsProfileMetricUsersValuesTrends(profileId: profileId, metricId: metricId, filterType: filterType, startWorkday: startWorkday, endWorkday: endWorkday, filterId: filterId, referenceWorkday: referenceWorkday, timeZone: timeZone) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationScorecardsProfileMetricUsersValuesTrendsRequest.getGamificationScorecardsProfileMetricUsersValuesTrends was successful")
+        dump(response)
+    }
+}

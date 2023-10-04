@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let queueId: String = "" // Queue id
+let comparisonPeriodId: String = "" // ComparisonPeriod id
+
+// Get a Comparison Period.
+GetRoutingQueueComparisonperiodRequest.getRoutingQueueComparisonperiod(queueId: queueId, comparisonPeriodId: comparisonPeriodId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingQueueComparisonperiodRequest.getRoutingQueueComparisonperiod was successful")
+        dump(response)
+    }
+}

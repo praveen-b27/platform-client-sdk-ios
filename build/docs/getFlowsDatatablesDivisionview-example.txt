@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let datatableId: String = "" // id of datatable
+let expand: GetFlowsDatatablesDivisionviewRequest.Expand_getFlowsDatatablesDivisionview = GetFlowsDatatablesDivisionviewRequest.Expand_getFlowsDatatablesDivisionview.enummember // Expand instructions for the result
+
+// Returns a specific datatable by id
+GetFlowsDatatablesDivisionviewRequest.getFlowsDatatablesDivisionview(datatableId: datatableId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsDatatablesDivisionviewRequest.getFlowsDatatablesDivisionview was successful")
+        dump(response)
+    }
+}

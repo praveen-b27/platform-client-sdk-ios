@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let channelId: String = "" // Channel ID
+let body: [ChannelTopic] = [new ChannelTopic(...)] // Body
+let ignoreErrors: Bool = true // Optionally prevent throwing of errors for failed permissions checks.
+
+// Add a list of subscriptions to the existing list of subscriptions
+PostNotificationsChannelSubscriptionsRequest.postNotificationsChannelSubscriptions(channelId: channelId, body: body, ignoreErrors: ignoreErrors) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostNotificationsChannelSubscriptionsRequest.postNotificationsChannelSubscriptions was successful")
+        dump(response)
+    }
+}

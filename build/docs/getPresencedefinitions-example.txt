@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let deleted: String = "" // Deleted query can be TRUE, FALSE or ALL
+let localeCode: String = "" // The locale code to fetch for each presence definition. Use ALL to fetch everything.
+
+// Get an Organization's list of Presence Definitions
+GetPresencedefinitionsRequest.getPresencedefinitions(pageNumber: pageNumber, pageSize: pageSize, deleted: deleted, localeCode: localeCode) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetPresencedefinitionsRequest.getPresencedefinitions was successful")
+        dump(response)
+    }
+}

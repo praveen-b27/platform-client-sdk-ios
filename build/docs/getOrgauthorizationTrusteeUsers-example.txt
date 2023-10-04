@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let trusteeOrgId: String = "" // Trustee Organization Id
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// The list of trustee users for this organization (i.e. users granted access to this organization).
+GetOrgauthorizationTrusteeUsersRequest.getOrgauthorizationTrusteeUsers(trusteeOrgId: trusteeOrgId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrgauthorizationTrusteeUsersRequest.getOrgauthorizationTrusteeUsers was successful")
+        dump(response)
+    }
+}

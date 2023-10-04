@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Get active callback conversations for the logged in user
+GetConversationsCallbacksRequest.getConversationsCallbacks() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsCallbacksRequest.getConversationsCallbacks was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let moduleId: String = "" // The ID of the learning module
+let body: LearningModulePublishRequest = new LearningModulePublishRequest(...) // The request body
+
+// Publish a Learning module
+PostLearningModulePublishRequest.postLearningModulePublish(moduleId: moduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLearningModulePublishRequest.postLearningModulePublish was successful")
+        dump(response)
+    }
+}

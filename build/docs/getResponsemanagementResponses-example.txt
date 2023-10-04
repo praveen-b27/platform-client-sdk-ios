@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let libraryId: String = "" // Library ID
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let expand: GetResponsemanagementResponsesRequest.Expand_getResponsemanagementResponses = GetResponsemanagementResponsesRequest.Expand_getResponsemanagementResponses.enummember // Expand instructions for the return value.
+
+// Gets a list of existing responses.
+GetResponsemanagementResponsesRequest.getResponsemanagementResponses(libraryId: libraryId, pageNumber: pageNumber, pageSize: pageSize, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetResponsemanagementResponsesRequest.getResponsemanagementResponses was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let documentId: String = "" // Document ID
+let body: DocumentUpdate = new DocumentUpdate(...) // Document
+let expand: PostContentmanagementDocumentRequest.Expand_postContentmanagementDocument = PostContentmanagementDocumentRequest.Expand_postContentmanagementDocument.enummember // Expand some document fields
+let _override: Bool = true // Override any lock on the document
+
+// Update a document.
+PostContentmanagementDocumentRequest.postContentmanagementDocument(documentId: documentId, body: body, expand: expand, _override: _override) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostContentmanagementDocumentRequest.postContentmanagementDocument was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let moduleId: String = "" // The ID of the learning module
+
+// Get a learning module rule
+GetLearningModuleRuleRequest.getLearningModuleRule(moduleId: moduleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLearningModuleRuleRequest.getLearningModuleRule was successful")
+        dump(response)
+    }
+}

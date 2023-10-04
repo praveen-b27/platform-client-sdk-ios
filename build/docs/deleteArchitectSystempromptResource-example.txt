@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let promptId: String = "" // Prompt ID
+let languageCode: String = "" // Language
+
+// Delete a system prompt resource override.
+DeleteArchitectSystempromptResourceRequest.deleteArchitectSystempromptResource(promptId: promptId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteArchitectSystempromptResourceRequest.deleteArchitectSystempromptResource was successful")
+    }
+}

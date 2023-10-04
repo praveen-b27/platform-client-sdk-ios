@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let locationId: String = "" // Location ID
+
+// Get sublocations for location ID.
+GetLocationSublocationsRequest.getLocationSublocations(locationId: locationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLocationSublocationsRequest.getLocationSublocations was successful")
+        dump(response)
+    }
+}

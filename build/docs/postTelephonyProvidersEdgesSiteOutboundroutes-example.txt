@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let siteId: String = "" // Site ID
+let body: OutboundRouteBase = new OutboundRouteBase(...) // OutboundRoute
+
+// Create outbound route
+PostTelephonyProvidersEdgesSiteOutboundroutesRequest.postTelephonyProvidersEdgesSiteOutboundroutes(siteId: siteId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostTelephonyProvidersEdgesSiteOutboundroutesRequest.postTelephonyProvidersEdgesSiteOutboundroutes was successful")
+        dump(response)
+    }
+}

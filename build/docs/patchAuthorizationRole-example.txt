@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let roleId: String = "" // Role ID
+let body: DomainOrganizationRole = new DomainOrganizationRole(...) // Organization role
+
+// Patch Organization Role for needsUpdate Field
+PatchAuthorizationRoleRequest.patchAuthorizationRole(roleId: roleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchAuthorizationRoleRequest.patchAuthorizationRole was successful")
+        dump(response)
+    }
+}

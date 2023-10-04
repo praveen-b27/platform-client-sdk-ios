@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let emergencyGroupId: String = "" // Emergency group ID
+
+// Gets a emergency group by ID
+GetArchitectEmergencygroupRequest.getArchitectEmergencygroup(emergencyGroupId: emergencyGroupId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectEmergencygroupRequest.getArchitectEmergencygroup was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,20 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // User ID
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let joined: Bool = true // Is joined to the queue
+let divisionId: [String] = [""] // Division ID(s)
+
+// Get queues for user
+GetUserQueuesRequest.getUserQueues(userId: userId, pageSize: pageSize, pageNumber: pageNumber, joined: joined, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserQueuesRequest.getUserQueues was successful")
+        dump(response)
+    }
+}

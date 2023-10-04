@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let policyId: String = "" // Policy ID
+
+// Delete a media retention policy
+DeleteRecordingCrossplatformMediaretentionpolicyRequest.deleteRecordingCrossplatformMediaretentionpolicy(policyId: policyId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRecordingCrossplatformMediaretentionpolicyRequest.deleteRecordingCrossplatformMediaretentionpolicy was successful")
+    }
+}

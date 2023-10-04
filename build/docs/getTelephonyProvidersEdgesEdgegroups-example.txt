@@ -1,0 +1,20 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let name: String = "" // Name
+let sortBy: String = "" // Sort by
+let managed: Bool = true // Filter by managed
+
+// Get the list of edge groups.
+GetTelephonyProvidersEdgesEdgegroupsRequest.getTelephonyProvidersEdgesEdgegroups(pageSize: pageSize, pageNumber: pageNumber, name: name, sortBy: sortBy, managed: managed) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesEdgegroupsRequest.getTelephonyProvidersEdgesEdgegroups was successful")
+        dump(response)
+    }
+}

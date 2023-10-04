@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let divisionId: [String] = [""] // Division ID(s) to filter assessment jobs by.
+
+// Retrieve all benefit assessment jobs.
+GetRoutingAssessmentsJobsRequest.getRoutingAssessmentsJobs(divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingAssessmentsJobsRequest.getRoutingAssessmentsJobs was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let milestoneId: String = "" // flow milestone ID
+let body: FlowMilestone = new FlowMilestone(...) // 
+
+// Updates a flow milestone
+PutFlowsMilestoneRequest.putFlowsMilestone(milestoneId: milestoneId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutFlowsMilestoneRequest.putFlowsMilestone was successful")
+        dump(response)
+    }
+}

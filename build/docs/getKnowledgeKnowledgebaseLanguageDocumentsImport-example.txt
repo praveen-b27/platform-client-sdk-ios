@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport = GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE
+let importId: String = "" // Import ID
+
+// Get import operation report
+GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.getKnowledgeKnowledgebaseLanguageDocumentsImport was successful")
+        dump(response)
+    }
+}

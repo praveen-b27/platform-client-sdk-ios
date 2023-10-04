@@ -1,0 +1,30 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let moduleId: String = "" // Specifies the ID of the learning module. Fetch assignments for learning module ID
+let interval: String = "" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let completionInterval: String = "" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let overdue: GetLearningAssignmentsRequest.Overdue_getLearningAssignments = GetLearningAssignmentsRequest.Overdue_getLearningAssignments.enummember // Specifies if only the non-overdue (overdue is \"False\") or overdue (overdue is \"True\") assignments are returned. If overdue is \"Any\" or if the overdue parameter is not supplied, all assignments are returned
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let pass: GetLearningAssignmentsRequest.Pass_getLearningAssignments = GetLearningAssignmentsRequest.Pass_getLearningAssignments.enummember // Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned
+let minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
+let maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
+let sortOrder: GetLearningAssignmentsRequest.SortOrder_getLearningAssignments = GetLearningAssignmentsRequest.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)
+let sortBy: GetLearningAssignmentsRequest.SortBy_getLearningAssignments = GetLearningAssignmentsRequest.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate
+let userId: [String] = [""] // Specifies the list of user IDs to be queried, up to 100 user IDs.
+let types: [String] = [""] // Specifies the module types to filter by
+let states: [String] = [""] // Specifies the assignment states to filter by
+let expand: [String] = [""] // Specifies the expand option for returning additional information
+
+// List of Learning module Assignments
+GetLearningAssignmentsRequest.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLearningAssignmentsRequest.getLearningAssignments was successful")
+        dump(response)
+    }
+}

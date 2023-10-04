@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let businessUnitId: String = "" // The ID of the business unit.
+let serviceGoalTemplateId: String = "" // The ID of a service goal template to fetch
+let expand: [String] = [""] // Include to access additional data on the service goal template
+
+// Get a service goal template
+GetWorkforcemanagementBusinessunitServicegoaltemplateRequest.getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitServicegoaltemplateRequest.getWorkforcemanagementBusinessunitServicegoaltemplate was successful")
+        dump(response)
+    }
+}

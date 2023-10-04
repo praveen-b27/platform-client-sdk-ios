@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: CreateShareRequest = new CreateShareRequest(...) // CreateShareRequest - entity id and type and a single member or list of members are required
+
+// Creates a new share or updates an existing share if the entity has already been shared
+PostContentmanagementSharesRequest.postContentmanagementShares(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostContentmanagementSharesRequest.postContentmanagementShares was successful")
+        dump(response)
+    }
+}

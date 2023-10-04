@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let ucIntegrationId: String = "" // UC Integration ID
+let body: [UCThirdPartyPresence] = [new UCThirdPartyPresence(...)] // List of User presences
+
+// Bulk integration presence ingestion
+PutIntegrationsUnifiedcommunicationThirdpartypresencesRequest.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegrationId: ucIntegrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutIntegrationsUnifiedcommunicationThirdpartypresencesRequest.putIntegrationsUnifiedcommunicationThirdpartypresences was successful")
+        dump(response)
+    }
+}

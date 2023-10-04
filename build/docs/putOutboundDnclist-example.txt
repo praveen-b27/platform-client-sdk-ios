@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let dncListId: String = "" // DncList ID
+let body: DncList = new DncList(...) // DncList
+
+// Update dialer DNC list
+PutOutboundDnclistRequest.putOutboundDnclist(dncListId: dncListId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutOutboundDnclistRequest.putOutboundDnclist was successful")
+        dump(response)
+    }
+}

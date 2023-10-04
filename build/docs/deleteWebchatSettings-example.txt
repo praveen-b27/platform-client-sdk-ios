@@ -1,0 +1,14 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Remove WebChat deployment settings
+DeleteWebchatSettingsRequest.deleteWebchatSettings() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWebchatSettingsRequest.deleteWebchatSettings was successful")
+    }
+}

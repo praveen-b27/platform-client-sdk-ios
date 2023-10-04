@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userIds: [String] = [""] // The IDs of the users to include
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let searchTerm: String = "" // Search Term (searches by name and description)
+let overdue: GetLearningModulesAssignmentsRequest.Overdue_getLearningModulesAssignments = GetLearningModulesAssignmentsRequest.Overdue_getLearningModulesAssignments.enummember // Specifies if only modules with overdue/not overdue (overdue is \"True\" or \"False\") assignments are returned. If overdue is \"Any\" or omitted, both are returned and can including modules that are unassigned.
+let assignmentStates: [String] = [""] // Specifies the assignment states to return.
+let expand: [String] = [""] // Fields to expand in response(case insensitive)
+
+// Get all learning modules of an organization including assignments for a specific user
+GetLearningModulesAssignmentsRequest.getLearningModulesAssignments(userIds: userIds, pageSize: pageSize, pageNumber: pageNumber, searchTerm: searchTerm, overdue: overdue, assignmentStates: assignmentStates, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLearningModulesAssignmentsRequest.getLearningModulesAssignments was successful")
+        dump(response)
+    }
+}

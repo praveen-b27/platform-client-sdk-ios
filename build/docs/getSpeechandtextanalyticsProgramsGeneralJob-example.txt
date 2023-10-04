@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let jobId: String = "" // The id of the publish programs job
+
+// Get a Speech & Text Analytics general program job by id
+GetSpeechandtextanalyticsProgramsGeneralJobRequest.getSpeechandtextanalyticsProgramsGeneralJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSpeechandtextanalyticsProgramsGeneralJobRequest.getSpeechandtextanalyticsProgramsGeneralJob was successful")
+        dump(response)
+    }
+}

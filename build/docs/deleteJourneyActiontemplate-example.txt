@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let actionTemplateId: String = "" // ID of the action template.
+let hardDelete: Bool = true // Determines whether Action Template should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default.
+
+// Delete a single action template.
+DeleteJourneyActiontemplateRequest.deleteJourneyActiontemplate(actionTemplateId: actionTemplateId, hardDelete: hardDelete) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteJourneyActiontemplateRequest.deleteJourneyActiontemplate was successful")
+    }
+}

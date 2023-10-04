@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let sessionId: String = "" // ID of the session.
+
+// Retrieve a single session.
+GetJourneySessionRequest.getJourneySession(sessionId: sessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetJourneySessionRequest.getJourneySession was successful")
+        dump(response)
+    }
+}

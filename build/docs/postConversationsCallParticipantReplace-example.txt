@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: TransferRequest = new TransferRequest(...) // Transfer request
+
+// Replace this participant with the specified user and/or address
+PostConversationsCallParticipantReplaceRequest.postConversationsCallParticipantReplace(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostConversationsCallParticipantReplaceRequest.postConversationsCallParticipantReplace was successful")
+    }
+}

@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // User ID
+
+// Get a OutOfOffice
+GetUserOutofofficeRequest.getUserOutofoffice(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserOutofofficeRequest.getUserOutofoffice was successful")
+        dump(response)
+    }
+}

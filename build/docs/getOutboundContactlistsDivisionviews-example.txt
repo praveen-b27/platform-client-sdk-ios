@@ -1,0 +1,24 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let includeImportStatus: Bool = true // Include import status
+let includeSize: Bool = true // Include size
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let filterType: GetOutboundContactlistsDivisionviewsRequest.FilterType_getOutboundContactlistsDivisionviews = GetOutboundContactlistsDivisionviewsRequest.FilterType_getOutboundContactlistsDivisionviews.enummember // Filter type
+let name: String = "" // Name
+let _id: [String] = [""] // id
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundContactlistsDivisionviewsRequest.SortOrder_getOutboundContactlistsDivisionviews = GetOutboundContactlistsDivisionviewsRequest.SortOrder_getOutboundContactlistsDivisionviews.enummember // Sort order
+
+// Query a list of simplified contact list objects.
+GetOutboundContactlistsDivisionviewsRequest.getOutboundContactlistsDivisionviews(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundContactlistsDivisionviewsRequest.getOutboundContactlistsDivisionviews was successful")
+        dump(response)
+    }
+}

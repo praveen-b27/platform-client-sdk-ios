@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let contactListId: String = "" // Contact List ID
+
+// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+PostOutboundContactlistClearRequest.postOutboundContactlistClear(contactListId: contactListId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostOutboundContactlistClearRequest.postOutboundContactlistClear was successful")
+    }
+}

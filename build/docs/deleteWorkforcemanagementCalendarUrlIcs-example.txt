@@ -1,0 +1,14 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Disable generated calendar link for the current user
+DeleteWorkforcemanagementCalendarUrlIcsRequest.deleteWorkforcemanagementCalendarUrlIcs() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementCalendarUrlIcsRequest.deleteWorkforcemanagementCalendarUrlIcs was successful")
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let body: MessageTypingEventRequest = new MessageTypingEventRequest(...) // MessageTypingEvent
+
+// Send message typing event
+PostConversationsMessageCommunicationTypingRequest.postConversationsMessageCommunicationTyping(conversationId: conversationId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostConversationsMessageCommunicationTypingRequest.postConversationsMessageCommunicationTyping was successful")
+    }
+}

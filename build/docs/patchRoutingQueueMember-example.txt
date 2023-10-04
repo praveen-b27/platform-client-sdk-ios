@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let queueId: String = "" // Queue ID
+let memberId: String = "" // Member ID
+let body: QueueMember = new QueueMember(...) // Queue Member
+
+// Update the ring number OR joined status for a queue member.
+PatchRoutingQueueMemberRequest.patchRoutingQueueMember(queueId: queueId, memberId: memberId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchRoutingQueueMemberRequest.patchRoutingQueueMember was successful")
+    }
+}

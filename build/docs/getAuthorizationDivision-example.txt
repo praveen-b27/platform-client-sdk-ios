@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let divisionId: String = "" // Division ID
+let objectCount: Bool = true // Get count of objects in this division, grouped by type
+
+// Returns an authorization division.
+GetAuthorizationDivisionRequest.getAuthorizationDivision(divisionId: divisionId, objectCount: objectCount) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAuthorizationDivisionRequest.getAuthorizationDivision was successful")
+        dump(response)
+    }
+}

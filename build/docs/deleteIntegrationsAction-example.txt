@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let actionId: String = "" // actionId
+
+// Delete an Action
+DeleteIntegrationsActionRequest.deleteIntegrationsAction(actionId: actionId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteIntegrationsActionRequest.deleteIntegrationsAction was successful")
+    }
+}

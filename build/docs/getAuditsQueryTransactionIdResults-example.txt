@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let transactionId: String = "" // Transaction ID
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
+let pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500.
+let expand: [String] = [""] // Which fields, if any, to expand
+
+// Get results of audit query
+GetAuditsQueryTransactionIdResultsRequest.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAuditsQueryTransactionIdResultsRequest.getAuditsQueryTransactionIdResults was successful")
+        dump(response)
+    }
+}

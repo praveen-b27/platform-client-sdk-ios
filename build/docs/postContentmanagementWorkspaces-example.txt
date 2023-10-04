@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: WorkspaceCreate = new WorkspaceCreate(...) // Workspace
+
+// Create a group workspace
+PostContentmanagementWorkspacesRequest.postContentmanagementWorkspaces(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostContentmanagementWorkspacesRequest.postContentmanagementWorkspaces was successful")
+        dump(response)
+    }
+}

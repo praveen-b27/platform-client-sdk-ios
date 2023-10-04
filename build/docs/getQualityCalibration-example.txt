@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let calibrationId: String = "" // Calibration ID
+let calibratorId: String = "" // calibratorId
+let conversationId: String = "" // conversationId
+
+// Get a calibration by id.  Requires either calibrator id or conversation id
+GetQualityCalibrationRequest.getQualityCalibration(calibrationId: calibrationId, calibratorId: calibratorId, conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityCalibrationRequest.getQualityCalibration was successful")
+        dump(response)
+    }
+}

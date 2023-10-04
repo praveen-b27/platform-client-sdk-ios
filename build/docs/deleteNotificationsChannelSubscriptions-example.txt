@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let channelId: String = "" // Channel ID
+
+// Remove all subscriptions
+DeleteNotificationsChannelSubscriptionsRequest.deleteNotificationsChannelSubscriptions(channelId: channelId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteNotificationsChannelSubscriptionsRequest.deleteNotificationsChannelSubscriptions was successful")
+    }
+}

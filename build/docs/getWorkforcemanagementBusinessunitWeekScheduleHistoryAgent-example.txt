@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let businessUnitId: String = "" // The ID of the business unit
+let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let scheduleId: String = "" // The ID of the schedule
+let agentId: String = "" // THe ID of the agent
+
+// Loads agent's schedule history.
+GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentRequest.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, agentId: agentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentRequest.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent was successful")
+        dump(response)
+    }
+}

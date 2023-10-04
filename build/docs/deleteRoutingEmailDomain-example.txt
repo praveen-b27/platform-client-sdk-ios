@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let domainId: String = "" // domain ID
+
+// Delete a domain
+DeleteRoutingEmailDomainRequest.deleteRoutingEmailDomain(domainId: domainId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingEmailDomainRequest.deleteRoutingEmailDomain was successful")
+    }
+}

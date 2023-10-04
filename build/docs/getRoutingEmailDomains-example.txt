@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let excludeStatus: Bool = true // Exclude MX record data
+let filter: String = "" // Optional search filter
+
+// Get domains
+GetRoutingEmailDomainsRequest.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful")
+        dump(response)
+    }
+}

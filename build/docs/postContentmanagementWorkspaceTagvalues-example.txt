@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let workspaceId: String = "" // Workspace ID
+let body: TagValue = new TagValue(...) // tag
+
+// Create a workspace tag
+PostContentmanagementWorkspaceTagvaluesRequest.postContentmanagementWorkspaceTagvalues(workspaceId: workspaceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostContentmanagementWorkspaceTagvaluesRequest.postContentmanagementWorkspaceTagvalues was successful")
+        dump(response)
+    }
+}

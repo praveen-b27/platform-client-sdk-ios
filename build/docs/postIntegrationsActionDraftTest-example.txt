@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let actionId: String = "" // actionId
+let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
+
+// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
+PostIntegrationsActionDraftTestRequest.postIntegrationsActionDraftTest(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostIntegrationsActionDraftTestRequest.postIntegrationsActionDraftTest was successful")
+        dump(response)
+    }
+}

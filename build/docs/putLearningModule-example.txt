@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let moduleId: String = "" // The ID of the learning module
+let body: LearningModuleRequest = new LearningModuleRequest(...) // The learning module to be updated
+
+// Update a learning module
+PutLearningModuleRequest.putLearningModule(moduleId: moduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutLearningModuleRequest.putLearningModule was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Get conversation threading window timeline for each messaging type
+GetConversationsMessagingThreadingtimelineRequest.getConversationsMessagingThreadingtimeline() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsMessagingThreadingtimelineRequest.getConversationsMessagingThreadingtimeline was successful")
+        dump(response)
+    }
+}

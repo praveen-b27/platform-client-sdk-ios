@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: ResponseAssetSearchRequest = new ResponseAssetSearchRequest(...) // request
+let expand: [String] = [""] // Which fields, if any, to expand
+
+// Search response assets
+PostResponsemanagementResponseassetsSearchRequest.postResponsemanagementResponseassetsSearch(body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostResponsemanagementResponseassetsSearchRequest.postResponsemanagementResponseassetsSearch was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,26 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let sortBy: String = "" // Root level field name to sort on.
+let sortOrder: GetIntegrationsActionsDraftsRequest.SortOrder_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.SortOrder_getIntegrationsActionsDrafts.enummember // Direction to sort 'sortBy' field.
+let category: String = "" // Filter by category name.
+let name: String = "" // Filter by partial or complete action name.
+let ids: String = "" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.
+let secure: GetIntegrationsActionsDraftsRequest.Secure_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.Secure_getIntegrationsActionsDrafts.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.
+let includeAuthActions: GetIntegrationsActionsDraftsRequest.IncludeAuthActions_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.IncludeAuthActions_getIntegrationsActionsDrafts.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
+
+// Retrieves all action drafts associated with the filters passed in via query param.
+GetIntegrationsActionsDraftsRequest.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsActionsDraftsRequest.getIntegrationsActionsDrafts was successful")
+        dump(response)
+    }
+}

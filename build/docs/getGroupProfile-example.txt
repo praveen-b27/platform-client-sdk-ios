@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let groupId: String = "" // groupId
+let fields: String = "" // Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList
+
+// Get group profile
+GetGroupProfileRequest.getGroupProfile(groupId: groupId, fields: fields) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGroupProfileRequest.getGroupProfile was successful")
+        dump(response)
+    }
+}

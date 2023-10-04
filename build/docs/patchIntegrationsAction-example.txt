@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let actionId: String = "" // actionId
+let body: UpdateActionInput = new UpdateActionInput(...) // Input used to patch the Action.
+
+// Patch an Action
+PatchIntegrationsActionRequest.patchIntegrationsAction(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchIntegrationsActionRequest.patchIntegrationsAction was successful")
+        dump(response)
+    }
+}

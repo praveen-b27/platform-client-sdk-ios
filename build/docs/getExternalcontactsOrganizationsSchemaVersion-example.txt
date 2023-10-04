@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let schemaId: String = "" // Schema ID
+let versionId: String = "" // Schema version
+
+// Get a specific version of a schema
+GetExternalcontactsOrganizationsSchemaVersionRequest.getExternalcontactsOrganizationsSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetExternalcontactsOrganizationsSchemaVersionRequest.getExternalcontactsOrganizationsSchemaVersion was successful")
+        dump(response)
+    }
+}

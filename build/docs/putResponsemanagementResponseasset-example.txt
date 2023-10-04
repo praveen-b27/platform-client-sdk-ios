@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let responseAssetId: String = "" // Asset Id
+let body: ResponseAssetRequest = new ResponseAssetRequest(...) // request
+
+// Update response asset
+PutResponsemanagementResponseassetRequest.putResponsemanagementResponseasset(responseAssetId: responseAssetId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutResponsemanagementResponseassetRequest.putResponsemanagementResponseasset was successful")
+        dump(response)
+    }
+}

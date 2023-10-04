@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let phoneBaseSettingsId: String = "" // The id of a Phone Base Settings object upon which to base this Phone
+
+// Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
+GetTelephonyProvidersEdgesPhonesTemplateRequest.getTelephonyProvidersEdgesPhonesTemplate(phoneBaseSettingsId: phoneBaseSettingsId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesPhonesTemplateRequest.getTelephonyProvidersEdgesPhonesTemplate was successful")
+        dump(response)
+    }
+}

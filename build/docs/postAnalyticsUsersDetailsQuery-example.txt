@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: UserDetailsQuery = new UserDetailsQuery(...) // query
+
+// Query for user details
+PostAnalyticsUsersDetailsQueryRequest.postAnalyticsUsersDetailsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAnalyticsUsersDetailsQueryRequest.postAnalyticsUsersDetailsQuery was successful")
+        dump(response)
+    }
+}

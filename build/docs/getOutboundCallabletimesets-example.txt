@@ -1,0 +1,22 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
+let filterType: GetOutboundCallabletimesetsRequest.FilterType_getOutboundCallabletimesets = GetOutboundCallabletimesetsRequest.FilterType_getOutboundCallabletimesets.enummember // Filter type
+let name: String = "" // Name
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundCallabletimesetsRequest.SortOrder_getOutboundCallabletimesets = GetOutboundCallabletimesetsRequest.SortOrder_getOutboundCallabletimesets.enummember // Sort order
+
+// Query callable time set list
+GetOutboundCallabletimesetsRequest.getOutboundCallabletimesets(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundCallabletimesetsRequest.getOutboundCallabletimesets was successful")
+        dump(response)
+    }
+}

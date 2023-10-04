@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: SuggestSearchRequest = new SuggestSearchRequest(...) // Search request options
+let profile: Bool = true // profile
+
+// Suggest resources.
+PostSearchSuggestRequest.postSearchSuggest(body: body, profile: profile) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostSearchSuggestRequest.postSearchSuggest was successful")
+        dump(response)
+    }
+}

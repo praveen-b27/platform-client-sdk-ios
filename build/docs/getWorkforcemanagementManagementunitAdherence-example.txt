@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+
+// Get a list of user schedule adherence records for the requested management unit
+GetWorkforcemanagementManagementunitAdherenceRequest.getWorkforcemanagementManagementunitAdherence(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementManagementunitAdherenceRequest.getWorkforcemanagementManagementunitAdherence was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let extensionPoolId: String = "" // Extension pool ID
+let body: ExtensionPool = new ExtensionPool(...) // ExtensionPool
+
+// Update an extension pool by ID
+PutTelephonyProvidersEdgesExtensionpoolRequest.putTelephonyProvidersEdgesExtensionpool(extensionPoolId: extensionPoolId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutTelephonyProvidersEdgesExtensionpoolRequest.putTelephonyProvidersEdgesExtensionpool was successful")
+        dump(response)
+    }
+}

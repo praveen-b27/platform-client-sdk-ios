@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
+PostFlowsJobsRequest.postFlowsJobs() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostFlowsJobsRequest.postFlowsJobs was successful")
+        dump(response)
+    }
+}

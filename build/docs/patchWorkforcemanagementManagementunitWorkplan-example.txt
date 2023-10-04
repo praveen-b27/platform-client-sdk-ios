@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let workPlanId: String = "" // The ID of the work plan to update
+let validationMode: PatchWorkforcemanagementManagementunitWorkplanRequest.ValidationMode_patchWorkforcemanagementManagementunitWorkplan = PatchWorkforcemanagementManagementunitWorkplanRequest.ValidationMode_patchWorkforcemanagementManagementunitWorkplan.enummember // Allows to update work plan even if validation result is invalid
+let body: WorkPlan = new WorkPlan(...) // body
+
+// Update a work plan
+PatchWorkforcemanagementManagementunitWorkplanRequest.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, validationMode: validationMode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchWorkforcemanagementManagementunitWorkplanRequest.patchWorkforcemanagementManagementunitWorkplan was successful")
+        dump(response)
+    }
+}

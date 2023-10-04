@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let sequenceId: String = "" // Campaign Sequence ID
+let body: CampaignSequence = new CampaignSequence(...) // Organization
+
+// Update a new campaign sequence.
+PutOutboundSequenceRequest.putOutboundSequence(sequenceId: sequenceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutOutboundSequenceRequest.putOutboundSequence was successful")
+        dump(response)
+    }
+}

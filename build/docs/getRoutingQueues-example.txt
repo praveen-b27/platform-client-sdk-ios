@@ -1,0 +1,23 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortOrder: GetRoutingQueuesRequest.SortOrder_getRoutingQueues = GetRoutingQueuesRequest.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.
+let name: String = "" // Filter by queue name
+let _id: [String] = [""] // Filter by queue ID(s)
+let divisionId: [String] = [""] // Filter by queue division ID(s)
+let peerId: [String] = [""] // Filter by queue peer ID(s)
+let hasPeer: Bool = true // Filter by queues associated with peer
+
+// Get list of queues.
+GetRoutingQueuesRequest.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, hasPeer: hasPeer) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingQueuesRequest.getRoutingQueues was successful")
+        dump(response)
+    }
+}

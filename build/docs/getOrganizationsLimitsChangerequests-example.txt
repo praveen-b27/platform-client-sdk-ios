@@ -1,0 +1,20 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let after: Int64 = 0 // Timestamp indicating the date to begin after when searching for requests.
+let before: Int64 = 0 // Timestamp indicating the date to end before when searching for requests.
+let status: GetOrganizationsLimitsChangerequestsRequest.Status_getOrganizationsLimitsChangerequests = GetOrganizationsLimitsChangerequestsRequest.Status_getOrganizationsLimitsChangerequests.enummember // Status of the request to be filtered by
+let pageSize: Int = 0 // Page Size
+let expand: [String] = [""] // Which fields, if any, to expand.
+
+// Get the available limit change requests
+GetOrganizationsLimitsChangerequestsRequest.getOrganizationsLimitsChangerequests(after: after, before: before, status: status, pageSize: pageSize, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrganizationsLimitsChangerequestsRequest.getOrganizationsLimitsChangerequests was successful")
+        dump(response)
+    }
+}

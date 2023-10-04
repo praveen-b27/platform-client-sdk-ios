@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let sourceId: String = "" // Presence Source ID
+let body: Source = new Source(...) // The updated Presence Source
+
+// Update a Presence Source
+PutPresenceSourceRequest.putPresenceSource(sourceId: sourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutPresenceSourceRequest.putPresenceSource was successful")
+        dump(response)
+    }
+}

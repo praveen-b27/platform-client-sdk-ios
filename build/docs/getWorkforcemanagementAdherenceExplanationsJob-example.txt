@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let jobId: String = "" // The ID of the job
+
+// Query the status of an adherence explanation operation. Only the user who started the operation can query the status
+GetWorkforcemanagementAdherenceExplanationsJobRequest.getWorkforcemanagementAdherenceExplanationsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementAdherenceExplanationsJobRequest.getWorkforcemanagementAdherenceExplanationsJob was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let trunkBaseSettingsId: String = "" // Trunk Base ID
+let ignoreHidden: Bool = true // Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only.
+
+// Get a Trunk Base Settings object by ID
+GetTelephonyProvidersEdgesTrunkbasesettingRequest.getTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId: trunkBaseSettingsId, ignoreHidden: ignoreHidden) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesTrunkbasesettingRequest.getTelephonyProvidersEdgesTrunkbasesetting was successful")
+        dump(response)
+    }
+}

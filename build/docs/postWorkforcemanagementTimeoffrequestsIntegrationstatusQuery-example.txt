@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: CurrentUserTimeOffIntegrationStatusRequest = new CurrentUserTimeOffIntegrationStatusRequest(...) // body
+
+// Retrieves integration statuses for a list of current user time off requests
+PostWorkforcemanagementTimeoffrequestsIntegrationstatusQueryRequest.postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementTimeoffrequestsIntegrationstatusQueryRequest.postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery was successful")
+        dump(response)
+    }
+}

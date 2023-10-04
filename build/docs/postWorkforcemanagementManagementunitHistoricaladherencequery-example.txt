@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit
+let body: WfmHistoricalAdherenceQuery = new WfmHistoricalAdherenceQuery(...) // body
+
+// Request a historical adherence report
+PostWorkforcemanagementManagementunitHistoricaladherencequeryRequest.postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitHistoricaladherencequeryRequest.postWorkforcemanagementManagementunitHistoricaladherencequery was successful")
+        dump(response)
+    }
+}

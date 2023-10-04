@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let queueId: String = "" // Queue ID
+let body: QueueRequest = new QueueRequest(...) // Queue
+
+// Update a queue
+PutRoutingQueueRequest.putRoutingQueue(queueId: queueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutRoutingQueueRequest.putRoutingQueue was successful")
+        dump(response)
+    }
+}

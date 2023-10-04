@@ -1,0 +1,19 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let name: String = "" // Return only skill group names whose names start with this value (case-insensitive matching)
+let after: String = "" // The cursor that points to the next item
+let before: String = "" // The cursor that points to the previous item
+
+// Get skill group listing
+GetRoutingSkillgroupsRequest.getRoutingSkillgroups(pageSize: pageSize, name: name, after: after, before: before) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingSkillgroupsRequest.getRoutingSkillgroups was successful")
+        dump(response)
+    }
+}

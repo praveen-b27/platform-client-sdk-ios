@@ -1,0 +1,14 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Delete the organization-wide max utilization settings and revert to the system default.
+DeleteRoutingUtilizationRequest.deleteRoutingUtilization() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingUtilizationRequest.deleteRoutingUtilization was successful")
+    }
+}

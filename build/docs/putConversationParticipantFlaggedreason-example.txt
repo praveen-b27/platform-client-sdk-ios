@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+
+// Set flagged reason on conversation participant to indicate bad conversation quality.
+PutConversationParticipantFlaggedreasonRequest.putConversationParticipantFlaggedreason(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PutConversationParticipantFlaggedreasonRequest.putConversationParticipantFlaggedreason was successful")
+    }
+}

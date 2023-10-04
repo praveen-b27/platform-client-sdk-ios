@@ -1,0 +1,18 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let workspaceId: String = "" // Workspace ID
+let tagId: String = "" // Tag ID
+let body: TagValue = new TagValue(...) // Workspace
+
+// Update a workspace tag. Will update all documents with the new tag value.
+PutContentmanagementWorkspaceTagvalueRequest.putContentmanagementWorkspaceTagvalue(workspaceId: workspaceId, tagId: tagId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutContentmanagementWorkspaceTagvalueRequest.putContentmanagementWorkspaceTagvalue was successful")
+        dump(response)
+    }
+}

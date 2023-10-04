@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: ConversationDeletionProtectionQuery = new ConversationDeletionProtectionQuery(...) // conversationIds
+
+// Get a list of conversations with protected recordings
+PostRecordingsDeletionprotectionRequest.postRecordingsDeletionprotection(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostRecordingsDeletionprotectionRequest.postRecordingsDeletionprotection was successful")
+        dump(response)
+    }
+}

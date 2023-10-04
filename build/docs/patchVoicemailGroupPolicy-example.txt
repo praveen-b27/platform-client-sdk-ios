@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let groupId: String = "" // Group ID
+let body: VoicemailGroupPolicy = new VoicemailGroupPolicy(...) // The group's voicemail policy
+
+// Update a group's voicemail policy
+PatchVoicemailGroupPolicyRequest.patchVoicemailGroupPolicy(groupId: groupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchVoicemailGroupPolicyRequest.patchVoicemailGroupPolicy was successful")
+        dump(response)
+    }
+}

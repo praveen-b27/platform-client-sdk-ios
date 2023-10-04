@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: ResponseSet = new ResponseSet(...) // ResponseSet
+
+// Create a dialer call analysis response set.
+PostOutboundCallanalysisresponsesetsRequest.postOutboundCallanalysisresponsesets(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostOutboundCallanalysisresponsesetsRequest.postOutboundCallanalysisresponsesets was successful")
+        dump(response)
+    }
+}

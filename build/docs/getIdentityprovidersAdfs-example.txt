@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Get ADFS Identity Provider
+GetIdentityprovidersAdfsRequest.getIdentityprovidersAdfs() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIdentityprovidersAdfsRequest.getIdentityprovidersAdfs was successful")
+        dump(response)
+    }
+}

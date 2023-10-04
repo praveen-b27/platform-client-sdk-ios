@@ -1,0 +1,23 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let expand: String = "" // Expand
+let name: String = "" // Name filter
+let feature: String = "" // Feature filter
+let flowId: String = "" // Secure flow id filter
+let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+let divisionIds: String = "" // Filters scripts to requested divisionIds
+
+// Get the published scripts metadata.
+GetScriptsPublishedDivisionviewsRequest.getScriptsPublishedDivisionviews(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, scriptDataVersion: scriptDataVersion, divisionIds: divisionIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetScriptsPublishedDivisionviewsRequest.getScriptsPublishedDivisionviews was successful")
+        dump(response)
+    }
+}

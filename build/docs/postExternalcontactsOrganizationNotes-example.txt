@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let externalOrganizationId: String = "" // External Organization Id
+let body: Note = new Note(...) // ExternalContact
+
+// Create a note for an external organization
+PostExternalcontactsOrganizationNotesRequest.postExternalcontactsOrganizationNotes(externalOrganizationId: externalOrganizationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostExternalcontactsOrganizationNotesRequest.postExternalcontactsOrganizationNotes was successful")
+        dump(response)
+    }
+}

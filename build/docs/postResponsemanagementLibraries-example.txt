@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: Library = new Library(...) // Library
+
+// Create a response library.
+PostResponsemanagementLibrariesRequest.postResponsemanagementLibraries(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostResponsemanagementLibrariesRequest.postResponsemanagementLibraries was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let includechannels: GetNotificationsChannelsRequest.Includechannels_getNotificationsChannels = GetNotificationsChannelsRequest.Includechannels_getNotificationsChannels.enummember // Show user's channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence.
+
+// The list of existing channels
+GetNotificationsChannelsRequest.getNotificationsChannels(includechannels: includechannels) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetNotificationsChannelsRequest.getNotificationsChannels was successful")
+        dump(response)
+    }
+}

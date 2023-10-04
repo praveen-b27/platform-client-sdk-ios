@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let workPlanId: String = "" // The ID of the work plan to delete
+
+// Delete a work plan
+DeleteWorkforcemanagementManagementunitWorkplanRequest.deleteWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementManagementunitWorkplanRequest.deleteWorkforcemanagementManagementunitWorkplan was successful")
+    }
+}

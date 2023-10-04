@@ -1,0 +1,40 @@
+{
+    "DELETE /api/v2/tokens/{userId}": {
+        "operationId": "deletetoken",
+        "functionName": "deleteToken",
+        "signature": "deleteToken(userId)",
+        "parameters": [
+            {
+                "name": "userId",
+                "type": "String",
+                "required": "true"
+            }
+        ]
+    },
+    "DELETE /api/v2/tokens/me": {
+        "operationId": "deletetokensme",
+        "functionName": "deleteTokensMe",
+        "signature": "deleteTokensMe()"
+        
+    },
+    "GET /api/v2/tokens/me": {
+        "operationId": "gettokensme",
+        "functionName": "getTokensMe",
+        "signature": "getTokensMe(preserveIdleTTL)",
+        "parameters": [
+            {
+                "name": "preserveIdleTTL",
+                "type": "Bool",
+                "required": "false"
+            }
+        ],
+        "return": "TokenInfo"
+    },
+    "HEAD /api/v2/tokens/me": {
+        "operationId": "headtokensme",
+        "functionName": "headTokensMe",
+        "signature": "headTokensMe()"
+        
+    }
+    
+}

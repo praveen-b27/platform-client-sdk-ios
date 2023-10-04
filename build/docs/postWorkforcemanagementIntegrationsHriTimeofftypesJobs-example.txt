@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let hrisIntegrationId: String = "" // The ID of the HRIS integration for which time off types are queried.
+
+// Get list of time off types configured in integration
+PostWorkforcemanagementIntegrationsHriTimeofftypesJobsRequest.postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId: hrisIntegrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementIntegrationsHriTimeofftypesJobsRequest.postWorkforcemanagementIntegrationsHriTimeofftypesJobs was successful")
+        dump(response)
+    }
+}

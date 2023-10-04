@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let body: [LearningAssignmentItem] = [new LearningAssignmentItem(...)] // The learning assignments to be created
+
+// Add multiple learning assignments
+PostLearningAssignmentsBulkaddRequest.postLearningAssignmentsBulkadd(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLearningAssignmentsBulkaddRequest.postLearningAssignmentsBulkadd was successful")
+        dump(response)
+    }
+}

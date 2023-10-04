@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let knowledgeBaseId: String = "" // The ID of knowledge base containing the documents to query.
+let searchId: String = "" // Search Result ID
+let body: SearchUpdateRequest = new SearchUpdateRequest(...) // 
+
+// Update search result.
+PatchKnowledgeKnowledgebaseDocumentsSearchSearchIdRequest.patchKnowledgeKnowledgebaseDocumentsSearchSearchId(knowledgeBaseId: knowledgeBaseId, searchId: searchId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchKnowledgeKnowledgebaseDocumentsSearchSearchIdRequest.patchKnowledgeKnowledgebaseDocumentsSearchSearchId was successful")
+    }
+}

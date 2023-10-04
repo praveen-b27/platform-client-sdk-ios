@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let formId: String = "" // Form ID
+
+// Delete a survey form.
+DeleteQualityFormsSurveyRequest.deleteQualityFormsSurvey(formId: formId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteQualityFormsSurveyRequest.deleteQualityFormsSurvey was successful")
+    }
+}

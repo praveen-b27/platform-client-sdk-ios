@@ -1,0 +1,16 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let contextId: [String] = [""] // A comma-delimited list of valid evaluation form context ids
+
+// Retrieve a list of the latest published evaluation form versions by context ids
+GetQualityFormsEvaluationsBulkContextsRequest.getQualityFormsEvaluationsBulkContexts(contextId: contextId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityFormsEvaluationsBulkContextsRequest.getQualityFormsEvaluationsBulkContexts was successful")
+        dump(response)
+    }
+}

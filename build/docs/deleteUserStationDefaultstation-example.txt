@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let userId: String = "" // User ID
+
+// Clear default station
+DeleteUserStationDefaultstationRequest.deleteUserStationDefaultstation(userId: userId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteUserStationDefaultstationRequest.deleteUserStationDefaultstation was successful")
+    }
+}

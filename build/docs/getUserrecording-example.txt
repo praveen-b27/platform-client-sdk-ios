@@ -1,0 +1,17 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+let recordingId: String = "" // User Recording ID
+let expand: [String] = [""] // Which fields, if any, to expand.
+
+// Get a user recording.
+GetUserrecordingRequest.getUserrecording(recordingId: recordingId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserrecordingRequest.getUserrecording was successful")
+        dump(response)
+    }
+}

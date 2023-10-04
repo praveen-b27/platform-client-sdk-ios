@@ -1,0 +1,15 @@
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "" // expected format: "https://api.[base path]"
+PureCloudPlatformClientV2API.accessToken = "your_access_token"
+
+
+// Get the organization's default settings that will be used as the default when creating an integration.
+GetMessagingSettingsDefaultRequest.getMessagingSettingsDefault() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetMessagingSettingsDefaultRequest.getMessagingSettingsDefault was successful")
+        dump(response)
+    }
+}

@@ -14,6 +14,7 @@ public class AlertRuleProperties: Codable {
     public enum ModelType: String, Codable { 
         case conversationMetrics = "ConversationMetrics"
         case userPresence = "UserPresence"
+        case workforceManagement = "WorkforceManagement"
         case unknown = "Unknown"
     }
     /** The globally unique identifier for the object. */

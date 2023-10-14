@@ -27,6 +27,7 @@ public class ConversationMessageMetadataEvent: Codable {
         case offeringRejected = "OfferingRejected"
         case disconnect = "Disconnect"
         case clear = "Clear"
+        case signIn = "SignIn"
         case unknown = "Unknown"
     }
     /** Type of this event element */

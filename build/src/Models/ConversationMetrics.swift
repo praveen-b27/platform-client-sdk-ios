@@ -27,14 +27,17 @@ public class ConversationMetrics: Codable {
     public var sentimentTrend: Double?
     /** The Sentiment Trend Class */
     public var sentimentTrendClass: SentimentTrendClass?
+    /** The Empathy Scores */
+    public var empathyScores: [EmpathyScore]?
     /** The Participant Metrics */
     public var participantMetrics: ParticipantMetrics?
 
-    public init(conversation: AddressableEntityRef?, sentimentScore: Double?, sentimentTrend: Double?, sentimentTrendClass: SentimentTrendClass?, participantMetrics: ParticipantMetrics?) {
+    public init(conversation: AddressableEntityRef?, sentimentScore: Double?, sentimentTrend: Double?, sentimentTrendClass: SentimentTrendClass?, empathyScores: [EmpathyScore]?, participantMetrics: ParticipantMetrics?) {
         self.conversation = conversation
         self.sentimentScore = sentimentScore
         self.sentimentTrend = sentimentTrend
         self.sentimentTrendClass = sentimentTrendClass
+        self.empathyScores = empathyScores
         self.participantMetrics = participantMetrics
     }
 

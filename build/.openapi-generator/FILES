@@ -1150,7 +1150,6 @@ docs/DigitalRuleSet.md
 docs/DigitalRuleSetEntityListing.md
 docs/Digits.md
 docs/DirectRouting.md
-docs/DirectRoutingCallMediaSettings.md
 docs/DirectRoutingMediaSettings.md
 docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
@@ -7244,7 +7243,6 @@ src/Models/DigitalRuleSet.swift
 src/Models/DigitalRuleSetEntityListing.swift
 src/Models/Digits.swift
 src/Models/DirectRouting.swift
-src/Models/DirectRoutingCallMediaSettings.swift
 src/Models/DirectRoutingMediaSettings.swift
 src/Models/DirectoryUserDevicesListing.swift
 src/Models/DisallowedEntityLearningAssignmentItem.swift

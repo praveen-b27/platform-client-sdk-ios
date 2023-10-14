@@ -262,6 +262,13 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sentimentScore" : 0.8008281904610115,
+  "empathyScores" : [ {
+    "score" : 1.4658129805029452,
+    "userId" : "userId"
+  }, {
+    "score" : 1.4658129805029452,
+    "userId" : "userId"
+  } ],
   "participantMetrics" : "{}",
   "sentimentTrend" : 6.027456183070403,
   "sentimentTrendClass" : "NotCalculated",
@@ -1449,6 +1456,7 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "defaultProgram" : "{}",
+  "agentEmpathyEnabled" : true,
   "expectedDialects" : [ "expectedDialects", "expectedDialects" ],
   "textAnalyticsEnabled" : true
 }, statusCode=200}]
@@ -2036,6 +2044,7 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "defaultProgram" : "{}",
+  "agentEmpathyEnabled" : true,
   "expectedDialects" : [ "expectedDialects", "expectedDialects" ],
   "textAnalyticsEnabled" : true
 }, statusCode=200}]
@@ -2928,6 +2937,7 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "defaultProgram" : "{}",
+  "agentEmpathyEnabled" : true,
   "expectedDialects" : [ "expectedDialects", "expectedDialects" ],
   "textAnalyticsEnabled" : true
 }, statusCode=200}]

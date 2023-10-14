@@ -66,6 +66,7 @@ public class CommonRulePredicate: Codable {
         case ouserpresences = "oUserPresences"
         case ointeracting = "oInteracting"
         case tflowout = "tFlowOut"
+        case tadherencestatus = "tAdherenceStatus"
     }
     /** The type of metric being evaluated. */
     public var metricType: MetricType?

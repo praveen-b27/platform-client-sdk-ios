@@ -6710,7 +6710,8 @@ open class RoutingAPI {
       "proficiency" : 5
     } ],
     "operation" : "And"
-  } ]
+  } ],
+  "status" : "InProgress"
 }, statusCode=200}]
      
      - parameter skillGroupId: (path) Skill Group ID 
@@ -8549,7 +8550,8 @@ open class RoutingAPI {
         "proficiency" : 5
       } ],
       "operation" : "And"
-    } ]
+    } ],
+    "status" : "InProgress"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -8607,7 +8609,8 @@ open class RoutingAPI {
         "proficiency" : 5
       } ],
       "operation" : "And"
-    } ]
+    } ],
+    "status" : "InProgress"
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
@@ -10506,7 +10509,8 @@ open class RoutingAPI {
       "proficiency" : 5
     } ],
     "operation" : "And"
-  } ]
+  } ],
+  "status" : "InProgress"
 }, statusCode=200}]
      
      - parameter skillGroupId: (path) Skill Group ID 
@@ -12797,7 +12801,8 @@ open class RoutingAPI {
     } ],
     "operation" : "And"
   } ],
-  "memberDivisions" : [ "memberDivisions", "memberDivisions" ]
+  "memberDivisions" : [ "memberDivisions", "memberDivisions" ],
+  "status" : "InProgress"
 }, statusCode=200}]
      
      - parameter body: (body) Create skill group 

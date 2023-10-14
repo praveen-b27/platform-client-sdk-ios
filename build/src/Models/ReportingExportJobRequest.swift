@@ -62,6 +62,7 @@ public class ReportingExportJobRequest: Codable {
         case dashboardSummary = "DASHBOARD_SUMMARY"
         case dashboardDetail = "DASHBOARD_DETAIL"
         case dashboardUsers = "DASHBOARD_USERS"
+        case dashboardUsersDetail = "DASHBOARD_USERS_DETAIL"
         case journeyActionMapSummaryView = "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
         case journeyOutcomeSummaryView = "JOURNEY_OUTCOME_SUMMARY_VIEW"
         case journeySegmentSummaryView = "JOURNEY_SEGMENT_SUMMARY_VIEW"

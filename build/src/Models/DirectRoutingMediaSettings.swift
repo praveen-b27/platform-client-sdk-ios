@@ -11,14 +11,11 @@ import Foundation
 
 public class DirectRoutingMediaSettings: Codable {
 
-    /** Toggle that enables Direct Routing for this media type. */
-    public var enabled: Bool?
-    /** The Direct Routing inbound flow id for this media type. */
-    public var inboundFlow: AddressableEntityRef?
+    /** Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type. */
+    public var useAgentAddressOutbound: Bool?
 
-    public init(enabled: Bool?, inboundFlow: AddressableEntityRef?) {
-        self.enabled = enabled
-        self.inboundFlow = inboundFlow
+    public init(useAgentAddressOutbound: Bool?) {
+        self.useAgentAddressOutbound = useAgentAddressOutbound
     }
 
 

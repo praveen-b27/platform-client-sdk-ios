@@ -1493,8 +1493,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -3586,8 +3586,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
         "selfUri" : "https://openapi-generator.tech",
+        "lastUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -4067,6 +4067,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -7645,8 +7646,8 @@ open class QualityAPI {
     "lowestCriticalScore" : 9.301444
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9180,8 +9181,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -10896,8 +10897,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
         "selfUri" : "https://openapi-generator.tech",
+        "lastUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -12532,8 +12533,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
         "selfUri" : "https://openapi-generator.tech",
+        "lastUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -12720,8 +12721,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -14646,8 +14647,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
         "selfUri" : "https://openapi-generator.tech",
+        "lastUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -15127,6 +15128,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -17838,8 +17840,8 @@ open class QualityAPI {
           "pageNumber" : 6,
           "entities" : [ null, null ],
           "firstUri" : "https://openapi-generator.tech",
-          "lastUri" : "https://openapi-generator.tech",
           "selfUri" : "https://openapi-generator.tech",
+          "lastUri" : "https://openapi-generator.tech",
           "pageSize" : 1,
           "nextUri" : "https://openapi-generator.tech",
           "previousUri" : "https://openapi-generator.tech"
@@ -18319,6 +18321,7 @@ open class QualityAPI {
     "releaseDate" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
     "mediaType" : [ "CALL", "CALL" ],
+    "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
     "assigneeApplicable" : true,
     "neverRelease" : true,
     "agentHasRead" : true,
@@ -20605,8 +20608,8 @@ open class QualityAPI {
           "pageNumber" : 6,
           "entities" : [ null, null ],
           "firstUri" : "https://openapi-generator.tech",
-          "lastUri" : "https://openapi-generator.tech",
           "selfUri" : "https://openapi-generator.tech",
+          "lastUri" : "https://openapi-generator.tech",
           "pageSize" : 1,
           "nextUri" : "https://openapi-generator.tech",
           "previousUri" : "https://openapi-generator.tech"
@@ -21086,6 +21089,7 @@ open class QualityAPI {
     "releaseDate" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
     "mediaType" : [ "CALL", "CALL" ],
+    "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
     "assigneeApplicable" : true,
     "neverRelease" : true,
     "agentHasRead" : true,
@@ -21527,8 +21531,8 @@ open class QualityAPI {
     "resourceType" : "EMAIL"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22242,8 +22246,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22326,8 +22330,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -22578,8 +22582,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22770,8 +22774,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22957,8 +22961,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23050,8 +23054,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23242,8 +23246,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23429,8 +23433,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23507,8 +23511,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -23761,8 +23765,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23953,8 +23957,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -24140,8 +24144,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -24221,6 +24225,7 @@ open class QualityAPI {
     /**
      Get the list of evaluation forms
      - GET /api/v2/quality/forms/evaluations
+     - By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -24235,8 +24240,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -24427,8 +24432,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -24614,8 +24619,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -24692,8 +24697,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -25510,8 +25515,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -25944,8 +25949,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -26367,8 +26372,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -26660,8 +26665,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -26914,8 +26919,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27106,8 +27111,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27293,8 +27298,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -27363,8 +27368,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -27617,8 +27622,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27809,8 +27814,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27996,8 +28001,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -28642,8 +28647,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -31333,8 +31338,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -33423,8 +33428,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
         "selfUri" : "https://openapi-generator.tech",
+        "lastUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -33904,6 +33909,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -34979,8 +34985,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -35220,8 +35226,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -35683,8 +35689,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -35924,8 +35930,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -37933,8 +37939,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
       "selfUri" : "https://openapi-generator.tech",
+      "lastUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -40026,8 +40032,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
         "selfUri" : "https://openapi-generator.tech",
+        "lastUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -40507,6 +40513,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -41016,8 +41023,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -41263,8 +41270,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"

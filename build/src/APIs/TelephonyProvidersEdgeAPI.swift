@@ -608,6 +608,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id",
     "state" : "active",
     "phoneTrunkBases" : [ {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -615,6 +616,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -628,6 +630,7 @@ open class TelephonyProvidersEdgeAPI {
         "key" : "{}"
       }
     }, {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -635,6 +638,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -1388,8 +1392,8 @@ open class TelephonyProvidersEdgeAPI {
     "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1806,8 +1810,8 @@ open class TelephonyProvidersEdgeAPI {
     "friendlyName" : "friendlyName"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2007,8 +2011,8 @@ open class TelephonyProvidersEdgeAPI {
     "edgeVersion" : "edgeVersion"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2254,8 +2258,8 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 6
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2368,6 +2372,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -2375,6 +2380,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -2388,6 +2394,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -2395,6 +2402,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -2503,6 +2511,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -2510,6 +2519,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -2523,6 +2533,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -2530,6 +2541,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -2615,8 +2627,8 @@ open class TelephonyProvidersEdgeAPI {
     "statusCode" : "NEW"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2805,8 +2817,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3135,8 +3147,8 @@ open class TelephonyProvidersEdgeAPI {
     "endPhoneNumber" : "endPhoneNumber"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3238,8 +3250,8 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3369,8 +3381,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3460,6 +3472,7 @@ open class TelephonyProvidersEdgeAPI {
   "id" : "id",
   "state" : "active",
   "phoneTrunkBases" : [ {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3467,6 +3480,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -3480,6 +3494,7 @@ open class TelephonyProvidersEdgeAPI {
       "key" : "{}"
     }
   }, {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3487,6 +3502,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -3559,6 +3575,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inboundSite" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3566,6 +3583,7 @@ open class TelephonyProvidersEdgeAPI {
   "trunkType" : "EXTERNAL",
   "version" : 0,
   "division" : "{}",
+  "site" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "name" : "name",
@@ -3663,6 +3681,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id",
     "state" : "active",
     "phoneTrunkBases" : [ {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3670,6 +3689,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -3683,6 +3703,7 @@ open class TelephonyProvidersEdgeAPI {
         "key" : "{}"
       }
     }, {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3690,6 +3711,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -3721,6 +3743,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id",
     "state" : "active",
     "phoneTrunkBases" : [ {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3728,6 +3751,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -3741,6 +3765,7 @@ open class TelephonyProvidersEdgeAPI {
         "key" : "{}"
       }
     }, {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3748,6 +3773,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -3763,8 +3789,8 @@ open class TelephonyProvidersEdgeAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4122,8 +4148,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4243,8 +4269,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4537,8 +4563,8 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4706,8 +4732,8 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5091,8 +5117,8 @@ open class TelephonyProvidersEdgeAPI {
     "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5416,8 +5442,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5607,6 +5633,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -5614,6 +5641,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -5627,6 +5655,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -5634,6 +5663,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -5766,6 +5796,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -5773,6 +5804,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -5786,6 +5818,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -5793,6 +5826,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -6232,8 +6266,8 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6337,8 +6371,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6689,6 +6723,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -6696,6 +6731,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -6709,6 +6745,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -6716,6 +6753,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -6848,6 +6886,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -6855,6 +6894,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -6868,6 +6908,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -6875,6 +6916,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -7096,6 +7138,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7103,6 +7146,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -7116,6 +7160,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7123,6 +7168,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -7255,6 +7301,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7262,6 +7309,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -7275,6 +7323,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7282,6 +7331,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -7381,8 +7431,8 @@ open class TelephonyProvidersEdgeAPI {
     "status" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7594,6 +7644,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7601,6 +7652,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -7614,6 +7666,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7621,6 +7674,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -7753,6 +7807,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7760,6 +7815,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -7773,6 +7829,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -7780,6 +7837,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -7980,8 +8038,8 @@ open class TelephonyProvidersEdgeAPI {
     "friendlyName" : "friendlyName"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8089,6 +8147,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8096,6 +8155,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8109,6 +8169,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8116,6 +8177,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8224,6 +8286,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8231,6 +8294,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8244,6 +8308,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8251,6 +8316,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8365,6 +8431,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8372,6 +8439,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8385,6 +8453,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8392,6 +8461,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8500,6 +8570,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8507,6 +8578,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8520,6 +8592,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8527,6 +8600,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8644,6 +8718,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8651,6 +8726,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8664,6 +8740,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8671,6 +8748,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8779,6 +8857,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8786,6 +8865,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -8799,6 +8879,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8806,6 +8887,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -9515,8 +9597,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9549,6 +9631,235 @@ open class TelephonyProvidersEdgeAPI {
         ])
 
         let requestBuilder: RequestBuilder<OutboundRouteBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get site connections for a site.
+     
+     - parameter siteId: (path) Site ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesSiteSiteconnections(siteId: String, completion: @escaping ((_ data: SiteConnections?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesSiteSiteconnectionsWithRequestBuilder(siteId: siteId)
+        requestBuilder.execute { (response: Response<SiteConnections>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get site connections for a site.
+     - GET /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "siteConnections" : [ {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter siteId: (path) Site ID 
+
+     - returns: RequestBuilder<SiteConnections> 
+     */
+    open class func getTelephonyProvidersEdgesSiteSiteconnectionsWithRequestBuilder(siteId: String) -> RequestBuilder<SiteConnections> {        
+        var path = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections"
+        let siteIdPreEscape = "\(siteId)"
+        let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SiteConnections>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -9652,6 +9963,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9659,6 +9971,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -9672,6 +9985,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9679,6 +9993,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -9787,6 +10102,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9794,6 +10110,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -9807,6 +10124,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9814,6 +10132,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -9928,6 +10247,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9935,6 +10255,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -9948,6 +10269,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9955,6 +10277,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10063,6 +10386,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10070,6 +10394,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10083,6 +10408,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10090,6 +10416,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10207,6 +10534,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10214,6 +10542,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10227,6 +10556,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10234,6 +10564,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10342,6 +10673,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10349,6 +10681,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10362,6 +10695,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10369,6 +10703,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10698,6 +11033,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10705,6 +11041,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10718,6 +11055,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10725,6 +11063,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10833,6 +11172,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10840,6 +11180,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10853,6 +11194,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10860,6 +11202,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10974,6 +11317,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10981,6 +11325,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -10994,6 +11339,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11001,6 +11347,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11109,6 +11456,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11116,6 +11464,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11129,6 +11478,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11136,6 +11486,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11253,6 +11604,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11260,6 +11612,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11273,6 +11626,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11280,6 +11634,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11388,6 +11743,7 @@ open class TelephonyProvidersEdgeAPI {
         "id" : "id",
         "state" : "active",
         "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11395,6 +11751,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11408,6 +11765,7 @@ open class TelephonyProvidersEdgeAPI {
             "key" : "{}"
           }
         }, {
+          "inboundSite" : "{}",
           "selfUri" : "https://openapi-generator.tech",
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -11415,6 +11773,7 @@ open class TelephonyProvidersEdgeAPI {
           "trunkType" : "EXTERNAL",
           "version" : 1,
           "division" : "{}",
+          "site" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "createdBy" : "createdBy",
           "managed" : true,
@@ -11694,8 +12053,8 @@ open class TelephonyProvidersEdgeAPI {
     "edgeAutoUpdateConfig" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11781,8 +12140,8 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12049,6 +12408,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inboundSite" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -12056,6 +12416,7 @@ open class TelephonyProvidersEdgeAPI {
   "trunkType" : "EXTERNAL",
   "version" : 1,
   "division" : "{}",
+  "site" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "managed" : true,
@@ -12146,6 +12507,7 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -12153,6 +12515,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -12166,6 +12529,7 @@ open class TelephonyProvidersEdgeAPI {
       "key" : "{}"
     }
   }, {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -12173,6 +12537,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -12187,8 +12552,8 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12307,8 +12672,8 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12369,6 +12734,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inboundSite" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -12376,6 +12742,7 @@ open class TelephonyProvidersEdgeAPI {
   "trunkType" : "EXTERNAL",
   "version" : 1,
   "division" : "{}",
+  "site" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "managed" : true,
@@ -12630,8 +12997,8 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 6
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12799,6 +13166,238 @@ open class TelephonyProvidersEdgeAPI {
         let requestBuilder: RequestBuilder<TrunkRecordingEnabledCount>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Disable site connections for a site.
+     
+     - parameter siteId: (path) Site ID 
+     - parameter body: (body) Site 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTelephonyProvidersEdgesSiteSiteconnections(siteId: String, body: DisableSiteConnectionsRequest, completion: @escaping ((_ data: SiteConnections?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTelephonyProvidersEdgesSiteSiteconnectionsWithRequestBuilder(siteId: siteId, body: body)
+        requestBuilder.execute { (response: Response<SiteConnections>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Disable site connections for a site.
+     - PATCH /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "siteConnections" : [ {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter siteId: (path) Site ID 
+     - parameter body: (body) Site 
+
+     - returns: RequestBuilder<SiteConnections> 
+     */
+    open class func patchTelephonyProvidersEdgesSiteSiteconnectionsWithRequestBuilder(siteId: String, body: DisableSiteConnectionsRequest) -> RequestBuilder<SiteConnections> {        
+        var path = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections"
+        let siteIdPreEscape = "\(siteId)"
+        let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SiteConnections>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -13599,6 +14198,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id",
     "state" : "active",
     "phoneTrunkBases" : [ {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -13606,6 +14206,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -13619,6 +14220,7 @@ open class TelephonyProvidersEdgeAPI {
         "key" : "{}"
       }
     }, {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -13626,6 +14228,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -13978,6 +14581,7 @@ open class TelephonyProvidersEdgeAPI {
   "id" : "id",
   "state" : "active",
   "phoneTrunkBases" : [ {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -13985,6 +14589,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -13998,6 +14603,7 @@ open class TelephonyProvidersEdgeAPI {
       "key" : "{}"
     }
   }, {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14005,6 +14611,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -14423,6 +15030,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14430,6 +15038,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -14443,6 +15052,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14450,6 +15060,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -14582,6 +15193,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14589,6 +15201,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -14602,6 +15215,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14609,6 +15223,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -14929,6 +15544,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14936,6 +15552,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -14949,6 +15566,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -14956,6 +15574,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15064,6 +15683,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15071,6 +15691,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15084,6 +15705,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15091,6 +15713,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15205,6 +15828,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15212,6 +15836,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15225,6 +15850,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15232,6 +15858,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15340,6 +15967,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15347,6 +15975,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15360,6 +15989,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15367,6 +15997,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15484,6 +16115,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15491,6 +16123,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15504,6 +16137,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15511,6 +16145,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15619,6 +16254,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15626,6 +16262,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15639,6 +16276,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15646,6 +16284,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -15973,6 +16612,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inboundSite" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15980,6 +16620,7 @@ open class TelephonyProvidersEdgeAPI {
   "trunkType" : "EXTERNAL",
   "version" : 1,
   "division" : "{}",
+  "site" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "managed" : true,
@@ -16068,6 +16709,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "id",
     "state" : "active",
     "phoneTrunkBases" : [ {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16075,6 +16717,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -16088,6 +16731,7 @@ open class TelephonyProvidersEdgeAPI {
         "key" : "{}"
       }
     }, {
+      "inboundSite" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16095,6 +16739,7 @@ open class TelephonyProvidersEdgeAPI {
       "trunkType" : "EXTERNAL",
       "version" : 1,
       "division" : "{}",
+      "site" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "createdBy" : "createdBy",
       "managed" : true,
@@ -16581,6 +17226,7 @@ open class TelephonyProvidersEdgeAPI {
   "id" : "id",
   "state" : "active",
   "phoneTrunkBases" : [ {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16588,6 +17234,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -16601,6 +17248,7 @@ open class TelephonyProvidersEdgeAPI {
       "key" : "{}"
     }
   }, {
+    "inboundSite" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16608,6 +17256,7 @@ open class TelephonyProvidersEdgeAPI {
     "trunkType" : "EXTERNAL",
     "version" : 1,
     "division" : "{}",
+    "site" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "managed" : true,
@@ -16679,6 +17328,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inboundSite" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16686,6 +17336,7 @@ open class TelephonyProvidersEdgeAPI {
   "trunkType" : "EXTERNAL",
   "version" : 0,
   "division" : "{}",
+  "site" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "name" : "name",
@@ -16951,6 +17602,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16958,6 +17610,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -16971,6 +17624,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16978,6 +17632,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17110,6 +17765,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17117,6 +17773,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17130,6 +17787,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17137,6 +17795,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17470,6 +18129,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17477,6 +18137,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17490,6 +18151,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17497,6 +18159,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17605,6 +18268,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17612,6 +18276,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17625,6 +18290,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17632,6 +18298,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17746,6 +18413,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17753,6 +18421,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17766,6 +18435,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17773,6 +18443,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17881,6 +18552,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17888,6 +18560,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -17901,6 +18574,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -17908,6 +18582,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -18025,6 +18700,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -18032,6 +18708,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -18045,6 +18722,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -18052,6 +18730,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -18160,6 +18839,7 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "id",
       "state" : "active",
       "phoneTrunkBases" : [ {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -18167,6 +18847,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -18180,6 +18861,7 @@ open class TelephonyProvidersEdgeAPI {
           "key" : "{}"
         }
       }, {
+        "inboundSite" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -18187,6 +18869,7 @@ open class TelephonyProvidersEdgeAPI {
         "trunkType" : "EXTERNAL",
         "version" : 1,
         "division" : "{}",
+        "site" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "createdBy" : "createdBy",
         "managed" : true,
@@ -18661,6 +19344,238 @@ open class TelephonyProvidersEdgeAPI {
     
     
     /**
+     Update site connections for a site.
+     
+     - parameter siteId: (path) Site ID 
+     - parameter body: (body) Site 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putTelephonyProvidersEdgesSiteSiteconnections(siteId: String, body: SiteConnections, completion: @escaping ((_ data: SiteConnections?,_ error: Error?) -> Void)) {
+        let requestBuilder = putTelephonyProvidersEdgesSiteSiteconnectionsWithRequestBuilder(siteId: siteId, body: body)
+        requestBuilder.execute { (response: Response<SiteConnections>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update site connections for a site.
+     - PUT /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "siteConnections" : [ {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter siteId: (path) Site ID 
+     - parameter body: (body) Site 
+
+     - returns: RequestBuilder<SiteConnections> 
+     */
+    open class func putTelephonyProvidersEdgesSiteSiteconnectionsWithRequestBuilder(siteId: String, body: SiteConnections) -> RequestBuilder<SiteConnections> {        
+        var path = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections"
+        let siteIdPreEscape = "\(siteId)"
+        let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SiteConnections>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    /**
      Update a Trunk Base Settings object by ID
      
      - parameter trunkBaseSettingsId: (path) Trunk Base ID 
@@ -18692,6 +19607,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inboundSite" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -18699,6 +19615,7 @@ open class TelephonyProvidersEdgeAPI {
   "trunkType" : "EXTERNAL",
   "version" : 1,
   "division" : "{}",
+  "site" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "managed" : true,

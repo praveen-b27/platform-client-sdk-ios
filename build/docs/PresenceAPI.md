@@ -1164,7 +1164,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: [UserPresence] = [new UserPresence(...)] // List of User presences
+let body: [MutableUserPresence] = [new MutableUserPresence(...)] // List of User presences
 
 // Code example
 PresenceAPI.putUsersPresencesBulk(body: body) { (response, error) in
@@ -1182,7 +1182,7 @@ PresenceAPI.putUsersPresencesBulk(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**[UserPresence]**](UserPresence.html)| List of User presences | |
+| **body** | [**[MutableUserPresence]**](MutableUserPresence.html)| List of User presences | |
 {: class="table-striped"}
 
 

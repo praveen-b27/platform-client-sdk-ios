@@ -81,6 +81,8 @@ public class ConversationDetailQueryPredicate: Codable {
         case tmonitoring = "tMonitoring"
         case tmonitoringcomplete = "tMonitoringComplete"
         case tnotresponding = "tNotResponding"
+        case tpark = "tPark"
+        case tparkcomplete = "tParkComplete"
         case tshortabandon = "tShortAbandon"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"

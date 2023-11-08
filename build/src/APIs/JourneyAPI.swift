@@ -757,8 +757,8 @@ open class JourneyAPI {
     "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1056,8 +1056,8 @@ open class JourneyAPI {
     "serviceLevel" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1235,8 +1235,8 @@ open class JourneyAPI {
     "contentOffer" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1269,6 +1269,108 @@ open class JourneyAPI {
         ])
 
         let requestBuilder: RequestBuilder<ActionTemplateListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Send a ping.
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the ping. 
+     - parameter customerCookieId: (path) ID of the customer associated with the ping. 
+     - parameter sessionId: (query) UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session 
+     - parameter dl: (query) Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)
+     - parameter dt: (query) Document Title.  A human readable name for the page or screen (optional)
+     - parameter appNamespace: (query) Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)
+     - parameter sinceLastBeaconMilliseconds: (query) How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyDeploymentCustomerPing(deploymentId: String, customerCookieId: String, sessionId: String, dl: String? = nil, dt: String? = nil, appNamespace: String? = nil, sinceLastBeaconMilliseconds: Int64? = nil, completion: @escaping ((_ data: DeploymentPing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyDeploymentCustomerPingWithRequestBuilder(deploymentId: deploymentId, customerCookieId: customerCookieId, sessionId: sessionId, dl: dl, dt: dt, appNamespace: appNamespace, sinceLastBeaconMilliseconds: sinceLastBeaconMilliseconds)
+        requestBuilder.execute { (response: Response<DeploymentPing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Send a ping.
+     - GET /api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping
+     - examples: [{contentType=application/json, example={
+  "pollIntervalMilliseconds" : 6,
+  "actions" : [ {
+    "contentOfferProperties" : "{}",
+    "customerId" : "customerId",
+    "mediaType" : "webchat",
+    "webMessagingOfferProperties" : "{}",
+    "id" : "id",
+    "customerIdType" : "customerIdType",
+    "sessionId" : "sessionId",
+    "actionMapVersion" : 0,
+    "actionMapId" : "actionMapId",
+    "openActionProperties" : "{}"
+  }, {
+    "contentOfferProperties" : "{}",
+    "customerId" : "customerId",
+    "mediaType" : "webchat",
+    "webMessagingOfferProperties" : "{}",
+    "id" : "id",
+    "customerIdType" : "customerIdType",
+    "sessionId" : "sessionId",
+    "actionMapVersion" : 0,
+    "actionMapId" : "actionMapId",
+    "openActionProperties" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the ping. 
+     - parameter customerCookieId: (path) ID of the customer associated with the ping. 
+     - parameter sessionId: (query) UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session 
+     - parameter dl: (query) Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)
+     - parameter dt: (query) Document Title.  A human readable name for the page or screen (optional)
+     - parameter appNamespace: (query) Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)
+     - parameter sinceLastBeaconMilliseconds: (query) How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)
+
+     - returns: RequestBuilder<DeploymentPing> 
+     */
+    open class func getJourneyDeploymentCustomerPingWithRequestBuilder(deploymentId: String, customerCookieId: String, sessionId: String, dl: String? = nil, dt: String? = nil, appNamespace: String? = nil, sinceLastBeaconMilliseconds: Int64? = nil) -> RequestBuilder<DeploymentPing> {        
+        var path = "/api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let customerCookieIdPreEscape = "\(customerCookieId)"
+        let customerCookieIdPostEscape = customerCookieIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{customerCookieId}", with: customerCookieIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "dl": dl, 
+            "dt": dt, 
+            "appNamespace": appNamespace, 
+            "sessionId": sessionId, 
+            "sinceLastBeaconMilliseconds": sinceLastBeaconMilliseconds?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<DeploymentPing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1411,8 +1513,8 @@ open class JourneyAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1707,8 +1809,8 @@ open class JourneyAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2921,6 +3023,132 @@ open class JourneyAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Sends an action event, which is used for changing the state of actions that have been offered to the user.
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the beacon. 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyDeploymentActionevent(deploymentId: String, body: ActionEventRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyDeploymentActioneventWithRequestBuilder(deploymentId: deploymentId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Sends an action event, which is used for changing the state of actions that have been offered to the user.
+     - POST /api/v2/journey/deployments/{deploymentId}/actionevent
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the beacon. 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postJourneyDeploymentActioneventWithRequestBuilder(deploymentId: String, body: ActionEventRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/journey/deployments/{deploymentId}/actionevent"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Send a journey app event, used for tracking customer activity on an application.
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the app event. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyDeploymentAppevents(deploymentId: String, body: AppEventRequest? = nil, completion: @escaping ((_ data: AppEventResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyDeploymentAppeventsWithRequestBuilder(deploymentId: deploymentId, body: body)
+        requestBuilder.execute { (response: Response<AppEventResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Send a journey app event, used for tracking customer activity on an application.
+     - POST /api/v2/journey/deployments/{deploymentId}/appevents
+     - examples: [{contentType=application/json, example={
+  "app" : "{}",
+  "ipOrganization" : "ipOrganization",
+  "networkConnectivity" : "{}",
+  "traits" : {
+    "key" : {
+      "dataType" : "dataType",
+      "value" : "value"
+    }
+  },
+  "session" : "{}",
+  "ipAddress" : "ipAddress",
+  "externalContact" : "{}",
+  "screenName" : "screenName",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "sdkLibrary" : "{}",
+  "searchQuery" : "searchQuery",
+  "customerId" : "customerId",
+  "eventName" : "eventName",
+  "attributes" : {
+    "key" : {
+      "dataType" : "dataType",
+      "value" : "value"
+    }
+  },
+  "id" : "id",
+  "customerIdType" : "customerIdType",
+  "device" : "{}",
+  "mktCampaign" : "{}",
+  "geolocation" : "{}"
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the app event. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<AppEventResponse> 
+     */
+    open class func postJourneyDeploymentAppeventsWithRequestBuilder(deploymentId: String, body: AppEventRequest? = nil) -> RequestBuilder<AppEventResponse> {        
+        var path = "/api/v2/journey/deployments/{deploymentId}/appevents"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AppEventResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

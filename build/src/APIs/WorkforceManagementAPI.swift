@@ -1371,14 +1371,16 @@ open class WorkforceManagementAPI {
     }
 
     
+    
     /**
      Get activity codes
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: String, completion: @escaping ((_ data: BusinessUnitActivityCodeListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: businessUnitId)
+    open class func getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: String, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BusinessUnitActivityCodeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: businessUnitId, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<BusinessUnitActivityCodeListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1446,14 +1448,16 @@ open class WorkforceManagementAPI {
     "id" : "id",
     "category" : "OnQueueWork",
     "countsTowardShrinkage" : true
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<BusinessUnitActivityCodeListing> 
      */
-    open class func getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BusinessUnitActivityCodeListing> {        
+    open class func getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<BusinessUnitActivityCodeListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1461,7 +1465,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService
+        ])
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCodeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1832,6 +1839,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
   "entities" : [ {
     "metadata" : "{}",
     "serviceGoalTemplate" : "{}",
@@ -2288,6 +2296,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
   "entities" : [ {
     "metadata" : "{}",
     "abandonRate" : "{}",
@@ -5352,6 +5361,7 @@ open class WorkforceManagementAPI {
   } ],
   "active" : true,
   "id" : "id",
+  "hrisTimeOffType" : "{}",
   "autoApprovalRule" : "Never",
   "daysBeforeStartToExpireFromWaitlist" : 0
 }, statusCode=200}]
@@ -5425,6 +5435,7 @@ open class WorkforceManagementAPI {
     } ],
     "active" : true,
     "id" : "id",
+    "hrisTimeOffType" : "{}",
     "autoApprovalRule" : "Never",
     "daysBeforeStartToExpireFromWaitlist" : 0
   }, {
@@ -5441,6 +5452,7 @@ open class WorkforceManagementAPI {
     } ],
     "active" : true,
     "id" : "id",
+    "hrisTimeOffType" : "{}",
     "autoApprovalRule" : "Never",
     "daysBeforeStartToExpireFromWaitlist" : 0
   } ]
@@ -6556,16 +6568,18 @@ open class WorkforceManagementAPI {
     
     
     
+    
     /**
      Gets all the shift trades for a given week
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, completion: @escaping ((_ data: WeekShiftTradeListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches)
+    open class func getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: WeekShiftTradeListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<WeekShiftTradeListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -6595,16 +6609,18 @@ open class WorkforceManagementAPI {
   }, {
     "trade" : "{}",
     "matchReview" : "{}"
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<WeekShiftTradeListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {        
+    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6617,7 +6633,8 @@ open class WorkforceManagementAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "evaluateMatches": evaluateMatches
+            "evaluateMatches": evaluateMatches, 
+            "forceDownloadService": forceDownloadService
         ])
 
         let requestBuilder: RequestBuilder<WeekShiftTradeListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8831,6 +8848,7 @@ open class WorkforceManagementAPI {
   } ],
   "active" : true,
   "id" : "id",
+  "hrisTimeOffType" : "{}",
   "autoApprovalRule" : "Never",
   "daysBeforeStartToExpireFromWaitlist" : 0
 }, statusCode=200}]
@@ -12526,6 +12544,7 @@ open class WorkforceManagementAPI {
   } ],
   "active" : true,
   "id" : "id",
+  "hrisTimeOffType" : "{}",
   "autoApprovalRule" : "Never",
   "daysBeforeStartToExpireFromWaitlist" : 0
 }, statusCode=200}]
@@ -12725,15 +12744,17 @@ open class WorkforceManagementAPI {
 
     
     
+    
     /**
      Fetches time off requests matching the conditions specified in the request body
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: String, body: TimeOffRequestQueryBody? = nil, completion: @escaping ((_ data: TimeOffRequestListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: String, forceDownloadService: Bool? = nil, body: TimeOffRequestQueryBody? = nil, completion: @escaping ((_ data: TimeOffRequestListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body)
         requestBuilder.execute { (response: Response<TimeOffRequestListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -12802,15 +12823,17 @@ open class WorkforceManagementAPI {
     "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestListing> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: String, body: TimeOffRequestQueryBody? = nil) -> RequestBuilder<TimeOffRequestListing> {        
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil, body: TimeOffRequestQueryBody? = nil) -> RequestBuilder<TimeOffRequestListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12818,7 +12841,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService
+        ])
 
         let requestBuilder: RequestBuilder<TimeOffRequestListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -13308,16 +13334,18 @@ open class WorkforceManagementAPI {
     
     
     
+    
     /**
      Searches for potential shift trade matches for the current agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest, completion: @escaping ((_ data: SearchShiftTradesResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body)
+    open class func postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: SearchShiftTradesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<SearchShiftTradesResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -13341,6 +13369,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "downloadUrl" : "downloadUrl",
   "trades" : [ {
     "preview" : "{}",
     "trade" : "{}",
@@ -13355,10 +13384,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<SearchShiftTradesResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest) -> RequestBuilder<SearchShiftTradesResponse> {        
+    open class func postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest, forceDownloadService: Bool? = nil) -> RequestBuilder<SearchShiftTradesResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13369,7 +13399,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService
+        ])
 
         let requestBuilder: RequestBuilder<SearchShiftTradesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

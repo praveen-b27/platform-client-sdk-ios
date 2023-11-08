@@ -26,6 +26,7 @@ docs/ActionConfig.md
 docs/ActionContract.md
 docs/ActionContractInput.md
 docs/ActionEntityListing.md
+docs/ActionEventRequest.md
 docs/ActionInput.md
 docs/ActionMap.md
 docs/ActionMapAction.md
@@ -162,6 +163,9 @@ docs/ApiUsageOrganizationQuery.md
 docs/ApiUsageQueryResult.md
 docs/ApiUsageRow.md
 docs/ApiUsageSimpleSearch.md
+docs/AppEventRequest.md
+docs/AppEventResponse.md
+docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
 docs/ApprovalNamespace.md
 docs/ArchitectAPI.json
@@ -1040,6 +1044,8 @@ docs/DependencyObjectEntityListing.md
 docs/DependencyStatus.md
 docs/DependencyType.md
 docs/DependencyTypeEntityListing.md
+docs/DeploymentPing.md
+docs/DeploymentWebAction.md
 docs/Destination.md
 docs/Detail.md
 docs/DetectedDialogAct.md
@@ -1152,6 +1158,7 @@ docs/Digits.md
 docs/DirectRouting.md
 docs/DirectRoutingMediaSettings.md
 docs/DirectoryUserDevicesListing.md
+docs/DisableSiteConnectionsRequest.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
 docs/DisconnectReason.md
@@ -1395,6 +1402,8 @@ docs/EvaluationVersion.md
 docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCondition.md
+docs/EventDefinition.md
+docs/EventDefinitionListing.md
 docs/EventError.md
 docs/EventLog.md
 docs/EventMessage.md
@@ -1532,6 +1541,8 @@ docs/FlowObservationQueryFilter.md
 docs/FlowObservationQueryPredicate.md
 docs/FlowObservationQueryResponse.md
 docs/FlowOutcome.md
+docs/FlowOutcomeDetailEventTopicFlowMilestone.md
+docs/FlowOutcomeDetailEventTopicFlowOutcomeEvent.md
 docs/FlowOutcomeDivisionView.md
 docs/FlowOutcomeDivisionViewEntityListing.md
 docs/FlowOutcomeListing.md
@@ -2196,6 +2207,7 @@ docs/MoveAgentsResponse.md
 docs/MoveManagementUnitRequest.md
 docs/MoveManagementUnitResponse.md
 docs/MuRescheduleResultWrapper.md
+docs/MutableUserPresence.md
 docs/MuteSnoozeFields.md
 docs/NTPSettings.md
 docs/NamedEntity.md
@@ -2263,6 +2275,7 @@ docs/ObservationValue.md
 docs/Okta.md
 docs/OneLogin.md
 docs/OpenActionFields.md
+docs/OpenActionProperties.md
 docs/OpenContentAttachment.md
 docs/OpenEvent.md
 docs/OpenEventNormalizedMessage.md
@@ -2288,6 +2301,8 @@ docs/OpenReceiptNormalizedMessage.md
 docs/Operation.md
 docs/OperationalEventNotificationTopicEventEntity.md
 docs/OperationalEventNotificationTopicOperationalEventNotification.md
+docs/OperationalEventsAPI.json
+docs/OperationalEventsAPI.md
 docs/OptInSettings.md
 docs/OrgAuthSettings.md
 docs/OrgOAuthClient.md
@@ -3060,6 +3075,7 @@ docs/SipDownloadResponse.md
 docs/SipSearchResult.md
 docs/Site.md
 docs/SiteConnection.md
+docs/SiteConnections.md
 docs/SiteEntityListing.md
 docs/SkillEntityListing.md
 docs/SkillGroup.md
@@ -3410,6 +3426,7 @@ docs/UpdateTimeOffLimitRequest.md
 docs/UpdateTimeOffPlanRequest.md
 docs/UpdateTriggerRequest.md
 docs/UpdateUser.md
+docs/UpdateVerifierRequest.md
 docs/UpdateWorkPlanRotationAgentRequest.md
 docs/UpdateWorkPlanRotationRequest.md
 docs/UploadUrlRequest.md
@@ -3579,6 +3596,7 @@ docs/V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTem
 docs/V2ConversationMessageTypingEventForWorkflowTopicConversationReason.md
 docs/V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.md
 docs/V2ConversationMessageTypingEventForWorkflowTopicMessageData.md
+docs/V2MobiusAlertsTopicAddressableEntityRef.md
 docs/V2MobiusAlertsTopicAlert.md
 docs/V2MobiusAlertsTopicAlertNotification.md
 docs/V2MobiusAlertsTopicAlertRuleProperties.md
@@ -3587,6 +3605,7 @@ docs/V2MobiusAlertsTopicAlertSummaryEntity.md
 docs/V2MobiusAlertsTopicCondition.md
 docs/V2MobiusAlertsTopicConditionRulePredicate.md
 docs/V2MobiusAlertsTopicEntityProperties.md
+docs/V2MobiusRulesTopicAddressableEntityRef.md
 docs/V2MobiusRulesTopicAlertNotification.md
 docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
@@ -3604,6 +3623,8 @@ docs/ValueWrapperHrisTimeOffType.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/VerificationResult.md
+docs/Verifier.md
+docs/VerifierEntityListing.md
 docs/Video.md
 docs/VideoConferenceUpdateTopicParticipantInfo.md
 docs/VideoConferenceUpdateTopicVideoConference.md
@@ -3678,6 +3699,7 @@ docs/WebMessagingGeneric.md
 docs/WebMessagingMessage.md
 docs/WebMessagingMessageEntityList.md
 docs/WebMessagingOfferFields.md
+docs/WebMessagingOfferProperties.md
 docs/WebMessagingQuickReply.md
 docs/WebMessagingRecipient.md
 docs/WeekSchedule.md
@@ -3842,6 +3864,8 @@ docs/WfmVersionedEntityMetadata.md
 docs/WhatsAppAvailablePhoneNumberDetails.md
 docs/WhatsAppAvailablePhoneNumberDetailsListing.md
 docs/WhatsAppDefinition.md
+docs/WhatsAppEmbeddedSignupIntegrationActivationRequest.md
+docs/WhatsAppEmbeddedSignupIntegrationRequest.md
 docs/WhatsAppId.md
 docs/WhatsAppIntegration.md
 docs/WhatsAppIntegrationEntityListing.md
@@ -4124,6 +4148,7 @@ docs/deleteUserRoutingskill-example.txt
 docs/deleteUserRoutingskill-example.txt
 docs/deleteUserStationAssociatedstation-example.txt
 docs/deleteUserStationDefaultstation-example.txt
+docs/deleteUserVerifier-example.txt
 docs/deleteUserrecording-example.txt
 docs/deleteVoicemailMessage-example.txt
 docs/deleteVoicemailMessages-example.txt
@@ -4252,7 +4277,6 @@ docs/getAuthorizationSubjectsRolecounts-example.txt
 docs/getBillingReportsBillableusage-example.txt
 docs/getBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/getCarrierservicesIntegrationsEmergencylocationsMe-example.txt
-docs/getChatSettings-example.txt
 docs/getChatsSettings-example.txt
 docs/getCoachingAppointment-example.txt
 docs/getCoachingAppointmentAnnotation-example.txt
@@ -4563,6 +4587,7 @@ docs/getJourneyActiontarget-example.txt
 docs/getJourneyActiontargets-example.txt
 docs/getJourneyActiontemplate-example.txt
 docs/getJourneyActiontemplates-example.txt
+docs/getJourneyDeploymentCustomerPing-example.txt
 docs/getJourneyOutcome-example.txt
 docs/getJourneyOutcomes-example.txt
 docs/getJourneyOutcomesPredictor-example.txt
@@ -4992,6 +5017,7 @@ docs/getTelephonyProvidersEdgesSiteNumberplans-example.txt
 docs/getTelephonyProvidersEdgesSiteNumberplansClassifications-example.txt
 docs/getTelephonyProvidersEdgesSiteOutboundroute-example.txt
 docs/getTelephonyProvidersEdgesSiteOutboundroutes-example.txt
+docs/getTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/getTelephonyProvidersEdgesSites-example.txt
 docs/getTelephonyProvidersEdgesTimezones-example.txt
 docs/getTelephonyProvidersEdgesTrunk-example.txt
@@ -5008,6 +5034,8 @@ docs/getTelephonySiptracesDownloadDownloadId-example.txt
 docs/getTextbotsBotsSearch-example.txt
 docs/getTimezones-example.txt
 docs/getTokensMe-example.txt
+docs/getUsageEventsDefinition-example.txt
+docs/getUsageEventsDefinitions-example.txt
 docs/getUsageQueryExecutionIdResults-example.txt
 docs/getUsageSimplesearchExecutionIdResults-example.txt
 docs/getUser-example.txt
@@ -5039,6 +5067,7 @@ docs/getUserState-example.txt
 docs/getUserStation-example.txt
 docs/getUserSuperiors-example.txt
 docs/getUserTrustors-example.txt
+docs/getUserVerifiers-example.txt
 docs/getUserrecording-example.txt
 docs/getUserrecordingMedia-example.txt
 docs/getUserrecordings-example.txt
@@ -5167,7 +5196,6 @@ docs/patchAlertingRulesBulk-example.txt
 docs/patchAnalyticsReportingSettings-example.txt
 docs/patchAuthorizationRole-example.txt
 docs/patchAuthorizationSettings-example.txt
-docs/patchChatSettings-example.txt
 docs/patchChatsSettings-example.txt
 docs/patchCoachingAppointment-example.txt
 docs/patchCoachingAppointmentAnnotation-example.txt
@@ -5208,6 +5236,7 @@ docs/patchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
+docs/patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/patchConversationsMessagingSetting-example.txt
 docs/patchConversationsMessagingSupportedcontentSupportedContentId-example.txt
@@ -5271,6 +5300,7 @@ docs/patchScimV2Group-example.txt
 docs/patchScimV2User-example.txt
 docs/patchSpeechandtextanalyticsSettings-example.txt
 docs/patchTeam-example.txt
+docs/patchTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/patchUser-example.txt
 docs/patchUserCallforwarding-example.txt
 docs/patchUserGeolocation-example.txt
@@ -5451,6 +5481,7 @@ docs/postConversationsMessagingIntegrationsLine-example.txt
 docs/postConversationsMessagingIntegrationsOpen-example.txt
 docs/postConversationsMessagingIntegrationsTwitter-example.txt
 docs/postConversationsMessagingIntegrationsWhatsapp-example.txt
+docs/postConversationsMessagingIntegrationsWhatsappEmbeddedsignup-example.txt
 docs/postConversationsMessagingSettings-example.txt
 docs/postConversationsMessagingSupportedcontent-example.txt
 docs/postConversationsParticipantsAttributesSearch-example.txt
@@ -5538,6 +5569,8 @@ docs/postIntegrationsCredentials-example.txt
 docs/postJourneyActionmaps-example.txt
 docs/postJourneyActionmapsEstimatesJobs-example.txt
 docs/postJourneyActiontemplates-example.txt
+docs/postJourneyDeploymentActionevent-example.txt
+docs/postJourneyDeploymentAppevents-example.txt
 docs/postJourneyOutcomes-example.txt
 docs/postJourneyOutcomesPredictors-example.txt
 docs/postJourneySegments-example.txt
@@ -5861,7 +5894,6 @@ docs/putAuthorizationRole-example.txt
 docs/putAuthorizationRoleUsersAdd-example.txt
 docs/putAuthorizationRoleUsersRemove-example.txt
 docs/putAuthorizationRolesDefault-example.txt
-docs/putChatSettings-example.txt
 docs/putChatsSettings-example.txt
 docs/putContentmanagementWorkspace-example.txt
 docs/putContentmanagementWorkspaceMember-example.txt
@@ -6018,6 +6050,7 @@ docs/putTelephonyProvidersEdgesPhonebasesetting-example.txt
 docs/putTelephonyProvidersEdgesSite-example.txt
 docs/putTelephonyProvidersEdgesSiteNumberplans-example.txt
 docs/putTelephonyProvidersEdgesSiteOutboundroute-example.txt
+docs/putTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/putTelephonyProvidersEdgesTrunkbasesetting-example.txt
 docs/putUserCallforwarding-example.txt
 docs/putUserGreetingsDefaults-example.txt
@@ -6033,6 +6066,7 @@ docs/putUserRoutingstatus-example.txt
 docs/putUserState-example.txt
 docs/putUserStationAssociatedstationStationId-example.txt
 docs/putUserStationDefaultstationStationId-example.txt
+docs/putUserVerifier-example.txt
 docs/putUserrecording-example.txt
 docs/putUsersPresencesBulk-example.txt
 docs/putVoicemailMessage-example.txt
@@ -6085,6 +6119,7 @@ src/APIs/MobileDevicesAPI.swift
 src/APIs/NotificationsAPI.swift
 src/APIs/OAuthAPI.swift
 src/APIs/ObjectsAPI.swift
+src/APIs/OperationalEventsAPI.swift
 src/APIs/OrganizationAPI.swift
 src/APIs/OrganizationAuthorizationAPI.swift
 src/APIs/OutboundAPI.swift
@@ -6143,6 +6178,7 @@ src/Models/ActionConfig.swift
 src/Models/ActionContract.swift
 src/Models/ActionContractInput.swift
 src/Models/ActionEntityListing.swift
+src/Models/ActionEventRequest.swift
 src/Models/ActionInput.swift
 src/Models/ActionMap.swift
 src/Models/ActionMapAction.swift
@@ -6275,6 +6311,9 @@ src/Models/ApiUsageOrganizationQuery.swift
 src/Models/ApiUsageQueryResult.swift
 src/Models/ApiUsageRow.swift
 src/Models/ApiUsageSimpleSearch.swift
+src/Models/AppEventRequest.swift
+src/Models/AppEventResponse.swift
+src/Models/AppEventResponseSession.swift
 src/Models/AppendToDncActionSettings.swift
 src/Models/ApprovalNamespace.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationClient.swift
@@ -7133,6 +7172,8 @@ src/Models/DependencyObjectEntityListing.swift
 src/Models/DependencyStatus.swift
 src/Models/DependencyType.swift
 src/Models/DependencyTypeEntityListing.swift
+src/Models/DeploymentPing.swift
+src/Models/DeploymentWebAction.swift
 src/Models/Destination.swift
 src/Models/Detail.swift
 src/Models/DetectedDialogAct.swift
@@ -7245,6 +7286,7 @@ src/Models/Digits.swift
 src/Models/DirectRouting.swift
 src/Models/DirectRoutingMediaSettings.swift
 src/Models/DirectoryUserDevicesListing.swift
+src/Models/DisableSiteConnectionsRequest.swift
 src/Models/DisallowedEntityLearningAssignmentItem.swift
 src/Models/DisallowedEntityLearningAssignmentReference.swift
 src/Models/DisconnectReason.swift
@@ -7484,6 +7526,8 @@ src/Models/EvaluationVersion.swift
 src/Models/EvaluatorActivity.swift
 src/Models/EvaluatorActivityEntityListing.swift
 src/Models/EventCondition.swift
+src/Models/EventDefinition.swift
+src/Models/EventDefinitionListing.swift
 src/Models/EventError.swift
 src/Models/EventLog.swift
 src/Models/EventMessage.swift
@@ -7615,6 +7659,8 @@ src/Models/FlowObservationQueryFilter.swift
 src/Models/FlowObservationQueryPredicate.swift
 src/Models/FlowObservationQueryResponse.swift
 src/Models/FlowOutcome.swift
+src/Models/FlowOutcomeDetailEventTopicFlowMilestone.swift
+src/Models/FlowOutcomeDetailEventTopicFlowOutcomeEvent.swift
 src/Models/FlowOutcomeDivisionView.swift
 src/Models/FlowOutcomeDivisionViewEntityListing.swift
 src/Models/FlowOutcomeListing.swift
@@ -8245,6 +8291,7 @@ src/Models/MoveAgentsResponse.swift
 src/Models/MoveManagementUnitRequest.swift
 src/Models/MoveManagementUnitResponse.swift
 src/Models/MuRescheduleResultWrapper.swift
+src/Models/MutableUserPresence.swift
 src/Models/MuteSnoozeFields.swift
 src/Models/NTPSettings.swift
 src/Models/NamedEntity.swift
@@ -8306,6 +8353,7 @@ src/Models/ObservationValue.swift
 src/Models/Okta.swift
 src/Models/OneLogin.swift
 src/Models/OpenActionFields.swift
+src/Models/OpenActionProperties.swift
 src/Models/OpenContentAttachment.swift
 src/Models/OpenEvent.swift
 src/Models/OpenEventNormalizedMessage.swift
@@ -9076,6 +9124,7 @@ src/Models/SipDownloadResponse.swift
 src/Models/SipSearchResult.swift
 src/Models/Site.swift
 src/Models/SiteConnection.swift
+src/Models/SiteConnections.swift
 src/Models/SiteEntityListing.swift
 src/Models/SkillEntityListing.swift
 src/Models/SkillGroup.swift
@@ -9410,6 +9459,7 @@ src/Models/UpdateTimeOffLimitRequest.swift
 src/Models/UpdateTimeOffPlanRequest.swift
 src/Models/UpdateTriggerRequest.swift
 src/Models/UpdateUser.swift
+src/Models/UpdateVerifierRequest.swift
 src/Models/UpdateWorkPlanRotationAgentRequest.swift
 src/Models/UpdateWorkPlanRotationRequest.swift
 src/Models/UploadUrlRequest.swift
@@ -9569,6 +9619,7 @@ src/Models/V2ConversationMessageTypingEventForWorkflowTopicConversationNotificat
 src/Models/V2ConversationMessageTypingEventForWorkflowTopicConversationReason.swift
 src/Models/V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.swift
 src/Models/V2ConversationMessageTypingEventForWorkflowTopicMessageData.swift
+src/Models/V2MobiusAlertsTopicAddressableEntityRef.swift
 src/Models/V2MobiusAlertsTopicAlert.swift
 src/Models/V2MobiusAlertsTopicAlertNotification.swift
 src/Models/V2MobiusAlertsTopicAlertRuleProperties.swift
@@ -9577,6 +9628,7 @@ src/Models/V2MobiusAlertsTopicAlertSummaryEntity.swift
 src/Models/V2MobiusAlertsTopicCondition.swift
 src/Models/V2MobiusAlertsTopicConditionRulePredicate.swift
 src/Models/V2MobiusAlertsTopicEntityProperties.swift
+src/Models/V2MobiusRulesTopicAddressableEntityRef.swift
 src/Models/V2MobiusRulesTopicAlertNotification.swift
 src/Models/V2MobiusRulesTopicCondition.swift
 src/Models/V2MobiusRulesTopicConditionRulePredicate.swift
@@ -9594,6 +9646,8 @@ src/Models/ValueWrapperHrisTimeOffType.swift
 src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
 src/Models/VerificationResult.swift
+src/Models/Verifier.swift
+src/Models/VerifierEntityListing.swift
 src/Models/Video.swift
 src/Models/VideoConferenceUpdateTopicParticipantInfo.swift
 src/Models/VideoConferenceUpdateTopicVideoConference.swift
@@ -9659,6 +9713,7 @@ src/Models/WebMessagingGeneric.swift
 src/Models/WebMessagingMessage.swift
 src/Models/WebMessagingMessageEntityList.swift
 src/Models/WebMessagingOfferFields.swift
+src/Models/WebMessagingOfferProperties.swift
 src/Models/WebMessagingQuickReply.swift
 src/Models/WebMessagingRecipient.swift
 src/Models/WeekSchedule.swift
@@ -9823,6 +9878,8 @@ src/Models/WfmVersionedEntityMetadata.swift
 src/Models/WhatsAppAvailablePhoneNumberDetails.swift
 src/Models/WhatsAppAvailablePhoneNumberDetailsListing.swift
 src/Models/WhatsAppDefinition.swift
+src/Models/WhatsAppEmbeddedSignupIntegrationActivationRequest.swift
+src/Models/WhatsAppEmbeddedSignupIntegrationRequest.swift
 src/Models/WhatsAppId.swift
 src/Models/WhatsAppIntegration.swift
 src/Models/WhatsAppIntegrationEntityListing.swift

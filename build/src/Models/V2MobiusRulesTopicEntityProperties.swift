@@ -21,17 +21,17 @@ public class V2MobiusRulesTopicEntityProperties: Codable {
         case teamMembers = "TeamMembers"
     }
     public var entityType: EntityType?
-    public var userDisplayName: String?
-    public var groupDisplayName: String?
-    public var queueDisplayName: String?
-    public var teamDisplayName: String?
+    public var user: V2MobiusRulesTopicAddressableEntityRef?
+    public var group: V2MobiusRulesTopicAddressableEntityRef?
+    public var queue: V2MobiusRulesTopicAddressableEntityRef?
+    public var team: V2MobiusRulesTopicAddressableEntityRef?
 
-    public init(entityType: EntityType?, userDisplayName: String?, groupDisplayName: String?, queueDisplayName: String?, teamDisplayName: String?) {
+    public init(entityType: EntityType?, user: V2MobiusRulesTopicAddressableEntityRef?, group: V2MobiusRulesTopicAddressableEntityRef?, queue: V2MobiusRulesTopicAddressableEntityRef?, team: V2MobiusRulesTopicAddressableEntityRef?) {
         self.entityType = entityType
-        self.userDisplayName = userDisplayName
-        self.groupDisplayName = groupDisplayName
-        self.queueDisplayName = queueDisplayName
-        self.teamDisplayName = teamDisplayName
+        self.user = user
+        self.group = group
+        self.queue = queue
+        self.team = team
     }
 
 

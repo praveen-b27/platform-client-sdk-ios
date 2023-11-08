@@ -18,7 +18,7 @@ public class AgentlessEmailSendRequestDto: Codable {
     }
     /** The direction of the message. */
     public var senderType: SenderType?
-    /** The identifier of the conversation. */
+    /** The identifier of the conversation. This must be an email interaction. */
     public var conversationId: String?
     /** The sender of the message. */
     public var fromAddress: EmailAddress?

@@ -7,7 +7,7 @@ title: DomainOrganizationRoleCreate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | role id | [optional] |
 | **name** | **String** | The role name | |
 | **_description** | **String** |  | [optional] |
 | **defaultRoleId** | **String** |  | [optional] |

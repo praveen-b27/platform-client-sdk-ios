@@ -1487,6 +1487,8 @@ Requires ANY permissions:
 * wfm:workPlanRotation:view
 * coaching:appointment:add
 * coaching:appointment:edit
+* learning:assignment:add
+* learning:assignment:reschedule
 
 ### Example
 
@@ -1584,7 +1586,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(businessUn
 
 
 
-> [BusinessUnitActivityCodeListing](BusinessUnitActivityCodeListing.html) getWorkforcemanagementBusinessunitActivitycodes(businessUnitId)
+> [BusinessUnitActivityCodeListing](BusinessUnitActivityCodeListing.html) getWorkforcemanagementBusinessunitActivitycodes(businessUnitId, forceDownloadService)
 
 Get activity codes
 
@@ -1663,9 +1665,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1681,6 +1684,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
 
@@ -4288,7 +4292,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedules(managem
 
 
 
-> [WeekShiftTradeListResponse](WeekShiftTradeListResponse.html) getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches)
+> [WeekShiftTradeListResponse](WeekShiftTradeListResponse.html) getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, forceDownloadService)
 
 Gets all the shift trades for a given week
 
@@ -4312,9 +4316,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let evaluateMatches: Bool = true // Whether to evaluate the matches for violations
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4332,6 +4337,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
 
@@ -8377,7 +8383,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsInteg
 
 
 
-> [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, body)
+> [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, forceDownloadService, body)
 
 Fetches time off requests matching the conditions specified in the request body
 
@@ -8400,10 +8406,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 let body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -8419,6 +8426,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 | **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -8769,7 +8777,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttrades(mana
 
 
 
-> [SearchShiftTradesResponse](SearchShiftTradesResponse.html) postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body)
+> [SearchShiftTradesResponse](SearchShiftTradesResponse.html) postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body, forceDownloadService)
 
 Searches for potential shift trade matches for the current agent
 
@@ -8792,9 +8800,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: SearchShiftTradesRequest = new SearchShiftTradesRequest(...) // body
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -8812,6 +8821,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearc
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body | |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
 

@@ -8,10 +8,10 @@ title: V2MobiusRulesTopicEntityProperties
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **entityType** | **String** |  | [optional] |
-| **userDisplayName** | **String** |  | [optional] |
-| **groupDisplayName** | **String** |  | [optional] |
-| **queueDisplayName** | **String** |  | [optional] |
-| **teamDisplayName** | **String** |  | [optional] |
+| **user** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
+| **group** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
+| **queue** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
+| **team** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
 {: class="table table-striped"}
 
 

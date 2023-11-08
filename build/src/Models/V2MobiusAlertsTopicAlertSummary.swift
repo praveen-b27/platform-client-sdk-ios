@@ -17,14 +17,14 @@ public class V2MobiusAlertsTopicAlertSummary: Codable {
         case unknown = "Unknown"
     }
     public var entities: [V2MobiusAlertsTopicAlertSummaryEntity]?
-    public var conversationId: UUID?
+    public var conversation: V2MobiusAlertsTopicAddressableEntityRef?
     public var metricType: MetricType?
     public var isTeamMemberRuleSummary: Bool?
     public var teamMemberRuleSummary: Bool?
 
-    public init(entities: [V2MobiusAlertsTopicAlertSummaryEntity]?, conversationId: UUID?, metricType: MetricType?, isTeamMemberRuleSummary: Bool?, teamMemberRuleSummary: Bool?) {
+    public init(entities: [V2MobiusAlertsTopicAlertSummaryEntity]?, conversation: V2MobiusAlertsTopicAddressableEntityRef?, metricType: MetricType?, isTeamMemberRuleSummary: Bool?, teamMemberRuleSummary: Bool?) {
         self.entities = entities
-        self.conversationId = conversationId
+        self.conversation = conversation
         self.metricType = metricType
         self.isTeamMemberRuleSummary = isTeamMemberRuleSummary
         self.teamMemberRuleSummary = teamMemberRuleSummary

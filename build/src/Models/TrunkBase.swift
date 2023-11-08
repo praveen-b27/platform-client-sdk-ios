@@ -52,10 +52,14 @@ public class TrunkBase: Codable {
     public var trunkType: TrunkType?
     /** Is this trunk being managed remotely. This property is synchronized with the managed property of the Edge Group to which it is assigned. */
     public var managed: Bool?
+    /** Used to determine the media regions for inbound and outbound calls through a trunk. Also determines the dial plan to use for calls that came in on a trunk and have to be sent out on it as well. */
+    public var site: DomainEntityRef?
+    /** Allows a customer to set the site to which inbound calls will be routed */
+    public var inboundSite: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkMetabase: DomainEntityRef?, properties: [String:JSON]?, trunkType: TrunkType?, managed: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkMetabase: DomainEntityRef?, properties: [String:JSON]?, trunkType: TrunkType?, managed: Bool?, site: DomainEntityRef?, inboundSite: DomainEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -72,6 +76,8 @@ public class TrunkBase: Codable {
         self.properties = properties
         self.trunkType = trunkType
         self.managed = managed
+        self.site = site
+        self.inboundSite = inboundSite
         self.selfUri = selfUri
     }
 
@@ -92,6 +98,8 @@ public class TrunkBase: Codable {
         case properties
         case trunkType
         case managed
+        case site
+        case inboundSite
         case selfUri
     }
 

@@ -50,10 +50,14 @@ public class EdgeTrunkBase: Codable {
     public var properties: [String:JSON]?
     /** The type of this trunk base. */
     public var trunkType: TrunkType?
+    /** Used to determine the media regions for inbound and outbound calls through a trunk. Also determines the dial plan to use for calls that came in on a trunk and have to be sent out on it as well. */
+    public var site: DomainEntityRef?
+    /** Allows a customer to set the site to which inbound calls will be routed */
+    public var inboundSite: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkMetabase: DomainEntityRef?, properties: [String:JSON]?, trunkType: TrunkType?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkMetabase: DomainEntityRef?, properties: [String:JSON]?, trunkType: TrunkType?, site: DomainEntityRef?, inboundSite: DomainEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -69,6 +73,8 @@ public class EdgeTrunkBase: Codable {
         self.trunkMetabase = trunkMetabase
         self.properties = properties
         self.trunkType = trunkType
+        self.site = site
+        self.inboundSite = inboundSite
         self.selfUri = selfUri
     }
 
@@ -88,6 +94,8 @@ public class EdgeTrunkBase: Codable {
         case trunkMetabase
         case properties
         case trunkType
+        case site
+        case inboundSite
         case selfUri
     }
 

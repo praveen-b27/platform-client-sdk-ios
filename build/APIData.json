@@ -4911,33 +4911,12 @@
     "return": "EmergencyLocation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EmergencyLocation = new EmergencyLocation(...) // \n\n// Set current location for the logged in user\nPostCarrierservicesIntegrationsEmergencylocationsMeRequest.postCarrierservicesIntegrationsEmergencylocationsMe(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostCarrierservicesIntegrationsEmergencylocationsMeRequest.postCarrierservicesIntegrationsEmergencylocationsMe was successful\")\n        dump(response)\n    }\n}"
   },
-  "getchatsettings": {
-    "operationId": "getchatsettings",
-    "functionName": "getChatSettings",
-    "signature": "getChatSettings()",
-    "return": "ChatSettings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Chat Settings.\nGetChatSettingsRequest.getChatSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatSettingsRequest.getChatSettings was successful\")\n        dump(response)\n    }\n}"
-  },
   "getchatssettings": {
     "operationId": "getchatssettings",
     "functionName": "getChatsSettings",
     "signature": "getChatsSettings()",
     "return": "ChatSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Chat Settings.\nGetChatsSettingsRequest.getChatsSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsSettingsRequest.getChatsSettings was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchchatsettings": {
-    "operationId": "patchchatsettings",
-    "functionName": "patchChatSettings",
-    "signature": "patchChatSettings(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "ChatSettings",
-        "required": "true"
-      }
-    ],
-    "return": "ChatSettings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Patch Chat Settings.\nPatchChatSettingsRequest.patchChatSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchChatSettingsRequest.patchChatSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "patchchatssettings": {
     "operationId": "patchchatssettings",
@@ -4952,20 +4931,6 @@
     ],
     "return": "ChatSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Patch Chat Settings.\nPatchChatsSettingsRequest.patchChatsSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchChatsSettingsRequest.patchChatsSettings was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putchatsettings": {
-    "operationId": "putchatsettings",
-    "functionName": "putChatSettings",
-    "signature": "putChatSettings(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "ChatSettings",
-        "required": "true"
-      }
-    ],
-    "return": "ChatSettings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Update Chat Settings.\nPutChatSettingsRequest.putChatSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutChatSettingsRequest.putChatSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "putchatssettings": {
     "operationId": "putchatssettings",
@@ -8817,6 +8782,25 @@
     "return": "TwitterIntegration",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest\n\n// Update Twitter messaging integration\nPatchConversationsMessagingIntegrationsTwitterIntegrationIdRequest.patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingIntegrationsTwitterIntegrationIdRequest.patchConversationsMessagingIntegrationsTwitterIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchconversationsmessagingintegrationswhatsappembeddedsignupintegrationid": {
+    "operationId": "patchconversationsmessagingintegrationswhatsappembeddedsignupintegrationid",
+    "functionName": "patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId",
+    "signature": "patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId(integrationId, body)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WhatsAppEmbeddedSignupIntegrationActivationRequest",
+        "required": "true"
+      }
+    ],
+    "return": "WhatsAppIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: WhatsAppEmbeddedSignupIntegrationActivationRequest = new WhatsAppEmbeddedSignupIntegrationActivationRequest(...) // WhatsAppEmbeddedSignupIntegrationActivationRequest\n\n// Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow\nPatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationIdRequest.patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationIdRequest.patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchconversationsmessagingintegrationswhatsappintegrationid": {
     "operationId": "patchconversationsmessagingintegrationswhatsappintegrationid",
     "functionName": "patchConversationsMessagingIntegrationsWhatsappIntegrationId",
@@ -9946,7 +9930,21 @@
       }
     ],
     "return": "WhatsAppIntegration",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WhatsAppIntegrationRequest = new WhatsAppIntegrationRequest(...) // WhatsAppIntegrationRequest\n\n// Create a WhatsApp Integration\nPostConversationsMessagingIntegrationsWhatsappRequest.postConversationsMessagingIntegrationsWhatsapp(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagingIntegrationsWhatsappRequest.postConversationsMessagingIntegrationsWhatsapp was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WhatsAppIntegrationRequest = new WhatsAppIntegrationRequest(...) // WhatsAppIntegrationRequest\n\n// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration\nPostConversationsMessagingIntegrationsWhatsappRequest.postConversationsMessagingIntegrationsWhatsapp(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagingIntegrationsWhatsappRequest.postConversationsMessagingIntegrationsWhatsapp was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationsmessagingintegrationswhatsappembeddedsignup": {
+    "operationId": "postconversationsmessagingintegrationswhatsappembeddedsignup",
+    "functionName": "postConversationsMessagingIntegrationsWhatsappEmbeddedsignup",
+    "signature": "postConversationsMessagingIntegrationsWhatsappEmbeddedsignup(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WhatsAppEmbeddedSignupIntegrationRequest",
+        "required": "true"
+      }
+    ],
+    "return": "WhatsAppIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WhatsAppEmbeddedSignupIntegrationRequest = new WhatsAppEmbeddedSignupIntegrationRequest(...) // WhatsAppEmbeddedSignupIntegrationRequest\n\n// Create a WhatsApp Integration using the WhatsApp embedded signup flow\nPostConversationsMessagingIntegrationsWhatsappEmbeddedsignupRequest.postConversationsMessagingIntegrationsWhatsappEmbeddedsignup(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagingIntegrationsWhatsappEmbeddedsignupRequest.postConversationsMessagingIntegrationsWhatsappEmbeddedsignup was successful\")\n        dump(response)\n    }\n}"
   },
   "postconversationsmessagingsettings": {
     "operationId": "postconversationsmessagingsettings",
@@ -16094,6 +16092,50 @@
     "return": "ActionTemplateListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortBy: String = \"\" // Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=name,-createdDate).\nlet mediaType: GetJourneyActiontemplatesRequest.MediaType_getJourneyActiontemplates = GetJourneyActiontemplatesRequest.MediaType_getJourneyActiontemplates.enummember // Media type\nlet state: GetJourneyActiontemplatesRequest.State_getJourneyActiontemplates = GetJourneyActiontemplatesRequest.State_getJourneyActiontemplates.enummember // Action template state.\nlet queryFields: [String] = [\"\"] // ActionTemplate field(s) to query on. Requires 'queryValue' to also be set.\nlet queryValue: String = \"\" // Value to query on. Requires 'queryFields' to also be set.\n\n// Retrieve all action templates.\nGetJourneyActiontemplatesRequest.getJourneyActiontemplates(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, mediaType: mediaType, state: state, queryFields: queryFields, queryValue: queryValue) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyActiontemplatesRequest.getJourneyActiontemplates was successful\")\n        dump(response)\n    }\n}"
   },
+  "getjourneydeploymentcustomerping": {
+    "operationId": "getjourneydeploymentcustomerping",
+    "functionName": "getJourneyDeploymentCustomerPing",
+    "signature": "getJourneyDeploymentCustomerPing(deploymentId, customerCookieId, sessionId, dl, dt, appNamespace, sinceLastBeaconMilliseconds)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "customerCookieId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "dl",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "dt",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "appNamespace",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sinceLastBeaconMilliseconds",
+        "type": "Int64",
+        "required": "false"
+      }
+    ],
+    "return": "DeploymentPing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The ID of the deployment sending the ping.\nlet customerCookieId: String = \"\" // ID of the customer associated with the ping.\nlet sessionId: String = \"\" // UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session\nlet dl: String = \"\" // Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. 'home' or 'help. Pings without this parameter will not return actions.\nlet dt: String = \"\" // Document Title.  A human readable name for the page or screen\nlet appNamespace: String = \"\" // Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions\nlet sinceLastBeaconMilliseconds: Int64 = 0 // How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings.\n\n// Send a ping.\nGetJourneyDeploymentCustomerPingRequest.getJourneyDeploymentCustomerPing(deploymentId: deploymentId, customerCookieId: customerCookieId, sessionId: sessionId, dl: dl, dt: dt, appNamespace: appNamespace, sinceLastBeaconMilliseconds: sinceLastBeaconMilliseconds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyDeploymentCustomerPingRequest.getJourneyDeploymentCustomerPing was successful\")\n        dump(response)\n    }\n}"
+  },
   "getjourneyoutcome": {
     "operationId": "getjourneyoutcome",
     "functionName": "getJourneyOutcome",
@@ -16390,6 +16432,43 @@
     ],
     "return": "ActionTemplate",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ActionTemplate = new ActionTemplate(...) // \n\n// Create a single action template.\nPostJourneyActiontemplatesRequest.postJourneyActiontemplates(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyActiontemplatesRequest.postJourneyActiontemplates was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postjourneydeploymentactionevent": {
+    "operationId": "postjourneydeploymentactionevent",
+    "functionName": "postJourneyDeploymentActionevent",
+    "signature": "postJourneyDeploymentActionevent(deploymentId, body)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ActionEventRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The ID of the deployment sending the beacon.\nlet body: ActionEventRequest = new ActionEventRequest(...) // \n\n// Sends an action event, which is used for changing the state of actions that have been offered to the user.\nPostJourneyDeploymentActioneventRequest.postJourneyDeploymentActionevent(deploymentId: deploymentId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostJourneyDeploymentActioneventRequest.postJourneyDeploymentActionevent was successful\")\n    }\n}"
+  },
+  "postjourneydeploymentappevents": {
+    "operationId": "postjourneydeploymentappevents",
+    "functionName": "postJourneyDeploymentAppevents",
+    "signature": "postJourneyDeploymentAppevents(deploymentId, body)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AppEventRequest",
+        "required": "false"
+      }
+    ],
+    "return": "AppEventResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The ID of the deployment sending the app event.\nlet body: AppEventRequest = new AppEventRequest(...) // \n\n// Send a journey app event, used for tracking customer activity on an application.\nPostJourneyDeploymentAppeventsRequest.postJourneyDeploymentAppevents(deploymentId: deploymentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyDeploymentAppeventsRequest.postJourneyDeploymentAppevents was successful\")\n        dump(response)\n    }\n}"
   },
   "postjourneyoutcomes": {
     "operationId": "postjourneyoutcomes",
@@ -20885,6 +20964,27 @@
     "return": "OAuthClient",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet clientId: String = \"\" // Client ID\nlet body: OAuthClientRequest = new OAuthClientRequest(...) // Client\n\n// Update OAuth Client\nPutOauthClientRequest.putOauthClient(clientId: clientId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOauthClientRequest.putOauthClient was successful\")\n        dump(response)\n    }\n}"
   },
+  "getusageeventsdefinition": {
+    "operationId": "getusageeventsdefinition",
+    "functionName": "getUsageEventsDefinition",
+    "signature": "getUsageEventsDefinition(eventDefinitionId)",
+    "parameters": [
+      {
+        "name": "eventDefinitionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "EventDefinition",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet eventDefinitionId: String = \"\" // EventDefinition id\n\n// Get an operational event definition by its id\nGetUsageEventsDefinitionRequest.getUsageEventsDefinition(eventDefinitionId: eventDefinitionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageEventsDefinitionRequest.getUsageEventsDefinition was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getusageeventsdefinitions": {
+    "operationId": "getusageeventsdefinitions",
+    "functionName": "getUsageEventsDefinitions",
+    "signature": "getUsageEventsDefinitions()",
+    "return": "EventDefinitionListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get all operational event definitions\nGetUsageEventsDefinitionsRequest.getUsageEventsDefinitions() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageEventsDefinitionsRequest.getUsageEventsDefinitions was successful\")\n        dump(response)\n    }\n}"
+  },
   "getorganizationsauthenticationsettings": {
     "operationId": "getorganizationsauthenticationsettings",
     "functionName": "getOrganizationsAuthenticationSettings",
@@ -25016,12 +25116,12 @@
     "parameters": [
       {
         "name": "body",
-        "type": "[UserPresence]",
+        "type": "[MutableUserPresence]",
         "required": "true"
       }
     ],
     "return": "[UserPresence]",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [UserPresence] = [new UserPresence(...)] // List of User presences\n\n// Update bulk user Presences\nPutUsersPresencesBulkRequest.putUsersPresencesBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUsersPresencesBulkRequest.putUsersPresencesBulk was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [MutableUserPresence] = [new MutableUserPresence(...)] // List of User presences\n\n// Update bulk user Presences\nPutUsersPresencesBulkRequest.putUsersPresencesBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUsersPresencesBulkRequest.putUsersPresencesBulk was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteprocessautomationtrigger": {
     "operationId": "deleteprocessautomationtrigger",
@@ -34119,6 +34219,20 @@
     "return": "OutboundRouteBaseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet siteId: String = \"\" // Site ID\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet externalTrunkBasesIds: String = \"\" // externalTrunkBases.ids\nlet sortBy: String = \"\" // Sort by\n\n// Get outbound routes\nGetTelephonyProvidersEdgesSiteOutboundroutesRequest.getTelephonyProvidersEdgesSiteOutboundroutes(siteId: siteId, pageSize: pageSize, pageNumber: pageNumber, name: name, externalTrunkBasesIds: externalTrunkBasesIds, sortBy: sortBy) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesSiteOutboundroutesRequest.getTelephonyProvidersEdgesSiteOutboundroutes was successful\")\n        dump(response)\n    }\n}"
   },
+  "gettelephonyprovidersedgessitesiteconnections": {
+    "operationId": "gettelephonyprovidersedgessitesiteconnections",
+    "functionName": "getTelephonyProvidersEdgesSiteSiteconnections",
+    "signature": "getTelephonyProvidersEdgesSiteSiteconnections(siteId)",
+    "parameters": [
+      {
+        "name": "siteId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "SiteConnections",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet siteId: String = \"\" // Site ID\n\n// Get site connections for a site.\nGetTelephonyProvidersEdgesSiteSiteconnectionsRequest.getTelephonyProvidersEdgesSiteSiteconnections(siteId: siteId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesSiteSiteconnectionsRequest.getTelephonyProvidersEdgesSiteSiteconnections was successful\")\n        dump(response)\n    }\n}"
+  },
   "gettelephonyprovidersedgessites": {
     "operationId": "gettelephonyprovidersedgessites",
     "functionName": "getTelephonyProvidersEdgesSites",
@@ -34392,6 +34506,25 @@
     ],
     "return": "TrunkRecordingEnabledCount",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trunkType: GetTelephonyProvidersEdgesTrunkswithrecordingRequest.TrunkType_getTelephonyProvidersEdgesTrunkswithrecording = GetTelephonyProvidersEdgesTrunkswithrecordingRequest.TrunkType_getTelephonyProvidersEdgesTrunkswithrecording.enummember // The type of this trunk base.\n\n// Get Counts of trunks that have recording disabled or enabled\nGetTelephonyProvidersEdgesTrunkswithrecordingRequest.getTelephonyProvidersEdgesTrunkswithrecording(trunkType: trunkType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesTrunkswithrecordingRequest.getTelephonyProvidersEdgesTrunkswithrecording was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchtelephonyprovidersedgessitesiteconnections": {
+    "operationId": "patchtelephonyprovidersedgessitesiteconnections",
+    "functionName": "patchTelephonyProvidersEdgesSiteSiteconnections",
+    "signature": "patchTelephonyProvidersEdgesSiteSiteconnections(siteId, body)",
+    "parameters": [
+      {
+        "name": "siteId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DisableSiteConnectionsRequest",
+        "required": "true"
+      }
+    ],
+    "return": "SiteConnections",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet siteId: String = \"\" // Site ID\nlet body: DisableSiteConnectionsRequest = new DisableSiteConnectionsRequest(...) // Site\n\n// Disable site connections for a site.\nPatchTelephonyProvidersEdgesSiteSiteconnectionsRequest.patchTelephonyProvidersEdgesSiteSiteconnections(siteId: siteId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTelephonyProvidersEdgesSiteSiteconnectionsRequest.patchTelephonyProvidersEdgesSiteSiteconnections was successful\")\n        dump(response)\n    }\n}"
   },
   "posttelephonyprovidersedgediagnosticnslookup": {
     "operationId": "posttelephonyprovidersedgediagnosticnslookup",
@@ -35029,6 +35162,25 @@
     "return": "OutboundRouteBase",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet siteId: String = \"\" // Site ID\nlet outboundRouteId: String = \"\" // Outbound route ID\nlet body: OutboundRouteBase = new OutboundRouteBase(...) // OutboundRoute\n\n// Update outbound route\nPutTelephonyProvidersEdgesSiteOutboundrouteRequest.putTelephonyProvidersEdgesSiteOutboundroute(siteId: siteId, outboundRouteId: outboundRouteId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgesSiteOutboundrouteRequest.putTelephonyProvidersEdgesSiteOutboundroute was successful\")\n        dump(response)\n    }\n}"
   },
+  "puttelephonyprovidersedgessitesiteconnections": {
+    "operationId": "puttelephonyprovidersedgessitesiteconnections",
+    "functionName": "putTelephonyProvidersEdgesSiteSiteconnections",
+    "signature": "putTelephonyProvidersEdgesSiteSiteconnections(siteId, body)",
+    "parameters": [
+      {
+        "name": "siteId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "SiteConnections",
+        "required": "true"
+      }
+    ],
+    "return": "SiteConnections",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet siteId: String = \"\" // Site ID\nlet body: SiteConnections = new SiteConnections(...) // Site\n\n// Update site connections for a site.\nPutTelephonyProvidersEdgesSiteSiteconnectionsRequest.putTelephonyProvidersEdgesSiteSiteconnections(siteId: siteId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgesSiteSiteconnectionsRequest.putTelephonyProvidersEdgesSiteSiteconnections was successful\")\n        dump(response)\n    }\n}"
+  },
   "puttelephonyprovidersedgestrunkbasesetting": {
     "operationId": "puttelephonyprovidersedgestrunkbasesetting",
     "functionName": "putTelephonyProvidersEdgesTrunkbasesetting",
@@ -35445,6 +35597,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Clear default station\nDeleteUserStationDefaultstationRequest.deleteUserStationDefaultstation(userId: userId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteUserStationDefaultstationRequest.deleteUserStationDefaultstation was successful\")\n    }\n}"
   },
+  "deleteuserverifier": {
+    "operationId": "deleteuserverifier",
+    "functionName": "deleteUserVerifier",
+    "signature": "deleteUserVerifier(userId, verifierId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "verifierId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet verifierId: String = \"\" // Verifier ID\n\n// Delete a verifier\nDeleteUserVerifierRequest.deleteUserVerifier(userId: userId, verifierId: verifierId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteUserVerifierRequest.deleteUserVerifier was successful\")\n    }\n}"
+  },
   "getprofilesusers": {
     "operationId": "getprofilesusers",
     "functionName": "getProfilesUsers",
@@ -35741,6 +35911,20 @@
     "return": "TrustorEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// List the organizations that have authorized/trusted the user.\nGetUserTrustorsRequest.getUserTrustors(userId: userId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUserTrustorsRequest.getUserTrustors was successful\")\n        dump(response)\n    }\n}"
   },
+  "getuserverifiers": {
+    "operationId": "getuserverifiers",
+    "functionName": "getUserVerifiers",
+    "signature": "getUserVerifiers(userId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "VerifierEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Get a list of verifiers\nGetUserVerifiersRequest.getUserVerifiers(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUserVerifiersRequest.getUserVerifiers was successful\")\n        dump(response)\n    }\n}"
+  },
   "getusers": {
     "operationId": "getusers",
     "functionName": "getUsers",
@@ -36011,7 +36195,7 @@
       }
     ],
     "return": "UserEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [PatchUser] = [new PatchUser(...)] // Users\n\n// Update bulk acd autoanswer on users\nPatchUsersBulkRequest.patchUsersBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchUsersBulkRequest.patchUsersBulk was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [PatchUser] = [new PatchUser(...)] // Users\n\n// Update bulk acd autoanswer on users. Max 50 users can be updated at a time.\nPatchUsersBulkRequest.patchUsersBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchUsersBulkRequest.patchUsersBulk was successful\")\n        dump(response)\n    }\n}"
   },
   "postuserexternalid": {
     "operationId": "postuserexternalid",
@@ -36239,6 +36423,30 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet stationId: String = \"\" // stationId\n\n// Set default station\nPutUserStationDefaultstationStationIdRequest.putUserStationDefaultstationStationId(userId: userId, stationId: stationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PutUserStationDefaultstationStationIdRequest.putUserStationDefaultstationStationId was successful\")\n    }\n}"
+  },
+  "putuserverifier": {
+    "operationId": "putuserverifier",
+    "functionName": "putUserVerifier",
+    "signature": "putUserVerifier(userId, verifierId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "verifierId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateVerifierRequest",
+        "required": "true"
+      }
+    ],
+    "return": "Verifier",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet verifierId: String = \"\" // Verifier ID\nlet body: UpdateVerifierRequest = new UpdateVerifierRequest(...) // Verifier Update\n\n// Update a verifier\nPutUserVerifierRequest.putUserVerifier(userId: userId, verifierId: verifierId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUserVerifierRequest.putUserVerifier was successful\")\n        dump(response)\n    }\n}"
   },
   "getdate": {
     "operationId": "getdate",
@@ -37746,16 +37954,21 @@
   "getworkforcemanagementbusinessunitactivitycodes": {
     "operationId": "getworkforcemanagementbusinessunitactivitycodes",
     "functionName": "getWorkforcemanagementBusinessunitActivitycodes",
-    "signature": "getWorkforcemanagementBusinessunitActivitycodes(businessUnitId)",
+    "signature": "getWorkforcemanagementBusinessunitActivitycodes(businessUnitId, forceDownloadService)",
     "parameters": [
       {
         "name": "businessUnitId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "BusinessUnitActivityCodeListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\n\n// Get activity codes\nGetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\n\n// Get activity codes\nGetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId, forceDownloadService: forceDownloadService) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunitintradayplanninggroups": {
     "operationId": "getworkforcemanagementbusinessunitintradayplanninggroups",
@@ -38672,7 +38885,7 @@
   "getworkforcemanagementmanagementunitweekshifttrades": {
     "operationId": "getworkforcemanagementmanagementunitweekshifttrades",
     "functionName": "getWorkforcemanagementManagementunitWeekShifttrades",
-    "signature": "getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches)",
+    "signature": "getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, forceDownloadService)",
     "parameters": [
       {
         "name": "managementUnitId",
@@ -38688,10 +38901,15 @@
         "name": "evaluateMatches",
         "type": "Bool",
         "required": "false"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "WeekShiftTradeListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet evaluateMatches: Bool = true // Whether to evaluate the matches for violations\n\n// Gets all the shift trades for a given week\nGetWorkforcemanagementManagementunitWeekShifttradesRequest.getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementManagementunitWeekShifttradesRequest.getWorkforcemanagementManagementunitWeekShifttrades was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet evaluateMatches: Bool = true // Whether to evaluate the matches for violations\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\n\n// Gets all the shift trades for a given week\nGetWorkforcemanagementManagementunitWeekShifttradesRequest.getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, forceDownloadService: forceDownloadService) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementManagementunitWeekShifttradesRequest.getWorkforcemanagementManagementunitWeekShifttrades was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementmanagementunitworkplan": {
     "operationId": "getworkforcemanagementmanagementunitworkplan",
@@ -40220,12 +40438,17 @@
   "postworkforcemanagementmanagementunittimeoffrequestsquery": {
     "operationId": "postworkforcemanagementmanagementunittimeoffrequestsquery",
     "functionName": "postWorkforcemanagementManagementunitTimeoffrequestsQuery",
-    "signature": "postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, body)",
+    "signature": "postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, forceDownloadService, body)",
     "parameters": [
       {
         "name": "managementUnitId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "Bool",
+        "required": "false"
       },
       {
         "name": "body",
@@ -40234,7 +40457,7 @@
       }
     ],
     "return": "TimeOffRequestListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body\n\n// Fetches time off requests matching the conditions specified in the request body\nPostWorkforcemanagementManagementunitTimeoffrequestsQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementManagementunitTimeoffrequestsQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\nlet body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body\n\n// Fetches time off requests matching the conditions specified in the request body\nPostWorkforcemanagementManagementunitTimeoffrequestsQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementManagementunitTimeoffrequestsQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementmanagementunittimeoffrequestswaitlistpositionsquery": {
     "operationId": "postworkforcemanagementmanagementunittimeoffrequestswaitlistpositionsquery",
@@ -40383,7 +40606,7 @@
   "postworkforcemanagementmanagementunitweekshifttradessearch": {
     "operationId": "postworkforcemanagementmanagementunitweekshifttradessearch",
     "functionName": "postWorkforcemanagementManagementunitWeekShifttradesSearch",
-    "signature": "postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body)",
+    "signature": "postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body, forceDownloadService)",
     "parameters": [
       {
         "name": "managementUnitId",
@@ -40399,10 +40622,15 @@
         "name": "body",
         "type": "SearchShiftTradesRequest",
         "required": "true"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "SearchShiftTradesResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: SearchShiftTradesRequest = new SearchShiftTradesRequest(...) // body\n\n// Searches for potential shift trade matches for the current agent\nPostWorkforcemanagementManagementunitWeekShifttradesSearchRequest.postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementManagementunitWeekShifttradesSearchRequest.postWorkforcemanagementManagementunitWeekShifttradesSearch was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: SearchShiftTradesRequest = new SearchShiftTradesRequest(...) // body\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\n\n// Searches for potential shift trade matches for the current agent\nPostWorkforcemanagementManagementunitWeekShifttradesSearchRequest.postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, forceDownloadService: forceDownloadService) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementManagementunitWeekShifttradesSearchRequest.postWorkforcemanagementManagementunitWeekShifttradesSearch was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementmanagementunitweekshifttradesstatebulk": {
     "operationId": "postworkforcemanagementmanagementunitweekshifttradesstatebulk",

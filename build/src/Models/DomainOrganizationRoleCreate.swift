@@ -11,7 +11,7 @@ import Foundation
 
 public class DomainOrganizationRoleCreate: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** role id */
     public var _id: String?
     /** The role name */
     public var name: String?

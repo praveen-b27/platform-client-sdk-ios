@@ -28,6 +28,8 @@ public class TimeOffPlan: Codable {
     public var autoApprovalRule: AutoApprovalRule?
     /** The number of days before the time off request start date for when the request will be expired from the waitlist. */
     public var daysBeforeStartToExpireFromWaitlist: Int?
+    /** Time off type, if this time off plan is associated with the integration. */
+    public var hrisTimeOffType: HrisTimeOffType?
     /** Whether this time off plan is currently being used by agents. */
     public var active: Bool?
     /** Version metadata for the time off plan. */
@@ -35,13 +37,14 @@ public class TimeOffPlan: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, activityCodeIds: [String]?, timeOffLimits: [TimeOffLimitReference]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, active: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, name: String?, activityCodeIds: [String]?, timeOffLimits: [TimeOffLimitReference]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, hrisTimeOffType: HrisTimeOffType?, active: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.activityCodeIds = activityCodeIds
         self.timeOffLimits = timeOffLimits
         self.autoApprovalRule = autoApprovalRule
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
+        self.hrisTimeOffType = hrisTimeOffType
         self.active = active
         self.metadata = metadata
         self.selfUri = selfUri
@@ -54,6 +57,7 @@ public class TimeOffPlan: Codable {
         case timeOffLimits
         case autoApprovalRule
         case daysBeforeStartToExpireFromWaitlist
+        case hrisTimeOffType
         case active
         case metadata
         case selfUri

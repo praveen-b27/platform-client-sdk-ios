@@ -46,13 +46,14 @@ public class KnowledgeBase: Codable {
         case fiFi = "fi-FI"
         case nbNo = "nb-NO"
         case daDk = "da-DK"
+        case jaJp = "ja-JP"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
     /** Knowledge base description */
     public var _description: String?
-    /** Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy. */
+    /** Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP] which might have a lower accuracy. */
     public var coreLanguage: CoreLanguage?
     /** Knowledge base creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?

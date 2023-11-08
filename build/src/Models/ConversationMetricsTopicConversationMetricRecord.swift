@@ -54,6 +54,8 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case tmonitoring = "tMonitoring"
         case tmonitoringcomplete = "tMonitoringComplete"
         case tnotresponding = "tNotResponding"
+        case tpark = "tPark"
+        case tparkcomplete = "tParkComplete"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"
         case tuserresponsetime = "tUserResponseTime"

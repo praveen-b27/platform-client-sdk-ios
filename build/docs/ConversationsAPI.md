@@ -140,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsInstagramIntegrationId) | Update Instagram messaging integration |
 | [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
 | [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
+| [**patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId) | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration |
 | [**patchConversationsMessagingSetting**](ConversationsAPI.html#patchConversationsMessagingSetting) | Update a messaging setting |
 | [**patchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#patchConversationsMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
@@ -202,7 +203,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration |
 | [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
-| [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
+| [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
+| [**postConversationsMessagingIntegrationsWhatsappEmbeddedsignup**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsappEmbeddedsignup) | Create a WhatsApp Integration using the WhatsApp embedded signup flow |
 | [**postConversationsMessagingSettings**](ConversationsAPI.html#postConversationsMessagingSettings) | Create a messaging setting |
 | [**postConversationsMessagingSupportedcontent**](ConversationsAPI.html#postConversationsMessagingSupportedcontent) | Create a Supported Content profile |
 | [**postConversationsParticipantsAttributesSearch**](ConversationsAPI.html#postConversationsParticipantsAttributesSearch) | Search conversations |
@@ -7385,6 +7387,62 @@ ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId(int
 
 [**TwitterIntegration**](TwitterIntegration.html)
 
+<a name="patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId"></a>
+
+# **patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**
+
+
+
+> [WhatsAppIntegration](WhatsAppIntegration.html) patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId(integrationId, body)
+
+Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow
+
+Please specify the phone number to associate with this WhatsApp integration from the list of available phone numbers returned to you in the POST call to create the integration. You can then run a GET on the integration to check if its status has been updated to Active
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: WhatsAppEmbeddedSignupIntegrationActivationRequest = new WhatsAppEmbeddedSignupIntegrationActivationRequest(...) // WhatsAppEmbeddedSignupIntegrationActivationRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**WhatsAppEmbeddedSignupIntegrationActivationRequest**](WhatsAppEmbeddedSignupIntegrationActivationRequest.html)| WhatsAppEmbeddedSignupIntegrationActivationRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
+
 <a name="patchConversationsMessagingIntegrationsWhatsappIntegrationId"></a>
 
 # **patchConversationsMessagingIntegrationsWhatsappIntegrationId**
@@ -10762,9 +10820,9 @@ ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body) { (re
 
 > [WhatsAppIntegration](WhatsAppIntegration.html) postConversationsMessagingIntegrationsWhatsapp(body)
 
-Create a WhatsApp Integration
+[This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 
-You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+[This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 
 
 
@@ -10801,6 +10859,60 @@ ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp(body: body) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest.html)| WhatsAppIntegrationRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
+
+<a name="postConversationsMessagingIntegrationsWhatsappEmbeddedsignup"></a>
+
+# **postConversationsMessagingIntegrationsWhatsappEmbeddedsignup**
+
+
+
+> [WhatsAppIntegration](WhatsAppIntegration.html) postConversationsMessagingIntegrationsWhatsappEmbeddedsignup(body)
+
+Create a WhatsApp Integration using the WhatsApp embedded signup flow
+
+Use the access token returned from the embedded signup flow to obtain a list of available phone numbers that can be associated with the created integration. The returned WhatsApp integration will initially have a createStatus of Initiated until the list of available phone numbers can be obtained from the provider. Please run a GET on the created integration until it returns a createStatus of Completed, and the list of available phone numbers obtained from the provider. You can then specify one of the available phone numbers in the PATCH call on the integration to activate it.
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup  
+
+Requires ALL permissions: 
+
+* messaging:whatsappIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: WhatsAppEmbeddedSignupIntegrationRequest = new WhatsAppEmbeddedSignupIntegrationRequest(...) // WhatsAppEmbeddedSignupIntegrationRequest
+
+// Code example
+ConversationsAPI.postConversationsMessagingIntegrationsWhatsappEmbeddedsignup(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagingIntegrationsWhatsappEmbeddedsignup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**WhatsAppEmbeddedSignupIntegrationRequest**](WhatsAppEmbeddedSignupIntegrationRequest.html)| WhatsAppEmbeddedSignupIntegrationRequest | |
 {: class="table-striped"}
 
 

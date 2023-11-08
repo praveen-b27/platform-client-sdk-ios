@@ -2188,8 +2188,8 @@ open class PresenceAPI {
     "primary" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4199,7 +4199,7 @@ open class PresenceAPI {
      - parameter body: (body) List of User presences 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putUsersPresencesBulk(body: [UserPresence], completion: @escaping ((_ data: [UserPresence]?,_ error: Error?) -> Void)) {
+    open class func putUsersPresencesBulk(body: [MutableUserPresence], completion: @escaping ((_ data: [UserPresence]?,_ error: Error?) -> Void)) {
         let requestBuilder = putUsersPresencesBulkWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<[UserPresence]>?, error) -> Void in
             do {
@@ -4242,7 +4242,7 @@ open class PresenceAPI {
 
      - returns: RequestBuilder<[UserPresence]> 
      */
-    open class func putUsersPresencesBulkWithRequestBuilder(body: [UserPresence]) -> RequestBuilder<[UserPresence]> {        
+    open class func putUsersPresencesBulkWithRequestBuilder(body: [MutableUserPresence]) -> RequestBuilder<[UserPresence]> {        
         let path = "/api/v2/users/presences/bulk"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

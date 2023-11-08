@@ -15,6 +15,7 @@ public class Dependency: Codable {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
         case botconnectorbot = "BOTCONNECTORBOT"
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"

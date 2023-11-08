@@ -21,18 +21,18 @@ public class V2MobiusAlertsTopicAlertSummaryEntity: Codable {
         case teamMembers = "TeamMembers"
     }
     public var entityType: EntityType?
-    public var userDisplayName: String?
-    public var groupDisplayName: String?
-    public var queueDisplayName: String?
-    public var teamDisplayName: String?
+    public var user: V2MobiusAlertsTopicAddressableEntityRef?
+    public var group: V2MobiusAlertsTopicAddressableEntityRef?
+    public var queue: V2MobiusAlertsTopicAddressableEntityRef?
+    public var team: V2MobiusAlertsTopicAddressableEntityRef?
     public var alerting: Bool?
 
-    public init(entityType: EntityType?, userDisplayName: String?, groupDisplayName: String?, queueDisplayName: String?, teamDisplayName: String?, alerting: Bool?) {
+    public init(entityType: EntityType?, user: V2MobiusAlertsTopicAddressableEntityRef?, group: V2MobiusAlertsTopicAddressableEntityRef?, queue: V2MobiusAlertsTopicAddressableEntityRef?, team: V2MobiusAlertsTopicAddressableEntityRef?, alerting: Bool?) {
         self.entityType = entityType
-        self.userDisplayName = userDisplayName
-        self.groupDisplayName = groupDisplayName
-        self.queueDisplayName = queueDisplayName
-        self.teamDisplayName = teamDisplayName
+        self.user = user
+        self.group = group
+        self.queue = queue
+        self.team = team
         self.alerting = alerting
     }
 

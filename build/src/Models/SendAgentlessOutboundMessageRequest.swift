@@ -18,7 +18,7 @@ public class SendAgentlessOutboundMessageRequest: Codable {
     }
     /** The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID */
     public var fromAddress: String?
-    /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. */
+    /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. For WhatsApp messenger type, use a WhatsApp ID of a phone number. E.g for a E.164 formatted phone number `+13175555555`, a WhatsApp ID would be 13175555555 */
     public var toAddress: String?
     /** The recipient messaging address messenger type. */
     public var toAddressMessengerType: ToAddressMessengerType?

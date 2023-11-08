@@ -509,7 +509,7 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 {: class="table-striped"}
 
 
@@ -565,7 +565,7 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocument(documentId: documentId
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 {: class="table-striped"}
 
 
@@ -619,7 +619,7 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **importId** | **String**| Import ID | |
 {: class="table-striped"}
 
@@ -1882,7 +1882,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowle
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
@@ -1943,7 +1943,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId, k
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 {: class="table-striped"}
 
 
@@ -1999,7 +1999,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, k
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 {: class="table-striped"}
 
 
@@ -2062,7 +2062,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowled
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
@@ -2126,7 +2126,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: k
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **importId** | **String**| Import ID | |
 {: class="table-striped"}
 
@@ -2182,7 +2182,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTraining(knowledgeBaseId: knowledg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **trainingId** | **String**| Training ID | |
 {: class="table-striped"}
 
@@ -2242,7 +2242,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
@@ -2492,7 +2492,7 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | **limit** | **String**| Number of entities to return. Maximum of 100. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
 | **name** | **String**| Filter by Name. | [optional] |
-| **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **published** | **Bool**| Filter by published status. | [optional] |
 | **sortBy** | **String**| Sort by. | [optional]<br />**Values**: name ("Name"), date ("Date") |
 | **sortOrder** | **String**| Sort Order. | [optional]<br />**Values**: asc ("ASC"), ascending ("ascending"), desc ("DESC"), descending ("descending") |
@@ -2997,7 +2997,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId,
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  | |
 {: class="table-striped"}
 
@@ -3055,7 +3055,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocument(documentId: documentId,
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  | |
 {: class="table-striped"}
 
@@ -3111,7 +3111,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowl
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **body** | [**[KnowledgeDocumentBulkRequest]**](KnowledgeDocumentBulkRequest.html)|  | |
 {: class="table-striped"}
 
@@ -3169,7 +3169,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **importId** | **String**| Import ID | |
 | **body** | [**ImportStatusRequest**](ImportStatusRequest.html)|  | |
 {: class="table-striped"}
@@ -4155,7 +4155,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowl
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  | |
 {: class="table-striped"}
 
@@ -4211,7 +4211,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowle
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  | |
 {: class="table-striped"}
 
@@ -4267,7 +4267,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **body** | [**KnowledgeImport**](KnowledgeImport.html)|  | |
 {: class="table-striped"}
 
@@ -4323,7 +4323,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageTrainingPromote(knowledgeBaseId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 | **trainingId** | **String**| Training ID | |
 {: class="table-striped"}
 
@@ -4378,7 +4378,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowle
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP") |
 {: class="table-striped"}
 
 

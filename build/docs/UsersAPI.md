@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserRoutingskill**](UsersAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
 | [**deleteUserStationAssociatedstation**](UsersAPI.html#deleteUserStationAssociatedstation) | Clear associated station |
 | [**deleteUserStationDefaultstation**](UsersAPI.html#deleteUserStationDefaultstation) | Clear default station |
+| [**deleteUserVerifier**](UsersAPI.html#deleteUserVerifier) | Delete a verifier |
 | [**getAnalyticsUsersDetailsJob**](UsersAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](UsersAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](UsersAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
@@ -45,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserStation**](UsersAPI.html#getUserStation) | Get station information for user |
 | [**getUserSuperiors**](UsersAPI.html#getUserSuperiors) | Get superiors |
 | [**getUserTrustors**](UsersAPI.html#getUserTrustors) | List the organizations that have authorized/trusted the user. |
+| [**getUserVerifiers**](UsersAPI.html#getUserVerifiers) | Get a list of verifiers |
 | [**getUsers**](UsersAPI.html#getUsers) | Get the list of available users. |
 | [**getUsersDevelopmentActivities**](UsersAPI.html#getUsersDevelopmentActivities) | Get list of Development Activities |
 | [**getUsersDevelopmentActivitiesMe**](UsersAPI.html#getUsersDevelopmentActivitiesMe) | Get list of Development Activities for current user |
@@ -59,7 +61,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutinglanguage**](UsersAPI.html#patchUserRoutinglanguage) | Update routing language proficiency or state. |
 | [**patchUserRoutinglanguagesBulk**](UsersAPI.html#patchUserRoutinglanguagesBulk) | Add bulk routing language to user. Max limit 50 languages |
 | [**patchUserRoutingskillsBulk**](UsersAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
-| [**patchUsersBulk**](UsersAPI.html#patchUsersBulk) | Update bulk acd autoanswer on users |
+| [**patchUsersBulk**](UsersAPI.html#patchUsersBulk) | Update bulk acd autoanswer on users. Max 50 users can be updated at a time. |
 | [**postAnalyticsUsersAggregatesQuery**](UsersAPI.html#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
 | [**postAnalyticsUsersDetailsJobs**](UsersAPI.html#postAnalyticsUsersDetailsJobs) | Query for user details asynchronously |
 | [**postAnalyticsUsersDetailsQuery**](UsersAPI.html#postAnalyticsUsersDetailsQuery) | Query for user details |
@@ -89,6 +91,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserState**](UsersAPI.html#putUserState) | Update user state information. |
 | [**putUserStationAssociatedstationStationId**](UsersAPI.html#putUserStationAssociatedstationStationId) | Set associated station |
 | [**putUserStationDefaultstationStationId**](UsersAPI.html#putUserStationDefaultstationStationId) | Set default station |
+| [**putUserVerifier**](UsersAPI.html#putUserVerifier) | Update a verifier |
 {: class="table-striped"}
 
 <a name="deleteAnalyticsUsersDetailsJob"></a>
@@ -503,6 +506,59 @@ UsersAPI.deleteUserStationDefaultstation(userId: userId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteUserVerifier"></a>
+
+# **deleteUserVerifier**
+
+
+
+> Void deleteUserVerifier(userId, verifierId)
+
+Delete a verifier
+
+
+
+Wraps DELETE /api/v2/users/{userId}/verifiers/{verifierId}  
+
+Requires ANY permissions: 
+
+* mfa:verifier:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let verifierId: String = "" // Verifier ID
+
+// Code example
+UsersAPI.deleteUserVerifier(userId: userId, verifierId: verifierId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteUserVerifier was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **verifierId** | **String**| Verifier ID | |
 {: class="table-striped"}
 
 
@@ -2138,6 +2194,58 @@ UsersAPI.getUserTrustors(userId: userId, pageSize: pageSize, pageNumber: pageNum
 
 [**TrustorEntityListing**](TrustorEntityListing.html)
 
+<a name="getUserVerifiers"></a>
+
+# **getUserVerifiers**
+
+
+
+> [VerifierEntityListing](VerifierEntityListing.html) getUserVerifiers(userId)
+
+Get a list of verifiers
+
+
+
+Wraps GET /api/v2/users/{userId}/verifiers  
+
+Requires ANY permissions: 
+
+* mfa:verifier:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+UsersAPI.getUserVerifiers(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUserVerifiers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**VerifierEntityListing**](VerifierEntityListing.html)
+
 <a name="getUsers"></a>
 
 # **getUsers**
@@ -2975,7 +3083,7 @@ UsersAPI.patchUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 
 > [UserEntityListing](UserEntityListing.html) patchUsersBulk(body)
 
-Update bulk acd autoanswer on users
+Update bulk acd autoanswer on users. Max 50 users can be updated at a time.
 
 
 
@@ -4577,4 +4685,60 @@ UsersAPI.putUserStationDefaultstationStationId(userId: userId, stationId: statio
 ### Return type
 
 `nil` (empty response body)
+
+<a name="putUserVerifier"></a>
+
+# **putUserVerifier**
+
+
+
+> [Verifier](Verifier.html) putUserVerifier(userId, verifierId, body)
+
+Update a verifier
+
+
+
+Wraps PUT /api/v2/users/{userId}/verifiers/{verifierId}  
+
+Requires ANY permissions: 
+
+* mfa:verifier:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let verifierId: String = "" // Verifier ID
+let body: UpdateVerifierRequest = new UpdateVerifierRequest(...) // Verifier Update
+
+// Code example
+UsersAPI.putUserVerifier(userId: userId, verifierId: verifierId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putUserVerifier was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **verifierId** | **String**| Verifier ID | |
+| **body** | [**UpdateVerifierRequest**](UpdateVerifierRequest.html)| Verifier Update | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Verifier**](Verifier.html)
 

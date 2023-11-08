@@ -24,7 +24,7 @@ public class Recipient: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number. */
+    /** An automate flow object which defines the set of actions to be taken, when a message is received by this recipient. */
     public var flow: Flow?
     /** Date this recipient was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?

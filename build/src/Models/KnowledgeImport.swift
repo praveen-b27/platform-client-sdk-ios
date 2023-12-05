@@ -64,6 +64,7 @@ public class KnowledgeImport: Codable {
         case nbNo = "nb-NO"
         case daDk = "da-DK"
         case jaJp = "ja-JP"
+        case arAe = "ar-AE"
     }
     /** Id of the import operation */
     public var _id: String?

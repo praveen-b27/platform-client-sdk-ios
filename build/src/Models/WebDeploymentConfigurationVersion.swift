@@ -39,7 +39,7 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var messenger: MessengerSettings?
     /** The settings for position */
     public var position: PositionSettings?
-    /** The settings for support center */
+    /** The settings for knowledge portal (previously support center) */
     public var supportCenter: SupportCenterSettings?
     /** The settings for cobrowse */
     public var cobrowse: CobrowseSettings?

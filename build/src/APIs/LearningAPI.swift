@@ -144,6 +144,7 @@ open class LearningAPI {
   "isRule" : true,
   "assessment" : "{}",
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
   "isLatest" : true,
@@ -279,6 +280,7 @@ open class LearningAPI {
     "isRule" : true,
     "assessment" : "{}",
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 1,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
     "isLatest" : true,
@@ -299,6 +301,7 @@ open class LearningAPI {
     "isRule" : true,
     "assessment" : "{}",
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 1,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
     "isLatest" : true,
@@ -310,8 +313,8 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -462,6 +465,7 @@ open class LearningAPI {
     "isRule" : true,
     "assessment" : "{}",
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 1,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
     "isLatest" : true,
@@ -482,6 +486,7 @@ open class LearningAPI {
     "isRule" : true,
     "assessment" : "{}",
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 1,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
     "isLatest" : true,
@@ -493,8 +498,8 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -614,6 +619,8 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 5,
+  "excludedFromCatalog" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "name" : "name",
@@ -844,6 +851,8 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 5,
+  "excludedFromCatalog" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "name" : "name",
@@ -909,6 +918,7 @@ open class LearningAPI {
 
     
     
+    
     /**
      Get all learning modules of an organization
      
@@ -922,10 +932,11 @@ open class LearningAPI {
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
      - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional)
      - parameter statuses: (query) Specifies the module statuses to filter by (optional)
+     - parameter externalIds: (query) Specifies the module external IDs to filter by. Only one ID is allowed (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses)
+    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds)
         requestBuilder.execute { (response: Response<LearningModulesDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -988,6 +999,8 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 5,
+    "excludedFromCatalog" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "name" : "name",
@@ -1029,6 +1042,8 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 5,
+    "excludedFromCatalog" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "name" : "name",
@@ -1036,8 +1051,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1053,10 +1068,11 @@ open class LearningAPI {
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
      - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional)
      - parameter statuses: (query) Specifies the module statuses to filter by (optional)
+     - parameter externalIds: (query) Specifies the module external IDs to filter by. Only one ID is allowed (optional)
 
      - returns: RequestBuilder<LearningModulesDomainEntityListing> 
      */
-    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {        
+    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {        
         let path = "/api/v2/learning/modules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1072,7 +1088,8 @@ open class LearningAPI {
             "searchTerm": searchTerm, 
             "expand": expand, 
             "isPublished": isPublished?.rawValue, 
-            "statuses": statuses
+            "statuses": statuses, 
+            "externalIds": externalIds
         ])
 
         let requestBuilder: RequestBuilder<LearningModulesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1131,22 +1148,26 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
-  "pageCount" : 2,
+  "total" : 2,
+  "pageCount" : 7,
   "pageNumber" : 5,
   "entities" : [ {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
+    "rule" : "{}",
+    "description" : "description",
+    "source" : "UserCreated",
+    "type" : "Informational",
+    "excludedFromCatalog" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
     "isPublished" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
-    "rule" : "{}",
-    "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "source" : "UserCreated",
     "coverArt" : "{}",
-    "type" : "Informational",
     "version" : 0,
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
@@ -1170,11 +1191,9 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 1,
     "createdBy" : "{}",
     "name" : "name",
-    "modifiedBy" : "{}",
-    "id" : "id",
     "currentAssignments" : [ {
       "isPassed" : true,
       "isManual" : true,
@@ -1186,6 +1205,7 @@ open class LearningAPI {
       "isRule" : true,
       "assessment" : "{}",
       "assessmentForm" : "{}",
+      "lengthInMinutes" : 1,
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
       "isLatest" : true,
@@ -1206,6 +1226,7 @@ open class LearningAPI {
       "isRule" : true,
       "assessment" : "{}",
       "assessmentForm" : "{}",
+      "lengthInMinutes" : 1,
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
       "isLatest" : true,
@@ -1220,15 +1241,19 @@ open class LearningAPI {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
+    "rule" : "{}",
+    "description" : "description",
+    "source" : "UserCreated",
+    "type" : "Informational",
+    "excludedFromCatalog" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
     "isPublished" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
-    "rule" : "{}",
-    "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "source" : "UserCreated",
     "coverArt" : "{}",
-    "type" : "Informational",
     "version" : 0,
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
@@ -1252,11 +1277,9 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 1,
     "createdBy" : "{}",
     "name" : "name",
-    "modifiedBy" : "{}",
-    "id" : "id",
     "currentAssignments" : [ {
       "isPassed" : true,
       "isManual" : true,
@@ -1268,6 +1291,7 @@ open class LearningAPI {
       "isRule" : true,
       "assessment" : "{}",
       "assessmentForm" : "{}",
+      "lengthInMinutes" : 1,
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
       "isLatest" : true,
@@ -1288,6 +1312,7 @@ open class LearningAPI {
       "isRule" : true,
       "assessment" : "{}",
       "assessmentForm" : "{}",
+      "lengthInMinutes" : 1,
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
       "isLatest" : true,
@@ -1300,9 +1325,9 @@ open class LearningAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
-  "pageSize" : 1,
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1445,6 +1470,7 @@ open class LearningAPI {
   "isRule" : true,
   "assessment" : "{}",
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
   "isLatest" : true,
@@ -1520,6 +1546,7 @@ open class LearningAPI {
   "isRule" : true,
   "assessment" : "{}",
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
   "isLatest" : true,
@@ -1716,6 +1743,7 @@ open class LearningAPI {
   "isRule" : true,
   "assessment" : "{}",
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
   "isLatest" : true,
@@ -1789,6 +1817,7 @@ open class LearningAPI {
   "isRule" : true,
   "assessment" : "{}",
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
   "isLatest" : true,
@@ -1861,6 +1890,7 @@ open class LearningAPI {
   "isRule" : true,
   "assessment" : "{}",
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
   "isLatest" : true,
@@ -2028,6 +2058,7 @@ open class LearningAPI {
     "isRule" : true,
     "assessment" : "{}",
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 1,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
     "isLatest" : true,
@@ -2048,6 +2079,7 @@ open class LearningAPI {
     "isRule" : true,
     "assessment" : "{}",
     "assessmentForm" : "{}",
+    "lengthInMinutes" : 1,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
     "isLatest" : true,
@@ -2332,6 +2364,8 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 5,
+  "excludedFromCatalog" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "name" : "name",
@@ -2405,8 +2439,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -2639,6 +2673,8 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
+  "lengthInMinutes" : 5,
+  "excludedFromCatalog" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "name" : "name",

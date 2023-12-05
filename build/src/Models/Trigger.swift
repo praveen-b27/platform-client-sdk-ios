@@ -28,7 +28,7 @@ public class Trigger: Codable {
     public var matchCriteria: [MatchCriteria]?
     /** Optional length of time that events are meaningful after origination. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely, otherwise must be set to at least 10 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. */
     public var eventTTLSeconds: Int?
-    /** Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. Until delayed triggers are released supplying this attribute will cause a failure. */
+    /** Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. */
     public var delayBySeconds: Int?
     /** Description of the trigger. Can be up to 512 characters in length. */
     public var _description: String?

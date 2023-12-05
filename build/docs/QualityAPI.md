@@ -333,7 +333,7 @@ QualityAPI.deleteQualityFormsSurvey(formId: formId) { (error) in
 
 
 
-> [AgentActivityEntityListing](AgentActivityEntityListing.html) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, formContextId)
+> [AgentActivityEntityListing](AgentActivityEntityListing.html) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId)
 
 Gets a list of Agent Activities
 
@@ -367,10 +367,11 @@ let agentUserId: [String] = [""] // user id of agent requested
 let evaluatorUserId: String = "" // user id of the evaluator
 let name: String = "" // name
 let group: String = "" // group id
+let agentTeamId: String = "" // team id of agents requested
 let formContextId: String = "" // shared id between form versions
 
 // Code example
-QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, formContextId: formContextId) { (response, error) in
+QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, agentTeamId: agentTeamId, formContextId: formContextId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -397,6 +398,7 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 | **evaluatorUserId** | **String**| user id of the evaluator | [optional] |
 | **name** | **String**| name | [optional] |
 | **group** | **String**| group id | [optional] |
+| **agentTeamId** | **String**| team id of agents requested | [optional] |
 | **formContextId** | **String**| shared id between form versions | [optional] |
 {: class="table-striped"}
 
@@ -757,7 +759,7 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 
 
 
-> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
+> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
 
 Queries Evaluations and returns a paged list
 
@@ -787,6 +789,7 @@ let nextPage: String = "" // NOTE: Does not work when querying evaluations
 let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversationId specified
 let agentUserId: String = "" // user id of the agent
+let agentTeamId: String = "" // team id of the agent
 let evaluatorUserId: String = "" // evaluator user id
 let assigneeUserId: String = "" // assignee user id
 let queueId: String = "" // queue id
@@ -801,7 +804,7 @@ let maximum: Int = 0 // the maximum number of results to return
 let sortOrder: String = "" // NOTE: Does not work when conversationId is supplied.
 
 // Code example
-QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
+QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -824,6 +827,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversationId specified | [optional] |
 | **agentUserId** | **String**| user id of the agent | [optional] |
+| **agentTeamId** | **String**| team id of the agent | [optional] |
 | **evaluatorUserId** | **String**| evaluator user id | [optional] |
 | **assigneeUserId** | **String**| assignee user id | [optional] |
 | **queueId** | **String**| queue id | [optional] |
@@ -849,7 +853,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 
 
 
-> [EvaluatorActivityEntityListing](EvaluatorActivityEntityListing.html) getQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group)
+> [EvaluatorActivityEntityListing](EvaluatorActivityEntityListing.html) getQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group, agentTeamId)
 
 Get an evaluator activity
 
@@ -880,9 +884,10 @@ let endTime: Date = new Date(...) // The end time specified. Date time is repres
 let name: String = "" // Evaluator name
 let permission: [String] = [""] // permission strings
 let group: String = "" // group id
+let agentTeamId: String = "" // team id of agents to be considered
 
 // Code example
-QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, name: name, permission: permission, group: group) { (response, error) in
+QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, name: name, permission: permission, group: group, agentTeamId: agentTeamId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -908,6 +913,7 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 | **name** | **String**| Evaluator name | [optional] |
 | **permission** | [**[String]**](String.html)| permission strings | [optional] |
 | **group** | **String**| group id | [optional] |
+| **agentTeamId** | **String**| team id of agents to be considered | [optional] |
 {: class="table-striped"}
 
 

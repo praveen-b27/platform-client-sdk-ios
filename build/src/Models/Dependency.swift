@@ -73,6 +73,7 @@ public class Dependency: Codable {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
         case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"

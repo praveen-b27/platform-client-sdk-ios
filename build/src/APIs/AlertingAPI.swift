@@ -75,6 +75,7 @@ open class AlertingAPI {
     /**
      Delete an interaction stats alert
      - DELETE /api/v2/alerting/interactionstats/alerts/{alertId}
+     - Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -100,7 +101,7 @@ open class AlertingAPI {
 
     
     /**
-     Delete an interaction stats rule.
+     Delete an interaction stats rule
      
      - parameter ruleId: (path) Rule ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -117,8 +118,9 @@ open class AlertingAPI {
     }
 
     /**
-     Delete an interaction stats rule.
+     Delete an interaction stats rule
      - DELETE /api/v2/alerting/interactionstats/rules/{ruleId}
+     - Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -267,7 +269,7 @@ open class AlertingAPI {
     }
 
     /**
-     Gets active alert count for a user.
+     Gets active alert count for a user
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -290,8 +292,9 @@ open class AlertingAPI {
     }
 
     /**
-     Gets active alert count for a user.
+     Gets active alert count for a user
      - GET /api/v2/alerting/alerts/active
+     - Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -343,6 +346,7 @@ open class AlertingAPI {
     /**
      Get an interaction stats alert
      - GET /api/v2/alerting/interactionstats/alerts/{alertId}
+     - Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -961,7 +965,7 @@ open class AlertingAPI {
 
     
     /**
-     Get interaction stats alert list.
+     Get interaction stats alert list
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -985,8 +989,9 @@ open class AlertingAPI {
     }
 
     /**
-     Get interaction stats alert list.
+     Get interaction stats alert list
      - GET /api/v2/alerting/interactionstats/alerts
+     - Apps should migrate to use POST /api/v2/alerting/alerts/query.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2172,8 +2177,8 @@ open class AlertingAPI {
     "ruleUri" : "https://openapi-generator.tech"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2199,7 +2204,7 @@ open class AlertingAPI {
     }
 
     /**
-     Gets user unread count of interaction stats alerts.
+     Gets user unread count of interaction stats alerts
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2222,8 +2227,9 @@ open class AlertingAPI {
     }
 
     /**
-     Gets user unread count of interaction stats alerts.
+     Gets user unread count of interaction stats alerts
      - GET /api/v2/alerting/interactionstats/alerts/unread
+     - Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2248,7 +2254,7 @@ open class AlertingAPI {
     
     
     /**
-     Get an interaction stats rule.
+     Get an interaction stats rule
      
      - parameter ruleId: (path) Rule ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -2273,8 +2279,9 @@ open class AlertingAPI {
     }
 
     /**
-     Get an interaction stats rule.
+     Get an interaction stats rule
      - GET /api/v2/alerting/interactionstats/rules/{ruleId}
+     - Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2890,7 +2897,7 @@ open class AlertingAPI {
 
     
     /**
-     Get an interaction stats rule list.
+     Get an interaction stats rule list
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -2914,8 +2921,9 @@ open class AlertingAPI {
     }
 
     /**
-     Get an interaction stats rule list.
+     Get an interaction stats rule list
      - GET /api/v2/alerting/interactionstats/rules
+     - Apps should migrate to use POST /api/v2/alerting/rules/query.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -4095,8 +4103,8 @@ open class AlertingAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4492,8 +4500,8 @@ open class AlertingAPI {
     "ruleUri" : "https://openapi-generator.tech"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4518,7 +4526,7 @@ open class AlertingAPI {
     
     
     /**
-     Create an interaction stats rule.
+     Create an interaction stats rule
      
      - parameter body: (body) AlertingRule 
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -4543,8 +4551,9 @@ open class AlertingAPI {
     }
 
     /**
-     Create an interaction stats rule.
+     Create an interaction stats rule
      - POST /api/v2/alerting/interactionstats/rules
+     - Apps should migrate to use POST /api/v2/alerting/rules.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5372,8 +5381,8 @@ open class AlertingAPI {
     "sendExitingAlarmNotifications" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5484,6 +5493,7 @@ open class AlertingAPI {
     /**
      Update an interaction stats alert read status
      - PUT /api/v2/alerting/interactionstats/alerts/{alertId}
+     - Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5547,6 +5557,7 @@ open class AlertingAPI {
     /**
      Update an interaction stats rule
      - PUT /api/v2/alerting/interactionstats/rules/{ruleId}
+     - Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

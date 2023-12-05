@@ -34,10 +34,12 @@ public class Survey: Codable {
     public var completedDate: Date?
     /** Additional information about what happened when the survey is in Error status. */
     public var surveyErrorDetails: SurveyErrorDetails?
+    /** The team that the agent belongs to */
+    public var agentTeam: Team?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, agentTeam: Team?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -48,6 +50,7 @@ public class Survey: Codable {
         self.answers = answers
         self.completedDate = completedDate
         self.surveyErrorDetails = surveyErrorDetails
+        self.agentTeam = agentTeam
         self.selfUri = selfUri
     }
 
@@ -62,6 +65,7 @@ public class Survey: Codable {
         case answers
         case completedDate
         case surveyErrorDetails
+        case agentTeam
         case selfUri
     }
 

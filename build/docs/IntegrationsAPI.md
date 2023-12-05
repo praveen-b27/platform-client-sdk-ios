@@ -56,7 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntegrationsActionDraftTest**](IntegrationsAPI.html#postIntegrationsActionDraftTest) | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. |
 | [**postIntegrationsActionExecute**](IntegrationsAPI.html#postIntegrationsActionExecute) | Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. |
 | [**postIntegrationsActionTest**](IntegrationsAPI.html#postIntegrationsActionTest) | Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. |
-| [**postIntegrationsActions**](IntegrationsAPI.html#postIntegrationsActions) | Create a new Action |
+| [**postIntegrationsActions**](IntegrationsAPI.html#postIntegrationsActions) | Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. |
 | [**postIntegrationsActionsDrafts**](IntegrationsAPI.html#postIntegrationsActionsDrafts) | Create a new Draft |
 | [**postIntegrationsCredentials**](IntegrationsAPI.html#postIntegrationsCredentials) | Create a set of credentials |
 | [**putIntegrationConfigCurrent**](IntegrationsAPI.html#putIntegrationConfigCurrent) | Update integration configuration. |
@@ -2826,7 +2826,7 @@ IntegrationsAPI.postIntegrationsActionTest(actionId: actionId, body: body) { (re
 
 > [Action](Action.html) postIntegrationsActions(body)
 
-Create a new Action
+Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
 
 
 

@@ -784,8 +784,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -877,8 +877,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1354,8 +1354,8 @@ open class UsersAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4910,8 +4910,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5612,6 +5612,7 @@ open class UsersAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5755,6 +5756,7 @@ open class UsersAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5897,8 +5899,8 @@ open class UsersAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6113,8 +6115,8 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6210,8 +6212,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7003,8 +7005,8 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7745,8 +7747,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7913,8 +7915,8 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8087,8 +8089,8 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11020,6 +11022,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -11453,6 +11456,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -11901,6 +11905,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -12334,6 +12339,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -12795,6 +12801,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -13228,6 +13235,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -13676,6 +13684,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -14109,6 +14118,7 @@ open class UsersAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -16973,6 +16983,7 @@ open class UsersAPI {
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
   "conditionalGroupRouting" : "{}",
+  "enableAudioMonitoring" : true,
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
   "description" : "description",
@@ -17181,6 +17192,7 @@ open class UsersAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -17324,6 +17336,7 @@ open class UsersAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -17466,8 +17479,8 @@ open class UsersAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17618,8 +17631,8 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17698,8 +17711,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -18332,8 +18345,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22548,8 +22561,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

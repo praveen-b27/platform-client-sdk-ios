@@ -318,10 +318,12 @@ docs/BotAggregateQueryPredicate.md
 docs/BotAggregateQueryResponse.md
 docs/BotAggregationQuery.md
 docs/BotAggregationView.md
+docs/BotChannel.md
 docs/BotConnectorBot.md
 docs/BotConnectorBotSummaryEntityListing.md
 docs/BotConnectorBotVersion.md
 docs/BotConnectorBotVersionSummaryEntityListing.md
+docs/BotFlowSession.md
 docs/BotIntent.md
 docs/BotList.md
 docs/BotMessengerProfile.md
@@ -2316,6 +2318,7 @@ docs/OrganizationAuthorizationAPI.md
 docs/OrganizationFeatures.md
 docs/OrganizationPresence.md
 docs/OrganizationPresenceDefinition.md
+docs/OrganizationPresenceDefinitionEntityListing.md
 docs/OrganizationPresenceEntityListing.md
 docs/OrganizationProductEntityListing.md
 docs/OrganizationRoleEntityListing.md
@@ -3032,6 +3035,7 @@ docs/SessionEndDetails.md
 docs/SessionLastEvent.md
 docs/SessionListing.md
 docs/SessionSegmentAssignment.md
+docs/SessionsResponse.md
 docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
 docs/SetSmsPhoneNumberActionSettings.md
@@ -4082,6 +4086,7 @@ docs/deleteOutboundSchedulesEmailcampaign-example.txt
 docs/deleteOutboundSchedulesMessagingcampaign-example.txt
 docs/deleteOutboundSchedulesSequence-example.txt
 docs/deleteOutboundSequence-example.txt
+docs/deletePresenceDefinition0-example.txt
 docs/deletePresenceSource-example.txt
 docs/deletePresencedefinition-example.txt
 docs/deleteProcessautomationTrigger-example.txt
@@ -4182,6 +4187,7 @@ docs/getAlertingInteractionstatsRule-example.txt
 docs/getAlertingInteractionstatsRules-example.txt
 docs/getAlertingRule-example.txt
 docs/getAnalyticsBotflowReportingturns-example.txt
+docs/getAnalyticsBotflowSessions-example.txt
 docs/getAnalyticsConversationDetails-example.txt
 docs/getAnalyticsConversationDetails-example.txt
 docs/getAnalyticsConversationsDetails-example.txt
@@ -4781,6 +4787,8 @@ docs/getOutboundSequence-example.txt
 docs/getOutboundSequences-example.txt
 docs/getOutboundSettings-example.txt
 docs/getOutboundWrapupcodemappings-example.txt
+docs/getPresenceDefinition0-example.txt
+docs/getPresenceDefinitions0-example.txt
 docs/getPresenceSettings-example.txt
 docs/getPresenceSource-example.txt
 docs/getPresenceSources-example.txt
@@ -5671,6 +5679,7 @@ docs/postOutboundMessagingcampaigns-example.txt
 docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
 docs/postOutboundSequences-example.txt
+docs/postPresenceDefinitions0-example.txt
 docs/postPresenceSources-example.txt
 docs/postPresencedefinitions-example.txt
 docs/postProcessautomationTriggerTest-example.txt
@@ -5996,6 +6005,7 @@ docs/putOutboundSchedulesMessagingcampaign-example.txt
 docs/putOutboundSchedulesSequence-example.txt
 docs/putOutboundSequence-example.txt
 docs/putOutboundWrapupcodemappings-example.txt
+docs/putPresenceDefinition0-example.txt
 docs/putPresenceSettings-example.txt
 docs/putPresenceSource-example.txt
 docs/putPresenceUserPrimarysource-example.txt
@@ -6458,10 +6468,12 @@ src/Models/BotAggregateQueryPredicate.swift
 src/Models/BotAggregateQueryResponse.swift
 src/Models/BotAggregationQuery.swift
 src/Models/BotAggregationView.swift
+src/Models/BotChannel.swift
 src/Models/BotConnectorBot.swift
 src/Models/BotConnectorBotSummaryEntityListing.swift
 src/Models/BotConnectorBotVersion.swift
 src/Models/BotConnectorBotVersionSummaryEntityListing.swift
+src/Models/BotFlowSession.swift
 src/Models/BotIntent.swift
 src/Models/BotList.swift
 src/Models/BotMessengerProfile.swift
@@ -8388,6 +8400,7 @@ src/Models/Organization.swift
 src/Models/OrganizationFeatures.swift
 src/Models/OrganizationPresence.swift
 src/Models/OrganizationPresenceDefinition.swift
+src/Models/OrganizationPresenceDefinitionEntityListing.swift
 src/Models/OrganizationPresenceEntityListing.swift
 src/Models/OrganizationProductEntityListing.swift
 src/Models/OrganizationRoleEntityListing.swift
@@ -9083,6 +9096,7 @@ src/Models/SessionEndDetails.swift
 src/Models/SessionLastEvent.swift
 src/Models/SessionListing.swift
 src/Models/SessionSegmentAssignment.swift
+src/Models/SessionsResponse.swift
 src/Models/SetContentTemplateActionSettings.swift
 src/Models/SetRecordingState.swift
 src/Models/SetSmsPhoneNumberActionSettings.swift

@@ -30,6 +30,8 @@ public class AssignedLearningModule: Codable {
     public var _id: String?
     /** The name of learning module */
     public var name: String?
+    /** If true, learning module is excluded when retrieving modules for manual assignment */
+    public var excludedFromCatalog: Bool?
     /** The user who created learning module */
     public var createdBy: UserReference?
     /** The date/time learning module was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -70,12 +72,15 @@ public class AssignedLearningModule: Codable {
     public var reassignSummaryData: LearningModuleReassignSummary?
     /** The cover art for the learning module */
     public var coverArt: LearningModuleCoverArtResponse?
+    /** The recommended time in minutes to complete the module */
+    public var lengthInMinutes: Int?
     /** The mode of archival for learning module */
     public var archivalMode: ArchivalMode?
 
-    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, currentAssignments: [LearningAssignment]?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, reassignSummaryData: LearningModuleReassignSummary?, coverArt: LearningModuleCoverArtResponse?, archivalMode: ArchivalMode?) {
+    public init(_id: String?, name: String?, excludedFromCatalog: Bool?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, currentAssignments: [LearningAssignment]?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, reassignSummaryData: LearningModuleReassignSummary?, coverArt: LearningModuleCoverArtResponse?, lengthInMinutes: Int?, archivalMode: ArchivalMode?) {
         self._id = _id
         self.name = name
+        self.excludedFromCatalog = excludedFromCatalog
         self.createdBy = createdBy
         self.dateCreated = dateCreated
         self.modifiedBy = modifiedBy
@@ -96,12 +101,14 @@ public class AssignedLearningModule: Codable {
         self.summaryData = summaryData
         self.reassignSummaryData = reassignSummaryData
         self.coverArt = coverArt
+        self.lengthInMinutes = lengthInMinutes
         self.archivalMode = archivalMode
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case excludedFromCatalog
         case createdBy
         case dateCreated
         case modifiedBy
@@ -122,6 +129,7 @@ public class AssignedLearningModule: Codable {
         case summaryData
         case reassignSummaryData
         case coverArt
+        case lengthInMinutes
         case archivalMode
     }
 

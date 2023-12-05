@@ -7,7 +7,7 @@ title: SetRecordingState
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **recordingState** | **String** | The value of the recordingState to set. | [optional] |
+| **recordingState** | **String** | On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings. | [optional] |
 {: class="table table-striped"}
 
 

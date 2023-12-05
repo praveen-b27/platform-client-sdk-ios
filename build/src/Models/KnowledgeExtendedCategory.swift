@@ -47,6 +47,7 @@ public class KnowledgeExtendedCategory: Codable {
         case nbNo = "nb-NO"
         case daDk = "da-DK"
         case jaJp = "ja-JP"
+        case arAe = "ar-AE"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

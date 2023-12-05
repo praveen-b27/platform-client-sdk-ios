@@ -811,7 +811,7 @@ JourneyAPI.getJourneyActiontemplates(pageNumber: pageNumber, pageSize: pageSize,
 
 
 
-> [DeploymentPing](DeploymentPing.html) getJourneyDeploymentCustomerPing(deploymentId, customerCookieId, sessionId, dl, dt, appNamespace, sinceLastBeaconMilliseconds)
+> [DeploymentPing](DeploymentPing.html) getJourneyDeploymentCustomerPing(deploymentId, customerCookieId, dl, dt, appNamespace, sessionId, sinceLastBeaconMilliseconds)
 
 Send a ping.
 
@@ -832,14 +832,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let deploymentId: String = "" // The ID of the deployment sending the ping.
 let customerCookieId: String = "" // ID of the customer associated with the ping.
-let sessionId: String = "" // UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session
 let dl: String = "" // Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. 'home' or 'help. Pings without this parameter will not return actions.
 let dt: String = "" // Document Title.  A human readable name for the page or screen
 let appNamespace: String = "" // Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions
+let sessionId: String = "" // UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session
 let sinceLastBeaconMilliseconds: Int64 = 0 // How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings.
 
 // Code example
-JourneyAPI.getJourneyDeploymentCustomerPing(deploymentId: deploymentId, customerCookieId: customerCookieId, sessionId: sessionId, dl: dl, dt: dt, appNamespace: appNamespace, sinceLastBeaconMilliseconds: sinceLastBeaconMilliseconds) { (response, error) in
+JourneyAPI.getJourneyDeploymentCustomerPing(deploymentId: deploymentId, customerCookieId: customerCookieId, dl: dl, dt: dt, appNamespace: appNamespace, sessionId: sessionId, sinceLastBeaconMilliseconds: sinceLastBeaconMilliseconds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -856,10 +856,10 @@ JourneyAPI.getJourneyDeploymentCustomerPing(deploymentId: deploymentId, customer
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the deployment sending the ping. | |
 | **customerCookieId** | **String**| ID of the customer associated with the ping. | |
-| **sessionId** | **String**| UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session | |
 | **dl** | **String**| Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. 'home' or 'help. Pings without this parameter will not return actions. | [optional] |
 | **dt** | **String**| Document Title.  A human readable name for the page or screen | [optional] |
 | **appNamespace** | **String**| Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions | [optional] |
+| **sessionId** | **String**| UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session | [optional] |
 | **sinceLastBeaconMilliseconds** | **Int64**| How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. | [optional] |
 {: class="table-striped"}
 

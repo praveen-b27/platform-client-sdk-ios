@@ -31,10 +31,12 @@ public class PolicyConditions: Codable {
     public var duration: DurationCondition?
     public var wrapupCodes: [WrapupCode]?
     public var timeAllowed: TimeAllowed?
+    /** Teams to match conversations against */
+    public var teams: [Team]?
     /** This condition is to filter out conversation with and without customer participation. */
     public var customerParticipation: CustomerParticipation?
 
-    public init(forUsers: [User]?, directions: [Directions]?, dateRanges: [String]?, mediaTypes: [MediaTypes]?, forQueues: [Queue]?, duration: DurationCondition?, wrapupCodes: [WrapupCode]?, timeAllowed: TimeAllowed?, customerParticipation: CustomerParticipation?) {
+    public init(forUsers: [User]?, directions: [Directions]?, dateRanges: [String]?, mediaTypes: [MediaTypes]?, forQueues: [Queue]?, duration: DurationCondition?, wrapupCodes: [WrapupCode]?, timeAllowed: TimeAllowed?, teams: [Team]?, customerParticipation: CustomerParticipation?) {
         self.forUsers = forUsers
         self.directions = directions
         self.dateRanges = dateRanges
@@ -43,6 +45,7 @@ public class PolicyConditions: Codable {
         self.duration = duration
         self.wrapupCodes = wrapupCodes
         self.timeAllowed = timeAllowed
+        self.teams = teams
         self.customerParticipation = customerParticipation
     }
 

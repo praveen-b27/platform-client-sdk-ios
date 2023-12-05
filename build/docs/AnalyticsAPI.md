@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAnalyticsReportingSchedule**](AnalyticsAPI.html#deleteAnalyticsReportingSchedule) | Delete a scheduled report job. |
 | [**deleteAnalyticsUsersDetailsJob**](AnalyticsAPI.html#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
 | [**getAnalyticsBotflowReportingturns**](AnalyticsAPI.html#getAnalyticsBotflowReportingturns) | Get Reporting Turns. |
+| [**getAnalyticsBotflowSessions**](AnalyticsAPI.html#getAnalyticsBotflowSessions) | Get Bot Flow Sessions. |
 | [**getAnalyticsConversationDetails**](AnalyticsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
 | [**getAnalyticsConversationsDetails**](AnalyticsAPI.html#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
 | [**getAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
@@ -221,7 +222,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 Get Reporting Turns.
 
-Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
 
 
 
@@ -278,6 +279,70 @@ AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: afte
 ### Return type
 
 [**ReportingTurnsResponse**](ReportingTurnsResponse.html)
+
+<a name="getAnalyticsBotflowSessions"></a>
+
+# **getAnalyticsBotflowSessions**
+
+
+
+> [SessionsResponse](SessionsResponse.html) getAnalyticsBotflowSessions(botFlowId, after, pageSize, interval, botResultCategories, endLanguage)
+
+Get Bot Flow Sessions.
+
+Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+
+
+
+Wraps GET /api/v2/analytics/botflows/{botFlowId}/sessions  
+
+Requires ANY permissions: 
+
+* analytics:botFlowSession:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let botFlowId: String = "" // ID of the bot flow.
+let after: String = "" // The cursor that points to the ID of the last item in the list of entities that has been returned.
+let pageSize: String = "" // Max number of entities to return. Maximum of 250
+let interval: String = 2023-07-17T08:15:44.586Z/2023-07-26T09:22:33.111Z // Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let botResultCategories: AnalyticsAPI.BotResultCategories_getAnalyticsBotflowSessions = AnalyticsAPI.BotResultCategories_getAnalyticsBotflowSessions.enummember // Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by.
+let endLanguage: String = "" // Optional case-insensitive language code to filter sessions by the language the sessions ended in.
+
+// Code example
+AnalyticsAPI.getAnalyticsBotflowSessions(botFlowId: botFlowId, after: after, pageSize: pageSize, interval: interval, botResultCategories: botResultCategories, endLanguage: endLanguage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsBotflowSessions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **botFlowId** | **String**| ID of the bot flow. | |
+| **after** | **String**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] |
+| **interval** | **String**| Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
+| **botResultCategories** | **String**| Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. | [optional]<br />**Values**: unknown ("Unknown"), userExit ("UserExit"), botExit ("BotExit"), error ("Error"), recognitionFailure ("RecognitionFailure"), userDisconnect ("UserDisconnect"), botDisconnect ("BotDisconnect"), sessionExpired ("SessionExpired"), transfer ("Transfer") |
+| **endLanguage** | **String**| Optional case-insensitive language code to filter sessions by the language the sessions ended in. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SessionsResponse**](SessionsResponse.html)
 
 <a name="getAnalyticsConversationDetails"></a>
 
@@ -2118,6 +2183,8 @@ AnalyticsAPI.postAnalyticsReportingExports(body: body) { (response, error) in
 
 Place a scheduled report immediately into the reporting queue
 
+This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
+
 
 
 Wraps POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport  
@@ -2170,7 +2237,7 @@ AnalyticsAPI.postAnalyticsReportingScheduleRunreport(scheduleId: scheduleId) { (
 
 Create a scheduled report job
 
-Create a scheduled report job.
+This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
 
 
 
@@ -2587,6 +2654,8 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 > [ReportSchedule](ReportSchedule.html) putAnalyticsReportingSchedule(scheduleId, body)
 
 Update a scheduled report job.
+
+This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
 
 
 

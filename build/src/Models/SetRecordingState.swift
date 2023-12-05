@@ -16,7 +16,7 @@ public class SetRecordingState: Codable {
         case paused = "PAUSED"
         case _none = "NONE"
     }
-    /** The value of the recordingState to set. */
+    /** On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings. */
     public var recordingState: RecordingState?
 
     public init(recordingState: RecordingState?) {

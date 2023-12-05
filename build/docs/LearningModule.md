@@ -10,6 +10,7 @@ Learning module response
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of learning module | |
+| **excludedFromCatalog** | **Bool** | If true, learning module is excluded when retrieving modules for manual assignment | [optional] |
 | **createdBy** | [**UserReference**](UserReference.html) | The user who created learning module | [optional] |
 | **dateCreated** | [**Date**](Date.html) | The date/time learning module was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **modifiedBy** | [**UserReference**](UserReference.html) | The user who modified learning module | [optional] |
@@ -29,6 +30,7 @@ Learning module response
 | **summaryData** | [**LearningModuleSummary**](LearningModuleSummary.html) | The learning module summary data | [optional] |
 | **reassignSummaryData** | [**LearningModuleReassignSummary**](LearningModuleReassignSummary.html) | The learning module reassign summary data | [optional] |
 | **coverArt** | [**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse.html) | The cover art for the learning module | [optional] |
+| **lengthInMinutes** | **Int** | The recommended time in minutes to complete the module | [optional] |
 | **archivalMode** | **String** | The mode of archival for learning module | [optional] |
 {: class="table table-striped"}
 

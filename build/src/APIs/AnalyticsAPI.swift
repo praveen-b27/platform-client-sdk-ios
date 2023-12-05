@@ -204,7 +204,7 @@ open class AnalyticsAPI {
     /**
      Get Reporting Turns.
      - GET /api/v2/analytics/botflows/{botFlowId}/reportingturns
-     - Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+     - Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -268,6 +268,119 @@ open class AnalyticsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ReportingTurnsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum BotResultCategories_getAnalyticsBotflowSessions: String { 
+        case unknown = "Unknown"
+        case userExit = "UserExit"
+        case botExit = "BotExit"
+        case error = "Error"
+        case recognitionFailure = "RecognitionFailure"
+        case userDisconnect = "UserDisconnect"
+        case botDisconnect = "BotDisconnect"
+        case sessionExpired = "SessionExpired"
+        case transfer = "Transfer"
+    }
+
+    
+    
+    /**
+     Get Bot Flow Sessions.
+     
+     - parameter botFlowId: (path) ID of the bot flow. 
+     - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
+     - parameter interval: (query) Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter botResultCategories: (query) Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)
+     - parameter endLanguage: (query) Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsBotflowSessions(botFlowId: String, after: String? = nil, pageSize: String? = nil, interval: String? = nil, botResultCategories: BotResultCategories_getAnalyticsBotflowSessions? = nil, endLanguage: String? = nil, completion: @escaping ((_ data: SessionsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsBotflowSessionsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, interval: interval, botResultCategories: botResultCategories, endLanguage: endLanguage)
+        requestBuilder.execute { (response: Response<SessionsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Bot Flow Sessions.
+     - GET /api/v2/analytics/botflows/{botFlowId}/sessions
+     - Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "endLanguage" : "endLanguage",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "channel" : "{}",
+    "language" : "language",
+    "id" : "id",
+    "flow" : "{}",
+    "botResult" : "Unknown",
+    "botResultCategory" : "Unknown",
+    "conversation" : "{}"
+  }, {
+    "endLanguage" : "endLanguage",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "channel" : "{}",
+    "language" : "language",
+    "id" : "id",
+    "flow" : "{}",
+    "botResult" : "Unknown",
+    "botResultCategory" : "Unknown",
+    "conversation" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter botFlowId: (path) ID of the bot flow. 
+     - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
+     - parameter interval: (query) Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter botResultCategories: (query) Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)
+     - parameter endLanguage: (query) Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)
+
+     - returns: RequestBuilder<SessionsResponse> 
+     */
+    open class func getAnalyticsBotflowSessionsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, interval: String? = nil, botResultCategories: BotResultCategories_getAnalyticsBotflowSessions? = nil, endLanguage: String? = nil) -> RequestBuilder<SessionsResponse> {        
+        var path = "/api/v2/analytics/botflows/{botFlowId}/sessions"
+        let botFlowIdPreEscape = "\(botFlowId)"
+        let botFlowIdPostEscape = botFlowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botFlowId}", with: botFlowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize, 
+            "interval": interval, 
+            "botResultCategories": botResultCategories?.rawValue, 
+            "endLanguage": endLanguage
+        ])
+
+        let requestBuilder: RequestBuilder<SessionsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -5393,8 +5506,8 @@ open class AnalyticsAPI {
     "status" : "SUBMITTED"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5482,8 +5595,8 @@ open class AnalyticsAPI {
     "dateLimitations" : "dateLimitations"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5584,8 +5697,8 @@ open class AnalyticsAPI {
     "availableLocales" : [ "availableLocales", "availableLocales" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5887,8 +6000,8 @@ open class AnalyticsAPI {
     "runStatus" : "RUNNING"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6158,8 +6271,8 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13493,6 +13606,7 @@ open class AnalyticsAPI {
     /**
      Place a scheduled report immediately into the reporting queue
      - POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport
+     - This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13549,7 +13663,7 @@ open class AnalyticsAPI {
     /**
      Create a scheduled report job
      - POST /api/v2/analytics/reporting/schedules
-     - Create a scheduled report job.
+     - This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -15289,6 +15403,7 @@ open class AnalyticsAPI {
     /**
      Update a scheduled report job.
      - PUT /api/v2/analytics/reporting/schedules/{scheduleId}
+     - This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

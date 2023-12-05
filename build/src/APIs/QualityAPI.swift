@@ -1493,8 +1493,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -2041,6 +2041,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -2049,6 +2050,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -2057,6 +2059,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -2073,6 +2076,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -2081,6 +2085,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -2089,6 +2094,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -2133,6 +2139,7 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -3586,8 +3593,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -4363,6 +4370,7 @@ open class QualityAPI {
   "queue" : {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -4681,6 +4689,7 @@ open class QualityAPI {
     
     
     
+    
     /**
      Gets a list of Agent Activities
      
@@ -4696,11 +4705,12 @@ open class QualityAPI {
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
      - parameter group: (query) group id (optional)
+     - parameter agentTeamId: (query) team id of agents requested (optional)
      - parameter formContextId: (query) shared id between form versions (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, formContextId: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, formContextId: formContextId)
+    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, agentTeamId: String? = nil, formContextId: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, agentTeamId: agentTeamId, formContextId: formContextId)
         requestBuilder.execute { (response: Response<AgentActivityEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7646,8 +7656,8 @@ open class QualityAPI {
     "lowestCriticalScore" : 9.301444
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7665,11 +7675,12 @@ open class QualityAPI {
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
      - parameter group: (query) group id (optional)
+     - parameter agentTeamId: (query) team id of agents requested (optional)
      - parameter formContextId: (query) shared id between form versions (optional)
 
      - returns: RequestBuilder<AgentActivityEntityListing> 
      */
-    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, formContextId: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {        
+    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, agentTeamId: String? = nil, formContextId: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {        
         let path = "/api/v2/quality/agents/activity"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7688,6 +7699,7 @@ open class QualityAPI {
             "evaluatorUserId": evaluatorUserId, 
             "name": name, 
             "group": group, 
+            "agentTeamId": agentTeamId, 
             "formContextId": formContextId
         ])
 
@@ -9181,8 +9193,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -10897,8 +10909,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -12533,8 +12545,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -12721,8 +12733,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13102,6 +13114,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -13110,6 +13123,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -13118,6 +13132,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -13134,6 +13149,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -13142,6 +13158,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -13150,6 +13167,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -13194,6 +13212,7 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -14647,8 +14666,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -15424,6 +15443,7 @@ open class QualityAPI {
   "queue" : {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -15642,11 +15662,13 @@ open class QualityAPI {
     "npsScore" : 6,
     "questionGroupScores" : [ {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -15656,6 +15678,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -15666,11 +15689,13 @@ open class QualityAPI {
       "totalScore" : 1.4658129
     }, {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -15680,6 +15705,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -15691,6 +15717,7 @@ open class QualityAPI {
     } ],
     "totalScore" : 0.8008282
   },
+  "agentTeam" : "{}",
   "id" : "id",
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
@@ -15939,6 +15966,7 @@ open class QualityAPI {
     
     
     
+    
     /**
      Queries Evaluations and returns a paged list
      
@@ -15950,6 +15978,7 @@ open class QualityAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversationId specified (optional)
      - parameter agentUserId: (query) user id of the agent (optional)
+     - parameter agentTeamId: (query) team id of the agent (optional)
      - parameter evaluatorUserId: (query) evaluator user id (optional)
      - parameter assigneeUserId: (query) assignee user id (optional)
      - parameter queueId: (query) queue id (optional)
@@ -15964,8 +15993,8 @@ open class QualityAPI {
      - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
+    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<EvaluationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -16295,6 +16324,7 @@ open class QualityAPI {
         "totalNonCriticalScore" : 1.284659,
         "totalCriticalScoreUnweighted" : 5.9448957,
         "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "systemMarkedNA" : true,
         "markedNA" : true,
         "totalScoreUnweighted" : 6.778325,
         "maxTotalNonCriticalScore" : 2.8841622,
@@ -16303,6 +16333,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -16311,6 +16342,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -16327,6 +16359,7 @@ open class QualityAPI {
         "totalNonCriticalScore" : 1.284659,
         "totalCriticalScoreUnweighted" : 5.9448957,
         "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "systemMarkedNA" : true,
         "markedNA" : true,
         "totalScoreUnweighted" : 6.778325,
         "maxTotalNonCriticalScore" : 2.8841622,
@@ -16335,6 +16368,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -16343,6 +16377,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -16387,6 +16422,7 @@ open class QualityAPI {
     "changedDate" : "2000-01-23T04:56:07.000+00:00",
     "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
     "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentTeam" : "{}",
     "hasAssistanceFailed" : true,
     "id" : "id",
     "rescore" : true,
@@ -17840,8 +17876,8 @@ open class QualityAPI {
           "pageNumber" : 6,
           "entities" : [ null, null ],
           "firstUri" : "https://openapi-generator.tech",
-          "selfUri" : "https://openapi-generator.tech",
           "lastUri" : "https://openapi-generator.tech",
+          "selfUri" : "https://openapi-generator.tech",
           "pageSize" : 1,
           "nextUri" : "https://openapi-generator.tech",
           "previousUri" : "https://openapi-generator.tech"
@@ -18617,6 +18653,7 @@ open class QualityAPI {
     "queue" : {
       "peerId" : "peerId",
       "conditionalGroupRouting" : "{}",
+      "enableAudioMonitoring" : true,
       "mediaSettings" : "{}",
       "enableManualAssignment" : true,
       "description" : "description",
@@ -19063,6 +19100,7 @@ open class QualityAPI {
         "totalNonCriticalScore" : 1.284659,
         "totalCriticalScoreUnweighted" : 5.9448957,
         "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "systemMarkedNA" : true,
         "markedNA" : true,
         "totalScoreUnweighted" : 6.778325,
         "maxTotalNonCriticalScore" : 2.8841622,
@@ -19071,6 +19109,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -19079,6 +19118,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -19095,6 +19135,7 @@ open class QualityAPI {
         "totalNonCriticalScore" : 1.284659,
         "totalCriticalScoreUnweighted" : 5.9448957,
         "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "systemMarkedNA" : true,
         "markedNA" : true,
         "totalScoreUnweighted" : 6.778325,
         "maxTotalNonCriticalScore" : 2.8841622,
@@ -19103,6 +19144,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -19111,6 +19153,7 @@ open class QualityAPI {
           "failedKillQuestion" : true,
           "score" : 7,
           "questionId" : "questionId",
+          "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
           "assistedAnswerId" : "assistedAnswerId"
@@ -19155,6 +19198,7 @@ open class QualityAPI {
     "changedDate" : "2000-01-23T04:56:07.000+00:00",
     "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
     "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentTeam" : "{}",
     "hasAssistanceFailed" : true,
     "id" : "id",
     "rescore" : true,
@@ -20608,8 +20652,8 @@ open class QualityAPI {
           "pageNumber" : 6,
           "entities" : [ null, null ],
           "firstUri" : "https://openapi-generator.tech",
-          "selfUri" : "https://openapi-generator.tech",
           "lastUri" : "https://openapi-generator.tech",
+          "selfUri" : "https://openapi-generator.tech",
           "pageSize" : 1,
           "nextUri" : "https://openapi-generator.tech",
           "previousUri" : "https://openapi-generator.tech"
@@ -21385,6 +21429,7 @@ open class QualityAPI {
     "queue" : {
       "peerId" : "peerId",
       "conditionalGroupRouting" : "{}",
+      "enableAudioMonitoring" : true,
       "mediaSettings" : "{}",
       "enableManualAssignment" : true,
       "description" : "description",
@@ -21531,8 +21576,8 @@ open class QualityAPI {
     "resourceType" : "EMAIL"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -21546,6 +21591,7 @@ open class QualityAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversationId specified (optional)
      - parameter agentUserId: (query) user id of the agent (optional)
+     - parameter agentTeamId: (query) team id of the agent (optional)
      - parameter evaluatorUserId: (query) evaluator user id (optional)
      - parameter assigneeUserId: (query) assignee user id (optional)
      - parameter queueId: (query) queue id (optional)
@@ -21561,7 +21607,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */
-    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
+    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
         let path = "/api/v2/quality/evaluations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -21576,6 +21622,7 @@ open class QualityAPI {
             "previousPage": previousPage, 
             "conversationId": conversationId, 
             "agentUserId": agentUserId, 
+            "agentTeamId": agentTeamId, 
             "evaluatorUserId": evaluatorUserId, 
             "assigneeUserId": assigneeUserId, 
             "queueId": queueId, 
@@ -21606,6 +21653,7 @@ open class QualityAPI {
     
     
     
+    
     /**
      Get an evaluator activity
      
@@ -21620,10 +21668,11 @@ open class QualityAPI {
      - parameter name: (query) Evaluator name (optional)
      - parameter permission: (query) permission strings (optional)
      - parameter group: (query) group id (optional)
+     - parameter agentTeamId: (query) team id of agents to be considered (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluatorsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [String]? = nil, group: String? = nil, completion: @escaping ((_ data: EvaluatorActivityEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityEvaluatorsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, name: name, permission: permission, group: group)
+    open class func getQualityEvaluatorsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [String]? = nil, group: String? = nil, agentTeamId: String? = nil, completion: @escaping ((_ data: EvaluatorActivityEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityEvaluatorsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, name: name, permission: permission, group: group, agentTeamId: agentTeamId)
         requestBuilder.execute { (response: Response<EvaluatorActivityEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -22246,8 +22295,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22264,10 +22313,11 @@ open class QualityAPI {
      - parameter name: (query) Evaluator name (optional)
      - parameter permission: (query) permission strings (optional)
      - parameter group: (query) group id (optional)
+     - parameter agentTeamId: (query) team id of agents to be considered (optional)
 
      - returns: RequestBuilder<EvaluatorActivityEntityListing> 
      */
-    open class func getQualityEvaluatorsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [String]? = nil, group: String? = nil) -> RequestBuilder<EvaluatorActivityEntityListing> {        
+    open class func getQualityEvaluatorsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [String]? = nil, group: String? = nil, agentTeamId: String? = nil) -> RequestBuilder<EvaluatorActivityEntityListing> {        
         let path = "/api/v2/quality/evaluators/activity"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -22284,7 +22334,8 @@ open class QualityAPI {
             "endTime": endTime?.encodeToJSON(), 
             "name": name, 
             "permission": permission, 
-            "group": group
+            "group": group, 
+            "agentTeamId": agentTeamId
         ])
 
         let requestBuilder: RequestBuilder<EvaluatorActivityEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -22330,8 +22381,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -22582,8 +22633,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22774,8 +22825,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22961,8 +23012,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23054,8 +23105,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23246,8 +23297,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23433,8 +23484,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23511,8 +23562,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -23765,8 +23816,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23957,8 +24008,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -24144,8 +24195,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -24240,8 +24291,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -24432,8 +24483,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -24619,8 +24670,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -24697,8 +24748,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -25515,8 +25566,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -25949,8 +26000,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -26372,8 +26423,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -26665,8 +26716,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -26919,8 +26970,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27111,8 +27162,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27298,8 +27349,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -27368,8 +27419,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -27622,8 +27673,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -27814,8 +27865,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -28001,8 +28052,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -28647,8 +28698,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -28724,11 +28775,13 @@ open class QualityAPI {
     "npsScore" : 6,
     "questionGroupScores" : [ {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28738,6 +28791,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28748,11 +28802,13 @@ open class QualityAPI {
       "totalScore" : 1.4658129
     }, {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28762,6 +28818,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28773,6 +28830,7 @@ open class QualityAPI {
     } ],
     "totalScore" : 0.8008282
   },
+  "agentTeam" : "{}",
   "id" : "id",
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
@@ -28841,11 +28899,13 @@ open class QualityAPI {
     "npsScore" : 6,
     "questionGroupScores" : [ {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28855,6 +28915,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28865,11 +28926,13 @@ open class QualityAPI {
       "totalScore" : 1.4658129
     }, {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -28879,6 +28942,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -31338,8 +31402,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -31883,6 +31947,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -31891,6 +31956,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -31899,6 +31965,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -31915,6 +31982,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -31923,6 +31991,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -31931,6 +32000,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -31975,6 +32045,7 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -33428,8 +33499,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -34205,6 +34276,7 @@ open class QualityAPI {
   "queue" : {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -34841,6 +34913,7 @@ open class QualityAPI {
     "totalNonCriticalScore" : 1.284659,
     "totalCriticalScoreUnweighted" : 5.9448957,
     "totalNonCriticalScoreUnweighted" : 3.3531933,
+    "systemMarkedNA" : true,
     "markedNA" : true,
     "totalScoreUnweighted" : 6.778325,
     "maxTotalNonCriticalScore" : 2.8841622,
@@ -34849,6 +34922,7 @@ open class QualityAPI {
       "failedKillQuestion" : true,
       "score" : 7,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
       "assistedAnswerId" : "assistedAnswerId"
@@ -34857,6 +34931,7 @@ open class QualityAPI {
       "failedKillQuestion" : true,
       "score" : 7,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
       "assistedAnswerId" : "assistedAnswerId"
@@ -34873,6 +34948,7 @@ open class QualityAPI {
     "totalNonCriticalScore" : 1.284659,
     "totalCriticalScoreUnweighted" : 5.9448957,
     "totalNonCriticalScoreUnweighted" : 3.3531933,
+    "systemMarkedNA" : true,
     "markedNA" : true,
     "totalScoreUnweighted" : 6.778325,
     "maxTotalNonCriticalScore" : 2.8841622,
@@ -34881,6 +34957,7 @@ open class QualityAPI {
       "failedKillQuestion" : true,
       "score" : 7,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
       "assistedAnswerId" : "assistedAnswerId"
@@ -34889,6 +34966,7 @@ open class QualityAPI {
       "failedKillQuestion" : true,
       "score" : 7,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
       "assistedAnswerId" : "assistedAnswerId"
@@ -34985,8 +35063,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -35226,8 +35304,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -35689,8 +35767,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -35930,8 +36008,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -36390,11 +36468,13 @@ open class QualityAPI {
   "npsScore" : 6,
   "questionGroupScores" : [ {
     "maxTotalScore" : 5.962134,
+    "systemMarkedNA" : true,
     "markedNA" : true,
     "questionScores" : [ {
       "answerId" : "answerId",
       "score" : 5,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "npsTextAnswer" : "npsTextAnswer",
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer",
@@ -36404,6 +36484,7 @@ open class QualityAPI {
       "answerId" : "answerId",
       "score" : 5,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "npsTextAnswer" : "npsTextAnswer",
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer",
@@ -36414,11 +36495,13 @@ open class QualityAPI {
     "totalScore" : 1.4658129
   }, {
     "maxTotalScore" : 5.962134,
+    "systemMarkedNA" : true,
     "markedNA" : true,
     "questionScores" : [ {
       "answerId" : "answerId",
       "score" : 5,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "npsTextAnswer" : "npsTextAnswer",
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer",
@@ -36428,6 +36511,7 @@ open class QualityAPI {
       "answerId" : "answerId",
       "score" : 5,
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "npsTextAnswer" : "npsTextAnswer",
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer",
@@ -37939,8 +38023,8 @@ open class QualityAPI {
       "pageNumber" : 6,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -38487,6 +38571,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -38495,6 +38580,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -38503,6 +38589,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -38519,6 +38606,7 @@ open class QualityAPI {
       "totalNonCriticalScore" : 1.284659,
       "totalCriticalScoreUnweighted" : 5.9448957,
       "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "totalScoreUnweighted" : 6.778325,
       "maxTotalNonCriticalScore" : 2.8841622,
@@ -38527,6 +38615,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -38535,6 +38624,7 @@ open class QualityAPI {
         "failedKillQuestion" : true,
         "score" : 7,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
         "assistedAnswerId" : "assistedAnswerId"
@@ -38579,6 +38669,7 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -40032,8 +40123,8 @@ open class QualityAPI {
         "pageNumber" : 6,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -40809,6 +40900,7 @@ open class QualityAPI {
   "queue" : {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -41023,8 +41115,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -41270,8 +41362,8 @@ open class QualityAPI {
     "pageNumber" : 6,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -41743,11 +41835,13 @@ open class QualityAPI {
     "npsScore" : 6,
     "questionGroupScores" : [ {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -41757,6 +41851,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -41767,11 +41862,13 @@ open class QualityAPI {
       "totalScore" : 1.4658129
     }, {
       "maxTotalScore" : 5.962134,
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "questionScores" : [ {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",
@@ -41781,6 +41878,7 @@ open class QualityAPI {
         "answerId" : "answerId",
         "score" : 5,
         "questionId" : "questionId",
+        "systemMarkedNA" : true,
         "npsTextAnswer" : "npsTextAnswer",
         "markedNA" : true,
         "freeTextAnswer" : "freeTextAnswer",

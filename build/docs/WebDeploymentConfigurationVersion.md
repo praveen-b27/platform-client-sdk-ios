@@ -18,7 +18,7 @@ Details about the configuration version of a Web Deployment
 | **customI18nLabels** | [**[CustomI18nLabels]**](CustomI18nLabels.html) | The localization settings for homescreen app | [optional] |
 | **messenger** | [**MessengerSettings**](MessengerSettings.html) | The settings for messenger | [optional] |
 | **position** | [**PositionSettings**](PositionSettings.html) | The settings for position | [optional] |
-| **supportCenter** | [**SupportCenterSettings**](SupportCenterSettings.html) | The settings for support center | [optional] |
+| **supportCenter** | [**SupportCenterSettings**](SupportCenterSettings.html) | The settings for knowledge portal (previously support center) | [optional] |
 | **cobrowse** | [**CobrowseSettings**](CobrowseSettings.html) | The settings for cobrowse | [optional] |
 | **journeyEvents** | [**JourneyEventsSettings**](JourneyEventsSettings.html) | The settings for journey events | [optional] |
 | **authenticationSettings** | [**AuthenticationSettings**](AuthenticationSettings.html) | The settings for authenticated deployments | [optional] |

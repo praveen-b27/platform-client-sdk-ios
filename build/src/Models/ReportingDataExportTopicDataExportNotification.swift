@@ -123,6 +123,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case tooManySearchCriteria = "TOO_MANY_SEARCH_CRITERIA"
         case searchCriteriaValuesExceedLimit = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
         case exportEmailFileSizeExceededLimit = "EXPORT_EMAIL_FILE_SIZE_EXCEEDED_LIMIT"
+        case circuitBreakerOpenForViewType = "CIRCUIT_BREAKER_OPEN_FOR_VIEW_TYPE"
     }
     public var _id: String?
     public var runId: String?

@@ -7707,8 +7707,8 @@ open class RecordingAPI {
     "region" : "af-south-1"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7969,8 +7969,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8228,8 +8228,8 @@ open class RecordingAPI {
     "conversation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8368,8 +8368,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 5
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8677,8 +8677,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8877,8 +8877,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10211,6 +10211,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -10219,6 +10220,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -10227,6 +10229,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -10243,6 +10246,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -10251,6 +10255,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -10259,6 +10264,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -10303,6 +10309,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -11756,8 +11763,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -12533,6 +12540,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -12979,6 +12987,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -12987,6 +12996,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -12995,6 +13005,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -13011,6 +13022,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -13019,6 +13031,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -13027,6 +13040,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -13071,6 +13085,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -14524,8 +14539,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -15301,6 +15316,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -16699,6 +16715,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -16707,6 +16724,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -16715,6 +16733,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -16731,6 +16750,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -16739,6 +16759,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -16747,6 +16768,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -16791,6 +16813,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -18244,8 +18267,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -19021,6 +19044,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -19467,6 +19491,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -19475,6 +19500,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -19483,6 +19509,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -19499,6 +19526,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -19507,6 +19535,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -19515,6 +19544,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -19559,6 +19589,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -21012,8 +21043,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -21789,6 +21820,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -23534,6 +23566,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -23542,6 +23575,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -23550,6 +23584,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -23566,6 +23601,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -23574,6 +23610,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -23582,6 +23619,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -23626,6 +23664,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -25079,8 +25118,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -25856,6 +25895,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -26302,6 +26342,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -26310,6 +26351,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -26318,6 +26360,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -26334,6 +26377,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -26342,6 +26386,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -26350,6 +26395,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -26394,6 +26440,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -27847,8 +27894,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -28624,6 +28671,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -30022,6 +30070,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -30030,6 +30079,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -30038,6 +30088,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -30054,6 +30105,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -30062,6 +30114,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -30070,6 +30123,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -30114,6 +30168,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -31567,8 +31622,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -32344,6 +32399,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -32790,6 +32846,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -32798,6 +32855,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -32806,6 +32864,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -32822,6 +32881,7 @@ open class RecordingAPI {
               "totalNonCriticalScore" : 1.284659,
               "totalCriticalScoreUnweighted" : 5.9448957,
               "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "systemMarkedNA" : true,
               "markedNA" : true,
               "totalScoreUnweighted" : 6.778325,
               "maxTotalNonCriticalScore" : 2.8841622,
@@ -32830,6 +32890,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -32838,6 +32899,7 @@ open class RecordingAPI {
                 "failedKillQuestion" : true,
                 "score" : 7,
                 "questionId" : "questionId",
+                "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
                 "assistedAnswerId" : "assistedAnswerId"
@@ -32882,6 +32944,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "agentTeam" : "{}",
           "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
@@ -34335,8 +34398,8 @@ open class RecordingAPI {
                 "pageNumber" : 6,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -35112,6 +35175,7 @@ open class RecordingAPI {
           "queue" : {
             "peerId" : "peerId",
             "conditionalGroupRouting" : "{}",
+            "enableAudioMonitoring" : true,
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -35837,8 +35901,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

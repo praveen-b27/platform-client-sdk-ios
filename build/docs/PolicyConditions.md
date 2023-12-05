@@ -15,6 +15,7 @@ title: PolicyConditions
 | **duration** | [**DurationCondition**](DurationCondition.html) |  | [optional] |
 | **wrapupCodes** | [**[WrapupCode]**](WrapupCode.html) |  | [optional] |
 | **timeAllowed** | [**TimeAllowed**](TimeAllowed.html) |  | [optional] |
+| **teams** | [**[Team]**](Team.html) | Teams to match conversations against | [optional] |
 | **customerParticipation** | **String** | This condition is to filter out conversation with and without customer participation. | [optional] |
 {: class="table table-striped"}
 

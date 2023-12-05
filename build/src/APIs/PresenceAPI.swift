@@ -12,6 +12,50 @@ import Foundation
 open class PresenceAPI {
     
     /**
+     Delete a Presence Definition
+     
+     - parameter definitionId: (path) Presence Definition ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deletePresenceDefinition0(definitionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deletePresenceDefinition0WithRequestBuilder(definitionId: definitionId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Presence Definition
+     - DELETE /api/v2/presence/definitions/{definitionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter definitionId: (path) Presence Definition ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deletePresenceDefinition0WithRequestBuilder(definitionId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/presence/definitions/{definitionId}"
+        let definitionIdPreEscape = "\(definitionId)"
+        let definitionIdPostEscape = definitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{definitionId}", with: definitionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete a Presence Source
      
      - parameter sourceId: (path) Presence Source ID 
@@ -96,6 +140,219 @@ open class PresenceAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    public enum LocaleCode_getPresenceDefinition0: String { 
+        case all = "ALL"
+        case he = "he"
+        case fr = "fr"
+        case enUs = "en_US"
+        case da = "da"
+        case de = "de"
+        case it = "it"
+        case cs = "cs"
+        case es = "es"
+        case fi = "fi"
+        case ar = "ar"
+        case ja = "ja"
+        case ko = "ko"
+        case nl = "nl"
+        case no = "no"
+        case pl = "pl"
+        case ptBr = "pt_BR"
+        case ptPt = "pt_PT"
+        case ru = "ru"
+        case sv = "sv"
+        case th = "th"
+        case tr = "tr"
+        case uk = "uk"
+        case zhCn = "zh_CN"
+        case zhTw = "zh_TW"
+    }
+
+    
+    /**
+     Get a Presence Definition
+     
+     - parameter definitionId: (path) Presence Definition ID 
+     - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPresenceDefinition0(definitionId: String, localeCode: LocaleCode_getPresenceDefinition0? = nil, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceDefinition0WithRequestBuilder(definitionId: definitionId, localeCode: localeCode)
+        requestBuilder.execute { (response: Response<OrganizationPresenceDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Presence Definition
+     - GET /api/v2/presence/definitions/{definitionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languageLabels" : {
+    "key" : "languageLabels"
+  },
+  "systemPresence" : "Available",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "divisionId" : "divisionId",
+  "type" : "System",
+  "deactivated" : true
+}, statusCode=200}]
+     
+     - parameter definitionId: (path) Presence Definition ID 
+     - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
+
+     - returns: RequestBuilder<OrganizationPresenceDefinition> 
+     */
+    open class func getPresenceDefinition0WithRequestBuilder(definitionId: String, localeCode: LocaleCode_getPresenceDefinition0? = nil) -> RequestBuilder<OrganizationPresenceDefinition> {        
+        var path = "/api/v2/presence/definitions/{definitionId}"
+        let definitionIdPreEscape = "\(definitionId)"
+        let definitionIdPostEscape = definitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{definitionId}", with: definitionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "localeCode": localeCode?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<OrganizationPresenceDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    public enum LocaleCode_getPresenceDefinitions0: String { 
+        case all = "ALL"
+        case he = "he"
+        case fr = "fr"
+        case enUs = "en_US"
+        case da = "da"
+        case de = "de"
+        case it = "it"
+        case cs = "cs"
+        case es = "es"
+        case fi = "fi"
+        case ar = "ar"
+        case ja = "ja"
+        case ko = "ko"
+        case nl = "nl"
+        case no = "no"
+        case pl = "pl"
+        case ptBr = "pt_BR"
+        case ptPt = "pt_PT"
+        case ru = "ru"
+        case sv = "sv"
+        case th = "th"
+        case tr = "tr"
+        case uk = "uk"
+        case zhCn = "zh_CN"
+        case zhTw = "zh_TW"
+    }
+
+    
+    /**
+     Get a list of Presence Definitions
+     
+     - parameter deactivated: (query) Deactivated query can be TRUE or FALSE (optional)
+     - parameter divisionId: (query) One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)
+     - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPresenceDefinitions0(deactivated: String? = nil, divisionId: [String]? = nil, localeCode: LocaleCode_getPresenceDefinitions0? = nil, completion: @escaping ((_ data: OrganizationPresenceDefinitionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceDefinitions0WithRequestBuilder(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode)
+        requestBuilder.execute { (response: Response<OrganizationPresenceDefinitionEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Presence Definitions
+     - GET /api/v2/presence/definitions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "languageLabels" : {
+      "key" : "languageLabels"
+    },
+    "systemPresence" : "Available",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "divisionId" : "divisionId",
+    "type" : "System",
+    "deactivated" : true
+  }, {
+    "languageLabels" : {
+      "key" : "languageLabels"
+    },
+    "systemPresence" : "Available",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "divisionId" : "divisionId",
+    "type" : "System",
+    "deactivated" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter deactivated: (query) Deactivated query can be TRUE or FALSE (optional)
+     - parameter divisionId: (query) One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)
+     - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
+
+     - returns: RequestBuilder<OrganizationPresenceDefinitionEntityListing> 
+     */
+    open class func getPresenceDefinitions0WithRequestBuilder(deactivated: String? = nil, divisionId: [String]? = nil, localeCode: LocaleCode_getPresenceDefinitions0? = nil) -> RequestBuilder<OrganizationPresenceDefinitionEntityListing> {        
+        let path = "/api/v2/presence/definitions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "deactivated": deactivated, 
+            "divisionId": divisionId, 
+            "localeCode": localeCode?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<OrganizationPresenceDefinitionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     /**
@@ -2188,8 +2445,8 @@ open class PresenceAPI {
     "primary" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2685,6 +2942,66 @@ open class PresenceAPI {
         let requestBuilder: RequestBuilder<UserPresence>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Create a Presence Definition
+     
+     - parameter body: (body) The Presence Definition to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postPresenceDefinitions0(body: OrganizationPresenceDefinition, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = postPresenceDefinitions0WithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OrganizationPresenceDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a Presence Definition
+     - POST /api/v2/presence/definitions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languageLabels" : {
+    "key" : "languageLabels"
+  },
+  "systemPresence" : "Available",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "divisionId" : "divisionId",
+  "type" : "System",
+  "deactivated" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) The Presence Definition to create 
+
+     - returns: RequestBuilder<OrganizationPresenceDefinition> 
+     */
+    open class func postPresenceDefinitions0WithRequestBuilder(body: OrganizationPresenceDefinition) -> RequestBuilder<OrganizationPresenceDefinition> {        
+        let path = "/api/v2/presence/definitions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrganizationPresenceDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
     
@@ -3374,6 +3691,72 @@ open class PresenceAPI {
         let requestBuilder: RequestBuilder<OrganizationPresence>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update a Presence Definition
+     
+     - parameter definitionId: (path) Presence Definition ID 
+     - parameter body: (body) The updated Presence Definition 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putPresenceDefinition0(definitionId: String, body: OrganizationPresenceDefinition, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = putPresenceDefinition0WithRequestBuilder(definitionId: definitionId, body: body)
+        requestBuilder.execute { (response: Response<OrganizationPresenceDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Presence Definition
+     - PUT /api/v2/presence/definitions/{definitionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languageLabels" : {
+    "key" : "languageLabels"
+  },
+  "systemPresence" : "Available",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "divisionId" : "divisionId",
+  "type" : "System",
+  "deactivated" : true
+}, statusCode=200}]
+     
+     - parameter definitionId: (path) Presence Definition ID 
+     - parameter body: (body) The updated Presence Definition 
+
+     - returns: RequestBuilder<OrganizationPresenceDefinition> 
+     */
+    open class func putPresenceDefinition0WithRequestBuilder(definitionId: String, body: OrganizationPresenceDefinition) -> RequestBuilder<OrganizationPresenceDefinition> {        
+        var path = "/api/v2/presence/definitions/{definitionId}"
+        let definitionIdPreEscape = "\(definitionId)"
+        let definitionIdPostEscape = definitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{definitionId}", with: definitionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrganizationPresenceDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     

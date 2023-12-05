@@ -72,6 +72,8 @@ public class QueueRequest: Codable {
     public var autoAnswerOnly: Bool?
     /** Indicates whether voice transcription is enabled for this queue. */
     public var enableTranscription: Bool?
+    /** Indicates whether audio monitoring is enabled for this queue. */
+    public var enableAudioMonitoring: Bool?
     /** Indicates whether manual assignment is enabled for this queue. */
     public var enableManualAssignment: Bool?
     /** The Agent Owned Routing settings for the queue */
@@ -94,7 +96,7 @@ public class QueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -121,6 +123,7 @@ public class QueueRequest: Codable {
         self.onHoldPrompt = onHoldPrompt
         self.autoAnswerOnly = autoAnswerOnly
         self.enableTranscription = enableTranscription
+        self.enableAudioMonitoring = enableAudioMonitoring
         self.enableManualAssignment = enableManualAssignment
         self.agentOwnedRouting = agentOwnedRouting
         self.directRouting = directRouting
@@ -161,6 +164,7 @@ public class QueueRequest: Codable {
         case onHoldPrompt
         case autoAnswerOnly
         case enableTranscription
+        case enableAudioMonitoring
         case enableManualAssignment
         case agentOwnedRouting
         case directRouting

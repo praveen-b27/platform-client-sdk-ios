@@ -13,6 +13,7 @@ title: CallMediaPolicyConditions
 | **wrapupCodes** | [**[WrapupCode]**](WrapupCode.html) |  | [optional] |
 | **languages** | [**[Language]**](Language.html) |  | [optional] |
 | **timeAllowed** | [**TimeAllowed**](TimeAllowed.html) |  | [optional] |
+| **teams** | [**[Team]**](Team.html) | Teams to match conversations against | [optional] |
 | **directions** | **[String]** |  | [optional] |
 | **duration** | [**DurationCondition**](DurationCondition.html) |  | [optional] |
 {: class="table table-striped"}

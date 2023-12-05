@@ -439,6 +439,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -499,6 +500,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -516,6 +518,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -538,6 +541,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -558,6 +562,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -567,6 +572,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -1033,8 +1039,8 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -1144,6 +1150,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -1204,6 +1211,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1221,6 +1229,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1243,6 +1252,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -1263,6 +1273,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -1272,6 +1283,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -1388,6 +1400,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1448,6 +1461,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -1465,6 +1479,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -1487,6 +1502,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1507,6 +1523,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1516,6 +1533,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1564,6 +1582,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1624,6 +1643,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -1641,6 +1661,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -1663,6 +1684,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1683,6 +1705,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -1692,6 +1715,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2074,6 +2098,7 @@ open class ExternalContactsAPI {
   "revenue" : 1,
   "phoneNumber" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -2091,6 +2116,7 @@ open class ExternalContactsAPI {
   "name" : "name",
   "faxNumber" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -2222,6 +2248,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2282,6 +2309,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -2299,6 +2327,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -2321,6 +2350,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2341,6 +2371,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2350,6 +2381,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2398,6 +2430,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2458,6 +2491,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -2475,6 +2509,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -2497,6 +2532,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2517,6 +2553,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2526,6 +2563,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2731,8 +2769,8 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -2844,8 +2882,8 @@ open class ExternalContactsAPI {
     "externalOrganization" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -2965,6 +3003,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -2982,6 +3021,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3037,6 +3077,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3054,6 +3095,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3074,8 +3116,8 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -3521,6 +3563,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3538,6 +3581,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3593,6 +3637,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3610,6 +3655,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3670,6 +3716,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3730,6 +3777,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -3747,6 +3795,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -3769,6 +3818,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3789,6 +3839,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3798,6 +3849,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3846,6 +3898,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3906,6 +3959,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -3923,6 +3977,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -3945,6 +4000,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3965,6 +4021,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -3974,6 +4031,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4081,6 +4139,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4141,6 +4200,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -4158,6 +4218,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -4180,6 +4241,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4200,6 +4262,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4209,6 +4272,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4257,6 +4321,7 @@ open class ExternalContactsAPI {
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
     "homePhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4317,6 +4382,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -4334,6 +4400,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -4356,6 +4423,7 @@ open class ExternalContactsAPI {
     "firstName" : "firstName",
     "otherPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4376,6 +4444,7 @@ open class ExternalContactsAPI {
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4385,6 +4454,7 @@ open class ExternalContactsAPI {
     "salutation" : "salutation",
     "cellPhone" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4585,6 +4655,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4602,6 +4673,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4657,6 +4729,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4674,6 +4747,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -4961,6 +5035,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5021,6 +5096,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5038,6 +5114,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5060,6 +5137,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5080,6 +5158,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5089,6 +5168,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5159,6 +5239,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5219,6 +5300,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5236,6 +5318,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5258,6 +5341,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5278,6 +5362,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5287,6 +5372,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5405,6 +5491,7 @@ open class ExternalContactsAPI {
         "modifyDate" : "2000-01-23T04:56:07.000+00:00",
         "homePhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5465,6 +5552,7 @@ open class ExternalContactsAPI {
           "revenue" : 1,
           "phoneNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -5482,6 +5570,7 @@ open class ExternalContactsAPI {
           "name" : "name",
           "faxNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -5504,6 +5593,7 @@ open class ExternalContactsAPI {
         "firstName" : "firstName",
         "otherPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5524,6 +5614,7 @@ open class ExternalContactsAPI {
         "middleName" : "middleName",
         "workPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5533,6 +5624,7 @@ open class ExternalContactsAPI {
         "salutation" : "salutation",
         "cellPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5584,6 +5676,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5644,6 +5737,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5661,6 +5755,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5683,6 +5778,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5703,6 +5799,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5712,6 +5809,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -5777,6 +5875,7 @@ open class ExternalContactsAPI {
         "modifyDate" : "2000-01-23T04:56:07.000+00:00",
         "homePhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5837,6 +5936,7 @@ open class ExternalContactsAPI {
           "revenue" : 1,
           "phoneNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -5854,6 +5954,7 @@ open class ExternalContactsAPI {
           "name" : "name",
           "faxNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -5876,6 +5977,7 @@ open class ExternalContactsAPI {
         "firstName" : "firstName",
         "otherPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5896,6 +5998,7 @@ open class ExternalContactsAPI {
         "middleName" : "middleName",
         "workPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5905,6 +6008,7 @@ open class ExternalContactsAPI {
         "salutation" : "salutation",
         "cellPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -5956,6 +6060,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6016,6 +6121,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6033,6 +6139,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6055,6 +6162,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6075,6 +6183,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6084,6 +6193,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6304,6 +6414,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6364,6 +6475,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6381,6 +6493,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6403,6 +6516,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6423,6 +6537,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6432,6 +6547,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6502,6 +6618,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6562,6 +6679,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6579,6 +6697,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6601,6 +6720,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6621,6 +6741,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6630,6 +6751,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6748,6 +6870,7 @@ open class ExternalContactsAPI {
         "modifyDate" : "2000-01-23T04:56:07.000+00:00",
         "homePhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6808,6 +6931,7 @@ open class ExternalContactsAPI {
           "revenue" : 1,
           "phoneNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -6825,6 +6949,7 @@ open class ExternalContactsAPI {
           "name" : "name",
           "faxNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -6847,6 +6972,7 @@ open class ExternalContactsAPI {
         "firstName" : "firstName",
         "otherPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6867,6 +6993,7 @@ open class ExternalContactsAPI {
         "middleName" : "middleName",
         "workPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6876,6 +7003,7 @@ open class ExternalContactsAPI {
         "salutation" : "salutation",
         "cellPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -6927,6 +7055,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -6987,6 +7116,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7004,6 +7134,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7026,6 +7157,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -7046,6 +7178,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -7055,6 +7188,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -7120,6 +7254,7 @@ open class ExternalContactsAPI {
         "modifyDate" : "2000-01-23T04:56:07.000+00:00",
         "homePhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7180,6 +7315,7 @@ open class ExternalContactsAPI {
           "revenue" : 1,
           "phoneNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -7197,6 +7333,7 @@ open class ExternalContactsAPI {
           "name" : "name",
           "faxNumber" : {
             "extension" : 0,
+            "normalizationCountryCode" : "normalizationCountryCode",
             "e164" : "e164",
             "acceptsSMS" : true,
             "countryCode" : "countryCode",
@@ -7219,6 +7356,7 @@ open class ExternalContactsAPI {
         "firstName" : "firstName",
         "otherPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7239,6 +7377,7 @@ open class ExternalContactsAPI {
         "middleName" : "middleName",
         "workPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7248,6 +7387,7 @@ open class ExternalContactsAPI {
         "salutation" : "salutation",
         "cellPhone" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7299,6 +7439,7 @@ open class ExternalContactsAPI {
       "modifyDate" : "2000-01-23T04:56:07.000+00:00",
       "homePhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -7359,6 +7500,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7376,6 +7518,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -7398,6 +7541,7 @@ open class ExternalContactsAPI {
       "firstName" : "firstName",
       "otherPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -7418,6 +7562,7 @@ open class ExternalContactsAPI {
       "middleName" : "middleName",
       "workPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -7427,6 +7572,7 @@ open class ExternalContactsAPI {
       "salutation" : "salutation",
       "cellPhone" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8086,6 +8232,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8103,6 +8250,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8180,6 +8328,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8197,6 +8346,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8322,6 +8472,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8339,6 +8490,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8397,6 +8549,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8414,6 +8567,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8486,6 +8640,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8503,6 +8658,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8561,6 +8717,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8578,6 +8735,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8800,6 +8958,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8817,6 +8976,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8875,6 +9035,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8892,6 +9053,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -8964,6 +9126,7 @@ open class ExternalContactsAPI {
         "revenue" : 1,
         "phoneNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -8981,6 +9144,7 @@ open class ExternalContactsAPI {
         "name" : "name",
         "faxNumber" : {
           "extension" : 0,
+          "normalizationCountryCode" : "normalizationCountryCode",
           "e164" : "e164",
           "acceptsSMS" : true,
           "countryCode" : "countryCode",
@@ -9039,6 +9203,7 @@ open class ExternalContactsAPI {
       "revenue" : 1,
       "phoneNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -9056,6 +9221,7 @@ open class ExternalContactsAPI {
       "name" : "name",
       "faxNumber" : {
         "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
         "e164" : "e164",
         "acceptsSMS" : true,
         "countryCode" : "countryCode",
@@ -9748,6 +9914,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -9808,6 +9975,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -9825,6 +9993,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -9847,6 +10016,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -9867,6 +10037,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -9876,6 +10047,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -9976,6 +10148,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10036,6 +10209,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -10053,6 +10227,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -10075,6 +10250,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10095,6 +10271,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10104,6 +10281,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10261,6 +10439,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10321,6 +10500,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -10338,6 +10518,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -10360,6 +10541,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10380,6 +10562,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10389,6 +10572,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10487,6 +10671,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10547,6 +10732,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -10564,6 +10750,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -10586,6 +10773,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10606,6 +10794,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10615,6 +10804,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10779,6 +10969,7 @@ open class ExternalContactsAPI {
   "revenue" : 1,
   "phoneNumber" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -10796,6 +10987,7 @@ open class ExternalContactsAPI {
   "name" : "name",
   "faxNumber" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11027,6 +11219,7 @@ open class ExternalContactsAPI {
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
   "homePhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11087,6 +11280,7 @@ open class ExternalContactsAPI {
     "revenue" : 1,
     "phoneNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -11104,6 +11298,7 @@ open class ExternalContactsAPI {
     "name" : "name",
     "faxNumber" : {
       "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
       "e164" : "e164",
       "acceptsSMS" : true,
       "countryCode" : "countryCode",
@@ -11126,6 +11321,7 @@ open class ExternalContactsAPI {
   "firstName" : "firstName",
   "otherPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11146,6 +11342,7 @@ open class ExternalContactsAPI {
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11155,6 +11352,7 @@ open class ExternalContactsAPI {
   "salutation" : "salutation",
   "cellPhone" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11444,6 +11642,7 @@ open class ExternalContactsAPI {
   "revenue" : 1,
   "phoneNumber" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11461,6 +11660,7 @@ open class ExternalContactsAPI {
   "name" : "name",
   "faxNumber" : {
     "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
     "e164" : "e164",
     "acceptsSMS" : true,
     "countryCode" : "countryCode",
@@ -11613,6 +11813,8 @@ open class ExternalContactsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
   "externalOrganizationId" : "externalOrganizationId",
   "trustorOrgId" : "trustorOrgId",
   "externalOrganizationUri" : "https://openapi-generator.tech"

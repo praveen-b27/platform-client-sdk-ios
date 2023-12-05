@@ -22,7 +22,7 @@ public class SupportCenterModuleSetting: Codable {
     }
     /** Screen module type */
     public var type: ModelType?
-    /** Whether or not support center screen module is enabled */
+    /** Whether or not knowledge portal (previously support center) screen module is enabled */
     public var enabled: Bool?
     /** Compact category module template */
     public var compactCategoryModuleTemplate: SupportCenterCompactCategoryModuleTemplate?

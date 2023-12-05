@@ -11,9 +11,9 @@ import Foundation
 
 public class SupportCenterStyleSetting: Codable {
 
-    /** Support center hero customizations */
+    /** Knowledge portal (previously support center) hero customizations */
     public var heroStyle: SupportCenterHeroStyle?
-    /** Support center global customizations */
+    /** Knowledge portal (previously support center) global customizations */
     public var globalStyle: SupportCenterGlobalStyle?
 
     public init(heroStyle: SupportCenterHeroStyle?, globalStyle: SupportCenterGlobalStyle?) {

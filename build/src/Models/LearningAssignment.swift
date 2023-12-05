@@ -58,8 +58,10 @@ public class LearningAssignment: Codable {
     public var user: UserReference?
     /** The assessment form associated with this assignment */
     public var assessmentForm: AssessmentForm?
+    /** The length in minutes of the assignment */
+    public var lengthInMinutes: Int?
 
-    public init(_id: String?, assessment: LearningAssessment?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, isOverdue: Bool?, percentageScore: Float?, isRule: Bool?, isManual: Bool?, isPassed: Bool?, isLatest: Bool?, selfUri: String?, state: State?, dateRecommendedForCompletion: Date?, version: Int?, module: LearningModule?, user: UserReference?, assessmentForm: AssessmentForm?) {
+    public init(_id: String?, assessment: LearningAssessment?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, isOverdue: Bool?, percentageScore: Float?, isRule: Bool?, isManual: Bool?, isPassed: Bool?, isLatest: Bool?, selfUri: String?, state: State?, dateRecommendedForCompletion: Date?, version: Int?, module: LearningModule?, user: UserReference?, assessmentForm: AssessmentForm?, lengthInMinutes: Int?) {
         self._id = _id
         self.assessment = assessment
         self.createdBy = createdBy
@@ -79,6 +81,7 @@ public class LearningAssignment: Codable {
         self.module = module
         self.user = user
         self.assessmentForm = assessmentForm
+        self.lengthInMinutes = lengthInMinutes
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -101,6 +104,7 @@ public class LearningAssignment: Codable {
         case module
         case user
         case assessmentForm
+        case lengthInMinutes
     }
 
 

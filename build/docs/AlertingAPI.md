@@ -9,21 +9,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAlertingAlert**](AlertingAPI.html#deleteAlertingAlert) | Delete an alert |
 | [**deleteAlertingInteractionstatsAlert**](AlertingAPI.html#deleteAlertingInteractionstatsAlert) | Delete an interaction stats alert |
-| [**deleteAlertingInteractionstatsRule**](AlertingAPI.html#deleteAlertingInteractionstatsRule) | Delete an interaction stats rule. |
+| [**deleteAlertingInteractionstatsRule**](AlertingAPI.html#deleteAlertingInteractionstatsRule) | Delete an interaction stats rule |
 | [**deleteAlertingRule**](AlertingAPI.html#deleteAlertingRule) | Delete a rule. |
 | [**getAlertingAlert**](AlertingAPI.html#getAlertingAlert) | Get an alert |
-| [**getAlertingAlertsActive**](AlertingAPI.html#getAlertingAlertsActive) | Gets active alert count for a user. |
+| [**getAlertingAlertsActive**](AlertingAPI.html#getAlertingAlertsActive) | Gets active alert count for a user |
 | [**getAlertingInteractionstatsAlert**](AlertingAPI.html#getAlertingInteractionstatsAlert) | Get an interaction stats alert |
-| [**getAlertingInteractionstatsAlerts**](AlertingAPI.html#getAlertingInteractionstatsAlerts) | Get interaction stats alert list. |
-| [**getAlertingInteractionstatsAlertsUnread**](AlertingAPI.html#getAlertingInteractionstatsAlertsUnread) | Gets user unread count of interaction stats alerts. |
-| [**getAlertingInteractionstatsRule**](AlertingAPI.html#getAlertingInteractionstatsRule) | Get an interaction stats rule. |
-| [**getAlertingInteractionstatsRules**](AlertingAPI.html#getAlertingInteractionstatsRules) | Get an interaction stats rule list. |
+| [**getAlertingInteractionstatsAlerts**](AlertingAPI.html#getAlertingInteractionstatsAlerts) | Get interaction stats alert list |
+| [**getAlertingInteractionstatsAlertsUnread**](AlertingAPI.html#getAlertingInteractionstatsAlertsUnread) | Gets user unread count of interaction stats alerts |
+| [**getAlertingInteractionstatsRule**](AlertingAPI.html#getAlertingInteractionstatsRule) | Get an interaction stats rule |
+| [**getAlertingInteractionstatsRules**](AlertingAPI.html#getAlertingInteractionstatsRules) | Get an interaction stats rule list |
 | [**getAlertingRule**](AlertingAPI.html#getAlertingRule) | Get a rule. |
 | [**patchAlertingAlert**](AlertingAPI.html#patchAlertingAlert) | Allows an entity to mute/snooze an alert or update the unread status of the alert. |
 | [**patchAlertingAlertsBulk**](AlertingAPI.html#patchAlertingAlertsBulk) | Bulk alert updates |
 | [**patchAlertingRulesBulk**](AlertingAPI.html#patchAlertingRulesBulk) | Bulk update of notification lists |
 | [**postAlertingAlertsQuery**](AlertingAPI.html#postAlertingAlertsQuery) | Gets a paged list of alerts. The max page size is 50 |
-| [**postAlertingInteractionstatsRules**](AlertingAPI.html#postAlertingInteractionstatsRules) | Create an interaction stats rule. |
+| [**postAlertingInteractionstatsRules**](AlertingAPI.html#postAlertingInteractionstatsRules) | Create an interaction stats rule |
 | [**postAlertingRules**](AlertingAPI.html#postAlertingRules) | Create a Rule. |
 | [**postAlertingRulesBulkRemove**](AlertingAPI.html#postAlertingRulesBulkRemove) | Bulk remove rules |
 | [**postAlertingRulesQuery**](AlertingAPI.html#postAlertingRulesQuery) | Get a paged list of rules.  The max size of the page is 50 items. |
@@ -94,6 +94,8 @@ AlertingAPI.deleteAlertingAlert(alertId: alertId) { (error) in
 
 Delete an interaction stats alert
 
+Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
+
 
 
 Wraps DELETE /api/v2/alerting/interactionstats/alerts/{alertId}  
@@ -143,7 +145,9 @@ AlertingAPI.deleteAlertingInteractionstatsAlert(alertId: alertId) { (error) in
 
 > Void deleteAlertingInteractionstatsRule(ruleId)
 
-Delete an interaction stats rule.
+Delete an interaction stats rule
+
+Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
 
 
 
@@ -297,7 +301,9 @@ AlertingAPI.getAlertingAlert(alertId: alertId) { (response, error) in
 
 > [ActiveAlertCount](ActiveAlertCount.html) getAlertingAlertsActive()
 
-Gets active alert count for a user.
+Gets active alert count for a user
+
+Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to &#39;Count&#39; and alertStatus to &#39;Active&#39; in the request body.
 
 
 
@@ -345,6 +351,8 @@ This endpoint does not require any parameters.
 > [InteractionStatsAlert](InteractionStatsAlert.html) getAlertingInteractionstatsAlert(alertId, expand)
 
 Get an interaction stats alert
+
+Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
 
 
 
@@ -398,7 +406,9 @@ AlertingAPI.getAlertingInteractionstatsAlert(alertId: alertId, expand: expand) {
 
 > [InteractionStatsAlertContainer](InteractionStatsAlertContainer.html) getAlertingInteractionstatsAlerts(expand)
 
-Get interaction stats alert list.
+Get interaction stats alert list
+
+Apps should migrate to use POST /api/v2/alerting/alerts/query.
 
 
 
@@ -450,7 +460,9 @@ AlertingAPI.getAlertingInteractionstatsAlerts(expand: expand) { (response, error
 
 > [UnreadMetric](UnreadMetric.html) getAlertingInteractionstatsAlertsUnread()
 
-Gets user unread count of interaction stats alerts.
+Gets user unread count of interaction stats alerts
+
+Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to &#39;Count&#39; and viewStatus to &#39;Unread&#39; in the request body.
 
 
 
@@ -497,7 +509,9 @@ This endpoint does not require any parameters.
 
 > [InteractionStatsRule](InteractionStatsRule.html) getAlertingInteractionstatsRule(ruleId, expand)
 
-Get an interaction stats rule.
+Get an interaction stats rule
+
+Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
 
 
 
@@ -551,7 +565,9 @@ AlertingAPI.getAlertingInteractionstatsRule(ruleId: ruleId, expand: expand) { (r
 
 > [InteractionStatsRuleContainer](InteractionStatsRuleContainer.html) getAlertingInteractionstatsRules(expand)
 
-Get an interaction stats rule list.
+Get an interaction stats rule list
+
+Apps should migrate to use POST /api/v2/alerting/rules/query.
 
 
 
@@ -867,7 +883,9 @@ AlertingAPI.postAlertingAlertsQuery(body: body) { (response, error) in
 
 > [InteractionStatsRule](InteractionStatsRule.html) postAlertingInteractionstatsRules(body, expand)
 
-Create an interaction stats rule.
+Create an interaction stats rule
+
+Apps should migrate to use POST /api/v2/alerting/rules.
 
 
 
@@ -1133,6 +1151,8 @@ AlertingAPI.putAlertingAlert(alertId: alertId, body: body) { (response, error) i
 
 Update an interaction stats alert read status
 
+Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
+
 
 
 Wraps PUT /api/v2/alerting/interactionstats/alerts/{alertId}  
@@ -1188,6 +1208,8 @@ AlertingAPI.putAlertingInteractionstatsAlert(alertId: alertId, body: body, expan
 > [InteractionStatsRule](InteractionStatsRule.html) putAlertingInteractionstatsRule(ruleId, body, expand)
 
 Update an interaction stats rule
+
+Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
 
 
 

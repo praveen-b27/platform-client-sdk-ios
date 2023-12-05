@@ -76,6 +76,8 @@ public class Evaluation: Codable {
     public var resourceType: ResourceType?
     /** Is only true when the user making the request does not have sufficient permissions to see evaluation */
     public var redacted: Bool?
+    /** Team of the evaluation agent */
+    public var agentTeam: Team?
     public var isScoringIndex: Bool?
     /** List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit */
     public var authorizedActions: [String]?
@@ -86,7 +88,7 @@ public class Evaluation: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, agentTeam: Team?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -114,6 +116,7 @@ public class Evaluation: Codable {
         self.resourceId = resourceId
         self.resourceType = resourceType
         self.redacted = redacted
+        self.agentTeam = agentTeam
         self.isScoringIndex = isScoringIndex
         self.authorizedActions = authorizedActions
         self.hasAssistanceFailed = hasAssistanceFailed
@@ -149,6 +152,7 @@ public class Evaluation: Codable {
         case resourceId
         case resourceType
         case redacted
+        case agentTeam
         case isScoringIndex
         case authorizedActions
         case hasAssistanceFailed

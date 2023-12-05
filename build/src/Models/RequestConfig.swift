@@ -12,7 +12,7 @@ import Foundation
 
 public class RequestConfig: Codable {
 
-    /** URL that may include placeholders for requests to 3rd party service */
+    /** URL that may include placeholders for requests to 3rd party service. This value is read only for Function Integrations and will be set when a draft is created. */
     public var requestUrlTemplate: String?
     /** Velocity template to define request body sent to 3rd party service. */
     public var requestTemplate: String?

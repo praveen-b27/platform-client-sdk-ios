@@ -15,6 +15,7 @@ public class V2MobiusAlertsTopicAlertNotification: Codable {
         case device = "Device"
         case email = "Email"
         case sms = "Sms"
+        case push = "Push"
         case unknown = "Unknown"
     }
     public var recipient: String?

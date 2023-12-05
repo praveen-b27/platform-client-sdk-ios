@@ -757,8 +757,8 @@ open class JourneyAPI {
     "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1056,8 +1056,8 @@ open class JourneyAPI {
     "serviceLevel" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1235,8 +1235,8 @@ open class JourneyAPI {
     "contentOffer" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1285,15 +1285,15 @@ open class JourneyAPI {
      
      - parameter deploymentId: (path) The ID of the deployment sending the ping. 
      - parameter customerCookieId: (path) ID of the customer associated with the ping. 
-     - parameter sessionId: (query) UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session 
      - parameter dl: (query) Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)
      - parameter dt: (query) Document Title.  A human readable name for the page or screen (optional)
      - parameter appNamespace: (query) Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)
+     - parameter sessionId: (query) UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)
      - parameter sinceLastBeaconMilliseconds: (query) How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneyDeploymentCustomerPing(deploymentId: String, customerCookieId: String, sessionId: String, dl: String? = nil, dt: String? = nil, appNamespace: String? = nil, sinceLastBeaconMilliseconds: Int64? = nil, completion: @escaping ((_ data: DeploymentPing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneyDeploymentCustomerPingWithRequestBuilder(deploymentId: deploymentId, customerCookieId: customerCookieId, sessionId: sessionId, dl: dl, dt: dt, appNamespace: appNamespace, sinceLastBeaconMilliseconds: sinceLastBeaconMilliseconds)
+    open class func getJourneyDeploymentCustomerPing(deploymentId: String, customerCookieId: String, dl: String? = nil, dt: String? = nil, appNamespace: String? = nil, sessionId: String? = nil, sinceLastBeaconMilliseconds: Int64? = nil, completion: @escaping ((_ data: DeploymentPing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyDeploymentCustomerPingWithRequestBuilder(deploymentId: deploymentId, customerCookieId: customerCookieId, dl: dl, dt: dt, appNamespace: appNamespace, sessionId: sessionId, sinceLastBeaconMilliseconds: sinceLastBeaconMilliseconds)
         requestBuilder.execute { (response: Response<DeploymentPing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1342,15 +1342,15 @@ open class JourneyAPI {
      
      - parameter deploymentId: (path) The ID of the deployment sending the ping. 
      - parameter customerCookieId: (path) ID of the customer associated with the ping. 
-     - parameter sessionId: (query) UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session 
      - parameter dl: (query) Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)
      - parameter dt: (query) Document Title.  A human readable name for the page or screen (optional)
      - parameter appNamespace: (query) Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)
+     - parameter sessionId: (query) UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)
      - parameter sinceLastBeaconMilliseconds: (query) How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)
 
      - returns: RequestBuilder<DeploymentPing> 
      */
-    open class func getJourneyDeploymentCustomerPingWithRequestBuilder(deploymentId: String, customerCookieId: String, sessionId: String, dl: String? = nil, dt: String? = nil, appNamespace: String? = nil, sinceLastBeaconMilliseconds: Int64? = nil) -> RequestBuilder<DeploymentPing> {        
+    open class func getJourneyDeploymentCustomerPingWithRequestBuilder(deploymentId: String, customerCookieId: String, dl: String? = nil, dt: String? = nil, appNamespace: String? = nil, sessionId: String? = nil, sinceLastBeaconMilliseconds: Int64? = nil) -> RequestBuilder<DeploymentPing> {        
         var path = "/api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1513,8 +1513,8 @@ open class JourneyAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1809,8 +1809,8 @@ open class JourneyAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

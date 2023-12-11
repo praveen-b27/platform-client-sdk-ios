@@ -9761,7 +9761,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -9841,7 +9841,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -15666,7 +15666,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -15792,7 +15792,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -16265,7 +16265,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -16345,7 +16345,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -22170,7 +22170,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -22296,7 +22296,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -23116,7 +23116,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -23196,7 +23196,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -29021,7 +29021,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -29147,7 +29147,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -29620,7 +29620,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -29700,7 +29700,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -35525,7 +35525,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -35651,7 +35651,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },

@@ -26,22 +26,22 @@ public class UserInsightsTrend: Codable {
     public var comparativePeriod: WorkdayPeriod?
     /** The primary period work day date range */
     public var primaryPeriod: WorkdayPeriod?
-    /** The list of insights trend for each metric */
-    public var entities: [InsightsTrendMetricItem]?
-    /** The insights trend in total */
-    public var total: InsightsTrendTotalItem?
     /** The query user */
     public var user: UserReference?
+    /** The list of insights trend for each metric */
+    public var entities: [UserInsightsTrendMetricItem]?
+    /** The insights trend in total */
+    public var total: UserInsightsTrendTotalItem?
 
-    public init(performanceProfile: AddressableEntityRef?, division: DivisionReference?, granularity: Granularity?, comparativePeriod: WorkdayPeriod?, primaryPeriod: WorkdayPeriod?, entities: [InsightsTrendMetricItem]?, total: InsightsTrendTotalItem?, user: UserReference?) {
+    public init(performanceProfile: AddressableEntityRef?, division: DivisionReference?, granularity: Granularity?, comparativePeriod: WorkdayPeriod?, primaryPeriod: WorkdayPeriod?, user: UserReference?, entities: [UserInsightsTrendMetricItem]?, total: UserInsightsTrendTotalItem?) {
         self.performanceProfile = performanceProfile
         self.division = division
         self.granularity = granularity
         self.comparativePeriod = comparativePeriod
         self.primaryPeriod = primaryPeriod
+        self.user = user
         self.entities = entities
         self.total = total
-        self.user = user
     }
 
 

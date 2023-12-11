@@ -391,7 +391,7 @@ ObjectsAPI.postAuthorizationDivisionRestore(divisionId: divisionId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data | |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data | [optional] |
 {: class="table-striped"}
 
 

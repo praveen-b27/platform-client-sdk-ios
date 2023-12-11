@@ -324,11 +324,11 @@ open class OrganizationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "approvalNamespaces" : [ {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "type" : "Primary",
     "status" : "Approved"
   }, {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "type" : "Primary",
     "status" : "Approved"
   } ],
@@ -336,14 +336,14 @@ open class OrganizationAPI {
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
   }, {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
@@ -351,7 +351,7 @@ open class OrganizationAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "rejectReason" : "AlternativeExists",
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-  "namespace" : "agent.assistant",
+  "namespace" : "audit",
   "id" : "id",
   "key" : "key",
   "currentValue" : 6.027456183070403,
@@ -440,11 +440,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -452,14 +452,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -467,7 +467,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -477,11 +477,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -489,14 +489,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -504,7 +504,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -623,11 +623,11 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "value" : 7,
     "key" : "key"
   }, {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "value" : 7,
     "key" : "key"
   } ]
@@ -685,11 +685,11 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "value" : 7,
     "key" : "key"
   }, {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "value" : 7,
     "key" : "key"
   } ]

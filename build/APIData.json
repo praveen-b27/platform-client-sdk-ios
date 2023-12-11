@@ -4588,7 +4588,7 @@
       {
         "name": "body",
         "type": "AuthzDivision",
-        "required": "true"
+        "required": "false"
       }
     ],
     "return": "AuthzDivision",
@@ -20407,6 +20407,34 @@
     "return": "LocationsSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: LocationSearchRequest = new LocationSearchRequest(...) // Search request options\n\n// Search locations\nPostLocationsSearchRequest.postLocationsSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLocationsSearchRequest.postLocationsSearch was successful\")\n        dump(response)\n    }\n}"
   },
+  "getdiagnosticslogcapturebrowserentriesdownloadjob": {
+    "operationId": "getdiagnosticslogcapturebrowserentriesdownloadjob",
+    "functionName": "getDiagnosticsLogcaptureBrowserEntriesDownloadJob",
+    "signature": "getDiagnosticsLogcaptureBrowserEntriesDownloadJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "LogCaptureDownloadExecutionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // Job ID\n\n// Gets status of async download execution\nGetDiagnosticsLogcaptureBrowserEntriesDownloadJobRequest.getDiagnosticsLogcaptureBrowserEntriesDownloadJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDiagnosticsLogcaptureBrowserEntriesDownloadJobRequest.getDiagnosticsLogcaptureBrowserEntriesDownloadJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postdiagnosticslogcapturebrowserentriesdownloadjobs": {
+    "operationId": "postdiagnosticslogcapturebrowserentriesdownloadjobs",
+    "functionName": "postDiagnosticsLogcaptureBrowserEntriesDownloadJobs",
+    "signature": "postDiagnosticsLogcaptureBrowserEntriesDownloadJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "LogCaptureQueryRequest",
+        "required": "false"
+      }
+    ],
+    "return": "LogCaptureDownloadExecutionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: LogCaptureQueryRequest = new LogCaptureQueryRequest(...) // \n\n// Creates an async download execution\nPostDiagnosticsLogcaptureBrowserEntriesDownloadJobsRequest.postDiagnosticsLogcaptureBrowserEntriesDownloadJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostDiagnosticsLogcaptureBrowserEntriesDownloadJobsRequest.postDiagnosticsLogcaptureBrowserEntriesDownloadJobs was successful\")\n        dump(response)\n    }\n}"
+  },
   "deletemessagingsetting": {
     "operationId": "deletemessagingsetting",
     "functionName": "deleteMessagingSetting",
@@ -22248,6 +22276,32 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet _id: [String] = [\"\"] // contact list id(s) to delete\n\n// Delete multiple contact lists.\nDeleteOutboundContactlistsRequest.deleteOutboundContactlists(_id: _id) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundContactlistsRequest.deleteOutboundContactlists was successful\")\n    }\n}"
   },
+  "deleteoutboundcontactlisttemplate": {
+    "operationId": "deleteoutboundcontactlisttemplate",
+    "functionName": "deleteOutboundContactlisttemplate",
+    "signature": "deleteOutboundContactlisttemplate(contactListTemplateId)",
+    "parameters": [
+      {
+        "name": "contactListTemplateId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListTemplateId: String = \"\" // ContactListTemplate ID\n\n// Delete Contact List Template\nDeleteOutboundContactlisttemplateRequest.deleteOutboundContactlisttemplate(contactListTemplateId: contactListTemplateId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundContactlisttemplateRequest.deleteOutboundContactlisttemplate was successful\")\n    }\n}"
+  },
+  "deleteoutboundcontactlisttemplates": {
+    "operationId": "deleteoutboundcontactlisttemplates",
+    "functionName": "deleteOutboundContactlisttemplates",
+    "signature": "deleteOutboundContactlisttemplates(_id)",
+    "parameters": [
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet _id: [String] = [\"\"] // contact list template id(s) to delete\n\n// Delete multiple contact list templates.\nDeleteOutboundContactlisttemplatesRequest.deleteOutboundContactlisttemplates(_id: _id) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundContactlisttemplatesRequest.deleteOutboundContactlisttemplates was successful\")\n    }\n}"
+  },
   "deleteoutbounddigitalruleset": {
     "operationId": "deleteoutbounddigitalruleset",
     "functionName": "deleteOutboundDigitalruleset",
@@ -22327,6 +22381,32 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet expiredOnly: Bool = true // Set to true to only remove DNC entries that are expired\n\n// Deletes all or expired phone numbers from a DNC list.\nDeleteOutboundDnclistPhonenumbersRequest.deleteOutboundDnclistPhonenumbers(dncListId: dncListId, expiredOnly: expiredOnly) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDnclistPhonenumbersRequest.deleteOutboundDnclistPhonenumbers was successful\")\n    }\n}"
+  },
+  "deleteoutboundimporttemplate": {
+    "operationId": "deleteoutboundimporttemplate",
+    "functionName": "deleteOutboundImporttemplate",
+    "signature": "deleteOutboundImporttemplate(importTemplateId)",
+    "parameters": [
+      {
+        "name": "importTemplateId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet importTemplateId: String = \"\" // Import Template ID\n\n// Delete Import Template\nDeleteOutboundImporttemplateRequest.deleteOutboundImporttemplate(importTemplateId: importTemplateId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundImporttemplateRequest.deleteOutboundImporttemplate was successful\")\n    }\n}"
+  },
+  "deleteoutboundimporttemplates": {
+    "operationId": "deleteoutboundimporttemplates",
+    "functionName": "deleteOutboundImporttemplates",
+    "signature": "deleteOutboundImporttemplates(_id)",
+    "parameters": [
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet _id: [String] = [\"\"] // import template id(s) to delete\n\n// Delete multiple import templates.\nDeleteOutboundImporttemplatesRequest.deleteOutboundImporttemplates(_id: _id) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundImporttemplatesRequest.deleteOutboundImporttemplates was successful\")\n    }\n}"
   },
   "deleteoutboundmessagingcampaign": {
     "operationId": "deleteoutboundmessagingcampaign",
@@ -23264,6 +23344,64 @@
     "return": "ContactListDivisionViewListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet includeImportStatus: Bool = true // Include import status\nlet includeSize: Bool = true // Include size\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet filterType: GetOutboundContactlistsDivisionviewsRequest.FilterType_getOutboundContactlistsDivisionviews = GetOutboundContactlistsDivisionviewsRequest.FilterType_getOutboundContactlistsDivisionviews.enummember // Filter type\nlet name: String = \"\" // Name\nlet _id: [String] = [\"\"] // id\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: GetOutboundContactlistsDivisionviewsRequest.SortOrder_getOutboundContactlistsDivisionviews = GetOutboundContactlistsDivisionviewsRequest.SortOrder_getOutboundContactlistsDivisionviews.enummember // Sort order\n\n// Query a list of simplified contact list objects.\nGetOutboundContactlistsDivisionviewsRequest.getOutboundContactlistsDivisionviews(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlistsDivisionviewsRequest.getOutboundContactlistsDivisionviews was successful\")\n        dump(response)\n    }\n}"
   },
+  "getoutboundcontactlisttemplate": {
+    "operationId": "getoutboundcontactlisttemplate",
+    "functionName": "getOutboundContactlisttemplate",
+    "signature": "getOutboundContactlisttemplate(contactListTemplateId)",
+    "parameters": [
+      {
+        "name": "contactListTemplateId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContactListTemplate",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListTemplateId: String = \"\" // ContactListTemplate ID\n\n// Get Contact List Template\nGetOutboundContactlisttemplateRequest.getOutboundContactlisttemplate(contactListTemplateId: contactListTemplateId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlisttemplateRequest.getOutboundContactlisttemplate was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundcontactlisttemplates": {
+    "operationId": "getoutboundcontactlisttemplates",
+    "functionName": "getOutboundContactlisttemplates",
+    "signature": "getOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "allowEmptyResult",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
+        "name": "filterType",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ContactListTemplateEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page\nlet filterType: GetOutboundContactlisttemplatesRequest.FilterType_getOutboundContactlisttemplates = GetOutboundContactlisttemplatesRequest.FilterType_getOutboundContactlisttemplates.enummember // Filter type\nlet name: String = \"\" // Name\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: GetOutboundContactlisttemplatesRequest.SortOrder_getOutboundContactlisttemplates = GetOutboundContactlisttemplatesRequest.SortOrder_getOutboundContactlisttemplates.enummember // Sort order\n\n// Query a list of contact list templates\nGetOutboundContactlisttemplatesRequest.getOutboundContactlisttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlisttemplatesRequest.getOutboundContactlisttemplates was successful\")\n        dump(response)\n    }\n}"
+  },
   "getoutbounddigitalruleset": {
     "operationId": "getoutbounddigitalruleset",
     "functionName": "getOutboundDigitalruleset",
@@ -23578,6 +23716,88 @@
     ],
     "return": "DialerEventEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet filterType: GetOutboundEventsRequest.FilterType_getOutboundEvents = GetOutboundEventsRequest.FilterType_getOutboundEvents.enummember // Filter type\nlet category: String = \"\" // Category\nlet level: String = \"\" // Level\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: GetOutboundEventsRequest.SortOrder_getOutboundEvents = GetOutboundEventsRequest.SortOrder_getOutboundEvents.enummember // Sort order\n\n// Query Event Logs\nGetOutboundEventsRequest.getOutboundEvents(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, category: category, level: level, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundEventsRequest.getOutboundEvents was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundimporttemplate": {
+    "operationId": "getoutboundimporttemplate",
+    "functionName": "getOutboundImporttemplate",
+    "signature": "getOutboundImporttemplate(importTemplateId)",
+    "parameters": [
+      {
+        "name": "importTemplateId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ImportTemplate",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet importTemplateId: String = \"\" // Import Template ID\n\n// Get Import Template\nGetOutboundImporttemplateRequest.getOutboundImporttemplate(importTemplateId: importTemplateId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundImporttemplateRequest.getOutboundImporttemplate was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundimporttemplateimportstatus": {
+    "operationId": "getoutboundimporttemplateimportstatus",
+    "functionName": "getOutboundImporttemplateImportstatus",
+    "signature": "getOutboundImporttemplateImportstatus(importTemplateId, listNamePrefix)",
+    "parameters": [
+      {
+        "name": "importTemplateId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "listNamePrefix",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ImportStatus",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet importTemplateId: String = \"\" // importTemplateId\nlet listNamePrefix: String = \"\" // listNamePrefix\n\n// Get the import status for an import template.\nGetOutboundImporttemplateImportstatusRequest.getOutboundImporttemplateImportstatus(importTemplateId: importTemplateId, listNamePrefix: listNamePrefix) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundImporttemplateImportstatusRequest.getOutboundImporttemplateImportstatus was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundimporttemplates": {
+    "operationId": "getoutboundimporttemplates",
+    "functionName": "getOutboundImporttemplates",
+    "signature": "getOutboundImporttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "allowEmptyResult",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
+        "name": "filterType",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "contactListTemplateId",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ImportTemplateEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page\nlet filterType: GetOutboundImporttemplatesRequest.FilterType_getOutboundImporttemplates = GetOutboundImporttemplatesRequest.FilterType_getOutboundImporttemplates.enummember // Filter type\nlet name: String = \"\" // Name\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: GetOutboundImporttemplatesRequest.SortOrder_getOutboundImporttemplates = GetOutboundImporttemplatesRequest.SortOrder_getOutboundImporttemplates.enummember // Sort order\nlet contactListTemplateId: String = \"\" // Contact List Template ID\n\n// Query Import Templates\nGetOutboundImporttemplatesRequest.getOutboundImporttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListTemplateId: contactListTemplateId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundImporttemplatesRequest.getOutboundImporttemplates was successful\")\n        dump(response)\n    }\n}"
   },
   "getoutboundmessagingcampaign": {
     "operationId": "getoutboundmessagingcampaign",
@@ -24297,6 +24517,34 @@
     "return": "ContactList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactList = new ContactList(...) // ContactList\n\n// Create a contact List.\nPostOutboundContactlistsRequest.postOutboundContactlists(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundContactlistsRequest.postOutboundContactlists was successful\")\n        dump(response)\n    }\n}"
   },
+  "postoutboundcontactlisttemplates": {
+    "operationId": "postoutboundcontactlisttemplates",
+    "functionName": "postOutboundContactlisttemplates",
+    "signature": "postOutboundContactlisttemplates(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ContactListTemplate",
+        "required": "true"
+      }
+    ],
+    "return": "ContactListTemplate",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactListTemplate = new ContactListTemplate(...) // ContactListTemplate\n\n// Create Contact List Template\nPostOutboundContactlisttemplatesRequest.postOutboundContactlisttemplates(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundContactlisttemplatesRequest.postOutboundContactlisttemplates was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postoutboundcontactlisttemplatesbulkadd": {
+    "operationId": "postoutboundcontactlisttemplatesbulkadd",
+    "functionName": "postOutboundContactlisttemplatesBulkAdd",
+    "signature": "postOutboundContactlisttemplatesBulkAdd(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "[ContactListTemplate]",
+        "required": "true"
+      }
+    ],
+    "return": "ContactListTemplateEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [ContactListTemplate] = [new ContactListTemplate(...)] // contact list template(s) to add\n\n// Add multiple contact list templates\nPostOutboundContactlisttemplatesBulkAddRequest.postOutboundContactlisttemplatesBulkAdd(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundContactlisttemplatesBulkAddRequest.postOutboundContactlisttemplatesBulkAdd was successful\")\n        dump(response)\n    }\n}"
+  },
   "postoutboundconversationdnc": {
     "operationId": "postoutboundconversationdnc",
     "functionName": "postOutboundConversationDnc",
@@ -24392,6 +24640,34 @@
     ],
     "return": "DncList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DncListCreate = new DncListCreate(...) // DncList\n\n// Create dialer DNC list\nPostOutboundDnclistsRequest.postOutboundDnclists(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundDnclistsRequest.postOutboundDnclists was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postoutboundimporttemplates": {
+    "operationId": "postoutboundimporttemplates",
+    "functionName": "postOutboundImporttemplates",
+    "signature": "postOutboundImporttemplates(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ImportTemplate",
+        "required": "true"
+      }
+    ],
+    "return": "ImportTemplate",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ImportTemplate = new ImportTemplate(...) // ImportTemplate\n\n// Create Import Template\nPostOutboundImporttemplatesRequest.postOutboundImporttemplates(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundImporttemplatesRequest.postOutboundImporttemplates was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postoutboundimporttemplatesbulkadd": {
+    "operationId": "postoutboundimporttemplatesbulkadd",
+    "functionName": "postOutboundImporttemplatesBulkAdd",
+    "signature": "postOutboundImporttemplatesBulkAdd(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "[ImportTemplate]",
+        "required": "true"
+      }
+    ],
+    "return": "ImportTemplateEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [ImportTemplate] = [new ImportTemplate(...)] // import template(s) to add\n\n// Add multiple import templates\nPostOutboundImporttemplatesBulkAddRequest.postOutboundImporttemplatesBulkAdd(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundImporttemplatesBulkAddRequest.postOutboundImporttemplatesBulkAdd was successful\")\n        dump(response)\n    }\n}"
   },
   "postoutboundmessagingcampaigns": {
     "operationId": "postoutboundmessagingcampaigns",
@@ -24630,6 +24906,25 @@
     "return": "ContactListFilter",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListFilterId: String = \"\" // Contact List Filter ID\nlet body: ContactListFilter = new ContactListFilter(...) // ContactListFilter\n\n// Update Contact List Filter\nPutOutboundContactlistfilterRequest.putOutboundContactlistfilter(contactListFilterId: contactListFilterId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundContactlistfilterRequest.putOutboundContactlistfilter was successful\")\n        dump(response)\n    }\n}"
   },
+  "putoutboundcontactlisttemplate": {
+    "operationId": "putoutboundcontactlisttemplate",
+    "functionName": "putOutboundContactlisttemplate",
+    "signature": "putOutboundContactlisttemplate(contactListTemplateId, body)",
+    "parameters": [
+      {
+        "name": "contactListTemplateId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ContactListTemplate",
+        "required": "true"
+      }
+    ],
+    "return": "ContactListTemplate",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListTemplateId: String = \"\" // ContactListTemplate ID\nlet body: ContactListTemplate = new ContactListTemplate(...) // ContactListTemplate\n\n// Update a contact list template.\nPutOutboundContactlisttemplateRequest.putOutboundContactlisttemplate(contactListTemplateId: contactListTemplateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundContactlisttemplateRequest.putOutboundContactlisttemplate was successful\")\n        dump(response)\n    }\n}"
+  },
   "putoutbounddigitalruleset": {
     "operationId": "putoutbounddigitalruleset",
     "functionName": "putOutboundDigitalruleset",
@@ -24667,6 +24962,25 @@
     ],
     "return": "DncList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet body: DncList = new DncList(...) // DncList\n\n// Update dialer DNC list\nPutOutboundDnclistRequest.putOutboundDnclist(dncListId: dncListId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundDnclistRequest.putOutboundDnclist was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putoutboundimporttemplate": {
+    "operationId": "putoutboundimporttemplate",
+    "functionName": "putOutboundImporttemplate",
+    "signature": "putOutboundImporttemplate(importTemplateId, body)",
+    "parameters": [
+      {
+        "name": "importTemplateId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ImportTemplate",
+        "required": "true"
+      }
+    ],
+    "return": "ImportTemplate",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet importTemplateId: String = \"\" // Import Template ID\nlet body: ImportTemplate = new ImportTemplate(...) // importTemplate\n\n// Update Import Template\nPutOutboundImporttemplateRequest.putOutboundImporttemplate(importTemplateId: importTemplateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundImporttemplateRequest.putOutboundImporttemplate was successful\")\n        dump(response)\n    }\n}"
   },
   "putoutboundmessagingcampaign": {
     "operationId": "putoutboundmessagingcampaign",
@@ -29660,14 +29974,14 @@
         "required": "true"
       }
     ],
-    "return": "AgentMaxUtilization",
+    "return": "AgentMaxUtilizationResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.\nGetRoutingUserUtilizationRequest.getRoutingUserUtilization(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingUserUtilizationRequest.getRoutingUserUtilization was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingutilization": {
     "operationId": "getroutingutilization",
     "functionName": "getRoutingUtilization",
     "signature": "getRoutingUtilization()",
-    "return": "Utilization",
+    "return": "UtilizationResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the organization-wide max utilization settings.\nGetRoutingUtilizationRequest.getRoutingUtilization() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingUtilizationRequest.getRoutingUtilization was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingwrapupcode": {
@@ -30627,12 +30941,12 @@
       },
       {
         "name": "body",
-        "type": "Utilization",
+        "type": "UtilizationRequest",
         "required": "true"
       }
     ],
-    "return": "AgentMaxUtilization",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: Utilization = new Utilization(...) // utilization\n\n// Update the user's max utilization settings.  Include only those media types requiring custom configuration.\nPutRoutingUserUtilizationRequest.putRoutingUserUtilization(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingUserUtilizationRequest.putRoutingUserUtilization was successful\")\n        dump(response)\n    }\n}"
+    "return": "AgentMaxUtilizationResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: UtilizationRequest = new UtilizationRequest(...) // utilization\n\n// Update the user's max utilization settings.  Include only those media types requiring custom configuration.\nPutRoutingUserUtilizationRequest.putRoutingUserUtilization(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingUserUtilizationRequest.putRoutingUserUtilization was successful\")\n        dump(response)\n    }\n}"
   },
   "putroutingutilization": {
     "operationId": "putroutingutilization",
@@ -30641,12 +30955,12 @@
     "parameters": [
       {
         "name": "body",
-        "type": "Utilization",
+        "type": "UtilizationRequest",
         "required": "true"
       }
     ],
-    "return": "Utilization",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Utilization = new Utilization(...) // utilization\n\n// Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.\nPutRoutingUtilizationRequest.putRoutingUtilization(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingUtilizationRequest.putRoutingUtilization was successful\")\n        dump(response)\n    }\n}"
+    "return": "UtilizationResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UtilizationRequest = new UtilizationRequest(...) // utilization\n\n// Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.\nPutRoutingUtilizationRequest.putRoutingUtilization(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingUtilizationRequest.putRoutingUtilization was successful\")\n        dump(response)\n    }\n}"
   },
   "putroutingwrapupcode": {
     "operationId": "putroutingwrapupcode",

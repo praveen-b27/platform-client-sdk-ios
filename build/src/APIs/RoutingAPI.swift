@@ -7618,9 +7618,9 @@ open class RoutingAPI {
      - parameter userId: (path) User ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingUserUtilization(userId: String, completion: @escaping ((_ data: AgentMaxUtilization?,_ error: Error?) -> Void)) {
+    open class func getRoutingUserUtilization(userId: String, completion: @escaping ((_ data: AgentMaxUtilizationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingUserUtilizationWithRequestBuilder(userId: userId)
-        requestBuilder.execute { (response: Response<AgentMaxUtilization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AgentMaxUtilizationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7655,9 +7655,9 @@ open class RoutingAPI {
      
      - parameter userId: (path) User ID 
 
-     - returns: RequestBuilder<AgentMaxUtilization> 
+     - returns: RequestBuilder<AgentMaxUtilizationResponse> 
      */
-    open class func getRoutingUserUtilizationWithRequestBuilder(userId: String) -> RequestBuilder<AgentMaxUtilization> {        
+    open class func getRoutingUserUtilizationWithRequestBuilder(userId: String) -> RequestBuilder<AgentMaxUtilizationResponse> {        
         var path = "/api/v2/routing/users/{userId}/utilization"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7667,7 +7667,7 @@ open class RoutingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AgentMaxUtilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AgentMaxUtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -7677,9 +7677,9 @@ open class RoutingAPI {
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingUtilization(completion: @escaping ((_ data: Utilization?,_ error: Error?) -> Void)) {
+    open class func getRoutingUtilization(completion: @escaping ((_ data: UtilizationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingUtilizationWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Utilization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UtilizationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7711,16 +7711,16 @@ open class RoutingAPI {
   }
 }, statusCode=200}]
 
-     - returns: RequestBuilder<Utilization> 
+     - returns: RequestBuilder<UtilizationResponse> 
      */
-    open class func getRoutingUtilizationWithRequestBuilder() -> RequestBuilder<Utilization> {        
+    open class func getRoutingUtilizationWithRequestBuilder() -> RequestBuilder<UtilizationResponse> {        
         let path = "/api/v2/routing/utilization"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Utilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -13830,9 +13830,9 @@ open class RoutingAPI {
      - parameter body: (body) utilization 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingUserUtilization(userId: String, body: Utilization, completion: @escaping ((_ data: AgentMaxUtilization?,_ error: Error?) -> Void)) {
+    open class func putRoutingUserUtilization(userId: String, body: UtilizationRequest, completion: @escaping ((_ data: AgentMaxUtilizationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingUserUtilizationWithRequestBuilder(userId: userId, body: body)
-        requestBuilder.execute { (response: Response<AgentMaxUtilization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AgentMaxUtilizationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -13868,9 +13868,9 @@ open class RoutingAPI {
      - parameter userId: (path) User ID 
      - parameter body: (body) utilization 
 
-     - returns: RequestBuilder<AgentMaxUtilization> 
+     - returns: RequestBuilder<AgentMaxUtilizationResponse> 
      */
-    open class func putRoutingUserUtilizationWithRequestBuilder(userId: String, body: Utilization) -> RequestBuilder<AgentMaxUtilization> {        
+    open class func putRoutingUserUtilizationWithRequestBuilder(userId: String, body: UtilizationRequest) -> RequestBuilder<AgentMaxUtilizationResponse> {        
         var path = "/api/v2/routing/users/{userId}/utilization"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13880,7 +13880,7 @@ open class RoutingAPI {
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AgentMaxUtilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AgentMaxUtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -13892,9 +13892,9 @@ open class RoutingAPI {
      - parameter body: (body) utilization 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingUtilization(body: Utilization, completion: @escaping ((_ data: Utilization?,_ error: Error?) -> Void)) {
+    open class func putRoutingUtilization(body: UtilizationRequest, completion: @escaping ((_ data: UtilizationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingUtilizationWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<Utilization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UtilizationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -13928,16 +13928,16 @@ open class RoutingAPI {
      
      - parameter body: (body) utilization 
 
-     - returns: RequestBuilder<Utilization> 
+     - returns: RequestBuilder<UtilizationResponse> 
      */
-    open class func putRoutingUtilizationWithRequestBuilder(body: Utilization) -> RequestBuilder<Utilization> {        
+    open class func putRoutingUtilizationWithRequestBuilder(body: UtilizationRequest) -> RequestBuilder<UtilizationResponse> {        
         let path = "/api/v2/routing/utilization"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Utilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

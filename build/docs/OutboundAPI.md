@@ -18,11 +18,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundContactlistContacts**](OutboundAPI.html#deleteOutboundContactlistContacts) | Delete contacts from a contact list. |
 | [**deleteOutboundContactlistfilter**](OutboundAPI.html#deleteOutboundContactlistfilter) | Delete Contact List Filter |
 | [**deleteOutboundContactlists**](OutboundAPI.html#deleteOutboundContactlists) | Delete multiple contact lists. |
+| [**deleteOutboundContactlisttemplate**](OutboundAPI.html#deleteOutboundContactlisttemplate) | Delete Contact List Template |
+| [**deleteOutboundContactlisttemplates**](OutboundAPI.html#deleteOutboundContactlisttemplates) | Delete multiple contact list templates. |
 | [**deleteOutboundDigitalruleset**](OutboundAPI.html#deleteOutboundDigitalruleset) | Delete an Outbound Digital Rule Set |
 | [**deleteOutboundDnclist**](OutboundAPI.html#deleteOutboundDnclist) | Delete dialer DNC list |
 | [**deleteOutboundDnclistCustomexclusioncolumns**](OutboundAPI.html#deleteOutboundDnclistCustomexclusioncolumns) | Deletes all or expired custom exclusion column entries from a DNC list. |
 | [**deleteOutboundDnclistEmailaddresses**](OutboundAPI.html#deleteOutboundDnclistEmailaddresses) | Deletes all or expired email addresses from a DNC list. |
 | [**deleteOutboundDnclistPhonenumbers**](OutboundAPI.html#deleteOutboundDnclistPhonenumbers) | Deletes all or expired phone numbers from a DNC list. |
+| [**deleteOutboundImporttemplate**](OutboundAPI.html#deleteOutboundImporttemplate) | Delete Import Template |
+| [**deleteOutboundImporttemplates**](OutboundAPI.html#deleteOutboundImporttemplates) | Delete multiple import templates. |
 | [**deleteOutboundMessagingcampaign**](OutboundAPI.html#deleteOutboundMessagingcampaign) | Delete an Outbound Messaging Campaign |
 | [**deleteOutboundMessagingcampaignProgress**](OutboundAPI.html#deleteOutboundMessagingcampaignProgress) | Reset messaging campaign progress and recycle the messaging campaign |
 | [**deleteOutboundRuleset**](OutboundAPI.html#deleteOutboundRuleset) | Delete a Rule Set. |
@@ -60,6 +64,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundContactlists**](OutboundAPI.html#getOutboundContactlists) | Query a list of contact lists. |
 | [**getOutboundContactlistsDivisionview**](OutboundAPI.html#getOutboundContactlistsDivisionview) | Get a basic ContactList information object |
 | [**getOutboundContactlistsDivisionviews**](OutboundAPI.html#getOutboundContactlistsDivisionviews) | Query a list of simplified contact list objects. |
+| [**getOutboundContactlisttemplate**](OutboundAPI.html#getOutboundContactlisttemplate) | Get Contact List Template |
+| [**getOutboundContactlisttemplates**](OutboundAPI.html#getOutboundContactlisttemplates) | Query a list of contact list templates |
 | [**getOutboundDigitalruleset**](OutboundAPI.html#getOutboundDigitalruleset) | Get an Outbound Digital Rule Set |
 | [**getOutboundDigitalrulesets**](OutboundAPI.html#getOutboundDigitalrulesets) | Query a list of Outbound Digital Rule Sets |
 | [**getOutboundDnclist**](OutboundAPI.html#getOutboundDnclist) | Get dialer DNC list |
@@ -70,6 +76,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundDnclistsDivisionviews**](OutboundAPI.html#getOutboundDnclistsDivisionviews) | Query a list of simplified dnc list objects. |
 | [**getOutboundEvent**](OutboundAPI.html#getOutboundEvent) | Get Dialer Event |
 | [**getOutboundEvents**](OutboundAPI.html#getOutboundEvents) | Query Event Logs |
+| [**getOutboundImporttemplate**](OutboundAPI.html#getOutboundImporttemplate) | Get Import Template |
+| [**getOutboundImporttemplateImportstatus**](OutboundAPI.html#getOutboundImporttemplateImportstatus) | Get the import status for an import template. |
+| [**getOutboundImporttemplates**](OutboundAPI.html#getOutboundImporttemplates) | Query Import Templates |
 | [**getOutboundMessagingcampaign**](OutboundAPI.html#getOutboundMessagingcampaign) | Get an Outbound Messaging Campaign |
 | [**getOutboundMessagingcampaignDiagnostics**](OutboundAPI.html#getOutboundMessagingcampaignDiagnostics) | Get messaging campaign diagnostics |
 | [**getOutboundMessagingcampaignProgress**](OutboundAPI.html#getOutboundMessagingcampaignProgress) | Get messaging campaign&#39;s progress |
@@ -110,12 +119,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlistfilters**](OutboundAPI.html#postOutboundContactlistfilters) | Create Contact List Filter |
 | [**postOutboundContactlistfiltersPreview**](OutboundAPI.html#postOutboundContactlistfiltersPreview) | Get a preview of the output of a contact list filter |
 | [**postOutboundContactlists**](OutboundAPI.html#postOutboundContactlists) | Create a contact List. |
+| [**postOutboundContactlisttemplates**](OutboundAPI.html#postOutboundContactlisttemplates) | Create Contact List Template |
+| [**postOutboundContactlisttemplatesBulkAdd**](OutboundAPI.html#postOutboundContactlisttemplatesBulkAdd) | Add multiple contact list templates |
 | [**postOutboundConversationDnc**](OutboundAPI.html#postOutboundConversationDnc) | Add phone numbers to a Dialer DNC list. |
 | [**postOutboundDigitalrulesets**](OutboundAPI.html#postOutboundDigitalrulesets) | Create an Outbound Digital Rule Set |
 | [**postOutboundDnclistEmailaddresses**](OutboundAPI.html#postOutboundDnclistEmailaddresses) | Add email addresses to a DNC list. |
 | [**postOutboundDnclistExport**](OutboundAPI.html#postOutboundDnclistExport) | Initiate the export of a dnc list. |
 | [**postOutboundDnclistPhonenumbers**](OutboundAPI.html#postOutboundDnclistPhonenumbers) | Add phone numbers to a DNC list. |
 | [**postOutboundDnclists**](OutboundAPI.html#postOutboundDnclists) | Create dialer DNC list |
+| [**postOutboundImporttemplates**](OutboundAPI.html#postOutboundImporttemplates) | Create Import Template |
+| [**postOutboundImporttemplatesBulkAdd**](OutboundAPI.html#postOutboundImporttemplatesBulkAdd) | Add multiple import templates |
 | [**postOutboundMessagingcampaigns**](OutboundAPI.html#postOutboundMessagingcampaigns) | Create a Messaging Campaign |
 | [**postOutboundMessagingcampaignsProgress**](OutboundAPI.html#postOutboundMessagingcampaignsProgress) | Get progress for a list of messaging campaigns |
 | [**postOutboundRulesets**](OutboundAPI.html#postOutboundRulesets) | Create a Rule Set. |
@@ -129,8 +142,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putOutboundContactlist**](OutboundAPI.html#putOutboundContactlist) | Update a contact list. |
 | [**putOutboundContactlistContact**](OutboundAPI.html#putOutboundContactlistContact) | Update a contact. |
 | [**putOutboundContactlistfilter**](OutboundAPI.html#putOutboundContactlistfilter) | Update Contact List Filter |
+| [**putOutboundContactlisttemplate**](OutboundAPI.html#putOutboundContactlisttemplate) | Update a contact list template. |
 | [**putOutboundDigitalruleset**](OutboundAPI.html#putOutboundDigitalruleset) | Update an Outbound Digital Rule Set |
 | [**putOutboundDnclist**](OutboundAPI.html#putOutboundDnclist) | Update dialer DNC list |
+| [**putOutboundImporttemplate**](OutboundAPI.html#putOutboundImporttemplate) | Update Import Template |
 | [**putOutboundMessagingcampaign**](OutboundAPI.html#putOutboundMessagingcampaign) | Update an Outbound Messaging Campaign |
 | [**putOutboundRuleset**](OutboundAPI.html#putOutboundRuleset) | Update a Rule Set. |
 | [**putOutboundSchedulesCampaign**](OutboundAPI.html#putOutboundSchedulesCampaign) | Update a new campaign schedule. |
@@ -707,6 +722,108 @@ OutboundAPI.deleteOutboundContactlists(_id: _id) { (error) in
 
 `nil` (empty response body)
 
+<a name="deleteOutboundContactlisttemplate"></a>
+
+# **deleteOutboundContactlisttemplate**
+
+
+
+> Void deleteOutboundContactlisttemplate(contactListTemplateId)
+
+Delete Contact List Template
+
+
+
+Wraps DELETE /api/v2/outbound/contactlisttemplates/{contactListTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListTemplateId: String = "" // ContactListTemplate ID
+
+// Code example
+OutboundAPI.deleteOutboundContactlisttemplate(contactListTemplateId: contactListTemplateId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundContactlisttemplate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListTemplateId** | **String**| ContactListTemplate ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundContactlisttemplates"></a>
+
+# **deleteOutboundContactlisttemplates**
+
+
+
+> Void deleteOutboundContactlisttemplates(_id)
+
+Delete multiple contact list templates.
+
+
+
+Wraps DELETE /api/v2/outbound/contactlisttemplates  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // contact list template id(s) to delete
+
+// Code example
+OutboundAPI.deleteOutboundContactlisttemplates(_id: _id) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundContactlisttemplates was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String.html)| contact list template id(s) to delete | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="deleteOutboundDigitalruleset"></a>
 
 # **deleteOutboundDigitalruleset**
@@ -967,6 +1084,108 @@ OutboundAPI.deleteOutboundDnclistPhonenumbers(dncListId: dncListId, expiredOnly:
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| DncList ID | |
 | **expiredOnly** | **Bool**| Set to true to only remove DNC entries that are expired | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundImporttemplate"></a>
+
+# **deleteOutboundImporttemplate**
+
+
+
+> Void deleteOutboundImporttemplate(importTemplateId)
+
+Delete Import Template
+
+
+
+Wraps DELETE /api/v2/outbound/importtemplates/{importTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let importTemplateId: String = "" // Import Template ID
+
+// Code example
+OutboundAPI.deleteOutboundImporttemplate(importTemplateId: importTemplateId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundImporttemplate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **importTemplateId** | **String**| Import Template ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundImporttemplates"></a>
+
+# **deleteOutboundImporttemplates**
+
+
+
+> Void deleteOutboundImporttemplates(_id)
+
+Delete multiple import templates.
+
+
+
+Wraps DELETE /api/v2/outbound/importtemplates  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // import template id(s) to delete
+
+// Code example
+OutboundAPI.deleteOutboundImporttemplates(_id: _id) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundImporttemplates was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String.html)| import template id(s) to delete | |
 {: class="table-striped"}
 
 
@@ -3078,6 +3297,122 @@ OutboundAPI.getOutboundContactlistsDivisionviews(includeImportStatus: includeImp
 
 [**ContactListDivisionViewListing**](ContactListDivisionViewListing.html)
 
+<a name="getOutboundContactlisttemplate"></a>
+
+# **getOutboundContactlisttemplate**
+
+
+
+> [ContactListTemplate](ContactListTemplate.html) getOutboundContactlisttemplate(contactListTemplateId)
+
+Get Contact List Template
+
+
+
+Wraps GET /api/v2/outbound/contactlisttemplates/{contactListTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListTemplateId: String = "" // ContactListTemplate ID
+
+// Code example
+OutboundAPI.getOutboundContactlisttemplate(contactListTemplateId: contactListTemplateId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundContactlisttemplate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListTemplateId** | **String**| ContactListTemplate ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListTemplate**](ContactListTemplate.html)
+
+<a name="getOutboundContactlisttemplates"></a>
+
+# **getOutboundContactlisttemplates**
+
+
+
+> [ContactListTemplateEntityListing](ContactListTemplateEntityListing.html) getOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
+
+Query a list of contact list templates
+
+
+
+Wraps GET /api/v2/outbound/contactlisttemplates  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
+let filterType: OutboundAPI.FilterType_getOutboundContactlisttemplates = OutboundAPI.FilterType_getOutboundContactlisttemplates.enummember // Filter type
+let name: String = "" // Name
+let sortBy: String = "" // Sort by
+let sortOrder: OutboundAPI.SortOrder_getOutboundContactlisttemplates = OutboundAPI.SortOrder_getOutboundContactlisttemplates.enummember // Sort order
+
+// Code example
+OutboundAPI.getOutboundContactlisttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundContactlisttemplates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **name** | **String**| Name | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
+
 <a name="getOutboundDigitalruleset"></a>
 
 # **getOutboundDigitalruleset**
@@ -3672,6 +4007,178 @@ OutboundAPI.getOutboundEvents(pageSize: pageSize, pageNumber: pageNumber, filter
 ### Return type
 
 [**DialerEventEntityListing**](DialerEventEntityListing.html)
+
+<a name="getOutboundImporttemplate"></a>
+
+# **getOutboundImporttemplate**
+
+
+
+> [ImportTemplate](ImportTemplate.html) getOutboundImporttemplate(importTemplateId)
+
+Get Import Template
+
+
+
+Wraps GET /api/v2/outbound/importtemplates/{importTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let importTemplateId: String = "" // Import Template ID
+
+// Code example
+OutboundAPI.getOutboundImporttemplate(importTemplateId: importTemplateId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundImporttemplate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **importTemplateId** | **String**| Import Template ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportTemplate**](ImportTemplate.html)
+
+<a name="getOutboundImporttemplateImportstatus"></a>
+
+# **getOutboundImporttemplateImportstatus**
+
+
+
+> [ImportStatus](ImportStatus.html) getOutboundImporttemplateImportstatus(importTemplateId, listNamePrefix)
+
+Get the import status for an import template.
+
+
+
+Wraps GET /api/v2/outbound/importtemplates/{importTemplateId}/importstatus  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let importTemplateId: String = "" // importTemplateId
+let listNamePrefix: String = "" // listNamePrefix
+
+// Code example
+OutboundAPI.getOutboundImporttemplateImportstatus(importTemplateId: importTemplateId, listNamePrefix: listNamePrefix) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundImporttemplateImportstatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **importTemplateId** | **String**| importTemplateId | |
+| **listNamePrefix** | **String**| listNamePrefix | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportStatus**](ImportStatus.html)
+
+<a name="getOutboundImporttemplates"></a>
+
+# **getOutboundImporttemplates**
+
+
+
+> [ImportTemplateEntityListing](ImportTemplateEntityListing.html) getOutboundImporttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId)
+
+Query Import Templates
+
+
+
+Wraps GET /api/v2/outbound/importtemplates  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
+let filterType: OutboundAPI.FilterType_getOutboundImporttemplates = OutboundAPI.FilterType_getOutboundImporttemplates.enummember // Filter type
+let name: String = "" // Name
+let sortBy: String = "" // Sort by
+let sortOrder: OutboundAPI.SortOrder_getOutboundImporttemplates = OutboundAPI.SortOrder_getOutboundImporttemplates.enummember // Sort order
+let contactListTemplateId: String = "" // Contact List Template ID
+
+// Code example
+OutboundAPI.getOutboundImporttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListTemplateId: contactListTemplateId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundImporttemplates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **name** | **String**| Name | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **contactListTemplateId** | **String**| Contact List Template ID | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportTemplateEntityListing**](ImportTemplateEntityListing.html)
 
 <a name="getOutboundMessagingcampaign"></a>
 
@@ -5828,6 +6335,110 @@ OutboundAPI.postOutboundContactlists(body: body) { (response, error) in
 
 [**ContactList**](ContactList.html)
 
+<a name="postOutboundContactlisttemplates"></a>
+
+# **postOutboundContactlisttemplates**
+
+
+
+> [ContactListTemplate](ContactListTemplate.html) postOutboundContactlisttemplates(body)
+
+Create Contact List Template
+
+
+
+Wraps POST /api/v2/outbound/contactlisttemplates  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactListTemplate = new ContactListTemplate(...) // ContactListTemplate
+
+// Code example
+OutboundAPI.postOutboundContactlisttemplates(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlisttemplates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactListTemplate**](ContactListTemplate.html)| ContactListTemplate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListTemplate**](ContactListTemplate.html)
+
+<a name="postOutboundContactlisttemplatesBulkAdd"></a>
+
+# **postOutboundContactlisttemplatesBulkAdd**
+
+
+
+> [ContactListTemplateEntityListing](ContactListTemplateEntityListing.html) postOutboundContactlisttemplatesBulkAdd(body)
+
+Add multiple contact list templates
+
+
+
+Wraps POST /api/v2/outbound/contactlisttemplates/bulk/add  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [ContactListTemplate] = [new ContactListTemplate(...)] // contact list template(s) to add
+
+// Code example
+OutboundAPI.postOutboundContactlisttemplatesBulkAdd(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlisttemplatesBulkAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**[ContactListTemplate]**](ContactListTemplate.html)| contact list template(s) to add | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
+
 <a name="postOutboundConversationDnc"></a>
 
 # **postOutboundConversationDnc**
@@ -6149,6 +6760,110 @@ OutboundAPI.postOutboundDnclists(body: body) { (response, error) in
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="postOutboundImporttemplates"></a>
+
+# **postOutboundImporttemplates**
+
+
+
+> [ImportTemplate](ImportTemplate.html) postOutboundImporttemplates(body)
+
+Create Import Template
+
+
+
+Wraps POST /api/v2/outbound/importtemplates  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ImportTemplate = new ImportTemplate(...) // ImportTemplate
+
+// Code example
+OutboundAPI.postOutboundImporttemplates(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundImporttemplates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ImportTemplate**](ImportTemplate.html)| ImportTemplate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportTemplate**](ImportTemplate.html)
+
+<a name="postOutboundImporttemplatesBulkAdd"></a>
+
+# **postOutboundImporttemplatesBulkAdd**
+
+
+
+> [ImportTemplateEntityListing](ImportTemplateEntityListing.html) postOutboundImporttemplatesBulkAdd(body)
+
+Add multiple import templates
+
+
+
+Wraps POST /api/v2/outbound/importtemplates/bulk/add  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [ImportTemplate] = [new ImportTemplate(...)] // import template(s) to add
+
+// Code example
+OutboundAPI.postOutboundImporttemplatesBulkAdd(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundImporttemplatesBulkAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**[ImportTemplate]**](ImportTemplate.html)| import template(s) to add | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportTemplateEntityListing**](ImportTemplateEntityListing.html)
 
 <a name="postOutboundMessagingcampaigns"></a>
 
@@ -6851,6 +7566,60 @@ OutboundAPI.putOutboundContactlistfilter(contactListFilterId: contactListFilterI
 
 [**ContactListFilter**](ContactListFilter.html)
 
+<a name="putOutboundContactlisttemplate"></a>
+
+# **putOutboundContactlisttemplate**
+
+
+
+> [ContactListTemplate](ContactListTemplate.html) putOutboundContactlisttemplate(contactListTemplateId, body)
+
+Update a contact list template.
+
+
+
+Wraps PUT /api/v2/outbound/contactlisttemplates/{contactListTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListTemplateId: String = "" // ContactListTemplate ID
+let body: ContactListTemplate = new ContactListTemplate(...) // ContactListTemplate
+
+// Code example
+OutboundAPI.putOutboundContactlisttemplate(contactListTemplateId: contactListTemplateId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundContactlisttemplate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListTemplateId** | **String**| ContactListTemplate ID | |
+| **body** | [**ContactListTemplate**](ContactListTemplate.html)| ContactListTemplate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListTemplate**](ContactListTemplate.html)
+
 <a name="putOutboundDigitalruleset"></a>
 
 # **putOutboundDigitalruleset**
@@ -6958,6 +7727,60 @@ OutboundAPI.putOutboundDnclist(dncListId: dncListId, body: body) { (response, er
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="putOutboundImporttemplate"></a>
+
+# **putOutboundImporttemplate**
+
+
+
+> [ImportTemplate](ImportTemplate.html) putOutboundImporttemplate(importTemplateId, body)
+
+Update Import Template
+
+
+
+Wraps PUT /api/v2/outbound/importtemplates/{importTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let importTemplateId: String = "" // Import Template ID
+let body: ImportTemplate = new ImportTemplate(...) // importTemplate
+
+// Code example
+OutboundAPI.putOutboundImporttemplate(importTemplateId: importTemplateId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundImporttemplate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **importTemplateId** | **String**| Import Template ID | |
+| **body** | [**ImportTemplate**](ImportTemplate.html)| importTemplate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportTemplate**](ImportTemplate.html)
 
 <a name="putOutboundMessagingcampaign"></a>
 

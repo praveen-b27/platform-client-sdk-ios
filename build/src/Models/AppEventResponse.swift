@@ -25,8 +25,6 @@ public class AppEventResponse: Codable {
     public var app: JourneyApp?
     /** Customer's device. */
     public var device: Device?
-    /** Customer's IP address. May be null if the business configures the tracker to not collect IP addresses. */
-    public var ipAddress: String?
     /** Customer's IP-based organization or ISP name. */
     public var ipOrganization: String?
     /** Customer's geolocation. */
@@ -47,10 +45,8 @@ public class AppEventResponse: Codable {
     public var traits: [String:CustomEventAttribute]?
     /** UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
-    /** The external contact associated with this app event. */
-    public var externalContact: AddressableEntityRef?
 
-    public init(_id: String?, customerId: String?, customerIdType: String?, eventName: String?, screenName: String?, app: JourneyApp?, device: Device?, ipAddress: String?, ipOrganization: String?, geolocation: JourneyGeolocation?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, mktCampaign: JourneyCampaign?, session: AppEventResponseSession?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, createdDate: Date?, externalContact: AddressableEntityRef?) {
+    public init(_id: String?, customerId: String?, customerIdType: String?, eventName: String?, screenName: String?, app: JourneyApp?, device: Device?, ipOrganization: String?, geolocation: JourneyGeolocation?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, mktCampaign: JourneyCampaign?, session: AppEventResponseSession?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, createdDate: Date?) {
         self._id = _id
         self.customerId = customerId
         self.customerIdType = customerIdType
@@ -58,7 +54,6 @@ public class AppEventResponse: Codable {
         self.screenName = screenName
         self.app = app
         self.device = device
-        self.ipAddress = ipAddress
         self.ipOrganization = ipOrganization
         self.geolocation = geolocation
         self.sdkLibrary = sdkLibrary
@@ -69,7 +64,6 @@ public class AppEventResponse: Codable {
         self.attributes = attributes
         self.traits = traits
         self.createdDate = createdDate
-        self.externalContact = externalContact
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -80,7 +74,6 @@ public class AppEventResponse: Codable {
         case screenName
         case app
         case device
-        case ipAddress
         case ipOrganization
         case geolocation
         case sdkLibrary
@@ -91,7 +84,6 @@ public class AppEventResponse: Codable {
         case attributes
         case traits
         case createdDate
-        case externalContact
     }
 
 

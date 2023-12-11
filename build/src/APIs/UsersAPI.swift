@@ -1399,9 +1399,9 @@ open class UsersAPI {
      - parameter userId: (path) User ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingUserUtilization(userId: String, completion: @escaping ((_ data: AgentMaxUtilization?,_ error: Error?) -> Void)) {
+    open class func getRoutingUserUtilization(userId: String, completion: @escaping ((_ data: AgentMaxUtilizationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingUserUtilizationWithRequestBuilder(userId: userId)
-        requestBuilder.execute { (response: Response<AgentMaxUtilization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AgentMaxUtilizationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1436,9 +1436,9 @@ open class UsersAPI {
      
      - parameter userId: (path) User ID 
 
-     - returns: RequestBuilder<AgentMaxUtilization> 
+     - returns: RequestBuilder<AgentMaxUtilizationResponse> 
      */
-    open class func getRoutingUserUtilizationWithRequestBuilder(userId: String) -> RequestBuilder<AgentMaxUtilization> {        
+    open class func getRoutingUserUtilizationWithRequestBuilder(userId: String) -> RequestBuilder<AgentMaxUtilizationResponse> {        
         var path = "/api/v2/routing/users/{userId}/utilization"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1448,7 +1448,7 @@ open class UsersAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AgentMaxUtilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AgentMaxUtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -21495,9 +21495,9 @@ open class UsersAPI {
      - parameter body: (body) utilization 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingUserUtilization(userId: String, body: Utilization, completion: @escaping ((_ data: AgentMaxUtilization?,_ error: Error?) -> Void)) {
+    open class func putRoutingUserUtilization(userId: String, body: UtilizationRequest, completion: @escaping ((_ data: AgentMaxUtilizationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingUserUtilizationWithRequestBuilder(userId: userId, body: body)
-        requestBuilder.execute { (response: Response<AgentMaxUtilization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AgentMaxUtilizationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -21533,9 +21533,9 @@ open class UsersAPI {
      - parameter userId: (path) User ID 
      - parameter body: (body) utilization 
 
-     - returns: RequestBuilder<AgentMaxUtilization> 
+     - returns: RequestBuilder<AgentMaxUtilizationResponse> 
      */
-    open class func putRoutingUserUtilizationWithRequestBuilder(userId: String, body: Utilization) -> RequestBuilder<AgentMaxUtilization> {        
+    open class func putRoutingUserUtilizationWithRequestBuilder(userId: String, body: UtilizationRequest) -> RequestBuilder<AgentMaxUtilizationResponse> {        
         var path = "/api/v2/routing/users/{userId}/utilization"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -21545,7 +21545,7 @@ open class UsersAPI {
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AgentMaxUtilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AgentMaxUtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

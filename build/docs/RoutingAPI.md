@@ -3897,7 +3897,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 
 
 
-> [AgentMaxUtilization](AgentMaxUtilization.html) getRoutingUserUtilization(userId)
+> [AgentMaxUtilizationResponse](AgentMaxUtilizationResponse.html) getRoutingUserUtilization(userId)
 
 Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
 
@@ -3942,7 +3942,7 @@ RoutingAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
 
 ### Return type
 
-[**AgentMaxUtilization**](AgentMaxUtilization.html)
+[**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse.html)
 
 <a name="getRoutingUtilization"></a>
 
@@ -3950,7 +3950,7 @@ RoutingAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
 
 
 
-> [Utilization](Utilization.html) getRoutingUtilization()
+> [UtilizationResponse](UtilizationResponse.html) getRoutingUtilization()
 
 Get the organization-wide max utilization settings.
 
@@ -3991,7 +3991,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**UtilizationResponse**](UtilizationResponse.html)
 
 <a name="getRoutingWrapupcode"></a>
 
@@ -6717,7 +6717,7 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 
 
 
-> [AgentMaxUtilization](AgentMaxUtilization.html) putRoutingUserUtilization(userId, body)
+> [AgentMaxUtilizationResponse](AgentMaxUtilizationResponse.html) putRoutingUserUtilization(userId, body)
 
 Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
 
@@ -6738,7 +6738,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let body: Utilization = new Utilization(...) // utilization
+let body: UtilizationRequest = new UtilizationRequest(...) // utilization
 
 // Code example
 RoutingAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, error) in
@@ -6757,13 +6757,13 @@ RoutingAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **body** | [**Utilization**](Utilization.html)| utilization | |
+| **body** | [**UtilizationRequest**](UtilizationRequest.html)| utilization | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AgentMaxUtilization**](AgentMaxUtilization.html)
+[**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse.html)
 
 <a name="putRoutingUtilization"></a>
 
@@ -6771,7 +6771,7 @@ RoutingAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, er
 
 
 
-> [Utilization](Utilization.html) putRoutingUtilization(body)
+> [UtilizationResponse](UtilizationResponse.html) putRoutingUtilization(body)
 
 Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
 
@@ -6791,7 +6791,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: Utilization = new Utilization(...) // utilization
+let body: UtilizationRequest = new UtilizationRequest(...) // utilization
 
 // Code example
 RoutingAPI.putRoutingUtilization(body: body) { (response, error) in
@@ -6809,13 +6809,13 @@ RoutingAPI.putRoutingUtilization(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Utilization**](Utilization.html)| utilization | |
+| **body** | [**UtilizationRequest**](UtilizationRequest.html)| utilization | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**UtilizationResponse**](UtilizationResponse.html)
 
 <a name="putRoutingWrapupcode"></a>
 

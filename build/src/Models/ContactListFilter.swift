@@ -11,6 +11,10 @@ import Foundation
 
 public class ContactListFilter: Codable {
 
+    public enum SourceType: String, Codable { 
+        case contactList = "ContactList"
+        case contactListTemplate = "ContactListTemplate"
+    }
     public enum FilterType: String, Codable { 
         case and = "AND"
         case or = "OR"
@@ -27,6 +31,10 @@ public class ContactListFilter: Codable {
     public var version: Int?
     /** The contact list the filter is based on. Required if sourceType is ContactList */
     public var contactList: DomainEntityRef?
+    /** The contact list template the filter is based on. Required if sourceType is ContactListTemplate */
+    public var contactListTemplate: DomainEntityRef?
+    /** The source type the filter is based on. */
+    public var sourceType: SourceType?
     /** Groups of conditions to filter the contacts by. */
     public var clauses: [ContactListFilterClause]?
     /** How to join clauses together. */
@@ -34,13 +42,15 @@ public class ContactListFilter: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, clauses: [ContactListFilterClause]?, filterType: FilterType?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, contactListTemplate: DomainEntityRef?, sourceType: SourceType?, clauses: [ContactListFilterClause]?, filterType: FilterType?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
         self.contactList = contactList
+        self.contactListTemplate = contactListTemplate
+        self.sourceType = sourceType
         self.clauses = clauses
         self.filterType = filterType
         self.selfUri = selfUri
@@ -53,6 +63,8 @@ public class ContactListFilter: Codable {
         case dateModified
         case version
         case contactList
+        case contactListTemplate
+        case sourceType
         case clauses
         case filterType
         case selfUri

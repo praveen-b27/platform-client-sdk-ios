@@ -98,7 +98,7 @@ docs/AgentIntegrationAssociationResponse.md
 docs/AgentIntegrationsRequest.md
 docs/AgentIntegrationsResponse.md
 docs/AgentManagementUnitReference.md
-docs/AgentMaxUtilization.md
+docs/AgentMaxUtilizationResponse.md
 docs/AgentOwnedMappingPreview.md
 docs/AgentOwnedMappingPreviewListing.md
 docs/AgentOwnedRouting.md
@@ -641,6 +641,8 @@ docs/ContactListFilterClause.md
 docs/ContactListFilterEntityListing.md
 docs/ContactListFilterPredicate.md
 docs/ContactListFilterRange.md
+docs/ContactListTemplate.md
+docs/ContactListTemplateEntityListing.md
 docs/ContactListing.md
 docs/ContactPhoneNumberColumn.md
 docs/ContactSort.md
@@ -1683,6 +1685,8 @@ docs/ImportScheduleUploadSchema.md
 docs/ImportScriptStatusResponse.md
 docs/ImportStatus.md
 docs/ImportStatusRequest.md
+docs/ImportTemplate.md
+docs/ImportTemplateEntityListing.md
 docs/InboundDomain.md
 docs/InboundDomainEntityListing.md
 docs/InboundDomainPatchRequest.md
@@ -1955,7 +1959,8 @@ docs/LabelCreateRequest.md
 docs/LabelListing.md
 docs/LabelResponse.md
 docs/LabelUpdateRequest.md
-docs/LabelUtilization.md
+docs/LabelUtilizationRequest.md
+docs/LabelUtilizationResponse.md
 docs/Language.md
 docs/LanguageEntityListing.md
 docs/LanguageOverride.md
@@ -2091,6 +2096,10 @@ docs/LocationsAPI.json
 docs/LocationsAPI.md
 docs/LocationsSearchResponse.md
 docs/LockInfo.md
+docs/LogCaptureAPI.json
+docs/LogCaptureAPI.md
+docs/LogCaptureDownloadExecutionResponse.md
+docs/LogCaptureQueryRequest.md
 docs/LogCaptureUserConfiguration.md
 docs/LogicalInterfaceEntityListing.md
 docs/LongTermForecastPlanningGroupData.md
@@ -3114,6 +3123,7 @@ docs/SpeechTextAnalyticsAPI.json
 docs/SpeechTextAnalyticsAPI.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
+docs/SplittingInformation.md
 docs/StarrableDivision.md
 docs/StatEventCampaignTopicIntervalMetrics.md
 docs/StatEventCampaignTopicMetricStats.md
@@ -3481,6 +3491,9 @@ docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
 docs/UserImage.md
 docs/UserInsightsTrend.md
+docs/UserInsightsTrendMetricItem.md
+docs/UserInsightsTrendTotalItem.md
+docs/UserInsightsTrends.md
 docs/UserLanguageEntityListing.md
 docs/UserLicenses.md
 docs/UserLicensesEntityListing.md
@@ -3542,13 +3555,15 @@ docs/UserTimeOffRequestReference.md
 docs/UserTokensTopicTokenNotification.md
 docs/UserTokensTopicUriReference.md
 docs/UserTransferEvent.md
+docs/UserTrendData.md
 docs/UsersAPI.json
 docs/UsersAPI.md
 docs/UsersSearchResponse.md
 docs/UtilitiesAPI.json
 docs/UtilitiesAPI.md
-docs/Utilization.md
 docs/UtilizationLabel.md
+docs/UtilizationRequest.md
+docs/UtilizationResponse.md
 docs/Utterance.md
 docs/V2ConversationMessageTypingEventForUserTopicConversationButtonComponent.md
 docs/V2ConversationMessageTypingEventForUserTopicConversationContentActions.md
@@ -4073,11 +4088,15 @@ docs/deleteOutboundContactlistContact-example.txt
 docs/deleteOutboundContactlistContacts-example.txt
 docs/deleteOutboundContactlistfilter-example.txt
 docs/deleteOutboundContactlists-example.txt
+docs/deleteOutboundContactlisttemplate-example.txt
+docs/deleteOutboundContactlisttemplates-example.txt
 docs/deleteOutboundDigitalruleset-example.txt
 docs/deleteOutboundDnclist-example.txt
 docs/deleteOutboundDnclistCustomexclusioncolumns-example.txt
 docs/deleteOutboundDnclistEmailaddresses-example.txt
 docs/deleteOutboundDnclistPhonenumbers-example.txt
+docs/deleteOutboundImporttemplate-example.txt
+docs/deleteOutboundImporttemplates-example.txt
 docs/deleteOutboundMessagingcampaign-example.txt
 docs/deleteOutboundMessagingcampaignProgress-example.txt
 docs/deleteOutboundRuleset-example.txt
@@ -4400,6 +4419,7 @@ docs/getDataextensionsCoretype-example.txt
 docs/getDataextensionsCoretypes-example.txt
 docs/getDataextensionsLimits-example.txt
 docs/getDate-example.txt
+docs/getDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
 docs/getDocumentationGknSearch-example.txt
 docs/getDocumentationSearch-example.txt
 docs/getDownload-example.txt
@@ -4757,6 +4777,8 @@ docs/getOutboundContactlistfilters-example.txt
 docs/getOutboundContactlists-example.txt
 docs/getOutboundContactlistsDivisionview-example.txt
 docs/getOutboundContactlistsDivisionviews-example.txt
+docs/getOutboundContactlisttemplate-example.txt
+docs/getOutboundContactlisttemplates-example.txt
 docs/getOutboundDigitalruleset-example.txt
 docs/getOutboundDigitalrulesets-example.txt
 docs/getOutboundDnclist-example.txt
@@ -4767,6 +4789,9 @@ docs/getOutboundDnclistsDivisionview-example.txt
 docs/getOutboundDnclistsDivisionviews-example.txt
 docs/getOutboundEvent-example.txt
 docs/getOutboundEvents-example.txt
+docs/getOutboundImporttemplate-example.txt
+docs/getOutboundImporttemplateImportstatus-example.txt
+docs/getOutboundImporttemplates-example.txt
 docs/getOutboundMessagingcampaign-example.txt
 docs/getOutboundMessagingcampaignDiagnostics-example.txt
 docs/getOutboundMessagingcampaignProgress-example.txt
@@ -5497,6 +5522,7 @@ docs/postConversationsParticipantsAttributesSearch-example.txt
 docs/postConversationsScreenshareParticipantCommunicationWrapup-example.txt
 docs/postConversationsSocialParticipantCommunicationWrapup-example.txt
 docs/postConversationsVideoParticipantCommunicationWrapup-example.txt
+docs/postDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
 docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
 docs/postEmployeeperformanceExternalmetricsData-example.txt
@@ -5669,12 +5695,16 @@ docs/postOutboundContactlistExport-example.txt
 docs/postOutboundContactlistfilters-example.txt
 docs/postOutboundContactlistfiltersPreview-example.txt
 docs/postOutboundContactlists-example.txt
+docs/postOutboundContactlisttemplates-example.txt
+docs/postOutboundContactlisttemplatesBulkAdd-example.txt
 docs/postOutboundConversationDnc-example.txt
 docs/postOutboundDigitalrulesets-example.txt
 docs/postOutboundDnclistEmailaddresses-example.txt
 docs/postOutboundDnclistExport-example.txt
 docs/postOutboundDnclistPhonenumbers-example.txt
 docs/postOutboundDnclists-example.txt
+docs/postOutboundImporttemplates-example.txt
+docs/postOutboundImporttemplatesBulkAdd-example.txt
 docs/postOutboundMessagingcampaigns-example.txt
 docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
@@ -5995,8 +6025,10 @@ docs/putOutboundCampaignrule-example.txt
 docs/putOutboundContactlist-example.txt
 docs/putOutboundContactlistContact-example.txt
 docs/putOutboundContactlistfilter-example.txt
+docs/putOutboundContactlisttemplate-example.txt
 docs/putOutboundDigitalruleset-example.txt
 docs/putOutboundDnclist-example.txt
+docs/putOutboundImporttemplate-example.txt
 docs/putOutboundMessagingcampaign-example.txt
 docs/putOutboundRuleset-example.txt
 docs/putOutboundSchedulesCampaign-example.txt
@@ -6124,6 +6156,7 @@ src/APIs/LanguagesAPI.swift
 src/APIs/LearningAPI.swift
 src/APIs/LicenseAPI.swift
 src/APIs/LocationsAPI.swift
+src/APIs/LogCaptureAPI.swift
 src/APIs/MessagingAPI.swift
 src/APIs/MobileDevicesAPI.swift
 src/APIs/NotificationsAPI.swift
@@ -6260,7 +6293,7 @@ src/Models/AgentIntegrationAssociationResponse.swift
 src/Models/AgentIntegrationsRequest.swift
 src/Models/AgentIntegrationsResponse.swift
 src/Models/AgentManagementUnitReference.swift
-src/Models/AgentMaxUtilization.swift
+src/Models/AgentMaxUtilizationResponse.swift
 src/Models/AgentOwnedMappingPreview.swift
 src/Models/AgentOwnedMappingPreviewListing.swift
 src/Models/AgentOwnedRouting.swift
@@ -6785,6 +6818,8 @@ src/Models/ContactListFilterClause.swift
 src/Models/ContactListFilterEntityListing.swift
 src/Models/ContactListFilterPredicate.swift
 src/Models/ContactListFilterRange.swift
+src/Models/ContactListTemplate.swift
+src/Models/ContactListTemplateEntityListing.swift
 src/Models/ContactListing.swift
 src/Models/ContactPhoneNumberColumn.swift
 src/Models/ContactSort.swift
@@ -7797,6 +7832,8 @@ src/Models/ImportScheduleUploadSchema.swift
 src/Models/ImportScriptStatusResponse.swift
 src/Models/ImportStatus.swift
 src/Models/ImportStatusRequest.swift
+src/Models/ImportTemplate.swift
+src/Models/ImportTemplateEntityListing.swift
 src/Models/InboundDomain.swift
 src/Models/InboundDomainEntityListing.swift
 src/Models/InboundDomainPatchRequest.swift
@@ -8061,7 +8098,8 @@ src/Models/LabelCreateRequest.swift
 src/Models/LabelListing.swift
 src/Models/LabelResponse.swift
 src/Models/LabelUpdateRequest.swift
-src/Models/LabelUtilization.swift
+src/Models/LabelUtilizationRequest.swift
+src/Models/LabelUtilizationResponse.swift
 src/Models/Language.swift
 src/Models/LanguageEntityListing.swift
 src/Models/LanguageOverride.swift
@@ -8187,6 +8225,8 @@ src/Models/LocationSearchRequest.swift
 src/Models/LocationUpdateDefinition.swift
 src/Models/LocationsSearchResponse.swift
 src/Models/LockInfo.swift
+src/Models/LogCaptureDownloadExecutionResponse.swift
+src/Models/LogCaptureQueryRequest.swift
 src/Models/LogCaptureUserConfiguration.swift
 src/Models/LogicalInterfaceEntityListing.swift
 src/Models/LongTermForecastPlanningGroupData.swift
@@ -9171,6 +9211,7 @@ src/Models/SourceEntityListing.swift
 src/Models/SourcePlanningGroupRequest.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
 src/Models/SpeechTextAnalyticsSettingsResponse.swift
+src/Models/SplittingInformation.swift
 src/Models/StarrableDivision.swift
 src/Models/StatEventCampaignTopicIntervalMetrics.swift
 src/Models/StatEventCampaignTopicMetricStats.swift
@@ -9520,6 +9561,9 @@ src/Models/UserGreetingEventGreetingAudioFile.swift
 src/Models/UserGreetingEventGreetingOwner.swift
 src/Models/UserImage.swift
 src/Models/UserInsightsTrend.swift
+src/Models/UserInsightsTrendMetricItem.swift
+src/Models/UserInsightsTrendTotalItem.swift
+src/Models/UserInsightsTrends.swift
 src/Models/UserLanguageEntityListing.swift
 src/Models/UserLicenses.swift
 src/Models/UserLicensesEntityListing.swift
@@ -9579,9 +9623,11 @@ src/Models/UserTimeOffRequestReference.swift
 src/Models/UserTokensTopicTokenNotification.swift
 src/Models/UserTokensTopicUriReference.swift
 src/Models/UserTransferEvent.swift
+src/Models/UserTrendData.swift
 src/Models/UsersSearchResponse.swift
-src/Models/Utilization.swift
 src/Models/UtilizationLabel.swift
+src/Models/UtilizationRequest.swift
+src/Models/UtilizationResponse.swift
 src/Models/Utterance.swift
 src/Models/V2ConversationMessageTypingEventForUserTopicConversationButtonComponent.swift
 src/Models/V2ConversationMessageTypingEventForUserTopicConversationContentActions.swift

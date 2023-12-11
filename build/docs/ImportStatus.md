@@ -12,6 +12,8 @@ title: ImportStatus
 | **completedRecords** | **Int64** | number of records finished importing | |
 | **percentComplete** | **Int** | percentage of records finished importing | |
 | **failureReason** | **String** | if the import has failed, the reason for the failure | [optional] |
+| **targetContactListIds** | **[String]** | The contact list Ids for target contact lists. | [optional] |
+| **listNamePrefix** | **String** | The prefix for the contact list name | [optional] |
 {: class="table table-striped"}
 
 

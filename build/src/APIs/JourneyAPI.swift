@@ -3112,8 +3112,6 @@ open class JourneyAPI {
     }
   },
   "session" : "{}",
-  "ipAddress" : "ipAddress",
-  "externalContact" : "{}",
   "screenName" : "screenName",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "sdkLibrary" : "{}",

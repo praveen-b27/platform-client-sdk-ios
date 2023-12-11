@@ -791,7 +791,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "value" : 7,
       "key" : "key"
     },
@@ -819,7 +819,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "value" : 7,
       "key" : "key"
     },

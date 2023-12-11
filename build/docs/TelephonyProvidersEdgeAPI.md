@@ -451,7 +451,7 @@ Wraps DELETE /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:delete
 
 ### Example
 
@@ -2336,7 +2336,7 @@ Wraps GET /api/v2/telephony/providers/edges/extensions/{extensionId}
 
 Requires ANY permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 
@@ -2388,7 +2388,7 @@ Wraps GET /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 
@@ -2440,7 +2440,7 @@ Wraps GET /api/v2/telephony/providers/edges/extensionpools
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 
@@ -2498,7 +2498,7 @@ Wraps GET /api/v2/telephony/providers/edges/extensions
 
 Requires ANY permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 
@@ -5434,7 +5434,7 @@ Wraps POST /api/v2/telephony/providers/edges/extensionpools
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:add
 
 ### Example
 
@@ -6178,7 +6178,7 @@ Wraps PUT /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:edit
 
 ### Example
 

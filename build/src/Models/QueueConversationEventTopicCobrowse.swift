@@ -83,8 +83,10 @@ public class QueueConversationEventTopicCobrowse: Codable {
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: QueueConversationEventTopicQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, queueMediaSettings: QueueConversationEventTopicQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self.disconnectType = disconnectType
@@ -104,6 +106,7 @@ public class QueueConversationEventTopicCobrowse: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -126,6 +129,7 @@ public class QueueConversationEventTopicCobrowse: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case queueMediaSettings
     }
 
 

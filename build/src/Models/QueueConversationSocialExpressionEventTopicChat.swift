@@ -80,8 +80,10 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
     public var afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: QueueConversationSocialExpressionEventTopicQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, queueMediaSettings: QueueConversationSocialExpressionEventTopicQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -99,6 +101,7 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -119,6 +122,7 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case queueMediaSettings
     }
 
 

@@ -4310,7 +4310,7 @@
       }
     ],
     "return": "DomainOrganizationRole",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roleId: String = \"\" // Role ID\nlet userCount: Bool = true // Fetch the count of users who have this role granted in at least one division\nlet expand: [String] = [\"\"] // Which fields, if any, to expand. \\\"unusedPermissions\\\" returns the permissions not used for the role\n\n// Get a single organization role.\nGetAuthorizationRoleRequest.getAuthorizationRole(roleId: roleId, userCount: userCount, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationRoleRequest.getAuthorizationRole was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roleId: String = \"\" // Role ID\nlet userCount: Bool = true // Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to 'true' can lead to slower load times or timeouts for role queries with large member counts.\nlet expand: [String] = [\"\"] // Which fields, if any, to expand. \\\"unusedPermissions\\\" returns the permissions not used for the role\n\n// Get a single organization role.\nGetAuthorizationRoleRequest.getAuthorizationRole(roleId: roleId, userCount: userCount, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationRoleRequest.getAuthorizationRole was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationrolecomparedefaultrightroleid": {
     "operationId": "getauthorizationrolecomparedefaultrightroleid",
@@ -26250,7 +26250,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\n\n// Get an evaluation form\nGetQualityFormRequest.getQualityForm(formId: formId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormRequest.getQualityForm was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformversions": {
@@ -26274,7 +26274,7 @@
         "required": "false"
       }
     ],
-    "return": "EvaluationFormEntityListing",
+    "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Gets all the revisions for a specific evaluation.\nGetQualityFormVersionsRequest.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormVersionsRequest.getQualityFormVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityforms": {
@@ -26323,7 +26323,7 @@
         "required": "false"
       }
     ],
-    "return": "EvaluationFormEntityListing",
+    "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsRequest.Expand_getQualityForms = GetQualityFormsRequest.Expand_getQualityForms.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsRequest.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsRequest.getQualityForms was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluation": {
@@ -26337,7 +26337,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\n\n// Get an evaluation form\nGetQualityFormsEvaluationRequest.getQualityFormsEvaluation(formId: formId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationRequest.getQualityFormsEvaluation was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluationversions": {
@@ -26366,7 +26366,7 @@
         "required": "false"
       }
     ],
-    "return": "EvaluationFormEntityListing",
+    "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: String = \"\" // Sort order\n\n// Gets all the revisions for a specific evaluation.\nGetQualityFormsEvaluationVersionsRequest.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationVersionsRequest.getQualityFormsEvaluationVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluations": {
@@ -26415,7 +26415,7 @@
         "required": "false"
       }
     ],
-    "return": "EvaluationFormEntityListing",
+    "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations = GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsEvaluationsRequest.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationsRequest.getQualityFormsEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluationsbulkcontexts": {
@@ -26429,7 +26429,7 @@
         "required": "true"
       }
     ],
-    "return": "[EvaluationForm]",
+    "return": "[EvaluationFormResponse]",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contextId: [String] = [\"\"] // A comma-delimited list of valid evaluation form context ids\n\n// Retrieve a list of the latest published evaluation form versions by context ids\nGetQualityFormsEvaluationsBulkContextsRequest.getQualityFormsEvaluationsBulkContexts(contextId: contextId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationsBulkContextsRequest.getQualityFormsEvaluationsBulkContexts was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformssurvey": {
@@ -26563,7 +26563,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\n\n// Get the published evaluation forms.\nGetQualityPublishedformRequest.getQualityPublishedform(formId: formId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityPublishedformRequest.getQualityPublishedform was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualitypublishedforms": {
@@ -26592,7 +26592,7 @@
         "required": "false"
       }
     ],
-    "return": "EvaluationFormEntityListing",
+    "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet onlyLatestPerContext: Bool = true // onlyLatestPerContext\n\n// Get the published evaluation forms.\nGetQualityPublishedformsRequest.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityPublishedformsRequest.getQualityPublishedforms was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualitypublishedformsevaluation": {
@@ -26606,7 +26606,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\n\n// Get the most recent published version of an evaluation form.\nGetQualityPublishedformsEvaluationRequest.getQualityPublishedformsEvaluation(formId: formId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityPublishedformsEvaluationRequest.getQualityPublishedformsEvaluation was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualitypublishedformsevaluations": {
@@ -26635,7 +26635,7 @@
         "required": "false"
       }
     ],
-    "return": "EvaluationFormEntityListing",
+    "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet onlyLatestPerContext: Bool = true // onlyLatestPerContext\n\n// Get the published evaluation forms.\nGetQualityPublishedformsEvaluationsRequest.getQualityPublishedformsEvaluations(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityPublishedformsEvaluationsRequest.getQualityPublishedformsEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualitypublishedformssurvey": {
@@ -26824,7 +26824,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EvaluationForm = new EvaluationForm(...) // Evaluation form\n\n// Create an evaluation form.\nPostQualityFormsRequest.postQualityForms(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityFormsRequest.postQualityForms was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualityformsevaluations": {
@@ -26838,7 +26838,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EvaluationForm = new EvaluationForm(...) // Evaluation form\n\n// Create an evaluation form.\nPostQualityFormsEvaluationsRequest.postQualityFormsEvaluations(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityFormsEvaluationsRequest.postQualityFormsEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualityformssurveys": {
@@ -26866,7 +26866,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: PublishForm = new PublishForm(...) // Publish request containing id of form to publish\n\n// Publish an evaluation form.\nPostQualityPublishedformsRequest.postQualityPublishedforms(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityPublishedformsRequest.postQualityPublishedforms was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualitypublishedformsevaluations": {
@@ -26880,7 +26880,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: PublishForm = new PublishForm(...) // Publish request containing id of form to publish\n\n// Publish an evaluation form.\nPostQualityPublishedformsEvaluationsRequest.postQualityPublishedformsEvaluations(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityPublishedformsEvaluationsRequest.postQualityPublishedformsEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualitypublishedformssurveys": {
@@ -26975,7 +26975,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\nlet body: EvaluationForm = new EvaluationForm(...) // Evaluation form\n\n// Update an evaluation form.\nPutQualityFormRequest.putQualityForm(formId: formId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutQualityFormRequest.putQualityForm was successful\")\n        dump(response)\n    }\n}"
   },
   "putqualityformsevaluation": {
@@ -26994,7 +26994,7 @@
         "required": "true"
       }
     ],
-    "return": "EvaluationForm",
+    "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\nlet body: EvaluationForm = new EvaluationForm(...) // Evaluation form\n\n// Update an evaluation form.\nPutQualityFormsEvaluationRequest.putQualityFormsEvaluation(formId: formId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutQualityFormsEvaluationRequest.putQualityFormsEvaluation was successful\")\n        dump(response)\n    }\n}"
   },
   "putqualityformssurvey": {
@@ -33794,7 +33794,7 @@
     "functionName": "getTelephonyProvidersEdgesAvailablelanguages",
     "signature": "getTelephonyProvidersEdgesAvailablelanguages()",
     "return": "AvailableLanguageList",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the list of available languages.\nGetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.\nGetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonyprovidersedgescertificateauthorities": {
     "operationId": "gettelephonyprovidersedgescertificateauthorities",
@@ -38724,6 +38724,59 @@
     "return": "BuAgentScheduleHistoryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet scheduleId: String = \"\" // The ID of the schedule\nlet agentId: String = \"\" // THe ID of the agent\n\n// Loads agent's schedule history.\nGetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentRequest.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, agentId: agentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentRequest.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementbusinessunitweekscheduleperformancepredictions": {
+    "operationId": "getworkforcemanagementbusinessunitweekscheduleperformancepredictions",
+    "functionName": "getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions",
+    "signature": "getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions(businessUnitId, weekId, scheduleId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "scheduleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "PerformancePredictionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the performance prediction belongs\nlet weekId: String = \"\" // First day of schedule week in yyyy-MM-dd format\nlet scheduleId: String = \"\" // The ID of the schedule the performance prediction belongs to\n\n// Get the performance prediction for the associated schedule\nGetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRequest.getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRequest.getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculation": {
+    "operationId": "getworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculation",
+    "functionName": "getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation",
+    "signature": "getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation(businessUnitId, weekId, scheduleId, recalculationId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "scheduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "recalculationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "PerformancePredictionRecalculationResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the performance prediction belongs\nlet weekId: String = \"\" // First day of schedule week in yyyy-MM-dd format\nlet scheduleId: String = \"\" // The ID of the schedule the recalculation belongs to\nlet recalculationId: String = \"\" // The ID of the recalculation request\n\n// Get recalculated performance prediction result\nGetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationRequest.getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, recalculationId: recalculationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationRequest.getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation was successful\")\n        dump(response)\n    }\n}"
+  },
   "getworkforcemanagementbusinessunitweekschedules": {
     "operationId": "getworkforcemanagementbusinessunitweekschedules",
     "functionName": "getWorkforcemanagementBusinessunitWeekSchedules",
@@ -38892,6 +38945,35 @@
     ],
     "return": "ForecastPlanningGroupsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\n\n// Gets the forecast planning group snapshot\nGetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement": {
+    "operationId": "getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement",
+    "functionName": "getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement",
+    "signature": "getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekDateId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "forecastId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekNumbers",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "BuForecastStaffingRequirementsResultResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\nlet weekNumbers: [String] = [\"\"] // The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified\n\n// Get the staffing requirement by planning group for a forecast\nGetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunitweekshorttermforecasts": {
     "operationId": "getworkforcemanagementbusinessunitweekshorttermforecasts",
@@ -39757,6 +39839,24 @@
     "return": "ManagementUnit",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet body: UpdateManagementUnitRequest = new UpdateManagementUnitRequest(...) // body\n\n// Update the requested management unit\nPatchWorkforcemanagementManagementunitRequest.patchWorkforcemanagementManagementunit(managementUnitId: managementUnitId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementManagementunitRequest.patchWorkforcemanagementManagementunit was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchworkforcemanagementmanagementunitagents": {
+    "operationId": "patchworkforcemanagementmanagementunitagents",
+    "functionName": "patchWorkforcemanagementManagementunitAgents",
+    "signature": "patchWorkforcemanagementManagementunitAgents(managementUnitId, body)",
+    "parameters": [
+      {
+        "name": "managementUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateMuAgentsRequest",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet body: UpdateMuAgentsRequest = new UpdateMuAgentsRequest(...) // body\n\n// Update agent configurations\nPatchWorkforcemanagementManagementunitAgentsRequest.patchWorkforcemanagementManagementunitAgents(managementUnitId: managementUnitId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchWorkforcemanagementManagementunitAgentsRequest.patchWorkforcemanagementManagementunitAgents was successful\")\n    }\n}"
+  },
   "patchworkforcemanagementmanagementunittimeofflimit": {
     "operationId": "patchworkforcemanagementmanagementunittimeofflimit",
     "functionName": "patchWorkforcemanagementManagementunitTimeofflimit",
@@ -40340,6 +40440,64 @@
     ],
     "return": "BuAsyncScheduleResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet scheduleId: String = \"\" // The ID of the schedule to copy\nlet body: BuCopyScheduleRequest = new BuCopyScheduleRequest(...) // body\n\n// Copy a schedule\nPostWorkforcemanagementBusinessunitWeekScheduleCopyRequest.postWorkforcemanagementBusinessunitWeekScheduleCopy(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekScheduleCopyRequest.postWorkforcemanagementBusinessunitWeekScheduleCopy was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculations": {
+    "operationId": "postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculations",
+    "functionName": "postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations",
+    "signature": "postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId, weekId, scheduleId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "scheduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WfmProcessUploadRequest",
+        "required": "false"
+      }
+    ],
+    "return": "PerformancePredictionRecalculationResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the performance prediction belongs\nlet weekId: String = \"\" // First day of schedule week in yyyy-MM-dd format\nlet scheduleId: String = \"\" // The ID of the schedule the performance prediction belongs to\nlet body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // body\n\n// Request a daily recalculation of the performance prediction for the associated schedule\nPostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsRequest.postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsRequest.postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculationsuploadurl": {
+    "operationId": "postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculationsuploadurl",
+    "functionName": "postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl",
+    "signature": "postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId, weekId, scheduleId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "scheduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UploadUrlRequestBody",
+        "required": "false"
+      }
+    ],
+    "return": "PerformancePredictionRecalculationUploadResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the performance prediction belongs\nlet weekId: String = \"\" // First day of schedule week in yyyy-MM-dd format\nlet scheduleId: String = \"\" // The ID of the schedule the performance prediction belongs to\nlet body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body\n\n// Upload daily activity changes to be able to request a performance prediction recalculation\nPostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlRequest.postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlRequest.postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunitweekschedulereschedule": {
     "operationId": "postworkforcemanagementbusinessunitweekschedulereschedule",

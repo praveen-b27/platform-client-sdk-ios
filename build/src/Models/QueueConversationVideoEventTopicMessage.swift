@@ -107,8 +107,10 @@ public class QueueConversationVideoEventTopicMessage: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
     public var byoSmsIntegrationId: String?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: QueueConversationVideoEventTopicQueueMediaSettings?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationVideoEventTopicAddress?, fromAddress: QueueConversationVideoEventTopicAddress?, messages: [QueueConversationVideoEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationVideoEventTopicAddress?, fromAddress: QueueConversationVideoEventTopicAddress?, messages: [QueueConversationVideoEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?, queueMediaSettings: QueueConversationVideoEventTopicQueueMediaSettings?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -135,6 +137,7 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
         self.byoSmsIntegrationId = byoSmsIntegrationId
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -164,6 +167,7 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case afterCallWorkRequired
         case agentAssistantId
         case byoSmsIntegrationId
+        case queueMediaSettings
     }
 
 

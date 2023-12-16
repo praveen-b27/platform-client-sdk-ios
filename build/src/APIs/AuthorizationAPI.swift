@@ -1013,7 +1013,7 @@ open class AuthorizationAPI {
      Get a single organization role.
      
      - parameter roleId: (path) Role ID 
-     - parameter userCount: (query) Fetch the count of users who have this role granted in at least one division (optional)
+     - parameter userCount: (query) Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional)
      - parameter expand: (query) Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2824,7 +2824,7 @@ open class AuthorizationAPI {
 }, statusCode=200}]
      
      - parameter roleId: (path) Role ID 
-     - parameter userCount: (query) Fetch the count of users who have this role granted in at least one division (optional)
+     - parameter userCount: (query) Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional)
      - parameter expand: (query) Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)
 
      - returns: RequestBuilder<DomainOrganizationRole> 

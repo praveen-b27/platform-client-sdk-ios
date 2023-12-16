@@ -9551,6 +9551,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -9592,6 +9593,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -9761,7 +9763,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -9785,6 +9787,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -9841,7 +9844,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -9865,6 +9868,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -15482,6 +15486,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -15538,6 +15543,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -15594,6 +15600,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -15628,6 +15635,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -15666,7 +15674,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -15692,6 +15700,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -15792,7 +15801,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -15818,6 +15827,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -16055,6 +16065,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -16096,6 +16107,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -16265,7 +16277,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -16289,6 +16301,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -16345,7 +16358,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -16369,6 +16382,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -21986,6 +22000,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -22042,6 +22057,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -22098,6 +22114,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -22132,6 +22149,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -22170,7 +22188,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -22196,6 +22214,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -22296,7 +22315,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -22322,6 +22341,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -22906,6 +22926,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -22947,6 +22968,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -23116,7 +23138,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -23140,6 +23162,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -23196,7 +23219,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -23220,6 +23243,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -28837,6 +28861,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -28893,6 +28918,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -28949,6 +28975,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -28983,6 +29010,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -29021,7 +29049,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -29047,6 +29075,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -29147,7 +29176,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -29173,6 +29202,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -29410,6 +29440,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -29451,6 +29482,7 @@ open class RecordingAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -29620,7 +29652,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -29644,6 +29676,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -29700,7 +29733,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -29724,6 +29757,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -35341,6 +35375,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -35397,6 +35432,7 @@ open class RecordingAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -35453,6 +35489,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -35487,6 +35524,7 @@ open class RecordingAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -35525,7 +35563,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -35551,6 +35589,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -35651,7 +35690,7 @@ open class RecordingAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -35677,6 +35716,7 @@ open class RecordingAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",

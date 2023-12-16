@@ -13,7 +13,7 @@ title: EvaluationFormResponse
 | **published** | **Bool** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
 | **questionGroups** | [**[EvaluationQuestionGroup]**](EvaluationQuestionGroup.html) | A list of question groups | [optional] |
-| **publishedVersions** | [**DomainEntityListingEvaluationForm**](DomainEntityListingEvaluationForm.html) |  | [optional] |
+| **weightMode** | **String** | Mode for evaluation form weight | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

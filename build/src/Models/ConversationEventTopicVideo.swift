@@ -85,8 +85,10 @@ public class ConversationEventTopicVideo: Codable {
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: ConversationEventTopicQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: JSON?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: JSON?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, queueMediaSettings: ConversationEventTopicQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self._self = _self
@@ -106,6 +108,7 @@ public class ConversationEventTopicVideo: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -128,6 +131,7 @@ public class ConversationEventTopicVideo: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case queueMediaSettings
     }
 
 

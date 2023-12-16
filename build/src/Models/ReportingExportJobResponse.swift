@@ -126,6 +126,10 @@ public class ReportingExportJobResponse: Codable {
         case agentAssistPerformanceView = "AGENT_ASSIST_PERFORMANCE_VIEW"
         case contactCenterPerformanceView = "CONTACT_CENTER_PERFORMANCE_VIEW"
         case queueRoutingPerformanceView = "QUEUE_ROUTING_PERFORMANCE_VIEW"
+        case agentWorkitemPerformanceSummaryView = "AGENT_WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+        case agentWorkitemPerformanceDetailView = "AGENT_WORKITEM_PERFORMANCE_DETAIL_VIEW"
+        case queueWorkitemPerformanceSummaryView = "QUEUE_WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+        case queueWorkitemPerformanceDetailView = "QUEUE_WORKITEM_PERFORMANCE_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

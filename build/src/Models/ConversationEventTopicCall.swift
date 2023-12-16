@@ -116,8 +116,9 @@ public class ConversationEventTopicCall: Codable {
     public var afterCallWorkRequired: Bool?
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
+    public var queueMediaSettings: ConversationEventTopicQueueMediaSettings?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, securePause: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, securePause: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, queueMediaSettings: ConversationEventTopicQueueMediaSettings?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -147,6 +148,7 @@ public class ConversationEventTopicCall: Codable {
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -179,6 +181,7 @@ public class ConversationEventTopicCall: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
+        case queueMediaSettings
     }
 
 

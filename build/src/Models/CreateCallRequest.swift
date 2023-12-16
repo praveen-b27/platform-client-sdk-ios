@@ -37,8 +37,10 @@ public class CreateCallRequest: Codable {
     public var uuiData: String?
     /** The external contact with which to associate the call. */
     public var externalContactId: String?
+    /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
+    public var label: String?
 
-    public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, languageId: String?, routingSkillsIds: [String]?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?, externalContactId: String?) {
+    public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, languageId: String?, routingSkillsIds: [String]?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?, externalContactId: String?, label: String?) {
         self.phoneNumber = phoneNumber
         self.callerId = callerId
         self.callerIdName = callerIdName
@@ -52,6 +54,7 @@ public class CreateCallRequest: Codable {
         self.participants = participants
         self.uuiData = uuiData
         self.externalContactId = externalContactId
+        self.label = label
     }
 
 

@@ -38,6 +38,7 @@ title: WorkitemsUserEventsNotificationWorkitem
 | **queueId** | **String** |  | [optional] |
 | **customFields** | [**[String:WorkitemsUserEventsNotificationCustomAttribute]**](WorkitemsUserEventsNotificationCustomAttribute.html) |  | [optional] |
 | **wrapup** | [**WorkitemsUserEventsNotificationWrapup**](WorkitemsUserEventsNotificationWrapup.html) |  | [optional] |
+| **sessions** | [**[WorkitemsUserEventsNotificationSession]**](WorkitemsUserEventsNotificationSession.html) |  | [optional] |
 {: class="table table-striped"}
 
 

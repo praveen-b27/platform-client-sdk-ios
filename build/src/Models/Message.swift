@@ -113,8 +113,10 @@ public class Message: Codable {
     public var agentAssistantId: String?
     /** The internal id representing the customer supplied sms integration message. */
     public var byoSmsIntegrationId: String?
+    /** Represents the queue settings for this media type. */
+    public var queueMediaSettings: ConversationQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?, queueMediaSettings: ConversationQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -144,6 +146,7 @@ public class Message: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
         self.byoSmsIntegrationId = byoSmsIntegrationId
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -176,6 +179,7 @@ public class Message: Codable {
         case afterCallWorkRequired
         case agentAssistantId
         case byoSmsIntegrationId
+        case queueMediaSettings
     }
 
 

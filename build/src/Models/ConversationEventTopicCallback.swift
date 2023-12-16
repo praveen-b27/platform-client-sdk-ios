@@ -105,8 +105,10 @@ public class ConversationEventTopicCallback: Codable {
     public var callerId: String?
     /** The name displayed to recipients of the phone call. */
     public var callerIdName: String?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: ConversationEventTopicQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: ConversationEventTopicDialerPreview?, voicemail: ConversationEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: ConversationEventTopicDialerPreview?, voicemail: ConversationEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?, queueMediaSettings: ConversationEventTopicQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -133,6 +135,7 @@ public class ConversationEventTopicCallback: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.callerId = callerId
         self.callerIdName = callerIdName
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -162,6 +165,7 @@ public class ConversationEventTopicCallback: Codable {
         case afterCallWorkRequired
         case callerId
         case callerIdName
+        case queueMediaSettings
     }
 
 

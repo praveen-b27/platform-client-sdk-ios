@@ -35,7 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgeSoftwareversions**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeSoftwareversions) | Gets all the available software versions for this edge. |
 | [**getTelephonyProvidersEdgeTrunks**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeTrunks) | Get the list of available trunks for the given Edge. |
 | [**getTelephonyProvidersEdges**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdges) | Get the list of edges. |
-| [**getTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesAvailablelanguages) | Get the list of available languages. |
+| [**getTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesAvailablelanguages) | Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. |
 | [**getTelephonyProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesCertificateauthorities) | Get the list of certificate authorities. |
 | [**getTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesCertificateauthority) | Get a certificate authority. |
 | [**getTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDid) | Get a DID by ID. |
@@ -1625,7 +1625,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdges(pageSize: pageSize, pageNum
 
 > [AvailableLanguageList](AvailableLanguageList.html) getTelephonyProvidersEdgesAvailablelanguages()
 
-Get the list of available languages.
+Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
 
 
 

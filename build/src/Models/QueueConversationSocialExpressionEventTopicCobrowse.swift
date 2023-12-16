@@ -83,8 +83,10 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
     public var afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: QueueConversationSocialExpressionEventTopicQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, queueMediaSettings: QueueConversationSocialExpressionEventTopicQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self.disconnectType = disconnectType
@@ -104,6 +106,7 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -126,6 +129,7 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case queueMediaSettings
     }
 
 

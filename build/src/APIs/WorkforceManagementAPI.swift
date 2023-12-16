@@ -2876,6 +2876,153 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Get the performance prediction for the associated schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions(businessUnitId: String, weekId: String, scheduleId: String, completion: @escaping ((_ data: PerformancePredictionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId)
+        requestBuilder.execute { (response: Response<PerformancePredictionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the performance prediction for the associated schedule
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "state" : "Processing",
+  "weekDate" : "2000-01-23",
+  "scheduleId" : "scheduleId"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
+
+     - returns: RequestBuilder<PerformancePredictionResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String) -> RequestBuilder<PerformancePredictionResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PerformancePredictionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get recalculated performance prediction result
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the recalculation belongs to 
+     - parameter recalculationId: (path) The ID of the recalculation request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation(businessUnitId: String, weekId: String, scheduleId: String, recalculationId: String, completion: @escaping ((_ data: PerformancePredictionRecalculationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, recalculationId: recalculationId)
+        requestBuilder.execute { (response: Response<PerformancePredictionRecalculationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get recalculated performance prediction result
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "operationId" : "operationId",
+  "state" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the recalculation belongs to 
+     - parameter recalculationId: (path) The ID of the recalculation request 
+
+     - returns: RequestBuilder<PerformancePredictionRecalculationResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, recalculationId: String) -> RequestBuilder<PerformancePredictionRecalculationResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let recalculationIdPreEscape = "\(recalculationId)"
+        let recalculationIdPostEscape = recalculationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{recalculationId}", with: recalculationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PerformancePredictionRecalculationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     public enum Expand_getWorkforcemanagementBusinessunitWeekSchedules: String { 
         case forecastDescription = "forecast.description"
@@ -3461,6 +3608,106 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ForecastPlanningGroupsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the staffing requirement by planning group for a forecast
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter weekNumbers: (query) The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumbers: [String]? = nil, completion: @escaping ((_ data: BuForecastStaffingRequirementsResultResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers)
+        requestBuilder.execute { (response: Response<BuForecastStaffingRequirementsResultResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the staffing requirement by planning group for a forecast
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "referenceStartDate" : "2000-01-23T04:56:07.000+00:00",
+  "forecast" : "{}",
+  "state" : "Processing",
+  "weekCount" : 0,
+  "results" : [ {
+    "downloadUrlExpirationDate" : "2000-01-23T04:56:07.000+00:00",
+    "downloadUrl" : "downloadUrl",
+    "weekNumber" : 1,
+    "planningGroupStaffingRequirements" : [ {
+      "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
+      "planningGroupId" : "planningGroupId"
+    }, {
+      "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
+      "planningGroupId" : "planningGroupId"
+    } ]
+  }, {
+    "downloadUrlExpirationDate" : "2000-01-23T04:56:07.000+00:00",
+    "downloadUrl" : "downloadUrl",
+    "weekNumber" : 1,
+    "planningGroupStaffingRequirements" : [ {
+      "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
+      "planningGroupId" : "planningGroupId"
+    }, {
+      "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
+      "planningGroupId" : "planningGroupId"
+    } ]
+  } ],
+  "businessUnitId" : "businessUnitId",
+  "intervalLengthMinutes" : 6
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter weekNumbers: (query) The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)
+
+     - returns: RequestBuilder<BuForecastStaffingRequirementsResultResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumbers: [String]? = nil) -> RequestBuilder<BuForecastStaffingRequirementsResultResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "weekNumbers": weekNumbers
+        ])
+
+        let requestBuilder: RequestBuilder<BuForecastStaffingRequirementsResultResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -8733,6 +8980,53 @@ open class WorkforceManagementAPI {
 
     
     
+    /**
+     Update agent configurations
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitAgents(managementUnitId: String, body: UpdateMuAgentsRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitAgentsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update agent configurations
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchWorkforcemanagementManagementunitAgentsWithRequestBuilder(managementUnitId: String, body: UpdateMuAgentsRequest? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
     
     /**
      Updates a time off limit object.
@@ -10902,6 +11196,152 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuAsyncScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Request a daily recalculation of the performance prediction for the associated schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId: String, weekId: String, scheduleId: String, body: WfmProcessUploadRequest? = nil, completion: @escaping ((_ data: PerformancePredictionRecalculationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
+        requestBuilder.execute { (response: Response<PerformancePredictionRecalculationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a daily recalculation of the performance prediction for the associated schedule
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "operationId" : "operationId",
+  "state" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<PerformancePredictionRecalculationResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, body: WfmProcessUploadRequest? = nil) -> RequestBuilder<PerformancePredictionRecalculationResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PerformancePredictionRecalculationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Upload daily activity changes to be able to request a performance prediction recalculation
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId: String, weekId: String, scheduleId: String, body: UploadUrlRequestBody? = nil, completion: @escaping ((_ data: PerformancePredictionRecalculationUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
+        requestBuilder.execute { (response: Response<PerformancePredictionRecalculationUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Upload daily activity changes to be able to request a performance prediction recalculation
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "uploadBodySchema" : "{}",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
+     - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<PerformancePredictionRecalculationUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, body: UploadUrlRequestBody? = nil) -> RequestBuilder<PerformancePredictionRecalculationUploadResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PerformancePredictionRecalculationUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

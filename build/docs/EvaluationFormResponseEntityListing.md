@@ -1,13 +1,13 @@
 ---
-title: EvaluationFormEntityListing
+title: EvaluationFormResponseEntityListing
 ---
-## EvaluationFormEntityListing
+## EvaluationFormResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[EvaluationForm]**](EvaluationForm.html) |  | [optional] |
+| **entities** | [**[EvaluationFormResponse]**](EvaluationFormResponse.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |

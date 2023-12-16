@@ -53,8 +53,6 @@ public class EvaluationResponse: Codable {
     public var assignedDate: Date?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var changedDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var revisionCreatedDate: Date?
     public var queue: Queue?
     /** List of different communication types used in conversation. */
     public var mediaType: [MediaType]?
@@ -76,8 +74,6 @@ public class EvaluationResponse: Codable {
     public var resourceType: ResourceType?
     /** Is only true when the user making the request does not have sufficient permissions to see evaluation */
     public var redacted: Bool?
-    /** Team of the evaluation agent */
-    public var agentTeam: Team?
     public var isScoringIndex: Bool?
     /** List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit */
     public var authorizedActions: [String]?
@@ -88,7 +84,7 @@ public class EvaluationResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, agentTeam: Team?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -104,7 +100,6 @@ public class EvaluationResponse: Codable {
         self.releaseDate = releaseDate
         self.assignedDate = assignedDate
         self.changedDate = changedDate
-        self.revisionCreatedDate = revisionCreatedDate
         self.queue = queue
         self.mediaType = mediaType
         self.rescore = rescore
@@ -116,7 +111,6 @@ public class EvaluationResponse: Codable {
         self.resourceId = resourceId
         self.resourceType = resourceType
         self.redacted = redacted
-        self.agentTeam = agentTeam
         self.isScoringIndex = isScoringIndex
         self.authorizedActions = authorizedActions
         self.hasAssistanceFailed = hasAssistanceFailed
@@ -140,7 +134,6 @@ public class EvaluationResponse: Codable {
         case releaseDate
         case assignedDate
         case changedDate
-        case revisionCreatedDate
         case queue
         case mediaType
         case rescore
@@ -152,7 +145,6 @@ public class EvaluationResponse: Codable {
         case resourceId
         case resourceType
         case redacted
-        case agentTeam
         case isScoringIndex
         case authorizedActions
         case hasAssistanceFailed

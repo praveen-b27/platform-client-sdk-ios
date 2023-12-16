@@ -16,6 +16,7 @@ title: MetricDefinition
 | **defaultObjective** | [**DefaultObjective**](DefaultObjective.html) | A predefined default objective for this metric | [optional] |
 | **lockTemplateId** | **String** | An optional field to specify if this metric definition is locked to certain template. e.g. punctuality | [optional] |
 | **mediaTypeFilteringAllowed** | **Bool** | Flag to indicate if this metricDefinition allows filter based on media types | [optional] |
+| **initialDirectionFilteringAllowed** | **Bool** | Flag to indicate if this metricDefinition allows filter based on initial direction | [optional] |
 | **queueFilteringAllowed** | **Bool** | Flag to indicate if this metricDefinition allows filter based on queues | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

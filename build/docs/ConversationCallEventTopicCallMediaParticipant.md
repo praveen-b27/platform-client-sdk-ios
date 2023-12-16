@@ -43,6 +43,7 @@ title: ConversationCallEventTopicCallMediaParticipant
 | **startAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
+| **queueMediaSettings** | [**ConversationCallEventTopicQueueMediaSettings**](ConversationCallEventTopicQueueMediaSettings.html) |  | [optional] |
 | **muted** | **Bool** |  | [optional] |
 | **confined** | **Bool** |  | [optional] |
 | **recording** | **Bool** |  | [optional] |

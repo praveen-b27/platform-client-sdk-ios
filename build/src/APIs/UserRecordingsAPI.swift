@@ -188,6 +188,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -229,6 +230,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -398,7 +400,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -422,6 +424,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -478,7 +481,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -502,6 +505,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6119,6 +6123,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6175,6 +6180,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6231,6 +6237,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -6265,6 +6272,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -6303,7 +6311,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -6329,6 +6337,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6429,7 +6438,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -6455,6 +6464,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6692,6 +6702,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6733,6 +6744,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6902,7 +6914,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -6926,6 +6938,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -6982,7 +6995,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -7006,6 +7019,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -12623,6 +12637,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -12679,6 +12694,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -12735,6 +12751,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -12769,6 +12786,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -12807,7 +12825,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -12833,6 +12851,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -12933,7 +12952,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -12959,6 +12978,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -13433,6 +13453,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -13474,6 +13495,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -13643,7 +13665,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -13667,6 +13689,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -13723,7 +13746,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -13747,6 +13770,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -19364,6 +19388,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -19420,6 +19445,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -19476,6 +19502,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -19510,6 +19537,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -19548,7 +19576,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -19574,6 +19602,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -19674,7 +19703,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -19700,6 +19729,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -19937,6 +19967,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -19978,6 +20009,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -20147,7 +20179,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -20171,6 +20203,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -20227,7 +20260,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -20251,6 +20284,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -25868,6 +25902,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -25924,6 +25959,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -25980,6 +26016,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -26014,6 +26051,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -26052,7 +26090,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -26078,6 +26116,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -26178,7 +26217,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -26204,6 +26243,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -26527,6 +26567,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -26568,6 +26609,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -26737,7 +26779,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -26761,6 +26803,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -26817,7 +26860,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -26841,6 +26884,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -32458,6 +32502,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -32514,6 +32559,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -32570,6 +32616,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -32604,6 +32651,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -32642,7 +32690,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -32668,6 +32716,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -32768,7 +32817,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -32794,6 +32843,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -33031,6 +33081,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -33072,6 +33123,7 @@ open class UserRecordingsAPI {
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
           "skipEnabled" : true,
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -33241,7 +33293,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -33265,6 +33317,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -33321,7 +33374,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -33345,6 +33398,7 @@ open class UserRecordingsAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -38962,6 +39016,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -39018,6 +39073,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "message" : "message"
           },
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -39074,6 +39130,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -39108,6 +39165,7 @@ open class UserRecordingsAPI {
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
+          "queueMediaSettings" : "{}",
           "roomId" : "roomId",
           "segments" : [ {
             "howEnded" : "howEnded",
@@ -39146,7 +39204,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -39172,6 +39230,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -39272,7 +39331,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "audit",
+              "namespace" : "agent.assistant",
               "value" : 7,
               "key" : "key"
             },
@@ -39298,6 +39357,7 @@ open class UserRecordingsAPI {
           },
           "type" : "unknown",
           "toAddress" : "{}",
+          "queueMediaSettings" : "{}",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -39737,6 +39797,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -39778,6 +39839,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -39947,7 +40009,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -39971,6 +40033,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -40027,7 +40090,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -40051,6 +40114,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -45668,6 +45732,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -45724,6 +45789,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -45780,6 +45846,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -45814,6 +45881,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -45852,7 +45920,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -45878,6 +45946,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -45978,7 +46047,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -46004,6 +46073,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -46241,6 +46311,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -46282,6 +46353,7 @@ open class UserRecordingsAPI {
         "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "skipEnabled" : true,
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -46451,7 +46523,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -46475,6 +46547,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -46531,7 +46604,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -46555,6 +46628,7 @@ open class UserRecordingsAPI {
           "errors" : [ null, null ],
           "status" : 2
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -52172,6 +52246,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -52228,6 +52303,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "message" : "message"
         },
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -52284,6 +52360,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -52318,6 +52395,7 @@ open class UserRecordingsAPI {
         "held" : true,
         "avatarImageUrl" : "avatarImageUrl",
         "afterCallWorkRequired" : true,
+        "queueMediaSettings" : "{}",
         "roomId" : "roomId",
         "segments" : [ {
           "howEnded" : "howEnded",
@@ -52356,7 +52434,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -52382,6 +52460,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",
@@ -52482,7 +52561,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "audit",
+            "namespace" : "agent.assistant",
             "value" : 7,
             "key" : "key"
           },
@@ -52508,6 +52587,7 @@ open class UserRecordingsAPI {
         },
         "type" : "unknown",
         "toAddress" : "{}",
+        "queueMediaSettings" : "{}",
         "segments" : [ {
           "howEnded" : "howEnded",
           "disconnectType" : "disconnectType",

@@ -584,6 +584,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "certType" : "PureCloud",
   "softwareStatus" : "{}",
   "fullSoftwareVersion" : "fullSoftwareVersion",
   "onlineStatus" : "ONLINE",
@@ -2348,6 +2349,7 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -2487,6 +2489,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -2668,7 +2671,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     Get the list of available languages.
+     Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2691,7 +2694,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     Get the list of available languages.
+     Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
      - GET /api/v2/telephony/providers/edges/availablelanguages
      - OAuth:
        - type: oauth2
@@ -5609,6 +5612,7 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "primaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -5772,6 +5776,7 @@ open class TelephonyProvidersEdgeAPI {
   "site" : "{}",
   "createdBy" : "createdBy",
   "secondaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -6699,6 +6704,7 @@ open class TelephonyProvidersEdgeAPI {
       }
     } ],
     "primaryEdge" : {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -6862,6 +6868,7 @@ open class TelephonyProvidersEdgeAPI {
     "site" : "{}",
     "createdBy" : "createdBy",
     "secondaryEdge" : {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -7114,6 +7121,7 @@ open class TelephonyProvidersEdgeAPI {
       }
     } ],
     "primaryEdge" : {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -7277,6 +7285,7 @@ open class TelephonyProvidersEdgeAPI {
     "site" : "{}",
     "createdBy" : "createdBy",
     "secondaryEdge" : {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -7620,6 +7629,7 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "primaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -7783,6 +7793,7 @@ open class TelephonyProvidersEdgeAPI {
   "site" : "{}",
   "createdBy" : "createdBy",
   "secondaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -8123,6 +8134,7 @@ open class TelephonyProvidersEdgeAPI {
     "type" : "PRIMARY"
   } ],
   "secondaryEdges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -8262,6 +8274,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -8407,6 +8420,7 @@ open class TelephonyProvidersEdgeAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "primaryEdges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -8546,6 +8560,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -8694,6 +8709,7 @@ open class TelephonyProvidersEdgeAPI {
   "coreSite" : true,
   "selfUri" : "https://openapi-generator.tech",
   "edges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -8833,6 +8849,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -9939,6 +9956,7 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "PRIMARY"
     } ],
     "secondaryEdges" : [ {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -10078,6 +10096,7 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "softwareVersion",
       "statusCode" : "NEW"
     }, {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -10223,6 +10242,7 @@ open class TelephonyProvidersEdgeAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "primaryEdges" : [ {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -10362,6 +10382,7 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "softwareVersion",
       "statusCode" : "NEW"
     }, {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -10510,6 +10531,7 @@ open class TelephonyProvidersEdgeAPI {
     "coreSite" : true,
     "selfUri" : "https://openapi-generator.tech",
     "edges" : [ {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -10649,6 +10671,7 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "softwareVersion",
       "statusCode" : "NEW"
     }, {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -11009,6 +11032,7 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "PRIMARY"
     } ],
     "secondaryEdges" : [ {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -11148,6 +11172,7 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "softwareVersion",
       "statusCode" : "NEW"
     }, {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -11293,6 +11318,7 @@ open class TelephonyProvidersEdgeAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "primaryEdges" : [ {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -11432,6 +11458,7 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "softwareVersion",
       "statusCode" : "NEW"
     }, {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -11580,6 +11607,7 @@ open class TelephonyProvidersEdgeAPI {
     "coreSite" : true,
     "selfUri" : "https://openapi-generator.tech",
     "edges" : [ {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -11719,6 +11747,7 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "softwareVersion",
       "statusCode" : "NEW"
     }, {
+      "certType" : "PureCloud",
       "softwareStatus" : "{}",
       "fullSoftwareVersion" : "fullSoftwareVersion",
       "onlineStatus" : "ONLINE",
@@ -14174,6 +14203,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "certType" : "PureCloud",
   "softwareStatus" : "{}",
   "fullSoftwareVersion" : "fullSoftwareVersion",
   "onlineStatus" : "ONLINE",
@@ -15006,6 +15036,7 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "primaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -15169,6 +15200,7 @@ open class TelephonyProvidersEdgeAPI {
   "site" : "{}",
   "createdBy" : "createdBy",
   "secondaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -15520,6 +15552,7 @@ open class TelephonyProvidersEdgeAPI {
     "type" : "PRIMARY"
   } ],
   "secondaryEdges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -15659,6 +15692,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -15804,6 +15838,7 @@ open class TelephonyProvidersEdgeAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "primaryEdges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -15943,6 +15978,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -16091,6 +16127,7 @@ open class TelephonyProvidersEdgeAPI {
   "coreSite" : true,
   "selfUri" : "https://openapi-generator.tech",
   "edges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -16230,6 +16267,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -16685,6 +16723,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "certType" : "PureCloud",
   "softwareStatus" : "{}",
   "fullSoftwareVersion" : "fullSoftwareVersion",
   "onlineStatus" : "ONLINE",
@@ -17578,6 +17617,7 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "primaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -17741,6 +17781,7 @@ open class TelephonyProvidersEdgeAPI {
   "site" : "{}",
   "createdBy" : "createdBy",
   "secondaryEdge" : {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -18105,6 +18146,7 @@ open class TelephonyProvidersEdgeAPI {
     "type" : "PRIMARY"
   } ],
   "secondaryEdges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -18244,6 +18286,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -18389,6 +18432,7 @@ open class TelephonyProvidersEdgeAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "primaryEdges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -18528,6 +18572,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -18676,6 +18721,7 @@ open class TelephonyProvidersEdgeAPI {
   "coreSite" : true,
   "selfUri" : "https://openapi-generator.tech",
   "edges" : [ {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",
@@ -18815,6 +18861,7 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "softwareVersion",
     "statusCode" : "NEW"
   }, {
+    "certType" : "PureCloud",
     "softwareStatus" : "{}",
     "fullSoftwareVersion" : "fullSoftwareVersion",
     "onlineStatus" : "ONLINE",

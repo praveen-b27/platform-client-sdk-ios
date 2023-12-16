@@ -1460,6 +1460,7 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "unitType" : "None",
   "mediaTypeFilteringAllowed" : true,
+  "initialDirectionFilteringAllowed" : true,
   "defaultObjective" : "{}",
   "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
   "queueFilteringAllowed" : true,
@@ -1525,6 +1526,7 @@ open class GamificationAPI {
   "entities" : [ {
     "unitType" : "None",
     "mediaTypeFilteringAllowed" : true,
+    "initialDirectionFilteringAllowed" : true,
     "defaultObjective" : "{}",
     "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
     "queueFilteringAllowed" : true,
@@ -1537,6 +1539,7 @@ open class GamificationAPI {
   }, {
     "unitType" : "None",
     "mediaTypeFilteringAllowed" : true,
+    "initialDirectionFilteringAllowed" : true,
     "defaultObjective" : "{}",
     "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
     "queueFilteringAllowed" : true,

@@ -29,6 +29,7 @@ title: QueueConversationSocialExpressionEventTopicEmail
 | **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
+| **queueMediaSettings** | [**QueueConversationSocialExpressionEventTopicQueueMediaSettings**](QueueConversationSocialExpressionEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
 {: class="table table-striped"}
 
 

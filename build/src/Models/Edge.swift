@@ -41,6 +41,12 @@ public class Edge: Codable {
         case chs = "CHS"
         case invalid = "INVALID"
     }
+    public enum CertType: String, Codable { 
+        case pureCloud = "PureCloud"
+        case _public = "Public"
+        case china = "China"
+        case notRequested = "NotRequested"
+    }
     public enum CallDrainingState: String, Codable { 
         case _none = "NONE"
         case wait = "WAIT"
@@ -101,6 +107,8 @@ public class Edge: Codable {
     public var physicalEdge: Bool?
     public var managed: Bool?
     public var edgeDeploymentType: EdgeDeploymentType?
+    /** The type of certificate used to communicate with edge-proxy. */
+    public var certType: CertType?
     /** The current state of the Edge's call draining process before it can be safely rebooted or updated. */
     public var callDrainingState: CallDrainingState?
     /** The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0. */
@@ -114,7 +122,7 @@ public class Edge: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, interfaces: [EdgeInterface]?, make: String?, model: String?, apiVersion: String?, softwareVersion: String?, softwareVersionTimestamp: String?, softwareVersionPlatform: String?, softwareVersionConfiguration: String?, fullSoftwareVersion: String?, pairingId: String?, fingerprint: String?, fingerprintHint: String?, currentVersion: String?, stagedVersion: String?, patch: String?, statusCode: StatusCode?, edgeGroup: EdgeGroup?, site: Site?, softwareStatus: DomainEdgeSoftwareUpdateDto?, onlineStatus: OnlineStatus?, serialNumber: String?, physicalEdge: Bool?, managed: Bool?, edgeDeploymentType: EdgeDeploymentType?, callDrainingState: CallDrainingState?, conversationCount: Int?, proxy: String?, offlineConfigCalled: Bool?, osName: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, interfaces: [EdgeInterface]?, make: String?, model: String?, apiVersion: String?, softwareVersion: String?, softwareVersionTimestamp: String?, softwareVersionPlatform: String?, softwareVersionConfiguration: String?, fullSoftwareVersion: String?, pairingId: String?, fingerprint: String?, fingerprintHint: String?, currentVersion: String?, stagedVersion: String?, patch: String?, statusCode: StatusCode?, edgeGroup: EdgeGroup?, site: Site?, softwareStatus: DomainEdgeSoftwareUpdateDto?, onlineStatus: OnlineStatus?, serialNumber: String?, physicalEdge: Bool?, managed: Bool?, edgeDeploymentType: EdgeDeploymentType?, certType: CertType?, callDrainingState: CallDrainingState?, conversationCount: Int?, proxy: String?, offlineConfigCalled: Bool?, osName: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -151,6 +159,7 @@ public class Edge: Codable {
         self.physicalEdge = physicalEdge
         self.managed = managed
         self.edgeDeploymentType = edgeDeploymentType
+        self.certType = certType
         self.callDrainingState = callDrainingState
         self.conversationCount = conversationCount
         self.proxy = proxy
@@ -196,6 +205,7 @@ public class Edge: Codable {
         case physicalEdge
         case managed
         case edgeDeploymentType
+        case certType
         case callDrainingState
         case conversationCount
         case proxy

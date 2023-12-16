@@ -792,7 +792,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let userCount: AuthorizationAPI.UserCount_getAuthorizationRole = AuthorizationAPI.UserCount_getAuthorizationRole.enummember // Fetch the count of users who have this role granted in at least one division
+let userCount: AuthorizationAPI.UserCount_getAuthorizationRole = AuthorizationAPI.UserCount_getAuthorizationRole.enummember // Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to 'true' can lead to slower load times or timeouts for role queries with large member counts.
 let expand: [String] = [""] // Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
 
 // Code example
@@ -812,7 +812,7 @@ AuthorizationAPI.getAuthorizationRole(roleId: roleId, userCount: userCount, expa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **userCount** | **Bool**| Fetch the count of users who have this role granted in at least one division | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **userCount** | **Bool**| Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to 'true' can lead to slower load times or timeouts for role queries with large member counts. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
 {: class="table-striped"}
 

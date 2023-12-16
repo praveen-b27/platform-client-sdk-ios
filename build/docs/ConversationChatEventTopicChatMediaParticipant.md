@@ -43,6 +43,7 @@ title: ConversationChatEventTopicChatMediaParticipant
 | **startAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
+| **queueMediaSettings** | [**ConversationChatEventTopicQueueMediaSettings**](ConversationChatEventTopicQueueMediaSettings.html) |  | [optional] |
 | **roomId** | **String** |  | [optional] |
 | **avatarImageUrl** | **String** |  | [optional] |
 {: class="table table-striped"}

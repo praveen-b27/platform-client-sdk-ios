@@ -107,8 +107,10 @@ public class QueueConversationSocialExpressionEventTopicMessage: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
     public var byoSmsIntegrationId: String?
+    /** Represents the queue setting for this media. */
+    public var queueMediaSettings: QueueConversationSocialExpressionEventTopicQueueMediaSettings?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationSocialExpressionEventTopicAddress?, fromAddress: QueueConversationSocialExpressionEventTopicAddress?, messages: [QueueConversationSocialExpressionEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationSocialExpressionEventTopicAddress?, fromAddress: QueueConversationSocialExpressionEventTopicAddress?, messages: [QueueConversationSocialExpressionEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?, queueMediaSettings: QueueConversationSocialExpressionEventTopicQueueMediaSettings?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -135,6 +137,7 @@ public class QueueConversationSocialExpressionEventTopicMessage: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
         self.byoSmsIntegrationId = byoSmsIntegrationId
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -164,6 +167,7 @@ public class QueueConversationSocialExpressionEventTopicMessage: Codable {
         case afterCallWorkRequired
         case agentAssistantId
         case byoSmsIntegrationId
+        case queueMediaSettings
     }
 
 

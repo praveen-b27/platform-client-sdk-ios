@@ -2139,7 +2139,6 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
-  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -4074,7 +4073,6 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
-  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -13212,7 +13210,6 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
-  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -15147,7 +15144,6 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
-  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -22350,9 +22346,9 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityForm(formId: String, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func getQualityForm(formId: String, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormWithRequestBuilder(formId: formId)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -22375,18 +22371,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -22570,9 +22555,9 @@ open class QualityAPI {
      
      - parameter formId: (path) Form ID 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func getQualityFormWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationForm> {        
+    open class func getQualityFormWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationFormResponse> {        
         var path = "/api/v2/quality/forms/{formId}"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -22582,7 +22567,7 @@ open class QualityAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -22598,9 +22583,9 @@ open class QualityAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityFormVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormVersionsWithRequestBuilder(formId: formId, pageSize: pageSize, pageNumber: pageNumber)
-        requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -22627,18 +22612,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -22819,18 +22793,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23023,9 +22986,9 @@ open class QualityAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
 
-     - returns: RequestBuilder<EvaluationFormEntityListing> 
+     - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityFormVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EvaluationFormEntityListing> {        
+    open class func getQualityFormVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         var path = "/api/v2/quality/forms/{formId}/versions"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -23039,7 +23002,7 @@ open class QualityAPI {
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
-        let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -23070,9 +23033,9 @@ open class QualityAPI {
      - parameter sortOrder: (query) Order to sort results, either asc or desc (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityForms(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityForms? = nil, name: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityForms(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityForms? = nil, name: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder)
-        requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -23099,18 +23062,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23291,18 +23243,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23500,9 +23441,9 @@ open class QualityAPI {
      - parameter name: (query) Name (optional)
      - parameter sortOrder: (query) Order to sort results, either asc or desc (optional)
 
-     - returns: RequestBuilder<EvaluationFormEntityListing> 
+     - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityFormsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityForms? = nil, name: String? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormEntityListing> {        
+    open class func getQualityFormsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityForms? = nil, name: String? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         let path = "/api/v2/quality/forms"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -23519,7 +23460,7 @@ open class QualityAPI {
             "sortOrder": sortOrder
         ])
 
-        let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -23531,9 +23472,9 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormsEvaluation(formId: String, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func getQualityFormsEvaluation(formId: String, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormsEvaluationWithRequestBuilder(formId: formId)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -23556,18 +23497,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23751,9 +23681,9 @@ open class QualityAPI {
      
      - parameter formId: (path) Form ID 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func getQualityFormsEvaluationWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationForm> {        
+    open class func getQualityFormsEvaluationWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationFormResponse> {        
         var path = "/api/v2/quality/forms/evaluations/{formId}"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -23763,7 +23693,7 @@ open class QualityAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -23781,9 +23711,9 @@ open class QualityAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormsEvaluationVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityFormsEvaluationVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormsEvaluationVersionsWithRequestBuilder(formId: formId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder)
-        requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -23810,18 +23740,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24002,18 +23921,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24207,9 +24115,9 @@ open class QualityAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Sort order (optional)
 
-     - returns: RequestBuilder<EvaluationFormEntityListing> 
+     - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityFormsEvaluationVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormEntityListing> {        
+    open class func getQualityFormsEvaluationVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         var path = "/api/v2/quality/forms/evaluations/{formId}/versions"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -24224,7 +24132,7 @@ open class QualityAPI {
             "sortOrder": sortOrder
         ])
 
-        let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -24255,9 +24163,9 @@ open class QualityAPI {
      - parameter sortOrder: (query) Order to sort results, either asc or desc (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormsEvaluations(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityFormsEvaluations? = nil, name: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityFormsEvaluations(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityFormsEvaluations? = nil, name: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormsEvaluationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder)
-        requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -24285,18 +24193,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24477,18 +24374,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24686,9 +24572,9 @@ open class QualityAPI {
      - parameter name: (query) Name (optional)
      - parameter sortOrder: (query) Order to sort results, either asc or desc (optional)
 
-     - returns: RequestBuilder<EvaluationFormEntityListing> 
+     - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityFormsEvaluationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityFormsEvaluations? = nil, name: String? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormEntityListing> {        
+    open class func getQualityFormsEvaluationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, nextPage: String? = nil, previousPage: String? = nil, expand: Expand_getQualityFormsEvaluations? = nil, name: String? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         let path = "/api/v2/quality/forms/evaluations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -24705,7 +24591,7 @@ open class QualityAPI {
             "sortOrder": sortOrder
         ])
 
-        let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -24717,9 +24603,9 @@ open class QualityAPI {
      - parameter contextId: (query) A comma-delimited list of valid evaluation form context ids 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormsEvaluationsBulkContexts(contextId: [String], completion: @escaping ((_ data: [EvaluationForm]?,_ error: Error?) -> Void)) {
+    open class func getQualityFormsEvaluationsBulkContexts(contextId: [String], completion: @escaping ((_ data: [EvaluationFormResponse]?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityFormsEvaluationsBulkContextsWithRequestBuilder(contextId: contextId)
-        requestBuilder.execute { (response: Response<[EvaluationForm]>?, error) -> Void in
+        requestBuilder.execute { (response: Response<[EvaluationFormResponse]>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -24742,18 +24628,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24937,9 +24812,9 @@ open class QualityAPI {
      
      - parameter contextId: (query) A comma-delimited list of valid evaluation form context ids 
 
-     - returns: RequestBuilder<[EvaluationForm]> 
+     - returns: RequestBuilder<[EvaluationFormResponse]> 
      */
-    open class func getQualityFormsEvaluationsBulkContextsWithRequestBuilder(contextId: [String]) -> RequestBuilder<[EvaluationForm]> {        
+    open class func getQualityFormsEvaluationsBulkContextsWithRequestBuilder(contextId: [String]) -> RequestBuilder<[EvaluationFormResponse]> {        
         let path = "/api/v2/quality/forms/evaluations/bulk/contexts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -24949,7 +24824,7 @@ open class QualityAPI {
             "contextId": contextId
         ])
 
-        let requestBuilder: RequestBuilder<[EvaluationForm]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[EvaluationFormResponse]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -26685,9 +26560,9 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityPublishedform(formId: String, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func getQualityPublishedform(formId: String, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityPublishedformWithRequestBuilder(formId: formId)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -26710,18 +26585,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -26905,9 +26769,9 @@ open class QualityAPI {
      
      - parameter formId: (path) Form ID 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func getQualityPublishedformWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationForm> {        
+    open class func getQualityPublishedformWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationFormResponse> {        
         var path = "/api/v2/quality/publishedforms/{formId}"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -26917,7 +26781,7 @@ open class QualityAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -26935,9 +26799,9 @@ open class QualityAPI {
      - parameter onlyLatestPerContext: (query) onlyLatestPerContext (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityPublishedforms(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityPublishedforms(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityPublishedformsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext)
-        requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -26964,18 +26828,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27156,18 +27009,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27361,9 +27203,9 @@ open class QualityAPI {
      - parameter name: (query) Name (optional)
      - parameter onlyLatestPerContext: (query) onlyLatestPerContext (optional)
 
-     - returns: RequestBuilder<EvaluationFormEntityListing> 
+     - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityPublishedformsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil) -> RequestBuilder<EvaluationFormEntityListing> {        
+    open class func getQualityPublishedformsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         let path = "/api/v2/quality/publishedforms"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -27376,7 +27218,7 @@ open class QualityAPI {
             "onlyLatestPerContext": onlyLatestPerContext
         ])
 
-        let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -27388,9 +27230,9 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityPublishedformsEvaluation(formId: String, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func getQualityPublishedformsEvaluation(formId: String, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityPublishedformsEvaluationWithRequestBuilder(formId: formId)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -27413,18 +27255,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27608,9 +27439,9 @@ open class QualityAPI {
      
      - parameter formId: (path) Form ID 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func getQualityPublishedformsEvaluationWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationForm> {        
+    open class func getQualityPublishedformsEvaluationWithRequestBuilder(formId: String) -> RequestBuilder<EvaluationFormResponse> {        
         var path = "/api/v2/quality/publishedforms/evaluations/{formId}"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -27620,7 +27451,7 @@ open class QualityAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -27638,9 +27469,9 @@ open class QualityAPI {
      - parameter onlyLatestPerContext: (query) onlyLatestPerContext (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityPublishedformsEvaluations(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityPublishedformsEvaluations(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityPublishedformsEvaluationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext)
-        requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -27667,18 +27498,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27859,18 +27679,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "weightMode" : "SCALED",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -28064,9 +27873,9 @@ open class QualityAPI {
      - parameter name: (query) Name (optional)
      - parameter onlyLatestPerContext: (query) onlyLatestPerContext (optional)
 
-     - returns: RequestBuilder<EvaluationFormEntityListing> 
+     - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityPublishedformsEvaluationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil) -> RequestBuilder<EvaluationFormEntityListing> {        
+    open class func getQualityPublishedformsEvaluationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, onlyLatestPerContext: Bool? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         let path = "/api/v2/quality/publishedforms/evaluations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -28079,7 +27888,7 @@ open class QualityAPI {
             "onlyLatestPerContext": onlyLatestPerContext
         ])
 
-        let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -35032,9 +34841,9 @@ open class QualityAPI {
      - parameter body: (body) Evaluation form 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postQualityForms(body: EvaluationForm, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func postQualityForms(body: EvaluationForm, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postQualityFormsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -35057,18 +34866,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35252,16 +35050,16 @@ open class QualityAPI {
      
      - parameter body: (body) Evaluation form 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func postQualityFormsWithRequestBuilder(body: EvaluationForm) -> RequestBuilder<EvaluationForm> {        
+    open class func postQualityFormsWithRequestBuilder(body: EvaluationForm) -> RequestBuilder<EvaluationFormResponse> {        
         let path = "/api/v2/quality/forms"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -35273,9 +35071,9 @@ open class QualityAPI {
      - parameter body: (body) Evaluation form 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postQualityFormsEvaluations(body: EvaluationForm, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func postQualityFormsEvaluations(body: EvaluationForm, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postQualityFormsEvaluationsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -35298,18 +35096,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35493,16 +35280,16 @@ open class QualityAPI {
      
      - parameter body: (body) Evaluation form 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func postQualityFormsEvaluationsWithRequestBuilder(body: EvaluationForm) -> RequestBuilder<EvaluationForm> {        
+    open class func postQualityFormsEvaluationsWithRequestBuilder(body: EvaluationForm) -> RequestBuilder<EvaluationFormResponse> {        
         let path = "/api/v2/quality/forms/evaluations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -35736,9 +35523,9 @@ open class QualityAPI {
      - parameter body: (body) Publish request containing id of form to publish 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postQualityPublishedforms(body: PublishForm, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func postQualityPublishedforms(body: PublishForm, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postQualityPublishedformsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -35761,18 +35548,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35956,16 +35732,16 @@ open class QualityAPI {
      
      - parameter body: (body) Publish request containing id of form to publish 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func postQualityPublishedformsWithRequestBuilder(body: PublishForm) -> RequestBuilder<EvaluationForm> {        
+    open class func postQualityPublishedformsWithRequestBuilder(body: PublishForm) -> RequestBuilder<EvaluationFormResponse> {        
         let path = "/api/v2/quality/publishedforms"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -35977,9 +35753,9 @@ open class QualityAPI {
      - parameter body: (body) Publish request containing id of form to publish 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postQualityPublishedformsEvaluations(body: PublishForm, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func postQualityPublishedformsEvaluations(body: PublishForm, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postQualityPublishedformsEvaluationsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -36002,18 +35778,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36197,16 +35962,16 @@ open class QualityAPI {
      
      - parameter body: (body) Publish request containing id of form to publish 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func postQualityPublishedformsEvaluationsWithRequestBuilder(body: PublishForm) -> RequestBuilder<EvaluationForm> {        
+    open class func postQualityPublishedformsEvaluationsWithRequestBuilder(body: PublishForm) -> RequestBuilder<EvaluationFormResponse> {        
         let path = "/api/v2/quality/publishedforms/evaluations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -38669,7 +38434,6 @@ open class QualityAPI {
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
   "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
   "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
-  "agentTeam" : "{}",
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
@@ -40604,7 +40368,6 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
-  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -41084,9 +40847,9 @@ open class QualityAPI {
      - parameter body: (body) Evaluation form 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putQualityForm(formId: String, body: EvaluationForm, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func putQualityForm(formId: String, body: EvaluationForm, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putQualityFormWithRequestBuilder(formId: formId, body: body)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -41109,18 +40872,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41305,9 +41057,9 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter body: (body) Evaluation form 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func putQualityFormWithRequestBuilder(formId: String, body: EvaluationForm) -> RequestBuilder<EvaluationForm> {        
+    open class func putQualityFormWithRequestBuilder(formId: String, body: EvaluationForm) -> RequestBuilder<EvaluationFormResponse> {        
         var path = "/api/v2/quality/forms/{formId}"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -41317,7 +41069,7 @@ open class QualityAPI {
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -41331,9 +41083,9 @@ open class QualityAPI {
      - parameter body: (body) Evaluation form 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putQualityFormsEvaluation(formId: String, body: EvaluationForm, completion: @escaping ((_ data: EvaluationForm?,_ error: Error?) -> Void)) {
+    open class func putQualityFormsEvaluation(formId: String, body: EvaluationForm, completion: @escaping ((_ data: EvaluationFormResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putQualityFormsEvaluationWithRequestBuilder(formId: formId, body: body)
-        requestBuilder.execute { (response: Response<EvaluationForm>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationFormResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -41356,18 +41108,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedVersions" : {
-    "total" : 7,
-    "pageCount" : 1,
-    "pageNumber" : 6,
-    "entities" : [ null, null ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 1,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  },
+  "weightMode" : "SCALED",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41552,9 +41293,9 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter body: (body) Evaluation form 
 
-     - returns: RequestBuilder<EvaluationForm> 
+     - returns: RequestBuilder<EvaluationFormResponse> 
      */
-    open class func putQualityFormsEvaluationWithRequestBuilder(formId: String, body: EvaluationForm) -> RequestBuilder<EvaluationForm> {        
+    open class func putQualityFormsEvaluationWithRequestBuilder(formId: String, body: EvaluationForm) -> RequestBuilder<EvaluationFormResponse> {        
         var path = "/api/v2/quality/forms/evaluations/{formId}"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -41564,7 +41305,7 @@ open class QualityAPI {
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EvaluationForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

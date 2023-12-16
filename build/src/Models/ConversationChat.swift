@@ -91,8 +91,10 @@ public class ConversationChat: Codable {
     public var afterCallWork: AfterCallWork?
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** Represents the queue settings for this media type. */
+    public var queueMediaSettings: ConversationQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, queueMediaSettings: ConversationQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -114,6 +116,7 @@ public class ConversationChat: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -138,6 +141,7 @@ public class ConversationChat: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case queueMediaSettings
     }
 
 

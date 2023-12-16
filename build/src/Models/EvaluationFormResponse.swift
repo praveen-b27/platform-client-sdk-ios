@@ -11,6 +11,10 @@ import Foundation
 
 public class EvaluationFormResponse: Codable {
 
+    public enum WeightMode: String, Codable { 
+        case scaled = "SCALED"
+        case off = "OFF"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The evaluation form name */
@@ -21,18 +25,19 @@ public class EvaluationFormResponse: Codable {
     public var contextId: String?
     /** A list of question groups */
     public var questionGroups: [EvaluationQuestionGroup]?
-    public var publishedVersions: DomainEntityListingEvaluationForm?
+    /** Mode for evaluation form weight */
+    public var weightMode: WeightMode?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, publishedVersions: DomainEntityListingEvaluationForm?, selfUri: String?) {
+    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, weightMode: WeightMode?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.modifiedDate = modifiedDate
         self.published = published
         self.contextId = contextId
         self.questionGroups = questionGroups
-        self.publishedVersions = publishedVersions
+        self.weightMode = weightMode
         self.selfUri = selfUri
     }
 
@@ -43,7 +48,7 @@ public class EvaluationFormResponse: Codable {
         case published
         case contextId
         case questionGroups
-        case publishedVersions
+        case weightMode
         case selfUri
     }
 

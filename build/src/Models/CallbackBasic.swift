@@ -111,8 +111,10 @@ public class CallbackBasic: Codable {
     public var callerId: String?
     /** The name displayed to recipients of the phone call. */
     public var callerIdName: String?
+    /** Represents the queue settings for this media type. */
+    public var queueMediaSettings: ConversationQueueMediaSettings?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?, queueMediaSettings: ConversationQueueMediaSettings?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -141,6 +143,7 @@ public class CallbackBasic: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.callerId = callerId
         self.callerIdName = callerIdName
+        self.queueMediaSettings = queueMediaSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -172,6 +175,7 @@ public class CallbackBasic: Codable {
         case afterCallWorkRequired
         case callerId
         case callerIdName
+        case queueMediaSettings
     }
 
 

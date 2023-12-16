@@ -927,7 +927,7 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 
 
 
-> [EvaluationForm](EvaluationForm.html) getQualityForm(formId)
+> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityForm(formId)
 
 Get an evaluation form
 
@@ -971,7 +971,7 @@ QualityAPI.getQualityForm(formId: formId) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getQualityFormVersions"></a>
 
@@ -979,7 +979,7 @@ QualityAPI.getQualityForm(formId: formId) { (response, error) in
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityFormVersions(formId, pageSize, pageNumber)
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityFormVersions(formId, pageSize, pageNumber)
 
 Gets all the revisions for a specific evaluation.
 
@@ -1027,7 +1027,7 @@ QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getQualityForms"></a>
 
@@ -1035,7 +1035,7 @@ QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
 Get the list of evaluation forms
 
@@ -1093,7 +1093,7 @@ QualityAPI.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: s
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getQualityFormsEvaluation"></a>
 
@@ -1101,7 +1101,7 @@ QualityAPI.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: s
 
 
 
-> [EvaluationForm](EvaluationForm.html) getQualityFormsEvaluation(formId)
+> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityFormsEvaluation(formId)
 
 Get an evaluation form
 
@@ -1145,7 +1145,7 @@ QualityAPI.getQualityFormsEvaluation(formId: formId) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getQualityFormsEvaluationVersions"></a>
 
@@ -1153,7 +1153,7 @@ QualityAPI.getQualityFormsEvaluation(formId: formId) { (response, error) in
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder)
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder)
 
 Gets all the revisions for a specific evaluation.
 
@@ -1203,7 +1203,7 @@ QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize,
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getQualityFormsEvaluations"></a>
 
@@ -1211,7 +1211,7 @@ QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize,
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
 Get the list of evaluation forms
 
@@ -1271,7 +1271,7 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getQualityFormsEvaluationsBulkContexts"></a>
 
@@ -1279,7 +1279,7 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 
 
 
-> [[EvaluationForm]](EvaluationForm.html) getQualityFormsEvaluationsBulkContexts(contextId)
+> [[EvaluationFormResponse]](EvaluationFormResponse.html) getQualityFormsEvaluationsBulkContexts(contextId)
 
 Retrieve a list of the latest published evaluation form versions by context ids
 
@@ -1323,7 +1323,7 @@ QualityAPI.getQualityFormsEvaluationsBulkContexts(contextId: contextId) { (respo
 
 ### Return type
 
-[**[EvaluationForm]**](EvaluationForm.html)
+[**[EvaluationFormResponse]**](EvaluationFormResponse.html)
 
 <a name="getQualityFormsSurvey"></a>
 
@@ -1611,7 +1611,7 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 
 
 
-> [EvaluationForm](EvaluationForm.html) getQualityPublishedform(formId)
+> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityPublishedform(formId)
 
 Get the published evaluation forms.
 
@@ -1655,7 +1655,7 @@ QualityAPI.getQualityPublishedform(formId: formId) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getQualityPublishedforms"></a>
 
@@ -1663,7 +1663,7 @@ QualityAPI.getQualityPublishedform(formId: formId) { (response, error) in
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext)
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext)
 
 Get the published evaluation forms.
 
@@ -1713,7 +1713,7 @@ QualityAPI.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, 
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getQualityPublishedformsEvaluation"></a>
 
@@ -1721,7 +1721,7 @@ QualityAPI.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, 
 
 
 
-> [EvaluationForm](EvaluationForm.html) getQualityPublishedformsEvaluation(formId)
+> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityPublishedformsEvaluation(formId)
 
 Get the most recent published version of an evaluation form.
 
@@ -1765,7 +1765,7 @@ QualityAPI.getQualityPublishedformsEvaluation(formId: formId) { (response, error
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getQualityPublishedformsEvaluations"></a>
 
@@ -1773,7 +1773,7 @@ QualityAPI.getQualityPublishedformsEvaluation(formId: formId) { (response, error
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext)
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext)
 
 Get the published evaluation forms.
 
@@ -1823,7 +1823,7 @@ QualityAPI.getQualityPublishedformsEvaluations(pageSize: pageSize, pageNumber: p
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getQualityPublishedformsSurvey"></a>
 
@@ -2466,7 +2466,7 @@ QualityAPI.postQualityEvaluationsScoring(body: body) { (response, error) in
 
 
 
-> [EvaluationForm](EvaluationForm.html) postQualityForms(body)
+> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityForms(body)
 
 Create an evaluation form.
 
@@ -2510,7 +2510,7 @@ QualityAPI.postQualityForms(body: body) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postQualityFormsEvaluations"></a>
 
@@ -2518,7 +2518,7 @@ QualityAPI.postQualityForms(body: body) { (response, error) in
 
 
 
-> [EvaluationForm](EvaluationForm.html) postQualityFormsEvaluations(body)
+> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityFormsEvaluations(body)
 
 Create an evaluation form.
 
@@ -2562,7 +2562,7 @@ QualityAPI.postQualityFormsEvaluations(body: body) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postQualityFormsSurveys"></a>
 
@@ -2622,7 +2622,7 @@ QualityAPI.postQualityFormsSurveys(body: body) { (response, error) in
 
 
 
-> [EvaluationForm](EvaluationForm.html) postQualityPublishedforms(body)
+> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityPublishedforms(body)
 
 Publish an evaluation form.
 
@@ -2666,7 +2666,7 @@ QualityAPI.postQualityPublishedforms(body: body) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postQualityPublishedformsEvaluations"></a>
 
@@ -2674,7 +2674,7 @@ QualityAPI.postQualityPublishedforms(body: body) { (response, error) in
 
 
 
-> [EvaluationForm](EvaluationForm.html) postQualityPublishedformsEvaluations(body)
+> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityPublishedformsEvaluations(body)
 
 Publish an evaluation form.
 
@@ -2718,7 +2718,7 @@ QualityAPI.postQualityPublishedformsEvaluations(body: body) { (response, error) 
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postQualityPublishedformsSurveys"></a>
 
@@ -2945,7 +2945,7 @@ QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, eval
 
 
 
-> [EvaluationForm](EvaluationForm.html) putQualityForm(formId, body)
+> [EvaluationFormResponse](EvaluationFormResponse.html) putQualityForm(formId, body)
 
 Update an evaluation form.
 
@@ -2991,7 +2991,7 @@ QualityAPI.putQualityForm(formId: formId, body: body) { (response, error) in
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="putQualityFormsEvaluation"></a>
 
@@ -2999,7 +2999,7 @@ QualityAPI.putQualityForm(formId: formId, body: body) { (response, error) in
 
 
 
-> [EvaluationForm](EvaluationForm.html) putQualityFormsEvaluation(formId, body)
+> [EvaluationFormResponse](EvaluationFormResponse.html) putQualityFormsEvaluation(formId, body)
 
 Update an evaluation form.
 
@@ -3045,7 +3045,7 @@ QualityAPI.putQualityFormsEvaluation(formId: formId, body: body) { (response, er
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="putQualityFormsSurvey"></a>
 

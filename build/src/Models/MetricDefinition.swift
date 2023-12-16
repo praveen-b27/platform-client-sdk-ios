@@ -37,12 +37,14 @@ public class MetricDefinition: Codable {
     public var lockTemplateId: String?
     /** Flag to indicate if this metricDefinition allows filter based on media types */
     public var mediaTypeFilteringAllowed: Bool?
+    /** Flag to indicate if this metricDefinition allows filter based on initial direction */
+    public var initialDirectionFilteringAllowed: Bool?
     /** Flag to indicate if this metricDefinition allows filter based on queues */
     public var queueFilteringAllowed: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, unitType: UnitType?, shortName: String?, dividendMetrics: [String]?, divisorMetrics: [String]?, defaultObjective: DefaultObjective?, lockTemplateId: String?, mediaTypeFilteringAllowed: Bool?, queueFilteringAllowed: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, unitType: UnitType?, shortName: String?, dividendMetrics: [String]?, divisorMetrics: [String]?, defaultObjective: DefaultObjective?, lockTemplateId: String?, mediaTypeFilteringAllowed: Bool?, initialDirectionFilteringAllowed: Bool?, queueFilteringAllowed: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.unitType = unitType
@@ -52,6 +54,7 @@ public class MetricDefinition: Codable {
         self.defaultObjective = defaultObjective
         self.lockTemplateId = lockTemplateId
         self.mediaTypeFilteringAllowed = mediaTypeFilteringAllowed
+        self.initialDirectionFilteringAllowed = initialDirectionFilteringAllowed
         self.queueFilteringAllowed = queueFilteringAllowed
         self.selfUri = selfUri
     }
@@ -66,6 +69,7 @@ public class MetricDefinition: Codable {
         case defaultObjective
         case lockTemplateId
         case mediaTypeFilteringAllowed
+        case initialDirectionFilteringAllowed
         case queueFilteringAllowed
         case selfUri
     }

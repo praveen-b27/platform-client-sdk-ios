@@ -16,6 +16,7 @@ public class Integration: Codable {
         case enabled = "ENABLED"
         case disabled = "DISABLED"
         case deleted = "DELETED"
+        case restored = "RESTORED"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

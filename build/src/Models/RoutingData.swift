@@ -15,6 +15,8 @@ public class RoutingData: Codable {
     public var queueId: String?
     /** The identifier of a language to be considered in routing */
     public var languageId: String?
+    /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
+    public var label: String?
     /** The priority for routing */
     public var priority: Int?
     /** A list of skill identifiers to be considered in routing */
@@ -26,9 +28,10 @@ public class RoutingData: Codable {
     /** An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback. */
     public var routingFlags: [String]?
 
-    public init(queueId: String?, languageId: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
+    public init(queueId: String?, languageId: String?, label: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
         self.queueId = queueId
         self.languageId = languageId
+        self.label = label
         self.priority = priority
         self.skillIds = skillIds
         self.preferredAgentIds = preferredAgentIds

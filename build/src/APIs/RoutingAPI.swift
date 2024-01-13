@@ -3523,6 +3523,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -3821,6 +3822,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -4235,6 +4237,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -4533,6 +4536,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -6553,9 +6557,11 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "transcription" : "Disabled",
+  "pciDssRedactionEnabled" : true,
   "contentSearchEnabled" : true,
   "transcriptionConfidenceThreshold" : 0,
-  "lowLatencyTranscriptionEnabled" : true
+  "lowLatencyTranscriptionEnabled" : true,
+  "piiRedactionEnabled" : true
 }, statusCode=200}]
 
      - returns: RequestBuilder<TranscriptionSettings> 
@@ -7904,6 +7910,176 @@ open class RoutingAPI {
     }
 
     
+    /**
+     Get a simplified wrap-up code.
+     
+     - parameter codeId: (path) Wrapup Code ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingWrapupcodesDivisionview(codeId: String, completion: @escaping ((_ data: WrapupCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingWrapupcodesDivisionviewWithRequestBuilder(codeId: codeId)
+        requestBuilder.execute { (response: Response<WrapupCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a simplified wrap-up code.
+     - GET /api/v2/routing/wrapupcodes/divisionviews/{codeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter codeId: (path) Wrapup Code ID 
+
+     - returns: RequestBuilder<WrapupCode> 
+     */
+    open class func getRoutingWrapupcodesDivisionviewWithRequestBuilder(codeId: String) -> RequestBuilder<WrapupCode> {        
+        var path = "/api/v2/routing/wrapupcodes/divisionviews/{codeId}"
+        let codeIdPreEscape = "\(codeId)"
+        let codeIdPostEscape = codeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{codeId}", with: codeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WrapupCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum IncludeState_getRoutingWrapupcodesDivisionviews: String { 
+        case active = "Active"
+        case deleted = "Deleted"
+        case activeAndDeleted = "ActiveAndDeleted"
+    }
+
+    
+    /**
+     Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Name (trailing asterisks allowed) (optional)
+     - parameter _id: (query) Wrapup code ID(s) (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter includeState: (query) Wrapup code state(s) to include (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingWrapupcodesDivisionviews(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, includeState: IncludeState_getRoutingWrapupcodesDivisionviews? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingWrapupcodesDivisionviewsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, name: name, _id: _id, divisionId: divisionId, includeState: includeState)
+        requestBuilder.execute { (response: Response<WrapupCodeEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+     - GET /api/v2/routing/wrapupcodes/divisionviews
+     - Specifying both name and ID parameters is not supported.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Name (trailing asterisks allowed) (optional)
+     - parameter _id: (query) Wrapup code ID(s) (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter includeState: (query) Wrapup code state(s) to include (optional)
+
+     - returns: RequestBuilder<WrapupCodeEntityListing> 
+     */
+    open class func getRoutingWrapupcodesDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, includeState: IncludeState_getRoutingWrapupcodesDivisionviews? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
+        let path = "/api/v2/routing/wrapupcodes/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "name": name, 
+            "id": _id, 
+            "divisionId": divisionId, 
+            "includeState": includeState?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<WrapupCodeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -9103,6 +9279,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -9401,6 +9578,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -9817,6 +9995,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -10115,6 +10294,7 @@ open class RoutingAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -10426,6 +10606,62 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Patch Transcription Settings
+     
+     - parameter body: (body) Organization Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingSettingsTranscription(body: TranscriptionSettings, completion: @escaping ((_ data: TranscriptionSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingSettingsTranscriptionWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TranscriptionSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Patch Transcription Settings
+     - PATCH /api/v2/routing/settings/transcription
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "transcription" : "Disabled",
+  "pciDssRedactionEnabled" : true,
+  "contentSearchEnabled" : true,
+  "transcriptionConfidenceThreshold" : 0,
+  "lowLatencyTranscriptionEnabled" : true,
+  "piiRedactionEnabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Organization Settings 
+
+     - returns: RequestBuilder<TranscriptionSettings> 
+     */
+    open class func patchRoutingSettingsTranscriptionWithRequestBuilder(body: TranscriptionSettings) -> RequestBuilder<TranscriptionSettings> {        
+        let path = "/api/v2/routing/settings/transcription"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranscriptionSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -13030,6 +13266,83 @@ open class RoutingAPI {
 
     
     /**
+     Imports a phone number for SMS
+     
+     - parameter body: (body) SmsPhoneNumber 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingSmsPhonenumbersImport(body: SmsPhoneNumberImport, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingSmsPhonenumbersImportWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SmsPhoneNumber>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Imports a phone number for SMS
+     - POST /api/v2/routing/sms/phonenumbers/import
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "supportsSms" : true,
+  "country" : "country",
+  "purchaseDate" : "2000-01-23T04:56:07.000+00:00",
+  "phoneNumberStatus" : "INVALID",
+  "addressId" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "countryCode" : "countryCode",
+  "provisioningStatus" : "{}",
+  "phoneNumberType" : "local",
+  "modifiedBy" : "{}",
+  "supportsMms" : true,
+  "id" : "id",
+  "cancellationDate" : "2000-01-23T04:56:07.000+00:00",
+  "supportsVoice" : true,
+  "capabilities" : [ "sms", "sms" ],
+  "shortCodeBillingType" : "Basic",
+  "selfUri" : "https://openapi-generator.tech",
+  "provisionedThroughPureCloud" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "autoRenewable" : "Quarterly",
+  "renewalDate" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "phoneNumber" : "phoneNumber",
+  "createdBy" : "{}",
+  "compliance" : "{}",
+  "name" : "name",
+  "integration" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) SmsPhoneNumber 
+
+     - returns: RequestBuilder<SmsPhoneNumber> 
+     */
+    open class func postRoutingSmsPhonenumbersImportWithRequestBuilder(body: SmsPhoneNumberImport) -> RequestBuilder<SmsPhoneNumber> {        
+        let path = "/api/v2/routing/sms/phonenumbers/import"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Create a wrap-up code
      
      - parameter body: (body) WrapupCode 
@@ -13717,9 +14030,11 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "transcription" : "Disabled",
+  "pciDssRedactionEnabled" : true,
   "contentSearchEnabled" : true,
   "transcriptionConfidenceThreshold" : 0,
-  "lowLatencyTranscriptionEnabled" : true
+  "lowLatencyTranscriptionEnabled" : true,
+  "piiRedactionEnabled" : true
 }, statusCode=200}]
      
      - parameter body: (body) Organization Settings 

@@ -28,6 +28,8 @@ public class UpdateUser: Codable {
     public var addresses: [Contact]?
     public var title: String?
     public var username: String?
+    /** Preferred full name of agent */
+    public var preferredName: String?
     public var manager: String?
     public var images: [UserImage]?
     /** This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH. */
@@ -48,7 +50,7 @@ public class UpdateUser: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, title: String?, username: String?, manager: String?, images: [UserImage]?, version: Int?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, state: State?, acdAutoAnswer: Bool?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, selfUri: String?) {
+    public init(_id: String?, name: String?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, title: String?, username: String?, preferredName: String?, manager: String?, images: [UserImage]?, version: Int?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, state: State?, acdAutoAnswer: Bool?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.chat = chat
@@ -58,6 +60,7 @@ public class UpdateUser: Codable {
         self.addresses = addresses
         self.title = title
         self.username = username
+        self.preferredName = preferredName
         self.manager = manager
         self.images = images
         self.version = version
@@ -82,6 +85,7 @@ public class UpdateUser: Codable {
         case addresses
         case title
         case username
+        case preferredName
         case manager
         case images
         case version

@@ -54,7 +54,7 @@ public class Campaign: Codable {
     public var campaignStatus: CampaignStatus?
     /** The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. */
     public var phoneColumns: [PhoneColumn]?
-    /** The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns. */
+    /** The targeted compliance abandon rate percentage. Required for power and predictive campaigns. */
     public var abandonRate: Double?
     /** DncLists for this Campaign to check before placing a call. */
     public var dncLists: [DomainEntityRef]?

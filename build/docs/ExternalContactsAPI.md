@@ -696,7 +696,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let contactId: String = "" // ExternalContact Id
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let sortOrder: String = "" // Sort order
+let sortOrder: String = "" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
@@ -718,7 +718,7 @@ ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSi
 | **contactId** | **String**| ExternalContact Id | |
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
+| **sortOrder** | **String**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\" | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
 {: class="table-striped"}
 
@@ -810,7 +810,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let q: String = "" // User supplied search keywords (no special syntax is currently supported)
-let sortOrder: String = "" // Sort order
+let sortOrder: String = "" // The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
@@ -832,7 +832,7 @@ ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: 
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
+| **sortOrder** | **String**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources") |
 {: class="table-striped"}
 
@@ -1134,7 +1134,7 @@ let externalOrganizationId: String = "" // External Organization ID
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let q: String = "" // User supplied search keywords (no special syntax is currently supported)
-let sortOrder: String = "" // Sort order
+let sortOrder: String = "" // The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
@@ -1157,7 +1157,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationContacts(externalOrganization
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
+| **sortOrder** | **String**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources") |
 {: class="table-striped"}
 
@@ -1252,7 +1252,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let externalOrganizationId: String = "" // External Organization Id
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let sortOrder: String = "" // Sort order
+let sortOrder: String = "" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"createDate:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
@@ -1274,7 +1274,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationNotes(externalOrganizationId:
 | **externalOrganizationId** | **String**| External Organization Id | |
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
+| **sortOrder** | **String**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"createDate:desc\" | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
 {: class="table-striped"}
 
@@ -1314,7 +1314,7 @@ let externalOrganizationId: String = "" // External Organization ID
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let expand: ExternalContactsAPI.Expand_getExternalcontactsOrganizationRelationships = ExternalContactsAPI.Expand_getExternalcontactsOrganizationRelationships.enummember // which fields, if any, to expand
-let sortOrder: String = "" // Sort order
+let sortOrder: String = "" // The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\"
 
 // Code example
 ExternalContactsAPI.getExternalcontactsOrganizationRelationships(externalOrganizationId: externalOrganizationId, pageSize: pageSize, pageNumber: pageNumber, expand: expand, sortOrder: sortOrder) { (response, error) in
@@ -1336,7 +1336,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationRelationships(externalOrganiz
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **expand** | **String**| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
-| **sortOrder** | **String**| Sort order | [optional] |
+| **sortOrder** | **String**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\" | [optional] |
 {: class="table-striped"}
 
 
@@ -1375,7 +1375,7 @@ let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pag
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let q: String = "" // Search query
 let trustorId: [String] = [""] // Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested
-let sortOrder: String = "" // Sort order
+let sortOrder: String = "" // The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
 let includeTrustors: Bool = true // (true or false) whether or not to include trustor information embedded in the externalOrganization
 
@@ -1399,7 +1399,7 @@ ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNum
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| Search query | [optional] |
 | **trustorId** | [**[String]**](String.html)| Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
+| **sortOrder** | **String**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\" | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
 {: class="table-striped"}

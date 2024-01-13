@@ -51,6 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesExtension**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtension) | Get an extension by ID. |
 | [**getTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtensionpool) | Get an extension pool by ID |
 | [**getTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtensionpools) | Get a listing of extension pools |
+| [**getTelephonyProvidersEdgesExtensionpoolsDivisionviews**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtensionpoolsDivisionviews) | Get a pageable list of basic extension pool objects filterable by query parameters. |
 | [**getTelephonyProvidersEdgesExtensions**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtensions) | Get a listing of extensions |
 | [**getTelephonyProvidersEdgesLine**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesLine) | Get a Line by ID |
 | [**getTelephonyProvidersEdgesLinebasesetting**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesLinebasesetting) | Get a line base settings object by ID |
@@ -2482,6 +2483,72 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpools(pageSize: pag
 
 [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing.html)
 
+<a name="getTelephonyProvidersEdgesExtensionpoolsDivisionviews"></a>
+
+# **getTelephonyProvidersEdgesExtensionpoolsDivisionviews**
+
+
+
+> [ExtensionPoolDivisionViewEntityListing](ExtensionPoolDivisionViewEntityListing.html) getTelephonyProvidersEdgesExtensionpoolsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic extension pool objects filterable by query parameters.
+
+This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/extensionpools/divisionviews  
+
+Requires ALL permissions: 
+
+* telephony:extensionPool:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let _id: [String] = [""] // ID of the Extension Pools to filter by.
+let name: String = "" // Name of the Extension Pools to filter by.
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpoolsDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpoolsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **_id** | [**[String]**](String.html)| ID of the Extension Pools to filter by. | [optional] |
+| **name** | **String**| Name of the Extension Pools to filter by. | [optional] |
+| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExtensionPoolDivisionViewEntityListing**](ExtensionPoolDivisionViewEntityListing.html)
+
 <a name="getTelephonyProvidersEdgesExtensions"></a>
 
 # **getTelephonyProvidersEdgesExtensions**
@@ -3892,7 +3959,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSiteSiteconnections(siteId: 
 
 
 
-> [SiteEntityListing](SiteEntityListing.html) getTelephonyProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed)
+> [SiteEntityListing](SiteEntityListing.html) getTelephonyProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed, expand)
 
 Get the list of Sites.
 
@@ -3918,9 +3985,10 @@ let sortOrder: String = "" // Sort order
 let name: String = "" // Name
 let locationId: String = "" // Location Id
 let managed: Bool = true // Filter by managed
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSites(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, locationId: locationId, managed: managed) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSites(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, locationId: locationId, managed: managed, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3942,6 +4010,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSites(pageSize: pageSize, pa
 | **name** | **String**| Name | [optional] |
 | **locationId** | **String**| Location Id | [optional] |
 | **managed** | **Bool**| Filter by managed | [optional] |
+| **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: edges ("edges"), location ("location"), primarysites ("primarySites"), secondarysites ("secondarySites") |
 {: class="table-striped"}
 
 

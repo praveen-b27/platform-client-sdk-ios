@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsActionTemplate**](IntegrationsAPI.html#getIntegrationsActionTemplate) | Retrieve text of templates for an action based on filename. |
 | [**getIntegrationsActions**](IntegrationsAPI.html#getIntegrationsActions) | Retrieves all actions associated with filters passed in via query param. |
 | [**getIntegrationsActionsCategories**](IntegrationsAPI.html#getIntegrationsActionsCategories) | Retrieves all categories of available Actions |
+| [**getIntegrationsActionsCertificates**](IntegrationsAPI.html#getIntegrationsActionsCertificates) | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
 | [**getIntegrationsActionsDrafts**](IntegrationsAPI.html#getIntegrationsActionsDrafts) | Retrieves all action drafts associated with the filters passed in via query param. |
 | [**getIntegrationsBotconnectorIntegrationIdBot**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBot) | Get a specific botConnector bot, plus versions, for this integration |
 | [**getIntegrationsBotconnectorIntegrationIdBotVersions**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBotVersions) | Get a list of bot versions for a bot |
@@ -971,6 +972,60 @@ IntegrationsAPI.getIntegrationsActionsCategories(pageSize: pageSize, pageNumber:
 ### Return type
 
 [**CategoryEntityListing**](CategoryEntityListing.html)
+
+<a name="getIntegrationsActionsCertificates"></a>
+
+# **getIntegrationsActionsCertificates**
+
+
+
+> [ActionCertificateListing](ActionCertificateListing.html) getIntegrationsActionsCertificates(status, type)
+
+Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+
+
+
+Wraps GET /api/v2/integrations/actions/certificates  
+
+Requires ANY permissions: 
+
+* integrations:actionCertificate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let status: IntegrationsAPI.Status_getIntegrationsActionsCertificates = IntegrationsAPI.Status_getIntegrationsActionsCertificates.enummember // Indicates the validity of the certificate in question.
+let type: IntegrationsAPI.ModelType_getIntegrationsActionsCertificates = IntegrationsAPI.ModelType_getIntegrationsActionsCertificates.enummember // Indicates the type of the certificate.
+
+// Code example
+IntegrationsAPI.getIntegrationsActionsCertificates(status: status, type: type) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsActionsCertificates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **status** | **String**| Indicates the validity of the certificate in question. | [optional]<br />**Values**: current ("Current"), upcoming ("Upcoming") |
+| **type** | **String**| Indicates the type of the certificate. | [optional]<br />**Values**: client ("Client") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActionCertificateListing**](ActionCertificateListing.html)
 
 <a name="getIntegrationsActionsDrafts"></a>
 

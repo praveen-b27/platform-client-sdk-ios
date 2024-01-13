@@ -1,14 +1,12 @@
 ---
-title: ContentSortItem
+title: ImportTemplateImportStatusObject
 ---
-## ContentSortItem
+## ImportTemplateImportStatusObject
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **name** | **String** |  | [optional] |
-| **ascending** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

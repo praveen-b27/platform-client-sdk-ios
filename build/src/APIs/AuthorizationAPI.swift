@@ -366,7 +366,6 @@ open class AuthorizationAPI {
     
     
     
-    
     /**
      Retrieve a list of all divisions defined for the organization
      
@@ -377,12 +376,11 @@ open class AuthorizationAPI {
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter objectCount: (query) Include the count of objects contained in the division (optional)
-     - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
      - parameter name: (query) Search term to filter by division name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationDivisions(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: AuthzDivisionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationDivisionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, _id: _id, name: name)
+    open class func getAuthorizationDivisions(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, name: String? = nil, completion: @escaping ((_ data: AuthzDivisionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationDivisionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, name: name)
         requestBuilder.execute { (response: Response<AuthzDivisionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -444,12 +442,11 @@ open class AuthorizationAPI {
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter objectCount: (query) Include the count of objects contained in the division (optional)
-     - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
      - parameter name: (query) Search term to filter by division name (optional)
 
      - returns: RequestBuilder<AuthzDivisionEntityListing> 
      */
-    open class func getAuthorizationDivisionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [String]? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {        
+    open class func getAuthorizationDivisionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {        
         let path = "/api/v2/authorization/divisions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -463,7 +460,6 @@ open class AuthorizationAPI {
             "nextPage": nextPage, 
             "previousPage": previousPage, 
             "objectCount": objectCount, 
-            "id": _id, 
             "name": name
         ])
 
@@ -1094,6 +1090,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -1528,6 +1525,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -1977,6 +1975,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -2411,6 +2410,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -2930,6 +2930,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -3364,6 +3365,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -3813,6 +3815,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -4247,6 +4250,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -4697,6 +4701,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -5131,6 +5136,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -5580,6 +5586,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -6014,6 +6021,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -6469,6 +6477,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -6903,6 +6912,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -7352,6 +7362,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -7786,6 +7797,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -8244,6 +8256,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -8678,6 +8691,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -9127,6 +9141,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -9561,6 +9576,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -10016,6 +10032,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -10450,6 +10467,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -10899,6 +10917,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -11333,6 +11352,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -11969,6 +11989,7 @@ open class AuthorizationAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -12254,6 +12275,7 @@ open class AuthorizationAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -12638,6 +12660,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -13072,6 +13095,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -13521,6 +13545,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -13955,6 +13980,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -14417,6 +14443,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -14851,6 +14878,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -15300,6 +15328,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -15734,6 +15763,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -16731,6 +16761,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -17165,6 +17196,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -17614,6 +17646,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -18048,6 +18081,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -18877,6 +18911,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -19311,6 +19346,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -19760,6 +19796,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -20194,6 +20231,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -20644,6 +20682,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -21078,6 +21117,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -21527,6 +21567,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -21961,6 +22002,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -22416,6 +22458,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -22850,6 +22893,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -23299,6 +23343,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -23733,6 +23778,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -24191,6 +24237,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -24625,6 +24672,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -25074,6 +25122,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -25508,6 +25557,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -25963,6 +26013,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -26397,6 +26448,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -26846,6 +26898,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -27280,6 +27333,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -27800,6 +27854,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -28234,6 +28289,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -28683,6 +28739,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -29117,6 +29174,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -29633,6 +29691,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -30067,6 +30126,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -30516,6 +30576,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -30950,6 +31011,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -31412,6 +31474,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -31846,6 +31909,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -32295,6 +32359,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -32729,6 +32794,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -33533,6 +33599,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -33967,6 +34034,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -34416,6 +34484,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -34850,6 +34919,7 @@ open class AuthorizationAPI {
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
           "id" : "id",
           "state" : "active",
+          "preferredName" : "preferredName",
           "department" : "department",
           "presence" : "{}",
           "lastTokenIssued" : {
@@ -35479,6 +35549,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -35913,6 +35984,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -36362,6 +36434,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -36796,6 +36869,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -37258,6 +37332,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -37692,6 +37767,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -38141,6 +38217,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {
@@ -38575,6 +38652,7 @@ open class AuthorizationAPI {
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
             "id" : "id",
             "state" : "active",
+            "preferredName" : "preferredName",
             "department" : "department",
             "presence" : "{}",
             "lastTokenIssued" : {

@@ -24,12 +24,18 @@ public class TranscriptionSettings: Codable {
     public var lowLatencyTranscriptionEnabled: Bool?
     /** Setting to enable/disable content search */
     public var contentSearchEnabled: Bool?
+    /** Setting to enable/disable PCI DSS Redaction */
+    public var pciDssRedactionEnabled: Bool?
+    /** Setting to enable/disable PII Redaction */
+    public var piiRedactionEnabled: Bool?
 
-    public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?, lowLatencyTranscriptionEnabled: Bool?, contentSearchEnabled: Bool?) {
+    public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?, lowLatencyTranscriptionEnabled: Bool?, contentSearchEnabled: Bool?, pciDssRedactionEnabled: Bool?, piiRedactionEnabled: Bool?) {
         self.transcription = transcription
         self.transcriptionConfidenceThreshold = transcriptionConfidenceThreshold
         self.lowLatencyTranscriptionEnabled = lowLatencyTranscriptionEnabled
         self.contentSearchEnabled = contentSearchEnabled
+        self.pciDssRedactionEnabled = pciDssRedactionEnabled
+        self.piiRedactionEnabled = piiRedactionEnabled
     }
 
 

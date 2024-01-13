@@ -687,6 +687,7 @@ open class SearchAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -972,6 +973,7 @@ open class SearchAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -4230,6 +4232,7 @@ open class SearchAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -4515,6 +4518,7 @@ open class SearchAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -4859,6 +4863,7 @@ open class SearchAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -5144,6 +5149,7 @@ open class SearchAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {

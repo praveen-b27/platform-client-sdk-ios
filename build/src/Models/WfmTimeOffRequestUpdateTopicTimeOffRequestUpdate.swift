@@ -20,6 +20,7 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
     public enum Substatus: String, Codable { 
         case advanceTimeElapsed = "AdvanceTimeElapsed"
         case autoApproved = "AutoApproved"
+        case insufficientBalance = "InsufficientBalance"
         case invalidDailyDuration = "InvalidDailyDuration"
         case outsideShift = "OutsideShift"
         case removedFromWaitlist = "RemovedFromWaitlist"

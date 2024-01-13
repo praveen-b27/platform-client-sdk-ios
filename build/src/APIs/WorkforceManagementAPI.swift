@@ -3184,10 +3184,7 @@ open class WorkforceManagementAPI {
   "modifications" : [ {
     "startIntervalIndex" : 1,
     "legacyMetric" : "AverageAfterCallWorkTimeSeconds",
-    "displayGranularity" : "displayGranularity",
-    "endIntervalIndex" : 5,
-    "metric" : "Offered",
-    "granularity" : "granularity",
+    "secondaryGranularity" : "secondaryGranularity",
     "values" : [ {
       "intervalIndex" : 2,
       "value" : 7.061401241503109
@@ -3197,15 +3194,23 @@ open class WorkforceManagementAPI {
     } ],
     "type" : "MinimumPerInterval",
     "planningGroupIds" : [ "planningGroupIds", "planningGroupIds" ],
+    "enabled" : true,
+    "displayGranularity" : "displayGranularity",
+    "endIntervalIndex" : 5,
+    "metric" : "Offered",
+    "granularity" : "granularity",
     "value" : 5.637376656633329,
-    "enabled" : true
+    "secondaryValues" : [ {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    }, {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    } ]
   }, {
     "startIntervalIndex" : 1,
     "legacyMetric" : "AverageAfterCallWorkTimeSeconds",
-    "displayGranularity" : "displayGranularity",
-    "endIntervalIndex" : 5,
-    "metric" : "Offered",
-    "granularity" : "granularity",
+    "secondaryGranularity" : "secondaryGranularity",
     "values" : [ {
       "intervalIndex" : 2,
       "value" : 7.061401241503109
@@ -3215,8 +3220,19 @@ open class WorkforceManagementAPI {
     } ],
     "type" : "MinimumPerInterval",
     "planningGroupIds" : [ "planningGroupIds", "planningGroupIds" ],
+    "enabled" : true,
+    "displayGranularity" : "displayGranularity",
+    "endIntervalIndex" : 5,
+    "metric" : "Offered",
+    "granularity" : "granularity",
     "value" : 5.637376656633329,
-    "enabled" : true
+    "secondaryValues" : [ {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    }, {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    } ]
   } ]
 }, statusCode=200}]
      
@@ -4879,6 +4895,7 @@ open class WorkforceManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -5164,6 +5181,7 @@ open class WorkforceManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -6087,6 +6105,7 @@ open class WorkforceManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -6372,6 +6391,7 @@ open class WorkforceManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {

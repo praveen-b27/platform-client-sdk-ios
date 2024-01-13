@@ -130,7 +130,7 @@ ObjectsAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: objectC
 
 
 
-> [AuthzDivisionEntityListing](AuthzDivisionEntityListing.html) getAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, _id, name)
+> [AuthzDivisionEntityListing](AuthzDivisionEntityListing.html) getAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, name)
 
 Retrieve a list of all divisions defined for the organization
 
@@ -158,11 +158,10 @@ let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let objectCount: Bool = true // Include the count of objects contained in the division
-let _id: [String] = [""] // Optionally request specific divisions by their IDs
 let name: String = "" // Search term to filter by division name
 
 // Code example
-ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, _id: _id, name: name) { (response, error) in
+ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -184,7 +183,6 @@ ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber,
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] |
-| **_id** | [**[String]**](String.html)| Optionally request specific divisions by their IDs | [optional] |
 | **name** | **String**| Search term to filter by division name | [optional] |
 {: class="table-striped"}
 

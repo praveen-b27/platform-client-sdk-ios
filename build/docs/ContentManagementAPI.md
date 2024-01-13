@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteContentmanagementWorkspaceMember**](ContentManagementAPI.html#deleteContentmanagementWorkspaceMember) | Delete a member from a workspace |
 | [**deleteContentmanagementWorkspaceTagvalue**](ContentManagementAPI.html#deleteContentmanagementWorkspaceTagvalue) | Delete workspace tag |
 | [**getContentmanagementDocument**](ContentManagementAPI.html#getContentmanagementDocument) | Get a document. |
-| [**getContentmanagementDocumentAudits**](ContentManagementAPI.html#getContentmanagementDocumentAudits) | Get a list of audits for a document. |
 | [**getContentmanagementDocumentContent**](ContentManagementAPI.html#getContentmanagementDocumentContent) | Download a document. |
 | [**getContentmanagementDocuments**](ContentManagementAPI.html#getContentmanagementDocuments) | Get a list of documents. |
 | [**getContentmanagementQuery**](ContentManagementAPI.html#getContentmanagementQuery) | Query content |
@@ -33,7 +32,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getContentmanagementWorkspaceTagvalue**](ContentManagementAPI.html#getContentmanagementWorkspaceTagvalue) | Get a workspace tag |
 | [**getContentmanagementWorkspaceTagvalues**](ContentManagementAPI.html#getContentmanagementWorkspaceTagvalues) | Get a list of workspace tags |
 | [**getContentmanagementWorkspaces**](ContentManagementAPI.html#getContentmanagementWorkspaces) | Get a list of workspaces. |
-| [**postContentmanagementAuditquery**](ContentManagementAPI.html#postContentmanagementAuditquery) | Query audits |
 | [**postContentmanagementDocument**](ContentManagementAPI.html#postContentmanagementDocument) | Update a document. |
 | [**postContentmanagementDocumentContent**](ContentManagementAPI.html#postContentmanagementDocumentContent) | Replace the contents of a document. |
 | [**postContentmanagementDocuments**](ContentManagementAPI.html#postContentmanagementDocuments) | Add a document. |
@@ -411,71 +409,6 @@ ContentManagementAPI.getContentmanagementDocument(documentId: documentId, expand
 ### Return type
 
 [**Document**](Document.html)
-
-<a name="getContentmanagementDocumentAudits"></a>
-
-# **getContentmanagementDocumentAudits**
-
-
-
-> [DocumentAuditEntityListing](DocumentAuditEntityListing.html) getContentmanagementDocumentAudits(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder)
-
-Get a list of audits for a document.
-
-This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
-
-
-
-Wraps GET /api/v2/contentmanagement/documents/{documentId}/audits  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let documentId: String = "" // Document ID
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-let transactionFilter: String = "" // Transaction filter
-let level: String = "" // level
-let sortBy: String = "" // Sort by
-let sortOrder: String = "" // Sort order
-
-// Code example
-ContentManagementAPI.getContentmanagementDocumentAudits(documentId: documentId, pageSize: pageSize, pageNumber: pageNumber, transactionFilter: transactionFilter, level: level, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ContentManagementAPI.getContentmanagementDocumentAudits was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **String**| Document ID | |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **transactionFilter** | **String**| Transaction filter | [optional] |
-| **level** | **String**| level | [optional] |
-| **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**DocumentAuditEntityListing**](DocumentAuditEntityListing.html)
 
 <a name="getContentmanagementDocumentContent"></a>
 
@@ -1476,59 +1409,6 @@ ContentManagementAPI.getContentmanagementWorkspaces(pageSize: pageSize, pageNumb
 ### Return type
 
 [**WorkspaceEntityListing**](WorkspaceEntityListing.html)
-
-<a name="postContentmanagementAuditquery"></a>
-
-# **postContentmanagementAuditquery**
-
-
-
-> [QueryResults](QueryResults.html) postContentmanagementAuditquery(body)
-
-Query audits
-
-This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
-
-
-
-Wraps POST /api/v2/contentmanagement/auditquery  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: ContentQueryRequest = new ContentQueryRequest(...) // Allows for a filtered query returning facet information
-
-// Code example
-ContentManagementAPI.postContentmanagementAuditquery(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ContentManagementAPI.postContentmanagementAuditquery was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ContentQueryRequest**](ContentQueryRequest.html)| Allows for a filtered query returning facet information | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**QueryResults**](QueryResults.html)
 
 <a name="postContentmanagementDocument"></a>
 

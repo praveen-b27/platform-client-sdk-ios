@@ -1620,6 +1620,7 @@ open class LearningAPI {
     "totalNonCriticalScore" : 9.301444,
     "totalCriticalScoreUnweighted" : 7.386282,
     "totalNonCriticalScoreUnweighted" : 1.0246457,
+    "systemMarkedNA" : true,
     "markedNA" : true,
     "totalScoreUnweighted" : 2.027123,
     "maxTotalNonCriticalScore" : 3.6160767,
@@ -1629,6 +1630,7 @@ open class LearningAPI {
       "score" : 6,
       "comments" : "comments",
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer"
     }, {
@@ -1637,6 +1639,7 @@ open class LearningAPI {
       "score" : 6,
       "comments" : "comments",
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer"
     } ],
@@ -1652,6 +1655,7 @@ open class LearningAPI {
     "totalNonCriticalScore" : 9.301444,
     "totalCriticalScoreUnweighted" : 7.386282,
     "totalNonCriticalScoreUnweighted" : 1.0246457,
+    "systemMarkedNA" : true,
     "markedNA" : true,
     "totalScoreUnweighted" : 2.027123,
     "maxTotalNonCriticalScore" : 3.6160767,
@@ -1661,6 +1665,7 @@ open class LearningAPI {
       "score" : 6,
       "comments" : "comments",
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer"
     }, {
@@ -1669,6 +1674,7 @@ open class LearningAPI {
       "score" : 6,
       "comments" : "comments",
       "questionId" : "questionId",
+      "systemMarkedNA" : true,
       "markedNA" : true,
       "freeTextAnswer" : "freeTextAnswer"
     } ],

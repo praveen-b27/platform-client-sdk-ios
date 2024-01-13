@@ -80,6 +80,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingUtilization**](RoutingAPI.html#getRoutingUtilization) | Get the organization-wide max utilization settings. |
 | [**getRoutingWrapupcode**](RoutingAPI.html#getRoutingWrapupcode) | Get details about this wrap-up code. |
 | [**getRoutingWrapupcodes**](RoutingAPI.html#getRoutingWrapupcodes) | Get list of wrapup codes. |
+| [**getRoutingWrapupcodesDivisionview**](RoutingAPI.html#getRoutingWrapupcodesDivisionview) | Get a simplified wrap-up code. |
+| [**getRoutingWrapupcodesDivisionviews**](RoutingAPI.html#getRoutingWrapupcodesDivisionviews) | Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). |
 | [**getUserQueues**](RoutingAPI.html#getUserQueues) | Get queues for user |
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
@@ -93,6 +95,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
 | [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
+| [**patchRoutingSettingsTranscription**](RoutingAPI.html#patchRoutingSettingsTranscription) | Patch Transcription Settings |
 | [**patchRoutingSkillgroup**](RoutingAPI.html#patchRoutingSkillgroup) | Update skill group definition |
 | [**patchUserQueue**](RoutingAPI.html#patchUserQueue) | Join or unjoin a queue for a user |
 | [**patchUserQueues**](RoutingAPI.html#patchUserQueues) | Join or unjoin a set of queues for a user |
@@ -118,6 +121,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingSkills**](RoutingAPI.html#postRoutingSkills) | Create Skill |
 | [**postRoutingSmsAddresses**](RoutingAPI.html#postRoutingSmsAddresses) | Provision an Address for SMS |
 | [**postRoutingSmsPhonenumbers**](RoutingAPI.html#postRoutingSmsPhonenumbers) | Provision a phone number for SMS |
+| [**postRoutingSmsPhonenumbersImport**](RoutingAPI.html#postRoutingSmsPhonenumbersImport) | Imports a phone number for SMS |
 | [**postRoutingWrapupcodes**](RoutingAPI.html#postRoutingWrapupcodes) | Create a wrap-up code |
 | [**postUserRoutinglanguages**](RoutingAPI.html#postUserRoutinglanguages) | Add routing language to user |
 | [**postUserRoutingskills**](RoutingAPI.html#postUserRoutingskills) | Add routing skill to user |
@@ -4109,6 +4113,122 @@ RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sor
 
 [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
+<a name="getRoutingWrapupcodesDivisionview"></a>
+
+# **getRoutingWrapupcodesDivisionview**
+
+
+
+> [WrapupCode](WrapupCode.html) getRoutingWrapupcodesDivisionview(codeId)
+
+Get a simplified wrap-up code.
+
+
+
+Wraps GET /api/v2/routing/wrapupcodes/divisionviews/{codeId}  
+
+Requires ALL permissions: 
+
+* routing:wrapupCode:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let codeId: String = "" // Wrapup Code ID
+
+// Code example
+RoutingAPI.getRoutingWrapupcodesDivisionview(codeId: codeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingWrapupcodesDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **codeId** | **String**| Wrapup Code ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WrapupCode**](WrapupCode.html)
+
+<a name="getRoutingWrapupcodesDivisionviews"></a>
+
+# **getRoutingWrapupcodesDivisionviews**
+
+
+
+> [WrapupCodeEntityListing](WrapupCodeEntityListing.html) getRoutingWrapupcodesDivisionviews(pageSize, pageNumber, name, _id, divisionId, includeState)
+
+Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+
+Specifying both name and ID parameters is not supported.
+
+
+
+Wraps GET /api/v2/routing/wrapupcodes/divisionviews  
+
+Requires ALL permissions: 
+
+* routing:wrapupCode:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let name: String = "" // Name (trailing asterisks allowed)
+let _id: [String] = [""] // Wrapup code ID(s)
+let divisionId: [String] = [""] // Division ID(s)
+let includeState: RoutingAPI.IncludeState_getRoutingWrapupcodesDivisionviews = RoutingAPI.IncludeState_getRoutingWrapupcodesDivisionviews.enummember // Wrapup code state(s) to include
+
+// Code example
+RoutingAPI.getRoutingWrapupcodesDivisionviews(pageSize: pageSize, pageNumber: pageNumber, name: name, _id: _id, divisionId: divisionId, includeState: includeState) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingWrapupcodesDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **name** | **String**| Name (trailing asterisks allowed) | [optional] |
+| **_id** | [**[String]**](String.html)| Wrapup code ID(s) | [optional] |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+| **includeState** | **String**| Wrapup code state(s) to include | [optional]<br />**Values**: active ("Active"), deleted ("Deleted"), activeAndDeleted ("ActiveAndDeleted") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
+
 <a name="getUserQueues"></a>
 
 # **getUserQueues**
@@ -4834,6 +4954,58 @@ RoutingAPI.patchRoutingSettingsContactcenter(body: body) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="patchRoutingSettingsTranscription"></a>
+
+# **patchRoutingSettingsTranscription**
+
+
+
+> [TranscriptionSettings](TranscriptionSettings.html) patchRoutingSettingsTranscription(body)
+
+Patch Transcription Settings
+
+
+
+Wraps PATCH /api/v2/routing/settings/transcription  
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TranscriptionSettings = new TranscriptionSettings(...) // Organization Settings
+
+// Code example
+RoutingAPI.patchRoutingSettingsTranscription(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingSettingsTranscription was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TranscriptionSettings**](TranscriptionSettings.html)| Organization Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 <a name="patchRoutingSkillgroup"></a>
 
@@ -6169,6 +6341,58 @@ RoutingAPI.postRoutingSmsPhonenumbers(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision.html)| SmsPhoneNumber | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="postRoutingSmsPhonenumbersImport"></a>
+
+# **postRoutingSmsPhonenumbersImport**
+
+
+
+> [SmsPhoneNumber](SmsPhoneNumber.html) postRoutingSmsPhonenumbersImport(body)
+
+Imports a phone number for SMS
+
+
+
+Wraps POST /api/v2/routing/sms/phonenumbers/import  
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:byoImport
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SmsPhoneNumberImport = new SmsPhoneNumberImport(...) // SmsPhoneNumber
+
+// Code example
+RoutingAPI.postRoutingSmsPhonenumbersImport(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingSmsPhonenumbersImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SmsPhoneNumberImport**](SmsPhoneNumberImport.html)| SmsPhoneNumber | |
 {: class="table-striped"}
 
 

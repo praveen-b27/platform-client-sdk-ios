@@ -19,7 +19,7 @@ public class SupportCenterScreen: Codable {
     }
     /** The type of the screen */
     public var type: ModelType?
-    /** Module settings for the screen */
+    /** Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article; */
     public var moduleSettings: [SupportCenterModuleSetting]?
 
     public init(type: ModelType?, moduleSettings: [SupportCenterModuleSetting]?) {

@@ -481,202 +481,6 @@ open class ContentManagementAPI {
 
     
     
-    
-    
-    
-    
-    
-    /**
-     Get a list of audits for a document.
-     
-     - parameter documentId: (path) Document ID 
-     - parameter pageSize: (query) Page size (optional)
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter transactionFilter: (query) Transaction filter (optional)
-     - parameter level: (query) level (optional)
-     - parameter sortBy: (query) Sort by (optional)
-     - parameter sortOrder: (query) Sort order (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getContentmanagementDocumentAudits(documentId: String, pageSize: Int? = nil, pageNumber: Int? = nil, transactionFilter: String? = nil, level: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: DocumentAuditEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getContentmanagementDocumentAuditsWithRequestBuilder(documentId: documentId, pageSize: pageSize, pageNumber: pageNumber, transactionFilter: transactionFilter, level: level, sortBy: sortBy, sortOrder: sortOrder)
-        requestBuilder.execute { (response: Response<DocumentAuditEntityListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a list of audits for a document.
-     - GET /api/v2/contentmanagement/documents/{documentId}/audits
-     - This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "workspace" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id"
-    },
-    "level" : "USER",
-    "transactionInitiator" : true,
-    "selfUri" : "https://openapi-generator.tech",
-    "changes" : [ {
-      "property" : "property",
-      "newValues" : [ "newValues", "newValues" ],
-      "oldValues" : [ "oldValues", "oldValues" ],
-      "entity" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "action" : "action",
-        "id" : "id",
-        "type" : "ATTRIBUTE"
-      }
-    }, {
-      "property" : "property",
-      "newValues" : [ "newValues", "newValues" ],
-      "oldValues" : [ "oldValues", "oldValues" ],
-      "entity" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "action" : "action",
-        "id" : "id",
-        "type" : "ATTRIBUTE"
-      }
-    } ],
-    "serviceName" : "serviceName",
-    "transactionId" : "transactionId",
-    "actionContext" : "CREATE",
-    "application" : "application",
-    "name" : "name",
-    "action" : "CREATE",
-    "id" : "id",
-    "user" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id"
-    },
-    "entity" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "action" : "action",
-      "id" : "id",
-      "type" : "ATTRIBUTE"
-    },
-    "timestamp" : "2000-01-23T04:56:07.000+00:00",
-    "status" : "SUCCESS"
-  }, {
-    "workspace" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id"
-    },
-    "level" : "USER",
-    "transactionInitiator" : true,
-    "selfUri" : "https://openapi-generator.tech",
-    "changes" : [ {
-      "property" : "property",
-      "newValues" : [ "newValues", "newValues" ],
-      "oldValues" : [ "oldValues", "oldValues" ],
-      "entity" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "action" : "action",
-        "id" : "id",
-        "type" : "ATTRIBUTE"
-      }
-    }, {
-      "property" : "property",
-      "newValues" : [ "newValues", "newValues" ],
-      "oldValues" : [ "oldValues", "oldValues" ],
-      "entity" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "action" : "action",
-        "id" : "id",
-        "type" : "ATTRIBUTE"
-      }
-    } ],
-    "serviceName" : "serviceName",
-    "transactionId" : "transactionId",
-    "actionContext" : "CREATE",
-    "application" : "application",
-    "name" : "name",
-    "action" : "CREATE",
-    "id" : "id",
-    "user" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id"
-    },
-    "entity" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "action" : "action",
-      "id" : "id",
-      "type" : "ATTRIBUTE"
-    },
-    "timestamp" : "2000-01-23T04:56:07.000+00:00",
-    "status" : "SUCCESS"
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter documentId: (path) Document ID 
-     - parameter pageSize: (query) Page size (optional)
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter transactionFilter: (query) Transaction filter (optional)
-     - parameter level: (query) level (optional)
-     - parameter sortBy: (query) Sort by (optional)
-     - parameter sortOrder: (query) Sort order (optional)
-
-     - returns: RequestBuilder<DocumentAuditEntityListing> 
-     */
-    open class func getContentmanagementDocumentAuditsWithRequestBuilder(documentId: String, pageSize: Int? = nil, pageNumber: Int? = nil, transactionFilter: String? = nil, level: String? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<DocumentAuditEntityListing> {        
-        var path = "/api/v2/contentmanagement/documents/{documentId}/audits"
-        let documentIdPreEscape = "\(documentId)"
-        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "pageSize": pageSize?.encodeToJSON(), 
-            "pageNumber": pageNumber?.encodeToJSON(), 
-            "transactionFilter": transactionFilter, 
-            "level": level, 
-            "sortBy": sortBy, 
-            "sortOrder": sortOrder
-        ])
-
-        let requestBuilder: RequestBuilder<DocumentAuditEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    
     public enum Disposition_getContentmanagementDocumentContent: String { 
         case attachment = "attachment"
         case inline = "inline"
@@ -1495,6 +1299,7 @@ open class ContentManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -2042,6 +1847,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -2464,6 +2270,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -2810,6 +2617,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -4189,6 +3997,7 @@ open class ContentManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -4600,6 +4409,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -4941,6 +4751,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -5532,169 +5343,6 @@ open class ContentManagementAPI {
         let requestBuilder: RequestBuilder<WorkspaceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    /**
-     Query audits
-     
-     - parameter body: (body) Allows for a filtered query returning facet information 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postContentmanagementAuditquery(body: ContentQueryRequest, completion: @escaping ((_ data: QueryResults?,_ error: Error?) -> Void)) {
-        let requestBuilder = postContentmanagementAuditqueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<QueryResults>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Query audits
-     - POST /api/v2/contentmanagement/auditquery
-     - This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "facetInfo" : {
-    "attributes" : [ {
-      "name" : "name",
-      "count" : 5,
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "count" : 5,
-      "id" : "id"
-    } ],
-    "facets" : [ {
-      "other" : 4,
-      "total" : 7,
-      "terms" : [ {
-        "name" : "name",
-        "count" : 6,
-        "term" : "term",
-        "id" : "id",
-        "time" : "2000-01-23T04:56:07.000+00:00",
-        "key" : 1
-      }, {
-        "name" : "name",
-        "count" : 6,
-        "term" : "term",
-        "id" : "id",
-        "time" : "2000-01-23T04:56:07.000+00:00",
-        "key" : 1
-      } ],
-      "termCount" : 1,
-      "missing" : 1,
-      "termType" : "TERM",
-      "attribute" : {
-        "name" : "name",
-        "id" : "id",
-        "type" : "NUMBER"
-      },
-      "statistics" : {
-        "dateMax" : "2000-01-23T04:56:07.000+00:00",
-        "stdDeviation" : 2.027123023002322,
-        "dateMin" : "2000-01-23T04:56:07.000+00:00",
-        "min" : 7.061401241503109,
-        "max" : 9.301444243932576,
-        "mean" : 3.616076749251911,
-        "count" : 2
-      }
-    }, {
-      "other" : 4,
-      "total" : 7,
-      "terms" : [ {
-        "name" : "name",
-        "count" : 6,
-        "term" : "term",
-        "id" : "id",
-        "time" : "2000-01-23T04:56:07.000+00:00",
-        "key" : 1
-      }, {
-        "name" : "name",
-        "count" : 6,
-        "term" : "term",
-        "id" : "id",
-        "time" : "2000-01-23T04:56:07.000+00:00",
-        "key" : 1
-      } ],
-      "termCount" : 1,
-      "missing" : 1,
-      "termType" : "TERM",
-      "attribute" : {
-        "name" : "name",
-        "id" : "id",
-        "type" : "NUMBER"
-      },
-      "statistics" : {
-        "dateMax" : "2000-01-23T04:56:07.000+00:00",
-        "stdDeviation" : 2.027123023002322,
-        "dateMin" : "2000-01-23T04:56:07.000+00:00",
-        "min" : 7.061401241503109,
-        "max" : 9.301444243932576,
-        "mean" : 3.616076749251911,
-        "count" : 2
-      }
-    } ]
-  },
-  "results" : {
-    "total" : 1,
-    "pageCount" : 5,
-    "pageNumber" : 6,
-    "entities" : [ {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id",
-      "body" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }
-    }, {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id",
-      "body" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }
-    } ],
-    "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
-    "pageSize" : 0,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
-  }
-}, statusCode=200}]
-     
-     - parameter body: (body) Allows for a filtered query returning facet information 
-
-     - returns: RequestBuilder<QueryResults> 
-     */
-    open class func postContentmanagementAuditqueryWithRequestBuilder(body: ContentQueryRequest) -> RequestBuilder<QueryResults> {        
-        let path = "/api/v2/contentmanagement/auditquery"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<QueryResults>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
     
@@ -6443,6 +6091,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -6789,6 +6438,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -7136,6 +6786,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -7482,6 +7133,7 @@ open class ContentManagementAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -8166,6 +7818,7 @@ open class ContentManagementAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {

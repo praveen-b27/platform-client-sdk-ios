@@ -60,6 +60,130 @@ open class TelephonyAPI {
     }
 
     
+    /**
+     Get a SIP message.
+     
+     - parameter conversationId: (path) Conversation id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonySipmessagesConversation(conversationId: String, completion: @escaping ((_ data: Callmessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonySipmessagesConversationWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<Callmessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a SIP message.
+     - GET /api/v2/telephony/sipmessages/conversations/{conversationId}
+     - Get the raw form of the SIP message
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "message" : "message"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) Conversation id 
+
+     - returns: RequestBuilder<Callmessage> 
+     */
+    open class func getTelephonySipmessagesConversationWithRequestBuilder(conversationId: String) -> RequestBuilder<Callmessage> {        
+        var path = "/api/v2/telephony/sipmessages/conversations/{conversationId}"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Callmessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get SIP headers.
+     
+     - parameter conversationId: (path) Conversation id 
+     - parameter keys: (query) comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonySipmessagesConversationHeaders(conversationId: String, keys: [String]? = nil, completion: @escaping ((_ data: Callheader?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonySipmessagesConversationHeadersWithRequestBuilder(conversationId: conversationId, keys: keys)
+        requestBuilder.execute { (response: Response<Callheader>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get SIP headers.
+     - GET /api/v2/telephony/sipmessages/conversations/{conversationId}/headers
+     - Get parsed SIP headers. Returns specific headers if key query parameters are added.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : [ "headers", "headers" ]
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) Conversation id 
+     - parameter keys: (query) comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)
+
+     - returns: RequestBuilder<Callheader> 
+     */
+    open class func getTelephonySipmessagesConversationHeadersWithRequestBuilder(conversationId: String, keys: [String]? = nil) -> RequestBuilder<Callheader> {        
+        var path = "/api/v2/telephony/sipmessages/conversations/{conversationId}/headers"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "keys": keys
+        ])
+
+        let requestBuilder: RequestBuilder<Callheader>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     

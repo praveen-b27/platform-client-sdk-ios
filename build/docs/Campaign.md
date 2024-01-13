@@ -20,7 +20,7 @@ title: Campaign
 | **site** | [**DomainEntityRef**](DomainEntityRef.html) | The identifier of the site to be used for dialing; can be set in place of an edge group. | [optional] |
 | **campaignStatus** | **String** | The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates. | [optional] |
 | **phoneColumns** | [**[PhoneColumn]**](PhoneColumn.html) | The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. | |
-| **abandonRate** | **Double** | The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns. | [optional] |
+| **abandonRate** | **Double** | The targeted compliance abandon rate percentage. Required for power and predictive campaigns. | [optional] |
 | **dncLists** | [**[DomainEntityRef]**](DomainEntityRef.html) | DncLists for this Campaign to check before placing a call. | [optional] |
 | **callableTimeSet** | [**DomainEntityRef**](DomainEntityRef.html) | The callable time set for this campaign to check before placing a call. | [optional] |
 | **callAnalysisResponseSet** | [**DomainEntityRef**](DomainEntityRef.html) | The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview. | [optional] |

@@ -19,6 +19,8 @@ public class AssessmentQuestionGroupScore: Codable {
     public var maxTotalScore: Float?
     /** True if this question group is marked NA */
     public var markedNA: Bool?
+    /** If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false. */
+    public var systemMarkedNA: Bool?
     /** The total score for the critical questions */
     public var totalCriticalScore: Float?
     /** The maximum total score for the critical questions */
@@ -42,11 +44,12 @@ public class AssessmentQuestionGroupScore: Codable {
     /** The individual question scores */
     public var questionScores: [AssessmentQuestionScore]?
 
-    public init(questionGroupId: String?, totalScore: Float?, maxTotalScore: Float?, markedNA: Bool?, totalCriticalScore: Float?, maxTotalCriticalScore: Float?, totalNonCriticalScore: Float?, maxTotalNonCriticalScore: Float?, totalScoreUnweighted: Float?, maxTotalScoreUnweighted: Float?, totalCriticalScoreUnweighted: Float?, maxTotalCriticalScoreUnweighted: Float?, totalNonCriticalScoreUnweighted: Float?, maxTotalNonCriticalScoreUnweighted: Float?, questionScores: [AssessmentQuestionScore]?) {
+    public init(questionGroupId: String?, totalScore: Float?, maxTotalScore: Float?, markedNA: Bool?, systemMarkedNA: Bool?, totalCriticalScore: Float?, maxTotalCriticalScore: Float?, totalNonCriticalScore: Float?, maxTotalNonCriticalScore: Float?, totalScoreUnweighted: Float?, maxTotalScoreUnweighted: Float?, totalCriticalScoreUnweighted: Float?, maxTotalCriticalScoreUnweighted: Float?, totalNonCriticalScoreUnweighted: Float?, maxTotalNonCriticalScoreUnweighted: Float?, questionScores: [AssessmentQuestionScore]?) {
         self.questionGroupId = questionGroupId
         self.totalScore = totalScore
         self.maxTotalScore = maxTotalScore
         self.markedNA = markedNA
+        self.systemMarkedNA = systemMarkedNA
         self.totalCriticalScore = totalCriticalScore
         self.maxTotalCriticalScore = maxTotalCriticalScore
         self.totalNonCriticalScore = totalNonCriticalScore

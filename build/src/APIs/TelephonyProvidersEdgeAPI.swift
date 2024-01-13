@@ -4188,6 +4188,104 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    
+    
+    /**
+     Get a pageable list of basic extension pool objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the Extension Pools to filter by. (optional)
+     - parameter name: (query) Name of the Extension Pools to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesExtensionpoolsDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: ExtensionPoolDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesExtensionpoolsDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<ExtensionPoolDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a pageable list of basic extension pool objects filterable by query parameters.
+     - GET /api/v2/telephony/providers/edges/extensionpools/divisionviews
+     - This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID of the Extension Pools to filter by. (optional)
+     - parameter name: (query) Name of the Extension Pools to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
+
+     - returns: RequestBuilder<ExtensionPoolDivisionViewEntityListing> 
+     */
+    open class func getTelephonyProvidersEdgesExtensionpoolsDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<ExtensionPoolDivisionViewEntityListing> {        
+        let path = "/api/v2/telephony/providers/edges/extensionpools/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "sortOrder": sortOrder, 
+            "id": _id, 
+            "name": name, 
+            "divisionId": divisionId
+        ])
+
+        let requestBuilder: RequestBuilder<ExtensionPoolDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
     /**
      Get a listing of extensions
      
@@ -9888,6 +9986,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    
     /**
      Get the list of Sites.
      
@@ -9898,10 +9997,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter name: (query) Name (optional)
      - parameter locationId: (query) Location Id (optional)
      - parameter managed: (query) Filter by managed (optional)
+     - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdgesSites(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, locationId: String? = nil, managed: Bool? = nil, completion: @escaping ((_ data: SiteEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesSitesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, locationId: locationId, managed: managed)
+    open class func getTelephonyProvidersEdgesSites(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, locationId: String? = nil, managed: Bool? = nil, expand: [String]? = nil, completion: @escaping ((_ data: SiteEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesSitesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, locationId: locationId, managed: managed, expand: expand)
         requestBuilder.execute { (response: Response<SiteEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -12096,10 +12196,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter name: (query) Name (optional)
      - parameter locationId: (query) Location Id (optional)
      - parameter managed: (query) Filter by managed (optional)
+     - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
 
      - returns: RequestBuilder<SiteEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesSitesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, locationId: String? = nil, managed: Bool? = nil) -> RequestBuilder<SiteEntityListing> {        
+    open class func getTelephonyProvidersEdgesSitesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, locationId: String? = nil, managed: Bool? = nil, expand: [String]? = nil) -> RequestBuilder<SiteEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/sites"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -12112,7 +12213,8 @@ open class TelephonyProvidersEdgeAPI {
             "sortOrder": sortOrder, 
             "name": name, 
             "location.id": locationId, 
-            "managed": managed
+            "managed": managed, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<SiteEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

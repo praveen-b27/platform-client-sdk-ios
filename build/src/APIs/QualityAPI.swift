@@ -86,6 +86,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -374,6 +375,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -659,6 +661,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -947,6 +950,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -1235,6 +1239,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -1784,6 +1789,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -2185,6 +2191,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -2473,6 +2480,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -2758,6 +2766,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -3046,6 +3055,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -3334,6 +3344,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -3826,6 +3837,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -4121,6 +4133,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -4781,6 +4794,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -5076,6 +5090,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -5367,6 +5382,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -5655,6 +5671,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -5946,6 +5963,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -6239,6 +6257,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -6534,6 +6553,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -6825,6 +6845,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -7113,6 +7134,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -7404,6 +7426,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -7784,6 +7807,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -8072,6 +8096,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -8357,6 +8382,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -8645,6 +8671,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -8933,6 +8960,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -9500,6 +9528,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -9788,6 +9817,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -10073,6 +10103,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -10361,6 +10392,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -10649,6 +10681,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -11136,6 +11169,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -11424,6 +11458,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -11709,6 +11744,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -11997,6 +12033,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -12285,6 +12322,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -12855,6 +12893,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -13256,6 +13295,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -13544,6 +13584,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -13829,6 +13870,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -14117,6 +14159,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -14405,6 +14448,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -14897,6 +14941,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -15192,6 +15237,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -16063,6 +16109,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -16465,6 +16512,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -16753,6 +16801,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -17038,6 +17087,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -17326,6 +17376,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -17614,6 +17665,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -18106,6 +18158,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -18402,6 +18455,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -18839,6 +18893,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -19241,6 +19296,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -19529,6 +19585,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -19814,6 +19871,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -20102,6 +20160,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -20390,6 +20449,7 @@ open class QualityAPI {
         "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
         "state" : "active",
+        "preferredName" : "preferredName",
         "department" : "department",
         "presence" : "{}",
         "lastTokenIssued" : {
@@ -20882,6 +20942,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -21178,6 +21239,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -21748,6 +21810,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -22045,6 +22108,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -29804,6 +29868,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -30092,6 +30157,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -30377,6 +30443,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -30665,6 +30732,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -30953,6 +31021,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -31499,6 +31568,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -31901,6 +31971,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -32189,6 +32260,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -32474,6 +32546,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -32762,6 +32835,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -33050,6 +33124,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -33542,6 +33617,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -33838,6 +33914,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -36381,6 +36458,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -36669,6 +36747,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -36954,6 +37033,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -37242,6 +37322,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -37530,6 +37611,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -38030,7 +38112,7 @@ open class QualityAPI {
     /**
      Update an evaluation
      - PUT /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}
-     - The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
+     - The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation. authorizedActions is not returned for this PUT request, and is only returned for GET requests to this endpoint.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -38079,6 +38161,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -38480,6 +38563,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -38768,6 +38852,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -39053,6 +39138,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -39341,6 +39427,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -39629,6 +39716,7 @@ open class QualityAPI {
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "state" : "active",
+      "preferredName" : "preferredName",
       "department" : "department",
       "presence" : "{}",
       "lastTokenIssued" : {
@@ -40121,6 +40209,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {
@@ -40416,6 +40505,7 @@ open class QualityAPI {
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "state" : "active",
+    "preferredName" : "preferredName",
     "department" : "department",
     "presence" : "{}",
     "lastTokenIssued" : {

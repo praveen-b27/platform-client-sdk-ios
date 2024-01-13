@@ -22,6 +22,8 @@ docs/ActionAggregateQueryPredicate.md
 docs/ActionAggregateQueryResponse.md
 docs/ActionAggregationQuery.md
 docs/ActionAggregationView.md
+docs/ActionCertificate.md
+docs/ActionCertificateListing.md
 docs/ActionConfig.md
 docs/ActionContract.md
 docs/ActionContractInput.md
@@ -63,6 +65,7 @@ docs/AdditionalLanguagesIntent.md
 docs/AdditionalLanguagesSynonyms.md
 docs/AdditionalMessage.md
 docs/Address.md
+docs/AddressableEntity.md
 docs/AddressableEntityRef.md
 docs/AddressableLicenseDefinition.md
 docs/AdherenceExplanationAsyncResponse.md
@@ -244,9 +247,7 @@ docs/AudioState.md
 docs/AudioUpdatedEvent.md
 docs/AuditAPI.json
 docs/AuditAPI.md
-docs/AuditChange.md
 docs/AuditEntity.md
-docs/AuditEntityReference.md
 docs/AuditFacet.md
 docs/AuditFilter.md
 docs/AuditLogMessage.md
@@ -492,6 +493,8 @@ docs/CallbackDisconnectIdentifier.md
 docs/CallbackIdentifier.md
 docs/CallbackMediaParticipant.md
 docs/CallbackMediaSettings.md
+docs/Callheader.md
+docs/Callmessage.md
 docs/Campaign.md
 docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
@@ -656,12 +659,10 @@ docs/ContactlistImportStatusImportStatus.md
 docs/ContactlistImportStatusObject.md
 docs/ContentActions.md
 docs/ContentAttachment.md
-docs/ContentAttributeFilterItem.md
 docs/ContentButtonResponse.md
 docs/ContentCard.md
 docs/ContentCardAction.md
 docs/ContentCarousel.md
-docs/ContentFacetFilterItem.md
 docs/ContentFilterItem.md
 docs/ContentGeneric.md
 docs/ContentList.md
@@ -682,12 +683,10 @@ docs/ContentOfferStyleProperties.md
 docs/ContentOfferStylingConfiguration.md
 docs/ContentPositionProperties.md
 docs/ContentPostback.md
-docs/ContentQueryRequest.md
 docs/ContentQuickReply.md
 docs/ContentQuickReplyV2.md
 docs/ContentReaction.md
 docs/ContentSetting.md
-docs/ContentSortItem.md
 docs/ContentStory.md
 docs/ContentText.md
 docs/Context.md
@@ -1202,8 +1201,6 @@ docs/DoNotSendActionSettings.md
 docs/Document.md
 docs/DocumentArticle.md
 docs/DocumentAttribute.md
-docs/DocumentAudit.md
-docs/DocumentAuditEntityListing.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
 docs/DocumentBodyImage.md
@@ -1439,6 +1436,8 @@ docs/ExportUri.md
 docs/Extension.md
 docs/ExtensionEntityListing.md
 docs/ExtensionPool.md
+docs/ExtensionPoolDivisionView.md
+docs/ExtensionPoolDivisionViewEntityListing.md
 docs/ExtensionPoolEntityListing.md
 docs/ExternalContact.md
 docs/ExternalContactsAPI.json
@@ -1701,6 +1700,8 @@ docs/ImportStatus.md
 docs/ImportStatusRequest.md
 docs/ImportTemplate.md
 docs/ImportTemplateEntityListing.md
+docs/ImportTemplateImportStatusImportStatus.md
+docs/ImportTemplateImportStatusObject.md
 docs/InboundDomain.md
 docs/InboundDomainEntityListing.md
 docs/InboundDomainPatchRequest.md
@@ -2114,7 +2115,9 @@ docs/LogCaptureAPI.json
 docs/LogCaptureAPI.md
 docs/LogCaptureDownloadExecutionResponse.md
 docs/LogCaptureQueryRequest.md
+docs/LogCaptureQueryResponse.md
 docs/LogCaptureUserConfiguration.md
+docs/LogEntry.md
 docs/LogicalInterfaceEntityListing.md
 docs/LongTermForecastPlanningGroupData.md
 docs/LongTermForecastResult.md
@@ -2398,6 +2401,7 @@ docs/PINConfiguration.md
 docs/Page.md
 docs/PagedNamespaceListing.md
 docs/PagelessDomainEntityListingEvaluationVersion.md
+docs/PagelessEntityListing.md
 docs/PagingSpec.md
 docs/Parameter.md
 docs/ParsedCertificate.md
@@ -3144,6 +3148,7 @@ docs/SmsAvailablePhoneNumber.md
 docs/SmsConfig.md
 docs/SmsPhoneNumber.md
 docs/SmsPhoneNumberEntityListing.md
+docs/SmsPhoneNumberImport.md
 docs/SmsPhoneNumberProvision.md
 docs/SmsPhoneNumberRef.md
 docs/SmsProvisioningStatus.md
@@ -4059,6 +4064,7 @@ docs/deleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/deleteConversationsMessagingSetting-example.txt
 docs/deleteConversationsMessagingSettingsDefault-example.txt
 docs/deleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
+docs/deleteDiagnosticsLogcaptureBrowserUser-example.txt
 docs/deleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/deleteExternalcontactsContact-example.txt
 docs/deleteExternalcontactsContactNote-example.txt
@@ -4367,7 +4373,6 @@ docs/getCoachingAppointmentsMe-example.txt
 docs/getCoachingNotification-example.txt
 docs/getCoachingNotifications-example.txt
 docs/getContentmanagementDocument-example.txt
-docs/getContentmanagementDocumentAudits-example.txt
 docs/getContentmanagementDocumentContent-example.txt
 docs/getContentmanagementDocuments-example.txt
 docs/getContentmanagementQuery-example.txt
@@ -4475,6 +4480,8 @@ docs/getDataextensionsCoretypes-example.txt
 docs/getDataextensionsLimits-example.txt
 docs/getDate-example.txt
 docs/getDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
+docs/getDiagnosticsLogcaptureBrowserUser-example.txt
+docs/getDiagnosticsLogcaptureBrowserUsers-example.txt
 docs/getDocumentationGknSearch-example.txt
 docs/getDocumentationSearch-example.txt
 docs/getDownload-example.txt
@@ -4635,6 +4642,7 @@ docs/getIntegrationsActionSchema-example.txt
 docs/getIntegrationsActionTemplate-example.txt
 docs/getIntegrationsActions-example.txt
 docs/getIntegrationsActionsCategories-example.txt
+docs/getIntegrationsActionsCertificates-example.txt
 docs/getIntegrationsActionsDrafts-example.txt
 docs/getIntegrationsBotconnectorIntegrationIdBot-example.txt
 docs/getIntegrationsBotconnectorIntegrationIdBotVersions-example.txt
@@ -4985,6 +4993,8 @@ docs/getRoutingUserUtilization-example.txt
 docs/getRoutingUtilization-example.txt
 docs/getRoutingWrapupcode-example.txt
 docs/getRoutingWrapupcodes-example.txt
+docs/getRoutingWrapupcodesDivisionview-example.txt
+docs/getRoutingWrapupcodesDivisionviews-example.txt
 docs/getScimGroup-example.txt
 docs/getScimGroups-example.txt
 docs/getScimResourcetype-example.txt
@@ -5081,6 +5091,7 @@ docs/getTelephonyProvidersEdgesExpired-example.txt
 docs/getTelephonyProvidersEdgesExtension-example.txt
 docs/getTelephonyProvidersEdgesExtensionpool-example.txt
 docs/getTelephonyProvidersEdgesExtensionpools-example.txt
+docs/getTelephonyProvidersEdgesExtensionpoolsDivisionviews-example.txt
 docs/getTelephonyProvidersEdgesExtensions-example.txt
 docs/getTelephonyProvidersEdgesLine-example.txt
 docs/getTelephonyProvidersEdgesLinebasesetting-example.txt
@@ -5117,6 +5128,8 @@ docs/getTelephonyProvidersEdgesTrunkbasesettingsTemplate-example.txt
 docs/getTelephonyProvidersEdgesTrunks-example.txt
 docs/getTelephonyProvidersEdgesTrunksMetrics-example.txt
 docs/getTelephonyProvidersEdgesTrunkswithrecording-example.txt
+docs/getTelephonySipmessagesConversation-example.txt
+docs/getTelephonySipmessagesConversationHeaders-example.txt
 docs/getTelephonySiptraces-example.txt
 docs/getTelephonySiptracesDownloadDownloadId-example.txt
 docs/getTextbotsBotsSearch-example.txt
@@ -5384,6 +5397,7 @@ docs/patchRoutingQueueMembers-example.txt
 docs/patchRoutingQueueUser-example.txt
 docs/patchRoutingQueueUsers-example.txt
 docs/patchRoutingSettingsContactcenter-example.txt
+docs/patchRoutingSettingsTranscription-example.txt
 docs/patchRoutingSkillgroup-example.txt
 docs/patchScimGroup-example.txt
 docs/patchScimUser-example.txt
@@ -5508,7 +5522,6 @@ docs/postCoachingAppointmentConversations-example.txt
 docs/postCoachingAppointments-example.txt
 docs/postCoachingAppointmentsAggregatesQuery-example.txt
 docs/postCoachingScheduleslotsQuery-example.txt
-docs/postContentmanagementAuditquery-example.txt
 docs/postContentmanagementDocument-example.txt
 docs/postContentmanagementDocumentContent-example.txt
 docs/postContentmanagementDocuments-example.txt
@@ -5582,6 +5595,8 @@ docs/postConversationsScreenshareParticipantCommunicationWrapup-example.txt
 docs/postConversationsSocialParticipantCommunicationWrapup-example.txt
 docs/postConversationsVideoParticipantCommunicationWrapup-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
+docs/postDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
+docs/postDiagnosticsLogcaptureBrowserUser-example.txt
 docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
 docs/postEmployeeperformanceExternalmetricsData-example.txt
@@ -5821,6 +5836,7 @@ docs/postRoutingSkillgroups-example.txt
 docs/postRoutingSkills-example.txt
 docs/postRoutingSmsAddresses-example.txt
 docs/postRoutingSmsPhonenumbers-example.txt
+docs/postRoutingSmsPhonenumbersImport-example.txt
 docs/postRoutingWrapupcodes-example.txt
 docs/postScimUsers-example.txt
 docs/postScimV2Users-example.txt
@@ -6278,6 +6294,8 @@ src/Models/ActionAggregateQueryPredicate.swift
 src/Models/ActionAggregateQueryResponse.swift
 src/Models/ActionAggregationQuery.swift
 src/Models/ActionAggregationView.swift
+src/Models/ActionCertificate.swift
+src/Models/ActionCertificateListing.swift
 src/Models/ActionConfig.swift
 src/Models/ActionContract.swift
 src/Models/ActionContractInput.swift
@@ -6319,6 +6337,7 @@ src/Models/AdditionalLanguagesIntent.swift
 src/Models/AdditionalLanguagesSynonyms.swift
 src/Models/AdditionalMessage.swift
 src/Models/Address.swift
+src/Models/AddressableEntity.swift
 src/Models/AddressableEntityRef.swift
 src/Models/AddressableLicenseDefinition.swift
 src/Models/AdherenceExplanationAsyncResponse.swift
@@ -6492,9 +6511,7 @@ src/Models/AtzmTimeSlot.swift
 src/Models/AtzmTimeSlotWithTimeZone.swift
 src/Models/AudioState.swift
 src/Models/AudioUpdatedEvent.swift
-src/Models/AuditChange.swift
 src/Models/AuditEntity.swift
-src/Models/AuditEntityReference.swift
 src/Models/AuditFacet.swift
 src/Models/AuditFilter.swift
 src/Models/AuditLogMessage.swift
@@ -6736,6 +6753,8 @@ src/Models/CallbackDisconnectIdentifier.swift
 src/Models/CallbackIdentifier.swift
 src/Models/CallbackMediaParticipant.swift
 src/Models/CallbackMediaSettings.swift
+src/Models/Callheader.swift
+src/Models/Callmessage.swift
 src/Models/Campaign.swift
 src/Models/CampaignDiagnostics.swift
 src/Models/CampaignDivisionView.swift
@@ -6894,12 +6913,10 @@ src/Models/ContactlistImportStatusImportStatus.swift
 src/Models/ContactlistImportStatusObject.swift
 src/Models/ContentActions.swift
 src/Models/ContentAttachment.swift
-src/Models/ContentAttributeFilterItem.swift
 src/Models/ContentButtonResponse.swift
 src/Models/ContentCard.swift
 src/Models/ContentCardAction.swift
 src/Models/ContentCarousel.swift
-src/Models/ContentFacetFilterItem.swift
 src/Models/ContentFilterItem.swift
 src/Models/ContentGeneric.swift
 src/Models/ContentList.swift
@@ -6918,12 +6935,10 @@ src/Models/ContentOfferStyleProperties.swift
 src/Models/ContentOfferStylingConfiguration.swift
 src/Models/ContentPositionProperties.swift
 src/Models/ContentPostback.swift
-src/Models/ContentQueryRequest.swift
 src/Models/ContentQuickReply.swift
 src/Models/ContentQuickReplyV2.swift
 src/Models/ContentReaction.swift
 src/Models/ContentSetting.swift
-src/Models/ContentSortItem.swift
 src/Models/ContentStory.swift
 src/Models/ContentText.swift
 src/Models/Context.swift
@@ -7434,8 +7449,6 @@ src/Models/DoNotSendActionSettings.swift
 src/Models/Document.swift
 src/Models/DocumentArticle.swift
 src/Models/DocumentAttribute.swift
-src/Models/DocumentAudit.swift
-src/Models/DocumentAuditEntityListing.swift
 src/Models/DocumentBody.swift
 src/Models/DocumentBodyBlock.swift
 src/Models/DocumentBodyImage.swift
@@ -7665,6 +7678,8 @@ src/Models/ExportUri.swift
 src/Models/Extension.swift
 src/Models/ExtensionEntityListing.swift
 src/Models/ExtensionPool.swift
+src/Models/ExtensionPoolDivisionView.swift
+src/Models/ExtensionPoolDivisionViewEntityListing.swift
 src/Models/ExtensionPoolEntityListing.swift
 src/Models/ExternalContact.swift
 src/Models/ExternalContactsContactChangedTopicContact.swift
@@ -7909,6 +7924,8 @@ src/Models/ImportStatus.swift
 src/Models/ImportStatusRequest.swift
 src/Models/ImportTemplate.swift
 src/Models/ImportTemplateEntityListing.swift
+src/Models/ImportTemplateImportStatusImportStatus.swift
+src/Models/ImportTemplateImportStatusObject.swift
 src/Models/InboundDomain.swift
 src/Models/InboundDomainEntityListing.swift
 src/Models/InboundDomainPatchRequest.swift
@@ -8302,7 +8319,9 @@ src/Models/LocationsSearchResponse.swift
 src/Models/LockInfo.swift
 src/Models/LogCaptureDownloadExecutionResponse.swift
 src/Models/LogCaptureQueryRequest.swift
+src/Models/LogCaptureQueryResponse.swift
 src/Models/LogCaptureUserConfiguration.swift
+src/Models/LogEntry.swift
 src/Models/LogicalInterfaceEntityListing.swift
 src/Models/LongTermForecastPlanningGroupData.swift
 src/Models/LongTermForecastResult.swift
@@ -8570,6 +8589,7 @@ src/Models/PINConfiguration.swift
 src/Models/Page.swift
 src/Models/PagedNamespaceListing.swift
 src/Models/PagelessDomainEntityListingEvaluationVersion.swift
+src/Models/PagelessEntityListing.swift
 src/Models/PagingSpec.swift
 src/Models/Parameter.swift
 src/Models/ParsedCertificate.swift
@@ -9295,6 +9315,7 @@ src/Models/SmsAvailablePhoneNumber.swift
 src/Models/SmsConfig.swift
 src/Models/SmsPhoneNumber.swift
 src/Models/SmsPhoneNumberEntityListing.swift
+src/Models/SmsPhoneNumberImport.swift
 src/Models/SmsPhoneNumberProvision.swift
 src/Models/SmsPhoneNumberRef.swift
 src/Models/SmsProvisioningStatus.swift

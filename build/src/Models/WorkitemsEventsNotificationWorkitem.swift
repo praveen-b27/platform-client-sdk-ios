@@ -87,8 +87,9 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
     public var customFields: [String:WorkitemsEventsNotificationCustomAttribute]?
     public var wrapup: WorkitemsEventsNotificationWrapup?
     public var sessions: [WorkitemsEventsNotificationSession]?
+    public var skillIds: [String]?
 
-    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, dateAssignmentStateChanged: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsEventsNotificationCustomAttribute]?, wrapup: WorkitemsEventsNotificationWrapup?, sessions: [WorkitemsEventsNotificationSession]?) {
+    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, dateAssignmentStateChanged: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsEventsNotificationCustomAttribute]?, wrapup: WorkitemsEventsNotificationWrapup?, sessions: [WorkitemsEventsNotificationSession]?, skillIds: [String]?) {
         self._id = _id
         self.name = name
         self.typeId = typeId
@@ -121,6 +122,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         self.customFields = customFields
         self.wrapup = wrapup
         self.sessions = sessions
+        self.skillIds = skillIds
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -156,6 +158,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         case customFields
         case wrapup
         case sessions
+        case skillIds
     }
 
 

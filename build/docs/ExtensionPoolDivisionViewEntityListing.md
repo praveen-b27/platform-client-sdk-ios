@@ -1,13 +1,13 @@
 ---
-title: DocumentAuditEntityListing
+title: ExtensionPoolDivisionViewEntityListing
 ---
-## DocumentAuditEntityListing
+## ExtensionPoolDivisionViewEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DocumentAudit]**](DocumentAudit.html) |  | [optional] |
+| **entities** | [**[ExtensionPoolDivisionView]**](ExtensionPoolDivisionView.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |

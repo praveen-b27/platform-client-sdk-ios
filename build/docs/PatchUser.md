@@ -8,6 +8,7 @@ title: PatchUser
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **preferredName** | **String** | Preferred full name of agent | [optional] |
 | **acdAutoAnswer** | **Bool** | The value that denotes if acdAutoAnswer is set on the user | [optional] |
 {: class="table table-striped"}
 

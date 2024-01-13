@@ -973,7 +973,7 @@ open class ExternalContactsAPI {
      - parameter contactId: (path) ExternalContact Id 
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1050,7 +1050,7 @@ open class ExternalContactsAPI {
      - parameter contactId: (path) ExternalContact Id 
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<NoteListing> 
@@ -1327,7 +1327,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter q: (query) User supplied search keywords (no special syntax is currently supported) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1736,7 +1736,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter q: (query) User supplied search keywords (no special syntax is currently supported) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<ContactListing> 
@@ -2175,7 +2175,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter q: (query) User supplied search keywords (no special syntax is currently supported) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2585,7 +2585,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter q: (query) User supplied search keywords (no special syntax is currently supported) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<ContactListing> 
@@ -2703,7 +2703,7 @@ open class ExternalContactsAPI {
      - parameter externalOrganizationId: (path) External Organization Id 
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2780,7 +2780,7 @@ open class ExternalContactsAPI {
      - parameter externalOrganizationId: (path) External Organization Id 
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<NoteListing> 
@@ -2823,7 +2823,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getExternalcontactsOrganizationRelationships(externalOrganizationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getExternalcontactsOrganizationRelationships? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: RelationshipListing?,_ error: Error?) -> Void)) {
@@ -2894,7 +2894,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)
 
      - returns: RequestBuilder<RelationshipListing> 
      */
@@ -2933,7 +2933,7 @@ open class ExternalContactsAPI {
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter q: (query) Search query (optional)
      - parameter trustorId: (query) Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter includeTrustors: (query) (true or false) whether or not to include trustor information embedded in the externalOrganization (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -3128,7 +3128,7 @@ open class ExternalContactsAPI {
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter q: (query) Search query (optional)
      - parameter trustorId: (query) Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)
-     - parameter sortOrder: (query) Sort order (optional)
+     - parameter sortOrder: (query) The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter includeTrustors: (query) (true or false) whether or not to include trustor information embedded in the externalOrganization (optional)
 

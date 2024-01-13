@@ -1230,6 +1230,94 @@ open class IntegrationsAPI {
     }
 
     
+    public enum Status_getIntegrationsActionsCertificates: String { 
+        case current = "Current"
+        case upcoming = "Upcoming"
+    }
+
+    
+    
+    public enum ModelType_getIntegrationsActionsCertificates: String { 
+        case client = "Client"
+    }
+
+    
+    /**
+     Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+     
+     - parameter status: (query) Indicates the validity of the certificate in question. (optional)
+     - parameter type: (query) Indicates the type of the certificate. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsActionsCertificates(status: Status_getIntegrationsActionsCertificates? = nil, type: ModelType_getIntegrationsActionsCertificates? = nil, completion: @escaping ((_ data: ActionCertificateListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsCertificatesWithRequestBuilder(status: status, type: type)
+        requestBuilder.execute { (response: Response<ActionCertificateListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+     - GET /api/v2/integrations/actions/certificates
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "certificate" : "certificate",
+    "signingAuthority" : "DigiCert",
+    "type" : "Client",
+    "status" : "Current"
+  }, {
+    "certificate" : "certificate",
+    "signingAuthority" : "DigiCert",
+    "type" : "Client",
+    "status" : "Current"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter status: (query) Indicates the validity of the certificate in question. (optional)
+     - parameter type: (query) Indicates the type of the certificate. (optional)
+
+     - returns: RequestBuilder<ActionCertificateListing> 
+     */
+    open class func getIntegrationsActionsCertificatesWithRequestBuilder(status: Status_getIntegrationsActionsCertificates? = nil, type: ModelType_getIntegrationsActionsCertificates? = nil) -> RequestBuilder<ActionCertificateListing> {        
+        let path = "/api/v2/integrations/actions/certificates"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "status": status?.rawValue, 
+            "type": type?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ActionCertificateListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     

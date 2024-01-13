@@ -24,6 +24,7 @@ title: User
 | **certifications** | **[String]** |  | [optional] |
 | **biography** | [**Biography**](Biography.html) |  | [optional] |
 | **employerInfo** | [**EmployerInfo**](EmployerInfo.html) |  | [optional] |
+| **preferredName** | **String** | Preferred full name of the agent | [optional] |
 | **routingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
 | **presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
 | **integrationPresence** | [**UserPresence**](UserPresence.html) | Integration presence | [optional] |

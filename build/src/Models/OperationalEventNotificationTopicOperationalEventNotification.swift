@@ -21,9 +21,9 @@ public class OperationalEventNotificationTopicOperationalEventNotification: Coda
     public var parentEntity: String?
     public var entityType: String?
     public var conversationId: String?
-    public var timestamp: Date?
+    public var timestamp: Int?
 
-    public init(eventEntity: OperationalEventNotificationTopicEventEntity?, entityId: String?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, version: String?, parentEntity: String?, entityType: String?, conversationId: String?, timestamp: Date?) {
+    public init(eventEntity: OperationalEventNotificationTopicEventEntity?, entityId: String?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, version: String?, parentEntity: String?, entityType: String?, conversationId: String?, timestamp: Int?) {
         self.eventEntity = eventEntity
         self.entityId = entityId
         self.entityName = entityName

@@ -39,6 +39,7 @@ title: WorkitemsUserEventsNotificationWorkitem
 | **customFields** | [**[String:WorkitemsUserEventsNotificationCustomAttribute]**](WorkitemsUserEventsNotificationCustomAttribute.html) |  | [optional] |
 | **wrapup** | [**WorkitemsUserEventsNotificationWrapup**](WorkitemsUserEventsNotificationWrapup.html) |  | [optional] |
 | **sessions** | [**[WorkitemsUserEventsNotificationSession]**](WorkitemsUserEventsNotificationSession.html) |  | [optional] |
+| **skillIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

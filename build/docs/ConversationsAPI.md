@@ -156,6 +156,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantDigits**](ConversationsAPI.html#postConversationParticipantDigits) | Sends DTMF to the participant |
 | [**postConversationParticipantReplace**](ConversationsAPI.html#postConversationParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
+| [**postConversationSummaryFeedback**](ConversationsAPI.html#postConversationSummaryFeedback) | Submit feedback for the summary. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
@@ -200,7 +201,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagesInboundOpen**](ConversationsAPI.html#postConversationsMessagesInboundOpen) | Send an inbound Open Message |
 | [**postConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#postConversationsMessagingIntegrationsFacebook) | Create a Facebook Integration |
 | [**postConversationsMessagingIntegrationsInstagram**](ConversationsAPI.html#postConversationsMessagingIntegrationsInstagram) | Create Instagram Integration |
-| [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration |
+| [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration (Deprecated) |
 | [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
@@ -8257,6 +8258,61 @@ ConversationsAPI.postConversationParticipantSecureivrsessions(conversationId: co
 
 [**SecureSession**](SecureSession.html)
 
+<a name="postConversationSummaryFeedback"></a>
+
+# **postConversationSummaryFeedback**
+
+
+
+> Void postConversationSummaryFeedback(conversationId, summaryId, body)
+
+Submit feedback for the summary.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback  
+
+Requires ALL permissions: 
+
+* conversation:summaryFeedback:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let summaryId: String = "" // Summary ID
+let body: FeedbackAddRequest = new FeedbackAddRequest(...) // 
+
+// Code example
+ConversationsAPI.postConversationSummaryFeedback(conversationId: conversationId, summaryId: summaryId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationSummaryFeedback was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **summaryId** | **String**| Summary ID | |
+| **body** | [**FeedbackAddRequest**](FeedbackAddRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postConversationsCall"></a>
 
 # **postConversationsCall**
@@ -10662,7 +10718,9 @@ ConversationsAPI.postConversationsMessagingIntegrationsInstagram(body: body) { (
 
 > [LineIntegration](LineIntegration.html) postConversationsMessagingIntegrationsLine(body)
 
-Create a LINE messenger Integration
+Create a LINE messenger Integration (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 
 

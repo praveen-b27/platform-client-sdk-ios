@@ -17,6 +17,7 @@ title: V2MobiusRulesTopicRule
 | **inAlarm** | **Bool** |  | [optional] |
 | **action** | **String** |  | [optional] |
 | **dateCreated** | [**Date**](Date.html) |  | [optional] |
+| **sendExitingAlarmNotification** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

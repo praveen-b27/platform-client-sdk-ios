@@ -59,8 +59,6 @@ public class ConversationDetailQueryPredicate: Codable {
         case talert = "tAlert"
         case tanswered = "tAnswered"
         case tbarging = "tBarging"
-        case tcallback = "tCallback"
-        case tcallbackcomplete = "tCallbackComplete"
         case tcoaching = "tCoaching"
         case tcoachingcomplete = "tCoachingComplete"
         case tconnected = "tConnected"

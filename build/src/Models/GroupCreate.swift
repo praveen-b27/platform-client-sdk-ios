@@ -46,12 +46,14 @@ public class GroupCreate: Codable {
     public var rulesVisible: Bool?
     /** Who can view this group */
     public var visibility: Visibility?
+    /** Allow roles to be assigned to this group */
+    public var rolesEnabled: Bool?
     /** Owners of the group */
     public var ownerIds: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, dateModified: Date?, memberCount: Int64?, state: State?, version: Int?, type: ModelType?, images: [UserImage]?, addresses: [GroupContact]?, rulesVisible: Bool?, visibility: Visibility?, ownerIds: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, dateModified: Date?, memberCount: Int64?, state: State?, version: Int?, type: ModelType?, images: [UserImage]?, addresses: [GroupContact]?, rulesVisible: Bool?, visibility: Visibility?, rolesEnabled: Bool?, ownerIds: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -64,6 +66,7 @@ public class GroupCreate: Codable {
         self.addresses = addresses
         self.rulesVisible = rulesVisible
         self.visibility = visibility
+        self.rolesEnabled = rolesEnabled
         self.ownerIds = ownerIds
         self.selfUri = selfUri
     }
@@ -81,6 +84,7 @@ public class GroupCreate: Codable {
         case addresses
         case rulesVisible
         case visibility
+        case rolesEnabled
         case ownerIds
         case selfUri
     }

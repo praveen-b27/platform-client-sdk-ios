@@ -25,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundDnclistCustomexclusioncolumns**](OutboundAPI.html#deleteOutboundDnclistCustomexclusioncolumns) | Deletes all or expired custom exclusion column entries from a DNC list. |
 | [**deleteOutboundDnclistEmailaddresses**](OutboundAPI.html#deleteOutboundDnclistEmailaddresses) | Deletes all or expired email addresses from a DNC list. |
 | [**deleteOutboundDnclistPhonenumbers**](OutboundAPI.html#deleteOutboundDnclistPhonenumbers) | Deletes all or expired phone numbers from a DNC list. |
+| [**deleteOutboundFilespecificationtemplate**](OutboundAPI.html#deleteOutboundFilespecificationtemplate) | Delete File Specification Template |
+| [**deleteOutboundFilespecificationtemplatesBulk**](OutboundAPI.html#deleteOutboundFilespecificationtemplatesBulk) | Delete multiple file specification templates. |
 | [**deleteOutboundImporttemplate**](OutboundAPI.html#deleteOutboundImporttemplate) | Delete Import Template |
 | [**deleteOutboundImporttemplates**](OutboundAPI.html#deleteOutboundImporttemplates) | Delete multiple import templates. |
 | [**deleteOutboundMessagingcampaign**](OutboundAPI.html#deleteOutboundMessagingcampaign) | Delete an Outbound Messaging Campaign |
@@ -76,6 +78,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundDnclistsDivisionviews**](OutboundAPI.html#getOutboundDnclistsDivisionviews) | Query a list of simplified dnc list objects. |
 | [**getOutboundEvent**](OutboundAPI.html#getOutboundEvent) | Get Dialer Event |
 | [**getOutboundEvents**](OutboundAPI.html#getOutboundEvents) | Query Event Logs |
+| [**getOutboundFilespecificationtemplate**](OutboundAPI.html#getOutboundFilespecificationtemplate) | Get File Specification Template |
+| [**getOutboundFilespecificationtemplates**](OutboundAPI.html#getOutboundFilespecificationtemplates) | Query File Specification Templates |
 | [**getOutboundImporttemplate**](OutboundAPI.html#getOutboundImporttemplate) | Get Import Template |
 | [**getOutboundImporttemplateImportstatus**](OutboundAPI.html#getOutboundImporttemplateImportstatus) | Get the import status for an import template. |
 | [**getOutboundImporttemplates**](OutboundAPI.html#getOutboundImporttemplates) | Query Import Templates |
@@ -121,12 +125,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlists**](OutboundAPI.html#postOutboundContactlists) | Create a contact List. |
 | [**postOutboundContactlisttemplates**](OutboundAPI.html#postOutboundContactlisttemplates) | Create Contact List Template |
 | [**postOutboundContactlisttemplatesBulkAdd**](OutboundAPI.html#postOutboundContactlisttemplatesBulkAdd) | Add multiple contact list templates |
+| [**postOutboundContactlisttemplatesBulkRetrieve**](OutboundAPI.html#postOutboundContactlisttemplatesBulkRetrieve) | Get multiple contact list templates |
 | [**postOutboundConversationDnc**](OutboundAPI.html#postOutboundConversationDnc) | Add phone numbers to a Dialer DNC list. |
 | [**postOutboundDigitalrulesets**](OutboundAPI.html#postOutboundDigitalrulesets) | Create an Outbound Digital Rule Set |
 | [**postOutboundDnclistEmailaddresses**](OutboundAPI.html#postOutboundDnclistEmailaddresses) | Add email addresses to a DNC list. |
 | [**postOutboundDnclistExport**](OutboundAPI.html#postOutboundDnclistExport) | Initiate the export of a dnc list. |
 | [**postOutboundDnclistPhonenumbers**](OutboundAPI.html#postOutboundDnclistPhonenumbers) | Add phone numbers to a DNC list. |
 | [**postOutboundDnclists**](OutboundAPI.html#postOutboundDnclists) | Create dialer DNC list |
+| [**postOutboundFilespecificationtemplates**](OutboundAPI.html#postOutboundFilespecificationtemplates) | Create File Specification Template |
 | [**postOutboundImporttemplates**](OutboundAPI.html#postOutboundImporttemplates) | Create Import Template |
 | [**postOutboundImporttemplatesBulkAdd**](OutboundAPI.html#postOutboundImporttemplatesBulkAdd) | Add multiple import templates |
 | [**postOutboundMessagingcampaigns**](OutboundAPI.html#postOutboundMessagingcampaigns) | Create a Messaging Campaign |
@@ -145,6 +151,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putOutboundContactlisttemplate**](OutboundAPI.html#putOutboundContactlisttemplate) | Update a contact list template. |
 | [**putOutboundDigitalruleset**](OutboundAPI.html#putOutboundDigitalruleset) | Update an Outbound Digital Rule Set |
 | [**putOutboundDnclist**](OutboundAPI.html#putOutboundDnclist) | Update dialer DNC list |
+| [**putOutboundFilespecificationtemplate**](OutboundAPI.html#putOutboundFilespecificationtemplate) | Update File Specification Template |
 | [**putOutboundImporttemplate**](OutboundAPI.html#putOutboundImporttemplate) | Update Import Template |
 | [**putOutboundMessagingcampaign**](OutboundAPI.html#putOutboundMessagingcampaign) | Update an Outbound Messaging Campaign |
 | [**putOutboundRuleset**](OutboundAPI.html#putOutboundRuleset) | Update a Rule Set. |
@@ -1084,6 +1091,108 @@ OutboundAPI.deleteOutboundDnclistPhonenumbers(dncListId: dncListId, expiredOnly:
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| DncList ID | |
 | **expiredOnly** | **Bool**| Set to true to only remove DNC entries that are expired | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundFilespecificationtemplate"></a>
+
+# **deleteOutboundFilespecificationtemplate**
+
+
+
+> Void deleteOutboundFilespecificationtemplate(fileSpecificationTemplateId)
+
+Delete File Specification Template
+
+
+
+Wraps DELETE /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let fileSpecificationTemplateId: String = "" // File Specification Template ID
+
+// Code example
+OutboundAPI.deleteOutboundFilespecificationtemplate(fileSpecificationTemplateId: fileSpecificationTemplateId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundFilespecificationtemplate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fileSpecificationTemplateId** | **String**| File Specification Template ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundFilespecificationtemplatesBulk"></a>
+
+# **deleteOutboundFilespecificationtemplatesBulk**
+
+
+
+> Void deleteOutboundFilespecificationtemplatesBulk(_id)
+
+Delete multiple file specification templates.
+
+
+
+Wraps DELETE /api/v2/outbound/filespecificationtemplates/bulk  
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // File Specification template id(s) to delete
+
+// Code example
+OutboundAPI.deleteOutboundFilespecificationtemplatesBulk(_id: _id) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundFilespecificationtemplatesBulk was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String.html)| File Specification template id(s) to delete | |
 {: class="table-striped"}
 
 
@@ -4008,6 +4117,122 @@ OutboundAPI.getOutboundEvents(pageSize: pageSize, pageNumber: pageNumber, filter
 
 [**DialerEventEntityListing**](DialerEventEntityListing.html)
 
+<a name="getOutboundFilespecificationtemplate"></a>
+
+# **getOutboundFilespecificationtemplate**
+
+
+
+> [FileSpecificationTemplate](FileSpecificationTemplate.html) getOutboundFilespecificationtemplate(fileSpecificationTemplateId)
+
+Get File Specification Template
+
+
+
+Wraps GET /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let fileSpecificationTemplateId: String = "" // File Specification Template ID
+
+// Code example
+OutboundAPI.getOutboundFilespecificationtemplate(fileSpecificationTemplateId: fileSpecificationTemplateId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundFilespecificationtemplate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fileSpecificationTemplateId** | **String**| File Specification Template ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FileSpecificationTemplate**](FileSpecificationTemplate.html)
+
+<a name="getOutboundFilespecificationtemplates"></a>
+
+# **getOutboundFilespecificationtemplates**
+
+
+
+> [FileSpecificationTemplateEntityListing](FileSpecificationTemplateEntityListing.html) getOutboundFilespecificationtemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
+
+Query File Specification Templates
+
+
+
+Wraps GET /api/v2/outbound/filespecificationtemplates  
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
+let filterType: OutboundAPI.FilterType_getOutboundFilespecificationtemplates = OutboundAPI.FilterType_getOutboundFilespecificationtemplates.enummember // Filter type
+let name: String = "" // Name
+let sortBy: String = "" // Sort by
+let sortOrder: OutboundAPI.SortOrder_getOutboundFilespecificationtemplates = OutboundAPI.SortOrder_getOutboundFilespecificationtemplates.enummember // Sort order
+
+// Code example
+OutboundAPI.getOutboundFilespecificationtemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundFilespecificationtemplates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **name** | **String**| Name | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FileSpecificationTemplateEntityListing**](FileSpecificationTemplateEntityListing.html)
+
 <a name="getOutboundImporttemplate"></a>
 
 # **getOutboundImporttemplate**
@@ -6439,6 +6664,58 @@ OutboundAPI.postOutboundContactlisttemplatesBulkAdd(body: body) { (response, err
 
 [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
 
+<a name="postOutboundContactlisttemplatesBulkRetrieve"></a>
+
+# **postOutboundContactlisttemplatesBulkRetrieve**
+
+
+
+> [ContactListTemplateEntityListing](ContactListTemplateEntityListing.html) postOutboundContactlisttemplatesBulkRetrieve(body)
+
+Get multiple contact list templates
+
+
+
+Wraps POST /api/v2/outbound/contactlisttemplates/bulk/retrieve  
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactListTemplateBulkRetrieveBody = new ContactListTemplateBulkRetrieveBody(...) // contact list templates to get
+
+// Code example
+OutboundAPI.postOutboundContactlisttemplatesBulkRetrieve(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlisttemplatesBulkRetrieve was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactListTemplateBulkRetrieveBody**](ContactListTemplateBulkRetrieveBody.html)| contact list templates to get | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
+
 <a name="postOutboundConversationDnc"></a>
 
 # **postOutboundConversationDnc**
@@ -6760,6 +7037,58 @@ OutboundAPI.postOutboundDnclists(body: body) { (response, error) in
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="postOutboundFilespecificationtemplates"></a>
+
+# **postOutboundFilespecificationtemplates**
+
+
+
+> [FileSpecificationTemplate](FileSpecificationTemplate.html) postOutboundFilespecificationtemplates(body)
+
+Create File Specification Template
+
+
+
+Wraps POST /api/v2/outbound/filespecificationtemplates  
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FileSpecificationTemplate = new FileSpecificationTemplate(...) // FileSpecificationTemplate
+
+// Code example
+OutboundAPI.postOutboundFilespecificationtemplates(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundFilespecificationtemplates was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FileSpecificationTemplate**](FileSpecificationTemplate.html)| FileSpecificationTemplate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FileSpecificationTemplate**](FileSpecificationTemplate.html)
 
 <a name="postOutboundImporttemplates"></a>
 
@@ -7727,6 +8056,60 @@ OutboundAPI.putOutboundDnclist(dncListId: dncListId, body: body) { (response, er
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="putOutboundFilespecificationtemplate"></a>
+
+# **putOutboundFilespecificationtemplate**
+
+
+
+> [FileSpecificationTemplate](FileSpecificationTemplate.html) putOutboundFilespecificationtemplate(fileSpecificationTemplateId, body)
+
+Update File Specification Template
+
+
+
+Wraps PUT /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}  
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let fileSpecificationTemplateId: String = "" // File Specification Template ID
+let body: FileSpecificationTemplate = new FileSpecificationTemplate(...) // fileSpecificationTemplate
+
+// Code example
+OutboundAPI.putOutboundFilespecificationtemplate(fileSpecificationTemplateId: fileSpecificationTemplateId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundFilespecificationtemplate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fileSpecificationTemplateId** | **String**| File Specification Template ID | |
+| **body** | [**FileSpecificationTemplate**](FileSpecificationTemplate.html)| fileSpecificationTemplate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FileSpecificationTemplate**](FileSpecificationTemplate.html)
 
 <a name="putOutboundImporttemplate"></a>
 

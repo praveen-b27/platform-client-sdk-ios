@@ -44,7 +44,7 @@ public class PhoneStatus: Codable {
     public var phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?
     /** The URI of the edge that provided this status information. */
     public var edge: DomainEntityRef?
-    /** The URI for this object */
+    /** The URI for this object. Deprecated. Do not use. */
     public var selfUri: String?
 
     public init(_id: String?, name: String?, operationalStatus: OperationalStatus?, edgesStatus: EdgesStatus?, eventCreationTime: String?, provision: ProvisionInfo?, lineStatuses: [LineStatus]?, phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?, edge: DomainEntityRef?, selfUri: String?) {

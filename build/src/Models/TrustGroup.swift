@@ -46,6 +46,8 @@ public class TrustGroup: Codable {
     public var rulesVisible: Bool?
     /** Who can view this group */
     public var visibility: Visibility?
+    /** Allow roles to be assigned to this group */
+    public var rolesEnabled: Bool?
     /** Owners of the group */
     public var owners: [User]?
     /** The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -53,7 +55,7 @@ public class TrustGroup: Codable {
     /** The user that added trusted group. */
     public var createdBy: OrgUser?
 
-    public init(_id: String?, name: String?, _description: String?, dateModified: Date?, memberCount: Int64?, state: State?, version: Int?, type: ModelType?, images: [UserImage]?, addresses: [GroupContact]?, rulesVisible: Bool?, visibility: Visibility?, owners: [User]?, dateCreated: Date?, createdBy: OrgUser?) {
+    public init(_id: String?, name: String?, _description: String?, dateModified: Date?, memberCount: Int64?, state: State?, version: Int?, type: ModelType?, images: [UserImage]?, addresses: [GroupContact]?, rulesVisible: Bool?, visibility: Visibility?, rolesEnabled: Bool?, owners: [User]?, dateCreated: Date?, createdBy: OrgUser?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -66,6 +68,7 @@ public class TrustGroup: Codable {
         self.addresses = addresses
         self.rulesVisible = rulesVisible
         self.visibility = visibility
+        self.rolesEnabled = rolesEnabled
         self.owners = owners
         self.dateCreated = dateCreated
         self.createdBy = createdBy
@@ -84,6 +87,7 @@ public class TrustGroup: Codable {
         case addresses
         case rulesVisible
         case visibility
+        case rolesEnabled
         case owners
         case dateCreated
         case createdBy

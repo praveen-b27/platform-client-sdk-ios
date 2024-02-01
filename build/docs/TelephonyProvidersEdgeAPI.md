@@ -60,7 +60,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesLinesTemplate**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesLinesTemplate) | Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance |
 | [**getTelephonyProvidersEdgesLogicalinterfaces**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesLogicalinterfaces) | Get edge logical interfaces. |
 | [**getTelephonyProvidersEdgesMetrics**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesMetrics) | Get the metrics for a list of edges. |
-| [**getTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesOutboundroute) | Get outbound route |
 | [**getTelephonyProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesOutboundroutes) | Get outbound routes |
 | [**getTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhone) | Get a Phone by ID |
 | [**getTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhonebasesetting) | Get a Phone Base Settings object by ID |
@@ -2992,60 +2991,6 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesMetrics(edgeIds: edgeIds) { 
 ### Return type
 
 [**[EdgeMetrics]**](EdgeMetrics.html)
-
-<a name="getTelephonyProvidersEdgesOutboundroute"></a>
-
-# **getTelephonyProvidersEdgesOutboundroute**
-
-
-
-> [OutboundRoute](OutboundRoute.html) getTelephonyProvidersEdgesOutboundroute(outboundRouteId)
-
-Get outbound route
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let outboundRouteId: String = "" // Outbound route ID
-
-// Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesOutboundroute(outboundRouteId: outboundRouteId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesOutboundroute was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **outboundRouteId** | **String**| Outbound route ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
 
 <a name="getTelephonyProvidersEdgesOutboundroutes"></a>
 

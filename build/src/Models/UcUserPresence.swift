@@ -17,8 +17,10 @@ public class UcUserPresence: Codable {
     public var name: String?
     /** User ID of the associated Genesys Cloud user. */
     public var userId: String?
-    /** Represents the source where the Presence was set. Some examples are: PURECLOUD, MICROSOFTTEAMS, ZOOMPHONE, etc. */
+    /** Deprecated - The sourceID field should be used as a replacement. */
     public var source: String?
+    /** The registered source ID from where the presence was set */
+    public var sourceId: String?
     public var presenceDefinition: PresenceDefinition?
     public var message: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -26,11 +28,12 @@ public class UcUserPresence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, userId: String?, source: String?, presenceDefinition: PresenceDefinition?, message: String?, modifiedDate: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, userId: String?, source: String?, sourceId: String?, presenceDefinition: PresenceDefinition?, message: String?, modifiedDate: Date?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.userId = userId
         self.source = source
+        self.sourceId = sourceId
         self.presenceDefinition = presenceDefinition
         self.message = message
         self.modifiedDate = modifiedDate
@@ -42,6 +45,7 @@ public class UcUserPresence: Codable {
         case name
         case userId
         case source
+        case sourceId
         case presenceDefinition
         case message
         case modifiedDate

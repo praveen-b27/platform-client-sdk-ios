@@ -400,6 +400,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -433,6 +434,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -948,6 +950,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -981,6 +984,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3253,14 +3257,20 @@ open class ArchitectAPI {
     }
 
     
+    
+    
+    
     /**
      Get specified user prompt
      
      - parameter promptId: (path) Prompt ID 
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectPrompt(promptId: String, completion: @escaping ((_ data: Prompt?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectPromptWithRequestBuilder(promptId: promptId)
+    open class func getArchitectPrompt(promptId: String, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, completion: @escaping ((_ data: Prompt?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectPromptWithRequestBuilder(promptId: promptId, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language)
         requestBuilder.execute { (response: Response<Prompt>?, error) -> Void in
             do {
                 if let e = error {
@@ -3325,10 +3335,13 @@ open class ArchitectAPI {
 }, statusCode=200}]
      
      - parameter promptId: (path) Prompt ID 
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
 
      - returns: RequestBuilder<Prompt> 
      */
-    open class func getArchitectPromptWithRequestBuilder(promptId: String) -> RequestBuilder<Prompt> {        
+    open class func getArchitectPromptWithRequestBuilder(promptId: String, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil) -> RequestBuilder<Prompt> {        
         var path = "/api/v2/architect/prompts/{promptId}"
         let promptIdPreEscape = "\(promptId)"
         let promptIdPostEscape = promptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3336,7 +3349,12 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeMediaUris": includeMediaUris, 
+            "includeResources": includeResources, 
+            "language": language
+        ])
 
         let requestBuilder: RequestBuilder<Prompt>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -3539,6 +3557,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3572,6 +3591,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3956,6 +3976,9 @@ open class ArchitectAPI {
     
     
     
+    
+    
+    
     /**
      Get a pageable list of user prompts
      
@@ -3966,10 +3989,13 @@ open class ArchitectAPI {
      - parameter nameOrDescription: (query) Name or description (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectPrompts(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: PromptEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectPromptsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getArchitectPrompts(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, completion: @escaping ((_ data: PromptEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectPromptsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language)
         requestBuilder.execute { (response: Response<PromptEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4091,10 +4117,13 @@ open class ArchitectAPI {
      - parameter nameOrDescription: (query) Name or description (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
 
      - returns: RequestBuilder<PromptEntityListing> 
      */
-    open class func getArchitectPromptsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<PromptEntityListing> {        
+    open class func getArchitectPromptsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil) -> RequestBuilder<PromptEntityListing> {        
         let path = "/api/v2/architect/prompts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -4107,7 +4136,10 @@ open class ArchitectAPI {
             "description": _description, 
             "nameOrDescription": nameOrDescription, 
             "sortBy": sortBy, 
-            "sortOrder": sortOrder
+            "sortOrder": sortOrder, 
+            "includeMediaUris": includeMediaUris, 
+            "includeResources": includeResources, 
+            "language": language
         ])
 
         let requestBuilder: RequestBuilder<PromptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4761,14 +4793,20 @@ open class ArchitectAPI {
     }
 
     
+    
+    
+    
     /**
      Get a system prompt
      
      - parameter promptId: (path) promptId 
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectSystemprompt(promptId: String, completion: @escaping ((_ data: SystemPrompt?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectSystempromptWithRequestBuilder(promptId: promptId)
+    open class func getArchitectSystemprompt(promptId: String, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, completion: @escaping ((_ data: SystemPrompt?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSystempromptWithRequestBuilder(promptId: promptId, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language)
         requestBuilder.execute { (response: Response<SystemPrompt>?, error) -> Void in
             do {
                 if let e = error {
@@ -4834,10 +4872,13 @@ open class ArchitectAPI {
 }, statusCode=200}]
      
      - parameter promptId: (path) promptId 
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
 
      - returns: RequestBuilder<SystemPrompt> 
      */
-    open class func getArchitectSystempromptWithRequestBuilder(promptId: String) -> RequestBuilder<SystemPrompt> {        
+    open class func getArchitectSystempromptWithRequestBuilder(promptId: String, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil) -> RequestBuilder<SystemPrompt> {        
         var path = "/api/v2/architect/systemprompts/{promptId}"
         let promptIdPreEscape = "\(promptId)"
         let promptIdPostEscape = promptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4845,7 +4886,12 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeMediaUris": includeMediaUris, 
+            "includeResources": includeResources, 
+            "language": language
+        ])
 
         let requestBuilder: RequestBuilder<SystemPrompt>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -5048,6 +5094,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -5081,6 +5128,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -5475,6 +5523,9 @@ open class ArchitectAPI {
     
     
     
+    
+    
+    
     /**
      Get System Prompts
      
@@ -5485,10 +5536,13 @@ open class ArchitectAPI {
      - parameter name: (query) Name (optional)
      - parameter _description: (query) Description (optional)
      - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectSystemprompts(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, completion: @escaping ((_ data: SystemPromptEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectSystempromptsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, _description: _description, nameOrDescription: nameOrDescription)
+    open class func getArchitectSystemprompts(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, completion: @escaping ((_ data: SystemPromptEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSystempromptsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, _description: _description, nameOrDescription: nameOrDescription, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language)
         requestBuilder.execute { (response: Response<SystemPromptEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5611,10 +5665,13 @@ open class ArchitectAPI {
      - parameter name: (query) Name (optional)
      - parameter _description: (query) Description (optional)
      - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
+     - parameter includeResources: (query) Include the resources for each system prompt (optional)
+     - parameter language: (query) Filter the resources down to the provided languages (optional)
 
      - returns: RequestBuilder<SystemPromptEntityListing> 
      */
-    open class func getArchitectSystempromptsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil) -> RequestBuilder<SystemPromptEntityListing> {        
+    open class func getArchitectSystempromptsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil) -> RequestBuilder<SystemPromptEntityListing> {        
         let path = "/api/v2/architect/systemprompts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -5627,7 +5684,10 @@ open class ArchitectAPI {
             "sortOrder": sortOrder, 
             "name": name, 
             "description": _description, 
-            "nameOrDescription": nameOrDescription
+            "nameOrDescription": nameOrDescription, 
+            "includeMediaUris": includeMediaUris, 
+            "includeResources": includeResources, 
+            "language": language
         ])
 
         let requestBuilder: RequestBuilder<SystemPromptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5775,6 +5835,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -5808,6 +5869,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -6114,6 +6176,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -6147,6 +6210,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -6466,6 +6530,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -6499,6 +6564,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -6811,6 +6877,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -6844,6 +6911,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -7116,6 +7184,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -7149,6 +7218,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -7478,6 +7548,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -7511,6 +7582,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -7885,6 +7957,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -7918,6 +7991,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -8365,6 +8439,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -8398,6 +8473,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -9159,6 +9235,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -9192,6 +9269,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -9501,6 +9579,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -9534,6 +9613,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -9907,6 +9987,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -9940,6 +10021,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -10246,6 +10328,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -10279,6 +10362,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -10598,6 +10682,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -10631,6 +10716,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -10943,6 +11029,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -10976,6 +11063,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -11248,6 +11336,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -11281,6 +11370,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -11610,6 +11700,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -11643,6 +11734,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -11903,6 +11995,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -11936,6 +12029,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -12242,6 +12336,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -12275,6 +12370,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -12594,6 +12690,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -12627,6 +12724,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -12939,6 +13037,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -12972,6 +13071,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -13244,6 +13344,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -13277,6 +13378,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -13606,6 +13708,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -13639,6 +13742,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -15322,6 +15426,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -15355,6 +15460,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -15715,6 +15821,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -15748,6 +15855,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -16035,6 +16143,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -16068,6 +16177,7 @@ open class ArchitectAPI {
           "description" : "description",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "owners" : [ null, null ],
+          "rolesEnabled" : true,
           "type" : "official",
           "version" : 2,
           "rulesVisible" : true,
@@ -16720,6 +16830,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -16753,6 +16864,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -17402,6 +17514,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -17435,6 +17548,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -17840,6 +17954,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -17873,6 +17988,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -18245,6 +18361,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -18278,6 +18395,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -18591,6 +18709,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -18624,6 +18743,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -18930,6 +19050,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -18963,6 +19084,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -19282,6 +19404,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -19315,6 +19438,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -19627,6 +19751,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -19660,6 +19785,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -19932,6 +20058,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -19965,6 +20092,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -20294,6 +20422,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -20327,6 +20456,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -20654,6 +20784,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -20687,6 +20818,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -21006,6 +21138,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -21039,6 +21172,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -21345,6 +21479,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -21378,6 +21513,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -21697,6 +21833,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -21730,6 +21867,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -22042,6 +22180,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -22075,6 +22214,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -22347,6 +22487,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -22380,6 +22521,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -22709,6 +22851,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -22742,6 +22885,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -23054,6 +23198,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -23087,6 +23232,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -23393,6 +23539,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -23426,6 +23573,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -23745,6 +23893,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -23778,6 +23927,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -24090,6 +24240,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -24123,6 +24274,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -24395,6 +24547,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -24428,6 +24581,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -24757,6 +24911,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -24790,6 +24945,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -25118,6 +25274,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -25151,6 +25308,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -25472,6 +25630,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -25505,6 +25664,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -25811,6 +25971,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -25844,6 +26005,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -26163,6 +26325,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -26196,6 +26359,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -26508,6 +26672,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -26541,6 +26706,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -26813,6 +26979,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -26846,6 +27013,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -27175,6 +27343,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -27208,6 +27377,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -27521,6 +27691,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -27554,6 +27725,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -27860,6 +28032,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -27893,6 +28066,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -28212,6 +28386,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -28245,6 +28420,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -28557,6 +28733,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -28590,6 +28767,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -28862,6 +29040,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -28895,6 +29074,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -29224,6 +29404,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -29257,6 +29438,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -29993,6 +30175,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -30026,6 +30209,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -30934,6 +31118,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -30967,6 +31152,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -31273,6 +31459,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -31306,6 +31493,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -31625,6 +31813,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -31658,6 +31847,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -31970,6 +32160,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -32003,6 +32194,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -32275,6 +32467,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -32308,6 +32501,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -32637,6 +32831,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -32670,6 +32865,7 @@ open class ArchitectAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -33195,6 +33391,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -33228,6 +33425,7 @@ open class ArchitectAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,

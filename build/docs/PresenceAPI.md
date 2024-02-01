@@ -9,15 +9,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deletePresenceDefinition0**](PresenceAPI.html#deletePresenceDefinition0) | Delete a Presence Definition |
 | [**deletePresenceSource**](PresenceAPI.html#deletePresenceSource) | Delete a Presence Source |
-| [**deletePresencedefinition**](PresenceAPI.html#deletePresencedefinition) | Delete a Presence Definition |
+| [**deletePresencedefinition**](PresenceAPI.html#deletePresencedefinition) | Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead |
 | [**getPresenceDefinition0**](PresenceAPI.html#getPresenceDefinition0) | Get a Presence Definition |
 | [**getPresenceDefinitions0**](PresenceAPI.html#getPresenceDefinitions0) | Get a list of Presence Definitions |
 | [**getPresenceSettings**](PresenceAPI.html#getPresenceSettings) | Get the presence settings |
 | [**getPresenceSource**](PresenceAPI.html#getPresenceSource) | Get a Presence Source |
 | [**getPresenceSources**](PresenceAPI.html#getPresenceSources) | Get a list of Presence Sources |
 | [**getPresenceUserPrimarysource**](PresenceAPI.html#getPresenceUserPrimarysource) | Get a user&#39;s Primary Presence Source |
-| [**getPresencedefinition**](PresenceAPI.html#getPresencedefinition) | Get a Presence Definition |
-| [**getPresencedefinitions**](PresenceAPI.html#getPresencedefinitions) | Get an Organization&#39;s list of Presence Definitions |
+| [**getPresencedefinition**](PresenceAPI.html#getPresencedefinition) | Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead |
+| [**getPresencedefinitions**](PresenceAPI.html#getPresencedefinitions) | Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead |
 | [**getSystempresences**](PresenceAPI.html#getSystempresences) | Get the list of SystemPresences |
 | [**getUserPresence**](PresenceAPI.html#getUserPresence) | Get a user&#39;s Presence |
 | [**getUserPresencesPurecloud**](PresenceAPI.html#getUserPresencesPurecloud) | Get a user&#39;s Genesys Cloud presence. |
@@ -27,12 +27,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserPresencesPurecloud**](PresenceAPI.html#patchUserPresencesPurecloud) | Patch a Genesys Cloud user&#39;s presence |
 | [**postPresenceDefinitions0**](PresenceAPI.html#postPresenceDefinitions0) | Create a Presence Definition |
 | [**postPresenceSources**](PresenceAPI.html#postPresenceSources) | Create a Presence Source |
-| [**postPresencedefinitions**](PresenceAPI.html#postPresencedefinitions) | Create a Presence Definition |
+| [**postPresencedefinitions**](PresenceAPI.html#postPresencedefinitions) | Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead |
 | [**putPresenceDefinition0**](PresenceAPI.html#putPresenceDefinition0) | Update a Presence Definition |
 | [**putPresenceSettings**](PresenceAPI.html#putPresenceSettings) | Update the presence settings |
 | [**putPresenceSource**](PresenceAPI.html#putPresenceSource) | Update a Presence Source |
 | [**putPresenceUserPrimarysource**](PresenceAPI.html#putPresenceUserPrimarysource) | Update a user&#39;s Primary Presence Source |
-| [**putPresencedefinition**](PresenceAPI.html#putPresencedefinition) | Update a Presence Definition |
+| [**putPresencedefinition**](PresenceAPI.html#putPresencedefinition) | Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) |
 | [**putUsersPresencesBulk**](PresenceAPI.html#putUsersPresencesBulk) | Update bulk user Presences |
 {: class="table-striped"}
 
@@ -148,7 +148,7 @@ PresenceAPI.deletePresenceSource(sourceId: sourceId) { (error) in
 
 > Void deletePresencedefinition(presenceId)
 
-Delete a Presence Definition
+Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
 
 
 
@@ -513,7 +513,7 @@ PresenceAPI.getPresenceUserPrimarysource(userId: userId) { (response, error) in
 
 > [OrganizationPresence](OrganizationPresence.html) getPresencedefinition(presenceId, localeCode)
 
-Get a Presence Definition
+Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
 
 
 
@@ -567,7 +567,7 @@ PresenceAPI.getPresencedefinition(presenceId: presenceId, localeCode: localeCode
 
 > [OrganizationPresenceEntityListing](OrganizationPresenceEntityListing.html) getPresencedefinitions(pageNumber, pageSize, deleted, localeCode)
 
-Get an Organization&#39;s list of Presence Definitions
+Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
 
 
 
@@ -1099,7 +1099,7 @@ PresenceAPI.postPresenceSources(body: body) { (response, error) in
 
 > [OrganizationPresence](OrganizationPresence.html) postPresencedefinitions(body)
 
-Create a Presence Definition
+Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
 
 
 
@@ -1365,7 +1365,7 @@ PresenceAPI.putPresenceUserPrimarysource(userId: userId, body: body) { (response
 
 > [OrganizationPresence](OrganizationPresence.html) putPresencedefinition(presenceId, body)
 
-Update a Presence Definition
+Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
 
 
 

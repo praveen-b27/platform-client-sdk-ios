@@ -17,7 +17,7 @@ public class DirectRouting: Codable {
     public var emailMediaSettings: DirectRoutingMediaSettings?
     /** Direct Routing Settings specific to Message media. */
     public var messageMediaSettings: DirectRoutingMediaSettings?
-    /** ID of queue to be used as the default backup if an agent does not have their Backup Settings configured. */
+    /** ID of another queue to be used as the default backup if an agent does not have their Backup Settings configured. If not set, the current queue will be used as backup, but with Direct Routing criteria removed from the conversation. */
     public var backupQueueId: String?
     /** Flag indicating if Direct Routing interactions should wait for Direct Routing agent or go immediately to selected backup. */
     public var waitForAgent: Bool?

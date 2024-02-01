@@ -1,7 +1,7 @@
 ---
-title: OAuthProvider
+title: IdentityProvider
 ---
-## OAuthProvider
+## IdentityProvider
 
 ## Properties
 

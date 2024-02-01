@@ -10,6 +10,50 @@ import Foundation
 
 
 open class IdentityProviderAPI {
+    
+    /**
+     Delete Identity Provider
+     
+     - parameter providerId: (path) Provider ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteIdentityprovider(providerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteIdentityproviderWithRequestBuilder(providerId: providerId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete Identity Provider
+     - DELETE /api/v2/identityproviders/{providerId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter providerId: (path) Provider ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteIdentityproviderWithRequestBuilder(providerId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/identityproviders/{providerId}"
+        let providerIdPreEscape = "\(providerId)"
+        let providerIdPostEscape = providerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{providerId}", with: providerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
     /**
      Delete ADFS Identity Provider
      
@@ -494,14 +538,83 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
+    
+    /**
+     Get Identity Provider
+     
+     - parameter providerId: (path) Provider ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIdentityprovider(providerId: String, completion: @escaping ((_ data: CustomProvider?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIdentityproviderWithRequestBuilder(providerId: providerId)
+        requestBuilder.execute { (response: Response<CustomProvider>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Identity Provider
+     - GET /api/v2/identityproviders/{providerId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "endpointCompression" : true,
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+  "name" : "name",
+  "signAuthnRequests" : true,
+  "disabled" : true,
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter providerId: (path) Provider ID 
+
+     - returns: RequestBuilder<CustomProvider> 
+     */
+    open class func getIdentityproviderWithRequestBuilder(providerId: String) -> RequestBuilder<CustomProvider> {        
+        var path = "/api/v2/identityproviders/{providerId}"
+        let providerIdPreEscape = "\(providerId)"
+        let providerIdPostEscape = providerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{providerId}", with: providerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CustomProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
     /**
      The list of identity providers
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIdentityproviders(completion: @escaping ((_ data: OAuthProviderEntityListing?,_ error: Error?) -> Void)) {
+    open class func getIdentityproviders(completion: @escaping ((_ data: IdentityProviderEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getIdentityprovidersWithRequestBuilder()
-        requestBuilder.execute { (response: Response<OAuthProviderEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProviderEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -546,16 +659,16 @@ open class IdentityProviderAPI {
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
-     - returns: RequestBuilder<OAuthProviderEntityListing> 
+     - returns: RequestBuilder<IdentityProviderEntityListing> 
      */
-    open class func getIdentityprovidersWithRequestBuilder() -> RequestBuilder<OAuthProviderEntityListing> {        
+    open class func getIdentityprovidersWithRequestBuilder() -> RequestBuilder<IdentityProviderEntityListing> {        
         let path = "/api/v2/identityproviders"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProviderEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProviderEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1186,14 +1299,152 @@ open class IdentityProviderAPI {
 
     
     /**
+     Create Identity Provider
+     
+     - parameter body: (body) Provider 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIdentityproviders(body: CustomProvider, completion: @escaping ((_ data: CustomProvider?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIdentityprovidersWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CustomProvider>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create Identity Provider
+     - POST /api/v2/identityproviders
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "endpointCompression" : true,
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+  "name" : "name",
+  "signAuthnRequests" : true,
+  "disabled" : true,
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) Provider 
+
+     - returns: RequestBuilder<CustomProvider> 
+     */
+    open class func postIdentityprovidersWithRequestBuilder(body: CustomProvider) -> RequestBuilder<CustomProvider> {        
+        let path = "/api/v2/identityproviders"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CustomProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update Identity Provider
+     
+     - parameter providerId: (path) Provider ID 
+     - parameter body: (body) Provider 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putIdentityprovider(providerId: String, body: CustomProvider, completion: @escaping ((_ data: CustomProvider?,_ error: Error?) -> Void)) {
+        let requestBuilder = putIdentityproviderWithRequestBuilder(providerId: providerId, body: body)
+        requestBuilder.execute { (response: Response<CustomProvider>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Identity Provider
+     - PUT /api/v2/identityproviders/{providerId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "endpointCompression" : true,
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+  "name" : "name",
+  "signAuthnRequests" : true,
+  "disabled" : true,
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter providerId: (path) Provider ID 
+     - parameter body: (body) Provider 
+
+     - returns: RequestBuilder<CustomProvider> 
+     */
+    open class func putIdentityproviderWithRequestBuilder(providerId: String, body: CustomProvider) -> RequestBuilder<CustomProvider> {        
+        var path = "/api/v2/identityproviders/{providerId}"
+        let providerIdPreEscape = "\(providerId)"
+        let providerIdPostEscape = providerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{providerId}", with: providerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CustomProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    /**
      Update/Create ADFS Identity Provider
      
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersAdfs(body: ADFS, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersAdfs(body: ADFS, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersAdfsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1224,16 +1475,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersAdfsWithRequestBuilder(body: ADFS) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersAdfsWithRequestBuilder(body: ADFS) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/adfs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1245,9 +1496,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersCic(body: CustomerInteractionCenter, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersCic(body: CustomerInteractionCenter, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersCicWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1278,16 +1529,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersCicWithRequestBuilder(body: CustomerInteractionCenter) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersCicWithRequestBuilder(body: CustomerInteractionCenter) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/cic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1299,9 +1550,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersGeneric(body: GenericSAML, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersGeneric(body: GenericSAML, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersGenericWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1332,16 +1583,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersGenericWithRequestBuilder(body: GenericSAML) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersGenericWithRequestBuilder(body: GenericSAML) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/generic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1353,9 +1604,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersGsuite(body: GSuite, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersGsuite(body: GSuite, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersGsuiteWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1386,16 +1637,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersGsuiteWithRequestBuilder(body: GSuite) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersGsuiteWithRequestBuilder(body: GSuite) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/gsuite"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1468,9 +1719,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersOkta(body: Okta, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersOkta(body: Okta, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersOktaWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1501,16 +1752,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersOktaWithRequestBuilder(body: Okta) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersOktaWithRequestBuilder(body: Okta) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/okta"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1522,9 +1773,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersOnelogin(body: OneLogin, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersOnelogin(body: OneLogin, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersOneloginWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1555,16 +1806,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersOneloginWithRequestBuilder(body: OneLogin) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersOneloginWithRequestBuilder(body: OneLogin) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/onelogin"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1576,9 +1827,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersPing(body: PingIdentity, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersPing(body: PingIdentity, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersPingWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1609,16 +1860,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersPingWithRequestBuilder(body: PingIdentity) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersPingWithRequestBuilder(body: PingIdentity) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/ping"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1630,9 +1881,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersPurecloud(body: PureCloud, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersPurecloud(body: PureCloud, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersPurecloudWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1663,16 +1914,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersPurecloudWithRequestBuilder(body: PureCloud) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersPurecloudWithRequestBuilder(body: PureCloud) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/purecloud"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1684,9 +1935,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersPureengage(body: PureEngage, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersPureengage(body: PureEngage, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersPureengageWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1717,16 +1968,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersPureengageWithRequestBuilder(body: PureEngage) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersPureengageWithRequestBuilder(body: PureEngage) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/pureengage"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -1738,9 +1989,9 @@ open class IdentityProviderAPI {
      - parameter body: (body) Provider 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putIdentityprovidersSalesforce(body: Salesforce, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+    open class func putIdentityprovidersSalesforce(body: Salesforce, completion: @escaping ((_ data: IdentityProvider?,_ error: Error?) -> Void)) {
         let requestBuilder = putIdentityprovidersSalesforceWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IdentityProvider>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1771,16 +2022,16 @@ open class IdentityProviderAPI {
      
      - parameter body: (body) Provider 
 
-     - returns: RequestBuilder<OAuthProvider> 
+     - returns: RequestBuilder<IdentityProvider> 
      */
-    open class func putIdentityprovidersSalesforceWithRequestBuilder(body: Salesforce) -> RequestBuilder<OAuthProvider> {        
+    open class func putIdentityprovidersSalesforceWithRequestBuilder(body: Salesforce) -> RequestBuilder<IdentityProvider> {        
         let path = "/api/v2/identityproviders/salesforce"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

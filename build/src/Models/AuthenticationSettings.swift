@@ -16,10 +16,13 @@ public class AuthenticationSettings: Codable {
     public var enabled: Bool?
     /** The integration identifier which contains the auth settings required on the deployment. */
     public var integrationId: String?
+    /** Allow end-users to upgrade an anonymous session to authenticated conversation. */
+    public var allowSessionUpgrade: Bool?
 
-    public init(enabled: Bool?, integrationId: String?) {
+    public init(enabled: Bool?, integrationId: String?, allowSessionUpgrade: Bool?) {
         self.enabled = enabled
         self.integrationId = integrationId
+        self.allowSessionUpgrade = allowSessionUpgrade
     }
 
 

@@ -1,13 +1,13 @@
 ---
-title: OAuthProviderEntityListing
+title: IdentityProviderEntityListing
 ---
-## OAuthProviderEntityListing
+## IdentityProviderEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[OAuthProvider]**](OAuthProvider.html) |  | [optional] |
+| **entities** | [**[IdentityProvider]**](IdentityProvider.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |

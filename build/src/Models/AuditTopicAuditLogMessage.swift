@@ -105,7 +105,6 @@ public class AuditTopicAuditLogMessage: Codable {
         case revokeProtection = "RevokeProtection"
         case rotate = "Rotate"
         case deleteAll = "DeleteAll"
-        case delete = "delete"
         case reassign = "Reassign"
         case unarchive = "Unarchive"
         case activate = "Activate"

@@ -1761,7 +1761,7 @@ ArchitectAPI.getArchitectIvrsDivisionviews(pageNumber: pageNumber, pageSize: pag
 
 
 
-> [Prompt](Prompt.html) getArchitectPrompt(promptId)
+> [Prompt](Prompt.html) getArchitectPrompt(promptId, includeMediaUris, includeResources, language)
 
 Get specified user prompt
 
@@ -1782,9 +1782,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let promptId: String = "" // Prompt ID
+let includeMediaUris: Bool = true // Include the media URIs for each resource
+let includeResources: Bool = true // Include the resources for each system prompt
+let language: [String] = [""] // Filter the resources down to the provided languages
 
 // Code example
-ArchitectAPI.getArchitectPrompt(promptId: promptId) { (response, error) in
+ArchitectAPI.getArchitectPrompt(promptId: promptId, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1800,6 +1803,9 @@ ArchitectAPI.getArchitectPrompt(promptId: promptId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
+| **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
+| **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
+| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
 {: class="table-striped"}
 
 
@@ -1989,7 +1995,7 @@ ArchitectAPI.getArchitectPromptResources(promptId: promptId, pageNumber: pageNum
 
 
 
-> [PromptEntityListing](PromptEntityListing.html) getArchitectPrompts(pageNumber, pageSize, name, _description, nameOrDescription, sortBy, sortOrder)
+> [PromptEntityListing](PromptEntityListing.html) getArchitectPrompts(pageNumber, pageSize, name, _description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language)
 
 Get a pageable list of user prompts
 
@@ -2018,9 +2024,12 @@ let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
 let sortBy: String = "" // Sort by
 let sortOrder: String = "" // Sort order
+let includeMediaUris: Bool = true // Include the media URIs for each resource
+let includeResources: Bool = true // Include the resources for each system prompt
+let language: [String] = [""] // Filter the resources down to the provided languages
 
 // Code example
-ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2042,6 +2051,9 @@ ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, nam
 | **nameOrDescription** | **String**| Name or description | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
+| **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
+| **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
+| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
 {: class="table-striped"}
 
 
@@ -2413,7 +2425,7 @@ ArchitectAPI.getArchitectSchedulesDivisionviews(pageNumber: pageNumber, pageSize
 
 
 
-> [SystemPrompt](SystemPrompt.html) getArchitectSystemprompt(promptId)
+> [SystemPrompt](SystemPrompt.html) getArchitectSystemprompt(promptId, includeMediaUris, includeResources, language)
 
 Get a system prompt
 
@@ -2434,9 +2446,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let promptId: String = "" // promptId
+let includeMediaUris: Bool = true // Include the media URIs for each resource
+let includeResources: Bool = true // Include the resources for each system prompt
+let language: [String] = [""] // Filter the resources down to the provided languages
 
 // Code example
-ArchitectAPI.getArchitectSystemprompt(promptId: promptId) { (response, error) in
+ArchitectAPI.getArchitectSystemprompt(promptId: promptId, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2452,6 +2467,9 @@ ArchitectAPI.getArchitectSystemprompt(promptId: promptId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| promptId | |
+| **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
+| **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
+| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
 {: class="table-striped"}
 
 
@@ -2643,7 +2661,7 @@ ArchitectAPI.getArchitectSystempromptResources(promptId: promptId, pageNumber: p
 
 
 
-> [SystemPromptEntityListing](SystemPromptEntityListing.html) getArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, _description, nameOrDescription)
+> [SystemPromptEntityListing](SystemPromptEntityListing.html) getArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, _description, nameOrDescription, includeMediaUris, includeResources, language)
 
 Get System Prompts
 
@@ -2670,9 +2688,12 @@ let sortOrder: String = "" // Sort order
 let name: String = "" // Name
 let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
+let includeMediaUris: Bool = true // Include the media URIs for each resource
+let includeResources: Bool = true // Include the resources for each system prompt
+let language: [String] = [""] // Filter the resources down to the provided languages
 
 // Code example
-ArchitectAPI.getArchitectSystemprompts(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, _description: _description, nameOrDescription: nameOrDescription) { (response, error) in
+ArchitectAPI.getArchitectSystemprompts(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, _description: _description, nameOrDescription: nameOrDescription, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2694,6 +2715,9 @@ ArchitectAPI.getArchitectSystemprompts(pageNumber: pageNumber, pageSize: pageSiz
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
+| **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
+| **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
+| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
 {: class="table-striped"}
 
 

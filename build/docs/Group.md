@@ -19,6 +19,7 @@ title: Group
 | **addresses** | [**[GroupContact]**](GroupContact.html) |  | [optional] |
 | **rulesVisible** | **Bool** | Are membership rules visible to the person requesting to view the group | |
 | **visibility** | **String** | Who can view this group | |
+| **rolesEnabled** | **Bool** | Allow roles to be assigned to this group | [optional] |
 | **owners** | [**[User]**](User.html) | Owners of the group | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

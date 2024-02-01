@@ -12,41 +12,41 @@ import Foundation
 
 public class BatchConversationEventRequest: Codable {
 
-    /** EndTransfer events for this batch */
+    /** Voice - EndTransfer events for this batch */
     public var endTransferEvents: [EndTransferEvent]?
-    /** PhoneTransfer events for this batch */
+    /** Voice - PhoneTransfer events for this batch */
     public var phoneTransferEvents: [PhoneTransferEvent]?
-    /** ProgressTransfer events for this batch */
+    /** Voice - ProgressTransfer events for this batch */
     public var progressTransferEvents: [ProgressTransferEvent]?
-    /** RoutingTransfer events for this batch */
+    /** Voice - RoutingTransfer events for this batch */
     public var routingTransferEvents: [RoutingTransferEvent]?
-    /** UserTransfer events for this batch */
+    /** Voice - UserTransfer events for this batch */
     public var userTransferEvents: [UserTransferEvent]?
-    /** CommunicationAnswered events for this batch */
+    /** Voice - CommunicationAnswered events for this batch */
     public var communicationAnsweredEvents: [CommunicationAnsweredEvent]?
-    /** CommunicationDispositionApplied events for this batch */
+    /** Voice - CommunicationDispositionApplied events for this batch */
     public var communicationDispositionAppliedEvents: [CommunicationDispositionAppliedEvent]?
-    /** HoldUpdated events for this batch */
+    /** Voice - HoldUpdated events for this batch */
     public var holdUpdatedEvents: [HoldUpdatedEvent]?
-    /** ExternalEstablished events for this batch */
+    /** Voice - ExternalEstablished events for this batch */
     public var externalEstablishedEvents: [ExternalEstablishedEvent]?
-    /** IvrEstablished events for this batch */
+    /** Voice - IvrEstablished events for this batch */
     public var ivrEstablishedEvents: [IvrEstablishedEvent]?
-    /** PhoneEstablished events for this batch */
+    /** Voice - PhoneEstablished events for this batch */
     public var phoneEstablishedEvents: [PhoneEstablishedEvent]?
-    /** RoutingEstablished events for this batch */
+    /** Voice - RoutingEstablished events for this batch */
     public var routingEstablishedEvents: [RoutingEstablishedEvent]?
-    /** UserEstablished events for this batch */
+    /** Voice - UserEstablished events for this batch */
     public var userEstablishedEvents: [UserEstablishedEvent]?
-    /** AudioUpdated events for this batch */
+    /** Voice - AudioUpdated events for this batch */
     public var audioUpdatedEvents: [AudioUpdatedEvent]?
-    /** CommunicationEnded events for this batch */
+    /** Voice - CommunicationEnded events for this batch */
     public var communicationEndedEvents: [CommunicationEndedEvent]?
-    /** ConsultTransfer events for this batch */
+    /** Voice - ConsultTransfer events for this batch */
     public var consultTransferEvents: [ConsultTransferEvent]?
-    /** ProgressConsultTransfer events for this batch */
+    /** Voice - ProgressConsultTransfer events for this batch */
     public var progressConsultTransferEvents: [ProgressConsultTransferEvent]?
-    /** EndConsultTransfer events for this batch */
+    /** Voice - EndConsultTransfer events for this batch */
     public var endConsultTransferEvents: [EndConsultTransferEvent]?
 
     public init(endTransferEvents: [EndTransferEvent]?, phoneTransferEvents: [PhoneTransferEvent]?, progressTransferEvents: [ProgressTransferEvent]?, routingTransferEvents: [RoutingTransferEvent]?, userTransferEvents: [UserTransferEvent]?, communicationAnsweredEvents: [CommunicationAnsweredEvent]?, communicationDispositionAppliedEvents: [CommunicationDispositionAppliedEvent]?, holdUpdatedEvents: [HoldUpdatedEvent]?, externalEstablishedEvents: [ExternalEstablishedEvent]?, ivrEstablishedEvents: [IvrEstablishedEvent]?, phoneEstablishedEvents: [PhoneEstablishedEvent]?, routingEstablishedEvents: [RoutingEstablishedEvent]?, userEstablishedEvents: [UserEstablishedEvent]?, audioUpdatedEvents: [AudioUpdatedEvent]?, communicationEndedEvents: [CommunicationEndedEvent]?, consultTransferEvents: [ConsultTransferEvent]?, progressConsultTransferEvents: [ProgressConsultTransferEvent]?, endConsultTransferEvents: [EndConsultTransferEvent]?) {

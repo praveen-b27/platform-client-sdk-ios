@@ -100,7 +100,7 @@ open class PresenceAPI {
 
     
     /**
-     Delete a Presence Definition
+     Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
      
      - parameter presenceId: (path) Organization Presence ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -117,7 +117,7 @@ open class PresenceAPI {
     }
 
     /**
-     Delete a Presence Definition
+     Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
      - DELETE /api/v2/presencedefinitions/{presenceId}
      - OAuth:
        - type: oauth2
@@ -595,7 +595,7 @@ open class PresenceAPI {
     
     
     /**
-     Get a Presence Definition
+     Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
      
      - parameter presenceId: (path) Organization Presence ID 
      - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
@@ -620,7 +620,7 @@ open class PresenceAPI {
     }
 
     /**
-     Get a Presence Definition
+     Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
      - GET /api/v2/presencedefinitions/{presenceId}
      - OAuth:
        - type: oauth2
@@ -733,6 +733,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -766,6 +767,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -1027,6 +1029,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -1060,6 +1063,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -1241,7 +1245,7 @@ open class PresenceAPI {
     
     
     /**
-     Get an Organization's list of Presence Definitions
+     Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
@@ -1268,7 +1272,7 @@ open class PresenceAPI {
     }
 
     /**
-     Get an Organization's list of Presence Definitions
+     Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
      - GET /api/v2/presencedefinitions
      - OAuth:
        - type: oauth2
@@ -1385,6 +1389,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -1418,6 +1423,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -1679,6 +1685,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -1712,6 +1719,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -1971,6 +1979,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -2004,6 +2013,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -2265,6 +2275,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -2298,6 +2309,7 @@ open class PresenceAPI {
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
+        "rolesEnabled" : true,
         "type" : "official",
         "version" : 2,
         "rulesVisible" : true,
@@ -2567,6 +2579,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2637,6 +2650,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2704,6 +2718,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2773,6 +2788,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2843,6 +2859,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2916,6 +2933,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -3068,7 +3086,7 @@ open class PresenceAPI {
 
     
     /**
-     Create a Presence Definition
+     Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
      
      - parameter body: (body) The Presence Definition to create 
      - parameter completion: completion handler to receive the data and the error objects
@@ -3092,7 +3110,7 @@ open class PresenceAPI {
     }
 
     /**
-     Create a Presence Definition
+     Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
      - POST /api/v2/presencedefinitions
      - OAuth:
        - type: oauth2
@@ -3205,6 +3223,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3238,6 +3257,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3499,6 +3519,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3532,6 +3553,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -3947,7 +3969,7 @@ open class PresenceAPI {
     
     
     /**
-     Update a Presence Definition
+     Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
      
      - parameter presenceId: (path) Organization Presence ID 
      - parameter body: (body) The OrganizationPresence to update 
@@ -3972,7 +3994,7 @@ open class PresenceAPI {
     }
 
     /**
-     Update a Presence Definition
+     Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
      - PUT /api/v2/presencedefinitions/{presenceId}
      - OAuth:
        - type: oauth2
@@ -4085,6 +4107,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -4118,6 +4141,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -4379,6 +4403,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -4412,6 +4437,7 @@ open class PresenceAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -4617,6 +4643,7 @@ open class PresenceAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",

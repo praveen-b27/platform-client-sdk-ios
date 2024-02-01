@@ -5360,87 +5360,6 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    /**
-     Get outbound route
-     
-     - parameter outboundRouteId: (path) Outbound route ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getTelephonyProvidersEdgesOutboundroute(outboundRouteId: String, completion: @escaping ((_ data: OutboundRoute?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: outboundRouteId)
-        requestBuilder.execute { (response: Response<OutboundRoute>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get outbound route
-     - GET /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}
-     - This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
-  "selfUri" : "https://openapi-generator.tech",
-  "description" : "description",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "createdByApp" : "createdByApp",
-  "distribution" : "SEQUENTIAL",
-  "version" : 0,
-  "enabled" : true,
-  "division" : "{}",
-  "site" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "createdBy" : "createdBy",
-  "managed" : true,
-  "name" : "name",
-  "modifiedByApp" : "modifiedByApp",
-  "modifiedBy" : "modifiedBy",
-  "externalTrunkBases" : [ {
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "id" : "id"
-  }, {
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "id" : "id"
-  } ],
-  "id" : "id",
-  "state" : "active"
-}, statusCode=200}]
-     
-     - parameter outboundRouteId: (path) Outbound route ID 
-
-     - returns: RequestBuilder<OutboundRoute> 
-     */
-    open class func getTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String) -> RequestBuilder<OutboundRoute> {        
-        var path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}"
-        let outboundRouteIdPreEscape = "\(outboundRouteId)"
-        let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<OutboundRoute>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
     
     
     
@@ -5482,9 +5401,9 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
     "selfUri" : "https://openapi-generator.tech",
@@ -5545,7 +5464,7 @@ open class TelephonyProvidersEdgeAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -6373,7 +6292,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -6440,7 +6360,7 @@ open class TelephonyProvidersEdgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "total" : 5,
-  "pageCount" : 5,
+  "pageCount" : 2,
   "pageNumber" : 1,
   "entities" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -6478,7 +6398,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -12807,7 +12728,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter type: (query)  (optional)

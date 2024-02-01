@@ -20,7 +20,7 @@ public class GetAlertQuery: Codable {
         case info = "Info"
         case count = "Count"
     }
-    public enum ActiveStatus: String, Codable { 
+    public enum AlertStatus: String, Codable { 
         case active = "Active"
         case inactive = "Inactive"
         case all = "All"
@@ -43,7 +43,7 @@ public class GetAlertQuery: Codable {
     /** The type of query being performed. */
     public var queryType: QueryType?
     /** The status of the alerts the query will return. */
-    public var activeStatus: ActiveStatus?
+    public var alertStatus: AlertStatus?
     /** The view status of the alerts the query will return. */
     public var viewedStatus: ViewedStatus?
     /** The page number of the queried response */
@@ -55,10 +55,10 @@ public class GetAlertQuery: Codable {
     /** The order in which response will be sorted.  The accepted choices are Asc and Desc */
     public var sortOrder: SortOrder?
 
-    public init(ruleType: RuleType?, queryType: QueryType?, activeStatus: ActiveStatus?, viewedStatus: ViewedStatus?, pageNumber: Int?, pageSize: Int?, sortBy: SortBy?, sortOrder: SortOrder?) {
+    public init(ruleType: RuleType?, queryType: QueryType?, alertStatus: AlertStatus?, viewedStatus: ViewedStatus?, pageNumber: Int?, pageSize: Int?, sortBy: SortBy?, sortOrder: SortOrder?) {
         self.ruleType = ruleType
         self.queryType = queryType
-        self.activeStatus = activeStatus
+        self.alertStatus = alertStatus
         self.viewedStatus = viewedStatus
         self.pageNumber = pageNumber
         self.pageSize = pageSize

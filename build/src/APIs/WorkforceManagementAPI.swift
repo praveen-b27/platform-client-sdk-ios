@@ -1598,9 +1598,11 @@ open class WorkforceManagementAPI {
         case coaching = "Coaching"
         case learning = "Learning"
         case activityCodes = "ActivityCodes"
+        case activityPlans = "ActivityPlans"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
+        case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
         case intradayMonitoring = "IntradayMonitoring"
@@ -3816,9 +3818,11 @@ open class WorkforceManagementAPI {
         case coaching = "Coaching"
         case learning = "Learning"
         case activityCodes = "ActivityCodes"
+        case activityPlans = "ActivityPlans"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
+        case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
         case intradayMonitoring = "IntradayMonitoring"
@@ -4959,6 +4963,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -4992,6 +4997,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -5245,6 +5251,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -5278,6 +5285,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -6169,6 +6177,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -6202,6 +6211,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -6455,6 +6465,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -6488,6 +6499,7 @@ open class WorkforceManagementAPI {
       "description" : "description",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "owners" : [ null, null ],
+      "rolesEnabled" : true,
       "type" : "official",
       "version" : 2,
       "rulesVisible" : true,
@@ -7707,9 +7719,11 @@ open class WorkforceManagementAPI {
         case coaching = "Coaching"
         case learning = "Learning"
         case activityCodes = "ActivityCodes"
+        case activityPlans = "ActivityPlans"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
+        case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
         case intradayMonitoring = "IntradayMonitoring"

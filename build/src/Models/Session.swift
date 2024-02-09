@@ -43,7 +43,7 @@ public class Session: Codable {
         case answered = "Answered"
         case flowOut = "FlowOut"
     }
-    /** The globally unique identifier for the object. */
+    /** The ID of the session. */
     public var _id: String?
     /** Primary identifier of the customer in the source where the events for the session originate from. */
     public var customerId: String?

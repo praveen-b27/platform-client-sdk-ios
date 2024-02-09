@@ -20,10 +20,13 @@ public class KnowledgeExportJobRequest: Codable {
     public var exportFilter: KnowledgeExportJobFilter?
     /** File type of the document */
     public var fileType: FileType?
+    /** Requested version of the exported json file. Available versions are 2 and 3, default is 2 */
+    public var jsonFileVersion: Int?
 
-    public init(exportFilter: KnowledgeExportJobFilter?, fileType: FileType?) {
+    public init(exportFilter: KnowledgeExportJobFilter?, fileType: FileType?, jsonFileVersion: Int?) {
         self.exportFilter = exportFilter
         self.fileType = fileType
+        self.jsonFileVersion = jsonFileVersion
     }
 
 

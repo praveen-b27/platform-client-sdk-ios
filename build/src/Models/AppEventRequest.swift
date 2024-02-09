@@ -18,7 +18,7 @@ public class AppEventRequest: Codable {
     /** Application that the customer is interacting with. */
     public var app: JourneyApp?
     /** Customer's device. */
-    public var device: Device?
+    public var device: RequestDevice?
     /** SDK library used to generate the event. */
     public var sdkLibrary: SdkLibrary?
     /** Information relating to the device's network connectivity. */
@@ -36,7 +36,7 @@ public class AppEventRequest: Codable {
     /** UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
 
-    public init(eventName: String?, screenName: String?, app: JourneyApp?, device: Device?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, referrerUrl: String?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, customerCookieId: String?, createdDate: Date?) {
+    public init(eventName: String?, screenName: String?, app: JourneyApp?, device: RequestDevice?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, referrerUrl: String?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, customerCookieId: String?, createdDate: Date?) {
         self.eventName = eventName
         self.screenName = screenName
         self.app = app

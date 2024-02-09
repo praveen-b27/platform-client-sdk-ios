@@ -11,7 +11,7 @@ import Foundation
 
 public class SessionLastEvent: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** The ID of the last event. */
     public var _id: String?
     /** The name of the event. */
     public var eventName: String?

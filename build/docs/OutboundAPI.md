@@ -121,6 +121,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlistContactsBulk**](OutboundAPI.html#postOutboundContactlistContactsBulk) | Get contacts from a contact list. |
 | [**postOutboundContactlistExport**](OutboundAPI.html#postOutboundContactlistExport) | Initiate the export of a contact list. |
 | [**postOutboundContactlistfilters**](OutboundAPI.html#postOutboundContactlistfilters) | Create Contact List Filter |
+| [**postOutboundContactlistfiltersBulkRetrieve**](OutboundAPI.html#postOutboundContactlistfiltersBulkRetrieve) | Retrieve multiple contact list filters |
 | [**postOutboundContactlistfiltersPreview**](OutboundAPI.html#postOutboundContactlistfiltersPreview) | Get a preview of the output of a contact list filter |
 | [**postOutboundContactlists**](OutboundAPI.html#postOutboundContactlists) | Create a contact List. |
 | [**postOutboundContactlisttemplates**](OutboundAPI.html#postOutboundContactlisttemplates) | Create Contact List Template |
@@ -4239,7 +4240,7 @@ OutboundAPI.getOutboundFilespecificationtemplates(pageSize: pageSize, pageNumber
 
 
 
-> [ImportTemplate](ImportTemplate.html) getOutboundImporttemplate(importTemplateId)
+> [ImportTemplate](ImportTemplate.html) getOutboundImporttemplate(importTemplateId, includeImportStatus)
 
 Get Import Template
 
@@ -4260,9 +4261,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let importTemplateId: String = "" // Import Template ID
+let includeImportStatus: Bool = true // Import status
 
 // Code example
-OutboundAPI.getOutboundImporttemplate(importTemplateId: importTemplateId) { (response, error) in
+OutboundAPI.getOutboundImporttemplate(importTemplateId: importTemplateId, includeImportStatus: includeImportStatus) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4278,6 +4280,7 @@ OutboundAPI.getOutboundImporttemplate(importTemplateId: importTemplateId) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **importTemplateId** | **String**| Import Template ID | |
+| **includeImportStatus** | **Bool**| Import status | [optional] |
 {: class="table-striped"}
 
 
@@ -4345,7 +4348,7 @@ OutboundAPI.getOutboundImporttemplateImportstatus(importTemplateId: importTempla
 
 
 
-> [ImportTemplateEntityListing](ImportTemplateEntityListing.html) getOutboundImporttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId)
+> [ImportTemplateEntityListing](ImportTemplateEntityListing.html) getOutboundImporttemplates(includeImportStatus, pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId)
 
 Query Import Templates
 
@@ -4365,6 +4368,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let includeImportStatus: Bool = true // Import status
 let pageSize: Int = 0 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 0 // Page number
 let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
@@ -4375,7 +4379,7 @@ let sortOrder: OutboundAPI.SortOrder_getOutboundImporttemplates = OutboundAPI.So
 let contactListTemplateId: String = "" // Contact List Template ID
 
 // Code example
-OutboundAPI.getOutboundImporttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListTemplateId: contactListTemplateId) { (response, error) in
+OutboundAPI.getOutboundImporttemplates(includeImportStatus: includeImportStatus, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListTemplateId: contactListTemplateId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4390,6 +4394,7 @@ OutboundAPI.getOutboundImporttemplates(pageSize: pageSize, pageNumber: pageNumbe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **includeImportStatus** | **Bool**| Import status | [optional] |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
@@ -5031,7 +5036,7 @@ OutboundAPI.getOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId) 
 
 
 
-> [MessagingCampaignScheduleEntityListing](MessagingCampaignScheduleEntityListing.html) getOutboundSchedulesEmailcampaigns()
+> [EmailCampaignScheduleEntityListing](EmailCampaignScheduleEntityListing.html) getOutboundSchedulesEmailcampaigns()
 
 Query for a list of email campaign schedules.
 
@@ -5071,7 +5076,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html)
+[**EmailCampaignScheduleEntityListing**](EmailCampaignScheduleEntityListing.html)
 
 <a name="getOutboundSchedulesMessagingcampaign"></a>
 
@@ -6455,6 +6460,58 @@ OutboundAPI.postOutboundContactlistfilters(body: body) { (response, error) in
 ### Return type
 
 [**ContactListFilter**](ContactListFilter.html)
+
+<a name="postOutboundContactlistfiltersBulkRetrieve"></a>
+
+# **postOutboundContactlistfiltersBulkRetrieve**
+
+
+
+> [ContactListFilterEntityListing](ContactListFilterEntityListing.html) postOutboundContactlistfiltersBulkRetrieve(body)
+
+Retrieve multiple contact list filters
+
+
+
+Wraps POST /api/v2/outbound/contactlistfilters/bulk/retrieve  
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactListFilterBulkRetrieveBody = new ContactListFilterBulkRetrieveBody(...) // The contact list filters to retrieve
+
+// Code example
+OutboundAPI.postOutboundContactlistfiltersBulkRetrieve(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlistfiltersBulkRetrieve was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactListFilterBulkRetrieveBody**](ContactListFilterBulkRetrieveBody.html)| The contact list filters to retrieve | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListFilterEntityListing**](ContactListFilterEntityListing.html)
 
 <a name="postOutboundContactlistfiltersPreview"></a>
 

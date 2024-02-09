@@ -11,7 +11,7 @@ import Foundation
 
 public class AppEventResponseSession: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** ID of the app session. */
     public var _id: String?
     /** Indicates how long the customer has been in the app within this session. */
     public var durationInSeconds: Int?

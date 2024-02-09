@@ -91,7 +91,6 @@ public class FlowAggregateQueryPredicate: Codable {
         case recognitionfailurereason = "recognitionFailureReason"
         case remote = "remote"
         case removedskillid = "removedSkillId"
-        case reoffered = "reoffered"
         case requestedlanguageid = "requestedLanguageId"
         case requestedrouting = "requestedRouting"
         case requestedroutingskillid = "requestedRoutingSkillId"

@@ -3158,7 +3158,7 @@ open class JourneyAPI {
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postJourneyOutcomes(body: Outcome? = nil, completion: @escaping ((_ data: Outcome?,_ error: Error?) -> Void)) {
+    open class func postJourneyOutcomes(body: OutcomeRequest? = nil, completion: @escaping ((_ data: Outcome?,_ error: Error?) -> Void)) {
         let requestBuilder = postJourneyOutcomesWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<Outcome>?, error) -> Void in
             do {
@@ -3201,7 +3201,7 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<Outcome> 
      */
-    open class func postJourneyOutcomesWithRequestBuilder(body: Outcome? = nil) -> RequestBuilder<Outcome> {        
+    open class func postJourneyOutcomesWithRequestBuilder(body: OutcomeRequest? = nil) -> RequestBuilder<Outcome> {        
         let path = "/api/v2/journey/outcomes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -3273,7 +3273,7 @@ open class JourneyAPI {
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postJourneySegments(body: JourneySegment? = nil, completion: @escaping ((_ data: JourneySegment?,_ error: Error?) -> Void)) {
+    open class func postJourneySegments(body: JourneySegmentRequest? = nil, completion: @escaping ((_ data: JourneySegment?,_ error: Error?) -> Void)) {
         let requestBuilder = postJourneySegmentsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<JourneySegment>?, error) -> Void in
             do {
@@ -3319,7 +3319,7 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<JourneySegment> 
      */
-    open class func postJourneySegmentsWithRequestBuilder(body: JourneySegment? = nil) -> RequestBuilder<JourneySegment> {        
+    open class func postJourneySegmentsWithRequestBuilder(body: JourneySegmentRequest? = nil) -> RequestBuilder<JourneySegment> {        
         let path = "/api/v2/journey/segments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

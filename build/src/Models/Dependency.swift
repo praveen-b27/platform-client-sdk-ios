@@ -76,6 +76,7 @@ public class Dependency: Codable {
         case utilizationlabel = "UTILIZATIONLABEL"
         case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"

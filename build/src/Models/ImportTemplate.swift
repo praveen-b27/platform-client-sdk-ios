@@ -42,10 +42,12 @@ public class ImportTemplate: Codable {
     public var listNameFormat: ListNameFormat?
     /** Custom value for the list name format, at least %N is required. Any character other than the specified tokens will be used as is. Available tokens: %N: ListNamePrefix; %P: Part number; %F: Filter name; %C: Column value; YYYY: year; MM: month; DD: day; hh: hour; mm: minute; ss: second. */
     public var customListNameFormatValue: String?
+    /** The status of the import process. */
+    public var importStatus: ImportStatus?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactListTemplate: DomainEntityRef?, contactListFilter: DomainEntityRef?, useSplittingCriteria: Bool?, splittingInformation: SplittingInformation?, listNameFormat: ListNameFormat?, customListNameFormatValue: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactListTemplate: DomainEntityRef?, contactListFilter: DomainEntityRef?, useSplittingCriteria: Bool?, splittingInformation: SplittingInformation?, listNameFormat: ListNameFormat?, customListNameFormatValue: String?, importStatus: ImportStatus?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -57,6 +59,7 @@ public class ImportTemplate: Codable {
         self.splittingInformation = splittingInformation
         self.listNameFormat = listNameFormat
         self.customListNameFormatValue = customListNameFormatValue
+        self.importStatus = importStatus
         self.selfUri = selfUri
     }
 
@@ -72,6 +75,7 @@ public class ImportTemplate: Codable {
         case splittingInformation
         case listNameFormat
         case customListNameFormatValue
+        case importStatus
         case selfUri
     }
 

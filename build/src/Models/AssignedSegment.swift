@@ -11,7 +11,7 @@ import Foundation
 
 public class AssignedSegment: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** The ID of the segment assigned. */
     public var _id: String?
     /** The URI for this object */
     public var selfUri: String?

@@ -11,14 +11,6 @@ import Foundation
 
 public class WhatsAppIntegrationUpdateRequest: Codable {
 
-    public enum Action: String, Codable { 
-        case activate = "Activate"
-        case confirm = "Confirm"
-    }
-    public enum AuthenticationMethod: String, Codable { 
-        case sms = "Sms"
-        case voice = "Voice"
-    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** WhatsApp Integration name */
@@ -27,26 +19,14 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
     public var supportedContent: SupportedContentReference?
     /** Defines the message settings to be applied for this integration */
     public var messagingSetting: MessagingSettingRequestReference?
-    /** The action used to activate and then confirm a WhatsApp Integration. */
-    public var action: Action?
-    /** The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field.  */
-    public var authenticationMethod: AuthenticationMethod?
-    /** The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field. */
-    public var confirmationCode: String?
-    /** Phone number to associate with the WhatsApp integration */
-    public var phoneNumber: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingRequestReference?, action: Action?, authenticationMethod: AuthenticationMethod?, confirmationCode: String?, phoneNumber: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingRequestReference?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.supportedContent = supportedContent
         self.messagingSetting = messagingSetting
-        self.action = action
-        self.authenticationMethod = authenticationMethod
-        self.confirmationCode = confirmationCode
-        self.phoneNumber = phoneNumber
         self.selfUri = selfUri
     }
 
@@ -55,10 +35,6 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
         case name
         case supportedContent
         case messagingSetting
-        case action
-        case authenticationMethod
-        case confirmationCode
-        case phoneNumber
         case selfUri
     }
 

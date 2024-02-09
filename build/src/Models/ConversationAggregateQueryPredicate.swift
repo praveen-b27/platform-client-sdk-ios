@@ -78,7 +78,6 @@ public class ConversationAggregateQueryPredicate: Codable {
         case queueid = "queueId"
         case remote = "remote"
         case removedskillid = "removedSkillId"
-        case reoffered = "reoffered"
         case requestedlanguageid = "requestedLanguageId"
         case requestedrouting = "requestedRouting"
         case requestedroutingskillid = "requestedRoutingSkillId"

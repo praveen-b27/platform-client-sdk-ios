@@ -10,7 +10,7 @@ title: Criteria
 | **key** | **String** | The criteria key. | |
 | **values** | **[String]** | The criteria values. | |
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | |
-| **_operator** | **String** | The comparison operator. | [optional] |
+| **_operator** | **String** | The comparison operator. | |
 {: class="table table-striped"}
 
 

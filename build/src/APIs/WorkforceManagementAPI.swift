@@ -1595,6 +1595,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
         case activityCodes = "ActivityCodes"
@@ -1620,6 +1621,7 @@ open class WorkforceManagementAPI {
         case timeOffPlans = "TimeOffPlans"
         case timeOffRequests = "TimeOffRequests"
         case timeOffLimits = "TimeOffLimits"
+        case workPlanBids = "WorkPlanBids"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -3815,6 +3817,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementBusinessunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
         case activityCodes = "ActivityCodes"
@@ -3840,6 +3843,7 @@ open class WorkforceManagementAPI {
         case timeOffPlans = "TimeOffPlans"
         case timeOffRequests = "TimeOffRequests"
         case timeOffLimits = "TimeOffLimits"
+        case workPlanBids = "WorkPlanBids"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -7716,6 +7720,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementManagementunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
         case activityCodes = "ActivityCodes"
@@ -7741,6 +7746,7 @@ open class WorkforceManagementAPI {
         case timeOffPlans = "TimeOffPlans"
         case timeOffRequests = "TimeOffRequests"
         case timeOffLimits = "TimeOffLimits"
+        case workPlanBids = "WorkPlanBids"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }

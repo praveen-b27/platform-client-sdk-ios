@@ -42,10 +42,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsConversationsDetailsQuery**](AnalyticsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
 | [**postAnalyticsConversationsTranscriptsQuery**](AnalyticsAPI.html#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
 | [**postAnalyticsEvaluationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
+| [**postAnalyticsFlowexecutionsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowexecutionsAggregatesQuery) | Query for flow execution aggregates |
 | [**postAnalyticsFlowsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
 | [**postAnalyticsFlowsObservationsQuery**](AnalyticsAPI.html#postAnalyticsFlowsObservationsQuery) | Query for flow observations |
 | [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
+| [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
 | [**postAnalyticsReportingScheduleRunreport**](AnalyticsAPI.html#postAnalyticsReportingScheduleRunreport) | Place a scheduled report immediately into the reporting queue |
 | [**postAnalyticsReportingSchedules**](AnalyticsAPI.html#postAnalyticsReportingSchedules) | Create a scheduled report job |
@@ -1912,6 +1914,58 @@ AnalyticsAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, er
 
 [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
+<a name="postAnalyticsFlowexecutionsAggregatesQuery"></a>
+
+# **postAnalyticsFlowexecutionsAggregatesQuery**
+
+
+
+> [FlowExecutionAggregateQueryResponse](FlowExecutionAggregateQueryResponse.html) postAnalyticsFlowexecutionsAggregatesQuery(body)
+
+Query for flow execution aggregates
+
+
+
+Wraps POST /api/v2/analytics/flowexecutions/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:flowExecutionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FlowExecutionAggregationQuery = new FlowExecutionAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsFlowexecutionsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsFlowexecutionsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FlowExecutionAggregationQuery**](FlowExecutionAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowExecutionAggregateQueryResponse**](FlowExecutionAggregateQueryResponse.html)
+
 <a name="postAnalyticsFlowsAggregatesQuery"></a>
 
 # **postAnalyticsFlowsAggregatesQuery**
@@ -2119,6 +2173,58 @@ AnalyticsAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error
 ### Return type
 
 [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
+
+<a name="postAnalyticsRatelimitsAggregatesQuery"></a>
+
+# **postAnalyticsRatelimitsAggregatesQuery**
+
+
+
+> [RateLimitAggregateQueryResponse](RateLimitAggregateQueryResponse.html) postAnalyticsRatelimitsAggregatesQuery(body)
+
+Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+
+
+
+Wraps POST /api/v2/analytics/ratelimits/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:rateLimitAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: RateLimitAggregationQuery = new RateLimitAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsRatelimitsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsRatelimitsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**RateLimitAggregationQuery**](RateLimitAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RateLimitAggregateQueryResponse**](RateLimitAggregateQueryResponse.html)
 
 <a name="postAnalyticsReportingExports"></a>
 

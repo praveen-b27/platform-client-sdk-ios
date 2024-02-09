@@ -11,7 +11,7 @@ import Foundation
 
 public class AchievedOutcome: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** The ID of the outcome achieved. */
     public var _id: String?
     /** The URI for this object */
     public var selfUri: String?

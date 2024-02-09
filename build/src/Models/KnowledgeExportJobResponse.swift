@@ -35,6 +35,8 @@ public class KnowledgeExportJobResponse: Codable {
     public var downloadURL: String?
     /** File type of the document */
     public var fileType: FileType?
+    /** Requested version of the exported json file. */
+    public var jsonFileVersion: Int?
     /** The current count of the number of records processed. */
     public var countDocumentProcessed: Int?
     /** Filters to narrow down what to export. */
@@ -54,10 +56,11 @@ public class KnowledgeExportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, downloadURL: String?, fileType: FileType?, countDocumentProcessed: Int?, exportFilter: KnowledgeExportJobFilter?, status: Status?, knowledgeBase: KnowledgeBase?, createdBy: UserReference?, dateCreated: Date?, dateModified: Date?, errorInformation: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, downloadURL: String?, fileType: FileType?, jsonFileVersion: Int?, countDocumentProcessed: Int?, exportFilter: KnowledgeExportJobFilter?, status: Status?, knowledgeBase: KnowledgeBase?, createdBy: UserReference?, dateCreated: Date?, dateModified: Date?, errorInformation: ErrorBody?, selfUri: String?) {
         self._id = _id
         self.downloadURL = downloadURL
         self.fileType = fileType
+        self.jsonFileVersion = jsonFileVersion
         self.countDocumentProcessed = countDocumentProcessed
         self.exportFilter = exportFilter
         self.status = status
@@ -73,6 +76,7 @@ public class KnowledgeExportJobResponse: Codable {
         case _id = "id"
         case downloadURL
         case fileType
+        case jsonFileVersion
         case countDocumentProcessed
         case exportFilter
         case status

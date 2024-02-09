@@ -14,10 +14,10 @@ title: Browser
 | **isMobile** | **Bool** | Flag that is true for mobile devices. | [optional] |
 | **viewHeight** | **Int** | Browser&#39;s viewport height. | [optional] |
 | **viewWidth** | **Int** | Browser&#39;s viewport width. | [optional] |
-| **featuresFlash** | **Bool** | Whether Flash is installed. | [optional] |
-| **featuresJava** | **Bool** | Whether Java is installed. | [optional] |
-| **featuresPdf** | **Bool** | Whether the browser recognizes PDFs. | [optional] |
-| **featuresWebrtc** | **Bool** | Whether WebRTC is supported. | [optional] |
+| **featuresFlash** | **Bool** | Whether Flash is installed. | |
+| **featuresJava** | **Bool** | Whether Java is installed. | |
+| **featuresPdf** | **Bool** | Whether the browser recognizes PDFs. | |
+| **featuresWebrtc** | **Bool** | Whether WebRTC is supported. | |
 {: class="table table-striped"}
 
 

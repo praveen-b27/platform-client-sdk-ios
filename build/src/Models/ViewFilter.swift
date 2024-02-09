@@ -77,6 +77,7 @@ public class ViewFilter: Codable {
         case surveyinvite = "surveyinvite"
         case voice = "voice"
         case voicemail = "voicemail"
+        case voicesurvey = "voicesurvey"
         case workflow = "workflow"
         case workitem = "workitem"
     }

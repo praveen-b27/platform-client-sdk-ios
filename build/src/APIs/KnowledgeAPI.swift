@@ -2889,17 +2889,18 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "countDocumentProcessed" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "exportFilter" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "errorInformation" : "{}",
-  "countDocumentProcessed" : 0,
-  "selfUri" : "https://openapi-generator.tech",
-  "downloadURL" : "downloadURL",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "fileType" : "Json",
+  "jsonFileVersion" : 0,
   "status" : "Created"
 }, statusCode=200}]
      
@@ -7039,17 +7040,18 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "countDocumentProcessed" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "exportFilter" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "errorInformation" : "{}",
-  "countDocumentProcessed" : 0,
-  "selfUri" : "https://openapi-generator.tech",
-  "downloadURL" : "downloadURL",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "fileType" : "Json",
+  "jsonFileVersion" : 0,
   "status" : "Created"
 }, statusCode=200}]
      

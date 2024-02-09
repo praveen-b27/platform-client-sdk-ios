@@ -1912,7 +1912,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: Outcome = new Outcome(...) // 
+let body: OutcomeRequest = new OutcomeRequest(...) // 
 
 // Code example
 JourneyAPI.postJourneyOutcomes(body: body) { (response, error) in
@@ -1930,7 +1930,7 @@ JourneyAPI.postJourneyOutcomes(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Outcome**](Outcome.html)|  | [optional] |
+| **body** | [**OutcomeRequest**](OutcomeRequest.html)|  | [optional] |
 {: class="table-striped"}
 
 
@@ -2016,7 +2016,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: JourneySegment = new JourneySegment(...) // 
+let body: JourneySegmentRequest = new JourneySegmentRequest(...) // 
 
 // Code example
 JourneyAPI.postJourneySegments(body: body) { (response, error) in
@@ -2034,7 +2034,7 @@ JourneyAPI.postJourneySegments(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**JourneySegment**](JourneySegment.html)|  | [optional] |
+| **body** | [**JourneySegmentRequest**](JourneySegmentRequest.html)|  | [optional] |
 {: class="table-striped"}
 
 

@@ -11,8 +11,6 @@ import Foundation
 
 public class PatchSegment: Codable {
 
-    /** The globally unique identifier for the object. */
-    public var _id: String?
     /** Whether or not the segment is active. */
     public var isActive: Bool?
     /** The display name of the segment. */
@@ -26,22 +24,15 @@ public class PatchSegment: Codable {
     /** Whether or not the segment should be displayed to agent/supervisor users. */
     public var shouldDisplayToAgent: Bool?
     /** The context of the segment. */
-    public var context: Context?
+    public var context: PatchContext?
     /** The pattern of rules defining the segment. */
-    public var journey: Journey?
+    public var journey: PatchJourney?
     /** Details of an entity corresponding to this segment in an external system. */
     public var externalSegment: PatchExternalSegment?
     /** Time, in days, from when the segment is assigned until it is automatically unassigned. */
     public var assignmentExpirationDays: Int?
-    /** The URI for this object */
-    public var selfUri: String?
-    /** Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var createdDate: Date?
-    /** Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var modifiedDate: Date?
 
-    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, externalSegment: PatchExternalSegment?, assignmentExpirationDays: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
-        self._id = _id
+    public init(isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, shouldDisplayToAgent: Bool?, context: PatchContext?, journey: PatchJourney?, externalSegment: PatchExternalSegment?, assignmentExpirationDays: Int?) {
         self.isActive = isActive
         self.displayName = displayName
         self.version = version
@@ -52,13 +43,9 @@ public class PatchSegment: Codable {
         self.journey = journey
         self.externalSegment = externalSegment
         self.assignmentExpirationDays = assignmentExpirationDays
-        self.selfUri = selfUri
-        self.createdDate = createdDate
-        self.modifiedDate = modifiedDate
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
         case isActive
         case displayName
         case version
@@ -69,9 +56,6 @@ public class PatchSegment: Codable {
         case journey
         case externalSegment
         case assignmentExpirationDays
-        case selfUri
-        case createdDate
-        case modifiedDate
     }
 
 

@@ -1255,7 +1255,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopic(topicId: topicId) { (respo
 
 
 
-> [TopicsEntityListing](TopicsEntityListing.html) getSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, sortBy, sortOrder)
+> [TopicsEntityListing](TopicsEntityListing.html) getSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder)
 
 Get the list of Speech &amp; Text Analytics topics
 
@@ -1280,11 +1280,12 @@ let pageSize: Int = 0 // The page size for the listing
 let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest
 let name: String = "" // Case insensitive partial name to filter by
 let ids: [String] = [""] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
+let dialects: [String] = [""] // Comma separated dialect strings to filter by. Maximum of 15 dialects allowed.
 let sortBy: SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsTopics.enummember // Sort results by. Defaults to name
 let sortOrder: SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsTopics.enummember // Sort order. Defaults to asc
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1304,6 +1305,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 | **state** | **String**| Topic state. Defaults to latest | [optional]<br />**Values**: latest ("latest"), published ("published") |
 | **name** | **String**| Case insensitive partial name to filter by | [optional] |
 | **ids** | [**[String]**](String.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |
+| **dialects** | [**[String]**](String.html)| Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US"), enAu ("en-AU"), enGb ("en-GB"), enZa ("en-ZA"), esEs ("es-ES"), enIn ("en-IN"), frFr ("fr-FR"), frCa ("fr-CA"), itIt ("it-IT"), deDe ("de-DE"), ptBr ("pt-BR"), plPl ("pl-PL"), ptPt ("pt-PT"), nlNl ("nl-NL"), koKr ("ko-KR") |
 | **sortBy** | **String**| Sort results by. Defaults to name | [optional]<br />**Values**: name ("name") |
 | **sortOrder** | **String**| Sort order. Defaults to asc | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 {: class="table-striped"}

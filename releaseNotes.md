@@ -1,387 +1,374 @@
-Platform API version: 7719
+Platform API version: 7756
 
 
 
 
-# Major Changes (39 changes)
+# Major Changes (27 changes)
 
-**/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}** (1 change)
+**GET /api/v2/authorization/divisions** (1 change)
 
-* Path /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} was removed
+* Parameter id was added
 
-**POST /api/v2/conversations/messaging/integrations/line** (1 change)
+**GET /api/v2/outbound/importtemplates/{importTemplateId}** (1 change)
 
-* Has been deprecated
+* Parameter includeImportStatus was added
 
-**PUT /api/v2/identityproviders/adfs** (1 change)
+**GET /api/v2/outbound/importtemplates** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Parameter includeImportStatus was added
 
-**PUT /api/v2/identityproviders/cic** (1 change)
+**GET /api/v2/outbound/schedules/emailcampaigns** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Response 200 type was changed from MessagingCampaignScheduleEntityListing to EmailCampaignScheduleEntityListing
 
-**PUT /api/v2/identityproviders/gsuite** (1 change)
+**GET /api/v2/speechandtextanalytics/topics** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Parameter dialects was added
 
-**PUT /api/v2/identityproviders/generic** (1 change)
+**ConversationAggregateQueryPredicate** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Enum value reoffered was removed from property dimension
 
-**GET /api/v2/identityproviders** (1 change)
+**ConversationAggregationQuery** (1 change)
 
-* Response 200 type was changed from OAuthProviderEntityListing to IdentityProviderEntityListing
+* Enum value reoffered was removed from property groupBy
 
-**PUT /api/v2/identityproviders/okta** (1 change)
+**FlowAggregateQueryPredicate** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Enum value reoffered was removed from property dimension
 
-**PUT /api/v2/identityproviders/onelogin** (1 change)
+**FlowAggregationQuery** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Enum value reoffered was removed from property groupBy
 
-**PUT /api/v2/identityproviders/ping** (1 change)
+**WhatsAppIntegrationUpdateRequest** (4 changes)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Property action was removed
+* Property authenticationMethod was removed
+* Property confirmationCode was removed
+* Property phoneNumber was removed
 
-**PUT /api/v2/identityproviders/purecloud** (1 change)
+**PatchOutcome** (7 changes)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Property id was removed
+* Property selfUri was removed
+* Property createdDate was removed
+* Property modifiedDate was removed
+* Property context was changed from Context to PatchContext
+* Property journey was changed from Journey to PatchJourney
+* Property associatedValueField was changed from AssociatedValueField to PatchAssociatedValueField
 
-**PUT /api/v2/identityproviders/pureengage** (1 change)
+**PatchSegment** (6 changes)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
+* Property id was removed
+* Property selfUri was removed
+* Property createdDate was removed
+* Property modifiedDate was removed
+* Property context was changed from Context to PatchContext
+* Property journey was changed from Journey to PatchJourney
 
-**PUT /api/v2/identityproviders/salesforce** (1 change)
+**AppEventRequest** (1 change)
 
-* Response 200 type was changed from OAuthProvider to IdentityProvider
-
-**GET /api/v2/presencedefinitions/{presenceId}** (1 change)
-
-* Has been deprecated
-
-**PUT /api/v2/presencedefinitions/{presenceId}** (1 change)
-
-* Has been deprecated
-
-**DELETE /api/v2/presencedefinitions/{presenceId}** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/presencedefinitions** (1 change)
-
-* Has been deprecated
-
-**POST /api/v2/presencedefinitions** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/architect/prompts/{promptId}** (3 changes)
-
-* Parameter includeMediaUris was added
-* Parameter includeResources was added
-* Parameter language was added
-
-**GET /api/v2/architect/prompts** (3 changes)
-
-* Parameter includeMediaUris was added
-* Parameter includeResources was added
-* Parameter language was added
-
-**GET /api/v2/architect/systemprompts/{promptId}** (3 changes)
-
-* Parameter includeMediaUris was added
-* Parameter includeResources was added
-* Parameter language was added
-
-**GET /api/v2/architect/systemprompts** (3 changes)
-
-* Parameter includeMediaUris was added
-* Parameter includeResources was added
-* Parameter language was added
-
-**OAuthProvider** (1 change)
-
-* Model OAuthProvider was removed
-
-**OAuthProviderEntityListing** (1 change)
-
-* Model OAuthProviderEntityListing was removed
-
-**ConversationAggregationQuery** (2 changes)
-
-* Enum value tCallback was removed from property metrics
-* Enum value tCallbackComplete was removed from property metrics
-
-**ConversationAggregationView** (2 changes)
-
-* Enum value tCallback was removed from property target
-* Enum value tCallbackComplete was removed from property target
-
-**ConversationDetailQueryPredicate** (2 changes)
-
-* Enum value tCallback was removed from property metric
-* Enum value tCallbackComplete was removed from property metric
-
-**GetAlertQuery** (1 change)
-
-* Property activeStatus was removed
+* Property device was changed from Device to RequestDevice
 
 
-# Minor Changes (68 changes)
+# Minor Changes (82 changes)
 
-**/api/v2/screenrecording/token** (2 changes)
+**/api/v2/analytics/flowexecutions/aggregates/query** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback** (2 changes)
+**/api/v2/analytics/ratelimits/aggregates/query** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/outbound/contactlisttemplates/bulk/retrieve** (2 changes)
+**/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/outbound/filespecificationtemplates/bulk** (2 changes)
+**/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue** (2 changes)
 
 * Path was added
-* Operation DELETE was added
-
-**/api/v2/outbound/filespecificationtemplates** (3 changes)
-
-* Path was added
-* Operation GET was added
 * Operation POST was added
 
-**/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}** (4 changes)
+**/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external** (2 changes)
 
 * Path was added
-* Operation GET was added
-* Operation PUT was added
-* Operation DELETE was added
+* Operation POST was added
 
-**/api/v2/identityproviders** (1 change)
-
-* Operation post was added. Summary: Create Identity Provider
-
-**/api/v2/identityproviders/{providerId}** (4 changes)
+**/api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor** (2 changes)
 
 * Path was added
-* Operation GET was added
-* Operation PUT was added
-* Operation DELETE was added
+* Operation POST was added
 
-**GET /api/v2/architect/prompts/{promptId}** (1 change)
+**/api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent** (2 changes)
 
-* Response 206 was added
+* Path was added
+* Operation POST was added
 
-**GET /api/v2/architect/prompts** (1 change)
+**/api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue** (2 changes)
 
-* Response 206 was added
+* Path was added
+* Operation POST was added
 
-**GET /api/v2/architect/systemprompts/{promptId}** (1 change)
+**/api/v2/conversations/{conversationId}/participants/{participantId}/replace/external** (2 changes)
 
-* Response 206 was added
+* Path was added
+* Operation POST was added
 
-**GET /api/v2/architect/systemprompts** (1 change)
+**/api/v2/outbound/contactlistfilters/bulk/retrieve** (2 changes)
 
-* Response 206 was added
+* Path was added
+* Operation POST was added
 
-**EmailBeginTransmittingEvent** (1 change)
+**PUT /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}** (1 change)
 
-* Model was added
+* Response 409 was added
 
-**EmailCommunicationAnsweredEvent** (1 change)
+**AnalyticsFlow** (1 change)
 
-* Model was added
+* Enum value VOICESURVEY was added to property flowType
 
-**EmailCommunicationDispositionAppliedEvent** (1 change)
-
-* Model was added
-
-**EmailCommunicationEndedEvent** (1 change)
+**FlowExecutionAggregateDataContainer** (1 change)
 
 * Model was added
 
-**EmailCommunicationRepliedEvent** (1 change)
+**FlowExecutionAggregateQueryResponse** (1 change)
 
 * Model was added
 
-**EmailEndTransferEvent** (1 change)
+**FlowExecutionAggregateQueryClause** (1 change)
 
 * Model was added
 
-**EmailExternalEstablishedEvent** (1 change)
+**FlowExecutionAggregateQueryFilter** (1 change)
 
 * Model was added
 
-**EmailFlowEstablishedEvent** (1 change)
+**FlowExecutionAggregateQueryPredicate** (1 change)
 
 * Model was added
 
-**EmailHoldUpdatedEvent** (1 change)
+**FlowExecutionAggregationQuery** (1 change)
 
 * Model was added
 
-**EmailInitialConfiguration** (1 change)
+**FlowExecutionAggregationView** (1 change)
 
 * Model was added
 
-**EmailProgressTransferEvent** (1 change)
+**RateLimitAggregateDataContainer** (1 change)
 
 * Model was added
 
-**EmailRoutingEstablishedEvent** (1 change)
+**RateLimitAggregateQueryResponse** (1 change)
 
 * Model was added
 
-**EmailRoutingTransferEvent** (1 change)
+**RateLimitAggregateQueryClause** (1 change)
 
 * Model was added
 
-**EmailUserEstablishedEvent** (1 change)
+**RateLimitAggregateQueryFilter** (1 change)
 
 * Model was added
 
-**EmailUserTransferEvent** (1 change)
+**RateLimitAggregateQueryPredicate** (1 change)
 
 * Model was added
 
-**Group** (1 change)
-
-* Optional property rolesEnabled was added
-
-**UserPresence** (1 change)
-
-* Optional property sourceId was added
-
-**WorkPlanBidRanks** (1 change)
+**RateLimitAggregationQuery** (1 change)
 
 * Model was added
 
-**ReportingTurnAction** (4 changes)
-
-* Enum value ClearUtilizationLabelAction was added to property actionType
-* Enum value FindGrammarByIdAction was added to property actionType
-* Enum value FindUtilizationLabelAction was added to property actionType
-* Enum value SetUtilizationLabelAction was added to property actionType
-
-**ScreenRecordingUserAuthenticatedInfo** (1 change)
+**RateLimitAggregationView** (1 change)
 
 * Model was added
 
-**FeedbackAddRequest** (1 change)
+**ViewFilter** (1 change)
+
+* Enum value voicesurvey was added to property flowTypes
+
+**CallbackMediaSettings** (3 changes)
+
+* Optional property enableAutoDialAndEnd was added
+* Optional property autoDialDelaySeconds was added
+* Optional property autoEndDelaySeconds was added
+
+**AchievedOutcome** (1 change)
+
+* id is no longer readonly
+
+**AssignedSegment** (1 change)
+
+* id is no longer readonly
+
+**Session** (1 change)
+
+* id is no longer readonly
+
+**SessionLastEvent** (1 change)
+
+* id is no longer readonly
+
+**ConsultTransferToAgent** (1 change)
 
 * Model was added
 
-**ContactListTemplateBulkRetrieveBody** (1 change)
+**ConsultTransferToQueue** (1 change)
 
 * Model was added
 
-**Column** (1 change)
+**ConsultTransferToExternal** (1 change)
 
 * Model was added
 
-**FileSpecificationTemplate** (1 change)
+**TransferToAgentRequest** (1 change)
 
 * Model was added
 
-**PreprocessingRule** (1 change)
+**TransferToQueueRequest** (1 change)
 
 * Model was added
 
-**FileSpecificationTemplateEntityListing** (1 change)
+**TransferToExternalRequest** (1 change)
 
 * Model was added
 
-**GroupUpdate** (1 change)
-
-* Optional property rolesEnabled was added
-
-**GroupCreate** (1 change)
-
-* Optional property rolesEnabled was added
-
-**IdentityProvider** (1 change)
+**ContactListFilterBulkRetrieveBody** (1 change)
 
 * Model was added
 
-**IdentityProviderEntityListing** (1 change)
+**ImportTemplate** (1 change)
+
+* Optional property importStatus was added
+
+**EmailCampaignScheduleEntityListing** (1 change)
 
 * Model was added
 
-**CustomProvider** (1 change)
+**Outcome** (1 change)
+
+* id is no longer readonly
+
+**PatchAssociatedValueField** (1 change)
 
 * Model was added
 
-**TrustGroup** (1 change)
+**PatchContext** (1 change)
 
-* Optional property rolesEnabled was added
+* Model was added
 
-**UcUserPresence** (1 change)
+**PatchContextPattern** (1 change)
 
-* Optional property sourceId was added
+* Model was added
 
-**MutableUserPresence** (1 change)
+**PatchCriteria** (1 change)
 
-* Optional property sourceId was added
+* Model was added
 
-**GetAlertQuery** (1 change)
+**PatchEntityTypeCriteria** (1 change)
 
-* Optional property alertStatus was added
+* Model was added
 
-**PhoneBaseEntityListing** (1 change)
+**PatchJourney** (1 change)
 
-* Optional property totalNumberOfEntities was added
+* Model was added
 
-**PhoneMetaBaseEntityListing** (1 change)
+**PatchJourneyPattern** (1 change)
 
-* Optional property totalNumberOfEntities was added
+* Model was added
 
-**PhoneStatus** (1 change)
+**OutcomeRequest** (1 change)
 
-* selfUri is no longer readonly
+* Model was added
 
-**TrunkMetabaseEntityListing** (1 change)
+**RequestContext** (1 change)
 
-* Optional property totalNumberOfEntities was added
+* Model was added
 
-**MetadataProperty** (1 change)
+**RequestContextPattern** (1 change)
 
-* Optional property displayname was added
+* Model was added
 
-**AuthenticationSettings** (1 change)
+**RequestCriteria** (1 change)
 
-* Optional property allowSessionUpgrade was added
+* Model was added
+
+**RequestEntityTypeCriteria** (1 change)
+
+* Model was added
+
+**RequestJourney** (1 change)
+
+* Model was added
+
+**RequestJourneyPattern** (1 change)
+
+* Model was added
+
+**JourneySegment** (1 change)
+
+* id is no longer readonly
+
+**JourneySegmentRequest** (1 change)
+
+* Model was added
+
+**RequestExternalSegment** (1 change)
+
+* Model was added
+
+**KnowledgeExportJobResponse** (1 change)
+
+* Optional property jsonFileVersion was added
+
+**KnowledgeExportJobRequest** (1 change)
+
+* Optional property jsonFileVersion was added
+
+**RequestDevice** (1 change)
+
+* Model was added
+
+**AppEventResponseSession** (1 change)
+
+* id is no longer readonly
+
+**Flow** (2 changes)
+
+* Enum value VOICESURVEY was added to property type
+* Enum value VOICESURVEY was added to property compatibleFlowTypes
+
+**FlowVersion** (1 change)
+
+* Enum value VOICESURVEY was added to property compatibleFlowTypes
+
+**WrapupCodeRequest** (1 change)
+
+* Optional property division was added
+
+**Dependency** (1 change)
+
+* Enum value VOICESURVEYFLOW was added to property type
+
+**DependencyObject** (1 change)
+
+* Enum value VOICESURVEYFLOW was added to property type
+
+**FlowDivisionView** (1 change)
+
+* Enum value VOICESURVEY was added to property type
 
 
-# Point Changes (7 changes)
+# Point Changes (3 changes)
 
-**POST /api/v2/conversations/messaging/integrations/line** (2 changes)
+**PATCH /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}** (3 changes)
 
 * Description was changed
 * Summary was changed
-
-**GET /api/v2/presencedefinitions/{presenceId}** (1 change)
-
-* Summary was changed
-
-**PUT /api/v2/presencedefinitions/{presenceId}** (1 change)
-
-* Summary was changed
-
-**DELETE /api/v2/presencedefinitions/{presenceId}** (1 change)
-
-* Summary was changed
-
-**GET /api/v2/presencedefinitions** (1 change)
-
-* Summary was changed
-
-**POST /api/v2/presencedefinitions** (1 change)
-
-* Summary was changed
+* Response 202 was changed from Processing Request - If request was to Activate, do a GET checking for activationStatus set to CodeSent. 
+If request was to Confirm, do a GET checking for the integration status set to Active to Processing Request

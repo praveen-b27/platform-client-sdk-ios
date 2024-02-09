@@ -28,6 +28,7 @@ public class FlowDivisionView: Codable {
         case surveyinvite = "SURVEYINVITE"
         case voice = "VOICE"
         case voicemail = "VOICEMAIL"
+        case voicesurvey = "VOICESURVEY"
         case workflow = "WORKFLOW"
         case workitem = "WORKITEM"
     }

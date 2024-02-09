@@ -11,7 +11,7 @@ import Foundation
 
 public class Outcome: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** ID of the outcome. */
     public var _id: String?
     /** Whether or not the outcome is active. */
     public var isActive: Bool?

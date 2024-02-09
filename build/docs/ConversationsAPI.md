@@ -141,7 +141,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
 | [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId) | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
-| [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration |
+| [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update a WhatsApp messaging integration |
 | [**patchConversationsMessagingSetting**](ConversationsAPI.html#patchConversationsMessagingSetting) | Update a messaging setting |
 | [**patchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#patchConversationsMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
 | [**patchConversationsSettings**](ConversationsAPI.html#patchConversationsSettings) | Update Settings |
@@ -155,12 +155,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
 | [**postConversationParticipantDigits**](ConversationsAPI.html#postConversationParticipantDigits) | Sends DTMF to the participant |
 | [**postConversationParticipantReplace**](ConversationsAPI.html#postConversationParticipantReplace) | Replace this participant with the specified user and/or address |
+| [**postConversationParticipantReplaceAgent**](ConversationsAPI.html#postConversationParticipantReplaceAgent) | Replace this participant with the specified agent |
+| [**postConversationParticipantReplaceExternal**](ConversationsAPI.html#postConversationParticipantReplaceExternal) | Replace this participant with the an external contact |
+| [**postConversationParticipantReplaceQueue**](ConversationsAPI.html#postConversationParticipantReplaceQueue) | Replace this participant with the specified queue |
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**postConversationSummaryFeedback**](ConversationsAPI.html#postConversationSummaryFeedback) | Submit feedback for the summary. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI.html#postConversationsCallParticipantConsult) | Initiate and update consult transfer |
+| [**postConversationsCallParticipantConsultAgent**](ConversationsAPI.html#postConversationsCallParticipantConsultAgent) | Initiate a consult transfer to an agent |
+| [**postConversationsCallParticipantConsultExternal**](ConversationsAPI.html#postConversationsCallParticipantConsultExternal) | Initiate a consult transfer to an external contact |
+| [**postConversationsCallParticipantConsultQueue**](ConversationsAPI.html#postConversationsCallParticipantConsultQueue) | Initiate a consult transfer to a queue |
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI.html#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI.html#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallParticipants**](ConversationsAPI.html#postConversationsCallParticipants) | Add participants to a conversation |
@@ -195,6 +201,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageInboundOpenReceipt**](ConversationsAPI.html#postConversationsMessageInboundOpenReceipt) | Send an inbound Open Receipt Message |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI.html#postConversationsMessageMessagesBulk) | Get messages in batch |
 | [**postConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsMessageParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
+| [**postConversationsMessageParticipantMonitor**](ConversationsAPI.html#postConversationsMessageParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI.html#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsMessages**](ConversationsAPI.html#postConversationsMessages) | Create an outbound messaging conversation. |
 | [**postConversationsMessagesAgentless**](ConversationsAPI.html#postConversationsMessagesAgentless) | Send an agentless outbound message |
@@ -7452,9 +7459,7 @@ ConversationsAPI.patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIn
 
 > [WhatsAppIntegration](WhatsAppIntegration.html) patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, body)
 
-Update or activate a WhatsApp messaging integration
-
-The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+Update a WhatsApp messaging integration
 
 
 
@@ -8203,6 +8208,174 @@ ConversationsAPI.postConversationParticipantReplace(conversationId: conversation
 
 `nil` (empty response body)
 
+<a name="postConversationParticipantReplaceAgent"></a>
+
+# **postConversationParticipantReplaceAgent**
+
+
+
+> Void postConversationParticipantReplaceAgent(conversationId, participantId, body)
+
+Replace this participant with the specified agent
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent  
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferAgent
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: TransferToAgentRequest = new TransferToAgentRequest(...) // Transfer request
+
+// Code example
+ConversationsAPI.postConversationParticipantReplaceAgent(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationParticipantReplaceAgent was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**TransferToAgentRequest**](TransferToAgentRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationParticipantReplaceExternal"></a>
+
+# **postConversationParticipantReplaceExternal**
+
+
+
+> Void postConversationParticipantReplaceExternal(conversationId, participantId, body)
+
+Replace this participant with the an external contact
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external  
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferExternal
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: TransferToExternalRequest = new TransferToExternalRequest(...) // Transfer request
+
+// Code example
+ConversationsAPI.postConversationParticipantReplaceExternal(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationParticipantReplaceExternal was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**TransferToExternalRequest**](TransferToExternalRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationParticipantReplaceQueue"></a>
+
+# **postConversationParticipantReplaceQueue**
+
+
+
+> Void postConversationParticipantReplaceQueue(conversationId, participantId, body)
+
+Replace this participant with the specified queue
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue  
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferQueue
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: TransferToQueueRequest = new TransferToQueueRequest(...) // Transfer request
+
+// Code example
+ConversationsAPI.postConversationParticipantReplaceQueue(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationParticipantReplaceQueue was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**TransferToQueueRequest**](TransferToQueueRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postConversationParticipantSecureivrsessions"></a>
 
 # **postConversationParticipantSecureivrsessions**
@@ -8525,6 +8698,177 @@ ConversationsAPI.postConversationsCallParticipantConsult(conversationId: convers
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address & initial speak to | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postConversationsCallParticipantConsultAgent"></a>
+
+# **postConversationsCallParticipantConsultAgent**
+
+
+
+> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultAgent(conversationId, participantId, body)
+
+Initiate a consult transfer to an agent
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent  
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferAgent
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ConsultTransferToAgent = new ConsultTransferToAgent(...) // Destination agent & initial speak to
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantConsultAgent(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantConsultAgent was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent.html)| Destination agent & initial speak to | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postConversationsCallParticipantConsultExternal"></a>
+
+# **postConversationsCallParticipantConsultExternal**
+
+
+
+> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultExternal(conversationId, participantId, body)
+
+Initiate a consult transfer to an external contact
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external  
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferExternal
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ConsultTransferToExternal = new ConsultTransferToExternal(...) // Destination address & initial speak to
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantConsultExternal(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantConsultExternal was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal.html)| Destination address & initial speak to | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postConversationsCallParticipantConsultQueue"></a>
+
+# **postConversationsCallParticipantConsultQueue**
+
+
+
+> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultQueue(conversationId, participantId, body)
+
+Initiate a consult transfer to a queue
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue  
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferQueue
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ConsultTransferToQueue = new ConsultTransferToQueue(...) // Destination queue & initial speak to
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantConsultQueue(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantConsultQueue was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue.html)| Destination queue & initial speak to | |
 {: class="table-striped"}
 
 
@@ -10382,6 +10726,59 @@ ConversationsAPI.postConversationsMessageParticipantCommunicationWrapup(conversa
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
 | **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationsMessageParticipantMonitor"></a>
+
+# **postConversationsMessageParticipantMonitor**
+
+
+
+> Void postConversationsMessageParticipantMonitor(conversationId, participantId)
+
+Listen in on the conversation from the point of view of a given participant.
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor  
+
+Requires ANY permissions: 
+
+* conversation:message:monitor
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+
+// Code example
+ConversationsAPI.postConversationsMessageParticipantMonitor(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsMessageParticipantMonitor was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
 {: class="table-striped"}
 
 

@@ -10,8 +10,8 @@ title: EntityTypeCriteria
 | **key** | **String** | The criteria key. | |
 | **values** | **[String]** | The criteria values. | |
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | |
-| **_operator** | **String** | The comparison operator. | [optional] |
-| **entityType** | **String** | The entity to match the pattern against. | [optional] |
+| **_operator** | **String** | The comparison operator. | |
+| **entityType** | **String** | The entity to match the pattern against. | |
 {: class="table table-striped"}
 
 

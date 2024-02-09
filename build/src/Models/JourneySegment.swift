@@ -15,7 +15,7 @@ public class JourneySegment: Codable {
         case session = "Session"
         case customer = "Customer"
     }
-    /** The globally unique identifier for the object. */
+    /** The ID of the segment. */
     public var _id: String?
     /** Whether or not the segment is active. */
     public var isActive: Bool?

@@ -23,14 +23,23 @@ public class CallbackMediaSettings: Codable {
     public var manualAnswerAlertToneSeconds: Double?
     /** Map of media subtype to media subtype specific settings. */
     public var subTypeSettings: [String:BaseMediaSettings]?
+    /** Flag to enable Auto-Dial and Auto-End automation for callbacks on this queue. */
+    public var enableAutoDialAndEnd: Bool?
+    /** Time in seconds after agent connects to callback before outgoing call is auto-dialed. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds. */
+    public var autoDialDelaySeconds: Int?
+    /** Time in seconds after agent disconnects from the outgoing call before the encasing callback is auto-ended. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds. */
+    public var autoEndDelaySeconds: Int?
 
-    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, subTypeSettings: [String:BaseMediaSettings]?) {
+    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, subTypeSettings: [String:BaseMediaSettings]?, enableAutoDialAndEnd: Bool?, autoDialDelaySeconds: Int?, autoEndDelaySeconds: Int?) {
         self.enableAutoAnswer = enableAutoAnswer
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.serviceLevel = serviceLevel
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
         self.subTypeSettings = subTypeSettings
+        self.enableAutoDialAndEnd = enableAutoDialAndEnd
+        self.autoDialDelaySeconds = autoDialDelaySeconds
+        self.autoEndDelaySeconds = autoEndDelaySeconds
     }
 
 
